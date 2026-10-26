@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, LuYingYiLong
+# This file is distributed under the same license as the Godot FmodPlayer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot FmodPlayer \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/classes/class_audioimporterfmod.rst:12 ccca00f9927948b796095843e4571dcd
+msgid "AudioImporterFmod"
+msgstr "AudioImporterFmod"
+
+#: ../../source/classes/class_audioimporterfmod.rst:14 3509e513c276413c9cf113e44963f776
+msgid ""
+"**Inherits:** :ref:`EditorImportPlugin<class_EditorImportPlugin>` **<** "
+":ref:`ResourceImporter<class_ResourceImporter>` **<** :ref:`RefCounted<class_RefCounted>` **<** "
+":ref:`Object<class_Object>`"
+msgstr ""
+"**继承：** :ref:`EditorImportPlugin<class_EditorImportPlugin>` **<** "
+":ref:`ResourceImporter<class_ResourceImporter>` **<** :ref:`RefCounted<class_RefCounted>` **<** "
+":ref:`Object<class_Object>`"
+
+#: ../../source/classes/class_audioimporterfmod.rst:16 0c4b71d8e91041eabd15429d81aff68f
+msgid "Editor import plugin for importing audio files as FMOD audio streams."
+msgstr "将音频文件导入为 FMOD 音频流的编辑器导入插件。"
+
+#: ../../source/classes/class_audioimporterfmod.rst:21 17c25af92fbe4fc7b1bf347de7738241
+msgid "Description"
+msgstr "描述"
+
+#: ../../source/classes/class_audioimporterfmod.rst:23 6c19b04e60ee492aa694ec451ca0f9ee
+msgid ""
+"AudioImporterFmod is an editor plugin that handles importing audio files into "
+":ref:`FmodAudioStream<class_FmodAudioStream>` resources. It integrates with Godot's import system"
+" to provide seamless audio asset management."
+msgstr ""
+"AudioImporterFmod 将音频文件导入为    :ref:`FmodAudioStream<class_FmodAudioStream>`    资源，并接入 Godot "
+"的资源导入流程。"
+
+#: ../../source/classes/class_audioimporterfmod.rst:25 4cd348a9ec2d482d98e53be68796e5da
+msgid ""
+"Supported formats include common audio types like MP3, WAV, OGG, FLAC, and others supported by "
+"FMOD."
+msgstr "支持 MP3、WAV、OGG、FLAC 等常见格式，以及 FMOD 支持的其他音频格式。"
+
+#: ../../source/classes/class_audioimporterfmod.rst:27 06df4d90354a43a6af2dffd793aa8982
+msgid ""
+"The importer processes audio files during project import, creating optimized "
+":ref:`FmodAudioStream<class_FmodAudioStream>` resources that can be used with "
+":ref:`FmodAudioStreamPlayer<class_FmodAudioStreamPlayer>` and "
+":ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>`."
+msgstr ""
+"导入器在项目导入时处理音频文件，生成供    :ref:`FmodAudioStreamPlayer<class_FmodAudioStreamPlayer>`    和    "
+":ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>`    使用的    "
+":ref:`FmodAudioStream<class_FmodAudioStream>`    资源。"

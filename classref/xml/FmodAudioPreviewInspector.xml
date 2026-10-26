@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="FmodAudioPreviewInspector" inherits="EditorInspectorPlugin" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/godotengine/godot/master/doc/class.xsd">
+	<brief_description>
+		Editor inspector plugin that adds audio preview functionality for FmodAudioStream resources.
+	</brief_description>
+	<description>
+		FmodAudioPreviewInspector is an editor plugin that enhances the inspector interface for [FmodAudioStream] resources. It adds a visual waveform preview and playback controls directly in the inspector panel.
+		This allows developers to preview audio assets without needing to play them in-game or use external tools.
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods />
+	<members />
+	<signals />
+	<constants />
+</class>

@@ -1,0 +1,1152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, LuYingYiLong
+# This file is distributed under the same license as the Godot FmodPlayer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot FmodPlayer \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:12 a05c04c52141427e80bff1b72b01b63d
+msgid "FmodReverbZone3D"
+msgstr "FmodReverbZone3D"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:14 178f578538304198bd2ca0514d5b395c
+msgid ""
+"**Inherits:** :ref:`Node3D<class_Node3D>` **<** :ref:`Node<class_Node>` **<** "
+":ref:`Object<class_Object>`"
+msgstr ""
+"**继承：** :ref:`Node3D<class_Node3D>` **<** :ref:`Node<class_Node>` **<** "
+":ref:`Object<class_Object>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:16 475dd96954ce4c759dd2a0d7b1819e33
+msgid "Scene node wrapper for an FMOD 3D reverb zone."
+msgstr "场景树中的 3D 混响区域节点"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:21 d7e7b5af99bc40c980e415ed58b7f0bc
+msgid "Description"
+msgstr "描述"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:23 fc276cb87c1146969493093f1105bda8
+msgid ""
+"FmodReverbZone3D creates and owns an internal :ref:`FmodReverb3D<class_FmodReverb3D>` object "
+"while it is inside the scene tree. The node position is used as the center of the spherical "
+"reverb zone. :ref:`min_distance<class_FmodReverbZone3D_property_min_distance>` receives the full "
+"reverb effect, and the effect fades out until "
+":ref:`max_distance<class_FmodReverbZone3D_property_max_distance>`."
+msgstr ""
+"**FmodReverbZone3D**    是    :ref:`FmodReverb3D<class_FmodReverb3D>`    "
+"的节点封装。节点进入场景树后会创建内部混响对象，并使用节点的全局位置作为球形混响区域中心。启用    ``sync_transform``    时，节点移动会同步到 FMOD 混响区域。 "
+"（参见   :ref:`min_distance<class_FmodReverbZone3D_property_min_distance>`  ） （参见   "
+":ref:`max_distance<class_FmodReverbZone3D_property_max_distance>`  ）"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:28 e90155115cbb458189009bd7ef4414d7
+msgid "Properties"
+msgstr "属性"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:34
+#: ../../source/classes/class_fmodreverbzone3d.rst:36
+#: ../../source/classes/class_fmodreverbzone3d.rst:80
+#: ../../source/classes/class_fmodreverbzone3d.rst:84 035ad6499c214117ad41d083c65893ba
+#: 0ef2c5541d0a4cd998e1a549daf44d2b 329c4d5a42334ffc851bee7dadcf63ea d2f642ff72084edcacb31651c0932835
+msgid ":ref:`bool<class_bool>`"
+msgstr ":ref:`bool<class_bool>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:34 27fccef192474dc0a931ea2866ce5d4d
+msgid ":ref:`active<class_FmodReverbZone3D_property_active>`"
+msgstr ":ref:`active<class_FmodReverbZone3D_property_active>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:34
+#: ../../source/classes/class_fmodreverbzone3d.rst:36 b21dc58c400d4bf2be0db16c3befbb0b
+#: e0588a36c27b412d8b2e32d8cc751f7e
+msgid "``true``"
+msgstr "``true``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:36 7397de65d63b40cebbc23d776ccd7142
+msgid ":ref:`sync_transform<class_FmodReverbZone3D_property_sync_transform>`"
+msgstr ":ref:`sync_transform<class_FmodReverbZone3D_property_sync_transform>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:38
+#: ../../source/classes/class_fmodreverbzone3d.rst:40
+#: ../../source/classes/class_fmodreverbzone3d.rst:44
+#: ../../source/classes/class_fmodreverbzone3d.rst:46
+#: ../../source/classes/class_fmodreverbzone3d.rst:48
+#: ../../source/classes/class_fmodreverbzone3d.rst:50
+#: ../../source/classes/class_fmodreverbzone3d.rst:52
+#: ../../source/classes/class_fmodreverbzone3d.rst:54
+#: ../../source/classes/class_fmodreverbzone3d.rst:56
+#: ../../source/classes/class_fmodreverbzone3d.rst:58
+#: ../../source/classes/class_fmodreverbzone3d.rst:60
+#: ../../source/classes/class_fmodreverbzone3d.rst:62
+#: ../../source/classes/class_fmodreverbzone3d.rst:64
+#: ../../source/classes/class_fmodreverbzone3d.rst:66
+#: ../../source/classes/class_fmodreverbzone3d.rst:88
+#: ../../source/classes/class_fmodreverbzone3d.rst:92
+#: ../../source/classes/class_fmodreverbzone3d.rst:100
+#: ../../source/classes/class_fmodreverbzone3d.rst:104
+#: ../../source/classes/class_fmodreverbzone3d.rst:108
+#: ../../source/classes/class_fmodreverbzone3d.rst:112
+#: ../../source/classes/class_fmodreverbzone3d.rst:116
+#: ../../source/classes/class_fmodreverbzone3d.rst:120
+#: ../../source/classes/class_fmodreverbzone3d.rst:124
+#: ../../source/classes/class_fmodreverbzone3d.rst:128
+#: ../../source/classes/class_fmodreverbzone3d.rst:132
+#: ../../source/classes/class_fmodreverbzone3d.rst:136
+#: ../../source/classes/class_fmodreverbzone3d.rst:140
+#: ../../source/classes/class_fmodreverbzone3d.rst:144 018f33933c4942e8b71d6172b523b133
+#: 03b6f4cc5dce4bbe829bc16872596efc 04a39a2cc001423b9513f62946cc589b 0c68599415c048cd8e01ef617c16df75
+#: 12b04d7bf09046299e7d48ee816319f5 1d49c53baa61483c96202b709a9548ab 1e06d6363b2a493d8b2d45db6253abde
+#: 2152eaa327fc4c2cbc15115caa5d0e72 2b34f197bac04ab29612aa8fc2b5baf3 2e147cd0d9b8450eb24580b3b70b387d
+#: 3c18b1ace9384d12b6d1728007872c2f 42a7dfd3d5df47e3bca1fb6152314e39 4a3d6f7ba6ab4426942c659a1b81a3a7
+#: 4c94ca1ae4eb41a6bfacb38443e981f1 5179538e20124ea1bc3ff60a26993707 61b2509b5e564fa38edcbaec08f5df9c
+#: 6c4cd86170774214a1db5963e05b52b0 7b72cb415636433db4793b4a3eb35c08 88ff3d6557494beca7f53d08401aa461
+#: 9c31359b7a124f2cb484f4ece5a00b81 ac169f3e95e1412aa3376046951c18dc af76d87b22ee412ca814d9e219848b20
+#: bb817009fc1648a1aa19168f372d7ca5 cdcb4d976c81423aaaff9329d4a5df2a d40f0861527b4272846e4a5610b12a70
+#: eccf36eb779e4885bf8b800aee7bb74c f6c7365164714ceebde57070eb8dca38 fef8206293c140ef96ed3ba057a2c444
+msgid ":ref:`float<class_float>`"
+msgstr ":ref:`float<class_float>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:38 1d673db3619e4e3ca5db5c34cc911408
+msgid ":ref:`min_distance<class_FmodReverbZone3D_property_min_distance>`"
+msgstr ":ref:`min_distance<class_FmodReverbZone3D_property_min_distance>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:38 8ab34a5f685942f49e2f5b9792718f48
+msgid "``5.0``"
+msgstr "``5.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:40 a4c3f21580ed42d5ae6d72446cc95615
+msgid ":ref:`max_distance<class_FmodReverbZone3D_property_max_distance>`"
+msgstr ":ref:`max_distance<class_FmodReverbZone3D_property_max_distance>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:40 8c52d38f9fe94119a3ac5af0c9203582
+msgid "``20.0``"
+msgstr "``20.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:42
+#: ../../source/classes/class_fmodreverbzone3d.rst:96 d7d200fdb1c24d07b0fa93b5492fbf17
+#: f7afdf5f79574aff8a0765940f218eba
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>`"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:42 37e7ac3bc80f4044a1fbd52db5dd3db3
+msgid ":ref:`preset<class_FmodReverbZone3D_property_preset>`"
+msgstr ":ref:`preset<class_FmodReverbZone3D_property_preset>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:42 1f5fa218d60947dab058d64b02bc61c7
+msgid "``2``"
+msgstr "``2``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:44 8e73c7c999c2496ab5c5346f12b71928
+msgid ":ref:`decay_time<class_FmodReverbZone3D_property_decay_time>`"
+msgstr ":ref:`decay_time<class_FmodReverbZone3D_property_decay_time>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:44 8e418ec74948497e8ff91f893e067860
+msgid "``1500.0``"
+msgstr "``1500.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:46 aee8f79c795b4ecf87efe13c32b1419b
+msgid ":ref:`early_delay<class_FmodReverbZone3D_property_early_delay>`"
+msgstr ":ref:`early_delay<class_FmodReverbZone3D_property_early_delay>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:46 ccde65534ccc4e0c8f907aab28080e47
+msgid "``7.0``"
+msgstr "``7.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:48 8d9a57821b15496cb212f226f3a4ee77
+msgid ":ref:`late_delay<class_FmodReverbZone3D_property_late_delay>`"
+msgstr ":ref:`late_delay<class_FmodReverbZone3D_property_late_delay>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:48 2f47f59ee13b401e844191b347013a0f
+msgid "``11.0``"
+msgstr "``11.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:50 f590ca82d4a34e62a1cffcf193d047a2
+msgid ":ref:`hf_reference<class_FmodReverbZone3D_property_hf_reference>`"
+msgstr ":ref:`hf_reference<class_FmodReverbZone3D_property_hf_reference>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:50 58e79e5c4dc7440fb12c998aadcce1d2
+msgid "``5000.0``"
+msgstr "``5000.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:52 0739bd39ed0443deb387c60d49cbec9a
+msgid ":ref:`hf_decay_ratio<class_FmodReverbZone3D_property_hf_decay_ratio>`"
+msgstr ":ref:`hf_decay_ratio<class_FmodReverbZone3D_property_hf_decay_ratio>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:52 d915693c7e064117be248120855bab64
+msgid "``83.0``"
+msgstr "``83.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:54 67172c5376ed42dbafbbeea8788eafcc
+msgid ":ref:`diffusion<class_FmodReverbZone3D_property_diffusion>`"
+msgstr ":ref:`diffusion<class_FmodReverbZone3D_property_diffusion>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:54
+#: ../../source/classes/class_fmodreverbzone3d.rst:56 377661d1c6234c2c9ce4e45fda707125
+#: ef5e7362a6f146fc9a449c8471aabe57
+msgid "``100.0``"
+msgstr "``100.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:56 75c44c50df3c45769f9b1f11c5ecb6fa
+msgid ":ref:`density<class_FmodReverbZone3D_property_density>`"
+msgstr ":ref:`density<class_FmodReverbZone3D_property_density>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:58 a69d25bb74834eb9a66066d176b07e94
+msgid ":ref:`low_shelf_frequency<class_FmodReverbZone3D_property_low_shelf_frequency>`"
+msgstr ":ref:`low_shelf_frequency<class_FmodReverbZone3D_property_low_shelf_frequency>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:58 1065b24539ad4b52b1eb10f5db70ba83
+msgid "``250.0``"
+msgstr "``250.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:60 6d85b114590b41c8a883426efdb3f0cf
+msgid ":ref:`low_shelf_gain<class_FmodReverbZone3D_property_low_shelf_gain>`"
+msgstr ":ref:`low_shelf_gain<class_FmodReverbZone3D_property_low_shelf_gain>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:60 aae0c3fe44924a4c984427eccd1f22f6
+msgid "``0.0``"
+msgstr "``0.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:62 2195e947c2304e9c9806736448f5fd70
+msgid ":ref:`high_cut<class_FmodReverbZone3D_property_high_cut>`"
+msgstr ":ref:`high_cut<class_FmodReverbZone3D_property_high_cut>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:62 98a4f2e845a440c9970dd8ab67ccb083
+msgid "``14500.0``"
+msgstr "``14500.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:64 140fa497510548f6bea83c41168bf1b7
+msgid ":ref:`early_late_mix<class_FmodReverbZone3D_property_early_late_mix>`"
+msgstr ":ref:`early_late_mix<class_FmodReverbZone3D_property_early_late_mix>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:64 9d276992814e4cb481bbf50f1f539d2a
+msgid "``96.0``"
+msgstr "``96.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:66 ef36d8fffa4c4893a1542680b946d337
+msgid ":ref:`wet_level<class_FmodReverbZone3D_property_wet_level>`"
+msgstr ":ref:`wet_level<class_FmodReverbZone3D_property_wet_level>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:66 d2ebdfdee6c3492b9292de08030566a2
+msgid "``-8.0``"
+msgstr "``-8.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:72 55cdb57cddc84d9a9042245f34d71501
+msgid "Methods"
+msgstr "方法"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:78
+#: ../../source/classes/class_fmodreverbzone3d.rst:82
+#: ../../source/classes/class_fmodreverbzone3d.rst:86
+#: ../../source/classes/class_fmodreverbzone3d.rst:90
+#: ../../source/classes/class_fmodreverbzone3d.rst:94
+#: ../../source/classes/class_fmodreverbzone3d.rst:98
+#: ../../source/classes/class_fmodreverbzone3d.rst:102
+#: ../../source/classes/class_fmodreverbzone3d.rst:106
+#: ../../source/classes/class_fmodreverbzone3d.rst:110
+#: ../../source/classes/class_fmodreverbzone3d.rst:114
+#: ../../source/classes/class_fmodreverbzone3d.rst:118
+#: ../../source/classes/class_fmodreverbzone3d.rst:122
+#: ../../source/classes/class_fmodreverbzone3d.rst:126
+#: ../../source/classes/class_fmodreverbzone3d.rst:130
+#: ../../source/classes/class_fmodreverbzone3d.rst:134
+#: ../../source/classes/class_fmodreverbzone3d.rst:138
+#: ../../source/classes/class_fmodreverbzone3d.rst:142 04a4666f42074519973e35f00731c56b
+#: 17b9afb1fc1e431aa35b822303c3ea4e 2901a1ede10f400596dbbfa065b697ce 2b8e333999e442edb976625e17beee5d
+#: 4ec369bce22c4d408c8555f6bd63b01d 4fc5d2be31204d6aaf20fc271c5d329e 544e494bac28425bb1feaf8eda929318
+#: 5ba76952679040029e30da6a26bdd6ae 612161110a064044b394640e5813c932 8aa2152f09024cb7a67ebbfafc07936f
+#: 9c6a49c9f7ab4afea4cc89623ae2d99f 9f9fb2765f6b4c968a42165598c68e45 a7c58c2be5d74b95bb78d820ef8041cb
+#: b5db84444fc14d5f8d1cc9b39360df7b da232dfecf1842848efa8a3f5a978a04 eeeb287eef0d4755bf6d47139dbf88a4
+#: fec69da1ffa74d24b269bfa8150d305a
+msgid "|void|"
+msgstr "|void|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:78 402191090fa1494aa1b44993cf2a5766
+msgid ""
+":ref:`set_active<class_FmodReverbZone3D_method_set_active>`\\ (\\ active\\: "
+":ref:`bool<class_bool>`\\ )"
+msgstr ""
+":ref:`set_active<class_FmodReverbZone3D_method_set_active>`\\ (\\ active\\: "
+":ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:80 345850fc8e284dea8b95756fec346af3
+msgid ":ref:`get_active<class_FmodReverbZone3D_method_get_active>`\\ (\\ ) |const|"
+msgstr ":ref:`get_active<class_FmodReverbZone3D_method_get_active>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:82 dc7460a29dfc43979ddd3b4cb9b10556
+msgid ""
+":ref:`set_sync_transform<class_FmodReverbZone3D_method_set_sync_transform>`\\ (\\ sync\\: "
+":ref:`bool<class_bool>`\\ )"
+msgstr ""
+":ref:`set_sync_transform<class_FmodReverbZone3D_method_set_sync_transform>`\\ (\\ sync\\: "
+":ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:84 d3c0fc1b3e1645e38c3060026cd3d4cd
+msgid ":ref:`get_sync_transform<class_FmodReverbZone3D_method_get_sync_transform>`\\ (\\ ) |const|"
+msgstr ":ref:`get_sync_transform<class_FmodReverbZone3D_method_get_sync_transform>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:86 aba742f190f444cd84cdf98b48845bbd
+msgid ""
+":ref:`set_min_distance<class_FmodReverbZone3D_method_set_min_distance>`\\ (\\ distance\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_min_distance<class_FmodReverbZone3D_method_set_min_distance>`\\ (\\ distance\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:88 7c236b4d4e0149a59c44349e5c3fe638
+msgid ":ref:`get_min_distance<class_FmodReverbZone3D_method_get_min_distance>`\\ (\\ ) |const|"
+msgstr ":ref:`get_min_distance<class_FmodReverbZone3D_method_get_min_distance>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:90 9c05fc9565f7496bbe1047d1de7b0311
+msgid ""
+":ref:`set_max_distance<class_FmodReverbZone3D_method_set_max_distance>`\\ (\\ distance\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_max_distance<class_FmodReverbZone3D_method_set_max_distance>`\\ (\\ distance\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:92 97bf4712680b4de7b8741eceb55f61d7
+msgid ":ref:`get_max_distance<class_FmodReverbZone3D_method_get_max_distance>`\\ (\\ ) |const|"
+msgstr ":ref:`get_max_distance<class_FmodReverbZone3D_method_get_max_distance>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:94 b1fc314b743b449da97eb0477ac4c9b2
+msgid ""
+":ref:`set_preset<class_FmodReverbZone3D_method_set_preset>`\\ (\\ preset\\: "
+":ref:`Preset<enum_FmodReverbZone3D_Preset>`\\ )"
+msgstr ""
+":ref:`set_preset<class_FmodReverbZone3D_method_set_preset>`\\ (\\ preset\\: "
+":ref:`Preset<enum_FmodReverbZone3D_Preset>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:96 6f4c3d10c16d46fdaf7ed80cf27ba75b
+msgid ":ref:`get_preset<class_FmodReverbZone3D_method_get_preset>`\\ (\\ ) |const|"
+msgstr ":ref:`get_preset<class_FmodReverbZone3D_method_get_preset>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:98 e588d9e2b5954d4daa2dfd7817576de6
+msgid ""
+":ref:`set_decay_time<class_FmodReverbZone3D_method_set_decay_time>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_decay_time<class_FmodReverbZone3D_method_set_decay_time>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:100 8988c75eaac940c19a33537adbc1f619
+msgid ":ref:`get_decay_time<class_FmodReverbZone3D_method_get_decay_time>`\\ (\\ ) |const|"
+msgstr ":ref:`get_decay_time<class_FmodReverbZone3D_method_get_decay_time>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:102 6b85c7f370a24f768e448ad933c4392d
+msgid ""
+":ref:`set_early_delay<class_FmodReverbZone3D_method_set_early_delay>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_early_delay<class_FmodReverbZone3D_method_set_early_delay>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:104 304d5e62cd244497b1e4af6ec458b0cf
+msgid ":ref:`get_early_delay<class_FmodReverbZone3D_method_get_early_delay>`\\ (\\ ) |const|"
+msgstr ":ref:`get_early_delay<class_FmodReverbZone3D_method_get_early_delay>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:106 fdab35bddbd94330bab88ecafc8c9ac5
+msgid ""
+":ref:`set_late_delay<class_FmodReverbZone3D_method_set_late_delay>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_late_delay<class_FmodReverbZone3D_method_set_late_delay>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:108 03643a59777d4bf9a9fdfc4620d3becb
+msgid ":ref:`get_late_delay<class_FmodReverbZone3D_method_get_late_delay>`\\ (\\ ) |const|"
+msgstr ":ref:`get_late_delay<class_FmodReverbZone3D_method_get_late_delay>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:110 0a7b7564c34a4ec3974f0ee1741bc2be
+msgid ""
+":ref:`set_hf_reference<class_FmodReverbZone3D_method_set_hf_reference>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_hf_reference<class_FmodReverbZone3D_method_set_hf_reference>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:112 88ff61a0da35453db6947afa86a192a0
+msgid ":ref:`get_hf_reference<class_FmodReverbZone3D_method_get_hf_reference>`\\ (\\ ) |const|"
+msgstr ":ref:`get_hf_reference<class_FmodReverbZone3D_method_get_hf_reference>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:114 98e1f710a2ea43efa0c6bcea5ac6e19c
+msgid ""
+":ref:`set_hf_decay_ratio<class_FmodReverbZone3D_method_set_hf_decay_ratio>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_hf_decay_ratio<class_FmodReverbZone3D_method_set_hf_decay_ratio>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:116 eeba464c786941fea30b84349697e082
+msgid ":ref:`get_hf_decay_ratio<class_FmodReverbZone3D_method_get_hf_decay_ratio>`\\ (\\ ) |const|"
+msgstr ":ref:`get_hf_decay_ratio<class_FmodReverbZone3D_method_get_hf_decay_ratio>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:118 d93293a70ef44bfd90f09639b74c1e24
+msgid ""
+":ref:`set_diffusion<class_FmodReverbZone3D_method_set_diffusion>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_diffusion<class_FmodReverbZone3D_method_set_diffusion>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:120 41cb639284de46068a57573e9003aa30
+msgid ":ref:`get_diffusion<class_FmodReverbZone3D_method_get_diffusion>`\\ (\\ ) |const|"
+msgstr ":ref:`get_diffusion<class_FmodReverbZone3D_method_get_diffusion>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:122 f5eca276ebcb4d008f67706e99fad9e1
+msgid ""
+":ref:`set_density<class_FmodReverbZone3D_method_set_density>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_density<class_FmodReverbZone3D_method_set_density>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:124 e8e1563f076e4e919ffc3a95b5b61a6b
+msgid ":ref:`get_density<class_FmodReverbZone3D_method_get_density>`\\ (\\ ) |const|"
+msgstr ":ref:`get_density<class_FmodReverbZone3D_method_get_density>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:126 96c2b94e6765477cb4780c7f4eaa2aa0
+msgid ""
+":ref:`set_low_shelf_frequency<class_FmodReverbZone3D_method_set_low_shelf_frequency>`\\ (\\ "
+"value\\: :ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_low_shelf_frequency<class_FmodReverbZone3D_method_set_low_shelf_frequency>`\\ (\\ "
+"value\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:128 24a939725c64426eabe730e7a21f375d
+msgid ""
+":ref:`get_low_shelf_frequency<class_FmodReverbZone3D_method_get_low_shelf_frequency>`\\ (\\ ) "
+"|const|"
+msgstr ""
+":ref:`get_low_shelf_frequency<class_FmodReverbZone3D_method_get_low_shelf_frequency>`\\ (\\ ) "
+"|const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:130 7e23ca1fe9d4498c8c71a30aa9472fe6
+msgid ""
+":ref:`set_low_shelf_gain<class_FmodReverbZone3D_method_set_low_shelf_gain>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_low_shelf_gain<class_FmodReverbZone3D_method_set_low_shelf_gain>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:132 d71aa7af97b143028b0d7ca5ba5462fc
+msgid ":ref:`get_low_shelf_gain<class_FmodReverbZone3D_method_get_low_shelf_gain>`\\ (\\ ) |const|"
+msgstr ":ref:`get_low_shelf_gain<class_FmodReverbZone3D_method_get_low_shelf_gain>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:134 6c59c7670d5f48db82ead79592c5affd
+msgid ""
+":ref:`set_high_cut<class_FmodReverbZone3D_method_set_high_cut>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_high_cut<class_FmodReverbZone3D_method_set_high_cut>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:136 95839d8d0fd54db480ed686b90488929
+msgid ":ref:`get_high_cut<class_FmodReverbZone3D_method_get_high_cut>`\\ (\\ ) |const|"
+msgstr ":ref:`get_high_cut<class_FmodReverbZone3D_method_get_high_cut>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:138 d400bb3bbe3f40999d4f428753d8defb
+msgid ""
+":ref:`set_early_late_mix<class_FmodReverbZone3D_method_set_early_late_mix>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_early_late_mix<class_FmodReverbZone3D_method_set_early_late_mix>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:140 20c6560763b14b908cf845c63e6c22d7
+msgid ":ref:`get_early_late_mix<class_FmodReverbZone3D_method_get_early_late_mix>`\\ (\\ ) |const|"
+msgstr ":ref:`get_early_late_mix<class_FmodReverbZone3D_method_get_early_late_mix>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:142 8c4695866448439e9d76afa09260dc7a
+msgid ""
+":ref:`set_wet_level<class_FmodReverbZone3D_method_set_wet_level>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_wet_level<class_FmodReverbZone3D_method_set_wet_level>`\\ (\\ value\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:144 f5d599bb78c549818b2bd6aaaa0e7d5d
+msgid ":ref:`get_wet_level<class_FmodReverbZone3D_method_get_wet_level>`\\ (\\ ) |const|"
+msgstr ":ref:`get_wet_level<class_FmodReverbZone3D_method_get_wet_level>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:146 b69fffa99a874db6b09d460ef9338932
+msgid ":ref:`FmodReverb3D<class_FmodReverb3D>`"
+msgstr ":ref:`FmodReverb3D<class_FmodReverb3D>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:146 8333b4fb0b2249709081df05d6dc7d4b
+msgid ":ref:`get_reverb<class_FmodReverbZone3D_method_get_reverb>`\\ (\\ ) |const|"
+msgstr ":ref:`get_reverb<class_FmodReverbZone3D_method_get_reverb>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:156 98c86130e05b4d76969190fcffef8c98
+msgid "Enumerations"
+msgstr "枚举"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:164 680d099f283c4a8099912d38173d40e5
+msgid "enum **Preset**:"
+msgstr "enum **Preset**:"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:170 5ca43a484ac2432395e357a0bcc320c7
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_CUSTOM** = ``0``"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_CUSTOM** = ``0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:172 141ab47153664ee0a81a77ddb084bc10
+msgid "Custom user-edited reverb properties."
+msgstr "自定义参数"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:178 d4d43b9df4554eab97f1c6caa3759757
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_OFF** = ``1``"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_OFF** = ``1``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:180 f01b7100a31d4fe693f51ae6af228e1f
+msgid "Disables the reverb effect."
+msgstr "关闭混响"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:186 e2c512c733d7449e9fed6ceacd439ee7
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_GENERIC** = ``2``"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_GENERIC** = ``2``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:188 4f5fd32185754391b46625556f1d6043
+msgid "General purpose room reverb."
+msgstr "通用混响"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:194 ef7315d0aa6245e2a5ff39f4d3888987
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_PADDED_CELL** = ``3``"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_PADDED_CELL** = ``3``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:196 385f393630c54eaa8456df4a462287a9
+msgid "Very small, heavily damped room."
+msgstr "软包小房间"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:202 d807fa3b29d74ef9bad76caba42bf079
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_ROOM** = ``4``"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_ROOM** = ``4``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:204 50c84872d2bd4d838302382bd8d72e19
+msgid "Small room preset."
+msgstr "普通房间"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:210 9d4e70103382485abbb7424f30691757
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_BATHROOM** = ``5``"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_BATHROOM** = ``5``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:212 c683a77d654441f49e3354c0787368f2
+msgid "Bright reflective bathroom preset."
+msgstr "浴室"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:218 f22ec22903dc4715a9d08e6ccacf4e21
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_LIVING_ROOM** = ``6``"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_LIVING_ROOM** = ``6``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:220 db1aa04b72ba44b5bbea521f2c663f19
+msgid "Soft furnished room preset."
+msgstr "客厅"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:226 91e462a4300243a2ac2f4a910e722d82
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_STONE_ROOM** = ``7``"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_STONE_ROOM** = ``7``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:228 aeba9b4869c64e3dad1da34383fec932
+msgid "Reflective stone room preset."
+msgstr "石室"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:234 13575f52b41c46c09e9071bf20dd9175
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_AUDITORIUM** = ``8``"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_AUDITORIUM** = ``8``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:236 2c80be046b0b4520bc32b3582b843c07
+msgid "Large auditorium preset."
+msgstr "礼堂"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:242 a26c29e1b69746ac8d8f14c5a7cbf808
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_CONCERT_HALL** = ``9``"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_CONCERT_HALL** = ``9``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:244 a3dbdf94c7c74d488acc2860b3c809af
+msgid "Concert hall preset with a long spacious tail."
+msgstr "音乐厅"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:250 9e576be094ca4adb90c4b761748902b5
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_CAVE** = ``10``"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_CAVE** = ``10``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:252 d3a7747cdde24da8bc4dedf63171eff0
+msgid "Cave-like reverb with strong late reflections."
+msgstr "洞穴"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:258 0038ec78c93b4146a25508eb49a6d3f0
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_ARENA** = ``11``"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_ARENA** = ``11``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:260 8bd0b099596f4b3887512620907691d9
+msgid "Very large arena preset."
+msgstr "竞技场"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:266 a24daa928b0e4736bf0074a6d75bf852
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_HANGAR** = ``12``"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_HANGAR** = ``12``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:268 f158f0452c214b7f9756b6c85d988c34
+msgid "Huge metallic hangar preset."
+msgstr "机库"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:274 7ec13db1019140f286f5dcda4efe45bb
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_HALLWAY** = ``13``"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_HALLWAY** = ``13``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:276 97f0c5ca7de24755bd6dd437220a263e
+msgid "Narrow hallway preset."
+msgstr "走廊"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:282 0ef48eb4d8c7402d87745ff38b52cb17
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_STONE_CORRIDOR** = ``14``"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_STONE_CORRIDOR** = ``14``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:284 5e71f7c8c44a4c4a8def0c9ecbc2b6c3
+msgid "Reflective stone corridor preset."
+msgstr "石质走廊"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:290 d62157bae18149129a235221109babaf
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_ALLEY** = ``15``"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_ALLEY** = ``15``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:292 be9e3af05a624da483b29610f6fe5e4d
+msgid "Outdoor alley preset."
+msgstr "小巷"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:298 0b624122889241c2aaea37dd545a6bb8
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_FOREST** = ``16``"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_FOREST** = ``16``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:300 7fd983ff60274d058d7294f8d56c5b81
+msgid "Outdoor forest ambience preset."
+msgstr "森林"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:306 1e4b3f410008402881726dd980ad8d41
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_CITY** = ``17``"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_CITY** = ``17``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:308 747a77a060a94bf38a6b060ed18ad0e9
+msgid "Outdoor city ambience preset."
+msgstr "城市"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:314 352b3245187a4a9eb9c6d5298979c430
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_MOUNTAINS** = ``18``"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_MOUNTAINS** = ``18``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:316 f4ddc0b9a2a84f32990cb2392471b64f
+msgid "Open mountain ambience preset."
+msgstr "山地"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:322 51b63465f3194f5d83b4092836936ffa
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_UNDERWATER** = ``19``"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **PRESET_UNDERWATER** = ``19``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:324 4bede412d2ad4c8b9472e13230787102
+msgid "Underwater muffled reverb preset."
+msgstr "水下"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:333 981624055057455c9cc609874bad7fc6
+msgid "Property Descriptions"
+msgstr "属性说明"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:339 7108e6c25be8425f9ea648d3fdea255e
+msgid ":ref:`bool<class_bool>` **active** = ``true``"
+msgstr ":ref:`bool<class_bool>` **active** = ``true``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:343
+#: ../../source/classes/class_fmodreverbzone3d.rst:633 02bc212bc48d4be6b4f30cca342f3648
+#: 1deda14f157a459b9c08bcfed0c78233
+msgid "|void| **set_active**\\ (\\ active\\: :ref:`bool<class_bool>`\\ )"
+msgstr "|void| **set_active**\\ (\\ active\\: :ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:344
+#: ../../source/classes/class_fmodreverbzone3d.rst:645 4b8c6b969b5d43e7a616e4b89774c02c
+#: 7fc9f90d5f57474daef2136e0e25702a
+msgid ":ref:`bool<class_bool>` **get_active**\\ (\\ ) |const|"
+msgstr ":ref:`bool<class_bool>` **get_active**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:346 5628856d1d994e6493b3c3f647e193c3
+msgid "Whether this reverb zone contributes to the FMOD mix."
+msgstr "该混响区域是否参与输出"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:356 34fb4fff286045dfaeebf2ca74af854a
+msgid ":ref:`bool<class_bool>` **sync_transform** = ``true``"
+msgstr ":ref:`bool<class_bool>` **sync_transform** = ``true``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:360
+#: ../../source/classes/class_fmodreverbzone3d.rst:657 042393006b8c434dbc228bdce22d6b50
+#: 045763f230134aabba7678456542daa6
+msgid "|void| **set_sync_transform**\\ (\\ sync\\: :ref:`bool<class_bool>`\\ )"
+msgstr "|void| **set_sync_transform**\\ (\\ sync\\: :ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:361
+#: ../../source/classes/class_fmodreverbzone3d.rst:669 36892203119c49b281d53649939ef4a8
+#: 74a8bcbc84e14388846332ae4c10fd37
+msgid ":ref:`bool<class_bool>` **get_sync_transform**\\ (\\ ) |const|"
+msgstr ":ref:`bool<class_bool>` **get_sync_transform**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:363 42c3741acf3a4be2bfb8dcc8ba84dc50
+msgid "If enabled, the internal FMOD reverb position follows this node every frame."
+msgstr "是否每帧同步节点位置到内部混响对象"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:373 1eb558b599014661b20ff31d8a03ac73
+msgid ":ref:`float<class_float>` **min_distance** = ``5.0``"
+msgstr ":ref:`float<class_float>` **min_distance** = ``5.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:377
+#: ../../source/classes/class_fmodreverbzone3d.rst:681 8d18862866804f8284986b6216fd9703
+#: dcca73b6b90f449d8cb0656d6c431c43
+msgid "|void| **set_min_distance**\\ (\\ distance\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_min_distance**\\ (\\ distance\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:378
+#: ../../source/classes/class_fmodreverbzone3d.rst:693 97107ca944b049e8a267c14d2216475b
+#: a6909bf04dff4068896babbc023006e8
+msgid ":ref:`float<class_float>` **get_min_distance**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_min_distance**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:380 e3d82c5388114225812772fea0da8993
+msgid "Distance from the center where the reverb is fully applied."
+msgstr "完整混响半径"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:390 78ef140b8b4f474f94efecf213bd6fa4
+msgid ":ref:`float<class_float>` **max_distance** = ``20.0``"
+msgstr ":ref:`float<class_float>` **max_distance** = ``20.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:394
+#: ../../source/classes/class_fmodreverbzone3d.rst:705 0089da1ff60b4426ad032f2f05e2cf34
+#: 4bb7deae6c3a4d02850ab75c90c7c1e6
+msgid "|void| **set_max_distance**\\ (\\ distance\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_max_distance**\\ (\\ distance\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:395
+#: ../../source/classes/class_fmodreverbzone3d.rst:717 1941490994f14d308a9abc71813d61ae
+#: b96b73a5a39a41f2a54e88f564f10050
+msgid ":ref:`float<class_float>` **get_max_distance**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_max_distance**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:397 2edd264495934265a494800729345776
+msgid "Distance from the center where the reverb fades out."
+msgstr "混响淡出结束半径"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:407 48aad05c22bf48a2985eb60b4e03c50f
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **preset** = ``2``"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **preset** = ``2``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:411
+#: ../../source/classes/class_fmodreverbzone3d.rst:729 f375d64cf1284cf99b733833a73f09b1
+#: f8735a7ca3a34a3390f26c906dd11422
+msgid "|void| **set_preset**\\ (\\ preset\\: :ref:`Preset<enum_FmodReverbZone3D_Preset>`\\ )"
+msgstr "|void| **set_preset**\\ (\\ preset\\: :ref:`Preset<enum_FmodReverbZone3D_Preset>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:412
+#: ../../source/classes/class_fmodreverbzone3d.rst:741 1574b4c94ca546419831f42f137ea30b
+#: 17a3db59c1634cf3be43b3aec69b4b47
+msgid ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **get_preset**\\ (\\ ) |const|"
+msgstr ":ref:`Preset<enum_FmodReverbZone3D_Preset>` **get_preset**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:414 abe7cd69aa1b43c497d21be023e0b2c2
+msgid ""
+"FMOD reverb preset used by the zone. Editing an individual reverb property switches this to "
+":ref:`PRESET_CUSTOM<class_FmodReverbZone3D_constant_PRESET_CUSTOM>`."
+msgstr "混响预设；手动修改参数后会切换为 :ref:`PRESET_CUSTOM<class_FmodReverbZone3D_constant_PRESET_CUSTOM>`"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:424 b75d8487556040c6868b0d88db9afcff
+msgid ":ref:`float<class_float>` **decay_time** = ``1500.0``"
+msgstr ":ref:`float<class_float>` **decay_time** = ``1500.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:428
+#: ../../source/classes/class_fmodreverbzone3d.rst:753 d80be117d9aa47adba065173f21f91c5
+#: f5623b22ccb14fdf873df130d93024d2
+msgid "|void| **set_decay_time**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_decay_time**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:429
+#: ../../source/classes/class_fmodreverbzone3d.rst:765 547c6dd3a8b24d41bd3ea8c7555128ac
+#: ba7dc49accbc4b5eab2f694bac105e83
+msgid ":ref:`float<class_float>` **get_decay_time**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_decay_time**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:431 6f9328abf2bc4ed495eebc42d3fb8e0b
+msgid "Reverb decay time in milliseconds."
+msgstr "混响衰减时间，单位为毫秒"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:441 28e285964244430bb413e839dc30efbf
+msgid ":ref:`float<class_float>` **early_delay** = ``7.0``"
+msgstr ":ref:`float<class_float>` **early_delay** = ``7.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:445
+#: ../../source/classes/class_fmodreverbzone3d.rst:777 861e1254bdf34fdd9a14b21fd33294ec
+#: 8daebcc7ff424f3398590fba45c109fa
+msgid "|void| **set_early_delay**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_early_delay**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:446
+#: ../../source/classes/class_fmodreverbzone3d.rst:789 79292e8751004ad09d15fe212629bb95
+#: 954533b06b924464bac3d2f57be00629
+msgid ":ref:`float<class_float>` **get_early_delay**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_early_delay**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:448 ff065bdf3aa248ca8059ff5a72ae485f
+msgid "Initial reflection delay in milliseconds."
+msgstr "早期反射延迟，单位为毫秒"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:458 fa76c094cf8046feac2b6f9756a0c93d
+msgid ":ref:`float<class_float>` **late_delay** = ``11.0``"
+msgstr ":ref:`float<class_float>` **late_delay** = ``11.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:462
+#: ../../source/classes/class_fmodreverbzone3d.rst:801 75a4e32378eb460db8d2b6f26d236868
+#: eda9b56adbb54a1989ab6a525eb94c70
+msgid "|void| **set_late_delay**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_late_delay**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:463
+#: ../../source/classes/class_fmodreverbzone3d.rst:813 4a1302796090443a81b4d5338908bcdb
+#: 9e1d9dcb84624a338968f4822fbff55b
+msgid ":ref:`float<class_float>` **get_late_delay**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_late_delay**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:465 9670f698d26549048857533b1053b4a9
+msgid "Late reverb delay in milliseconds."
+msgstr "后期混响延迟，单位为毫秒"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:475 9c4e1dd5f86446a690426ab211845178
+msgid ":ref:`float<class_float>` **hf_reference** = ``5000.0``"
+msgstr ":ref:`float<class_float>` **hf_reference** = ``5000.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:479
+#: ../../source/classes/class_fmodreverbzone3d.rst:825 8b4da5f733ba451aab0a5de0a0fbe54d
+#: a0003e49ced446b180962756b3f7dfe4
+msgid "|void| **set_hf_reference**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_hf_reference**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:480
+#: ../../source/classes/class_fmodreverbzone3d.rst:837 7531e13dc3644d26b798c3c18b179eb4
+#: fc2589b0d3b34772a5eb697b67de5df5
+msgid ":ref:`float<class_float>` **get_hf_reference**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_hf_reference**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:482 31f908ddc4e74437b0df53d7c37f3d53
+msgid "High frequency reference in Hz."
+msgstr "高频参考频率，单位为 Hz"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:492 63252174959a4fba8c5deddde5ff4c3c
+msgid ":ref:`float<class_float>` **hf_decay_ratio** = ``83.0``"
+msgstr ":ref:`float<class_float>` **hf_decay_ratio** = ``83.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:496
+#: ../../source/classes/class_fmodreverbzone3d.rst:849 1bdedbc64a4947a2bcec1e684169e8d7
+#: 25e43a2a0d9542a598aeaa3cb3148031
+msgid "|void| **set_hf_decay_ratio**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_hf_decay_ratio**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:497
+#: ../../source/classes/class_fmodreverbzone3d.rst:861 7b50911aa64244eba1fde5782f525c51
+#: fc6207819b3a446a95e3d4e52679ee9b
+msgid ":ref:`float<class_float>` **get_hf_decay_ratio**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_hf_decay_ratio**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:499 8a0e0135768443498c63083fe3bdedd6
+msgid "High-frequency decay ratio in percent."
+msgstr "高频衰减比例"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:509 e1ea2617d7324142879e698f7c736fbe
+msgid ":ref:`float<class_float>` **diffusion** = ``100.0``"
+msgstr ":ref:`float<class_float>` **diffusion** = ``100.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:513
+#: ../../source/classes/class_fmodreverbzone3d.rst:873 64ee4404be324c8fab5f28b9ee9f0d32
+#: d2b5997bee3d45e1ac7b74d4b2e0dc3e
+msgid "|void| **set_diffusion**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_diffusion**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:514
+#: ../../source/classes/class_fmodreverbzone3d.rst:885 3dc074981ab64c2097b8dabc0794f3b2
+#: a1e2d997d38f4e18a450384a915cb239
+msgid ":ref:`float<class_float>` **get_diffusion**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_diffusion**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:516 3f75b0a886494d948ae46db8edd2a230
+msgid "Late reverb diffusion in percent."
+msgstr "扩散度"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:526 c499aa0c3f4a4a0a8a0171cc3a6024d1
+msgid ":ref:`float<class_float>` **density** = ``100.0``"
+msgstr ":ref:`float<class_float>` **density** = ``100.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:530
+#: ../../source/classes/class_fmodreverbzone3d.rst:897 299b4fe0d9e4453da2e154faddd393bf
+#: c071bcdba7cb4bcea5f035dd16de76bb
+msgid "|void| **set_density**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_density**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:531
+#: ../../source/classes/class_fmodreverbzone3d.rst:909 8288283a098048bea95786aeb57cc462
+#: cef032e8abc54e33b0db6ae5a3c80223
+msgid ":ref:`float<class_float>` **get_density**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_density**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:533 2f8d6dc2ef1c4d85adc6ea601f44435f
+msgid "Late reverb density in percent."
+msgstr "密度"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:543 7fef20c1cec8456da8f112def535092f
+msgid ":ref:`float<class_float>` **low_shelf_frequency** = ``250.0``"
+msgstr ":ref:`float<class_float>` **low_shelf_frequency** = ``250.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:547
+#: ../../source/classes/class_fmodreverbzone3d.rst:921 30d04357d98d482985796c1ab19cfecf
+#: b34cee22944647d6a74472aab4d82188
+msgid "|void| **set_low_shelf_frequency**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_low_shelf_frequency**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:548
+#: ../../source/classes/class_fmodreverbzone3d.rst:933 dafe201fdf5c4da190d984f892d9dfad
+#: f4969edb73e746e5a2af7c1ad74f3848
+msgid ":ref:`float<class_float>` **get_low_shelf_frequency**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_low_shelf_frequency**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:550 a7720958e2334853961de5ef1c2ba1f8
+msgid "Low shelf reference frequency in Hz."
+msgstr "低频搁架参考频率"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:560 7e3b42114d664ab9b085eb0344cd3f86
+msgid ":ref:`float<class_float>` **low_shelf_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **low_shelf_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:564
+#: ../../source/classes/class_fmodreverbzone3d.rst:945 208f6d0c72494689891c15fc1760a649
+#: 9f38fd8c24ca4200981a1ba60a827a1e
+msgid "|void| **set_low_shelf_gain**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_low_shelf_gain**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:565
+#: ../../source/classes/class_fmodreverbzone3d.rst:957 22bdfc4d9d5543b9be6ccd3a7d41d744
+#: f433b07cc68c4098bde3dadd4831082b
+msgid ":ref:`float<class_float>` **get_low_shelf_gain**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_low_shelf_gain**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:567 bb397eab1c3a481f9c091759c19d1a27
+msgid "Low shelf gain in dB."
+msgstr "低频搁架增益"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:577 43893139144f4aecb4939d0f6d3eb233
+msgid ":ref:`float<class_float>` **high_cut** = ``14500.0``"
+msgstr ":ref:`float<class_float>` **high_cut** = ``14500.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:581
+#: ../../source/classes/class_fmodreverbzone3d.rst:969 6b085b7ad0044471980574b02a6cbaf5
+#: a36dd30ac879467aa38b825235fc3778
+msgid "|void| **set_high_cut**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_high_cut**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:582
+#: ../../source/classes/class_fmodreverbzone3d.rst:981 20e5d9bd7548419f83874d97f2a226a0
+#: ccb06dffc9934d0ab42c3aaa0d689383
+msgid ":ref:`float<class_float>` **get_high_cut**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_high_cut**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:584 1b2dabbff92c45ec88c386700d6853d9
+msgid "High cut frequency in Hz."
+msgstr "高频截止频率"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:594 524bd66ecfc9484b93bb8ef42d2c5b3b
+msgid ":ref:`float<class_float>` **early_late_mix** = ``96.0``"
+msgstr ":ref:`float<class_float>` **early_late_mix** = ``96.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:598
+#: ../../source/classes/class_fmodreverbzone3d.rst:993 6471ab369ee54a8a9bf9431d70757173
+#: 94f317c598f14cbfbae8fd1c72672ade
+msgid "|void| **set_early_late_mix**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_early_late_mix**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:599
+#: ../../source/classes/class_fmodreverbzone3d.rst:1005 8f7013c40784410492dca7d8e211b51c
+#: f10228e9fd8a44219c260392d3b7c8af
+msgid ":ref:`float<class_float>` **get_early_late_mix**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_early_late_mix**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:601 9f4c4680ae1242649f6e5a287bc609ad
+msgid "Early/late reflection mix in percent."
+msgstr "早期/后期混响混合比例"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:611 3216cd9c81be41e9b53e8078268cf40b
+msgid ":ref:`float<class_float>` **wet_level** = ``-8.0``"
+msgstr ":ref:`float<class_float>` **wet_level** = ``-8.0``"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:615
+#: ../../source/classes/class_fmodreverbzone3d.rst:1017 02bb69a8a4af4b0db6b17b68b39e0a00
+#: 84e31f71c79446c889502094920b235f
+msgid "|void| **set_wet_level**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_wet_level**\\ (\\ value\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:616
+#: ../../source/classes/class_fmodreverbzone3d.rst:1029 2b304c42bf1045dc9d5f017beb11dda6
+#: 688cfb9ccd5942f3bea907c4d98695cb
+msgid ":ref:`float<class_float>` **get_wet_level**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_wet_level**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:618 48c08697452749428e229c12b8d8bbbb
+msgid "Overall wet level in dB."
+msgstr "混响湿声电平，单位为分贝"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:627 63213c2654cf4e3a97ffe520e580394f
+msgid "Method Descriptions"
+msgstr "方法说明"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:635 93190051e3924107abe1e6f6344fd7ab
+msgid "Sets :ref:`active<class_FmodReverbZone3D_property_active>`."
+msgstr "Sets :ref:`active<class_FmodReverbZone3D_property_active>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:647 efebf4912efa4da68fa493c03ebf491b
+msgid "Returns :ref:`active<class_FmodReverbZone3D_property_active>`."
+msgstr "Returns :ref:`active<class_FmodReverbZone3D_property_active>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:659 2cef0218b70f4521a8b9eec2f8c8f63e
+msgid "Sets :ref:`sync_transform<class_FmodReverbZone3D_property_sync_transform>`."
+msgstr "Sets :ref:`sync_transform<class_FmodReverbZone3D_property_sync_transform>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:671 9ee8da1b820e45cd8bdcb91e02ccf4c7
+msgid "Returns :ref:`sync_transform<class_FmodReverbZone3D_property_sync_transform>`."
+msgstr "Returns :ref:`sync_transform<class_FmodReverbZone3D_property_sync_transform>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:683 3f5e2c86fffd46539d1fdf7a3be3a498
+msgid "Sets :ref:`min_distance<class_FmodReverbZone3D_property_min_distance>`."
+msgstr "Sets :ref:`min_distance<class_FmodReverbZone3D_property_min_distance>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:695 69e82634f6fc47fbbb1d9b1824e36148
+msgid "Returns :ref:`min_distance<class_FmodReverbZone3D_property_min_distance>`."
+msgstr "Returns :ref:`min_distance<class_FmodReverbZone3D_property_min_distance>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:707 0746915f7ba84409b3ecfb0ed38c61a0
+msgid "Sets :ref:`max_distance<class_FmodReverbZone3D_property_max_distance>`."
+msgstr "Sets :ref:`max_distance<class_FmodReverbZone3D_property_max_distance>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:719 0363097242394fe6828ff8c9fec35efb
+msgid "Returns :ref:`max_distance<class_FmodReverbZone3D_property_max_distance>`."
+msgstr "Returns :ref:`max_distance<class_FmodReverbZone3D_property_max_distance>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:731 552bbfa16baa40a1a3ec270734c976ef
+msgid "Sets :ref:`preset<class_FmodReverbZone3D_property_preset>`."
+msgstr "Sets :ref:`preset<class_FmodReverbZone3D_property_preset>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:743 7cf72c038de04a2693d38d5675ea96f9
+msgid "Returns :ref:`preset<class_FmodReverbZone3D_property_preset>`."
+msgstr "Returns :ref:`preset<class_FmodReverbZone3D_property_preset>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:755 59dd657f58d943889859653358cf66c1
+msgid "Sets :ref:`decay_time<class_FmodReverbZone3D_property_decay_time>`."
+msgstr "Sets :ref:`decay_time<class_FmodReverbZone3D_property_decay_time>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:767 10e55a86423346cb9952b941f4a9f730
+msgid "Returns :ref:`decay_time<class_FmodReverbZone3D_property_decay_time>`."
+msgstr "Returns :ref:`decay_time<class_FmodReverbZone3D_property_decay_time>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:779 cf896732c48a499fb776355aa3c1cf8d
+msgid "Sets :ref:`early_delay<class_FmodReverbZone3D_property_early_delay>`."
+msgstr "Sets :ref:`early_delay<class_FmodReverbZone3D_property_early_delay>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:791 2e076fec72a843a285cb41ba3c6272f1
+msgid "Returns :ref:`early_delay<class_FmodReverbZone3D_property_early_delay>`."
+msgstr "Returns :ref:`early_delay<class_FmodReverbZone3D_property_early_delay>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:803 02efc916d1d8466e8feede4ea1a28448
+msgid "Sets :ref:`late_delay<class_FmodReverbZone3D_property_late_delay>`."
+msgstr "Sets :ref:`late_delay<class_FmodReverbZone3D_property_late_delay>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:815 8af7c7afcb6340af9904d02560bf0a3b
+msgid "Returns :ref:`late_delay<class_FmodReverbZone3D_property_late_delay>`."
+msgstr "Returns :ref:`late_delay<class_FmodReverbZone3D_property_late_delay>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:827 cd4da9849d864d01b725acb2b1494bca
+msgid "Sets :ref:`hf_reference<class_FmodReverbZone3D_property_hf_reference>`."
+msgstr "Sets :ref:`hf_reference<class_FmodReverbZone3D_property_hf_reference>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:839 070ba08feb394697ae1581f46eb7d12c
+msgid "Returns :ref:`hf_reference<class_FmodReverbZone3D_property_hf_reference>`."
+msgstr "Returns :ref:`hf_reference<class_FmodReverbZone3D_property_hf_reference>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:851 c66f73004de8423da7982a4c1634b358
+msgid "Sets :ref:`hf_decay_ratio<class_FmodReverbZone3D_property_hf_decay_ratio>`."
+msgstr "Sets :ref:`hf_decay_ratio<class_FmodReverbZone3D_property_hf_decay_ratio>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:863 12ce4c01a3fb439ba98b1ad5bd464122
+msgid "Returns :ref:`hf_decay_ratio<class_FmodReverbZone3D_property_hf_decay_ratio>`."
+msgstr "Returns :ref:`hf_decay_ratio<class_FmodReverbZone3D_property_hf_decay_ratio>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:875 6a2faf96387341a7bc05d03b2bae9966
+msgid "Sets :ref:`diffusion<class_FmodReverbZone3D_property_diffusion>`."
+msgstr "Sets :ref:`diffusion<class_FmodReverbZone3D_property_diffusion>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:887 5bd8122435bd4635a2d91ee10fc68f6a
+msgid "Returns :ref:`diffusion<class_FmodReverbZone3D_property_diffusion>`."
+msgstr "Returns :ref:`diffusion<class_FmodReverbZone3D_property_diffusion>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:899 ab5617074d5c4a908a18c28ab1235acf
+msgid "Sets :ref:`density<class_FmodReverbZone3D_property_density>`."
+msgstr "Sets :ref:`density<class_FmodReverbZone3D_property_density>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:911 a97767f98c64446684bc546e3f6ebd4c
+msgid "Returns :ref:`density<class_FmodReverbZone3D_property_density>`."
+msgstr "Returns :ref:`density<class_FmodReverbZone3D_property_density>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:923 1275fdd7543243938042849548535d8a
+msgid "Sets :ref:`low_shelf_frequency<class_FmodReverbZone3D_property_low_shelf_frequency>`."
+msgstr "Sets :ref:`low_shelf_frequency<class_FmodReverbZone3D_property_low_shelf_frequency>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:935 3926889620d043bf85c47fdc7f592ce1
+msgid "Returns :ref:`low_shelf_frequency<class_FmodReverbZone3D_property_low_shelf_frequency>`."
+msgstr "Returns :ref:`low_shelf_frequency<class_FmodReverbZone3D_property_low_shelf_frequency>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:947 4cc0d016070643f380191c0423f3d764
+msgid "Sets :ref:`low_shelf_gain<class_FmodReverbZone3D_property_low_shelf_gain>`."
+msgstr "Sets :ref:`low_shelf_gain<class_FmodReverbZone3D_property_low_shelf_gain>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:959 9af92569499c4269a715f9f1dc71361f
+msgid "Returns :ref:`low_shelf_gain<class_FmodReverbZone3D_property_low_shelf_gain>`."
+msgstr "Returns :ref:`low_shelf_gain<class_FmodReverbZone3D_property_low_shelf_gain>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:971 a1b1ff0b4e19456f8007ab65f93fb760
+msgid "Sets :ref:`high_cut<class_FmodReverbZone3D_property_high_cut>`."
+msgstr "Sets :ref:`high_cut<class_FmodReverbZone3D_property_high_cut>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:983 79b71fb0fc464ce890427d7e1947b38b
+msgid "Returns :ref:`high_cut<class_FmodReverbZone3D_property_high_cut>`."
+msgstr "Returns :ref:`high_cut<class_FmodReverbZone3D_property_high_cut>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:995 7d65c5df34e34f8a9a22bba78175d2b8
+msgid "Sets :ref:`early_late_mix<class_FmodReverbZone3D_property_early_late_mix>`."
+msgstr "Sets :ref:`early_late_mix<class_FmodReverbZone3D_property_early_late_mix>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:1007 778713d5df864a568da22f5a3e07daee
+msgid "Returns :ref:`early_late_mix<class_FmodReverbZone3D_property_early_late_mix>`."
+msgstr "Returns :ref:`early_late_mix<class_FmodReverbZone3D_property_early_late_mix>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:1019 3cf8da1ebd1d4aeb8acd2fc438fb2328
+msgid "Sets :ref:`wet_level<class_FmodReverbZone3D_property_wet_level>`."
+msgstr "Sets :ref:`wet_level<class_FmodReverbZone3D_property_wet_level>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:1031 1a719c65a4d044dab2f6bbafbef4eb33
+msgid "Returns :ref:`wet_level<class_FmodReverbZone3D_property_wet_level>`."
+msgstr "Returns :ref:`wet_level<class_FmodReverbZone3D_property_wet_level>`."
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:1043 90641c2b947e4375bcfdd6929bc6d30f
+msgid ":ref:`FmodReverb3D<class_FmodReverb3D>` **get_reverb**\\ (\\ ) |const|"
+msgstr ":ref:`FmodReverb3D<class_FmodReverb3D>` **get_reverb**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:1045 c792a25452da48609b48c1c39ed14a61
+msgid ""
+"Returns the internal low-level :ref:`FmodReverb3D<class_FmodReverb3D>` object, or ``null`` if it "
+"has not been created."
+msgstr "返回该节点内部创建并管理的    :ref:`FmodReverb3D<class_FmodReverb3D>`   。如果节点尚未进入场景树或创建失败，则返回    ``null``   。"

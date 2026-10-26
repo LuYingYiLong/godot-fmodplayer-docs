@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, LuYingYiLong
+# This file is distributed under the same license as the Godot FmodPlayer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot FmodPlayer \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/classes/class_fmodgeometrymeshtoolsplugin.rst:12 74a547da2a8d4d398afdbb2467b293a4
+msgid "FmodGeometryMeshToolsPlugin"
+msgstr "FmodGeometryMeshToolsPlugin"
+
+#: ../../source/classes/class_fmodgeometrymeshtoolsplugin.rst:14 5213c20accc344809fb4c91ff1c56e37
+msgid ""
+"**Inherits:** :ref:`EditorPlugin<class_EditorPlugin>` **<** :ref:`Node<class_Node>` **<** "
+":ref:`Object<class_Object>`"
+msgstr ""
+"**继承：** :ref:`EditorPlugin<class_EditorPlugin>` **<** :ref:`Node<class_Node>` **<** "
+":ref:`Object<class_Object>`"
+
+#: ../../source/classes/class_fmodgeometrymeshtoolsplugin.rst:16 8381b284d0114792a48c4af0c5030ba9
+msgid "Editor tool for creating FMOD geometry nodes from selected meshes."
+msgstr "从选中的网格创建 FMOD 几何节点的编辑器工具。"
+
+#: ../../source/classes/class_fmodgeometrymeshtoolsplugin.rst:21 9eb0776a3fec4fafa8bae19b92c6d74d
+msgid "Description"
+msgstr "描述"
+
+#: ../../source/classes/class_fmodgeometrymeshtoolsplugin.rst:23 0dc073248efd4df2b6d5a3936f489915
+msgid ""
+"FmodGeometryMeshToolsPlugin adds editor actions for selected "
+":ref:`MeshInstance3D<class_MeshInstance3D>` nodes. It can create "
+":ref:`FmodGeometryInstance3D<class_FmodGeometryInstance3D>` children configured for mesh or "
+"collision-shape based FMOD occlusion."
+msgstr ""
+"FmodGeometryMeshToolsPlugin 为选中的    :ref:`MeshInstance3D<class_MeshInstance3D>`    添加编辑器操作，可创建"
+"    :ref:`FmodGeometryInstance3D<class_FmodGeometryInstance3D>`    子节点，并使用网格或碰撞形状配置 FMOD 遮挡。"
+
+#: ../../source/classes/class_fmodgeometrymeshtoolsplugin.rst:25 850e658b8c8d4ad2a92efcecd19af4d0
+msgid ""
+"This class is registered for editor integration and is normally managed by the plugin "
+"automatically."
+msgstr "此类用于编辑器集成，通常由插件自动管理。"
+
+#: ../../source/classes/class_fmodgeometrymeshtoolsplugin.rst:30 b2c426a3172542d0986dbf9a44a1b65c
+msgid "Methods"
+msgstr "方法"
+
+#: ../../source/classes/class_fmodgeometrymeshtoolsplugin.rst:36 d8630cb336ce4e87bf92812b4aa52f60
+msgid "|void|"
+msgstr "|void|"
+
+#: ../../source/classes/class_fmodgeometrymeshtoolsplugin.rst:36 15df1636340e4f78a43450d6f7bc44d2
+msgid ""
+":ref:`_on_menu_id_pressed<class_FmodGeometryMeshToolsPlugin_private_method__on_menu_id_pressed>`\\"
+" (\\ id\\: :ref:`int<class_int>`\\ )"
+msgstr ""
+":ref:`_on_menu_id_pressed<class_FmodGeometryMeshToolsPlugin_private_method__on_menu_id_pressed>`\\"
+" (\\ id\\: :ref:`int<class_int>`\\ )"
+
+#: ../../source/classes/class_fmodgeometrymeshtoolsplugin.rst:46 016bb3ed6d7e4731a59bac9cfb990683
+msgid "Method Descriptions"
+msgstr "方法说明"
+
+#: ../../source/classes/class_fmodgeometrymeshtoolsplugin.rst:52 01288919039e4706a8ff07abe284eba1
+msgid "|void| **_on_menu_id_pressed**\\ (\\ id\\: :ref:`int<class_int>`\\ )"
+msgstr "|void| **_on_menu_id_pressed**\\ (\\ id\\: :ref:`int<class_int>`\\ )"
+
+#: ../../source/classes/class_fmodgeometrymeshtoolsplugin.rst:54 1244192d0c3944d7a142d58a2e5dc3ec
+msgid "Internal editor or engine callback."
+msgstr "编辑器或引擎内部回调。"

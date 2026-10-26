@@ -51,7 +51,7 @@ Bus
 ChannelGroup
 ~~~~~~~~~~~~
 
-:ref:`ChannelGroup<glossary-channelgroup>` 是 FMOD 底层用于混合一组 :ref:`Channel<glossary-channel>` 的对象。普通使用时优先操作 :ref:`FmodAudioBus<FmodAudioBus>` 或总线布局；只有需要更底层的播放控制时，才直接拿 :ref:`FmodChannelGroup<FmodChannelGroup>`。
+:ref:`ChannelGroup<glossary-channelgroup>` 是 FMOD 底层用于混合一组 :ref:`Channel<glossary-channel>` 的对象。普通使用时优先操作 :ref:`FmodAudioBus<class_FmodAudioBus>` 或总线布局；只有需要更底层的播放控制时，才直接拿 :ref:`FmodChannelGroup<class_FmodChannelGroup>`。
 
 DSP
 ~~~
@@ -126,7 +126,7 @@ DSP
 
 Godot-FmodPlayer 的 FMOD 总线布局会和 Godot 的 `AudioServer`_ 总线布局同步。也就是说，你在 Godot 的音频总线面板里创建的 ``Music``、``SFX``、``Voice`` 等总线，也可以被映射到 FMOD 侧使用。
 
-通常情况下，你只需要通过 :ref:`FmodServer.get_audio_bus_layout()<FmodServer-get_audio_bus_layout>` 取得当前布局：
+通常情况下，你只需要通过 :ref:`FmodServer.get_audio_bus_layout()<class_FmodServer_method_get_audio_bus_layout>` 取得当前布局：
 
 .. code-block:: gdscript
 
@@ -151,7 +151,7 @@ Godot-FmodPlayer 的 FMOD 总线布局会和 Godot 的 `AudioServer`_ 总线布�
 创建自己的总线
 --------------
 
-默认总线不够用时，可以通过 Godot 音频总线面板新增总线，然后同步到 FMOD。也可以直接通过 :ref:`FmodAudioBusLayout<FmodAudioBusLayout>` 在代码中创建新总线：
+默认总线不够用时，可以通过 Godot 音频总线面板新增总线，然后同步到 FMOD。也可以直接通过 :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>` 在代码中创建新总线：
 
 .. code-block:: gdscript
 
@@ -257,9 +257,9 @@ Godot-FmodPlayer 的 FMOD 总线布局会和 Godot 的 `AudioServer`_ 总线布�
 高级：混音矩阵什么时候需要看
 ----------------------------
 
-:ref:`Mix Matrix<glossary-mix-matrix>` 可以精确控制“哪个输入声道送到哪个输出声道”。如果你只是想让声音偏左或偏右，优先用 :ref:`FmodChannelControl.set_pan()<FmodChannelControl-set_pan>`。
+:ref:`Mix Matrix<glossary-mix-matrix>` 可以精确控制“哪个输入声道送到哪个输出声道”。如果你只是想让声音偏左或偏右，优先用 :ref:`FmodChannelControl.set_pan()<class_FmodChannelControl_method_set_pan>`。
 
-只有在这些情况下，才建议继续研究 :ref:`FmodChannelControl.set_mix_matrix()<FmodChannelControl-set_mix_matrix>`：
+只有在这些情况下，才建议继续研究 :ref:`FmodChannelControl.set_mix_matrix()<class_FmodChannelControl_method_set_mix_matrix>`：
 
 - 要把单声道手动分配到多声道输出，也就是 :ref:`Upmix<glossary-upmix>`。
 - 要把 5.1 等多声道内容折叠成立体声，也就是 :ref:`Downmix<glossary-downmix>`。

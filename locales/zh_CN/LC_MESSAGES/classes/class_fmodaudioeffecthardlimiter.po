@@ -1,0 +1,247 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, LuYingYiLong
+# This file is distributed under the same license as the Godot FmodPlayer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot FmodPlayer \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:12 d4106b2d358d4c02a062a1bed0786692
+msgid "FmodAudioEffectHardLimiter"
+msgstr "FmodAudioEffectHardLimiter"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:14 ba152dff44a845c4935398c9b1be4477
+msgid ""
+"**Inherits:** :ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>`"
+" **<** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+msgstr ""
+"**继承：** :ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>` **<**"
+" :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:16 a3b7e703edde4abf938680f8cf268e60
+msgid "Hard limiter to prevent audio clipping and distortion."
+msgstr "硬限制器，用于限制峰值电平。"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:21 b40b69ef39074ef885a81494d96f0922
+msgid "Description"
+msgstr "描述"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:23 10cec4f1266d42bda8611d7ac7dd8182
+msgid ""
+"FmodAudioEffectHardLimiter is a brick-wall limiter that prevents the audio signal from exceeding "
+"a specified ceiling level. It ensures that the output never goes above the threshold, effectively"
+" preventing clipping and distortion that can occur when signals exceed 0 dBFS."
+msgstr "**FmodAudioEffectHardLimiter**    用于阻止信号峰值超过指定上限。它常放在总线效果链后段，用于保护输出、抑制突发峰值或给某个总线做简单的安全限制。"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:25 066e35c754d04fbe9ab867ad24e45197
+msgid ""
+"Unlike a compressor which gradually reduces gain, a hard limiter applies instantaneous limiting "
+"to peaks, making it ideal for final output protection and maximizing loudness without distortion."
+msgstr "硬限幅器会立即限制信号峰值，适合保护最终输出，并在限制峰值的同时提高响度。"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:27 dbb2251f0bf549e49767565fb15aae35
+msgid ""
+"The limiter can also apply pre-gain to boost the signal before limiting, allowing you to maximize"
+" perceived loudness while staying within safe levels."
+msgstr "支持在限幅前增加预增益，以在控制峰值的同时提高感知响度。"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:32 30e40417da2c4ba9b1db068bbb3e4eca
+msgid "Properties"
+msgstr "属性"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:38
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:40
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:42
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:56
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:60
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:64 05c21fd072dc472392bf0a03f7eab256
+#: 53e84b1e3dc24b2a919839226ec4027b 6ccad7d748c542178fdc3b4a22d38be0 77d5dc58649d48a1875d6133fad67d11
+#: 95a43d54079144e39b11ed434b1704f9 cbbaf572298448489a1b18e189bb5e06
+msgid ":ref:`float<class_float>`"
+msgstr ":ref:`float<class_float>`"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:38 7c94592936324e2998d24eca35f6b27c
+msgid ":ref:`ceiling_db<class_FmodAudioEffectHardLimiter_property_ceiling_db>`"
+msgstr ":ref:`ceiling_db<class_FmodAudioEffectHardLimiter_property_ceiling_db>`"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:38 c6ccddcef34f444e9614658fa935ce6f
+msgid "``-0.3``"
+msgstr "``-0.3``"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:40 0c4ae7d2faf44a379d8b05d7f1e78f1f
+msgid ":ref:`pre_gain_db<class_FmodAudioEffectHardLimiter_property_pre_gain_db>`"
+msgstr ":ref:`pre_gain_db<class_FmodAudioEffectHardLimiter_property_pre_gain_db>`"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:40 c8c2fd595bf549bfbdab6ee492cb23a9
+msgid "``0.0``"
+msgstr "``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:42 34cdf1c90dd1403cbb5f9c3e94fd15a0
+msgid ":ref:`release<class_FmodAudioEffectHardLimiter_property_release>`"
+msgstr ":ref:`release<class_FmodAudioEffectHardLimiter_property_release>`"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:42 5401fc96de1c476a87fd9b0ccb9baa41
+msgid "``0.1``"
+msgstr "``0.1``"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:48 416f6a595c2341f3b578a90d5a8333e9
+msgid "Methods"
+msgstr "方法"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:54
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:58
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:62 7bed677747274a64856c90869a46e917
+#: 807db14c2de44cbe99a45047a69c97c9 8093ab0eef6f4f83872592a93ba3b0c0
+msgid "|void|"
+msgstr "|void|"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:54 c284299941a443ee84ebdf8afd493b9a
+msgid ""
+":ref:`set_ceiling_db<class_FmodAudioEffectHardLimiter_method_set_ceiling_db>`\\ (\\ ceiling_db\\:"
+" :ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_ceiling_db<class_FmodAudioEffectHardLimiter_method_set_ceiling_db>`\\ (\\ ceiling_db\\:"
+" :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:56 c93d9b3382f54353b6fa6b837ae46c54
+msgid ":ref:`get_ceiling_db<class_FmodAudioEffectHardLimiter_method_get_ceiling_db>`\\ (\\ ) |const|"
+msgstr ":ref:`get_ceiling_db<class_FmodAudioEffectHardLimiter_method_get_ceiling_db>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:58 3b0cc3397818441e835e015bc5b647b1
+msgid ""
+":ref:`set_pre_gain_db<class_FmodAudioEffectHardLimiter_method_set_pre_gain_db>`\\ (\\ "
+"pre_gain_db\\: :ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_pre_gain_db<class_FmodAudioEffectHardLimiter_method_set_pre_gain_db>`\\ (\\ "
+"pre_gain_db\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:60 ecb1891f845147de9de2e07f8f7da9a8
+msgid ":ref:`get_pre_gain_db<class_FmodAudioEffectHardLimiter_method_get_pre_gain_db>`\\ (\\ ) |const|"
+msgstr ":ref:`get_pre_gain_db<class_FmodAudioEffectHardLimiter_method_get_pre_gain_db>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:62 e38f6a1156d84bb4ac9a327aed652f3c
+msgid ""
+":ref:`set_release<class_FmodAudioEffectHardLimiter_method_set_release>`\\ (\\ release\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_release<class_FmodAudioEffectHardLimiter_method_set_release>`\\ (\\ release\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:64 b8ec52c7e06a41f2902bf96e9a25fdcf
+msgid ":ref:`get_release<class_FmodAudioEffectHardLimiter_method_get_release>`\\ (\\ ) |const|"
+msgstr ":ref:`get_release<class_FmodAudioEffectHardLimiter_method_get_release>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:74 6a858a791fcb4b0dad390b1e690f2501
+msgid "Property Descriptions"
+msgstr "属性说明"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:80 2e50ab45d91c43a9a496c7c4fdf75430
+msgid ":ref:`float<class_float>` **ceiling_db** = ``-0.3``"
+msgstr ":ref:`float<class_float>` **ceiling_db** = ``-0.3``"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:84
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:138 5e58e1b345c341a49b099c92832c9347
+#: 9c2c5a31f4e24dc68e052d6bdfa015df
+msgid "|void| **set_ceiling_db**\\ (\\ ceiling_db\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_ceiling_db**\\ (\\ ceiling_db\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:85
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:152 489615467dbb49148581d852ab07d1cc
+#: 604089f68b4d4ae397162579e1077310
+msgid ":ref:`float<class_float>` **get_ceiling_db**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_ceiling_db**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:87 6f93c119472c4973841b7212634f0c8f
+msgid ""
+"The maximum output level in decibels (dB). Range: -12.0 dB to 0.0 dB. Default: -0.3 dB. The "
+"signal will never exceed this level. Setting this slightly below 0 dB (e.g., -0.3 dB) provides "
+"safety headroom to prevent inter-sample peaks from clipping."
+msgstr "输出峰值上限"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:97 33464f2f271e48b09a5fa835c164d72a
+msgid ":ref:`float<class_float>` **pre_gain_db** = ``0.0``"
+msgstr ":ref:`float<class_float>` **pre_gain_db** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:101
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:166 1a04c8d36a044fe6bc50a05adec01050
+#: c13b5a5f24ac4a69b23af47f81cdfed0
+msgid "|void| **set_pre_gain_db**\\ (\\ pre_gain_db\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_pre_gain_db**\\ (\\ pre_gain_db\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:102
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:180 e203fd063a3f40df945bdd938d81643e
+#: fc74003dd30748ce9105a5964df26c9b
+msgid ":ref:`float<class_float>` **get_pre_gain_db**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_pre_gain_db**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:104 d1fa31594271400f832f6ba666f763e3
+msgid ""
+"The gain applied to the signal before limiting, in decibels (dB). Range: -30 dB to +30 dB. "
+"Default: 0 dB. Use positive values to boost quiet signals before limiting, which can increase "
+"perceived loudness. The limiting stage ensures the final output never exceeds the ceiling "
+"regardless of pre-gain."
+msgstr "限制前增益"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:114 fe071478912f462fbdc0709a2ad2f0a5
+msgid ":ref:`float<class_float>` **release** = ``0.1``"
+msgstr ":ref:`float<class_float>` **release** = ``0.1``"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:118
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:194 4449f31c58a54dfba616ecde6469903d
+#: bcf1d66a50234f8a8b2f7ef992f91c3a
+msgid "|void| **set_release**\\ (\\ release\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_release**\\ (\\ release\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:119
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:208 52aee3d9e7b74013b0fc303a026a5895
+#: 7dbc778e82b043f9826444c6b8a3ada9
+msgid ":ref:`float<class_float>` **get_release**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_release**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:121 483da6f3f1e043c69978f51848577db6
+msgid ""
+"The release time in seconds. Range: 0.001 to 1.0 seconds. Default: 0.1 seconds. This controls how"
+" quickly the limiter stops reducing gain after the signal drops below the ceiling. Longer release"
+" times produce smoother results but may reduce transients; shorter times are more transparent but"
+" may cause pumping."
+msgstr "释放时间"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:130 c0fc6bd62d444dcdbf7b69a762ee7a9a
+msgid "Method Descriptions"
+msgstr "方法说明"
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:140 b54cfcd2a5d64aaaabac39fbf838bda3
+msgid "Sets :ref:`ceiling_db<class_FmodAudioEffectHardLimiter_property_ceiling_db>`."
+msgstr "Sets :ref:`ceiling_db<class_FmodAudioEffectHardLimiter_property_ceiling_db>`."
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:154 6df43b1f012340e2a12fd2bf85875136
+msgid "Returns :ref:`ceiling_db<class_FmodAudioEffectHardLimiter_property_ceiling_db>`."
+msgstr "Returns :ref:`ceiling_db<class_FmodAudioEffectHardLimiter_property_ceiling_db>`."
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:168 9e257d81688545cf80890279b18c5941
+msgid "Sets :ref:`pre_gain_db<class_FmodAudioEffectHardLimiter_property_pre_gain_db>`."
+msgstr "Sets :ref:`pre_gain_db<class_FmodAudioEffectHardLimiter_property_pre_gain_db>`."
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:182 e12d816152704b0889fccffd0feb69ba
+msgid "Returns :ref:`pre_gain_db<class_FmodAudioEffectHardLimiter_property_pre_gain_db>`."
+msgstr "Returns :ref:`pre_gain_db<class_FmodAudioEffectHardLimiter_property_pre_gain_db>`."
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:196 58091e71893449be975a40025408ac99
+msgid "Sets :ref:`release<class_FmodAudioEffectHardLimiter_property_release>`."
+msgstr "Sets :ref:`release<class_FmodAudioEffectHardLimiter_property_release>`."
+
+#: ../../source/classes/class_fmodaudioeffecthardlimiter.rst:210 bc031db359da4a2f9802b155a0a9b8bd
+msgid "Returns :ref:`release<class_FmodAudioEffectHardLimiter_property_release>`."
+msgstr "Returns :ref:`release<class_FmodAudioEffectHardLimiter_property_release>`."

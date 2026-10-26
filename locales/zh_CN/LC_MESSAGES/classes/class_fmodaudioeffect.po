@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, LuYingYiLong
+# This file is distributed under the same license as the Godot FmodPlayer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot FmodPlayer \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/classes/class_fmodaudioeffect.rst:12 a1099272ef5b414ca4fb2079ae69a9ac
+msgid "FmodAudioEffect"
+msgstr "FmodAudioEffect"
+
+#: ../../source/classes/class_fmodaudioeffect.rst:14 6f2fd77f59aa482a9b29a8caa076fd2d
+msgid ""
+"**Inherits:** :ref:`Resource<class_Resource>` **<** :ref:`RefCounted<class_RefCounted>` **<** "
+":ref:`Object<class_Object>`"
+msgstr ""
+"**继承：** :ref:`Resource<class_Resource>` **<** :ref:`RefCounted<class_RefCounted>` **<** "
+":ref:`Object<class_Object>`"
+
+#: ../../source/classes/class_fmodaudioeffect.rst:16 751ab0f9659b4ae3a91be07291837698
+msgid ""
+"**Inherited By:** :ref:`FmodAudioEffectAmplify<class_FmodAudioEffectAmplify>`, "
+":ref:`FmodAudioEffectCapture<class_FmodAudioEffectCapture>`, "
+":ref:`FmodAudioEffectChorus<class_FmodAudioEffectChorus>`, "
+":ref:`FmodAudioEffectCompressor<class_FmodAudioEffectCompressor>`, "
+":ref:`FmodAudioEffectDelay<class_FmodAudioEffectDelay>`, "
+":ref:`FmodAudioEffectDistortion<class_FmodAudioEffectDistortion>`, "
+":ref:`FmodAudioEffectEQ<class_FmodAudioEffectEQ>`, "
+":ref:`FmodAudioEffectFilter<class_FmodAudioEffectFilter>`, "
+":ref:`FmodAudioEffectHardLimiter<class_FmodAudioEffectHardLimiter>`, "
+":ref:`FmodAudioEffectPanner<class_FmodAudioEffectPanner>`, "
+":ref:`FmodAudioEffectPhaser<class_FmodAudioEffectPhaser>`, "
+":ref:`FmodAudioEffectPitchShift<class_FmodAudioEffectPitchShift>`, "
+":ref:`FmodAudioEffectRecord<class_FmodAudioEffectRecord>`, "
+":ref:`FmodAudioEffectReverb<class_FmodAudioEffectReverb>`, "
+":ref:`FmodAudioEffectSpectrumAnalyzer<class_FmodAudioEffectSpectrumAnalyzer>`, "
+":ref:`FmodAudioEffectStereoEnhance<class_FmodAudioEffectStereoEnhance>`"
+msgstr ""
+"可挂到 FmodAudioBus 的音频效果资源基类 （参见   :ref:`FmodAudioEffectAmplify<class_FmodAudioEffectAmplify>`  ） "
+"（参见   :ref:`FmodAudioEffectCapture<class_FmodAudioEffectCapture>`  ） （参见   "
+":ref:`FmodAudioEffectChorus<class_FmodAudioEffectChorus>`  ） （参见   "
+":ref:`FmodAudioEffectCompressor<class_FmodAudioEffectCompressor>`  ） （参见   "
+":ref:`FmodAudioEffectDelay<class_FmodAudioEffectDelay>`  ） （参见   "
+":ref:`FmodAudioEffectDistortion<class_FmodAudioEffectDistortion>`  ） （参见   "
+":ref:`FmodAudioEffectEQ<class_FmodAudioEffectEQ>`  ） （参见   "
+":ref:`FmodAudioEffectFilter<class_FmodAudioEffectFilter>`  ） （参见   "
+":ref:`FmodAudioEffectHardLimiter<class_FmodAudioEffectHardLimiter>`  ） （参见   "
+":ref:`FmodAudioEffectPanner<class_FmodAudioEffectPanner>`  ） （参见   "
+":ref:`FmodAudioEffectPhaser<class_FmodAudioEffectPhaser>`  ） （参见   "
+":ref:`FmodAudioEffectPitchShift<class_FmodAudioEffectPitchShift>`  ） （参见   "
+":ref:`FmodAudioEffectRecord<class_FmodAudioEffectRecord>`  ） （参见   "
+":ref:`FmodAudioEffectReverb<class_FmodAudioEffectReverb>`  ） （参见   "
+":ref:`FmodAudioEffectSpectrumAnalyzer<class_FmodAudioEffectSpectrumAnalyzer>`  ） （参见   "
+":ref:`FmodAudioEffectStereoEnhance<class_FmodAudioEffectStereoEnhance>`  ）"
+
+#: ../../source/classes/class_fmodaudioeffect.rst:18 c0b8daf0962e488189407b99a20966f3
+msgid "Abstract base class for audio effects in the FMOD audio system."
+msgstr ""
+"**FmodAudioEffect**    是所有 FMOD 音频效果资源的基类。它负责把效果创建出的 DSP 应用到    ``FmodChannelGroup``   "
+"，并保存当前所属总线和 DSP 链。"
+
+#: ../../source/classes/class_fmodaudioeffect.rst:23 42c6c1338ace414da2bc488ecc598a2b
+msgid "Description"
+msgstr "描述"
+
+#: ../../source/classes/class_fmodaudioeffect.rst:25 ec3d6067dfc1474993e3bbf9c7b14254
+msgid ""
+"FmodAudioEffect is the abstract base class for all audio effects in the FMOD integration. It "
+"provides a common interface for applying effects to audio buses (channel groups). Subclasses "
+"implement specific effect types such as Amplify, Filter, EQ, Reverb, Delay, etc."
+msgstr "FmodAudioEffect 是 FMOD 音频效果器的抽象基类，提供将效果器应用到音频总线（通道组）的公共接口。子类实现增益、滤波、均衡、混响和延迟等效果。"
+
+#: ../../source/classes/class_fmodaudioeffect.rst:27 200ef58611a646289f3110e7f1da374a
+msgid ""
+"The effect can be applied to a :ref:`FmodChannelGroup<class_FmodChannelGroup>` using "
+":ref:`apply_to()<class_FmodAudioEffect_method_apply_to>` and removed using "
+":ref:`remove_from_bus()<class_FmodAudioEffect_method_remove_from_bus>`."
+msgstr ""
+"使用    :ref:`apply_to()<class_FmodAudioEffect_method_apply_to>`    将效果器应用到    "
+":ref:`FmodChannelGroup<class_FmodChannelGroup>`   ，使用    "
+":ref:`remove_from_bus()<class_FmodAudioEffect_method_remove_from_bus>`    将其移除。"
+
+#: ../../source/classes/class_fmodaudioeffect.rst:32 4508a38abda54cb5bc75c62fb4c3e392
+msgid "Methods"
+msgstr "方法"
+
+#: ../../source/classes/class_fmodaudioeffect.rst:38 ../../source/classes/class_fmodaudioeffect.rst:40
+#: 03511346bc7b47fbb5157611c4aff78d e551f158d04a423489d231ead3abe2af
+msgid "|void|"
+msgstr "|void|"
+
+#: ../../source/classes/class_fmodaudioeffect.rst:38 848adf0247294e2b929e0b823089474a
+msgid ""
+":ref:`apply_to<class_FmodAudioEffect_method_apply_to>`\\ (\\ bus\\: "
+":ref:`FmodChannelGroup<class_FmodChannelGroup>`\\ )"
+msgstr ""
+":ref:`apply_to<class_FmodAudioEffect_method_apply_to>`\\ (\\ bus\\: "
+":ref:`FmodChannelGroup<class_FmodChannelGroup>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffect.rst:40 a7b95c1d8c57437caf464bc1b1258c43
+msgid ""
+":ref:`remove_from_bus<class_FmodAudioEffect_method_remove_from_bus>`\\ (\\ bus\\: "
+":ref:`FmodChannelGroup<class_FmodChannelGroup>`\\ )"
+msgstr ""
+":ref:`remove_from_bus<class_FmodAudioEffect_method_remove_from_bus>`\\ (\\ bus\\: "
+":ref:`FmodChannelGroup<class_FmodChannelGroup>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffect.rst:42 e2bf26a61e334545a884ccafd241fd3a
+msgid ":ref:`FmodChannelGroup<class_FmodChannelGroup>`"
+msgstr ":ref:`FmodChannelGroup<class_FmodChannelGroup>`"
+
+#: ../../source/classes/class_fmodaudioeffect.rst:42 78b05036ea6f4af99a9b6497e34879fa
+msgid ":ref:`get_bus<class_FmodAudioEffect_method_get_bus>`\\ (\\ ) |const|"
+msgstr ":ref:`get_bus<class_FmodAudioEffect_method_get_bus>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffect.rst:52 5a35d9ad5cb448b49995afd0d92e1340
+msgid "Method Descriptions"
+msgstr "方法说明"
+
+#: ../../source/classes/class_fmodaudioeffect.rst:60 bde29b0328b14cec96b73c6c0f60409c
+msgid "|void| **apply_to**\\ (\\ bus\\: :ref:`FmodChannelGroup<class_FmodChannelGroup>`\\ )"
+msgstr "|void| **apply_to**\\ (\\ bus\\: :ref:`FmodChannelGroup<class_FmodChannelGroup>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffect.rst:62 9234696388e84c57bb97c17c28bf2ee3
+msgid ""
+"Applies this effect to the specified audio bus. Subclasses should override this method to add "
+"their DSP units to the bus."
+msgstr "将效果应用到指定通道组。"
+
+#: ../../source/classes/class_fmodaudioeffect.rst:74 092dca329f3049c09b7a6e2067df03b9
+msgid "|void| **remove_from_bus**\\ (\\ bus\\: :ref:`FmodChannelGroup<class_FmodChannelGroup>`\\ )"
+msgstr "|void| **remove_from_bus**\\ (\\ bus\\: :ref:`FmodChannelGroup<class_FmodChannelGroup>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffect.rst:76 de5067b3c8d54bfa9519e11dd3e52db6
+msgid "Removes this effect from the specified audio bus, detaching all DSP units."
+msgstr "从指定通道组移除此效果。"
+
+#: ../../source/classes/class_fmodaudioeffect.rst:88 9b3622bc718541048a22f85e3e47088c
+msgid ":ref:`FmodChannelGroup<class_FmodChannelGroup>` **get_bus**\\ (\\ ) |const|"
+msgstr ":ref:`FmodChannelGroup<class_FmodChannelGroup>` **get_bus**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffect.rst:90 ea7a156bace14614861a9c158d46da80
+msgid "Gets the audio bus (channel group) that this effect is currently applied to."
+msgstr "返回当前应用到的通道组。"

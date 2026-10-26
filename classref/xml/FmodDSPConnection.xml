@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="FmodDSPConnection" inherits="RefCounted" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/godotengine/godot/master/doc/class.xsd">
+	<brief_description>
+		Represents a connection between DSP nodes in the audio processing graph.
+	</brief_description>
+	<description>
+		FmodDSPConnection represents a connection between two FmodDSP units in the FMOD DSP signal processing graph. It allows control over the signal flow, including volume mixing and channel matrix routing.
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="set_mix">
+			<return type="void" />
+			<param index="0" name="volume_db" type="float" />
+			<description>
+				Sets the volume scale of the connection in dB.
+			</description>
+		</method>
+		<method name="get_mix" qualifiers="const">
+			<return type="float" />
+			<description>
+				Gets the volume scale of the connection in dB.
+			</description>
+		</method>
+		<method name="set_mix_matrix">
+			<return type="void" />
+			<param index="0" name="matrix" type="PackedFloat32Array" />
+			<param index="1" name="outchannels" type="int" />
+			<param index="2" name="inchannels" type="int" />
+			<param index="3" name="inchannel_hop" type="int" default="0" />
+			<description>
+				Sets a 2D pan matrix that maps signals from input channels (columns) to output speakers (rows).
+			</description>
+		</method>
+		<method name="get_mix_matrix" qualifiers="const">
+			<return type="PackedFloat32Array" />
+			<param index="0" name="outchannels" type="int" />
+			<param index="1" name="inchannels" type="int" />
+			<param index="2" name="inchannel_hop" type="int" default="0" />
+			<description>
+				Gets the 2D pan matrix that maps signals from input channels (columns) to output speakers (rows).
+			</description>
+		</method>
+		<method name="get_input" qualifiers="const">
+			<return type="FmodDSP" />
+			<description>
+				Gets the input DSP unit of this connection.
+			</description>
+		</method>
+		<method name="get_output" qualifiers="const">
+			<return type="FmodDSP" />
+			<description>
+				Gets the output DSP unit of this connection.
+			</description>
+		</method>
+		<method name="get_type" qualifiers="const">
+			<return type="int" enum="FmodDSPConnection.FmodDSPConnectionType" />
+			<description>
+				Gets the connection type between the two DSP units.
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member type="float" name="mix" setter="set_mix" getter="get_mix" default="0.0">
+			The volume mix level of the connection in dB.
+		</member>
+	</members>
+	<signals />
+	<constants>
+		<constant name="DSPCONNECTION_TYPE_STANDARD" value="0" enum="FmodDSPConnectionType">
+			Standard connection type where the input DSP's output is fed directly to the output DSP's input.
+		</constant>
+		<constant name="DSPCONNECTION_TYPE_SIDECHAIN" value="1" enum="FmodDSPConnectionType">
+			Sidechain connection type where the input DSP's output is fed to the output DSP's sidechain input.
+		</constant>
+		<constant name="DSPCONNECTION_TYPE_SEND" value="2" enum="FmodDSPConnectionType">
+			Send connection type for routing signals to auxiliary buses.
+		</constant>
+		<constant name="DSPCONNECTION_TYPE_SEND_SIDECHAIN" value="3" enum="FmodDSPConnectionType">
+			Send sidechain connection type combining send and sidechain behavior.
+		</constant>
+		<constant name="DSPCONNECTION_TYPE_PREALLOCATED" value="4" enum="FmodDSPConnectionType">
+			Preallocated connection type for internal FMOD use.
+		</constant>
+		<constant name="DSPCONNECTION_TYPE_MAX" value="5" enum="FmodDSPConnectionType">
+			Maximum number of connection types.
+		</constant>
+		<constant name="DSPCONNECTION_TYPE_FORCEINT" value="65536" enum="FmodDSPConnectionType">
+			Forces the connection type to be an integer type.
+		</constant>
+	</constants>
+</class>

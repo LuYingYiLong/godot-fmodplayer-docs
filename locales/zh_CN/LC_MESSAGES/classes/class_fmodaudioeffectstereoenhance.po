@@ -1,0 +1,255 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, LuYingYiLong
+# This file is distributed under the same license as the Godot FmodPlayer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot FmodPlayer \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:12 d7172e3c6c7a4000a85d763e8ee26c93
+msgid "FmodAudioEffectStereoEnhance"
+msgstr "FmodAudioEffectStereoEnhance"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:14 9da14335a6034acf9efd85474eb29503
+msgid ""
+"**Inherits:** :ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>`"
+" **<** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+msgstr ""
+"**继承：** :ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>` **<**"
+" :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:16 9c8be5e67d25466abbf6f27ac6585238
+msgid "Stereo enhancement effect for widening or narrowing the stereo field."
+msgstr "立体声增强效果。"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:21 0ff3dde4c4ef423ab9597a7e993389d0
+msgid "Description"
+msgstr "描述"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:23 88449d49e43143eebfeb3968bdb8884e
+msgid ""
+"FmodAudioEffectStereoEnhance is a stereo widening/enhancement effect that can expand or contract "
+"the perceived stereo width of audio signals. It uses multiple techniques including pan pullout, "
+"time-based separation, and surround processing to manipulate the stereo image."
+msgstr ""
+"**FmodAudioEffectStereoEnhance**    用于加宽或强化立体声形象。   ``pan_pullout``    调整左右声像拉开感，   "
+"``time_pullout_ms``    增加双声道时间差，   ``surround``    控制环绕增强量。"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:25 5143c31ef92143d39e951b343f573ff0
+msgid ""
+"The effect can create wider, more immersive stereo fields for music and sound effects, or narrow "
+"the stereo image for mono compatibility. Use it to add spaciousness to narrow recordings, create "
+"special stereo effects, or ensure mono compatibility when needed."
+msgstr "可扩展音乐和音效的立体声声场，也可缩窄声像以改善单声道兼容性。"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:27 1d6d8d43a10c443ea9f7df71c3b52086
+msgid ""
+"The pan pullout spreads low frequencies to the sides while keeping mid frequencies centered, time"
+" pullout introduces micro-delays between channels for width, and surround adds depth to the "
+"stereo field."
+msgstr "声像扩展将低频向两侧展开并保持中频居中；时间扩展通过声道间的微小延迟增加宽度；环绕参数增加声场深度。"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:32 462b4a926cd243a5b3da1c0cb61b0174
+msgid "Properties"
+msgstr "属性"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:38
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:40
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:42
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:56
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:60
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:64 1752ce41d6e545cd8107ace8af135d07
+#: 1bcd8c977a95403e9324a611f9f71b59 623da40a654649e78afd64fe31fb3d81 e840b28af1e543799b8f595313af2b2f
+#: f233559ad7d1467f9fd9e3b59b17c5e1 f9e392873eb64ad1ac310439ad04a05b
+msgid ":ref:`float<class_float>`"
+msgstr ":ref:`float<class_float>`"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:38 34d67419256841da9627108986b15677
+msgid ":ref:`pan_pullout<class_FmodAudioEffectStereoEnhance_property_pan_pullout>`"
+msgstr ":ref:`pan_pullout<class_FmodAudioEffectStereoEnhance_property_pan_pullout>`"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:38 33778fe4f4a146eb8148240f704a54f5
+msgid "``1.0``"
+msgstr "``1.0``"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:40 b3f068e11d1645a88efcc8671a923392
+msgid ":ref:`time_pullout_ms<class_FmodAudioEffectStereoEnhance_property_time_pullout_ms>`"
+msgstr ":ref:`time_pullout_ms<class_FmodAudioEffectStereoEnhance_property_time_pullout_ms>`"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:40
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:42 714b1d86daad4edc9b7f6c4254f94cc1
+#: 85b3b20aab014593b19818bccb64dfa9
+msgid "``0.0``"
+msgstr "``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:42 b3b8156b1e8c49f78780591173b8ffca
+msgid ":ref:`surround<class_FmodAudioEffectStereoEnhance_property_surround>`"
+msgstr ":ref:`surround<class_FmodAudioEffectStereoEnhance_property_surround>`"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:48 5406a46e1cf94f27ae122bc1b0c97cec
+msgid "Methods"
+msgstr "方法"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:54
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:58
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:62 a9923e5cc6bf4a30bb4557ddee9f14f2
+#: d9b6ebe7205e4979b823a4e78decec53 dd99ccceb00e48f59e33813ce6575233
+msgid "|void|"
+msgstr "|void|"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:54 adb6a4dc0bde4742a09ab0f3b3a0a868
+msgid ""
+":ref:`set_pan_pullout<class_FmodAudioEffectStereoEnhance_method_set_pan_pullout>`\\ (\\ amount\\:"
+" :ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_pan_pullout<class_FmodAudioEffectStereoEnhance_method_set_pan_pullout>`\\ (\\ amount\\:"
+" :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:56 937b185e5d9a4af0bd7051cfa3971a5b
+msgid ":ref:`get_pan_pullout<class_FmodAudioEffectStereoEnhance_method_get_pan_pullout>`\\ (\\ ) |const|"
+msgstr ":ref:`get_pan_pullout<class_FmodAudioEffectStereoEnhance_method_get_pan_pullout>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:58 a25f062b81c94af9985cc2dae6bb9fa3
+msgid ""
+":ref:`set_time_pullout<class_FmodAudioEffectStereoEnhance_method_set_time_pullout>`\\ (\\ "
+"amount\\: :ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_time_pullout<class_FmodAudioEffectStereoEnhance_method_set_time_pullout>`\\ (\\ "
+"amount\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:60 36ee0d08c23d4c4582462ed2fa3630b7
+msgid ""
+":ref:`get_time_pullout<class_FmodAudioEffectStereoEnhance_method_get_time_pullout>`\\ (\\ ) "
+"|const|"
+msgstr ""
+":ref:`get_time_pullout<class_FmodAudioEffectStereoEnhance_method_get_time_pullout>`\\ (\\ ) "
+"|const|"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:62 b4b218150e514b1499fb66ae0e974503
+msgid ""
+":ref:`set_surround<class_FmodAudioEffectStereoEnhance_method_set_surround>`\\ (\\ amount\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_surround<class_FmodAudioEffectStereoEnhance_method_set_surround>`\\ (\\ amount\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:64 e61a6e7e45d449599b2769f1c12295f8
+msgid ":ref:`get_surround<class_FmodAudioEffectStereoEnhance_method_get_surround>`\\ (\\ ) |const|"
+msgstr ":ref:`get_surround<class_FmodAudioEffectStereoEnhance_method_get_surround>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:74 ab671b9a9cf6495ea527d951e15b265e
+msgid "Property Descriptions"
+msgstr "属性说明"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:80 a9e3a94acb95455784f39e9a562356e3
+msgid ":ref:`float<class_float>` **pan_pullout** = ``1.0``"
+msgstr ":ref:`float<class_float>` **pan_pullout** = ``1.0``"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:84
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:138 617c5ff99f954751a86c4c86fb5bf0ed
+#: b9217749c8b4418fb15ed5ca4e99c792
+msgid "|void| **set_pan_pullout**\\ (\\ amount\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_pan_pullout**\\ (\\ amount\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:85
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:152 7456747542cd43fe92c7f24f829c115f
+#: f33211c642de4987ba4dbb2995b8c8b1
+msgid ":ref:`float<class_float>` **get_pan_pullout**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_pan_pullout**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:87 043803d2ffce4aa08048dce3988540d6
+msgid ""
+"The amount of pan-based stereo widening applied. Range: 0.0 to 4.0. Default: 1.0. Higher values "
+"spread the stereo image wider by moving different frequency components to different positions in "
+"the stereo field. This creates a sense of width while maintaining center image stability. A value"
+" of 0.0 disables this effect."
+msgstr "声像拉开量"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:97 07c7eba9f73b45fab243acc35678b44e
+msgid ":ref:`float<class_float>` **time_pullout_ms** = ``0.0``"
+msgstr ":ref:`float<class_float>` **time_pullout_ms** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:101
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:166 797572dfc5634fce95a498a3b0332ba2
+#: fc47747a9de2438a8f65b7f395102cc8
+msgid "|void| **set_time_pullout**\\ (\\ amount\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_time_pullout**\\ (\\ amount\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:102
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:180 427dc1cf67044cc8bc2bed9d730fb9a9
+#: f72c8755b7534bfebdef172f4adf7cbb
+msgid ":ref:`float<class_float>` **get_time_pullout**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_time_pullout**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:104 3ee02fed28244284be457a30c0f4488e
+msgid ""
+"The time-based stereo separation in milliseconds. Range: 0.0 to 50.0 ms. Default: 0.0. This "
+"introduces a small delay between the left and right channels to create stereo width. The effect "
+"mimics natural acoustic delays and can make sources sound wider. Higher values create more width "
+"but may cause comb filtering artifacts if too extreme. Use subtle values (1-10 ms) for natural "
+"enhancement."
+msgstr "时间差拉开量，单位为毫秒"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:114 a34b022f54fc471982def490d4a79ff7
+msgid ":ref:`float<class_float>` **surround** = ``0.0``"
+msgstr ":ref:`float<class_float>` **surround** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:118
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:194 7824541bc91d493cb00eea11e1e3432e
+#: b96874be16b048a6b9fb6bf6d806991d
+msgid "|void| **set_surround**\\ (\\ amount\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_surround**\\ (\\ amount\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:119
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:208 027dd6533efe47acad34ca76beb7d078
+#: 4990281cd7504a129f147dd73d71f667
+msgid ":ref:`float<class_float>` **get_surround**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_surround**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:121 f4bb23fb8ed04fcc8c77bd1de26abf86
+msgid ""
+"The amount of surround processing applied to the stereo field. Range: -100.0 to 100.0. Default: "
+"0.0. Positive values enhance the ambient/spatial components of the signal, creating a more "
+"enveloping sound. Negative values can make the stereo image more focused and direct. This "
+"parameter manipulates the difference (L-R) signal to alter spaciousness."
+msgstr "环绕增强量"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:130 f08c1aad4664433aadad448f9005740b
+msgid "Method Descriptions"
+msgstr "方法说明"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:140 69be9bec590b4ed29c98b5a9b627becf
+msgid "Sets :ref:`pan_pullout<class_FmodAudioEffectStereoEnhance_property_pan_pullout>`."
+msgstr "Sets :ref:`pan_pullout<class_FmodAudioEffectStereoEnhance_property_pan_pullout>`."
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:154 51d575f5c9bc42538fc7cfb21396fe1d
+msgid "Returns :ref:`pan_pullout<class_FmodAudioEffectStereoEnhance_property_pan_pullout>`."
+msgstr "Returns :ref:`pan_pullout<class_FmodAudioEffectStereoEnhance_property_pan_pullout>`."
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:168 2a191d24e1bf42aaad0beb6d4b14c7a4
+msgid "Sets time pullout."
+msgstr "设置时间差拉开量。"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:182 30553c12203f4b01b614b26ce8c50649
+msgid "Returns time pullout."
+msgstr "返回时间差拉开量。"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:196 4a83942429fe452b9dc6ea8a238c5f39
+msgid "Sets :ref:`surround<class_FmodAudioEffectStereoEnhance_property_surround>`."
+msgstr "Sets :ref:`surround<class_FmodAudioEffectStereoEnhance_property_surround>`."
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:210 77d7424a1ad0414f811f4a3a9554b6be
+msgid "Returns :ref:`surround<class_FmodAudioEffectStereoEnhance_property_surround>`."
+msgstr "Returns :ref:`surround<class_FmodAudioEffectStereoEnhance_property_surround>`."

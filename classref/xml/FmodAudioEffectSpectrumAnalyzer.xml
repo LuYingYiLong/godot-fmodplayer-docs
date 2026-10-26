@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="FmodAudioEffectSpectrumAnalyzer" inherits="FmodAudioEffect" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/godotengine/godot/master/doc/class.xsd">
+	<brief_description>
+		Performs real-time frequency spectrum analysis on audio signals for visualization and analysis.
+	</brief_description>
+	<description>
+		FmodAudioEffectSpectrumAnalyzer analyzes the frequency content of audio passing through an audio bus in real-time using Fast Fourier Transform (FFT). This is essential for creating audio visualizations such as spectrum analyzers, equalizer displays, or reactive audio effects.
+		The effect processes incoming audio and provides frequency magnitude data that can be queried using [method get_magnitude_for_frequency_range]. You can analyze specific frequency ranges (e.g., bass, midrange, treble) independently.
+		Queries reuse a spectrum snapshot while the bus DSP clock is unchanged. The next audio block automatically refreshes the snapshot, including when manually mixing multiple blocks in one game frame. Changing [member fft_size] or attaching the effect to another bus invalidates the snapshot.
+		The [member fft_size] determines the frequency resolution: larger FFT sizes provide finer frequency detail but require more processing and have worse time resolution. The [member buffer_length] affects how much audio history is kept for analysis.
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="set_immediate_mode">
+			<return type="void" />
+			<param index="0" name="enabled" type="bool" />
+			<description>
+				Enables synchronous FFT calculation for offline analysis. This disables FMOD FFT hardware acceleration.
+			</description>
+		</method>
+		<method name="get_immediate_mode" qualifiers="const">
+			<return type="bool" />
+			<description>
+				Returns whether immediate FFT mode is enabled.
+			</description>
+		</method>
+		<method name="set_buffer_length">
+			<return type="void" />
+			<param index="0" name="buffer_length" type="float" />
+			<description>
+				Sets [member buffer_length].
+			</description>
+		</method>
+		<method name="get_buffer_length" qualifiers="const">
+			<return type="float" />
+			<description>
+				Returns [member buffer_length].
+			</description>
+		</method>
+		<method name="set_fft_size">
+			<return type="void" />
+			<param index="0" name="fft_size" type="int" enum="FmodAudioEffectSpectrumAnalyzer.FFTSize" />
+			<description>
+				Sets [member fft_size].
+			</description>
+		</method>
+		<method name="get_fft_size" qualifiers="const">
+			<return type="int" enum="FmodAudioEffectSpectrumAnalyzer.FFTSize" />
+			<description>
+				Returns [member fft_size].
+			</description>
+		</method>
+		<method name="update_spectrum">
+			<return type="void" />
+			<description>
+				Forces a fresh spectrum snapshot even if the bus DSP clock has not advanced. Magnitude, bin count, RMS and centroid queries otherwise share the current snapshot.
+			</description>
+		</method>
+		<method name="get_bin_count" qualifiers="const">
+			<return type="int" />
+			<description>
+				Returns bin count.
+			</description>
+		</method>
+		<method name="get_rms" qualifiers="const">
+			<return type="float" />
+			<description>
+				Returns rms.
+			</description>
+		</method>
+		<method name="get_centroid" qualifiers="const">
+			<return type="float" />
+			<description>
+				Returns centroid.
+			</description>
+		</method>
+		<method name="get_magnitude_for_frequency_range" qualifiers="const">
+			<return type="Vector2" />
+			<param index="0" name="begin" type="float" />
+			<param index="1" name="end" type="float" />
+			<param index="2" name="mode" type="int" enum="FmodAudioEffectSpectrumAnalyzer.MagnitudeMode" default="1" />
+			<description>
+				Returns the magnitude (amplitude) of the specified frequency range as a [Vector2]. The [code]x[/code] component contains the left channel magnitude and [code]y[/code] contains the right channel magnitude.
+				The [param begin] and [param end] parameters specify the frequency range in Hz (e.g., 20.0 to 200.0 for bass frequencies). The [param mode] determines how the magnitude is calculated across the range: [constant MAGNITUDE_AVERAGE] calculates the average magnitude, while [constant MAGNITUDE_MAX] returns the peak magnitude.
+				Magnitude values are in linear scale (0.0 to 1.0+). Use [code]linear_to_db()[/code] to convert to decibels for display purposes.
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member type="bool" name="immediate_mode" setter="set_immediate_mode" getter="get_immediate_mode" default="false">Calculates FFT data synchronously. Useful for offline processing and same-frame queries.</member>
+		<member type="float" name="buffer_length" setter="set_buffer_length" getter="get_buffer_length" default="2.0">
+			The internal buffer length in seconds used for spectrum analysis. A larger buffer provides more stable analysis results but increases latency. The default value of 2.0 seconds is suitable for most visualization applications.
+		</member>
+		<member type="int" enum="FmodAudioEffectSpectrumAnalyzer.FFTSize" name="fft_size" setter="set_fft_size" getter="get_fft_size" default="2">
+			The FFT (Fast Fourier Transform) size used for spectrum analysis. Larger FFT sizes provide better frequency resolution (more frequency bins) but worse time resolution and higher CPU usage. See [enum FFTSize] for available options. The default [constant FFT_SIZE_1024] provides a good balance for general visualization.
+		</member>
+	</members>
+	<signals />
+	<constants>
+		<constant name="FFT_SIZE_256" value="0" enum="FFTSize">
+			256-point FFT. Lower frequency resolution but better time resolution. Useful for analyzing transient sounds or when low latency is required.
+		</constant>
+		<constant name="FFT_SIZE_512" value="1" enum="FFTSize">
+			512-point FFT. Moderate frequency resolution suitable for simple visualizations.
+		</constant>
+		<constant name="FFT_SIZE_1024" value="2" enum="FFTSize">
+			1024-point FFT (default). Good balance between frequency and time resolution. Recommended for most spectrum analyzer visualizations.
+		</constant>
+		<constant name="FFT_SIZE_2048" value="3" enum="FFTSize">
+			2048-point FFT. Higher frequency resolution for detailed spectrum analysis. Best for visualizing complex audio or musical content.
+		</constant>
+		<constant name="FFT_SIZE_4096" value="4" enum="FFTSize">
+			4096-point FFT. Very high frequency resolution but poor time resolution. Best for analyzing low-frequency content or when precise frequency detection is needed.
+		</constant>
+		<constant name="FFT_SIZE_MAX" value="5" enum="FFTSize">
+			Maximum FFT size option. Provides the highest frequency resolution available.
+		</constant>
+		<constant name="MAGNITUDE_AVERAGE" value="0" enum="MagnitudeMode">
+			Calculates the average magnitude across the specified frequency range. This provides a smoother response that represents the overall energy in the range.
+		</constant>
+		<constant name="MAGNITUDE_MAX" value="1" enum="MagnitudeMode">
+			Returns the maximum (peak) magnitude within the specified frequency range. This provides a more responsive visualization that highlights the strongest frequencies in the range.
+		</constant>
+	</constants>
+</class>

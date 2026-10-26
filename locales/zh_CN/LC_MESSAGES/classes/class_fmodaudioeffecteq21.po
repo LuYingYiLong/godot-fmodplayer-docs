@@ -1,0 +1,1480 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, LuYingYiLong
+# This file is distributed under the same license as the Godot FmodPlayer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot FmodPlayer \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:12 6398ca4d92194e2ebaccc1c56cbb4633
+msgid "FmodAudioEffectEQ21"
+msgstr "FmodAudioEffectEQ21"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:14 a298f6c6e359440abf85757d2d67c235
+msgid ""
+"**Inherits:** :ref:`FmodAudioEffectEQ<class_FmodAudioEffectEQ>` **<** "
+":ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>` **<** "
+":ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+msgstr ""
+"**继承：** :ref:`FmodAudioEffectEQ<class_FmodAudioEffectEQ>` **<** "
+":ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>` **<** "
+":ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:16 8367446e99ce4237a92113dc1af566ff
+msgid "21-band graphic equalizer audio effect."
+msgstr "21 段均衡器预设。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:21 5f1941060bfc46f3bbe80f92d113ab10
+msgid "Description"
+msgstr "描述"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:23 bc2632bb4df044bebe5c8689b156b754
+msgid ""
+"FmodAudioEffectEQ21 is a 21-band graphic equalizer using FMOD's MULTIBAND_EQ DSP. It provides "
+"professional-grade frequency equalization across twenty-one bands spanning from 22Hz to 22000Hz."
+msgstr ""
+"**FmodAudioEffectEQ21**    是    ``FmodAudioEffectEQ``    的 21 频段预设版本。默认频段从    ``22``    Hz 延伸到"
+"    ``22000``    Hz。它继承    ``FmodAudioEffectEQ``    的全部属性和方法。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:25 6f3aa139320145b7a5fb08438d111fa7
+msgid ""
+"Each band can be individually adjusted for gain (-60 dB to +24 dB), frequency, Q value, and "
+"filter type. By default, all bands use peaking filters with a Q value of 0.707."
+msgstr "每个频段均可独立设置增益（-60 dB 到 +24 dB）、频率、Q 值和滤波类型。默认使用 Q 值为 0.707 的峰值滤波器。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:27 65e87f5cc7f545b7a92aefe5a9eca700
+msgid ""
+"The frequency bands are: 22Hz, 32Hz, 44Hz, 63Hz, 90Hz, 125Hz, 175Hz, 250Hz, 350Hz, 500Hz, 700Hz, "
+"1000Hz, 1400Hz, 2000Hz, 2800Hz, 4000Hz, 5600Hz, 8000Hz, 11000Hz, 16000Hz, and 22000Hz."
+msgstr ""
+"频段中心频率依次为 22、32、44、63、90、125、175、250、350、500、700、1000、1400、2000、2800、4000、5600、8000、11000、16000 和"
+" 22000 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:29 56dc111917bf40eaa8bd94aa22745398
+msgid ""
+"\\ **Note:** This equalizer uses multiple MULTIBAND_EQ DSP units internally (each supports 5 "
+"bands). For simpler control, use :ref:`FmodAudioEffectEQ6<class_FmodAudioEffectEQ6>` or "
+":ref:`FmodAudioEffectEQ10<class_FmodAudioEffectEQ10>`."
+msgstr ""
+"**注意：**    内部使用多个 MULTIBAND_EQ DSP 单元，每个单元支持 5 个频段。较简单的控制可使用    "
+":ref:`FmodAudioEffectEQ6<class_FmodAudioEffectEQ6>`    或    "
+":ref:`FmodAudioEffectEQ10<class_FmodAudioEffectEQ10>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:34 2a15a901a4924165b2636286e1e548a5
+msgid "Properties"
+msgstr "属性"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:40 b44cb2dc08374edeb64aa761a395859a
+msgid ":ref:`Preset<enum_FmodAudioEffectEQ_Preset>`"
+msgstr ":ref:`Preset<enum_FmodAudioEffectEQ_Preset>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:40 3f6d2f190bdb4d40909f4dea4ca60162
+msgid "preset"
+msgstr "preset"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:40 035d87a350da4f97bbb128b63027bdd5
+msgid "``2`` (overrides :ref:`FmodAudioEffectEQ<class_FmodAudioEffectEQ_property_preset>`)"
+msgstr "``2`` (overrides :ref:`FmodAudioEffectEQ<class_FmodAudioEffectEQ_property_preset>`)"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:42
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:44
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:46
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:50
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:52
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:54
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:58
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:60
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:62
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:66
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:68
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:70
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:74
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:76
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:78
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:82
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:84
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:86
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:90
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:92
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:94
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:98
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:100
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:102
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:106
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:108
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:110
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:114
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:116
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:118
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:122
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:124
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:126
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:130
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:132
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:134
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:138
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:140
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:142
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:146
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:148
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:150
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:154
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:156
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:158
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:162
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:164
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:166
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:170
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:172
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:174
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:178
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:180
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:182
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:186
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:188
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:190
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:194
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:196
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:198
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:202
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:204
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:206 0745688e2bf8436d93a2a6b59aba370a
+#: 15bbc96aa2c24b66bd13b481f30a5992 17894c129fca42c78cbb6f23c57fcc46 225956008c0348a9a2bae8b39154fefe
+#: 284d7953981941ac91ab5f0fd4bc2c1b 2a39b41b36ea468ba9a2b7fbbb368699 2ecfa99877924a82a31f9cc3428fcafd
+#: 2f19238b6869441ba6d77065537ae24a 3083599bd7cf4e53adf4eef2ffa10786 311fd420e3774570b5ab9f64634a1c32
+#: 31efdbdd35e744ac977da72db059fa72 332d6d97824740c68d9770be9ff20f18 3d641a280d284ec1b77adf8873683ea9
+#: 3e3bb83b9802405ebea453a0d51cebe1 3e5c36d4799e4c1b8dffe7bfc22d3ed7 444055a8c3fc4271b365b71832f7b441
+#: 4488888298cd4915a5a6857f3cee01bc 4891c9dbfb0c47d99b50c151df192766 4aec54f803214337bab6626ff7a57a48
+#: 4e0b2421a0b44dcaaf021842ca280892 60c07cebdacb4d70a0f52a1856f7ee54 61d175890ddb41c192ac986f08c0a9b5
+#: 644464066f5f4124a3cbcd30d3353154 672512017f7f4d91845c6cf8b50a75df 6783d26872a640ca9af551de6996f84d
+#: 75c50243a6564455a319b071b089964b 761baa5836ac49f9807e5a9210ecf5dd 76d10986bac54d1cb11efac018676101
+#: 793611636cfe4357ad1d63579f7dce4f 79e2bdbeb79a47fe838cd5712772d14d 7e556e922ca0486d91852bef1df3dcbd
+#: 7f80e78ab36349cb9aabb713c898b0f1 826513d2e40f4d199e39f61fae3affa3 85754486f8f240fd8dd9c1e66e9861bb
+#: 8c0f3bdf30534549b7b61048f82b1f03 8debf15ed9b64536aaf311f1db9bb6a7 974c769cee264aabb21e297477dc0154
+#: 986d34f44d4542758ad940906dd36ed9 9f724b11c90f45058c038d1057ae93cd 9fb0a84fdea841a9b02da7fb829a851b
+#: a749a61f16ae4939be8f932fed04ffd8 a7e8ba7b109a4726a2c551dd4aac65b4 acb16807aa71498a97e567729b0fb8ad
+#: b5669c94107b45bcb021c64154ba4874 b8fca9f4322948338e63fa83348550e7 ba0f2d2d4170451cb4961d442b741bc8
+#: ba8f8e6707b445d79aa42472f854ddf1 bce10930421949d0b88112c8686db749 c3f7240d97a64e54a21d701a3fce1d39
+#: c57eeed1d15e4c8ebf067390d2dac0d6 c63f3ed7165440d2a72f1d9d7ae28902 cc62cf488a634ec58766ce35e2fabfbf
+#: ccd3d0b7f33944a4b2532c7990507368 d67cb606eb3c4c4099a18d6c411d649f d6accd885c5f41c4a0e50843ac39fd93
+#: ea26c2c84ede477398d95eff9e484f55 ef4dadfe35cd4a16ace2fd18574d6045 f21bc6eeb6324fe3893dc6957af2d818
+#: f7bec339353645248aa57b6659e80865 f8a93900db1146dbbf5ce1b4cea166e0 fb7cd283179f4dd2bc03df13249518b1
+#: fb826796d05642bc9193e596a3bc38bd ffdea8adabfc41c9b75c85a50fabd742
+msgid ":ref:`float<class_float>`"
+msgstr ":ref:`float<class_float>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:42 116a00b6afa047129d9cecfa7579abe9
+msgid ":ref:`band_0_gain<class_FmodAudioEffectEQ21_property_band_0_gain>`"
+msgstr ":ref:`band_0_gain<class_FmodAudioEffectEQ21_property_band_0_gain>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:42
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:50
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:58
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:66
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:74
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:82
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:90
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:98
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:106
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:114
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:122
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:130
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:138
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:146
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:154
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:162
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:170
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:178
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:186
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:194
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:202 0f2ea8be664a4d6c86b08cd7a102e4da
+#: 1630fad4c34b4936913ccb27dc5958a9 188e1d0221294574b39060acae56df85 20b51e2bdbff4790bddecb495b15ccd2
+#: 2aa9315cfbe74473b31fa5ab972dfc61 2d112dac1eaf4d089e4bb5dd13c4ad86 308598a1537545aaa20b1570897c661c
+#: 3fd359052f0543b49989b20de92bdff7 4334d8ca76ce429b8245f74183d8c2b6 528a36645bf64475acfb42ea39bad265
+#: 626b030c127040a78837920fcec299a0 89801c10a088492f8aa2a842dd787e48 8c0a46e0a53f4d3eb98f9989e421b2dc
+#: a06080ccaa3441f6ac61db177270be71 b1d06b5fb822473ba5ea6403030c1db3 bfb30d7993f34adf8e6b2999adc472b8
+#: c59bc4966bd04c31a21b4b201f2fd021 dc19b5323cda4f14b0c4d769b780123b dded7a77a00f4c4086b330855aeb0cc8
+#: ee90ff83176c4337ae4822ceb07e3332 ffe8e501cca0430b8bddfbcb5f6d650b
+msgid "``0.0``"
+msgstr "``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:44 ccc831923757426880bf7987fb8c89c6
+msgid ":ref:`band_0_frequency<class_FmodAudioEffectEQ21_property_band_0_frequency>`"
+msgstr ":ref:`band_0_frequency<class_FmodAudioEffectEQ21_property_band_0_frequency>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:44 6805ca2f1a75483d81e1c4eaa0ce9b4e
+msgid "``22.0``"
+msgstr "``22.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:46 96c4eae4d4a84e4fbe62461147f5541c
+msgid ":ref:`band_0_q<class_FmodAudioEffectEQ21_property_band_0_q>`"
+msgstr ":ref:`band_0_q<class_FmodAudioEffectEQ21_property_band_0_q>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:46
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:54
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:62
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:70
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:78
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:86
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:94
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:102
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:110
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:118
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:126
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:134
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:142
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:150
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:158
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:166
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:174
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:182
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:190
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:198
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:206 0a031443bb154a0992002db83a967eeb
+#: 1050a4f3db6f4c0f940521d5f6491155 19968f40e02448fa81f8c3b3c4423e13 19d507585f124ba3b251eff7b1879abf
+#: 490e8cf17d934f6f9f1a443038fa0088 53e2c350d6c04e0c8435bfeab5c9d1b5 674bfc09edea402b88746849c312077d
+#: 6d90b46e481a45409dbc1a001ed44917 6fbcd4617a9d4cc99f17a3b400c91b06 72183ccdf37c438787c3a186e96a5aa5
+#: 780c963d1e354f83b70b854d66f4846b 7842d589f3c04f4ab166294fe80389b0 8d49e2396de445e8ade6c46ad010175a
+#: 8e829b9480cb48beab5a080c185c2722 ad956620295040be985daa58b97b63c0 bf01d242969c4200bf4dd6fb49f81103
+#: cad2e66182d14bd99455c5774c252050 cae4f37d1e5648a3931755a18e1655a7 d12cd28961e0434888ed5113f7c83435
+#: d305bf4683bc4958be4df9ba68fa3e58 eef8e739643e49d28fd365af6179a9c3
+msgid "``0.707``"
+msgstr "``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:48
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:56
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:64
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:72
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:80
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:88
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:96
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:104
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:112
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:120
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:128
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:136
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:144
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:152
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:160
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:168
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:176
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:184
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:192
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:200
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:208 0418f033b9c449d7bd16d8ef20e13c30
+#: 06f0514ff32f42feb8a4167731776242 1153862c4db241b2a21bfaa3a442b8cb 1431eba90c2b445bb1165205c8d0aedf
+#: 1e9f1e9a7ecf46b3ac4f68a20f7bb8a0 2195ea03068b4a65b550abcf5a95b85f 27abd40a59a04d8eb48d86784493e4e7
+#: 3934bb3e460441c8aee7a09b7ed8c8ff 4493c42072984648acd6c0a3cb8a6805 46105bc421dd4b23a2c29ffc3a2ef56e
+#: 6adeca13e1f248efa686e59c021b71d9 6d8e2b8d3ca344438b3ed501847a34d0 7343d8e2c38e4706a1c6f6675d371a0a
+#: 7e762dc25fcb41f0b255b2b176bbc011 83a1fad999f1492f9c2f99694ac702c7 8ba4eeb21afd4164bef01dc1d02d6bad
+#: 9d0614a5d6f14eb69705b5557a30d17e b72564bb7dc6488eac16f39a5a63c18e dd13bb6e041347d48af48c5829427f90
+#: e077f765cf4648d7af7a0337c9b37eca e2140438f9324b65b4a0ded76879c855
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>`"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:48 ff200bc1145f4ca59e4af07e465b3fbc
+msgid ":ref:`band_0_filter_type<class_FmodAudioEffectEQ21_property_band_0_filter_type>`"
+msgstr ":ref:`band_0_filter_type<class_FmodAudioEffectEQ21_property_band_0_filter_type>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:48
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:56
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:64
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:72
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:80
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:88
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:96
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:104
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:112
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:120
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:128
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:136
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:144
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:152
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:160
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:168
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:176
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:184
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:192
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:200
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:208 1b3e37e41a0f417f99f9b9f98dede039
+#: 35c11418a014449eb2a1298851a73f93 3d5c3b527e7f4c3099231f576532a272 408d2e69159342e2b3189106e589f3a6
+#: 4147e50a774c462ca4a38882653d7330 5ff779180fb64ab49c5cbccd4a2af380 668d783cbaf7472caa8a62e97297a3f1
+#: 77984dc6b732402c9b3348aaec980aae 7f1fc98d3afe41e296ed579c81cdfe23 8131e16ff1414e00a1d3a2ae65ed4c2c
+#: 8db99c35e92746e78a43f43b1f3434b1 9bd103b2bb634598b24d6518ccc926ba b622df6b17de4599afa484cc54c93476
+#: c11806a826fc455299f086d4dd1f73cf c5760fd1b2db4b2da2c4e27f5eaefc99 c9136bdc2f434116a9b29f66b2b4b382
+#: cb436f46f8e54381b2733c9b046c48b1 d3ac68de4ae449f98981bd34b846a823 dba2995039f44ce591e3f3ba146a517d
+#: e21ac81a41b14ed7810604fec4584cd1 ef719ae767b14dc0aed2f393f25bad43
+msgid "``9``"
+msgstr "``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:50 fc9d5c147d974295a41254e28c8f92ea
+msgid ":ref:`band_1_gain<class_FmodAudioEffectEQ21_property_band_1_gain>`"
+msgstr ":ref:`band_1_gain<class_FmodAudioEffectEQ21_property_band_1_gain>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:52 3d61856bab6743b1a5002879692f5150
+msgid ":ref:`band_1_frequency<class_FmodAudioEffectEQ21_property_band_1_frequency>`"
+msgstr ":ref:`band_1_frequency<class_FmodAudioEffectEQ21_property_band_1_frequency>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:52 cbabc2d04d0d4e8392217e9de963d1b4
+msgid "``32.0``"
+msgstr "``32.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:54 c247467805dd46f08223cc19bdef5e18
+msgid ":ref:`band_1_q<class_FmodAudioEffectEQ21_property_band_1_q>`"
+msgstr ":ref:`band_1_q<class_FmodAudioEffectEQ21_property_band_1_q>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:56 e618c48fad004167b586090a9e20d4d2
+msgid ":ref:`band_1_filter_type<class_FmodAudioEffectEQ21_property_band_1_filter_type>`"
+msgstr ":ref:`band_1_filter_type<class_FmodAudioEffectEQ21_property_band_1_filter_type>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:58 d5bbdc2d0b414e9e91f7b1bee8bebae5
+msgid ":ref:`band_2_gain<class_FmodAudioEffectEQ21_property_band_2_gain>`"
+msgstr ":ref:`band_2_gain<class_FmodAudioEffectEQ21_property_band_2_gain>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:60 b88c592b54bb4c2891581da2dfb93265
+msgid ":ref:`band_2_frequency<class_FmodAudioEffectEQ21_property_band_2_frequency>`"
+msgstr ":ref:`band_2_frequency<class_FmodAudioEffectEQ21_property_band_2_frequency>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:60 905438c78b8b44fe9a32db4710dcf9eb
+msgid "``44.0``"
+msgstr "``44.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:62 9a8d1fdf771e4f7ea9e1cd7693fbd4b0
+msgid ":ref:`band_2_q<class_FmodAudioEffectEQ21_property_band_2_q>`"
+msgstr ":ref:`band_2_q<class_FmodAudioEffectEQ21_property_band_2_q>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:64 f856a102d72845e5a9ef221ce8217496
+msgid ":ref:`band_2_filter_type<class_FmodAudioEffectEQ21_property_band_2_filter_type>`"
+msgstr ":ref:`band_2_filter_type<class_FmodAudioEffectEQ21_property_band_2_filter_type>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:66 af518939b6f14aa08622d564adf4532c
+msgid ":ref:`band_3_gain<class_FmodAudioEffectEQ21_property_band_3_gain>`"
+msgstr ":ref:`band_3_gain<class_FmodAudioEffectEQ21_property_band_3_gain>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:68 f434d46955584d4099b101b1b3c39ba0
+msgid ":ref:`band_3_frequency<class_FmodAudioEffectEQ21_property_band_3_frequency>`"
+msgstr ":ref:`band_3_frequency<class_FmodAudioEffectEQ21_property_band_3_frequency>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:68 9e8e42d0affa41ab9f162986d85acb70
+msgid "``63.0``"
+msgstr "``63.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:70 51d597909a7042e8a368f63fe8f90379
+msgid ":ref:`band_3_q<class_FmodAudioEffectEQ21_property_band_3_q>`"
+msgstr ":ref:`band_3_q<class_FmodAudioEffectEQ21_property_band_3_q>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:72 c3920ba2d726405ca7b5abcdc860456f
+msgid ":ref:`band_3_filter_type<class_FmodAudioEffectEQ21_property_band_3_filter_type>`"
+msgstr ":ref:`band_3_filter_type<class_FmodAudioEffectEQ21_property_band_3_filter_type>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:74 763d761fff6544ed8346e347f85118f9
+msgid ":ref:`band_4_gain<class_FmodAudioEffectEQ21_property_band_4_gain>`"
+msgstr ":ref:`band_4_gain<class_FmodAudioEffectEQ21_property_band_4_gain>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:76 df0106edffc64ae98335894e263b68bf
+msgid ":ref:`band_4_frequency<class_FmodAudioEffectEQ21_property_band_4_frequency>`"
+msgstr ":ref:`band_4_frequency<class_FmodAudioEffectEQ21_property_band_4_frequency>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:76 e0fee91393ed457a910b0254f2b653ff
+msgid "``90.0``"
+msgstr "``90.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:78 82ea609f62264dd1938956999f334d07
+msgid ":ref:`band_4_q<class_FmodAudioEffectEQ21_property_band_4_q>`"
+msgstr ":ref:`band_4_q<class_FmodAudioEffectEQ21_property_band_4_q>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:80 1698e15e97214894a2e2978072c8e7b6
+msgid ":ref:`band_4_filter_type<class_FmodAudioEffectEQ21_property_band_4_filter_type>`"
+msgstr ":ref:`band_4_filter_type<class_FmodAudioEffectEQ21_property_band_4_filter_type>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:82 ba46801b9f0c4c9898cc54e044ca3dfc
+msgid ":ref:`band_5_gain<class_FmodAudioEffectEQ21_property_band_5_gain>`"
+msgstr ":ref:`band_5_gain<class_FmodAudioEffectEQ21_property_band_5_gain>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:84 b022f782633e48cba7018614a259b910
+msgid ":ref:`band_5_frequency<class_FmodAudioEffectEQ21_property_band_5_frequency>`"
+msgstr ":ref:`band_5_frequency<class_FmodAudioEffectEQ21_property_band_5_frequency>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:84 d89532e7853d41929b7be960fb518503
+msgid "``125.0``"
+msgstr "``125.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:86 9e229c44f53d46f993f849eb8ca0922a
+msgid ":ref:`band_5_q<class_FmodAudioEffectEQ21_property_band_5_q>`"
+msgstr ":ref:`band_5_q<class_FmodAudioEffectEQ21_property_band_5_q>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:88 ddc9a22834af48fea7e657f61b39e423
+msgid ":ref:`band_5_filter_type<class_FmodAudioEffectEQ21_property_band_5_filter_type>`"
+msgstr ":ref:`band_5_filter_type<class_FmodAudioEffectEQ21_property_band_5_filter_type>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:90 044077d7cdb341ba9ed07e7869d2aa5f
+msgid ":ref:`band_6_gain<class_FmodAudioEffectEQ21_property_band_6_gain>`"
+msgstr ":ref:`band_6_gain<class_FmodAudioEffectEQ21_property_band_6_gain>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:92 200a6e9995884cb99842cc674668cc7a
+msgid ":ref:`band_6_frequency<class_FmodAudioEffectEQ21_property_band_6_frequency>`"
+msgstr ":ref:`band_6_frequency<class_FmodAudioEffectEQ21_property_band_6_frequency>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:92 7171d099f6164f68924a85134e05d751
+msgid "``175.0``"
+msgstr "``175.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:94 513792e37944427487425f25a90acce4
+msgid ":ref:`band_6_q<class_FmodAudioEffectEQ21_property_band_6_q>`"
+msgstr ":ref:`band_6_q<class_FmodAudioEffectEQ21_property_band_6_q>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:96 90e9d8d490de4d8098b8b93be21bef67
+msgid ":ref:`band_6_filter_type<class_FmodAudioEffectEQ21_property_band_6_filter_type>`"
+msgstr ":ref:`band_6_filter_type<class_FmodAudioEffectEQ21_property_band_6_filter_type>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:98 01531b9dca594c3296ea8a6c74dca441
+msgid ":ref:`band_7_gain<class_FmodAudioEffectEQ21_property_band_7_gain>`"
+msgstr ":ref:`band_7_gain<class_FmodAudioEffectEQ21_property_band_7_gain>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:100 3c146c3e433c42ae88f5426932de3bc1
+msgid ":ref:`band_7_frequency<class_FmodAudioEffectEQ21_property_band_7_frequency>`"
+msgstr ":ref:`band_7_frequency<class_FmodAudioEffectEQ21_property_band_7_frequency>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:100 c34cda925e334b8b8cdc90e028404f01
+msgid "``250.0``"
+msgstr "``250.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:102 af32eb4369b0454a95065cc8c4526709
+msgid ":ref:`band_7_q<class_FmodAudioEffectEQ21_property_band_7_q>`"
+msgstr ":ref:`band_7_q<class_FmodAudioEffectEQ21_property_band_7_q>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:104 d75befa7ad604d6e9c996e9c57fe6304
+msgid ":ref:`band_7_filter_type<class_FmodAudioEffectEQ21_property_band_7_filter_type>`"
+msgstr ":ref:`band_7_filter_type<class_FmodAudioEffectEQ21_property_band_7_filter_type>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:106 e52ae8ac383f4da884f2677a1585374a
+msgid ":ref:`band_8_gain<class_FmodAudioEffectEQ21_property_band_8_gain>`"
+msgstr ":ref:`band_8_gain<class_FmodAudioEffectEQ21_property_band_8_gain>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:108 340ff6f4ce3e44c480576e59d90a785e
+msgid ":ref:`band_8_frequency<class_FmodAudioEffectEQ21_property_band_8_frequency>`"
+msgstr ":ref:`band_8_frequency<class_FmodAudioEffectEQ21_property_band_8_frequency>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:108 7f1e28c3821f4a1a9ece9d4ea8a6a526
+msgid "``350.0``"
+msgstr "``350.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:110 2d2ee289ab0d4aa39fb37dfaa926e9dd
+msgid ":ref:`band_8_q<class_FmodAudioEffectEQ21_property_band_8_q>`"
+msgstr ":ref:`band_8_q<class_FmodAudioEffectEQ21_property_band_8_q>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:112 ab3311d8fdd1490b947ba8f199bc8f02
+msgid ":ref:`band_8_filter_type<class_FmodAudioEffectEQ21_property_band_8_filter_type>`"
+msgstr ":ref:`band_8_filter_type<class_FmodAudioEffectEQ21_property_band_8_filter_type>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:114 666b59fdb0f94f17885951a35eaba567
+msgid ":ref:`band_9_gain<class_FmodAudioEffectEQ21_property_band_9_gain>`"
+msgstr ":ref:`band_9_gain<class_FmodAudioEffectEQ21_property_band_9_gain>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:116 7bc5b0e3aba34bb7b4b5620db75fccc3
+msgid ":ref:`band_9_frequency<class_FmodAudioEffectEQ21_property_band_9_frequency>`"
+msgstr ":ref:`band_9_frequency<class_FmodAudioEffectEQ21_property_band_9_frequency>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:116 11707247ef3d492bbc2fa96790882012
+msgid "``500.0``"
+msgstr "``500.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:118 adfaa7979143418e9d83d9aa545f9e1b
+msgid ":ref:`band_9_q<class_FmodAudioEffectEQ21_property_band_9_q>`"
+msgstr ":ref:`band_9_q<class_FmodAudioEffectEQ21_property_band_9_q>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:120 b3d42b25c01b4f88a4d4443d352baeb3
+msgid ":ref:`band_9_filter_type<class_FmodAudioEffectEQ21_property_band_9_filter_type>`"
+msgstr ":ref:`band_9_filter_type<class_FmodAudioEffectEQ21_property_band_9_filter_type>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:122 ead71c00fd8e4aefb23d97bac0f36330
+msgid ":ref:`band_10_gain<class_FmodAudioEffectEQ21_property_band_10_gain>`"
+msgstr ":ref:`band_10_gain<class_FmodAudioEffectEQ21_property_band_10_gain>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:124 0fbf1d9d3ee9419cabde5974a893c7b1
+msgid ":ref:`band_10_frequency<class_FmodAudioEffectEQ21_property_band_10_frequency>`"
+msgstr ":ref:`band_10_frequency<class_FmodAudioEffectEQ21_property_band_10_frequency>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:124 a21e2daa4434487b961b1cf24d526c93
+msgid "``700.0``"
+msgstr "``700.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:126 29c48944254843b49ec149b3ab594b7b
+msgid ":ref:`band_10_q<class_FmodAudioEffectEQ21_property_band_10_q>`"
+msgstr ":ref:`band_10_q<class_FmodAudioEffectEQ21_property_band_10_q>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:128 e91cd3a0d9d843f597dd34598517de60
+msgid ":ref:`band_10_filter_type<class_FmodAudioEffectEQ21_property_band_10_filter_type>`"
+msgstr ":ref:`band_10_filter_type<class_FmodAudioEffectEQ21_property_band_10_filter_type>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:130 8cdeaed50d7d4a51ac5957f78a784cfc
+msgid ":ref:`band_11_gain<class_FmodAudioEffectEQ21_property_band_11_gain>`"
+msgstr ":ref:`band_11_gain<class_FmodAudioEffectEQ21_property_band_11_gain>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:132 121ff042037c42bab1fef9d83fcba9cb
+msgid ":ref:`band_11_frequency<class_FmodAudioEffectEQ21_property_band_11_frequency>`"
+msgstr ":ref:`band_11_frequency<class_FmodAudioEffectEQ21_property_band_11_frequency>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:132 dd52734a4c0f49fdbe24571540c5fe03
+msgid "``1000.0``"
+msgstr "``1000.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:134 4f2cb08b82d847a5a37acec4010c1962
+msgid ":ref:`band_11_q<class_FmodAudioEffectEQ21_property_band_11_q>`"
+msgstr ":ref:`band_11_q<class_FmodAudioEffectEQ21_property_band_11_q>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:136 c6047c01d22543f690a3f690f47e7a7b
+msgid ":ref:`band_11_filter_type<class_FmodAudioEffectEQ21_property_band_11_filter_type>`"
+msgstr ":ref:`band_11_filter_type<class_FmodAudioEffectEQ21_property_band_11_filter_type>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:138 7ac995eaaf8a439188a7a75d40daa6f4
+msgid ":ref:`band_12_gain<class_FmodAudioEffectEQ21_property_band_12_gain>`"
+msgstr ":ref:`band_12_gain<class_FmodAudioEffectEQ21_property_band_12_gain>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:140 aa4a001660b2471e90b4ace9775c4867
+msgid ":ref:`band_12_frequency<class_FmodAudioEffectEQ21_property_band_12_frequency>`"
+msgstr ":ref:`band_12_frequency<class_FmodAudioEffectEQ21_property_band_12_frequency>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:140 b3b53130028040ba84c0ed606db69d9a
+msgid "``1400.0``"
+msgstr "``1400.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:142 810d8be0b83947138be12ac5bd8ff41d
+msgid ":ref:`band_12_q<class_FmodAudioEffectEQ21_property_band_12_q>`"
+msgstr ":ref:`band_12_q<class_FmodAudioEffectEQ21_property_band_12_q>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:144 a6e2a2a94fff47d395d15179e90e2319
+msgid ":ref:`band_12_filter_type<class_FmodAudioEffectEQ21_property_band_12_filter_type>`"
+msgstr ":ref:`band_12_filter_type<class_FmodAudioEffectEQ21_property_band_12_filter_type>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:146 e75f49179bdf4bb8a9830ff610a67256
+msgid ":ref:`band_13_gain<class_FmodAudioEffectEQ21_property_band_13_gain>`"
+msgstr ":ref:`band_13_gain<class_FmodAudioEffectEQ21_property_band_13_gain>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:148 d1d3a8bbf459438eb1a0d36891009bda
+msgid ":ref:`band_13_frequency<class_FmodAudioEffectEQ21_property_band_13_frequency>`"
+msgstr ":ref:`band_13_frequency<class_FmodAudioEffectEQ21_property_band_13_frequency>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:148 9128ac3907f94725b522c5ff489ce7c0
+msgid "``2000.0``"
+msgstr "``2000.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:150 1feb1a192e8e4d8dabc57bf93566d538
+msgid ":ref:`band_13_q<class_FmodAudioEffectEQ21_property_band_13_q>`"
+msgstr ":ref:`band_13_q<class_FmodAudioEffectEQ21_property_band_13_q>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:152 aaec1a5773164ebe8d598152fcf9d07a
+msgid ":ref:`band_13_filter_type<class_FmodAudioEffectEQ21_property_band_13_filter_type>`"
+msgstr ":ref:`band_13_filter_type<class_FmodAudioEffectEQ21_property_band_13_filter_type>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:154 d12fce041cf840dbbb4b64e5de33fb4b
+msgid ":ref:`band_14_gain<class_FmodAudioEffectEQ21_property_band_14_gain>`"
+msgstr ":ref:`band_14_gain<class_FmodAudioEffectEQ21_property_band_14_gain>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:156 f4e3bbca775843a3aa587accfe2af39d
+msgid ":ref:`band_14_frequency<class_FmodAudioEffectEQ21_property_band_14_frequency>`"
+msgstr ":ref:`band_14_frequency<class_FmodAudioEffectEQ21_property_band_14_frequency>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:156 2a6f700e9f2d405494ca30859e71003f
+msgid "``2800.0``"
+msgstr "``2800.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:158 05dc9a2918584a5291f9da19b84c679a
+msgid ":ref:`band_14_q<class_FmodAudioEffectEQ21_property_band_14_q>`"
+msgstr ":ref:`band_14_q<class_FmodAudioEffectEQ21_property_band_14_q>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:160 897770bc63b642cc85c162fc5abb0da0
+msgid ":ref:`band_14_filter_type<class_FmodAudioEffectEQ21_property_band_14_filter_type>`"
+msgstr ":ref:`band_14_filter_type<class_FmodAudioEffectEQ21_property_band_14_filter_type>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:162 00a97dd34ebc41b98591b20812fe3ed7
+msgid ":ref:`band_15_gain<class_FmodAudioEffectEQ21_property_band_15_gain>`"
+msgstr ":ref:`band_15_gain<class_FmodAudioEffectEQ21_property_band_15_gain>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:164 d91fc277dfb14c0ea744e168a1684de1
+msgid ":ref:`band_15_frequency<class_FmodAudioEffectEQ21_property_band_15_frequency>`"
+msgstr ":ref:`band_15_frequency<class_FmodAudioEffectEQ21_property_band_15_frequency>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:164 16338c7c499f46aeb1b2e85da78ffcc2
+msgid "``4000.0``"
+msgstr "``4000.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:166 2dbf35a2947c4d7facb82e588106bd19
+msgid ":ref:`band_15_q<class_FmodAudioEffectEQ21_property_band_15_q>`"
+msgstr ":ref:`band_15_q<class_FmodAudioEffectEQ21_property_band_15_q>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:168 8f39ede3f87342cb80193fb579a41e4c
+msgid ":ref:`band_15_filter_type<class_FmodAudioEffectEQ21_property_band_15_filter_type>`"
+msgstr ":ref:`band_15_filter_type<class_FmodAudioEffectEQ21_property_band_15_filter_type>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:170 0c87fdca660a4729b4e639538328e069
+msgid ":ref:`band_16_gain<class_FmodAudioEffectEQ21_property_band_16_gain>`"
+msgstr ":ref:`band_16_gain<class_FmodAudioEffectEQ21_property_band_16_gain>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:172 044a814f6a344e788e48b40ad34ad674
+msgid ":ref:`band_16_frequency<class_FmodAudioEffectEQ21_property_band_16_frequency>`"
+msgstr ":ref:`band_16_frequency<class_FmodAudioEffectEQ21_property_band_16_frequency>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:172 9113c500b6a54596a716b92235e2f30f
+msgid "``5600.0``"
+msgstr "``5600.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:174 c3009a6f17a541b5bfdec87bbe2e806f
+msgid ":ref:`band_16_q<class_FmodAudioEffectEQ21_property_band_16_q>`"
+msgstr ":ref:`band_16_q<class_FmodAudioEffectEQ21_property_band_16_q>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:176 80257403ca2244c2bc78d3d12672de49
+msgid ":ref:`band_16_filter_type<class_FmodAudioEffectEQ21_property_band_16_filter_type>`"
+msgstr ":ref:`band_16_filter_type<class_FmodAudioEffectEQ21_property_band_16_filter_type>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:178 65f99a870e86419c896b4394c8d418b8
+msgid ":ref:`band_17_gain<class_FmodAudioEffectEQ21_property_band_17_gain>`"
+msgstr ":ref:`band_17_gain<class_FmodAudioEffectEQ21_property_band_17_gain>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:180 eab88d0ad80f4e5ab198bc969bc8c03b
+msgid ":ref:`band_17_frequency<class_FmodAudioEffectEQ21_property_band_17_frequency>`"
+msgstr ":ref:`band_17_frequency<class_FmodAudioEffectEQ21_property_band_17_frequency>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:180 ebe52e7fddfc457c8eea6a24e73a06b4
+msgid "``8000.0``"
+msgstr "``8000.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:182 bacfe666d1454b1a88fb189662014483
+msgid ":ref:`band_17_q<class_FmodAudioEffectEQ21_property_band_17_q>`"
+msgstr ":ref:`band_17_q<class_FmodAudioEffectEQ21_property_band_17_q>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:184 4ef6b649d2984b34b4e2361527aa026a
+msgid ":ref:`band_17_filter_type<class_FmodAudioEffectEQ21_property_band_17_filter_type>`"
+msgstr ":ref:`band_17_filter_type<class_FmodAudioEffectEQ21_property_band_17_filter_type>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:186 79dc61cf951e47e8bd0a9b99f7239403
+msgid ":ref:`band_18_gain<class_FmodAudioEffectEQ21_property_band_18_gain>`"
+msgstr ":ref:`band_18_gain<class_FmodAudioEffectEQ21_property_band_18_gain>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:188 bbab48bbeab045ed80f4971a0a556bdf
+msgid ":ref:`band_18_frequency<class_FmodAudioEffectEQ21_property_band_18_frequency>`"
+msgstr ":ref:`band_18_frequency<class_FmodAudioEffectEQ21_property_band_18_frequency>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:188 bba1d5cb555143878897568a05625067
+msgid "``11000.0``"
+msgstr "``11000.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:190 8e6b300eb6cf4738a5bd5fc6d731189d
+msgid ":ref:`band_18_q<class_FmodAudioEffectEQ21_property_band_18_q>`"
+msgstr ":ref:`band_18_q<class_FmodAudioEffectEQ21_property_band_18_q>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:192 5e993bd55d874f8c8ff83c3ffbb012ba
+msgid ":ref:`band_18_filter_type<class_FmodAudioEffectEQ21_property_band_18_filter_type>`"
+msgstr ":ref:`band_18_filter_type<class_FmodAudioEffectEQ21_property_band_18_filter_type>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:194 a0a9164431cc4f1c8e12df17e25111d8
+msgid ":ref:`band_19_gain<class_FmodAudioEffectEQ21_property_band_19_gain>`"
+msgstr ":ref:`band_19_gain<class_FmodAudioEffectEQ21_property_band_19_gain>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:196 68ef8f3f1aae477b901f072771885119
+msgid ":ref:`band_19_frequency<class_FmodAudioEffectEQ21_property_band_19_frequency>`"
+msgstr ":ref:`band_19_frequency<class_FmodAudioEffectEQ21_property_band_19_frequency>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:196 749aa6e8866c4090b7db947b6a6e711f
+msgid "``16000.0``"
+msgstr "``16000.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:198 3e5c8dd5b438470096e482858e9e525d
+msgid ":ref:`band_19_q<class_FmodAudioEffectEQ21_property_band_19_q>`"
+msgstr ":ref:`band_19_q<class_FmodAudioEffectEQ21_property_band_19_q>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:200 b09ed819230041ffbfd3b87ff9b6b961
+msgid ":ref:`band_19_filter_type<class_FmodAudioEffectEQ21_property_band_19_filter_type>`"
+msgstr ":ref:`band_19_filter_type<class_FmodAudioEffectEQ21_property_band_19_filter_type>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:202 e2a54dc7293c4025bde05a0330b34981
+msgid ":ref:`band_20_gain<class_FmodAudioEffectEQ21_property_band_20_gain>`"
+msgstr ":ref:`band_20_gain<class_FmodAudioEffectEQ21_property_band_20_gain>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:204 3befb2d3a6a84d2db04506e063f3784e
+msgid ":ref:`band_20_frequency<class_FmodAudioEffectEQ21_property_band_20_frequency>`"
+msgstr ":ref:`band_20_frequency<class_FmodAudioEffectEQ21_property_band_20_frequency>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:204 003512c4735b4cf19d822b645ee27e4e
+msgid "``22000.0``"
+msgstr "``22000.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:206 e31a2666fceb414eb9056b6a5b9bd739
+msgid ":ref:`band_20_q<class_FmodAudioEffectEQ21_property_band_20_q>`"
+msgstr ":ref:`band_20_q<class_FmodAudioEffectEQ21_property_band_20_q>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:208 af1176851657468b8368e83744791b41
+msgid ":ref:`band_20_filter_type<class_FmodAudioEffectEQ21_property_band_20_filter_type>`"
+msgstr ":ref:`band_20_filter_type<class_FmodAudioEffectEQ21_property_band_20_filter_type>`"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:218 3c9a736c259c4eceb61bc410fb8ed20c
+msgid "Property Descriptions"
+msgstr "属性说明"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:224 c43ef733abdc464a95b971ce2312bc17
+msgid ":ref:`float<class_float>` **band_0_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **band_0_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:226 9e5e9cc37e3a4a72b6297f0f93f8f05a
+msgid "Gain for the first band (22Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 1 个频段（22Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:236 95ee5e701d6348cfaee3b0b268829dbb
+msgid ":ref:`float<class_float>` **band_0_frequency** = ``22.0``"
+msgstr ":ref:`float<class_float>` **band_0_frequency** = ``22.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:238 5035db5f0f9d4250807f5262ca0d7973
+msgid "Center frequency for the first band in Hz."
+msgstr "第 1 个频段的中心频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:248 8f99c2569d174545ae1a5c654605da06
+msgid ":ref:`float<class_float>` **band_0_q** = ``0.707``"
+msgstr ":ref:`float<class_float>` **band_0_q** = ``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:250 f42e8d237e364facad6acd4dfd98201c
+msgid "Q value for the first band. Range: 0.01 to 10.0."
+msgstr "第 1 个频段的 Q 值，范围为 0.01 到 10.0。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:260 fa53f4f52247404a977cee93a0effbd8
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_0_filter_type** = ``9``"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_0_filter_type** = ``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:262 41ca55f8a0ba465da3ff6f918679f914
+msgid ""
+"Filter type for the first band. Default is "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`."
+msgstr ""
+"第 1 个频段的滤波类型，默认为    "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:272 723f56364bc346858d807ffd09a222c1
+msgid ":ref:`float<class_float>` **band_1_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **band_1_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:274 1c1e9c0627bd43fc9450b3f6fe5a2daf
+msgid "Gain for the second band (32Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 2 个频段（32Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:284 e3e934f37d714f66b526a48117cf3e94
+msgid ":ref:`float<class_float>` **band_1_frequency** = ``32.0``"
+msgstr ":ref:`float<class_float>` **band_1_frequency** = ``32.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:286 f949c02b909845b5a4a7bbb04ec1b227
+msgid "Center frequency for the second band in Hz."
+msgstr "第 2 个频段的中心频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:296 760596c96177438d8f27273a16dc44e8
+msgid ":ref:`float<class_float>` **band_1_q** = ``0.707``"
+msgstr ":ref:`float<class_float>` **band_1_q** = ``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:298 f191108c610b4daaab39ebc0a3df3906
+msgid "Q value for the second band. Range: 0.01 to 10.0."
+msgstr "第 2 个频段的 Q 值，范围为 0.01 到 10.0。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:308 bb38274309584ff09df7c8ef05d35576
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_1_filter_type** = ``9``"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_1_filter_type** = ``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:310 8034adad14c24628a324c45d3e785a85
+msgid ""
+"Filter type for the second band. Default is "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`."
+msgstr ""
+"第 2 个频段的滤波类型，默认为    "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:320 ba43892d94b543a7a78e5b543a75acf3
+msgid ":ref:`float<class_float>` **band_2_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **band_2_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:322 2dca0acfa6974db998409f7ab5b36c90
+msgid "Gain for the third band (44Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 3 个频段（44Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:332 257e10e4e60e4ec982863e7648a9d740
+msgid ":ref:`float<class_float>` **band_2_frequency** = ``44.0``"
+msgstr ":ref:`float<class_float>` **band_2_frequency** = ``44.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:334 31dce51cbf0545cea4476e466c0902e5
+msgid "Center frequency for the third band in Hz."
+msgstr "第 3 个频段的中心频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:344 54dec83e97894a2e98b4bd020a712967
+msgid ":ref:`float<class_float>` **band_2_q** = ``0.707``"
+msgstr ":ref:`float<class_float>` **band_2_q** = ``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:346 f4e94c30bda546118b9e47d4d40ac105
+msgid "Q value for the third band. Range: 0.01 to 10.0."
+msgstr "第 3 个频段的 Q 值，范围为 0.01 到 10.0。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:356 f729213541c34f2db610af240b01ccd4
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_2_filter_type** = ``9``"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_2_filter_type** = ``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:358 2987cab5f9fa4f65aa506cfb0b13b5c6
+msgid ""
+"Filter type for the third band. Default is "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`."
+msgstr ""
+"第 3 个频段的滤波类型，默认为    "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:368 22268fba567043e19504c1db8a3d338e
+msgid ":ref:`float<class_float>` **band_3_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **band_3_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:370 f90e0eb9dd2542f7a264549f28b89090
+msgid "Gain for the fourth band (63Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 4 个频段（63Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:380 2e13ac35d31841ce93534741efeb7816
+msgid ":ref:`float<class_float>` **band_3_frequency** = ``63.0``"
+msgstr ":ref:`float<class_float>` **band_3_frequency** = ``63.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:382 1cd3ea80e5b74565aafbc6889c00ce0c
+msgid "Center frequency for the fourth band in Hz."
+msgstr "第 4 个频段的中心频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:392 95c5ba98b0d44175a908c1141746efea
+msgid ":ref:`float<class_float>` **band_3_q** = ``0.707``"
+msgstr ":ref:`float<class_float>` **band_3_q** = ``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:394 3cdc88ee25544d3daecac983569ce166
+msgid "Q value for the fourth band. Range: 0.01 to 10.0."
+msgstr "第 4 个频段的 Q 值，范围为 0.01 到 10.0。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:404 79fd577a2a4f49ca858fd7d82da94c8b
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_3_filter_type** = ``9``"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_3_filter_type** = ``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:406 0832be4b7ca24439871016d978736777
+msgid ""
+"Filter type for the fourth band. Default is "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`."
+msgstr ""
+"第 4 个频段的滤波类型，默认为    "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:416 4c0ebe0acd9f40c3b65f8847790b18a5
+msgid ":ref:`float<class_float>` **band_4_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **band_4_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:418 31255a1b95d04033a6db9df3a6e3189c
+msgid "Gain for the fifth band (90Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 5 个频段（90Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:428 666876d503614d688fe06b49d4fe3419
+msgid ":ref:`float<class_float>` **band_4_frequency** = ``90.0``"
+msgstr ":ref:`float<class_float>` **band_4_frequency** = ``90.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:430 0f6ce1997dd14f3e9e24d6347739e307
+msgid "Center frequency for the fifth band in Hz."
+msgstr "第 5 个频段的中心频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:440 9373f877104e4d43b1bc820cdcbf7aba
+msgid ":ref:`float<class_float>` **band_4_q** = ``0.707``"
+msgstr ":ref:`float<class_float>` **band_4_q** = ``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:442 066bd2685254456ebf9e5171dc9c9527
+msgid "Q value for the fifth band. Range: 0.01 to 10.0."
+msgstr "第 5 个频段的 Q 值，范围为 0.01 到 10.0。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:452 9c6db9b00ab643ab889439061532c05d
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_4_filter_type** = ``9``"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_4_filter_type** = ``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:454 933ef53bb4e749e89b1b4ab8a107c0ea
+msgid ""
+"Filter type for the fifth band. Default is "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`."
+msgstr ""
+"第 5 个频段的滤波类型，默认为    "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:464 d36d3ce532a244caac84d2d10a5e525e
+msgid ":ref:`float<class_float>` **band_5_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **band_5_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:466 7ec6a7e714814a8a9857fa6005f8ba4a
+msgid "Gain for the sixth band (125Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 6 个频段（125Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:476 9564c72cff474e6695157140d60535d3
+msgid ":ref:`float<class_float>` **band_5_frequency** = ``125.0``"
+msgstr ":ref:`float<class_float>` **band_5_frequency** = ``125.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:478 f2f52f6e2a614bbdb2f21b062b6f5b53
+msgid "Center frequency for the sixth band in Hz."
+msgstr "第 6 个频段的中心频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:488 f299b00cf2ed40afa603f25a0fecce75
+msgid ":ref:`float<class_float>` **band_5_q** = ``0.707``"
+msgstr ":ref:`float<class_float>` **band_5_q** = ``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:490 36c4481021654b28bc213edb6fe80d31
+msgid "Q value for the sixth band. Range: 0.01 to 10.0."
+msgstr "第 6 个频段的 Q 值，范围为 0.01 到 10.0。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:500 0a7f36f38d584ed88b46b073f552f261
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_5_filter_type** = ``9``"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_5_filter_type** = ``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:502 eda656d6e3a04f08aebd3476aa99fbc5
+msgid ""
+"Filter type for the sixth band. Default is "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`."
+msgstr ""
+"第 6 个频段的滤波类型，默认为    "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:512 fb851501052d4db683c9d83a91173c58
+msgid ":ref:`float<class_float>` **band_6_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **band_6_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:514 2be92103856c4c8184fb944341b903e5
+msgid "Gain for the seventh band (175Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 7 个频段（175Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:524 abdef403d70d4da9a6602de4cddc1421
+msgid ":ref:`float<class_float>` **band_6_frequency** = ``175.0``"
+msgstr ":ref:`float<class_float>` **band_6_frequency** = ``175.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:526 5ae4c95fcb3b41169268b706a6320a49
+msgid "Center frequency for the seventh band in Hz."
+msgstr "第 7 个频段的中心频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:536 fa7d9eaa1f404865bce7c983368b413c
+msgid ":ref:`float<class_float>` **band_6_q** = ``0.707``"
+msgstr ":ref:`float<class_float>` **band_6_q** = ``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:538 ebd7c5e605124a3683a9cae71331e078
+msgid "Q value for the seventh band. Range: 0.01 to 10.0."
+msgstr "第 7 个频段的 Q 值，范围为 0.01 到 10.0。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:548 a1b65a5b47d343458cdadabee1dd1c56
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_6_filter_type** = ``9``"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_6_filter_type** = ``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:550 dbfd81532b034f778e499ec81839fad3
+msgid ""
+"Filter type for the seventh band. Default is "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`."
+msgstr ""
+"第 7 个频段的滤波类型，默认为    "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:560 27136acf3dff46c291beb622c153791c
+msgid ":ref:`float<class_float>` **band_7_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **band_7_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:562 006c7272af644607a2ee7d6a815b0255
+msgid "Gain for the eighth band (250Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 8 个频段（250Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:572 2028daeb3a2945ae9616ed633bfc0d80
+msgid ":ref:`float<class_float>` **band_7_frequency** = ``250.0``"
+msgstr ":ref:`float<class_float>` **band_7_frequency** = ``250.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:574 e96c7b9c7d194962afbe66f7c6f559af
+msgid "Center frequency for the eighth band in Hz."
+msgstr "第 8 个频段的中心频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:584 e1c7954eec3642e29a4ff35d99644c58
+msgid ":ref:`float<class_float>` **band_7_q** = ``0.707``"
+msgstr ":ref:`float<class_float>` **band_7_q** = ``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:586 f04ae143e6084245879e50eb53d17d45
+msgid "Q value for the eighth band. Range: 0.01 to 10.0."
+msgstr "第 8 个频段的 Q 值，范围为 0.01 到 10.0。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:596 31b4bc134f274aab9399fb8c82359a62
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_7_filter_type** = ``9``"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_7_filter_type** = ``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:598 4f71e4c39ee24318aa774abc771a52c7
+msgid ""
+"Filter type for the eighth band. Default is "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`."
+msgstr ""
+"第 8 个频段的滤波类型，默认为    "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:608 779cda33b53845368fe2e194039e7c53
+msgid ":ref:`float<class_float>` **band_8_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **band_8_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:610 c05eaf449e8e443fa0bda5b961d49e99
+msgid "Gain for the ninth band (350Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 9 个频段（350Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:620 5800eb6244704ba8a7c928e48f92a19d
+msgid ":ref:`float<class_float>` **band_8_frequency** = ``350.0``"
+msgstr ":ref:`float<class_float>` **band_8_frequency** = ``350.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:622 1bc39e5a91684c759c49b5e586d36426
+msgid "Center frequency for the ninth band in Hz."
+msgstr "第 9 个频段的中心频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:632 a91210c853854f8c83e751c57982cbfe
+msgid ":ref:`float<class_float>` **band_8_q** = ``0.707``"
+msgstr ":ref:`float<class_float>` **band_8_q** = ``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:634 19740e923b7d49c5a56b536c21a4a041
+msgid "Q value for the ninth band. Range: 0.01 to 10.0."
+msgstr "第 9 个频段的 Q 值，范围为 0.01 到 10.0。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:644 b58f1fba7aa641f5bf02094ab53ddec1
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_8_filter_type** = ``9``"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_8_filter_type** = ``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:646 0ce5f0e9aada421ab2051b5ed170d342
+msgid ""
+"Filter type for the ninth band. Default is "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`."
+msgstr ""
+"第 9 个频段的滤波类型，默认为    "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:656 55179e43d0974de89498293825e4d11d
+msgid ":ref:`float<class_float>` **band_9_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **band_9_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:658 0ce093848dec447d8e8ba837cc73d3f4
+msgid "Gain for the tenth band (500Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 10 个频段（500Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:668 4c648ba820bc4b0c8cf634c686b64a47
+msgid ":ref:`float<class_float>` **band_9_frequency** = ``500.0``"
+msgstr ":ref:`float<class_float>` **band_9_frequency** = ``500.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:670 66996430b3954a598e3e911e95b22f39
+msgid "Center frequency for the tenth band in Hz."
+msgstr "第 10 个频段的中心频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:680 133a406453c743fe9000787aa61a44bd
+msgid ":ref:`float<class_float>` **band_9_q** = ``0.707``"
+msgstr ":ref:`float<class_float>` **band_9_q** = ``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:682 49bd00075b1a4f2daeaf89ac37e14949
+msgid "Q value for the tenth band. Range: 0.01 to 10.0."
+msgstr "第 10 个频段的 Q 值，范围为 0.01 到 10.0。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:692 83789b81de134cd0b3ba1cb8481b8307
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_9_filter_type** = ``9``"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_9_filter_type** = ``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:694 abdbdf7da38f41f9bee5db7a5ff68b93
+msgid ""
+"Filter type for the tenth band. Default is "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`."
+msgstr ""
+"第 10 个频段的滤波类型，默认为    "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:704 b30e9d8eaf764904b09b46f760f9bd50
+msgid ":ref:`float<class_float>` **band_10_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **band_10_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:706 4ea923e0cf7643f9bd6ef08e5a4dbe78
+msgid "Gain for the eleventh band (700Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 11 个频段（700Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:716 4c7fc18b819f4555a1d2087f89811139
+msgid ":ref:`float<class_float>` **band_10_frequency** = ``700.0``"
+msgstr ":ref:`float<class_float>` **band_10_frequency** = ``700.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:718 b937eb59b1774999ac161da672e73fb3
+msgid "Center frequency for the eleventh band in Hz."
+msgstr "第 11 个频段的中心频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:728 b1a1d66c81ff4c19895dcbcfd2a134be
+msgid ":ref:`float<class_float>` **band_10_q** = ``0.707``"
+msgstr ":ref:`float<class_float>` **band_10_q** = ``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:730 c2290109895d432bbc8e757db5c50951
+msgid "Q value for the eleventh band. Range: 0.01 to 10.0."
+msgstr "第 11 个频段的 Q 值，范围为 0.01 到 10.0。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:740 daed506a210d4fa7b9fc4fd5bfddb6e8
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_10_filter_type** = ``9``"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_10_filter_type** = ``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:742 fd32292294ff4970a425195eb3148b10
+msgid ""
+"Filter type for the eleventh band. Default is "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`."
+msgstr ""
+"第 11 个频段的滤波类型，默认为    "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:752 a8eea3fd342346a48ad65e29de8844e4
+msgid ":ref:`float<class_float>` **band_11_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **band_11_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:754 6851f89e7c184a3e9ef02c8f3c981000
+msgid "Gain for the twelfth band (1000Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 12 个频段（1000Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:764 b28eb631a70c410a92198004453d06be
+msgid ":ref:`float<class_float>` **band_11_frequency** = ``1000.0``"
+msgstr ":ref:`float<class_float>` **band_11_frequency** = ``1000.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:766 f1fe0dcccf5c4d53b691a08af1e961d0
+msgid "Center frequency for the twelfth band in Hz."
+msgstr "第 12 个频段的中心频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:776 a75c500d3e814ab78eafdd50b06386fa
+msgid ":ref:`float<class_float>` **band_11_q** = ``0.707``"
+msgstr ":ref:`float<class_float>` **band_11_q** = ``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:778 cd979b680bb3499a829922ef927f003b
+msgid "Q value for the twelfth band. Range: 0.01 to 10.0."
+msgstr "第 12 个频段的 Q 值，范围为 0.01 到 10.0。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:788 c0f2e1c3abc44b3eba5e8934145aee89
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_11_filter_type** = ``9``"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_11_filter_type** = ``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:790 8ca5cda5e7584fe48d914b253296cb1f
+msgid ""
+"Filter type for the twelfth band. Default is "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`."
+msgstr ""
+"第 12 个频段的滤波类型，默认为    "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:800 1425616960d94ffaa26fae9eeb85e863
+msgid ":ref:`float<class_float>` **band_12_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **band_12_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:802 3feeca387df94c6885934a23eacfdab5
+msgid "Gain for the thirteenth band (1400Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 13 个频段（1400Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:812 aef15ad3523f4265a3ea7e005452ee98
+msgid ":ref:`float<class_float>` **band_12_frequency** = ``1400.0``"
+msgstr ":ref:`float<class_float>` **band_12_frequency** = ``1400.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:814 a290368464f849c895cbd6ed52f1a736
+msgid "Center frequency for the thirteenth band in Hz."
+msgstr "第 13 个频段的中心频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:824 3dc5d3c4b56242ea9f998981cf623a8a
+msgid ":ref:`float<class_float>` **band_12_q** = ``0.707``"
+msgstr ":ref:`float<class_float>` **band_12_q** = ``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:826 2463916b752248eab1160e236d322cc3
+msgid "Q value for the thirteenth band. Range: 0.01 to 10.0."
+msgstr "第 13 个频段的 Q 值，范围为 0.01 到 10.0。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:836 186356d7f9004c81b3c3fbe7daee9b7a
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_12_filter_type** = ``9``"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_12_filter_type** = ``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:838 42a6505d685442759d01cf9db717f22a
+msgid ""
+"Filter type for the thirteenth band. Default is "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`."
+msgstr ""
+"第 13 个频段的滤波类型，默认为    "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:848 86741117d7dc448a8bca5f359eb81ee7
+msgid ":ref:`float<class_float>` **band_13_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **band_13_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:850 1e9b17c7914449af9a5824e8d82e2d78
+msgid "Gain for the fourteenth band (2000Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 14 个频段（2000Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:860 479630a7a4f34a3385834da4a55720b5
+msgid ":ref:`float<class_float>` **band_13_frequency** = ``2000.0``"
+msgstr ":ref:`float<class_float>` **band_13_frequency** = ``2000.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:862 bf1941e6801048a38ebef6eaa40d85d2
+msgid "Center frequency for the fourteenth band in Hz."
+msgstr "第 14 个频段的中心频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:872 e8cec37f41354108987ab4d88f924267
+msgid ":ref:`float<class_float>` **band_13_q** = ``0.707``"
+msgstr ":ref:`float<class_float>` **band_13_q** = ``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:874 10f9d5205ae84950aff9dfb76c49a244
+msgid "Q value for the fourteenth band. Range: 0.01 to 10.0."
+msgstr "第 14 个频段的 Q 值，范围为 0.01 到 10.0。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:884 a26aeee9b130467ab40c42a6b0a77fca
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_13_filter_type** = ``9``"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_13_filter_type** = ``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:886 d44787a67a22485f8ae8f559a5416ef4
+msgid ""
+"Filter type for the fourteenth band. Default is "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`."
+msgstr ""
+"第 14 个频段的滤波类型，默认为    "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:896 56ae12dfde6047e184b2a1466d6b1ce4
+msgid ":ref:`float<class_float>` **band_14_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **band_14_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:898 f02736cce1a64f1b9978437ba99031e5
+msgid "Gain for the fifteenth band (2800Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 15 个频段（2800Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:908 a82bb8500ccc4f888bd8e42210e72c44
+msgid ":ref:`float<class_float>` **band_14_frequency** = ``2800.0``"
+msgstr ":ref:`float<class_float>` **band_14_frequency** = ``2800.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:910 dde9e388b36d4dbbb9243fb9f4b1dcb3
+msgid "Center frequency for the fifteenth band in Hz."
+msgstr "第 15 个频段的中心频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:920 feb2f32127384365bb8d5ecb733c259b
+msgid ":ref:`float<class_float>` **band_14_q** = ``0.707``"
+msgstr ":ref:`float<class_float>` **band_14_q** = ``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:922 0ff02d6099d4475590ca7324e3a3878c
+msgid "Q value for the fifteenth band. Range: 0.01 to 10.0."
+msgstr "第 15 个频段的 Q 值，范围为 0.01 到 10.0。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:932 5c899a1bd57d4aba9bef85721d66a16d
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_14_filter_type** = ``9``"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_14_filter_type** = ``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:934 6ab63177bd644614a3b50e0c8688a6b8
+msgid ""
+"Filter type for the fifteenth band. Default is "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`."
+msgstr ""
+"第 15 个频段的滤波类型，默认为    "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:944 aff23edf04c247b381c0951a601f2d61
+msgid ":ref:`float<class_float>` **band_15_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **band_15_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:946 10e5fd5d9c2940e4b72b5e85d5bc80bd
+msgid "Gain for the sixteenth band (4000Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 16 个频段（4000Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:956 c0b9f024c2e44966a1ccc09a671151cb
+msgid ":ref:`float<class_float>` **band_15_frequency** = ``4000.0``"
+msgstr ":ref:`float<class_float>` **band_15_frequency** = ``4000.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:958 657c0cb223724ad08cd32eccb3364c7c
+msgid "Center frequency for the sixteenth band in Hz."
+msgstr "第 16 个频段的中心频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:968 4ee6e1cc33374e6c932ac90570461c0d
+msgid ":ref:`float<class_float>` **band_15_q** = ``0.707``"
+msgstr ":ref:`float<class_float>` **band_15_q** = ``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:970 8cbf6e3ee5d2468ba24dc0bcbe887499
+msgid "Q value for the sixteenth band. Range: 0.01 to 10.0."
+msgstr "第 16 个频段的 Q 值，范围为 0.01 到 10.0。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:980 cd47236a77f64c26bbe59309bab463e9
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_15_filter_type** = ``9``"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_15_filter_type** = ``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:982 9954220380c64262b1d8c757380a321c
+msgid ""
+"Filter type for the sixteenth band. Default is "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`."
+msgstr ""
+"第 16 个频段的滤波类型，默认为    "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:992 6baa837f0e934118b22dfb527365525b
+msgid ":ref:`float<class_float>` **band_16_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **band_16_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:994 988ab9532424421ea2937b6af7ff6eda
+msgid "Gain for the seventeenth band (5600Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 17 个频段（5600Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1004 68efa8bb2aa34286a4a4df090bd2f6d4
+msgid ":ref:`float<class_float>` **band_16_frequency** = ``5600.0``"
+msgstr ":ref:`float<class_float>` **band_16_frequency** = ``5600.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1006 1bfe0951aa7e4e9ba52cd3d0a73bceab
+msgid "Center frequency for the seventeenth band in Hz."
+msgstr "第 17 个频段的中心频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1016 cb5eb887a1784443bbd9c890029f2132
+msgid ":ref:`float<class_float>` **band_16_q** = ``0.707``"
+msgstr ":ref:`float<class_float>` **band_16_q** = ``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1018 a0a5ace21785425eac2f5a1320ee9a1b
+msgid "Q value for the seventeenth band. Range: 0.01 to 10.0."
+msgstr "第 17 个频段的 Q 值，范围为 0.01 到 10.0。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1028 860d56e74a3945dfbbdd87238f3452a5
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_16_filter_type** = ``9``"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_16_filter_type** = ``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1030 1983f9f37fd54e69a178bc6a5870ec7f
+msgid ""
+"Filter type for the seventeenth band. Default is "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`."
+msgstr ""
+"第 17 个频段的滤波类型，默认为    "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1040 0f8d96c9151d424a82e19c107aa12cbd
+msgid ":ref:`float<class_float>` **band_17_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **band_17_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1042 5da729a113534e6282ed4608db3a1555
+msgid "Gain for the eighteenth band (8000Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 18 个频段（8000Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1052 591cfa19dada4643aa6a086326bcb71f
+msgid ":ref:`float<class_float>` **band_17_frequency** = ``8000.0``"
+msgstr ":ref:`float<class_float>` **band_17_frequency** = ``8000.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1054 6c416e1695a049e5beae2bc563c41442
+msgid "Center frequency for the eighteenth band in Hz."
+msgstr "第 18 个频段的中心频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1064 f5e06fbf5b9d4d748bf5397963de10ed
+msgid ":ref:`float<class_float>` **band_17_q** = ``0.707``"
+msgstr ":ref:`float<class_float>` **band_17_q** = ``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1066 e44723db51e64823a3224a14e09edc7c
+msgid "Q value for the eighteenth band. Range: 0.01 to 10.0."
+msgstr "第 18 个频段的 Q 值，范围为 0.01 到 10.0。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1076 4f309bb210464c358e9c30c133519fef
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_17_filter_type** = ``9``"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_17_filter_type** = ``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1078 386da9b8f3aa468d8e089d215f1e526f
+msgid ""
+"Filter type for the eighteenth band. Default is "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`."
+msgstr ""
+"第 18 个频段的滤波类型，默认为    "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1088 8a0c80df35a14f4c945c6c1f4d5d93c5
+msgid ":ref:`float<class_float>` **band_18_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **band_18_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1090 f0a059dc15ad493dae2c49757573c5e1
+msgid "Gain for the nineteenth band (11000Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 19 个频段（11000Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1100 6ed5f5a4ea9d4e4ba139096fb3f93191
+msgid ":ref:`float<class_float>` **band_18_frequency** = ``11000.0``"
+msgstr ":ref:`float<class_float>` **band_18_frequency** = ``11000.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1102 38fbd9da5cb14d9e8d90ff1c14d7bd09
+msgid "Center frequency for the nineteenth band in Hz."
+msgstr "第 19 个频段的中心频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1112 7bf76a16bf704708a071368cf1920ce1
+msgid ":ref:`float<class_float>` **band_18_q** = ``0.707``"
+msgstr ":ref:`float<class_float>` **band_18_q** = ``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1114 f9542b63e769476da8e24a5b7b49d725
+msgid "Q value for the nineteenth band. Range: 0.01 to 10.0."
+msgstr "第 19 个频段的 Q 值，范围为 0.01 到 10.0。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1124 688671ad8d864bb38b1a4727d83d1451
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_18_filter_type** = ``9``"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_18_filter_type** = ``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1126 bcd4abac84544213aa8276902bf59b13
+msgid ""
+"Filter type for the nineteenth band. Default is "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`."
+msgstr ""
+"第 19 个频段的滤波类型，默认为    "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1136 5571561de5fb44daafd5f89731668474
+msgid ":ref:`float<class_float>` **band_19_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **band_19_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1138 ff3de4fb5e734a589584ea522e633b7d
+msgid "Gain for the twentieth band (16000Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 20 个频段（16000Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1148 9e8d942861364792a7820ff3bdfd04f7
+msgid ":ref:`float<class_float>` **band_19_frequency** = ``16000.0``"
+msgstr ":ref:`float<class_float>` **band_19_frequency** = ``16000.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1150 d3093513b5c64db2b5a57d40e3208600
+msgid "Center frequency for the twentieth band in Hz."
+msgstr "第 20 个频段的中心频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1160 b71aaed5a04a4f4d987977c39e8f2d6d
+msgid ":ref:`float<class_float>` **band_19_q** = ``0.707``"
+msgstr ":ref:`float<class_float>` **band_19_q** = ``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1162 35624f4ed43d4d778143a91a608aab3c
+msgid "Q value for the twentieth band. Range: 0.01 to 10.0."
+msgstr "第 20 个频段的 Q 值，范围为 0.01 到 10.0。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1172 0d0035dbd17447c79d50887a11488787
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_19_filter_type** = ``9``"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_19_filter_type** = ``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1174 0db48bad9fe6486ba8cb2c184e424ea3
+msgid ""
+"Filter type for the twentieth band. Default is "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`."
+msgstr ""
+"第 20 个频段的滤波类型，默认为    "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1184 b3b6c2aad1ff4f30b2c450534b790858
+msgid ":ref:`float<class_float>` **band_20_gain** = ``0.0``"
+msgstr ":ref:`float<class_float>` **band_20_gain** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1186 5b55d8bff70b45bab7d03d7d9d649163
+msgid "Gain for the twenty-first band (22000Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 21 个频段（22000Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1196 d8ded59bcbc547059becdd22954e9648
+msgid ":ref:`float<class_float>` **band_20_frequency** = ``22000.0``"
+msgstr ":ref:`float<class_float>` **band_20_frequency** = ``22000.0``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1198 71190611ca6f4b54b5c36de3f8f77227
+msgid "Center frequency for the twenty-first band in Hz."
+msgstr "第 21 个频段的中心频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1208 f5f442aac0ad46b9afef06b1c489fd36
+msgid ":ref:`float<class_float>` **band_20_q** = ``0.707``"
+msgstr ":ref:`float<class_float>` **band_20_q** = ``0.707``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1210 c99ba4004ff7443b973d6fbd51e2eb44
+msgid "Q value for the twenty-first band. Range: 0.01 to 10.0."
+msgstr "第 21 个频段的 Q 值，范围为 0.01 到 10.0。"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1220 7d2c81bf1a504c5f9cf8f313b862175f
+msgid ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_20_filter_type** = ``9``"
+msgstr ":ref:`FilterType<enum_FmodAudioEffectEQ_FilterType>` **band_20_filter_type** = ``9``"
+
+#: ../../source/classes/class_fmodaudioeffecteq21.rst:1222 6591f6ed3cf84ff9ac41e1f68560db99
+msgid ""
+"Filter type for the twenty-first band. Default is "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`."
+msgstr ""
+"第 21 个频段的滤波类型，默认为    "
+":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"

@@ -1,0 +1,474 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, LuYingYiLong
+# This file is distributed under the same license as the Godot FmodPlayer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot FmodPlayer \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:12 3e75295c4e6c4f7bad71c391e9a1be10
+msgid "FmodAudioEffectCompressor"
+msgstr "FmodAudioEffectCompressor"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:14 490d4bd7348c4af6a731faafcf4dc904
+msgid ""
+"**Inherits:** :ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>`"
+" **<** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+msgstr ""
+"**继承：** :ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>` **<**"
+" :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:16 0308072fc9c3450197699b35146b6aae
+msgid "Dynamic range compressor for reducing the dynamic range of audio signals."
+msgstr "动态压缩器。"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:21 3aaf43ddbb06440d8b853d02b57e1ab2
+msgid "Description"
+msgstr "描述"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:23 7b198fa9335a46c4bfec7700da0874e5
+msgid ""
+"FmodAudioEffectCompressor is a dynamic range compression effect that reduces the volume of loud "
+"sounds while leaving quiet sounds unchanged. It is commonly used to control dynamics, prevent "
+"clipping, and make audio more consistent in loudness."
+msgstr ""
+"**FmodAudioEffectCompressor**    用于压低超过阈值的动态范围，并可通过输出增益补偿响度。   ``threshold_db``    决定开始压缩的位置，   "
+"``ratio``    决定压缩强度，   ``attack_us``    和    ``release_ms``    控制响应速度，   ``mix``    可用于并行压缩。"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:25 cf9ba0c9b042433b98a13d762a489449
+msgid ""
+"The compressor works by measuring the input level and reducing gain when it exceeds a specified "
+"threshold. The amount of reduction is determined by the ratio, and the response time is "
+"controlled by attack and release parameters."
+msgstr "压缩器检测输入电平，并在超过阈值时降低增益。压缩比决定增益衰减量，启动和释放参数决定响应速度。"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:27 7201aea185b447cbb6995f539027fba9
+msgid ""
+"This effect can also apply gain makeup to compensate for the volume reduction caused by "
+"compression, and supports sidechain input for ducking and other advanced techniques."
+msgstr "支持补偿增益，用于弥补压缩造成的音量降低；也支持侧链输入，可实现闪避等处理。"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:32 85a8fdb133d347a18401848b30c063f8
+msgid "Properties"
+msgstr "属性"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:38
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:40
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:42
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:44
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:46
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:48
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:64
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:68
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:72
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:76
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:80
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:84 062f809ac92e4dde9abddf6b5b5ef05f
+#: 1eb41102a76e4b08a0fa2f38aec60077 3603e0c9d22349ccbf6dc218cc2cd7ca 4aa229ffa4fe4c02b667b951a6cd3fc6
+#: 5080cbb2c14d4af3b93941e840763271 5286454a689d4318b64ea6e7808c42cd 5cad50ef14104e05b5437cd69bddce4a
+#: 940371a9bafd4254a9d0b4bcb82b36e3 e47be4acb4b442cdb5baba891eba54e7 ea429daa97ae4961a0fc658c514647ca
+#: fde4a90d3b1440b889c9d0dac31d0c4a ffe32f03314b436782ddd68c3e75c729
+msgid ":ref:`float<class_float>`"
+msgstr ":ref:`float<class_float>`"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:38 f64c1bf2c8544434aaca6a21959919b8
+msgid ":ref:`threshold_db<class_FmodAudioEffectCompressor_property_threshold_db>`"
+msgstr ":ref:`threshold_db<class_FmodAudioEffectCompressor_property_threshold_db>`"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:38
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:42 bc8d647106f24dfea185b406e620ef4c
+#: db5e7cb6eff9424aa61eb1bacf5a4668
+msgid "``0.0``"
+msgstr "``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:40 0bc46f7ff0e54ee28162d0bab9f31d33
+msgid ":ref:`ratio<class_FmodAudioEffectCompressor_property_ratio>`"
+msgstr ":ref:`ratio<class_FmodAudioEffectCompressor_property_ratio>`"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:40 7e8900e4be2241b7862f4c8ad35f092f
+msgid "``4.0``"
+msgstr "``4.0``"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:42 396ba8a8ed7545c3810a1d4d9fdbf962
+msgid ":ref:`gain_db<class_FmodAudioEffectCompressor_property_gain_db>`"
+msgstr ":ref:`gain_db<class_FmodAudioEffectCompressor_property_gain_db>`"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:44 9906c5534b344991b71dfeca8fc9c752
+msgid ":ref:`attack_us<class_FmodAudioEffectCompressor_property_attack_us>`"
+msgstr ":ref:`attack_us<class_FmodAudioEffectCompressor_property_attack_us>`"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:44 b51bb1be5ed3436bb5d0ee0d290d821e
+msgid "``20.0``"
+msgstr "``20.0``"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:46 842b8b7d32d949c7bc0f1ee0b6140b23
+msgid ":ref:`release_ms<class_FmodAudioEffectCompressor_property_release_ms>`"
+msgstr ":ref:`release_ms<class_FmodAudioEffectCompressor_property_release_ms>`"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:46 867c5090500a4585b6f7cd9b38d0d0ab
+msgid "``250.0``"
+msgstr "``250.0``"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:48 bafbf5bc6af44ca28c66f5cc5163c3b7
+msgid ":ref:`mix<class_FmodAudioEffectCompressor_property_mix>`"
+msgstr ":ref:`mix<class_FmodAudioEffectCompressor_property_mix>`"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:48 461f0fc73ae947658ff44300ac9035a3
+msgid "``1.0``"
+msgstr "``1.0``"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:50
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:88 08fb1d0e46914c5f8819acf2457ab2a2
+#: 4bc2236b754447b5af8caebddbc90423
+msgid ":ref:`StringName<class_StringName>`"
+msgstr ":ref:`StringName<class_StringName>`"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:50 412c5b784e0245f3af515de1b87ea3f7
+msgid ":ref:`sidechain<class_FmodAudioEffectCompressor_property_sidechain>`"
+msgstr ":ref:`sidechain<class_FmodAudioEffectCompressor_property_sidechain>`"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:50 0c1fa208e3c64ec39c74927e38dd3995
+msgid "``&\"\"``"
+msgstr "``&\"\"``"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:56 8de8413644c7451f913ed70b21541b91
+msgid "Methods"
+msgstr "方法"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:62
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:66
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:70
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:74
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:78
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:82
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:86 0332f3dc014b444a816aa07ea9c9cc91
+#: 17d2da2c248641d1b8e17b890077ea62 4ff9b5576b0a4ed59d659b821e46a231 8c6e24acc6ce4d2884650b1fc706ee51
+#: c03306675e9b4703b5da50768a7ceab5 c2592519a3404d60ab9a866505343acc c7925004335e4927b0c96e805b6b016a
+msgid "|void|"
+msgstr "|void|"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:62 63fbdb5a35ca4dad9b4a9438dd97c9e8
+msgid ""
+":ref:`set_threshold<class_FmodAudioEffectCompressor_method_set_threshold>`\\ (\\ threshold_db\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_threshold<class_FmodAudioEffectCompressor_method_set_threshold>`\\ (\\ threshold_db\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:64 7639174f76f340feb185b858a669c428
+msgid ":ref:`get_threshold<class_FmodAudioEffectCompressor_method_get_threshold>`\\ (\\ ) |const|"
+msgstr ":ref:`get_threshold<class_FmodAudioEffectCompressor_method_get_threshold>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:66 e5f2de6855de49f5835c7247b53fd815
+msgid ""
+":ref:`set_ratio<class_FmodAudioEffectCompressor_method_set_ratio>`\\ (\\ ratio\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_ratio<class_FmodAudioEffectCompressor_method_set_ratio>`\\ (\\ ratio\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:68 86ce0483c3de4fe1a186811af9a4c8f1
+msgid ":ref:`get_ratio<class_FmodAudioEffectCompressor_method_get_ratio>`\\ (\\ ) |const|"
+msgstr ":ref:`get_ratio<class_FmodAudioEffectCompressor_method_get_ratio>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:70 da69e60b4ad6463b9ef05dc12a231ba1
+msgid ""
+":ref:`set_gain<class_FmodAudioEffectCompressor_method_set_gain>`\\ (\\ gain_db\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_gain<class_FmodAudioEffectCompressor_method_set_gain>`\\ (\\ gain_db\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:72 341cbe934af2439a9b1caa772d74b639
+msgid ":ref:`get_gain<class_FmodAudioEffectCompressor_method_get_gain>`\\ (\\ ) |const|"
+msgstr ":ref:`get_gain<class_FmodAudioEffectCompressor_method_get_gain>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:74 b52f0bb44d244fa6a03af8a77b934951
+msgid ""
+":ref:`set_attack_us<class_FmodAudioEffectCompressor_method_set_attack_us>`\\ (\\ attack_us\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_attack_us<class_FmodAudioEffectCompressor_method_set_attack_us>`\\ (\\ attack_us\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:76 8e694c5c034e44c1b9c0d78741d64e85
+msgid ":ref:`get_attack_us<class_FmodAudioEffectCompressor_method_get_attack_us>`\\ (\\ ) |const|"
+msgstr ":ref:`get_attack_us<class_FmodAudioEffectCompressor_method_get_attack_us>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:78 1c7c543731764c33869fc9cef91ec14d
+msgid ""
+":ref:`set_release_ms<class_FmodAudioEffectCompressor_method_set_release_ms>`\\ (\\ release_ms\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_release_ms<class_FmodAudioEffectCompressor_method_set_release_ms>`\\ (\\ release_ms\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:80 0c78daf7443b4b4aae1e4c6d4237970e
+msgid ":ref:`get_release_ms<class_FmodAudioEffectCompressor_method_get_release_ms>`\\ (\\ ) |const|"
+msgstr ":ref:`get_release_ms<class_FmodAudioEffectCompressor_method_get_release_ms>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:82 7674630b41b7443e98956f2e42b3a4bf
+msgid ""
+":ref:`set_mix<class_FmodAudioEffectCompressor_method_set_mix>`\\ (\\ mix\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_mix<class_FmodAudioEffectCompressor_method_set_mix>`\\ (\\ mix\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:84 69f7dd294d8346c48391b38594062db4
+msgid ":ref:`get_mix<class_FmodAudioEffectCompressor_method_get_mix>`\\ (\\ ) |const|"
+msgstr ":ref:`get_mix<class_FmodAudioEffectCompressor_method_get_mix>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:86 f8e2ce5c52604871a5992b468bf804cd
+msgid ""
+":ref:`set_sidechain<class_FmodAudioEffectCompressor_method_set_sidechain>`\\ (\\ sidechain\\: "
+":ref:`StringName<class_StringName>`\\ )"
+msgstr ""
+":ref:`set_sidechain<class_FmodAudioEffectCompressor_method_set_sidechain>`\\ (\\ sidechain\\: "
+":ref:`StringName<class_StringName>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:88 1b96513de8374e9ea5a0712a64ad38aa
+msgid ":ref:`get_sidechain<class_FmodAudioEffectCompressor_method_get_sidechain>`\\ (\\ ) |const|"
+msgstr ":ref:`get_sidechain<class_FmodAudioEffectCompressor_method_get_sidechain>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:98 c3822defb5a44efe93199d5d0b76a9d4
+msgid "Property Descriptions"
+msgstr "属性说明"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:104 3f4ff31f976c48acb29f461ff522d24a
+msgid ":ref:`float<class_float>` **threshold_db** = ``0.0``"
+msgstr ":ref:`float<class_float>` **threshold_db** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:108
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:230 864206ba31f84c058a6949aedb1bb183
+#: d4ca84b5ac7d414a91ec9457032da5a5
+msgid "|void| **set_threshold**\\ (\\ threshold_db\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_threshold**\\ (\\ threshold_db\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:109
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:244 e7189416c45244178bd5c38c873de298
+#: f2e36a7184aa4be7bb5f493d0c47b8db
+msgid ":ref:`float<class_float>` **get_threshold**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_threshold**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:111 0aa8e15416e944f0b5f862f7068f9541
+msgid ""
+"The threshold level in decibels (dB) above which compression begins. Range: -60 dB to 0 dB. "
+"Default: 0 dB. Signals below this level pass through unaffected; signals above are reduced "
+"according to the ratio. Lower threshold values result in more compression."
+msgstr "压缩阈值"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:121 3d25fc424813451d814c1ed6c60637db
+msgid ":ref:`float<class_float>` **ratio** = ``4.0``"
+msgstr ":ref:`float<class_float>` **ratio** = ``4.0``"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:125
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:258 13ed56f437ad423a826e6131c0f82112
+#: 6d6cc55163914979ad2045dc31ecfe0d
+msgid "|void| **set_ratio**\\ (\\ ratio\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_ratio**\\ (\\ ratio\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:126
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:272 735af2526a994896940a67d7cfad1e6b
+#: cd82b60023f04613b838848e3cd16651
+msgid ":ref:`float<class_float>` **get_ratio**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_ratio**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:128 0b34ae67c61d4e318242eb7c68e6b66e
+msgid ""
+"The compression ratio, which determines how much the signal is compressed when it exceeds the "
+"threshold. Range: 1.0 to 50.0. Default: 4.0. A ratio of 4:1 means that for every 4 dB the input "
+"exceeds the threshold, the output increases by only 1 dB. Higher ratios result in more aggressive"
+" compression."
+msgstr "压缩比"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:138 aba80f94b1fa4363bbeba7b00f873a46
+msgid ":ref:`float<class_float>` **gain_db** = ``0.0``"
+msgstr ":ref:`float<class_float>` **gain_db** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:142
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:286 cf20d39e5daf439eb5ec62cca3eab2fa
+#: ff5b637caac543bababaf04dfb2e7dda
+msgid "|void| **set_gain**\\ (\\ gain_db\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_gain**\\ (\\ gain_db\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:143
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:300 0bddbebad4664da9bf3b10646f58be30
+#: 923c55a1eea64557bc6b0ed7b8ecf38d
+msgid ":ref:`float<class_float>` **get_gain**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_gain**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:145 5d206a00497e4f7ea58f23c83c043ef9
+msgid ""
+"The gain makeup applied after compression, in decibels (dB). Range: -30 dB to +30 dB. Default: 0 "
+"dB. Use this to compensate for the volume reduction caused by compression and bring the output "
+"level back up."
+msgstr "输出补偿增益"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:155 e283a72a76834524b8738ea0d6e515d5
+msgid ":ref:`float<class_float>` **attack_us** = ``20.0``"
+msgstr ":ref:`float<class_float>` **attack_us** = ``20.0``"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:159
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:314 1072e5546af9417f94f22727211ba83e
+#: 9b1269980a8a4c2d86798ee3b235876f
+msgid "|void| **set_attack_us**\\ (\\ attack_us\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_attack_us**\\ (\\ attack_us\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:160
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:328 18c054a4e8d64bc487399bf49a539364
+#: 50469a1af2b74402b8784e1e8297e55b
+msgid ":ref:`float<class_float>` **get_attack_us**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_attack_us**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:162 dea93550e60f479da1a21072294c8769
+msgid ""
+"The attack time in microseconds (μs). This is the time it takes for the compressor to start "
+"reducing gain after the input signal exceeds the threshold. Range: 0 to 100000 μs (100 ms). "
+"Default: 20000 μs (20 ms). Shorter attack times respond faster but may cause distortion; longer "
+"times preserve transients."
+msgstr "启动时间，单位为微秒"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:172 f8d5f465df8f4be0b48a77ebdd9fd836
+msgid ":ref:`float<class_float>` **release_ms** = ``250.0``"
+msgstr ":ref:`float<class_float>` **release_ms** = ``250.0``"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:176
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:342 0a448819f4224f92953d44fac71ae682
+#: 80cd1cb92aca4e4aa521d962f17f66e8
+msgid "|void| **set_release_ms**\\ (\\ release_ms\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_release_ms**\\ (\\ release_ms\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:177
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:356 4993605520ae4226a75f93543e044bfe
+#: 65c570f2492f488084da9e92bc9608e1
+msgid ":ref:`float<class_float>` **get_release_ms**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_release_ms**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:179 9b26457009d1452482cfdec90afee727
+msgid ""
+"The release time in milliseconds (ms). This is the time it takes for the compressor to return to "
+"unity gain after the input signal falls below the threshold. Range: 10 ms to 10000 ms. Default: "
+"250 ms. Longer release times produce smoother, more natural results; shorter times may cause "
+"pumping artifacts."
+msgstr "释放时间，单位为毫秒"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:189 9bc35fc931d04a49ab8a39d1c0d8d79e
+msgid ":ref:`float<class_float>` **mix** = ``1.0``"
+msgstr ":ref:`float<class_float>` **mix** = ``1.0``"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:193
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:370 2a37863414374617b177d9b2da43d4ab
+#: 89844a71fd2d4fd8be5c6180863ab4ce
+msgid "|void| **set_mix**\\ (\\ mix\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_mix**\\ (\\ mix\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:194
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:384 69df3523523348d7a554cd2f7ecfb79d
+#: c752eb939b824dd48db080e1854973d2
+msgid ":ref:`float<class_float>` **get_mix**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_mix**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:196 ac0182f02f164a6fbae533b412c8551b
+msgid ""
+"The mix between dry (unprocessed) and wet (compressed) signal, as a value from 0.0 to 1.0. "
+"Default: 1.0 (fully wet). A value of 0.0 outputs only the dry signal, 1.0 outputs only the "
+"compressed signal, and intermediate values blend the two. This enables parallel compression "
+"effects."
+msgstr "干湿混合比例"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:206 fa6cc88ca54b4a1c89e8f8700f4cfad8
+msgid ":ref:`StringName<class_StringName>` **sidechain** = ``&\"\"``"
+msgstr ":ref:`StringName<class_StringName>` **sidechain** = ``&\"\"``"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:210
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:398 1c597a1a91a44066b038c51faf668fe5
+#: d8b62d62ac1847c1851d685dfe98edbc
+msgid "|void| **set_sidechain**\\ (\\ sidechain\\: :ref:`StringName<class_StringName>`\\ )"
+msgstr "|void| **set_sidechain**\\ (\\ sidechain\\: :ref:`StringName<class_StringName>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:211
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:412 91d1a1af1ee744e0ac2c9df5e385aa3d
+#: bba21aa4bf304275a7ef8020ec986206
+msgid ":ref:`StringName<class_StringName>` **get_sidechain**\\ (\\ ) |const|"
+msgstr ":ref:`StringName<class_StringName>` **get_sidechain**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:213 204d56a9fec6450da6d826c0d7688b29
+msgid ""
+"The name of the sidechain bus used to trigger compression. When set, the compressor uses the "
+"level of the specified bus instead of the input signal to control the gain reduction. This "
+"enables sidechain compression (ducking), where one signal controls the compression of another. "
+"Empty string means no sidechain is used."
+msgstr "侧链总线名；当前 FMOD 总线镜像尚未实际支持侧链路由"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:222 177c43bf08c74f8399d6364f12fcfb5b
+msgid "Method Descriptions"
+msgstr "方法说明"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:232 bdff427d1d5348c39881bbd479f5a69e
+msgid "Sets threshold."
+msgstr "设置压缩阈值。"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:246 7dd40c5cd89948e0881ee08b45f66324
+msgid "Returns threshold."
+msgstr "返回压缩阈值。"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:260 2baa8db450164eae916bf709d6b6725e
+msgid "Sets :ref:`ratio<class_FmodAudioEffectCompressor_property_ratio>`."
+msgstr "Sets :ref:`ratio<class_FmodAudioEffectCompressor_property_ratio>`."
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:274 4701fcb4635541fbbd157eaf6b2c7883
+msgid "Returns :ref:`ratio<class_FmodAudioEffectCompressor_property_ratio>`."
+msgstr "Returns :ref:`ratio<class_FmodAudioEffectCompressor_property_ratio>`."
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:288 cd676310383a4bc3bfc8ffff18a30106
+msgid "Sets gain."
+msgstr "设置输出补偿增益。"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:302 f35093be35a145888eea8330670b1f5c
+msgid "Returns gain."
+msgstr "返回输出补偿增益。"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:316 13cdc9570f7b4dc6a52475b44880a6d6
+msgid "Sets :ref:`attack_us<class_FmodAudioEffectCompressor_property_attack_us>`."
+msgstr "Sets :ref:`attack_us<class_FmodAudioEffectCompressor_property_attack_us>`."
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:330 23a9f6a7eb904a84b5a08f5fa65db38b
+msgid "Returns :ref:`attack_us<class_FmodAudioEffectCompressor_property_attack_us>`."
+msgstr "Returns :ref:`attack_us<class_FmodAudioEffectCompressor_property_attack_us>`."
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:344 c6619799740b46088fe431b7e7c060e6
+msgid "Sets :ref:`release_ms<class_FmodAudioEffectCompressor_property_release_ms>`."
+msgstr "Sets :ref:`release_ms<class_FmodAudioEffectCompressor_property_release_ms>`."
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:358 59977e75abcd4bcba7cc37d598efb1be
+msgid "Returns :ref:`release_ms<class_FmodAudioEffectCompressor_property_release_ms>`."
+msgstr "Returns :ref:`release_ms<class_FmodAudioEffectCompressor_property_release_ms>`."
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:372 4e28cd879e524016abab54fe73d2d717
+msgid "Sets :ref:`mix<class_FmodAudioEffectCompressor_property_mix>`."
+msgstr "Sets :ref:`mix<class_FmodAudioEffectCompressor_property_mix>`."
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:386 d299e848d857402fac51c70c37f5c414
+msgid "Returns :ref:`mix<class_FmodAudioEffectCompressor_property_mix>`."
+msgstr "Returns :ref:`mix<class_FmodAudioEffectCompressor_property_mix>`."
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:400 15ad60475ca84c84bd0fb3fee9092767
+msgid "Sets :ref:`sidechain<class_FmodAudioEffectCompressor_property_sidechain>`."
+msgstr "Sets :ref:`sidechain<class_FmodAudioEffectCompressor_property_sidechain>`."
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:414 645ca64af4674f2f9bc7bb6e1a7a5538
+msgid "Returns :ref:`sidechain<class_FmodAudioEffectCompressor_property_sidechain>`."
+msgstr "Returns :ref:`sidechain<class_FmodAudioEffectCompressor_property_sidechain>`."

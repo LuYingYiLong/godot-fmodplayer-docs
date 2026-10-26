@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, LuYingYiLong
+# This file is distributed under the same license as the Godot FmodPlayer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot FmodPlayer \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/classes/class_fmodaudiopreviewinspector.rst:12 4011ddf7e7354a9e8f2d1dc4e9d1292f
+msgid "FmodAudioPreviewInspector"
+msgstr "FmodAudioPreviewInspector"
+
+#: ../../source/classes/class_fmodaudiopreviewinspector.rst:14 f93ccbd02b4046d7b8bd7b17507e2452
+msgid ""
+"**Inherits:** :ref:`EditorInspectorPlugin<class_EditorInspectorPlugin>` **<** "
+":ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+msgstr ""
+"**继承：** :ref:`EditorInspectorPlugin<class_EditorInspectorPlugin>` **<** "
+":ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+
+#: ../../source/classes/class_fmodaudiopreviewinspector.rst:16 4ba26f4b05754eaebb132b134807e3ba
+msgid "Editor inspector plugin that adds audio preview functionality for FmodAudioStream resources."
+msgstr "为 FmodAudioStream 资源提供音频预览的编辑器检查器插件。"
+
+#: ../../source/classes/class_fmodaudiopreviewinspector.rst:21 d37b8dae0b1b40638a1f70bb5ec69f09
+msgid "Description"
+msgstr "描述"
+
+#: ../../source/classes/class_fmodaudiopreviewinspector.rst:23 321439a40f2f4db7b0ec015df33d38e1
+msgid ""
+"FmodAudioPreviewInspector is an editor plugin that enhances the inspector interface for "
+":ref:`FmodAudioStream<class_FmodAudioStream>` resources. It adds a visual waveform preview and "
+"playback controls directly in the inspector panel."
+msgstr ""
+"FmodAudioPreviewInspector 在    :ref:`FmodAudioStream<class_FmodAudioStream>`    "
+"的检查器面板中添加波形预览和播放控件。"
+
+#: ../../source/classes/class_fmodaudiopreviewinspector.rst:25 6d57401038824b4faeefefe576e583ad
+msgid ""
+"This allows developers to preview audio assets without needing to play them in-game or use "
+"external tools."
+msgstr "可直接预览音频资源，无需运行游戏。"

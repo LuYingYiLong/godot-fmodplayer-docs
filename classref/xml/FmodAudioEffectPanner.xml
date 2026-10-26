@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="FmodAudioEffectPanner" inherits="FmodAudioEffect" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/godotengine/godot/master/doc/class.xsd">
+	<brief_description>
+		Stereo panner for positioning audio in the stereo field.
+	</brief_description>
+	<description>
+		FmodAudioEffectPanner is a stereo panning effect that controls the position of audio in the left-right stereo field. It uses FMOD's PAN DSP to distribute the signal between the left and right channels.
+		A pan value of 0.0 centers the audio equally in both channels. Negative values move the audio toward the left channel, while positive values move it toward the right channel.
+		This effect simulates Godot's AudioEffectPanner and provides a simple way to spatialize mono or stereo audio in a 2D stereo soundstage.
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="set_pan">
+			<return type="void" />
+			<param index="0" name="pan" type="float" />
+			<description>
+				Sets [member pan].
+			</description>
+		</method>
+		<method name="get_pan" qualifiers="const">
+			<return type="float" />
+			<description>
+				Returns [member pan].
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member type="float" name="pan" setter="set_pan" getter="get_pan" default="0.0">
+			The pan position in the stereo field. Range: -1.0 to 1.0. Default: 0.0. A value of -1.0 sends the signal fully to the left channel, 0.0 is centered (equal in both channels), and 1.0 sends the signal fully to the right channel. Values in between provide smooth positioning.
+		</member>
+	</members>
+	<signals />
+	<constants />
+</class>

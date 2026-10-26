@@ -129,7 +129,7 @@ Android 比 Windows 多一步：除了插件自己的 ``libfmod_player``，还�
 .. seealso:: `为 Android 导出 <https://docs.godotengine.org/zh-cn/4.x/tutorials/export/exporting_for_android.html>`_ 如何为导出到 Android 做准备。
 
 自动化配置
-~~~~~~~~
+~~~~~~~~~~~~
 
 为了简化 Android 导出流程，Godot‑FmodPlayer 提供了一个辅助工具：
 

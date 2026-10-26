@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="FmodAudioEffectRecord" inherits="FmodAudioEffect" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/godotengine/godot/master/doc/class.xsd">
+	<brief_description>
+		Records audio input or output to a WAV file.
+	</brief_description>
+	<description>
+		FmodAudioEffectRecord captures audio data passing through an audio bus and records it to an internal buffer. When recording is complete, the captured audio can be saved as an [AudioStreamWAV] resource.
+		This effect is useful for recording gameplay audio, capturing microphone input (when applied to a microphone bus), or creating audio samples from synthesized sounds.
+		To start recording, apply the effect to an audio bus and set [member recording_active] to [code]true[/code]. To stop, set [member recording_active] to [code]false[/code] and call [method get_recording] to retrieve the recorded audio as an [AudioStreamWAV].
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="set_recording_active">
+			<return type="void" />
+			<param index="0" name="record" type="bool" />
+			<description>
+				Sets [member recording_active].
+			</description>
+		</method>
+		<method name="is_recording_active" qualifiers="const">
+			<return type="bool" />
+			<description>
+				Returns [member recording_active].
+			</description>
+		</method>
+		<method name="set_format">
+			<return type="void" />
+			<param index="0" name="format" type="int" enum="FmodAudioEffectRecord.Format" />
+			<description>
+				Sets [member format].
+			</description>
+		</method>
+		<method name="get_format" qualifiers="const">
+			<return type="int" enum="FmodAudioEffectRecord.Format" />
+			<description>
+				Returns [member format].
+			</description>
+		</method>
+		<method name="get_recording" qualifiers="const">
+			<return type="AudioStreamWAV" />
+			<description>
+				Returns the recorded audio as an [AudioStreamWAV] resource. The returned audio stream can be played back, saved to disk, or used like any other audio resource. This method should be called after setting [member recording_active] to [code]false[/code] to stop the recording.
+			</description>
+		</method>
+		<method name="get_waveform_snapshot" qualifiers="const">
+			<return type="PackedVector2Array" />
+			<param index="0" name="width" type="int" default="512" />
+			<param index="1" name="seconds" type="float" default="5.0" />
+			<description>
+				Returns waveform snapshot.
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member type="int" enum="FmodAudioEffectRecord.Format" name="format" setter="set_format" getter="get_format" default="1">
+			The audio format used for recording. See [enum Format] for available options. The default [constant FORMAT_16_BITS] provides good quality and reasonable file size.
+		</member>
+		<member type="bool" name="recording_active" setter="set_recording_active" getter="is_recording_active" default="false">
+			If [code]true[/code], the effect is currently recording audio from the bus. Set to [code]true[/code] to start recording and [code]false[/code] to stop. After stopping, call [method get_recording] to retrieve the captured audio.
+		</member>
+	</members>
+	<signals />
+	<constants>
+		<constant name="FORMAT_8_BITS" value="0" enum="Format">
+			8-bit PCM audio format. Smaller file size but lower audio quality with audible quantization noise. Suitable for low-quality recordings or when memory is constrained.
+		</constant>
+		<constant name="FORMAT_16_BITS" value="1" enum="Format">
+			16-bit PCM audio format (default). Good balance between audio quality and file size. Recommended for most recording applications.
+		</constant>
+		<constant name="FORMAT_IMA_ADPCM" value="2" enum="Format">
+			IMA ADPCM compressed audio format. Significantly smaller file size with acceptable quality. Useful when storage space is limited, though slightly lower quality than PCM formats.
+		</constant>
+	</constants>
+</class>

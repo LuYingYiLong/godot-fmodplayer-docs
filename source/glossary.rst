@@ -18,15 +18,15 @@
 --------
 
 2D 声音不会参与空间定位。它通常适合 UI 音效、背景音乐、旁白、菜单音效等不需要跟随场景位置变化的声音。
-在 Godot-FmodPlayer 中，:ref:`FmodAudioStreamPlayer<FmodAudioStreamPlayer>` 默认更接近 2D 播放用法。
+在 Godot-FmodPlayer 中，:ref:`FmodAudioStreamPlayer<class_FmodAudioStreamPlayer>` 默认更接近 2D 播放用法。
 
 3D 声音会根据声源和监听器之间的位置关系计算音量、声像、距离衰减、遮挡和多普勒效果。
-在 Godot-FmodPlayer 中，:ref:`FmodAudioStreamPlayer3D<FmodAudioStreamPlayer3D>` 会把 Godot 节点的全局位置同步到 FMOD 通道，
+在 Godot-FmodPlayer 中，:ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>` 会把 Godot 节点的全局位置同步到 FMOD 通道，
 适合脚步、武器、环境物件、车辆、怪物叫声等来自世界空间的声音。
 
 .. note::
 
-   :ref:`FmodChannelControl.set_3d_level()<FmodChannelControl-set_3d_level>` 可以调整 3D 混合比例。
+   :ref:`FmodChannelControl.set_3d_level()<class_FmodChannelControl_method_set_3d_level>` 可以调整 3D 混合比例。
    这在需要让一个声音部分保持空间感、部分保持稳定声像时很有用。
 
 .. _glossary-audio-asset:
@@ -37,9 +37,9 @@
 音频资产是项目中可播放的声音数据。它可以是 ``wav``、``ogg``、``mp3``、``flac`` 等独立音频文件，
 也可以是运行时已经能够读取的其他 FMOD 支持格式。
 
-在 Godot-FmodPlayer 中，常见做法是把音频文件导入为 :ref:`FmodAudioStream<FmodAudioStream>`，
-再交给 :ref:`FmodAudioStreamPlayer<FmodAudioStreamPlayer>`、:ref:`FmodAudioStreamPlayer2D<FmodAudioStreamPlayer2D>`
-或 :ref:`FmodAudioStreamPlayer3D<FmodAudioStreamPlayer3D>` 播放。
+在 Godot-FmodPlayer 中，常见做法是把音频文件导入为 :ref:`FmodAudioStream<class_FmodAudioStream>`，
+再交给 :ref:`FmodAudioStreamPlayer<class_FmodAudioStreamPlayer>`、:ref:`FmodAudioStreamPlayer2D<class_FmodAudioStreamPlayer2D>`
+或 :ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>` 播放。
 
 .. _glossary-audio-channel:
 
@@ -49,10 +49,10 @@
 音频通道可以指两种不同概念，需要区分：
 
 - **声道**：音频信号里的扬声器通道，例如单声道、左声道、右声道、5.1 环绕声中的多个输出通道。
-- **FMOD Channel**：FMOD 中的一次声音播放实例，对应 Godot-FmodPlayer 的 :ref:`FmodChannel<FmodChannel>`。
+- **FMOD Channel**：FMOD 中的一次声音播放实例，对应 Godot-FmodPlayer 的 :ref:`FmodChannel<class_FmodChannel>`。
 
 例如，一个立体声音效文件有两个声道；当它被播放一次时，FMOD 会为这次播放创建或分配一个 Channel。
-同一个声音同时播放三次，就可能对应三个不同的 :ref:`FmodChannel<FmodChannel>`。
+同一个声音同时播放三次，就可能对应三个不同的 :ref:`FmodChannel<class_FmodChannel>`。
 
 .. _glossary-bus:
 
@@ -61,8 +61,8 @@ Bus
 
 Bus 即音频总线，用来把一组声音集中到同一个混音路径上。常见总线包括 ``Music``、``SFX``、``Voice`` 和 ``Ambient``。
 
-Godot-FmodPlayer 会把 Godot 的 `AudioServer`_ 总线结构同步为 :ref:`FmodAudioBusLayout<FmodAudioBusLayout>`，
-并用 :ref:`FmodAudioBus<FmodAudioBus>` / :ref:`FmodChannelGroup<FmodChannelGroup>` 管理实际混音。
+Godot-FmodPlayer 会把 Godot 的 `AudioServer`_ 总线结构同步为 :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`，
+并用 :ref:`FmodAudioBus<class_FmodAudioBus>` / :ref:`FmodChannelGroup<class_FmodChannelGroup>` 管理实际混音。
 这样可以用类似 Godot 原生音频总线的方式控制 FMOD 声音，同时仍然使用 FMOD 的 DSP、通道组和性能数据。
 
 .. _glossary-channel:
@@ -73,9 +73,9 @@ Channel
 Channel 是 FMOD 中一次正在播放或由虚拟语音系统托管的声音实例。它可以控制音量、暂停、音高、循环点、播放位置、
 3D 属性、DSP 链和回调。
 
-在 Godot-FmodPlayer 中，播放节点内部会维护一个 :ref:`FmodChannel<FmodChannel>`。
-如果需要更细的控制，可以取得当前播放通道，再调用 :ref:`FmodChannelControl<FmodChannelControl>`
-或 :ref:`FmodChannel<FmodChannel>` 的方法。
+在 Godot-FmodPlayer 中，播放节点内部会维护一个 :ref:`FmodChannel<class_FmodChannel>`。
+如果需要更细的控制，可以取得当前播放通道，再调用 :ref:`FmodChannelControl<class_FmodChannelControl>`
+或 :ref:`FmodChannel<class_FmodChannel>` 的方法。
 
 .. _glossary-channelgroup:
 
@@ -85,7 +85,7 @@ ChannelGroup
 ChannelGroup 是多个 Channel 或子 ChannelGroup 的混音容器。它适合做分组控制，例如同时降低所有音乐音量、
 暂停一组环境声，或给整个 ``SFX`` 总线添加一个滤波器。
 
-在 Godot-FmodPlayer 中，:ref:`FmodChannelGroup<FmodChannelGroup>` 通常由总线系统创建和管理。
+在 Godot-FmodPlayer 中，:ref:`FmodChannelGroup<class_FmodChannelGroup>` 通常由总线系统创建和管理。
 普通项目优先通过 :doc:`user_guide/mixer` 中的总线接口操作；只有在需要底层控制时才直接访问 ChannelGroup。
 
 .. _glossary-channelcontrol:
@@ -96,8 +96,8 @@ ChannelControl
 ChannelControl 是 Channel 和 ChannelGroup 共享的一组控制能力。它包含音量、静音、暂停、音高、3D 属性、声像矩阵、
 DSP 插入、淡变点和回调等接口。
 
-Godot-FmodPlayer 中的 :ref:`FmodChannel<FmodChannel>` 与 :ref:`FmodChannelGroup<FmodChannelGroup>`
-都继承自 :ref:`FmodChannelControl<FmodChannelControl>`。因此，很多播放控制方法既能用于单个声音，也能用于一整组声音。
+Godot-FmodPlayer 中的 :ref:`FmodChannel<class_FmodChannel>` 与 :ref:`FmodChannelGroup<class_FmodChannelGroup>`
+都继承自 :ref:`FmodChannelControl<class_FmodChannelControl>`。因此，很多播放控制方法既能用于单个声音，也能用于一整组声音。
 
 .. _glossary-dsp:
 
@@ -107,7 +107,7 @@ DSP
 DSP 是 Digital Signal Processing 的缩写，表示数字信号处理单元。混响、均衡器、滤波器、延迟、失真、压缩器、
 频谱分析器等都可以作为 DSP 参与音频处理。
 
-在 Godot-FmodPlayer 中，:ref:`FmodDSP<FmodDSP>` 可以添加到某个 Channel、ChannelGroup 或总线相关的混音路径上。
+在 Godot-FmodPlayer 中，:ref:`FmodDSP<class_FmodDSP>` 可以添加到某个 Channel、ChannelGroup 或总线相关的混音路径上。
 如果多个声音需要同一种效果，通常把 DSP 放在对应总线上更容易维护，也比给每个声音单独创建效果更省资源。
 
 .. _glossary-dsp-chain:
@@ -120,9 +120,9 @@ DSP 链是多个 DSP 按顺序连接形成的处理路径。声音进入链后�
 
 .. image:: _static/dsp_chain.png
 
-在 Godot-FmodPlayer 中，可以通过 :ref:`FmodChannelControl.add_dsp()<FmodChannelControl-add_dsp>`、
-:ref:`FmodChannelControl.remove_dsp()<FmodChannelControl-remove_dsp>` 和
-:ref:`FmodChannelControl.set_dsp_index()<FmodChannelControl-set_dsp_index>` 调整 DSP 链。
+在 Godot-FmodPlayer 中，可以通过 :ref:`FmodChannelControl.add_dsp()<class_FmodChannelControl_method_add_dsp>`、
+:ref:`FmodChannelControl.remove_dsp()<class_FmodChannelControl_method_remove_dsp>` 和
+:ref:`FmodChannelControl.set_dsp_index()<class_FmodChannelControl_method_set_dsp_index>` 调整 DSP 链。
 
 .. _glossary-dsp-clock:
 
@@ -131,8 +131,8 @@ DSP Clock
 
 DSP Clock 是 FMOD 混音器使用的样本级时间计数。它常用于精确调度播放、延迟启动、淡入淡出或和其他声音对齐。
 
-在 Godot-FmodPlayer 中，:ref:`FmodChannelControl.get_dsp_clock()<FmodChannelControl-get_dsp_clock>`、
-:ref:`FmodChannelControl.set_delay()<FmodChannelControl-set_delay>` 和淡变点接口可以用于需要样本级同步的场景。
+在 Godot-FmodPlayer 中，:ref:`FmodChannelControl.get_dsp_clock()<class_FmodChannelControl_method_get_dsp_clock>`、
+:ref:`FmodChannelControl.set_delay()<class_FmodChannelControl_method_set_delay>` 和淡变点接口可以用于需要样本级同步的场景。
 普通按钮音效和环境声通常不需要直接处理 DSP Clock。
 
 .. _glossary-listener:
@@ -143,7 +143,7 @@ Listener
 Listener 即监听器，表示玩家“听见世界”的位置和朝向。3D 声音会根据监听器与声源之间的距离、方向和相对速度计算结果。
 
 在 Godot 场景中，监听器通常跟随玩家、主摄像机或当前激活的 ``AudioListener3D``。
-使用 :ref:`FmodAudioStreamPlayer3D<FmodAudioStreamPlayer3D>` 时，需要确保 FMOD 系统能获得正确的监听器变换，
+使用 :ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>` 时，需要确保 FMOD 系统能获得正确的监听器变换，
 否则 3D 声音可能听起来位置不对或距离衰减异常。
 
 .. _glossary-sound:
@@ -153,7 +153,7 @@ Sound
 
 Sound 是 FMOD 对音频数据的运行时表示。它通常由文件、内存数据或流式数据创建，然后通过 System 播放为 Channel。
 
-在 Godot-FmodPlayer 中，:ref:`FmodAudioStream<FmodAudioStream>` 会在需要时创建底层 :ref:`FmodSound<FmodSound>`。
+在 Godot-FmodPlayer 中，:ref:`FmodAudioStream<class_FmodAudioStream>` 会在需要时创建底层 :ref:`FmodSound<class_FmodSound>`。
 这让资源可以先作为 Godot 资源存在，真正播放或查询底层对象时再交给 FMOD 创建声音。
 
 .. _glossary-stream-sample:
@@ -164,7 +164,7 @@ Stream 与 Sample
 Stream 表示边读取边解码的播放方式，适合音乐、长旁白、长环境声等体积较大的音频。
 Sample 表示把音频数据加载到内存后播放，适合短音效、频繁触发的 UI 声和需要低延迟响应的声音。
 
-在 Godot-FmodPlayer 中，可以通过 :ref:`FmodAudioStream<FmodAudioStream>` 的创建模式选择更适合的加载方式。
+在 Godot-FmodPlayer 中，可以通过 :ref:`FmodAudioStream<class_FmodAudioStream>` 的创建模式选择更适合的加载方式。
 一般来说，长音频优先使用流式播放，短音效优先使用样本加载。
 
 .. _glossary-virtual-channel:
@@ -175,7 +175,7 @@ Virtual Channel
 Virtual Channel 即虚拟通道。当同时播放的声音很多时，FMOD 可以让听不见或优先级较低的声音进入虚拟状态。
 虚拟通道仍然保留播放时间和状态，但不一定消耗完整的混音资源。
 
-在 Godot-FmodPlayer 中，可以通过 :ref:`FmodChannel.is_virtual()<FmodChannel-is_virtual>` 查询某个通道是否处于虚拟状态。
+在 Godot-FmodPlayer 中，可以通过 :ref:`FmodChannel.is_virtual()<class_FmodChannel_method_is_virtual>` 查询某个通道是否处于虚拟状态。
 这对调试大量环境声、粒子音效或开放世界场景中的声音预算很有帮助。
 
 .. _glossary-rolloff:
@@ -185,7 +185,7 @@ Rolloff
 
 Rolloff 表示 3D 声音随距离变远而衰减的曲线。不同曲线会影响声音从近处到远处的听感变化。
 
-在 Godot-FmodPlayer 中，3D 播放节点和 :ref:`FmodChannelControl<FmodChannelControl>` 提供最小距离、最大距离、
+在 Godot-FmodPlayer 中，3D 播放节点和 :ref:`FmodChannelControl<class_FmodChannelControl>` 提供最小距离、最大距离、
 自定义衰减曲线等设置。制作空间音频时，建议先调好 ``min_distance`` 和 ``max_distance``，
 再根据项目需要调整更复杂的衰减行为。
 
@@ -197,7 +197,7 @@ Doppler
 Doppler 即多普勒效果。当声源和监听器之间存在相对速度时，音高会发生变化。
 快速掠过的车辆、飞行物或高速移动的物体可以使用该效果增强速度感。
 
-在 Godot-FmodPlayer 中，:ref:`FmodAudioStreamPlayer3D<FmodAudioStreamPlayer3D>` 会同步位置和速度相关信息。
+在 Godot-FmodPlayer 中，:ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>` 会同步位置和速度相关信息。
 如果效果过强或不符合游戏风格，可以通过多普勒相关设置降低影响。
 
 .. _glossary-occlusion:
@@ -207,7 +207,7 @@ Occlusion
 
 Occlusion 即遮挡。它描述墙体、地形或其他几何体阻挡声音传播后，音量和高频内容被削弱的效果。
 
-Godot-FmodPlayer 提供 :ref:`FmodGeometryInstance3D<FmodGeometryInstance3D>`，可以把场景几何体注册到 FMOD Geometry 系统。
+Godot-FmodPlayer 提供 :ref:`FmodGeometryInstance3D<class_FmodGeometryInstance3D>`，可以把场景几何体注册到 FMOD Geometry 系统。
 适合需要门后声音、墙后声音、房间隔音等空间表现的项目。
 
 .. _glossary-pan-mix-matrix:
@@ -218,8 +218,8 @@ Pan 与 Mix Matrix
 Pan 即声像，通常用于控制声音在左右声道或环绕声场中的位置。Mix Matrix 则是更底层的输入到输出声道矩阵，
 可以精确控制每个输入声道如何分配到输出声道。
 
-在 Godot-FmodPlayer 中，简单左右声像可以使用 :ref:`FmodChannelControl.set_pan()<FmodChannelControl-set_pan>`。
-如果需要多声道或特殊路由，可以使用 :ref:`FmodChannelControl.set_mix_matrix()<FmodChannelControl-set_mix_matrix>`。
+在 Godot-FmodPlayer 中，简单左右声像可以使用 :ref:`FmodChannelControl.set_pan()<class_FmodChannelControl_method_set_pan>`。
+如果需要多声道或特殊路由，可以使用 :ref:`FmodChannelControl.set_mix_matrix()<class_FmodChannelControl_method_set_mix_matrix>`。
 
 .. _glossary-mix-matrix:
 
@@ -244,7 +244,7 @@ Mix Matrix 即混音矩阵，用来控制 **输入声道** 如何分配到 **输
     输出 L = 输入 L * 1.0 + 输入 R * 0.0
     输出 R = 输入 L * 0.0 + 输入 R * 1.0
 
-在 Godot-FmodPlayer 中，:ref:`FmodChannelControl.set_mix_matrix()<FmodChannelControl-set_mix_matrix>` 接收一个
+在 Godot-FmodPlayer 中，:ref:`FmodChannelControl.set_mix_matrix()<class_FmodChannelControl_method_set_mix_matrix>` 接收一个
 ``PackedFloat32Array``，并指定输出声道数、输入声道数和输入声道步长。
 矩阵按“输出行优先”的方式书写：先写输出 0 接收各输入的权重，再写输出 1，以此类推。
 
@@ -261,7 +261,7 @@ Mix Matrix 即混音矩阵，用来控制 **输入声道** 如何分配到 **输
         channel.set_mix_matrix(matrix, 2, 2)
 
 如果只是想调整单个播放实例的左右位置，优先使用
-:ref:`FmodChannelControl.set_pan()<FmodChannelControl-set_pan>`。
+:ref:`FmodChannelControl.set_pan()<class_FmodChannelControl_method_set_pan>`。
 Mix Matrix 更适合处理多声道格式转换、特殊声道路由、左右声道互换、单声道偏置和调试音频资产等场景。
 
 .. _glossary-upmix:
@@ -293,7 +293,7 @@ Upmix 即上混，是把较少的输入声道分配到更多输出声道。例�
         channel.set_mix_matrix(matrix, 2, 1)
 
 在 Godot-FmodPlayer 中，简单左右声像通常直接用
-:ref:`FmodChannelControl.set_pan()<FmodChannelControl-set_pan>` 更方便。
+:ref:`FmodChannelControl.set_pan()<class_FmodChannelControl_method_set_pan>` 更方便。
 只有在需要精确控制多声道分配时，才需要手动设置混音矩阵。
 
 .. _glossary-downmix:
@@ -378,8 +378,8 @@ System
 System 是 FMOD Core API 的核心对象，负责初始化音频设备、创建 Sound、播放声音、管理 Channel、更新混音系统、
 获取性能数据和处理录音等底层功能。
 
-在 Godot-FmodPlayer 中，通常不需要手动创建 System。插件会通过 :ref:`FmodServer<FmodServer>` 初始化并维护主系统。
-高级用法可以从 :ref:`FmodServer.get_main_system()<FmodServer-get_main_system>` 获取 :ref:`FmodSystem<FmodSystem>`。
+在 Godot-FmodPlayer 中，通常不需要手动创建 System。插件会通过 :ref:`FmodServer<class_FmodServer>` 初始化并维护主系统。
+高级用法可以从 :ref:`FmodServer.get_main_system()<class_FmodServer_method_get_main_system>` 获取 :ref:`FmodSystem<class_FmodSystem>`。
 
 .. _glossary-bank-event:
 

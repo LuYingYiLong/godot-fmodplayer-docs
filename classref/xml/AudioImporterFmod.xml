@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="AudioImporterFmod" inherits="EditorImportPlugin" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/godotengine/godot/master/doc/class.xsd">
+	<brief_description>
+		Editor import plugin for importing audio files as FMOD audio streams.
+	</brief_description>
+	<description>
+		AudioImporterFmod is an editor plugin that handles importing audio files into [FmodAudioStream] resources. It integrates with Godot's import system to provide seamless audio asset management.
+		Supported formats include common audio types like MP3, WAV, OGG, FLAC, and others supported by FMOD.
+		The importer processes audio files during project import, creating optimized [FmodAudioStream] resources that can be used with [FmodAudioStreamPlayer] and [FmodAudioStreamPlayer3D].
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods />
+	<members />
+	<signals />
+	<constants />
+</class>

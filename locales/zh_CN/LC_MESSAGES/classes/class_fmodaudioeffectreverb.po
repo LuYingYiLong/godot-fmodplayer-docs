@@ -1,0 +1,510 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, LuYingYiLong
+# This file is distributed under the same license as the Godot FmodPlayer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot FmodPlayer \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:12 a65e5c480fdf4c49bedd8a65728bafe3
+msgid "FmodAudioEffectReverb"
+msgstr "FmodAudioEffectReverb"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:14 205a7244b70441b98d54c63bf4c81bae
+msgid ""
+"**Inherits:** :ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>`"
+" **<** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+msgstr ""
+"**继承：** :ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>` **<**"
+" :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:16 9048659d1cf442d8be310575a92d0371
+msgid "A reverb effect for adding spatial ambience and simulated acoustic spaces to audio."
+msgstr "总线混响效果，参数风格接近 Godot 的 AudioEffectReverb。"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:21 5802c37698484a5fa19d6b465c4c7896
+msgid "Description"
+msgstr "描述"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:23 73d1ed60b0de4790b3571afd37798007
+msgid ""
+"FmodAudioEffectReverb creates the impression of sound being played in a physical space by "
+"simulating reflections and decay characteristics of various environments. Use this effect to add "
+"depth, warmth, and realism to audio sources."
+msgstr ""
+"**FmodAudioEffectReverb**    是用于总线的混响效果，参数风格接近 Godot 的    ``AudioEffectReverb``   "
+"。它通过房间尺寸、阻尼、预延迟、扩散和干湿比例塑造空间感，适合给一组声音统一添加环境混响。"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:25 366ce9c4376d4f91a220182617fc27ee
+msgid ""
+"Adjust the dry/wet mix to control the balance between the original signal and the reverberated "
+"signal. Increase room size for cathedral-like spaces, or decrease for small room ambience."
+msgstr "通过干湿混合比例调节原始信号与混响信号的平衡。较大的房间尺寸可模拟教堂等空间，较小的值可模拟小房间。"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:30 723018f6aeeb40708d558d0beb72c6c7
+msgid "Properties"
+msgstr "属性"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:36
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:38
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:40
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:42
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:44
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:46
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:48
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:50
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:64
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:68
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:72
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:76
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:80
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:84
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:88
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:92 04ea4b3e87054673897da765ddbcd371
+#: 052893ca6268484dbd0cded1c457a86d 17cef38ced394fa199b99da9f4b9e850 214fb929f4304533bc0ab133a4e0d1e9
+#: 89c50aed85014795bc33c94caba60594 961562b870de4707b7b822272aaa8b92 975c9dc9d46a4a9c83205065f38d2342
+#: 97951a28f02e43daa68638419d684a27 b7043fd91f4c4490b7fccdcce5dbbc0d baefe7359e1a438f8df6342e1b2f702e
+#: da620e992663477d8f4d355b3701829e e3aff28653334070a6d629f62b5e15ad e647be2fff4743e89e2174c32cf8d88b
+#: e84e50cf5cc04aad945e6e9a34a40db1 f7044d13e7be4d0eb046627e0158a5e4 fa4d56c2fafe4866ac28625dd53d9731
+msgid ":ref:`float<class_float>`"
+msgstr ":ref:`float<class_float>`"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:36 4f2b857d62c748c0b8a23b13b6e22dcc
+msgid ":ref:`damping<class_FmodAudioEffectReverb_property_damping>`"
+msgstr ":ref:`damping<class_FmodAudioEffectReverb_property_damping>`"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:36
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:50 47f8b76658dc40a79addfde4827e23f8
+#: 8910d1a94dd444b2a2c37865188c91dd
+msgid "``0.5``"
+msgstr "``0.5``"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:38 bb050f3da3e34c0db8ded3da2a493be7
+msgid ":ref:`dry<class_FmodAudioEffectReverb_property_dry>`"
+msgstr ":ref:`dry<class_FmodAudioEffectReverb_property_dry>`"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:38
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:48 102f84736d1c468f912a21fe0188167a
+#: c6f2d2e5f98944868b9981b524a3caae
+msgid "``1.0``"
+msgstr "``1.0``"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:40 dfee02e64f494d2f864a5c9875c263b2
+msgid ":ref:`hipass<class_FmodAudioEffectReverb_property_hipass>`"
+msgstr ":ref:`hipass<class_FmodAudioEffectReverb_property_hipass>`"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:40 a041f3d2f2874f86958335c9d754dc89
+msgid "``0.0``"
+msgstr "``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:42 f17c3c78968747a2b413b56d5db529e5
+msgid ":ref:`predelay_feedback<class_FmodAudioEffectReverb_property_predelay_feedback>`"
+msgstr ":ref:`predelay_feedback<class_FmodAudioEffectReverb_property_predelay_feedback>`"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:42 e7d3d96098054c869e3080622c25a60a
+msgid "``0.4``"
+msgstr "``0.4``"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:44 cb52295b244e45b9ace7b798a6f805e9
+msgid ":ref:`predelay_msec<class_FmodAudioEffectReverb_property_predelay_msec>`"
+msgstr ":ref:`predelay_msec<class_FmodAudioEffectReverb_property_predelay_msec>`"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:44 df5cc79250784e318798eaa5b1c39e3d
+msgid "``150.0``"
+msgstr "``150.0``"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:46 532280dce9da4809a554eacb17903523
+msgid ":ref:`room_size<class_FmodAudioEffectReverb_property_room_size>`"
+msgstr ":ref:`room_size<class_FmodAudioEffectReverb_property_room_size>`"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:46 da5d170faf1843d9bb41051668d9fdac
+msgid "``0.8``"
+msgstr "``0.8``"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:48 c660bdeb6de04e77b92fddc23f1990f5
+msgid ":ref:`spread<class_FmodAudioEffectReverb_property_spread>`"
+msgstr ":ref:`spread<class_FmodAudioEffectReverb_property_spread>`"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:50 e8d13547b1f048968fefd44e2b0f0f04
+msgid ":ref:`wet<class_FmodAudioEffectReverb_property_wet>`"
+msgstr ":ref:`wet<class_FmodAudioEffectReverb_property_wet>`"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:56 bd0432f5ba78494cb40253a2c3734ebd
+msgid "Methods"
+msgstr "方法"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:62
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:66
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:70
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:74
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:78
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:82
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:86
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:90 3732a35767b7437e9dac8351cfe11bb0
+#: 3fd0c12915494dea85ad47a0c99e1504 78028340ae974c8c983191de234c19f7 95cf43e5f10c4925a1eb3e9a7ad6849a
+#: b82dc0e0dac947fe9e87621190a97f77 da340d1b20b647d08e9dc670016bb64d e2663bb8e2b84f91a95d5c271aec11b0
+#: ecc8297e46f6436e93fbad12c0b9a9b6
+msgid "|void|"
+msgstr "|void|"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:62 0e7dd705e4cc441ebd45293b4c066399
+msgid ""
+":ref:`set_damping<class_FmodAudioEffectReverb_method_set_damping>`\\ (\\ damping\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_damping<class_FmodAudioEffectReverb_method_set_damping>`\\ (\\ damping\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:64 b38656368ed4451cb922c78df4102608
+msgid ":ref:`get_damping<class_FmodAudioEffectReverb_method_get_damping>`\\ (\\ ) |const|"
+msgstr ":ref:`get_damping<class_FmodAudioEffectReverb_method_get_damping>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:66 35da3e07176a41ef9db89fe95aec169d
+msgid ""
+":ref:`set_dry<class_FmodAudioEffectReverb_method_set_dry>`\\ (\\ dry\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_dry<class_FmodAudioEffectReverb_method_set_dry>`\\ (\\ dry\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:68 bcb857a237d741e89afe11624dfc5972
+msgid ":ref:`get_dry<class_FmodAudioEffectReverb_method_get_dry>`\\ (\\ ) |const|"
+msgstr ":ref:`get_dry<class_FmodAudioEffectReverb_method_get_dry>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:70 c4c425609acc421391e42c8bba26d564
+msgid ""
+":ref:`set_hpf<class_FmodAudioEffectReverb_method_set_hpf>`\\ (\\ hpf\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_hpf<class_FmodAudioEffectReverb_method_set_hpf>`\\ (\\ hpf\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:72 afa3fce94a104390bd3678cb1cb09473
+msgid ":ref:`get_hpf<class_FmodAudioEffectReverb_method_get_hpf>`\\ (\\ ) |const|"
+msgstr ":ref:`get_hpf<class_FmodAudioEffectReverb_method_get_hpf>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:74 37cee0633e724c15b3267a347b6fbae0
+msgid ""
+":ref:`set_predelay_feedback<class_FmodAudioEffectReverb_method_set_predelay_feedback>`\\ (\\ "
+"predelay_feedback\\: :ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_predelay_feedback<class_FmodAudioEffectReverb_method_set_predelay_feedback>`\\ (\\ "
+"predelay_feedback\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:76 a3174480e8274b7089dba469fc259cc1
+msgid ""
+":ref:`get_predelay_feedback<class_FmodAudioEffectReverb_method_get_predelay_feedback>`\\ (\\ ) "
+"|const|"
+msgstr ""
+":ref:`get_predelay_feedback<class_FmodAudioEffectReverb_method_get_predelay_feedback>`\\ (\\ ) "
+"|const|"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:78 a099a0c2556c40dd84d1ea13f06bbc97
+msgid ""
+":ref:`set_predelay_msec<class_FmodAudioEffectReverb_method_set_predelay_msec>`\\ (\\ "
+"predelay_msec\\: :ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_predelay_msec<class_FmodAudioEffectReverb_method_set_predelay_msec>`\\ (\\ "
+"predelay_msec\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:80 cb2f683acbb3405bb22d8d5e6267631b
+msgid ":ref:`get_predelay_msec<class_FmodAudioEffectReverb_method_get_predelay_msec>`\\ (\\ ) |const|"
+msgstr ":ref:`get_predelay_msec<class_FmodAudioEffectReverb_method_get_predelay_msec>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:82 de261fa62c164261bd7b9fee3b436229
+msgid ""
+":ref:`set_room_size<class_FmodAudioEffectReverb_method_set_room_size>`\\ (\\ room_size\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_room_size<class_FmodAudioEffectReverb_method_set_room_size>`\\ (\\ room_size\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:84 4629a0781c2b40bbad5b228fa10a2df5
+msgid ":ref:`get_room_size<class_FmodAudioEffectReverb_method_get_room_size>`\\ (\\ ) |const|"
+msgstr ":ref:`get_room_size<class_FmodAudioEffectReverb_method_get_room_size>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:86 fecf01f63a4f445c9840b39ee943bd4f
+msgid ""
+":ref:`set_spread<class_FmodAudioEffectReverb_method_set_spread>`\\ (\\ spread\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_spread<class_FmodAudioEffectReverb_method_set_spread>`\\ (\\ spread\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:88 9af511b1e60f4d12a516e75dce5d6cbf
+msgid ":ref:`get_spread<class_FmodAudioEffectReverb_method_get_spread>`\\ (\\ ) |const|"
+msgstr ":ref:`get_spread<class_FmodAudioEffectReverb_method_get_spread>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:90 8be8ecccf5774e2e9d42537647318361
+msgid ""
+":ref:`set_wet<class_FmodAudioEffectReverb_method_set_wet>`\\ (\\ wet\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_wet<class_FmodAudioEffectReverb_method_set_wet>`\\ (\\ wet\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:92 679211390a88418f99e119186696723b
+msgid ":ref:`get_wet<class_FmodAudioEffectReverb_method_get_wet>`\\ (\\ ) |const|"
+msgstr ":ref:`get_wet<class_FmodAudioEffectReverb_method_get_wet>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:102 c43c2d686ddf44bfbcdc10e041811bc5
+msgid "Property Descriptions"
+msgstr "属性说明"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:108 01b7bd47d0114c0489fecc74fd69e351
+msgid ":ref:`float<class_float>` **damping** = ``0.5``"
+msgstr ":ref:`float<class_float>` **damping** = ``0.5``"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:112
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:251 2d3e3cccafb74d7cb29db94100edc407
+#: b179955bef53425b83a7f2e489dbf9ad
+msgid "|void| **set_damping**\\ (\\ damping\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_damping**\\ (\\ damping\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:113
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:265 3d283dddf6e44f359fa4f4728a8d5c21
+#: f2350231bd9948ea9c2fc746052d9fb0
+msgid ":ref:`float<class_float>` **get_damping**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_damping**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:115 f69078d9561740a2b5d5ab989d558df3
+msgid ""
+"Controls the absorption of high frequencies in the virtual room. Range: 0.0 to 1.0. Higher values"
+" simulate softer surfaces (carpets, curtains) that absorb more high frequencies, creating a "
+"warmer, darker reverb tail."
+msgstr "高频阻尼"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:125 f2ea1c2417ad4c5e8acefcd479040339
+msgid ":ref:`float<class_float>` **dry** = ``1.0``"
+msgstr ":ref:`float<class_float>` **dry** = ``1.0``"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:129
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:279 49ae1ddefb984ed181f02399ca1f84c4
+#: e33798066f584456bddb41253cac7b1a
+msgid "|void| **set_dry**\\ (\\ dry\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_dry**\\ (\\ dry\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:130
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:293 a666984211644ea8a401c32103cba350
+#: e4291a07ef1941a880a493bbd4f95911
+msgid ":ref:`float<class_float>` **get_dry**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_dry**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:132 8f8151490eec4fb88b68d735cdb2da67
+msgid ""
+"The level of the original (dry) signal. Range: 0.0 to 1.0. A value of 1.0 passes the original "
+"signal at full volume. Lower values reduce the direct sound, emphasizing the reverb effect."
+msgstr "原始信号电平"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:142 22be8a0411264e20b9b785e0cf3e31b9
+msgid ":ref:`float<class_float>` **hipass** = ``0.0``"
+msgstr ":ref:`float<class_float>` **hipass** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:146
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:307 80681ef41a154c6db801215cb45d942e
+#: b96b6f89341347eaa198b32217739a2c
+msgid "|void| **set_hpf**\\ (\\ hpf\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_hpf**\\ (\\ hpf\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:147
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:321 23659032a71e45e7aad99d9ad695c103
+#: 9fcc6f6b891244c4ae58d9e8f0a689b2
+msgid ":ref:`float<class_float>` **get_hpf**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_hpf**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:149 f11936a065eb4648be239e40d7a9043e
+msgid ""
+"High-pass filter applied to the reverb input. Range: 0.0 to 1.0. Higher values remove more low "
+"frequencies from the reverb, preventing muddiness in the reverberated signal."
+msgstr "高通滤波量"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:159 1a16fda07e474ca4bc3de91766bd063d
+msgid ":ref:`float<class_float>` **predelay_feedback** = ``0.4``"
+msgstr ":ref:`float<class_float>` **predelay_feedback** = ``0.4``"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:163
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:335 808fc5496dff4aceb5f14796ac0465b7
+#: 885e5a0ee1fb42ed9ccfd209106ef697
+msgid "|void| **set_predelay_feedback**\\ (\\ predelay_feedback\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_predelay_feedback**\\ (\\ predelay_feedback\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:164
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:349 351bcdc4a28741ab8a18bae1202b6632
+#: da38f6d8762042e0992acaa7b6777f5d
+msgid ":ref:`float<class_float>` **get_predelay_feedback**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_predelay_feedback**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:166 29328b849e3e414b814c10d9088de3df
+msgid ""
+"The amount of feedback in the predelay section. Range: 0.0 to 1.0. Controls how much of the "
+"predelay output is fed back into itself, affecting the density of early reflections."
+msgstr "预延迟反馈量"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:176 0a0940bccf4d4e66909c10751223611e
+msgid ":ref:`float<class_float>` **predelay_msec** = ``150.0``"
+msgstr ":ref:`float<class_float>` **predelay_msec** = ``150.0``"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:180
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:363 2acfb8a93b26466fae531c6426a4bf0d
+#: f952ce59373b47229ea244f1d1e1ed26
+msgid "|void| **set_predelay_msec**\\ (\\ predelay_msec\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_predelay_msec**\\ (\\ predelay_msec\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:181
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:377 bf818edad0df4393b38eb66e01fd0029
+#: dbfd226ce72c4feb9d5279fc8e93ab7f
+msgid ":ref:`float<class_float>` **get_predelay_msec**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_predelay_msec**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:183 81d34e7fec1446fc96b72fa8c6b0d66f
+msgid ""
+"The delay time before the reverb tail begins, measured in milliseconds. Range: 0.0 to 300.0 ms. "
+"Simulates the time it takes for sound to reach the first reflecting surfaces in a room."
+msgstr "预延迟时间，单位为毫秒"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:193 1b52e75614e14bdba33aa37d76e3f951
+msgid ":ref:`float<class_float>` **room_size** = ``0.8``"
+msgstr ":ref:`float<class_float>` **room_size** = ``0.8``"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:197
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:391 0c2b0823b857483ba16b53db896f3cca
+#: 3c9d952322ea46e3a187d27c6927be1c
+msgid "|void| **set_room_size**\\ (\\ room_size\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_room_size**\\ (\\ room_size\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:198
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:405 088523f4bfde47088154aeb479569c2e
+#: f46b58718a8a4bdc89824e06b8665b60
+msgid ":ref:`float<class_float>` **get_room_size**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_room_size**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:200 5bcbc165338f41cabcf76d7deb21cf1a
+msgid ""
+"The size of the simulated acoustic space. Range: 0.0 to 1.0. Higher values create the impression "
+"of larger spaces (halls, cathedrals) with longer decay times, while lower values simulate smaller"
+" rooms."
+msgstr "房间尺寸"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:210 9035aa1e6a1f4fa88f3e967d9d23c663
+msgid ":ref:`float<class_float>` **spread** = ``1.0``"
+msgstr ":ref:`float<class_float>` **spread** = ``1.0``"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:214
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:419 753da82e144646b5bbd9cff2112be264
+#: d69cbc8b2c554b3ab81d04aa04f00781
+msgid "|void| **set_spread**\\ (\\ spread\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_spread**\\ (\\ spread\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:215
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:433 59a21de1748f4b1490e307fb641ba45f
+#: 65e4fb321f2e4e6e80f100a33aa5f8a8
+msgid ":ref:`float<class_float>` **get_spread**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_spread**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:217 81d1441f8a1249feaf2d255232b8640f
+msgid ""
+"The stereo spread of the reverb. Range: 0.0 to 1.0. Higher values create a wider stereo image in "
+"the reverberated signal, simulating reflections from wider spaces."
+msgstr "立体声扩散"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:227 f027184a46fa46a598ecaa5cc6326cd6
+msgid ":ref:`float<class_float>` **wet** = ``0.5``"
+msgstr ":ref:`float<class_float>` **wet** = ``0.5``"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:231
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:447 1a825819b70a4bda92590f394d9122e0
+#: a6748eb71a604791808ef3d037a978a6
+msgid "|void| **set_wet**\\ (\\ wet\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_wet**\\ (\\ wet\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:232
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:461 bd28f882d8794f02bd08e179638f9523
+#: da6dde3e428b4a92b158c2a6a1c8bbfa
+msgid ":ref:`float<class_float>` **get_wet**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_wet**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:234 22b8848cf2db40d2b16b31adddbf6983
+msgid ""
+"The level of the reverberated (wet) signal. Range: 0.0 to 1.0. Controls how much of the processed"
+" reverb signal is mixed with the dry signal. A value of 0.0 produces no reverb effect."
+msgstr "混响信号电平"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:243 72a02d449bec4327b6fd803411e395da
+msgid "Method Descriptions"
+msgstr "方法说明"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:253 ab7b9674b7c442c5a93efe077e9f484e
+msgid "Sets :ref:`damping<class_FmodAudioEffectReverb_property_damping>`."
+msgstr "Sets :ref:`damping<class_FmodAudioEffectReverb_property_damping>`."
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:267 78636faa8fa240129030bec5345e9daf
+msgid "Returns :ref:`damping<class_FmodAudioEffectReverb_property_damping>`."
+msgstr "Returns :ref:`damping<class_FmodAudioEffectReverb_property_damping>`."
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:281 d8475359b39e449d8336a86318271232
+msgid "Sets :ref:`dry<class_FmodAudioEffectReverb_property_dry>`."
+msgstr "Sets :ref:`dry<class_FmodAudioEffectReverb_property_dry>`."
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:295 be4e06b6c23046fd9f417cd8e0820e4f
+msgid "Returns :ref:`dry<class_FmodAudioEffectReverb_property_dry>`."
+msgstr "Returns :ref:`dry<class_FmodAudioEffectReverb_property_dry>`."
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:309 371eda1e3dce47f3b62d7cec79587e1e
+msgid "Sets hpf."
+msgstr "设置高通滤波量。"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:323 eda4fb7a62c74680bbcdfbc21874b68d
+msgid "Returns hpf."
+msgstr "返回高通滤波量。"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:337 30bc2a02d0754fd5a6d94ff03c4678bc
+msgid "Sets :ref:`predelay_feedback<class_FmodAudioEffectReverb_property_predelay_feedback>`."
+msgstr "Sets :ref:`predelay_feedback<class_FmodAudioEffectReverb_property_predelay_feedback>`."
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:351 bbef4a75530e400d9ea110025091556a
+msgid "Returns :ref:`predelay_feedback<class_FmodAudioEffectReverb_property_predelay_feedback>`."
+msgstr "Returns :ref:`predelay_feedback<class_FmodAudioEffectReverb_property_predelay_feedback>`."
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:365 d1886a33f1d94cc298c5bcd9b2f89521
+msgid "Sets :ref:`predelay_msec<class_FmodAudioEffectReverb_property_predelay_msec>`."
+msgstr "Sets :ref:`predelay_msec<class_FmodAudioEffectReverb_property_predelay_msec>`."
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:379 648ace4e9fcf4f5185dfa24a7b1aa122
+msgid "Returns :ref:`predelay_msec<class_FmodAudioEffectReverb_property_predelay_msec>`."
+msgstr "Returns :ref:`predelay_msec<class_FmodAudioEffectReverb_property_predelay_msec>`."
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:393 bb1b717e32ae4abf9402b1a10e80d333
+msgid "Sets :ref:`room_size<class_FmodAudioEffectReverb_property_room_size>`."
+msgstr "Sets :ref:`room_size<class_FmodAudioEffectReverb_property_room_size>`."
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:407 6d9d759aca7b4cad9fc2928b5c1b8263
+msgid "Returns :ref:`room_size<class_FmodAudioEffectReverb_property_room_size>`."
+msgstr "Returns :ref:`room_size<class_FmodAudioEffectReverb_property_room_size>`."
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:421 512da6f109294d9299014eb67042ef8e
+msgid "Sets :ref:`spread<class_FmodAudioEffectReverb_property_spread>`."
+msgstr "Sets :ref:`spread<class_FmodAudioEffectReverb_property_spread>`."
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:435 16ffe754cea44759937bab8a07bcdcd3
+msgid "Returns :ref:`spread<class_FmodAudioEffectReverb_property_spread>`."
+msgstr "Returns :ref:`spread<class_FmodAudioEffectReverb_property_spread>`."
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:449 4bb44dcb2eb04e71935356c017321674
+msgid "Sets :ref:`wet<class_FmodAudioEffectReverb_property_wet>`."
+msgstr "Sets :ref:`wet<class_FmodAudioEffectReverb_property_wet>`."
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:463 d1bdbad94b6b420693c0796cf7b26de3
+msgid "Returns :ref:`wet<class_FmodAudioEffectReverb_property_wet>`."
+msgstr "Returns :ref:`wet<class_FmodAudioEffectReverb_property_wet>`."

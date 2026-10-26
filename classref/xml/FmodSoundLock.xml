@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="FmodSoundLock" inherits="RefCounted" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/godotengine/godot/master/doc/class.xsd">
+	<brief_description>
+		Provides direct access to sound sample data for reading or modification.
+	</brief_description>
+	<description>
+		FmodSoundLock is used to lock a region of sound data for direct access. This allows reading or modifying the raw sample data of a sound.
+		When a sound is locked, FMOD provides one or two pointers to the data (two pointers are used if the locked region wraps around the end of the sound buffer).
+		[b]Important:[/b] Always call [method unlock] when finished accessing the data, or use the RAII pattern (let the object go out of scope) to automatically unlock.
+		[b]Note:[/b] Locking a sound may be expensive as it can block the mixer thread. Use sparingly and for short durations.
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="unlock">
+			<return type="void" />
+			<description>
+				Unlocks the sound data, allowing FMOD to resume normal processing.
+				This should be called as soon as you're finished accessing the data.
+				The destructor automatically calls this if the data is still locked.
+			</description>
+		</method>
+		<method name="get_data1" qualifiers="const">
+			<return type="PackedByteArray" />
+			<description>
+				Returns the first portion of locked data as a byte array.
+				This contains the majority of the locked region in most cases.
+			</description>
+		</method>
+		<method name="get_data2" qualifiers="const">
+			<return type="PackedByteArray" />
+			<description>
+				Returns the second portion of locked data as a byte array.
+				This is only non-empty when the locked region wraps around the end of the sound buffer.
+			</description>
+		</method>
+		<method name="is_locked" qualifiers="const">
+			<return type="bool" />
+			<description>
+				Returns [code]true[/code] if the sound data is currently locked and accessible.
+			</description>
+		</method>
+	</methods>
+	<members />
+	<signals />
+	<constants />
+</class>

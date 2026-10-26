@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="FmodSoundGroup" inherits="RefCounted" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/godotengine/godot/master/doc/class.xsd">
+	<brief_description>
+		A group of sounds for controlling playback limits and collective behavior.
+	</brief_description>
+	<description>
+		FmodSoundGroup is used to manage a collection of sounds with shared playback constraints. It allows you to limit the number of simultaneously audible sounds and define behavior when that limit is exceeded.
+		This is particularly useful for managing sound categories like:
+		- Weapon sounds (limit to prevent audio chaos)
+		- Ambient sounds (fade in/out smoothly)
+		- Voice/dialogue (prioritize important lines)
+		When the maximum audible count is reached, the [enum Behavior] setting determines how new playback requests are handled.
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="sound_group_is_valid" qualifiers="const">
+			<return type="bool" />
+			<description>
+				Returns [code]true[/code] if the SoundGroup handle is valid.
+			</description>
+		</method>
+		<method name="sound_group_is_null" qualifiers="const">
+			<return type="bool" />
+			<description>
+				Returns [code]true[/code] if the SoundGroup handle is null or invalid.
+			</description>
+		</method>
+		<method name="set_max_audible">
+			<return type="void" />
+			<param index="0" name="max_audible" type="int" />
+			<description>
+				Sets the maximum number of sounds in this group that can be audible simultaneously.
+				Set to [code]0[/code] for no limit.
+				When this limit is exceeded, the [member behavior] determines how new sounds are handled.
+			</description>
+		</method>
+		<method name="get_max_audible" qualifiers="const">
+			<return type="int" />
+			<description>
+				Returns the maximum number of sounds in this group that can be audible simultaneously.
+				Returns [code]0[/code] if there is no limit or the sound group is invalid.
+			</description>
+		</method>
+		<method name="set_max_audible_behavior">
+			<return type="void" />
+			<param index="0" name="behavior" type="int" enum="FmodSoundGroup.Behavior" />
+			<description>
+				Sets the behavior when attempting to play more sounds than [member max_audible] allows.
+				See [enum Behavior] for available options.
+			</description>
+		</method>
+		<method name="get_max_audible_behavior" qualifiers="const">
+			<return type="int" enum="FmodSoundGroup.Behavior" />
+			<description>
+				Returns the current behavior when attempting to play more sounds than [member max_audible] allows.
+				See [enum Behavior] for possible values.
+			</description>
+		</method>
+		<method name="set_mute_fade_speed">
+			<return type="void" />
+			<param index="0" name="speed" type="float" />
+			<description>
+				Sets the speed at which sounds fade in/out when being muted/unmuted.
+				Higher values result in faster fades.
+				This affects sounds muted due to [constant BEHAVIOR_MUTE] or being stolen.
+			</description>
+		</method>
+		<method name="get_mute_fade_speed" qualifiers="const">
+			<return type="float" />
+			<description>
+				Returns the speed at which sounds fade in/out when being muted/unmuted due to the max audible behavior.
+				Higher values result in faster fades.
+			</description>
+		</method>
+		<method name="set_volume_db">
+			<return type="void" />
+			<param index="0" name="volume_db" type="float" />
+			<description>
+				Sets the volume of this SoundGroup in decibels.
+				This volume is applied to all sounds belonging to the group.
+				The default value is [code]0.0[/code] dB (unity gain).
+			</description>
+		</method>
+		<method name="get_volume_db" qualifiers="const">
+			<return type="float" />
+			<description>
+				Returns the volume of this SoundGroup in decibels.
+				Returns [code]0.0[/code] if the sound group is invalid.
+				This volume affects all sounds belonging to the group.
+			</description>
+		</method>
+		<method name="get_num_sounds" qualifiers="const">
+			<return type="int" />
+			<description>
+				Returns the number of sounds that belong to this SoundGroup.
+				Returns [code]0[/code] if the sound group is invalid.
+			</description>
+		</method>
+		<method name="get_sound" qualifiers="const">
+			<return type="FmodSound" />
+			<param index="0" name="index" type="int" />
+			<description>
+				Returns the [FmodSound] at the specified [param index] in this group.
+				The index ranges from 0 to [method get_num_sounds] - 1.
+				Returns [code]null[/code] if the index is out of bounds.
+			</description>
+		</method>
+		<method name="get_num_playing" qualifiers="const">
+			<return type="int" />
+			<description>
+				Returns the number of channels currently playing sounds from this SoundGroup.
+				Returns [code]0[/code] if the sound group is invalid.
+			</description>
+		</method>
+		<method name="stop">
+			<return type="void" />
+			<description>
+				Stops all sounds in this SoundGroup that are currently playing.
+				This stops the channels but does not release the sounds or the group itself.
+			</description>
+		</method>
+		<method name="get_name" qualifiers="const">
+			<return type="String" />
+			<description>
+				Returns the name of this SoundGroup as specified when it was created.
+				Returns an empty string if the sound group is invalid.
+			</description>
+		</method>
+		<method name="release">
+			<return type="void" />
+			<description>
+				Releases this SoundGroup and returns all its sounds to the master sound group.
+				After calling this method, the SoundGroup becomes invalid and should not be used.
+				Sounds that were playing continue to play, but are no longer subject to this group's constraints.
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member type="int" name="max_audible" setter="set_max_audible" getter="get_max_audible" default="0">
+			Maximum number of simultaneously audible sounds in this group. [code]0[/code] means no limit.
+		</member>
+		<member type="int" enum="FmodSoundGroup.Behavior" name="behavior" setter="set_max_audible_behavior" getter="get_max_audible_behavior" default="0">
+			The behavior when max audible sounds is exceeded. See [enum Behavior].
+		</member>
+		<member type="float" name="mute_fade_speed" setter="set_mute_fade_speed" getter="get_mute_fade_speed" default="0.0">
+			Speed at which sounds fade when being muted/unmuted due to max audible behavior.
+		</member>
+		<member type="float" name="volume_db" setter="set_volume_db" getter="get_volume_db" default="0.0">
+			Volume of this sound group in decibels, applied to all contained sounds.
+		</member>
+	</members>
+	<signals />
+	<constants>
+		<constant name="BEHAVIOR_FAIL" value="0" enum="Behavior">
+			When max audible is reached, [method FmodSystem.play_sound] calls fail for new sounds.
+		</constant>
+		<constant name="BEHAVIOR_MUTE" value="1" enum="Behavior">
+			When max audible is reached, new sounds start muted and become audible when other sounds stop.
+		</constant>
+		<constant name="BEHAVIOR_STEAL_LOWEST" value="2" enum="Behavior">
+			When max audible is reached, the quietest (lowest audibility) sound is stolen for the new sound.
+		</constant>
+		<constant name="BEHAVIOR_MAX" value="3" enum="Behavior">
+			Maximum number of sound group behaviors. Not a valid behavior value.
+		</constant>
+	</constants>
+</class>

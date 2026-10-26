@@ -3,7 +3,7 @@
 
 本章讲“音频文件怎样变成可以播放的资源”。
 
-在 Godot-FmodPlayer 里，常用资源是 :ref:`FmodAudioStream<FmodAudioStream>`。你可以把它理解成 Godot 侧保存音频数据和播放设置的对象。真正播放时，它会在底层创建 :ref:`Sound<glossary-sound>`，再由播放器或系统播放成一次 :ref:`Channel<glossary-channel>`。
+在 Godot-FmodPlayer 里，常用资源是 :ref:`FmodAudioStream<class_FmodAudioStream>`。你可以把它理解成 Godot 侧保存音频数据和播放设置的对象。真正播放时，它会在底层创建 :ref:`Sound<glossary-sound>`，再由播放器或系统播放成一次 :ref:`Channel<glossary-channel>`。
 
 先选加载方式
 ------------

@@ -1,0 +1,235 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, LuYingYiLong
+# This file is distributed under the same license as the Godot FmodPlayer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot FmodPlayer \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/classes/class_fmodserver.rst:12 b42bdd8fb1d9407e9ccf3cf842e8cf85
+msgid "FmodServer"
+msgstr "FmodServer"
+
+#: ../../source/classes/class_fmodserver.rst:14 bc612bbebffd4494ae8e56e2731546e5
+msgid "**Inherits:** :ref:`Object<class_Object>`"
+msgstr "**继承：** :ref:`Object<class_Object>`"
+
+#: ../../source/classes/class_fmodserver.rst:16 fe7e82d18b0746208af9e15c78158e31
+msgid "Global singleton that manages the FMOD audio system lifecycle."
+msgstr "管理 FMOD 音频系统生命周期的全局单例"
+
+#: ../../source/classes/class_fmodserver.rst:21 0997087d4c044f52a885bba962f06c2e
+msgid "Description"
+msgstr "描述"
+
+#: ../../source/classes/class_fmodserver.rst:23 60ab98c7caf8459c81d6a02a68ea3745
+msgid ""
+"FmodServer is a global singleton that manages the FMOD Core API audio system within Godot. It "
+"initializes and maintains the main FMOD System instance, registers performance monitors for "
+"tracking CPU and file usage, manages the audio bus layout, and connects to Godot's SceneTree for "
+"per-frame updates."
+msgstr ""
+"**FmodServer**    是一个全局单例，用于管理 Godot 中的 FMOD Core API 音频系统。它初始化并维护主 FMOD 系统实例，注册性能监控以跟踪 CPU "
+"和文件使用情况，管理音频总线布局，并连接到 Godot 的   ``SceneTree``   以进行每帧更新。"
+
+#: ../../source/classes/class_fmodserver.rst:25 6dd75be8c9104880b6a92d94c5f762ef
+msgid ""
+"The server automatically initializes during GDExtension loading and handles all FMOD lifecycle "
+"management. It creates performance monitors that can be viewed in Godot's Debugger > Monitor tab "
+"to track FMOD's resource usage."
+msgstr ""
+"服务器在   ``GDExtension``   加载期间自动初始化，并处理所有 FMOD 生命周期管理。它创建的性能监控可以在 Godot 的调试器 > 监视器选项卡中查看，以跟踪 FMOD "
+"的资源使用情况。"
+
+#: ../../source/classes/class_fmodserver.rst:27 68949bb1b983471181144f037343d57b
+msgid "\\ **Performance Monitors:**"
+msgstr "**性能监控：**"
+
+#: ../../source/classes/class_fmodserver.rst:29 45fcf7d7daaa47b4ade49026d0219ef4
+msgid "The following custom monitors are registered with Godot's Performance system:"
+msgstr "以下自定义监控已注册到 Godot 的性能系统："
+
+#: ../../source/classes/class_fmodserver.rst:31 9fda7a6686c040629993a2768474f2ed
+msgid "``FmodCPUUsage/DSP``: DSP processing CPU usage percentage"
+msgstr "``FmodCPUUsage/DSP``   ：DSP 处理的 CPU 使用百分比"
+
+#: ../../source/classes/class_fmodserver.rst:33 9c698915419a4f82a8750364a19707e8
+msgid "``FmodCPUUsage/Stream``: Stream decoding CPU usage percentage"
+msgstr "``FmodCPUUsage/Stream``：流解码的 CPU 使用百分比"
+
+#: ../../source/classes/class_fmodserver.rst:35 0b01a44076ef426191a54c2251abf247
+msgid "``FmodCPUUsage/Geometry``: 3D geometry processing CPU usage percentage"
+msgstr "``FmodCPUUsage/Geometry``：三维几何处理的 CPU 使用百分比"
+
+#: ../../source/classes/class_fmodserver.rst:37 54ae92b4ec4e4e73b6e3bd7ff852db96
+msgid "``FmodCPUUsage/Update``: System update CPU usage percentage"
+msgstr "``FmodCPUUsage/Update``   ：系统更新的 CPU 使用百分比"
+
+#: ../../source/classes/class_fmodserver.rst:39 342d230cb2ce4338bbf1c6ff52fa3f33
+msgid "``FmodCPUUsage/Convolution1``: Convolution reverb 1 CPU usage percentage"
+msgstr "``FmodCPUUsage/Convolution1``   ：卷积混响 1 的 CPU 使用百分比"
+
+#: ../../source/classes/class_fmodserver.rst:41 2c19706bae384f30bfa6135d47d108b8
+msgid "``FmodCPUUsage/Convolution2``: Convolution reverb 2 CPU usage percentage"
+msgstr "``FmodCPUUsage/Convolution2``   ：卷积混响 2 的 CPU 使用百分比"
+
+#: ../../source/classes/class_fmodserver.rst:43 3c17d9cb52b94d33af2bf59cdcba1e4b
+msgid "``FmodFileUsage/SampleBytesRead``: Sample bytes read from disk"
+msgstr "``FmodFileUsage/SampleBytesRead``   ：从磁盘读取的样本字节数"
+
+#: ../../source/classes/class_fmodserver.rst:45 39c3753592174020b46e87c71b0d15ac
+msgid "``FmodFileUsage/StreamBytesRead``: Stream bytes read from disk"
+msgstr "``FmodFileUsage/StreamBytesRead``   ：从磁盘读取的流式数据字节数"
+
+#: ../../source/classes/class_fmodserver.rst:47 6f54aab90d074b63a1b0573a38dae6c4
+msgid "``FmodFileUsage/OtherBytesRead``: Other bytes read from disk"
+msgstr "``FmodFileUsage/OtherBytesRead``   ：从磁盘读取的其他数据字节数"
+
+#: ../../source/classes/class_fmodserver.rst:49 92072ae9d1c34aaf89529fab8cef351b
+msgid ""
+"\\ **Note:** This class is a singleton. Use the static methods directly to access FMOD systems "
+"and shared resources."
+msgstr "**注意：**    此类为单例，可直接使用静态方法访问 FMOD 系统和共享资源。"
+
+#: ../../source/classes/class_fmodserver.rst:54 f34866903a5748f4a60fba29820aaa17
+msgid "Methods"
+msgstr "方法"
+
+#: ../../source/classes/class_fmodserver.rst:60 ../../source/classes/class_fmodserver.rst:62
+#: ../../source/classes/class_fmodserver.rst:64 ../../source/classes/class_fmodserver.rst:72
+#: ../../source/classes/class_fmodserver.rst:74 077da3c211ab42c3818915b2efab175d
+#: 12f7ff52e0944040a00761ad4d97431e 313e47e6368c49f3a599e769b57126da 3a02ae7034f345ffb3208e5e542325c7
+#: db1d6499bda347919885d97b900e98fa
+msgid "|void|"
+msgstr "|void|"
+
+#: ../../source/classes/class_fmodserver.rst:60 bbba7d8f104f4e94aa6b602d4753b4bd
+msgid ":ref:`_connect_update<class_FmodServer_private_method__connect_update>`\\ (\\ )"
+msgstr ":ref:`_connect_update<class_FmodServer_private_method__connect_update>`\\ (\\ )"
+
+#: ../../source/classes/class_fmodserver.rst:62 96ba9af4685840b8aefdf08fbd3af472
+msgid ":ref:`_update_fmod<class_FmodServer_private_method__update_fmod>`\\ (\\ )"
+msgstr ":ref:`_update_fmod<class_FmodServer_private_method__update_fmod>`\\ (\\ )"
+
+#: ../../source/classes/class_fmodserver.rst:64 67fdda88b15c4e5eaafad2a2e6429871
+msgid ":ref:`_build_bus_layout<class_FmodServer_private_method__build_bus_layout>`\\ (\\ )"
+msgstr ":ref:`_build_bus_layout<class_FmodServer_private_method__build_bus_layout>`\\ (\\ )"
+
+#: ../../source/classes/class_fmodserver.rst:66 99c65a3c4b384b2ab97387654b003ac8
+msgid ":ref:`FmodSystem<class_FmodSystem>`"
+msgstr ":ref:`FmodSystem<class_FmodSystem>`"
+
+#: ../../source/classes/class_fmodserver.rst:66 9b944779f57f469da1baf1a500f0f633
+msgid ":ref:`get_main_system<class_FmodServer_method_get_main_system>`\\ (\\ ) |static|"
+msgstr ":ref:`get_main_system<class_FmodServer_method_get_main_system>`\\ (\\ ) |static|"
+
+#: ../../source/classes/class_fmodserver.rst:68 1f6cc029c4214e7f99c83e24d5c264ef
+msgid ":ref:`FmodChannelGroup<class_FmodChannelGroup>`"
+msgstr ":ref:`FmodChannelGroup<class_FmodChannelGroup>`"
+
+#: ../../source/classes/class_fmodserver.rst:68 53283284623f46e8929cb5f7f05555bc
+msgid ":ref:`get_master_channel_group<class_FmodServer_method_get_master_channel_group>`\\ (\\ ) |static|"
+msgstr ":ref:`get_master_channel_group<class_FmodServer_method_get_master_channel_group>`\\ (\\ ) |static|"
+
+#: ../../source/classes/class_fmodserver.rst:70 8b100a974d0e4c0d807211aaf1aa8675
+msgid ":ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`"
+msgstr ":ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`"
+
+#: ../../source/classes/class_fmodserver.rst:70 b542caa4094645f6859e823bb668e8e7
+msgid ":ref:`get_audio_bus_layout<class_FmodServer_method_get_audio_bus_layout>`\\ (\\ ) |static|"
+msgstr ":ref:`get_audio_bus_layout<class_FmodServer_method_get_audio_bus_layout>`\\ (\\ ) |static|"
+
+#: ../../source/classes/class_fmodserver.rst:72 5a31e3f66e7a43368c13349826333c75
+msgid ":ref:`generate_bus_layout<class_FmodServer_method_generate_bus_layout>`\\ (\\ ) |static|"
+msgstr ":ref:`generate_bus_layout<class_FmodServer_method_generate_bus_layout>`\\ (\\ ) |static|"
+
+#: ../../source/classes/class_fmodserver.rst:74 1bcde5430f354f0eb42ce5e64d5b4d55
+msgid ""
+":ref:`reset_main_system<class_FmodServer_method_reset_main_system>`\\ (\\ system\\: "
+":ref:`FmodSystem<class_FmodSystem>`\\ ) |static|"
+msgstr ""
+":ref:`reset_main_system<class_FmodServer_method_reset_main_system>`\\ (\\ system\\: "
+":ref:`FmodSystem<class_FmodSystem>`\\ ) |static|"
+
+#: ../../source/classes/class_fmodserver.rst:84 cecfc0a29ac34899a8e0748d8f56d6b7
+msgid "Method Descriptions"
+msgstr "方法说明"
+
+#: ../../source/classes/class_fmodserver.rst:90 e0fd7359bf16450999781f06e90b8966
+msgid "|void| **_connect_update**\\ (\\ )"
+msgstr "|void| **_connect_update**\\ (\\ )"
+
+#: ../../source/classes/class_fmodserver.rst:92 ../../source/classes/class_fmodserver.rst:104
+#: ../../source/classes/class_fmodserver.rst:116 5d24d0b7d61248c9918020c71352db56
+#: ce70ee4eabaf401ca66773777a5b7af0 ee2a99f1ba6f41d6973b1c6ed529c6e0
+msgid "Internal editor or engine callback."
+msgstr "编辑器或引擎内部回调。"
+
+#: ../../source/classes/class_fmodserver.rst:102 636373a07e6941efac12c32749b5b50b
+msgid "|void| **_update_fmod**\\ (\\ )"
+msgstr "|void| **_update_fmod**\\ (\\ )"
+
+#: ../../source/classes/class_fmodserver.rst:114 90748bdc1cb04955b4a6fc57615ade45
+msgid "|void| **_build_bus_layout**\\ (\\ )"
+msgstr "|void| **_build_bus_layout**\\ (\\ )"
+
+#: ../../source/classes/class_fmodserver.rst:128 bd3bb82f21dd4f23b639927d980ad400
+msgid ":ref:`FmodSystem<class_FmodSystem>` **get_main_system**\\ (\\ ) |static|"
+msgstr ":ref:`FmodSystem<class_FmodSystem>` **get_main_system**\\ (\\ ) |static|"
+
+#: ../../source/classes/class_fmodserver.rst:130 6d758af0719543ed899c910c2a805ef0
+msgid ""
+"Returns the main FMOD System instance. This is the primary interface for creating sounds, "
+"channels, DSP effects, and other FMOD objects. The system is automatically initialized during "
+"server startup with settings from ProjectSettings."
+msgstr "返回主要的 FMOD 系统实例。这是创建声音、通道、DSP 效果和其他 FMOD 对象的主要接口。系统在服务器启动时会根据项目设置自动初始化。"
+
+#: ../../source/classes/class_fmodserver.rst:142 c5639a3e91384acfa4054bd64cdb5b68
+msgid ":ref:`FmodChannelGroup<class_FmodChannelGroup>` **get_master_channel_group**\\ (\\ ) |static|"
+msgstr ":ref:`FmodChannelGroup<class_FmodChannelGroup>` **get_master_channel_group**\\ (\\ ) |static|"
+
+#: ../../source/classes/class_fmodserver.rst:144 af4afe77ef9742c1951bebf5ae3ae91f
+msgid ""
+"Returns the master channel group that all sounds route through by default. This is the root of "
+"the channel group hierarchy and can be used to control global volume, pitch, and effects for all "
+"playing sounds."
+msgstr "返回默认情况下所有声音通过的主通道组。它是通道组层次结构的根，可以用于控制所有正在播放声音的全局音量、音高和效果。"
+
+#: ../../source/classes/class_fmodserver.rst:156 dbf952958cb949cdad13a1ad431e7149
+msgid ":ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>` **get_audio_bus_layout**\\ (\\ ) |static|"
+msgstr ":ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>` **get_audio_bus_layout**\\ (\\ ) |static|"
+
+#: ../../source/classes/class_fmodserver.rst:158 e4f1e8074f254889b1ad93cf2a1b5a8e
+msgid ""
+"Returns the audio bus layout used for managing audio buses and their routing. The bus layout "
+"synchronizes with Godot's AudioServer bus layout and provides FMOD-specific bus functionality "
+"including DSP effects."
+msgstr "返回用于管理音频总线及其路由的音频总线布局。该总线布局与 Godot 的   ``AudioServer``   总线布局同步，并提供 FMOD 特定的总线功能，包括 DSP 效果。"
+
+#: ../../source/classes/class_fmodserver.rst:170 ca0f2bde9ca943ceb993ea7bcbdd39cd
+msgid "|void| **generate_bus_layout**\\ (\\ ) |static|"
+msgstr "|void| **generate_bus_layout**\\ (\\ ) |static|"
+
+#: ../../source/classes/class_fmodserver.rst:172 3bf95819b4d344c1862c3846c391c4a6
+msgid "Generate bus layout."
+msgstr "生成音频总线布局"
+
+#: ../../source/classes/class_fmodserver.rst:184 6ff0b315a9bf40208e3add8bb7256ba9
+msgid "|void| **reset_main_system**\\ (\\ system\\: :ref:`FmodSystem<class_FmodSystem>`\\ ) |static|"
+msgstr "|void| **reset_main_system**\\ (\\ system\\: :ref:`FmodSystem<class_FmodSystem>`\\ ) |static|"
+
+#: ../../source/classes/class_fmodserver.rst:186 34c6c14966b6453480ed7a71b228c18e
+msgid "Reset main system."
+msgstr "重置主 FMOD 系统实例。"

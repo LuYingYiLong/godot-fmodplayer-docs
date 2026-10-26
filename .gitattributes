@@ -1,0 +1,4 @@
+*.gd text eol=lf
+classref/** text eol=lf
+scripts/vendor/godot/** text eol=lf
+scripts/vendor/godot/objects.inv binary

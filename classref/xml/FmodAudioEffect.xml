@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="FmodAudioEffect" inherits="Resource" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/godotengine/godot/master/doc/class.xsd">
+	<brief_description>
+		Abstract base class for audio effects in the FMOD audio system.
+	</brief_description>
+	<description>
+		FmodAudioEffect is the abstract base class for all audio effects in the FMOD integration. It provides a common interface for applying effects to audio buses (channel groups). Subclasses implement specific effect types such as Amplify, Filter, EQ, Reverb, Delay, etc.
+		The effect can be applied to a [FmodChannelGroup] using [method apply_to] and removed using [method remove_from_bus].
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="apply_to">
+			<return type="void" />
+			<param index="0" name="bus" type="FmodChannelGroup" />
+			<description>
+				Applies this effect to the specified audio bus. Subclasses should override this method to add their DSP units to the bus.
+			</description>
+		</method>
+		<method name="remove_from_bus">
+			<return type="void" />
+			<param index="0" name="bus" type="FmodChannelGroup" />
+			<description>
+				Removes this effect from the specified audio bus, detaching all DSP units.
+			</description>
+		</method>
+		<method name="get_bus" qualifiers="const">
+			<return type="FmodChannelGroup" />
+			<description>
+				Gets the audio bus (channel group) that this effect is currently applied to.
+			</description>
+		</method>
+	</methods>
+	<members />
+	<signals />
+	<constants />
+</class>

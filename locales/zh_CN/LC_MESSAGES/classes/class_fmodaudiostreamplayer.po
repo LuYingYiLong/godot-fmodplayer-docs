@@ -1,0 +1,784 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, LuYingYiLong
+# This file is distributed under the same license as the Godot FmodPlayer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot FmodPlayer \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:12 d679f5ec57ce4bad9ea8ef481213cb12
+msgid "FmodAudioStreamPlayer"
+msgstr "FmodAudioStreamPlayer"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:14 e2895633554b459abb5263e8dfc1596b
+msgid "**Inherits:** :ref:`Node<class_Node>` **<** :ref:`Object<class_Object>`"
+msgstr "**继承：** :ref:`Node<class_Node>` **<** :ref:`Object<class_Object>`"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:16 9d397bfe940b400481af785264afffbd
+msgid "A node for playing FMOD audio streams with full playback control."
+msgstr "用于播放 2D 非空间化音频流的节点"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:21 15e1afabaae442d48acfe39793e84777
+msgid "Description"
+msgstr "描述"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:23 3f591129584f48bcb379b06156c3ed20
+msgid ""
+"FmodAudioStreamPlayer is a node that plays :ref:`FmodAudioStream<class_FmodAudioStream>` "
+"resources using the FMOD audio engine. It provides high-level playback control similar to Godot's"
+" built-in AudioStreamPlayer but with FMOD's advanced features."
+msgstr ""
+"**FmodAudioStreamPlayer**    用于播放    :ref:`FmodAudioStream<class_FmodAudioStream>`    "
+"资源，适合背景音乐、UI 音效和不需要空间定位的音频"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:25 2c9bfdb57b974ef9af9951d65122cdfc
+msgid "Key features:"
+msgstr "主要特性："
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:27 3c2dafbc44d6425c9e7cc7af6cfe6aa7
+msgid "Stream playback with play/pause/stop/seek controls"
+msgstr "播放、暂停、停止和定位控制"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:29 ba2ed536bb57483fade5f005dcb36eda
+msgid "Volume and pitch control in decibels"
+msgstr "以分贝控制音量，并控制音高"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:31 f099e53157974483aa8b049ab7fe1cc4
+msgid "Automatic playback on node entry (autoplay)"
+msgstr "节点进入场景树时自动播放"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:33 95e2439989be41608b58894a3d83e25f
+msgid "Stereo, surround, or center mix target routing"
+msgstr "立体声、环绕声或中置声道混音目标"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:35 286c4af2f3d5462b9e0dcebac64c5ab8
+msgid "Bus routing for mixing"
+msgstr "通过总线路由进行混音"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:37 2a3a630f95e3401b9a4039e54caa6cec
+msgid "Integration with FMOD's channel group system"
+msgstr "与 FMOD 通道组系统集成"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:39 4b4acd6269744e3a9766084ea2d09af1
+msgid ""
+"This node is suitable for music, ambient sounds, and any audio that requires full playback "
+"control."
+msgstr "适合音乐、环境声和需要完整播放控制的音频。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:44 c72eeff724af4cd3ade0f36013de59be
+msgid "Properties"
+msgstr "属性"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:50
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:80 4192394f53304d1b81997a7db755f5ed
+#: 47feb3090bb04c58bee388141cc0fafe
+msgid ":ref:`FmodAudioStream<class_FmodAudioStream>`"
+msgstr ":ref:`FmodAudioStream<class_FmodAudioStream>`"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:50 a4e0eda666304854bd0b80eb024d4314
+msgid ":ref:`stream<class_FmodAudioStreamPlayer_property_stream>`"
+msgstr ":ref:`stream<class_FmodAudioStreamPlayer_property_stream>`"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:52
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:54
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:62
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:64
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:82
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:92
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:96
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:114
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:118 0fc6b546b49f4a34bdc1b4687f571279
+#: 11bb53347de34032bdc6870037ec8d28 374f5468ab644e768bf220a9f5fd8348 4c91847251174847be203b953be7ca8f
+#: 575c85d58ce14d19a51fe913f2a9041f 775f4c3a5d4942b4ac293260f581ec2c a3f295aa3d674804a6bab365aac62506
+#: e2295742a57b48abb25af2f53c61a718 ee144468d5894bb1a786a073c88a3e25
+msgid ":ref:`bool<class_bool>`"
+msgstr ":ref:`bool<class_bool>`"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:52 8146999d43074d51b2d184e020bec2b6
+msgid ":ref:`playing<class_FmodAudioStreamPlayer_property_playing>`"
+msgstr ":ref:`playing<class_FmodAudioStreamPlayer_property_playing>`"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:52
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:54
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:62
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:64 4c9848cdbe4645e6bb50a203bf04cc7f
+#: a7245877328e473c8e6867061ece82a4 d994c276b3e84f8b89be88d8594fd301 e34b7682fcc841dabafea9763bcbda08
+msgid "``false``"
+msgstr "``false``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:54 8b785ad307034f6cb13afe2cd1ff81ed
+msgid ":ref:`stream_paused<class_FmodAudioStreamPlayer_property_stream_paused>`"
+msgstr ":ref:`stream_paused<class_FmodAudioStreamPlayer_property_stream_paused>`"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:56
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:58
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:98
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:102
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:106 0ee828cc358c45068e934f8c359ec94f
+#: 4dfbb5226f6048b4b472d355cfb13e68 7217234569c4430a87e852a6f3e91b89 9e6816ade8c441a9b4bc70bd3839f357
+#: cf6368632bfd4dc2b494a292f43f6abc
+msgid ":ref:`float<class_float>`"
+msgstr ":ref:`float<class_float>`"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:56 6b6d320ec177466587b17582d04d6bd1
+msgid ":ref:`volume_db<class_FmodAudioStreamPlayer_property_volume_db>`"
+msgstr ":ref:`volume_db<class_FmodAudioStreamPlayer_property_volume_db>`"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:56 758a86a430624961b0c5f2bf45587471
+msgid "``0.0``"
+msgstr "``0.0``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:58 1ed9e351c812416681ad51e407427e88
+msgid ":ref:`pitch_scale<class_FmodAudioStreamPlayer_property_pitch_scale>`"
+msgstr ":ref:`pitch_scale<class_FmodAudioStreamPlayer_property_pitch_scale>`"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:58 39a17c51877d41c486a98fd13e4973de
+msgid "``1.0``"
+msgstr "``1.0``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:60
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:110 aeb152d166364724bd061d4e956118b4
+#: dbc676d3805244fd811823ebc6fbc69e
+msgid ":ref:`MixTarget<enum_FmodAudioStreamPlayer_MixTarget>`"
+msgstr ":ref:`MixTarget<enum_FmodAudioStreamPlayer_MixTarget>`"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:60 8db0b7c72f6f42359c4c1c8cab69f69e
+msgid ":ref:`mix_target<class_FmodAudioStreamPlayer_property_mix_target>`"
+msgstr ":ref:`mix_target<class_FmodAudioStreamPlayer_property_mix_target>`"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:60 002b36adfdab452eb7b3659aebe20d50
+msgid "``0``"
+msgstr "``0``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:62 498836c99439400995c3609e4180f627
+msgid ":ref:`auto_play<class_FmodAudioStreamPlayer_property_auto_play>`"
+msgstr ":ref:`auto_play<class_FmodAudioStreamPlayer_property_auto_play>`"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:64 a72356e69ab943fa873bc3e19028fc95
+msgid ":ref:`preload_on_set_stream<class_FmodAudioStreamPlayer_property_preload_on_set_stream>`"
+msgstr ":ref:`preload_on_set_stream<class_FmodAudioStreamPlayer_property_preload_on_set_stream>`"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:66
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:122 589069ce20be48eaa2f108d8b61aac90
+#: 9a3fa12414b040e99279390101673a2b
+msgid ":ref:`StringName<class_StringName>`"
+msgstr ":ref:`StringName<class_StringName>`"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:66 db55c7acf0b141f4befc65703580351b
+msgid ":ref:`bus<class_FmodAudioStreamPlayer_property_bus>`"
+msgstr ":ref:`bus<class_FmodAudioStreamPlayer_property_bus>`"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:66 659b2c147e494c63a6f08f1dbf56131c
+msgid "``&\"Master\"``"
+msgstr "``&\"Master\"``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:72 342cac140d174ce18d881557afb1aa82
+msgid "Methods"
+msgstr "方法"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:78
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:84
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:86
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:88
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:90
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:94
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:100
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:104
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:108
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:112
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:116
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:120 2c7e6385aace4823b711f4d960853392
+#: 3db899c3e68b4a97a0e2d1391ef35ce8 4e4ae46ec86946afba809d10935bd773 7588821dff2941869f23f8c0edf676df
+#: 789a190c803441c49918a7e705e32a78 8cedc052dd5249a3a814efae73d94fbe a182590071f74464bf3d232ecdd5925c
+#: a281e5cbf16848b5b5bac098e3b0be39 a30d2c4850d34916b95b02826811758e b4798055b588434bad4a9c59f95d80b1
+#: e3e7f036a1114d39856c79e50d0b9bc1 f00da209cd3f4c6e8015bd780463ffa0
+msgid "|void|"
+msgstr "|void|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:78 c3d6a5dd7b7146e1b34b0a664c458d73
+msgid ""
+":ref:`set_stream<class_FmodAudioStreamPlayer_method_set_stream>`\\ (\\ stream\\: "
+":ref:`FmodAudioStream<class_FmodAudioStream>`\\ )"
+msgstr ""
+":ref:`set_stream<class_FmodAudioStreamPlayer_method_set_stream>`\\ (\\ stream\\: "
+":ref:`FmodAudioStream<class_FmodAudioStream>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:80 99e792898cf341f191fd5d525552d495
+msgid ":ref:`get_stream<class_FmodAudioStreamPlayer_method_get_stream>`\\ (\\ ) |const|"
+msgstr ":ref:`get_stream<class_FmodAudioStreamPlayer_method_get_stream>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:82 6560300ed939422082ab4c7668fd0307
+msgid ":ref:`preload_stream<class_FmodAudioStreamPlayer_method_preload_stream>`\\ (\\ )"
+msgstr ":ref:`preload_stream<class_FmodAudioStreamPlayer_method_preload_stream>`\\ (\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:84 801876b6c8cc4bf790a2de14f86ec2b8
+msgid ""
+":ref:`play<class_FmodAudioStreamPlayer_method_play>`\\ (\\ from_position\\: "
+":ref:`float<class_float>` = 0.0\\ )"
+msgstr ""
+":ref:`play<class_FmodAudioStreamPlayer_method_play>`\\ (\\ from_position\\: "
+":ref:`float<class_float>` = 0.0\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:86 44e65b70758041ae998acd999676b970
+msgid ""
+":ref:`seek<class_FmodAudioStreamPlayer_method_seek>`\\ (\\ to_position\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`seek<class_FmodAudioStreamPlayer_method_seek>`\\ (\\ to_position\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:88 48d2c4ce9efa46679a7323df082e8112
+msgid ":ref:`stop<class_FmodAudioStreamPlayer_method_stop>`\\ (\\ )"
+msgstr ":ref:`stop<class_FmodAudioStreamPlayer_method_stop>`\\ (\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:90 c62aa12417594d2fb9b8c7ed701f1de4
+msgid ""
+":ref:`set_playing<class_FmodAudioStreamPlayer_method_set_playing>`\\ (\\ playing\\: "
+":ref:`bool<class_bool>`\\ )"
+msgstr ""
+":ref:`set_playing<class_FmodAudioStreamPlayer_method_set_playing>`\\ (\\ playing\\: "
+":ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:92 334396711b384ca5854032329797b7ab
+msgid ":ref:`is_playing<class_FmodAudioStreamPlayer_method_is_playing>`\\ (\\ ) |const|"
+msgstr ":ref:`is_playing<class_FmodAudioStreamPlayer_method_is_playing>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:94 989420b279b84fbc96b1b824ba6c18eb
+msgid ""
+":ref:`set_stream_paused<class_FmodAudioStreamPlayer_method_set_stream_paused>`\\ (\\ paused\\: "
+":ref:`bool<class_bool>`\\ )"
+msgstr ""
+":ref:`set_stream_paused<class_FmodAudioStreamPlayer_method_set_stream_paused>`\\ (\\ paused\\: "
+":ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:96 4bb76eb13d8547259e5d055f883069e4
+msgid ":ref:`get_stream_paused<class_FmodAudioStreamPlayer_method_get_stream_paused>`\\ (\\ ) |const|"
+msgstr ":ref:`get_stream_paused<class_FmodAudioStreamPlayer_method_get_stream_paused>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:98 129408f5e1ca442b9580575dfa66a575
+msgid ""
+":ref:`get_playback_position<class_FmodAudioStreamPlayer_method_get_playback_position>`\\ (\\ ) "
+"|const|"
+msgstr ""
+":ref:`get_playback_position<class_FmodAudioStreamPlayer_method_get_playback_position>`\\ (\\ ) "
+"|const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:100 f937683607514898b9839f967c6cbe39
+msgid ""
+":ref:`set_volume_db<class_FmodAudioStreamPlayer_method_set_volume_db>`\\ (\\ volume_db\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_volume_db<class_FmodAudioStreamPlayer_method_set_volume_db>`\\ (\\ volume_db\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:102 c1686f128547450eaff5c77e41404226
+msgid ":ref:`get_volume_db<class_FmodAudioStreamPlayer_method_get_volume_db>`\\ (\\ ) |const|"
+msgstr ":ref:`get_volume_db<class_FmodAudioStreamPlayer_method_get_volume_db>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:104 fe93c2946a27440d95a09174e5cac584
+msgid ""
+":ref:`set_pitch_scale<class_FmodAudioStreamPlayer_method_set_pitch_scale>`\\ (\\ pitch_scale\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_pitch_scale<class_FmodAudioStreamPlayer_method_set_pitch_scale>`\\ (\\ pitch_scale\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:106 c64df23c5461427dabe38e1cab8b6554
+msgid ":ref:`get_pitch_scale<class_FmodAudioStreamPlayer_method_get_pitch_scale>`\\ (\\ ) |const|"
+msgstr ":ref:`get_pitch_scale<class_FmodAudioStreamPlayer_method_get_pitch_scale>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:108 ddda981cf8b54132bac39d7352a08ed7
+msgid ""
+":ref:`set_mix_target<class_FmodAudioStreamPlayer_method_set_mix_target>`\\ (\\ mix_target\\: "
+":ref:`MixTarget<enum_FmodAudioStreamPlayer_MixTarget>`\\ )"
+msgstr ""
+":ref:`set_mix_target<class_FmodAudioStreamPlayer_method_set_mix_target>`\\ (\\ mix_target\\: "
+":ref:`MixTarget<enum_FmodAudioStreamPlayer_MixTarget>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:110 1440151765324008a67ab8804d9a0c0b
+msgid ":ref:`get_mix_target<class_FmodAudioStreamPlayer_method_get_mix_target>`\\ (\\ ) |const|"
+msgstr ":ref:`get_mix_target<class_FmodAudioStreamPlayer_method_get_mix_target>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:112 faa35f9af01747f4b20f3541ad3f316d
+msgid ""
+":ref:`set_auto_play<class_FmodAudioStreamPlayer_method_set_auto_play>`\\ (\\ enable\\: "
+":ref:`bool<class_bool>`\\ )"
+msgstr ""
+":ref:`set_auto_play<class_FmodAudioStreamPlayer_method_set_auto_play>`\\ (\\ enable\\: "
+":ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:114 5b15cb9ed0c547ec8738a52b6d208904
+msgid ":ref:`is_autoplay_enabled<class_FmodAudioStreamPlayer_method_is_autoplay_enabled>`\\ (\\ ) |const|"
+msgstr ":ref:`is_autoplay_enabled<class_FmodAudioStreamPlayer_method_is_autoplay_enabled>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:116 876f383f68af49a59507b888b89dd2d7
+msgid ""
+":ref:`set_preload_on_set_stream<class_FmodAudioStreamPlayer_method_set_preload_on_set_stream>`\\ "
+"(\\ enable\\: :ref:`bool<class_bool>`\\ )"
+msgstr ""
+":ref:`set_preload_on_set_stream<class_FmodAudioStreamPlayer_method_set_preload_on_set_stream>`\\ "
+"(\\ enable\\: :ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:118 ef82fe65e0774d339fbcfb767b7f27aa
+msgid ""
+":ref:`is_preload_on_set_stream_enabled<class_FmodAudioStreamPlayer_method_is_preload_on_set_stream_enabled>`\\"
+" (\\ ) |const|"
+msgstr ""
+":ref:`is_preload_on_set_stream_enabled<class_FmodAudioStreamPlayer_method_is_preload_on_set_stream_enabled>`\\"
+" (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:120 6781a057735d4bb49889f6413d13c8c6
+msgid ""
+":ref:`set_bus<class_FmodAudioStreamPlayer_method_set_bus>`\\ (\\ bus\\: "
+":ref:`StringName<class_StringName>`\\ )"
+msgstr ""
+":ref:`set_bus<class_FmodAudioStreamPlayer_method_set_bus>`\\ (\\ bus\\: "
+":ref:`StringName<class_StringName>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:122 486d43a1fa7241ef8a7866259f621e61
+msgid ":ref:`get_bus<class_FmodAudioStreamPlayer_method_get_bus>`\\ (\\ ) |const|"
+msgstr ":ref:`get_bus<class_FmodAudioStreamPlayer_method_get_bus>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:132 3d9bc5f35c0a46a6803de65a14d6ada2
+msgid "Signals"
+msgstr "信号"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:138 6077d8f697e14f328854250491c92a68
+msgid "**finished**\\ (\\ )"
+msgstr "**finished**\\ (\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:140 7868049ebba6496b8d87d9fe03a9e5c8
+msgid "Emitted when finished."
+msgstr "播放结束时发出。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:149 cc5172969e18427cae3181144db5fd7e
+msgid "Enumerations"
+msgstr "枚举"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:155 7cb9b9ecf18b409995688aa15aa782a9
+msgid "enum **MixTarget**:"
+msgstr "enum **MixTarget**:"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:161 09547eed41ff4332bdca48e04ccca8f7
+msgid ":ref:`MixTarget<enum_FmodAudioStreamPlayer_MixTarget>` **MIX_TARGET_STEREO** = ``0``"
+msgstr ":ref:`MixTarget<enum_FmodAudioStreamPlayer_MixTarget>` **MIX_TARGET_STEREO** = ``0``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:163 ea037557d75a472bba88faca2dfd3dca
+msgid "Route audio to the front left and front right speakers."
+msgstr "将音频路由到前置左、右扬声器。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:169 d75767b6dedf453c81ab5f395a99f271
+msgid ":ref:`MixTarget<enum_FmodAudioStreamPlayer_MixTarget>` **MIX_TARGET_SURROUND** = ``1``"
+msgstr ":ref:`MixTarget<enum_FmodAudioStreamPlayer_MixTarget>` **MIX_TARGET_SURROUND** = ``1``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:171 28a3f1c6bf224d9898c829693b1a438c
+msgid "Route audio to all available surround speaker positions."
+msgstr "将音频路由到所有可用的环绕扬声器。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:177 76b65ba9e22347ab93a3a2389ed6a61a
+msgid ":ref:`MixTarget<enum_FmodAudioStreamPlayer_MixTarget>` **MIX_TARGET_CENTER** = ``2``"
+msgstr ":ref:`MixTarget<enum_FmodAudioStreamPlayer_MixTarget>` **MIX_TARGET_CENTER** = ``2``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:179 897c23cb32424cc78a1fe92e373f4391
+msgid "Route audio to the center and LFE speakers."
+msgstr "将音频路由到中置和 LFE 扬声器。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:188 00482d8a7c5a40aca6786d3a08c5f8a7
+msgid "Property Descriptions"
+msgstr "属性说明"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:194 972571c6949f4fa1a01d95860222875a
+msgid ":ref:`FmodAudioStream<class_FmodAudioStream>` **stream**"
+msgstr ":ref:`FmodAudioStream<class_FmodAudioStream>` **stream**"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:198
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:354 6ad16eeea7814547bc674af56c9581f1
+#: e6981140b13949cd8820586307ff03d1
+msgid "|void| **set_stream**\\ (\\ stream\\: :ref:`FmodAudioStream<class_FmodAudioStream>`\\ )"
+msgstr "|void| **set_stream**\\ (\\ stream\\: :ref:`FmodAudioStream<class_FmodAudioStream>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:199
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:370 8bd0224d6a094f85a5b20599f7eb108f
+#: f87fddf3a7314852b68766ff8158026d
+msgid ":ref:`FmodAudioStream<class_FmodAudioStream>` **get_stream**\\ (\\ ) |const|"
+msgstr ":ref:`FmodAudioStream<class_FmodAudioStream>` **get_stream**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:201 133a7549b7b7492586a2cba288eba9f9
+msgid "The :ref:`FmodAudioStream<class_FmodAudioStream>` resource to play."
+msgstr "要播放的音频流资源 （参见   :ref:`FmodAudioStream<class_FmodAudioStream>`  ）"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:211 98db039c18044736a80d98549752938b
+msgid ":ref:`bool<class_bool>` **playing** = ``false``"
+msgstr ":ref:`bool<class_bool>` **playing** = ``false``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:215
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:448 341e29dd36484b77bfe3de55e920803a
+#: bf3c50d0cb82454d96684f60ee94d912
+msgid "|void| **set_playing**\\ (\\ playing\\: :ref:`bool<class_bool>`\\ )"
+msgstr "|void| **set_playing**\\ (\\ playing\\: :ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:216
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:464 0e0502786ea541aaafab420033d8f12c
+#: 6b8e3e2148f647c0afc1db33847dbaef
+msgid ":ref:`bool<class_bool>` **is_playing**\\ (\\ ) |const|"
+msgstr ":ref:`bool<class_bool>` **is_playing**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:218 d881008efb444907bde81c23dfda915f
+msgid "Current playback state. Can be set to start/stop playback."
+msgstr "设置为    ``true``    开始播放，设置为    ``false``    停止播放"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:228 d604f8affec14ee8a30b441672462eb3
+msgid ":ref:`bool<class_bool>` **stream_paused** = ``false``"
+msgstr ":ref:`bool<class_bool>` **stream_paused** = ``false``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:232
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:480 74cbd4f41d9d4a158d2012bdb3247189
+#: 9d2254766bdd45f48c5f929357ce2979
+msgid "|void| **set_stream_paused**\\ (\\ paused\\: :ref:`bool<class_bool>`\\ )"
+msgstr "|void| **set_stream_paused**\\ (\\ paused\\: :ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:233
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:494 02fd425f73944c3481fc8cf2a4d69977
+#: 3900d03b3ef34a398ec09f142f811fbb
+msgid ":ref:`bool<class_bool>` **get_stream_paused**\\ (\\ ) |const|"
+msgstr ":ref:`bool<class_bool>` **get_stream_paused**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:235 ccd5ca63b2d5483ab5a62f8246b288c0
+msgid "If ``true``, playback is paused."
+msgstr "是否暂停当前播放流"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:245 42f59414352044dfa2e9e17c519d04b7
+msgid ":ref:`float<class_float>` **volume_db** = ``0.0``"
+msgstr ":ref:`float<class_float>` **volume_db** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:249
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:524 728655097bd540d184d8cd8703e7dd56
+#: aafc4223535546a4811ebf17084116ad
+msgid "|void| **set_volume_db**\\ (\\ volume_db\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_volume_db**\\ (\\ volume_db\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:250
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:540 377cebafb21046f3af185e617e1be0af
+#: cd173f16a16c4db6aba7305bd197a3bc
+msgid ":ref:`float<class_float>` **get_volume_db**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_volume_db**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:252 4611ad31f4d749c0af4ff0ba44ba5046
+msgid "Volume in decibels. ``0.0`` is unity gain, negative values attenuate."
+msgstr "播放音量，单位为分贝"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:262 faf1ca9f91e84130963cb469becacb0c
+msgid ":ref:`float<class_float>` **pitch_scale** = ``1.0``"
+msgstr ":ref:`float<class_float>` **pitch_scale** = ``1.0``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:266
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:556 9b21221669c84b20ad895faab20d2d26
+#: a738f9769dde457cbc1f5fdeb490f2d6
+msgid "|void| **set_pitch_scale**\\ (\\ pitch_scale\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_pitch_scale**\\ (\\ pitch_scale\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:267
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:572 bdd6af1340a14d85930cb7834ce749f9
+#: dbbed24ae003425396eeb71fc1263ade
+msgid ":ref:`float<class_float>` **get_pitch_scale**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_pitch_scale**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:269 666360679af04456abf1e48a98f52042
+msgid "Pitch scale of the audio. ``1.0`` is the default pitch."
+msgstr "播放速度和音高缩放"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:279 0b59a01e57af4d55b843a8fa700a8c0d
+msgid ":ref:`MixTarget<enum_FmodAudioStreamPlayer_MixTarget>` **mix_target** = ``0``"
+msgstr ":ref:`MixTarget<enum_FmodAudioStreamPlayer_MixTarget>` **mix_target** = ``0``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:283
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:586 2315e86c64ae40ad8ba6304cdf067e17
+#: d72da28759554349aa81741c517e348a
+msgid ""
+"|void| **set_mix_target**\\ (\\ mix_target\\: "
+":ref:`MixTarget<enum_FmodAudioStreamPlayer_MixTarget>`\\ )"
+msgstr ""
+"|void| **set_mix_target**\\ (\\ mix_target\\: "
+":ref:`MixTarget<enum_FmodAudioStreamPlayer_MixTarget>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:284
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:598 b81cc81c2d1a45d8984a06c26482a30e
+#: ce0f8e39d03f4eb9909f25d2e3c70d01
+msgid ":ref:`MixTarget<enum_FmodAudioStreamPlayer_MixTarget>` **get_mix_target**\\ (\\ ) |const|"
+msgstr ":ref:`MixTarget<enum_FmodAudioStreamPlayer_MixTarget>` **get_mix_target**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:286 b8787706e8524117829d4ab8da14d94e
+msgid "The speaker mix target used by this player."
+msgstr "当前播放器使用的扬声器混音目标。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:296 59dbe49ddfa548bab2ccc3a34a719d6b
+msgid ":ref:`bool<class_bool>` **auto_play** = ``false``"
+msgstr ":ref:`bool<class_bool>` **auto_play** = ``false``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:300
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:612 74617e0f713f4cabae01133a6f1901e7
+#: b4e161cd75f1499dbddc8105840fe979
+msgid "|void| **set_auto_play**\\ (\\ enable\\: :ref:`bool<class_bool>`\\ )"
+msgstr "|void| **set_auto_play**\\ (\\ enable\\: :ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:301
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:626 6d3f43d4892e42f9972e0c1cffb4143f
+#: bc10b0e1049c46aba26b66a8003590ac
+msgid ":ref:`bool<class_bool>` **is_autoplay_enabled**\\ (\\ ) |const|"
+msgstr ":ref:`bool<class_bool>` **is_autoplay_enabled**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:303 c3105b84039d4553b621c5c21c0054a5
+msgid "If ``true``, audio plays automatically when the node enters the scene tree."
+msgstr "进入场景树后自动播放"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:313 21d8d8ea32d84af9a110b51472fef5f3
+msgid ":ref:`bool<class_bool>` **preload_on_set_stream** = ``false``"
+msgstr ":ref:`bool<class_bool>` **preload_on_set_stream** = ``false``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:317
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:642 42b2127f6cb34e1682e20f52f4ce2990
+#: cb20cb5bf8bf4dd58d57fa8e1c39ea9e
+msgid "|void| **set_preload_on_set_stream**\\ (\\ enable\\: :ref:`bool<class_bool>`\\ )"
+msgstr "|void| **set_preload_on_set_stream**\\ (\\ enable\\: :ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:318
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:656 9cc537a113724dee98ad50486b679179
+#: a86a99d2a9184afc8bc05a32efd5a69a
+msgid ":ref:`bool<class_bool>` **is_preload_on_set_stream_enabled**\\ (\\ ) |const|"
+msgstr ":ref:`bool<class_bool>` **is_preload_on_set_stream_enabled**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:320 7c6b0017ed464746b39398f2f260d438
+msgid ""
+"If ``true``, assigning a stream creates its internal :ref:`FmodSound<class_FmodSound>` "
+"immediately instead of waiting for the first playback."
+msgstr "设置    ``stream``    时是否立即预加载内部    :ref:`FmodSound<class_FmodSound>`"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:330 f832f09b65a94053af42addc91978c29
+msgid ":ref:`StringName<class_StringName>` **bus** = ``&\"Master\"``"
+msgstr ":ref:`StringName<class_StringName>` **bus** = ``&\"Master\"``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:334
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:670 5c8f541cf00942ff96ad9f9c196e22e5
+#: 5e0afcc76c0e4eeab8b3fb59c96fa0d7
+msgid "|void| **set_bus**\\ (\\ bus\\: :ref:`StringName<class_StringName>`\\ )"
+msgstr "|void| **set_bus**\\ (\\ bus\\: :ref:`StringName<class_StringName>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:335
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:686 7f6dcbc4888d47c98879d742d8427e72
+#: e53728f491114652b5777073530d8bb8
+msgid ":ref:`StringName<class_StringName>` **get_bus**\\ (\\ ) |const|"
+msgstr ":ref:`StringName<class_StringName>` **get_bus**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:337 1bc7c57239ca4ee48747577928b8ee91
+msgid "The name of the audio bus to route output to."
+msgstr "输出到的音频总线名称"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:346 04ee02536dfa431e93d0e11520fb48eb
+msgid "Method Descriptions"
+msgstr "方法说明"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:356 1ac4665d39e74561a93da503e8cd8bae
+msgid ""
+"Sets the :ref:`FmodAudioStream<class_FmodAudioStream>` to play. The stream can be changed during "
+"playback,"
+msgstr "设置要播放的音频流 （参见   :ref:`FmodAudioStream<class_FmodAudioStream>`  ）"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:358 a3e941529e064f28a272fb0d85bde353
+msgid "which will stop the current playback and start the new stream if playing."
+msgstr "如果当前正在播放，会先停止当前通道并清除播放状态"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:372 e6e8145fdc8b42afab444897723b8c1a
+msgid "Returns the :ref:`FmodAudioStream<class_FmodAudioStream>` currently assigned to this player."
+msgstr "返回当前设置的音频流 （参见   :ref:`FmodAudioStream<class_FmodAudioStream>`  ）"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:374 e51230906a924996bf356eb20a4d5e6c
+msgid "Returns ``null`` if no stream is set."
+msgstr "未设置音频流时返回    ``null``   。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:386 0d220d74911d40fbb6ab294f537ae746
+msgid ":ref:`bool<class_bool>` **preload_stream**\\ (\\ )"
+msgstr ":ref:`bool<class_bool>` **preload_stream**\\ (\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:388 8c4ae2e826ae42d491471c58e7aa030e
+msgid ""
+"Preloads the assigned stream by creating its internal :ref:`FmodSound<class_FmodSound>` before "
+"playback starts."
+msgstr ""
+"预加载当前    ``stream``   ，提前创建内部    :ref:`FmodSound<class_FmodSound>`   ，用于减少第一次播放时的延迟。创建成功返回    "
+"``true``   。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:390 530881dc2802493aad91934fafdd7e05
+msgid "This reduces first-play latency when the stream is later played."
+msgstr "可降低后续首次播放该音频流的延迟。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:402 23066a7f6ab0452c8f3cc5d4e63f82d0
+msgid "|void| **play**\\ (\\ from_position\\: :ref:`float<class_float>` = 0.0\\ )"
+msgstr "|void| **play**\\ (\\ from_position\\: :ref:`float<class_float>` = 0.0\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:404 0e07a81ee7e3461b9002fbf5e2335d4f
+msgid "Starts playing the assigned stream from the specified position in seconds."
+msgstr "从指定位置开始播放，单位为秒"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:406 6a735ecd71d04e54b3b45b72b1edc1f8
+msgid "If ``from_position`` is negative, playback starts from the beginning."
+msgstr "如果内部通道仍然有效，会复用该通道并跳转到指定位置；否则会从当前    ``stream``    创建新的 FMOD 通道"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:418 8934f891eaf043e6a1838aa59244e1f7
+msgid "|void| **seek**\\ (\\ to_position\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **seek**\\ (\\ to_position\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:420 154c7702bc96447e8e145c3399f5d937
+msgid "Seeks to the specified position in seconds during playback."
+msgstr "跳转到指定播放位置，单位为秒"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:422 b226754eac3043ae9cb7dd8c5d436fdb
+msgid "This can be called while playing or paused."
+msgstr "播放或暂停时均可调用。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:434 a5cb0b58b20b4cb2943d1fa6f540cb92
+msgid "|void| **stop**\\ (\\ )"
+msgstr "|void| **stop**\\ (\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:436 63d75fa66f864c23b575d654c7ec2a97
+msgid "Stops playback and resets the position to the beginning."
+msgstr "停止播放并清除暂停状态"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:450 4b7287e11b8940969d3849185f1418e2
+msgid "Controls playback state. Setting to ``true`` starts playback from the beginning."
+msgstr "设置播放状态"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:452 04d6cdc0517c41389ea81b21583da558
+msgid "Setting to ``false`` stops playback."
+msgstr "设为    ``false``    会停止播放。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:466 7f16f7a01c064325858cfcba0fdd99b6
+msgid "Returns ``true`` if audio is currently playing."
+msgstr "如果内部通道有效且正在播放，则返回    ``true``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:468 9c0643d254724300a1837ec58d1237e3
+msgid "Note that this returns ``false`` when paused, even though playback is active."
+msgstr "暂停时返回    ``false``   ，即使播放尚未结束。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:482 187fddc602a14daaa19d2ec1344a7d02
+msgid "Pauses or resumes playback without changing position."
+msgstr "暂停或恢复当前播放流"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:496 629e22f39f6c410b9e9a5ccaf08c5608
+msgid "Returns ``true`` if the stream playback is currently paused."
+msgstr "返回当前播放流的暂停状态"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:508 ad754b05a1af41e583926fd434b5389b
+msgid ":ref:`float<class_float>` **get_playback_position**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_playback_position**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:510 f29fc3d9e6e74e18b999f5bcf6de939c
+msgid "Returns the current playback position in seconds."
+msgstr "返回当前播放位置，单位为秒"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:512 c08855cd6a274d3cbc42e79f5f25d502
+msgid "Returns ``0.0`` if not playing."
+msgstr "未播放时返回    ``0.0``   。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:526 ecd8c4d3064b4695af1675813552c9ce
+msgid "Sets the volume in decibels."
+msgstr "设置音量，单位为分贝"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:528 07ce33a3a8e84a05b7cd900bbff1b232
+msgid "\\ ``0.0`` is unity gain. Negative values attenuate, positive values amplify (if supported)."
+msgstr "``0.0``    为单位增益；负值衰减，正值放大（若支持）。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:542 32d9b1a7d6f845bd97829224e278e80c
+msgid "Returns the current volume in decibels."
+msgstr "返回当前音量，单位为分贝"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:544 3ef82da13b3f43de8f7448d6ff9c9c3a
+msgid "The default value is ``0.0`` dB (unity gain)."
+msgstr "默认值为    ``0.0``    dB，即单位增益。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:558 1ddac92de2df4f2593c6f60708df0221
+msgid "Sets the pitch scale of the audio playback."
+msgstr "设置播放速度和音高缩放"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:560 db53813a3a614d24b7b95b5ccc72eb76
+msgid "\\ ``1.0`` is normal pitch. Higher values increase pitch and playback speed."
+msgstr "``1.0``    为正常音高。较大的值会提高音高和播放速度。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:574 dbfe378d56854c4390128e384fefe1c5
+msgid "Returns the current pitch scale of the audio playback."
+msgstr "返回当前播放速度和音高缩放"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:576 44972c653d4f4ce4a34a7ba838f8c569
+msgid "\\ ``1.0`` is the default pitch, ``0.5`` is one octave lower, ``2.0`` is one octave higher."
+msgstr "``1.0``    为默认音高，   ``0.5``    降低一个八度，   ``2.0``    升高一个八度。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:588 e653674ec4cc4a119c2c18224863541e
+msgid ""
+"Sets the mix target. On surround output, "
+":ref:`MIX_TARGET_STEREO<class_FmodAudioStreamPlayer_constant_MIX_TARGET_STEREO>` routes to the "
+"front left/right speakers, "
+":ref:`MIX_TARGET_SURROUND<class_FmodAudioStreamPlayer_constant_MIX_TARGET_SURROUND>` routes to "
+"all speaker positions, and "
+":ref:`MIX_TARGET_CENTER<class_FmodAudioStreamPlayer_constant_MIX_TARGET_CENTER>` routes to "
+"center/LFE."
+msgstr ""
+"设置混音目标。环绕输出下，   :ref:`MIX_TARGET_STEREO<class_FmodAudioStreamPlayer_constant_MIX_TARGET_STEREO>`"
+"    路由到前置左右扬声器，   "
+":ref:`MIX_TARGET_SURROUND<class_FmodAudioStreamPlayer_constant_MIX_TARGET_SURROUND>`    "
+"路由到所有扬声器位置，   :ref:`MIX_TARGET_CENTER<class_FmodAudioStreamPlayer_constant_MIX_TARGET_CENTER>`"
+"    路由到中置和 LFE。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:600 d2f670f56b2949bfa67efe1c90c0e00f
+msgid "Returns the mix target used to route this player's output across available speakers."
+msgstr "返回当前播放器用于向扬声器路由音频的混音目标。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:614 214642b5e6654d83a219e4ac34da83f6
+msgid ""
+"Enables or disables autoplay. When enabled, the stream starts playing automatically when the node"
+" enters the scene tree."
+msgstr "设置是否在进入场景树后自动播放"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:628 89b91417b9fa497e8cc48fad6b8c079d
+msgid "Returns ``true`` if autoplay is enabled."
+msgstr "如果启用了自动播放，则返回    ``true``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:630 36577188a8e744f6aa63e3ed76475107
+msgid "When enabled, playback starts automatically when the node enters the scene tree."
+msgstr "启用后，节点进入场景树时自动开始播放。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:644 6a60994a58324f4eabfb2e016d3000b6
+msgid ""
+"If enabled, assigning :ref:`stream<class_FmodAudioStreamPlayer_property_stream>` immediately "
+"preloads it."
+msgstr "设置是否在赋值    :ref:`stream<class_FmodAudioStreamPlayer_property_stream>`    时立即预加载。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:658 2f6ae5a26b1844edbbe90f37c0921420
+msgid "Returns ``true`` if streams are preloaded as soon as they are assigned."
+msgstr "如果启用了赋值时预加载，则返回    ``true``   。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:672 951a330f61fa42128e2295b3854999d5
+msgid "Sets the audio bus to route this player's output to."
+msgstr "设置输出总线名称"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:674 94755d5125cc457b9f61fec201ebe579
+msgid "The bus name should match a bus in the :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`."
+msgstr "总线名称应与    :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`    中的总线匹配。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:688 b0606c4b718847ccbdb9e2982a13ef08
+msgid "Returns the name of the audio bus this player outputs to."
+msgstr "返回当前输出总线名称"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:690 34a6a324f5994a87832edc4e8caf6216
+msgid "The default value is ``&\"Master\"``."
+msgstr "如果设置的总线不存在，则返回    ``\"Master\"``"

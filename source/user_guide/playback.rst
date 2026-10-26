@@ -16,11 +16,11 @@
   * - 需求
     - 推荐方式
   * - 背景音乐、长音频、场景里的固定播放器
-    - :ref:`FmodAudioStreamPlayer<FmodAudioStreamPlayer>`
+    - :ref:`FmodAudioStreamPlayer<class_FmodAudioStreamPlayer>`
   * - 2D 场景里的音效
-    - :ref:`FmodAudioStreamPlayer2D<FmodAudioStreamPlayer2D>`
+    - :ref:`FmodAudioStreamPlayer2D<class_FmodAudioStreamPlayer2D>`
   * - 3D 世界里的声源
-    - :ref:`FmodAudioStreamPlayer3D<FmodAudioStreamPlayer3D>`
+    - :ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>`
   * - 同一个短音效频繁触发
     - 预加载 :ref:`音频资产<glossary-audio-asset>`，或复用 :ref:`Sound<glossary-sound>`
   * - 播放后还要精细控制
@@ -222,7 +222,7 @@
 优先使用 3D 播放节点
 ~~~~~~~~~~~~~~~~~~~~
 
-在 3D 场景里，最简单的方式是使用 :ref:`FmodAudioStreamPlayer3D<FmodAudioStreamPlayer3D>`。它会把节点位置同步给 FMOD。
+在 3D 场景里，最简单的方式是使用 :ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>`。它会把节点位置同步给 FMOD。
 
 .. code-block:: gdscript
 
@@ -310,5 +310,5 @@
 - 入门先用播放节点，不要一开始就直接操作底层对象。
 - 需要控制“这一次播放”时，再拿 :ref:`Channel<glossary-channel>`。
 - 长音乐走 ``Music`` 总线，短音效走 ``SFX`` 总线。
-- 3D 声音优先用 :ref:`FmodAudioStreamPlayer3D<FmodAudioStreamPlayer3D>`。
+- 3D 声音优先用 :ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>`。
 - 代码播放时，如果要先配置参数，就用暂停状态创建，再恢复播放。

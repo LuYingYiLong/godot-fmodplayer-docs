@@ -1,0 +1,850 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, LuYingYiLong
+# This file is distributed under the same license as the Godot FmodPlayer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot FmodPlayer \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:12 a68082196bd44b93aff29f998b924917
+msgid "FmodAudioEffectChorus"
+msgstr "FmodAudioEffectChorus"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:14 3588f5db108c4da0ab944e192e616603
+msgid ""
+"**Inherits:** :ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>`"
+" **<** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+msgstr ""
+"**继承：** :ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>` **<**"
+" :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:16 ba42a109b5b845ccb5cb9d06383f45dc
+msgid "Chorus effect for thickening and enriching audio with multiple detuned voices."
+msgstr "合唱效果，支持多个 voice 的延迟、速率、深度、电平、截止频率和声像控制。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:21 4fcb25cdf7684273a01adea16eb340b8
+msgid "Description"
+msgstr "描述"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:23 0e1497fdde114029acb5cc0ce3a885de
+msgid ""
+"FmodAudioEffectChorus creates a chorus effect by mixing the original signal with multiple delayed"
+" and pitch-modulated copies (voices). This produces a thicker, richer sound similar to multiple "
+"instruments or voices playing in unison."
+msgstr ""
+"**FmodAudioEffectChorus**    通过多个轻微延迟并调制的 voice 叠加出合唱感。你可以控制整体干湿比例，也可以逐 voice "
+"调整延迟、调制速率、深度、电平、截止频率和声像。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:25 04c634a1a0f541aea0dd4633b11127d7
+msgid ""
+"The effect uses up to 4 voices, each with independently configurable delay, modulation rate, "
+"depth, level, filter cutoff, and panning. Use this effect to add warmth, depth, and spatial width"
+" to audio."
+msgstr "最多使用 4 个声部，每个声部的延迟、调制速率、深度、电平、截止频率和声像均可独立配置，可增加声音的厚度、层次和立体声宽度。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:30 e6b268b45b5f42f8807696ed27a3d602
+msgid "Properties"
+msgstr "属性"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:36
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:102 215f704a87fe4ebfab7c8c655eb2a968
+#: 82075024e6a2463eb6297687d030c28b
+msgid ":ref:`int<class_int>`"
+msgstr ":ref:`int<class_int>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:36 4dde83d0a5f04163a31ca86f5147c402
+msgid ":ref:`voice_count<class_FmodAudioEffectChorus_property_voice_count>`"
+msgstr ":ref:`voice_count<class_FmodAudioEffectChorus_property_voice_count>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:36 26465d1781f44f71a877f4d9ed712d18
+msgid "``2``"
+msgstr "``2``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:38
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:40
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:42
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:44
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:46
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:48
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:50
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:52
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:54
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:56
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:58
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:60
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:62
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:64
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:66
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:68
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:70
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:72
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:74
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:76
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:78
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:80
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:82
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:84
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:86
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:88
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:106
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:110
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:114
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:118
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:122
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:126
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:130
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:134 02075c222f834bc6872eea016b1e9f81
+#: 0b511a1421044cfc9c6f46acfde5c966 16ee717800a24005863f77f2e1e5695f 20ae4c5e29d5447c9a9efdbbf697a74d
+#: 25101dad2dec46f78782eac891ae22a2 300888c0c11c4c79853c3880f1383932 4044049776124376847cbc5c061e1760
+#: 41e56b95b67843bd9e2ca464dc07a895 42af03b503694ef4a27f37c2cb3cf7b0 48ee69b52c29434bb14822cbadd9415b
+#: 4c85d1e53c0a451ca050dc03e0aafa4d 60fe7fff3f8b449b9c6d24c9e7d3e57f 6f35dee2cdc243839c25c67ff1f9560d
+#: 746efce381a14f64b229efcafd044aca 796443bf7eb74500a491d8cbf0792618 8292f6050af448a19e0baeed395a66f9
+#: 8390a846a23f4a99a1c9622c80709c42 85f4e2df59324d5fa0985de276658cc9 86cafcdb526b488e816d91473b6560fc
+#: 8a6aa722149141dea448cfaa8dcbfd0d 8aa3294066ff4cbe81afd7567c1608fa a094a3455cf84fc79c5c84155e1b2dd0
+#: b0f7f93e772e49a8badb5fa4a3de7e4d b2852bed6dbe4594ac28134fcdfc31d4 b7587d807e284a30a5b93aa1d011d1f5
+#: c264e73df1e9417f85224759cfb31487 c2b74b8359e04663bed5e5701adffcc0 c480aaf11c3140398876bf4e001ee714
+#: cb48b2d547f04a95a09d7179ffde1acf e56aea7674ce45158d19481ce080d0da e66565ca4f2b483db68fc9a4a1c0ab4c
+#: eb380a2ce17a4fbea00911c43acb3b65 f0e26e40fc6a47aa9a0838b339528404 f60a8df3816644d7868e4ff94c720817
+msgid ":ref:`float<class_float>`"
+msgstr ":ref:`float<class_float>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:38 e27ea626709444ebae499d8266f76500
+msgid ":ref:`wet<class_FmodAudioEffectChorus_property_wet>`"
+msgstr ":ref:`wet<class_FmodAudioEffectChorus_property_wet>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:38
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:84 132ebaff59bd482abcc589a7e54a2dd2
+#: 4dae0810b01f44d8973ec17615062b20
+msgid "``0.5``"
+msgstr "``0.5``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:40 842a81869afe45f98801f3c5b4800586
+msgid ":ref:`dry<class_FmodAudioEffectChorus_property_dry>`"
+msgstr ":ref:`dry<class_FmodAudioEffectChorus_property_dry>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:40 11909a6122f148bdb8e30a891bb88f9a
+msgid "``1.0``"
+msgstr "``1.0``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:42 7c51dba2368e4100af6db902b3df8180
+msgid ":ref:`voice/1/delay_ms<class_FmodAudioEffectChorus_property_voice/1/delay_ms>`"
+msgstr ":ref:`voice/1/delay_ms<class_FmodAudioEffectChorus_property_voice/1/delay_ms>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:42 782b312155ce421cbcd5ec662d035fe6
+msgid "``15.0``"
+msgstr "``15.0``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:44 4567bfa46f354dea87606dee1e534d07
+msgid ":ref:`voice/2/delay_ms<class_FmodAudioEffectChorus_property_voice/2/delay_ms>`"
+msgstr ":ref:`voice/2/delay_ms<class_FmodAudioEffectChorus_property_voice/2/delay_ms>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:44 42b35633bc8c4f9098db3f4f661248cc
+msgid "``20.0``"
+msgstr "``20.0``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:46 58b1e4d6a2cd4eec804270d9d57c801a
+msgid ":ref:`voice/3/delay_ms<class_FmodAudioEffectChorus_property_voice/3/delay_ms>`"
+msgstr ":ref:`voice/3/delay_ms<class_FmodAudioEffectChorus_property_voice/3/delay_ms>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:48 49851e3601c647f0983c88e3800579b2
+msgid ":ref:`voice/4/delay_ms<class_FmodAudioEffectChorus_property_voice/4/delay_ms>`"
+msgstr ":ref:`voice/4/delay_ms<class_FmodAudioEffectChorus_property_voice/4/delay_ms>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:50 fb6a49a5d8ff4c05a2ab9d358fbf84ca
+msgid ":ref:`voice/1/rate_hz<class_FmodAudioEffectChorus_property_voice/1/rate_hz>`"
+msgstr ":ref:`voice/1/rate_hz<class_FmodAudioEffectChorus_property_voice/1/rate_hz>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:50 a5905412678b4815b55fa2acd84214e2
+msgid "``0.8``"
+msgstr "``0.8``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:52 c0dd55c9000d4b8b9ce65d0fbc510725
+msgid ":ref:`voice/2/rate_hz<class_FmodAudioEffectChorus_property_voice/2/rate_hz>`"
+msgstr ":ref:`voice/2/rate_hz<class_FmodAudioEffectChorus_property_voice/2/rate_hz>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:52 5bdc51dc38944b8e98c356f635da5081
+msgid "``1.2``"
+msgstr "``1.2``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:54 0804b6c9652f40c18d0f96949eb2574c
+msgid ":ref:`voice/3/rate_hz<class_FmodAudioEffectChorus_property_voice/3/rate_hz>`"
+msgstr ":ref:`voice/3/rate_hz<class_FmodAudioEffectChorus_property_voice/3/rate_hz>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:56 9d5195efa12a4439b660a1405b5a214c
+msgid ":ref:`voice/4/rate_hz<class_FmodAudioEffectChorus_property_voice/4/rate_hz>`"
+msgstr ":ref:`voice/4/rate_hz<class_FmodAudioEffectChorus_property_voice/4/rate_hz>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:58 a128f923e76b44548c8e614a8b8ab132
+msgid ":ref:`voice/1/depth_ms<class_FmodAudioEffectChorus_property_voice/1/depth_ms>`"
+msgstr ":ref:`voice/1/depth_ms<class_FmodAudioEffectChorus_property_voice/1/depth_ms>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:58 7acd6378b1a14f03958a9223fb0c6e87
+msgid "``2.0``"
+msgstr "``2.0``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:60 fdef64f823774fedb5d9c9af179365ad
+msgid ":ref:`voice/2/depth_ms<class_FmodAudioEffectChorus_property_voice/2/depth_ms>`"
+msgstr ":ref:`voice/2/depth_ms<class_FmodAudioEffectChorus_property_voice/2/depth_ms>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:60 2e5955aaedd24f62b9d848ce012e4aa8
+msgid "``3.0``"
+msgstr "``3.0``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:62 7d415104f9094760a0e80415cad81747
+msgid ":ref:`voice/3/depth_ms<class_FmodAudioEffectChorus_property_voice/3/depth_ms>`"
+msgstr ":ref:`voice/3/depth_ms<class_FmodAudioEffectChorus_property_voice/3/depth_ms>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:64 f3bd6f3be5cf45cc9b95a123db07ad93
+msgid ":ref:`voice/4/depth_ms<class_FmodAudioEffectChorus_property_voice/4/depth_ms>`"
+msgstr ":ref:`voice/4/depth_ms<class_FmodAudioEffectChorus_property_voice/4/depth_ms>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:66 555ae508c22d4c7aa71e8b54ccb2fa3d
+msgid ":ref:`voice/1/level_db<class_FmodAudioEffectChorus_property_voice/1/level_db>`"
+msgstr ":ref:`voice/1/level_db<class_FmodAudioEffectChorus_property_voice/1/level_db>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:66
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:68 242778faf8de4267a3247ce106fc92ef
+#: 7a0b24f6b8b74645babe8e21ee52ccb1
+msgid "``0.0``"
+msgstr "``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:68 ff0a4a8d29b847f19a806c9c9bf3296a
+msgid ":ref:`voice/2/level_db<class_FmodAudioEffectChorus_property_voice/2/level_db>`"
+msgstr ":ref:`voice/2/level_db<class_FmodAudioEffectChorus_property_voice/2/level_db>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:70 7b6eb880187c497892e00fbc89404035
+msgid ":ref:`voice/3/level_db<class_FmodAudioEffectChorus_property_voice/3/level_db>`"
+msgstr ":ref:`voice/3/level_db<class_FmodAudioEffectChorus_property_voice/3/level_db>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:72 a86e130faf8442169919b739ddea6555
+msgid ":ref:`voice/4/level_db<class_FmodAudioEffectChorus_property_voice/4/level_db>`"
+msgstr ":ref:`voice/4/level_db<class_FmodAudioEffectChorus_property_voice/4/level_db>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:74 8f6bba9acda647ffaed7b4923af37b63
+msgid ":ref:`voice/1/cutoff_hz<class_FmodAudioEffectChorus_property_voice/1/cutoff_hz>`"
+msgstr ":ref:`voice/1/cutoff_hz<class_FmodAudioEffectChorus_property_voice/1/cutoff_hz>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:74
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:76 b1ce507aa7b84789911287bf3e25dda1
+#: b3df16253b334ffb8d460fddd14b0fe7
+msgid "``8000.0``"
+msgstr "``8000.0``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:76 a05a750d09294793a3e12ab5e0a975a8
+msgid ":ref:`voice/2/cutoff_hz<class_FmodAudioEffectChorus_property_voice/2/cutoff_hz>`"
+msgstr ":ref:`voice/2/cutoff_hz<class_FmodAudioEffectChorus_property_voice/2/cutoff_hz>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:78 203d6495eb8e46468cf8b2f27c8c990a
+msgid ":ref:`voice/3/cutoff_hz<class_FmodAudioEffectChorus_property_voice/3/cutoff_hz>`"
+msgstr ":ref:`voice/3/cutoff_hz<class_FmodAudioEffectChorus_property_voice/3/cutoff_hz>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:80 f25bd92b6e4d4f4e98869968fddfd9f9
+msgid ":ref:`voice/4/cutoff_hz<class_FmodAudioEffectChorus_property_voice/4/cutoff_hz>`"
+msgstr ":ref:`voice/4/cutoff_hz<class_FmodAudioEffectChorus_property_voice/4/cutoff_hz>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:82 aac4ae129cc7498c90ade991b7457342
+msgid ":ref:`voice/1/pan<class_FmodAudioEffectChorus_property_voice/1/pan>`"
+msgstr ":ref:`voice/1/pan<class_FmodAudioEffectChorus_property_voice/1/pan>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:82 4104acc922804d5b908ea0c059544ab3
+msgid "``-0.5``"
+msgstr "``-0.5``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:84 5be60224d9654a249eaf13aee7f4b418
+msgid ":ref:`voice/2/pan<class_FmodAudioEffectChorus_property_voice/2/pan>`"
+msgstr ":ref:`voice/2/pan<class_FmodAudioEffectChorus_property_voice/2/pan>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:86 cf67823c473b4ebfbb2405d249920118
+msgid ":ref:`voice/3/pan<class_FmodAudioEffectChorus_property_voice/3/pan>`"
+msgstr ":ref:`voice/3/pan<class_FmodAudioEffectChorus_property_voice/3/pan>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:88 d4eb46ef846d404d9195c20efb66e30c
+msgid ":ref:`voice/4/pan<class_FmodAudioEffectChorus_property_voice/4/pan>`"
+msgstr ":ref:`voice/4/pan<class_FmodAudioEffectChorus_property_voice/4/pan>`"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:94 ac336eab9bcf42d0bdd6327d775c9c41
+msgid "Methods"
+msgstr "方法"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:100
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:104
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:108
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:112
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:116
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:120
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:124
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:128
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:132 0a8303e8726b473daef29a1f5f9d0c80
+#: 598914983dc94f7d91b4ce1465aad1e1 6addd151f57f44f9b652ab23036ad806 6b4aca84d2a5400e9247d5d6d1998515
+#: 7a16dc53121e464e90f0940b6f2e75ef 8605893a193c4b6ca5ec91bd767068d3 873a1203800a450e8581ec6d4718c9f6
+#: b1a689161ad64c8f8624d084ccf3c7f6 c756f5ad7746454181907aca4741af14
+msgid "|void|"
+msgstr "|void|"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:100 6c0ee3302e3149789ab682dc89551674
+msgid ""
+":ref:`set_voice_count<class_FmodAudioEffectChorus_method_set_voice_count>`\\ (\\ voices\\: "
+":ref:`int<class_int>`\\ )"
+msgstr ""
+":ref:`set_voice_count<class_FmodAudioEffectChorus_method_set_voice_count>`\\ (\\ voices\\: "
+":ref:`int<class_int>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:102 0839e246133f4c5dbfe3cf093306d3b7
+msgid ":ref:`get_voice_count<class_FmodAudioEffectChorus_method_get_voice_count>`\\ (\\ ) |const|"
+msgstr ":ref:`get_voice_count<class_FmodAudioEffectChorus_method_get_voice_count>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:104 de7b7b22303f4a99b7dc41005000f78c
+msgid ""
+":ref:`set_wet<class_FmodAudioEffectChorus_method_set_wet>`\\ (\\ amount\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_wet<class_FmodAudioEffectChorus_method_set_wet>`\\ (\\ amount\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:106 e5c9f8174b194bebab708f0bf2d53450
+msgid ":ref:`get_wet<class_FmodAudioEffectChorus_method_get_wet>`\\ (\\ ) |const|"
+msgstr ":ref:`get_wet<class_FmodAudioEffectChorus_method_get_wet>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:108 609f092f3c10447b9cd23788e870ae6d
+msgid ""
+":ref:`set_dry<class_FmodAudioEffectChorus_method_set_dry>`\\ (\\ amount\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_dry<class_FmodAudioEffectChorus_method_set_dry>`\\ (\\ amount\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:110 537d524a3831421fbda404832f1c7d8f
+msgid ":ref:`get_dry<class_FmodAudioEffectChorus_method_get_dry>`\\ (\\ ) |const|"
+msgstr ":ref:`get_dry<class_FmodAudioEffectChorus_method_get_dry>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:112 9ebd2bfbc97e4a42bb693a12dfea3d6e
+msgid ""
+":ref:`set_voice_delay_ms<class_FmodAudioEffectChorus_method_set_voice_delay_ms>`\\ (\\ "
+"voice_idx\\: :ref:`int<class_int>`, delay_ms\\: :ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_voice_delay_ms<class_FmodAudioEffectChorus_method_set_voice_delay_ms>`\\ (\\ "
+"voice_idx\\: :ref:`int<class_int>`, delay_ms\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:114 1cde8e6fb3e44c489ccd314d17a933d9
+msgid ""
+":ref:`get_voice_delay_ms<class_FmodAudioEffectChorus_method_get_voice_delay_ms>`\\ (\\ "
+"voice_idx\\: :ref:`int<class_int>`\\ ) |const|"
+msgstr ""
+":ref:`get_voice_delay_ms<class_FmodAudioEffectChorus_method_get_voice_delay_ms>`\\ (\\ "
+"voice_idx\\: :ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:116 60427415a6e848ab8e2e6d1ca49f0c17
+msgid ""
+":ref:`set_voice_rate_hz<class_FmodAudioEffectChorus_method_set_voice_rate_hz>`\\ (\\ voice_idx\\:"
+" :ref:`int<class_int>`, rate_hz\\: :ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_voice_rate_hz<class_FmodAudioEffectChorus_method_set_voice_rate_hz>`\\ (\\ voice_idx\\:"
+" :ref:`int<class_int>`, rate_hz\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:118 497b8efa1313414881af800d0a93182b
+msgid ""
+":ref:`get_voice_rate_hz<class_FmodAudioEffectChorus_method_get_voice_rate_hz>`\\ (\\ voice_idx\\:"
+" :ref:`int<class_int>`\\ ) |const|"
+msgstr ""
+":ref:`get_voice_rate_hz<class_FmodAudioEffectChorus_method_get_voice_rate_hz>`\\ (\\ voice_idx\\:"
+" :ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:120 4c35f515c9f04878addde7863b35aa73
+msgid ""
+":ref:`set_voice_depth_ms<class_FmodAudioEffectChorus_method_set_voice_depth_ms>`\\ (\\ "
+"voice_idx\\: :ref:`int<class_int>`, depth_ms\\: :ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_voice_depth_ms<class_FmodAudioEffectChorus_method_set_voice_depth_ms>`\\ (\\ "
+"voice_idx\\: :ref:`int<class_int>`, depth_ms\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:122 f976c71c65084d97ac239301d83f1b08
+msgid ""
+":ref:`get_voice_depth_ms<class_FmodAudioEffectChorus_method_get_voice_depth_ms>`\\ (\\ "
+"voice_idx\\: :ref:`int<class_int>`\\ ) |const|"
+msgstr ""
+":ref:`get_voice_depth_ms<class_FmodAudioEffectChorus_method_get_voice_depth_ms>`\\ (\\ "
+"voice_idx\\: :ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:124 dc12f9d0b5d240859a78f681c2823e01
+msgid ""
+":ref:`set_voice_level_db<class_FmodAudioEffectChorus_method_set_voice_level_db>`\\ (\\ "
+"voice_idx\\: :ref:`int<class_int>`, level_db\\: :ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_voice_level_db<class_FmodAudioEffectChorus_method_set_voice_level_db>`\\ (\\ "
+"voice_idx\\: :ref:`int<class_int>`, level_db\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:126 9b9b2f151e6f499b9622718251f2307e
+msgid ""
+":ref:`get_voice_level_db<class_FmodAudioEffectChorus_method_get_voice_level_db>`\\ (\\ "
+"voice_idx\\: :ref:`int<class_int>`\\ ) |const|"
+msgstr ""
+":ref:`get_voice_level_db<class_FmodAudioEffectChorus_method_get_voice_level_db>`\\ (\\ "
+"voice_idx\\: :ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:128 e77a61b1876e4be79cf0bc29bbb60fad
+msgid ""
+":ref:`set_voice_cutoff_hz<class_FmodAudioEffectChorus_method_set_voice_cutoff_hz>`\\ (\\ "
+"voice_idx\\: :ref:`int<class_int>`, cutoff_hz\\: :ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_voice_cutoff_hz<class_FmodAudioEffectChorus_method_set_voice_cutoff_hz>`\\ (\\ "
+"voice_idx\\: :ref:`int<class_int>`, cutoff_hz\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:130 4dcf3e606dd544b99b2342cf165d0269
+msgid ""
+":ref:`get_voice_cutoff_hz<class_FmodAudioEffectChorus_method_get_voice_cutoff_hz>`\\ (\\ "
+"voice_idx\\: :ref:`int<class_int>`\\ ) |const|"
+msgstr ""
+":ref:`get_voice_cutoff_hz<class_FmodAudioEffectChorus_method_get_voice_cutoff_hz>`\\ (\\ "
+"voice_idx\\: :ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:132 20c5b4894dae43f292c0611f585dd03b
+msgid ""
+":ref:`set_voice_pan<class_FmodAudioEffectChorus_method_set_voice_pan>`\\ (\\ voice_idx\\: "
+":ref:`int<class_int>`, pan\\: :ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_voice_pan<class_FmodAudioEffectChorus_method_set_voice_pan>`\\ (\\ voice_idx\\: "
+":ref:`int<class_int>`, pan\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:134 8e8a4ca2711e48938caa55ea329ae481
+msgid ""
+":ref:`get_voice_pan<class_FmodAudioEffectChorus_method_get_voice_pan>`\\ (\\ voice_idx\\: "
+":ref:`int<class_int>`\\ ) |const|"
+msgstr ""
+":ref:`get_voice_pan<class_FmodAudioEffectChorus_method_get_voice_pan>`\\ (\\ voice_idx\\: "
+":ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:144 48b689d4f9cd4bdfbc70f43747fac019
+msgid "Property Descriptions"
+msgstr "属性说明"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:150 99979a1a248645b9b8d7e5d0040e1107
+msgid ":ref:`int<class_int>` **voice_count** = ``2``"
+msgstr ":ref:`int<class_int>` **voice_count** = ``2``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:154
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:496 5142689a77ab4412a2c527ab3610aaae
+#: 7c6ad74290af47a481781b5a0a6ded56
+msgid "|void| **set_voice_count**\\ (\\ voices\\: :ref:`int<class_int>`\\ )"
+msgstr "|void| **set_voice_count**\\ (\\ voices\\: :ref:`int<class_int>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:155
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:510 068780fd56c74cd1b71493c724555ad2
+#: 41c44190c3354e59ae206fbd55effe99
+msgid ":ref:`int<class_int>` **get_voice_count**\\ (\\ ) |const|"
+msgstr ":ref:`int<class_int>` **get_voice_count**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:157 c219b46d8f124156a3f38238142a9e7c
+msgid "The number of active chorus voices. Range: 1 to 4."
+msgstr "参与合唱的 voice 数量"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:167 3947ebe7067343088e15cb258140befe
+msgid ":ref:`float<class_float>` **wet** = ``0.5``"
+msgstr ":ref:`float<class_float>` **wet** = ``0.5``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:171
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:524 aadf2dd07d634774b3d2c2b350f17de9
+#: bcaaff077472444fb86b4fa56e8221bd
+msgid "|void| **set_wet**\\ (\\ amount\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_wet**\\ (\\ amount\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:172
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:538 4e035626badb4b648955667217c9e666
+#: 75f1442ab33b4e3baf70785be6bc5134
+msgid ":ref:`float<class_float>` **get_wet**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_wet**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:174 a1b4dacdbe6b4828adfed933aec796b3
+msgid "The wet (processed) signal level. Range: 0.0 to 1.0."
+msgstr "效果信号电平"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:184 e02acd483f0a4b389e8101045744fa80
+msgid ":ref:`float<class_float>` **dry** = ``1.0``"
+msgstr ":ref:`float<class_float>` **dry** = ``1.0``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:188
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:552 b3a43e79ee3d46e4a8ba23e6b34aeedd
+#: d012e1ee546544ebbe330b0a16d3faf8
+msgid "|void| **set_dry**\\ (\\ amount\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_dry**\\ (\\ amount\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:189
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:566 65af31fe30894a1d8dea683872dcb7d2
+#: 87665b386e3e48f0b114ab400b85c64b
+msgid ":ref:`float<class_float>` **get_dry**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_dry**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:191 786f63aa16e14c7881156b126f7c36b3
+msgid "The dry (unprocessed) signal level. Range: 0.0 to 1.0."
+msgstr "原始信号电平"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:201 771b406f639747a09c546654c4e57adf
+msgid ":ref:`float<class_float>` **voice/1/delay_ms** = ``15.0``"
+msgstr ":ref:`float<class_float>` **voice/1/delay_ms** = ``15.0``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:203 9c27f35a90be42e5b9968dc3150ed208
+msgid "Controls voice/1/delay ms."
+msgstr "控制    ``voice/1/delay_ms``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:213 422612c113cd46559a56c7c97cbed4b2
+msgid ":ref:`float<class_float>` **voice/2/delay_ms** = ``20.0``"
+msgstr ":ref:`float<class_float>` **voice/2/delay_ms** = ``20.0``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:215 e36d804e3aac44aca24e0d405c137b97
+msgid "Controls voice/2/delay ms."
+msgstr "控制    ``voice/2/delay_ms``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:225 5cb2d7946732447b8a03ccad47825638
+msgid ":ref:`float<class_float>` **voice/3/delay_ms**"
+msgstr ":ref:`float<class_float>` **voice/3/delay_ms**"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:227 c77d481644dd42a080eebc16faca995f
+msgid "Controls voice/3/delay ms."
+msgstr "控制    ``voice/3/delay_ms``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:237 1dec76850e574c1e9430591de3029856
+msgid ":ref:`float<class_float>` **voice/4/delay_ms**"
+msgstr ":ref:`float<class_float>` **voice/4/delay_ms**"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:239 59fd145f451945128d8887f6abf58053
+msgid "Controls voice/4/delay ms."
+msgstr "控制    ``voice/4/delay_ms``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:249 be0130bc0aa2430a978cf16a10c1369c
+msgid ":ref:`float<class_float>` **voice/1/rate_hz** = ``0.8``"
+msgstr ":ref:`float<class_float>` **voice/1/rate_hz** = ``0.8``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:251 33fbfae9eb0a43859034e51ed5e18117
+msgid "Controls voice/1/rate hz."
+msgstr "控制    ``voice/1/rate_hz``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:261 f09fc644b5ba4317954f33499211679d
+msgid ":ref:`float<class_float>` **voice/2/rate_hz** = ``1.2``"
+msgstr ":ref:`float<class_float>` **voice/2/rate_hz** = ``1.2``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:263 5dffe96c875e45f7bca4053a4da3609e
+msgid "Controls voice/2/rate hz."
+msgstr "控制    ``voice/2/rate_hz``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:273 7c2ec59d7da94359a2aa88dc6b5c7e1f
+msgid ":ref:`float<class_float>` **voice/3/rate_hz**"
+msgstr ":ref:`float<class_float>` **voice/3/rate_hz**"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:275 c83ab20cd94d47989319776a1b4267e6
+msgid "Controls voice/3/rate hz."
+msgstr "控制    ``voice/3/rate_hz``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:285 59a00e30ee794bf1b0ca6102afbcc622
+msgid ":ref:`float<class_float>` **voice/4/rate_hz**"
+msgstr ":ref:`float<class_float>` **voice/4/rate_hz**"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:287 f2320e299c444673b25a3524d9ee89ff
+msgid "Controls voice/4/rate hz."
+msgstr "控制    ``voice/4/rate_hz``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:297 ed571210bb5247e7a3459749fcdc7f76
+msgid ":ref:`float<class_float>` **voice/1/depth_ms** = ``2.0``"
+msgstr ":ref:`float<class_float>` **voice/1/depth_ms** = ``2.0``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:299 4a83e2f458584ba9874784d8aef54969
+msgid "Controls voice/1/depth ms."
+msgstr "控制    ``voice/1/depth_ms``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:309 5fa04aa2811b421c80a706de87747642
+msgid ":ref:`float<class_float>` **voice/2/depth_ms** = ``3.0``"
+msgstr ":ref:`float<class_float>` **voice/2/depth_ms** = ``3.0``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:311 5cc776a934814b7b85792cf2228c7d03
+msgid "Controls voice/2/depth ms."
+msgstr "控制    ``voice/2/depth_ms``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:321 cd1ef433c02f4831813c2a724cf67216
+msgid ":ref:`float<class_float>` **voice/3/depth_ms**"
+msgstr ":ref:`float<class_float>` **voice/3/depth_ms**"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:323 9db24025ac264f2aa39cc49f4f8d51e7
+msgid "Controls voice/3/depth ms."
+msgstr "控制    ``voice/3/depth_ms``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:333 ead53e3b2f924c04bc5c7d3004f101b3
+msgid ":ref:`float<class_float>` **voice/4/depth_ms**"
+msgstr ":ref:`float<class_float>` **voice/4/depth_ms**"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:335 1f8f45ba8e0143248f2117cd76760839
+msgid "Controls voice/4/depth ms."
+msgstr "控制    ``voice/4/depth_ms``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:345 b045455711fd4a8995ace7ebf33613c6
+msgid ":ref:`float<class_float>` **voice/1/level_db** = ``0.0``"
+msgstr ":ref:`float<class_float>` **voice/1/level_db** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:347 7141769303954ffd96ce87dc9a6ca4fa
+msgid "Controls voice/1/level db."
+msgstr "控制    ``voice/1/level_db``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:357 bc43c6be44ea4f08a0842cb7cef66a3b
+msgid ":ref:`float<class_float>` **voice/2/level_db** = ``0.0``"
+msgstr ":ref:`float<class_float>` **voice/2/level_db** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:359 475de33533374ddb9d9cea88d4140e1f
+msgid "Controls voice/2/level db."
+msgstr "控制    ``voice/2/level_db``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:369 da34a3f10ec84ff5991c7e0f0dabd763
+msgid ":ref:`float<class_float>` **voice/3/level_db**"
+msgstr ":ref:`float<class_float>` **voice/3/level_db**"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:371 ed6e194e11c547cdb0bc04e8a116e90b
+msgid "Controls voice/3/level db."
+msgstr "控制    ``voice/3/level_db``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:381 5264ea4c450044ef88bb86ac0eaed968
+msgid ":ref:`float<class_float>` **voice/4/level_db**"
+msgstr ":ref:`float<class_float>` **voice/4/level_db**"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:383 69edf2adbe804fc5986e4c5a3bf25c08
+msgid "Controls voice/4/level db."
+msgstr "控制    ``voice/4/level_db``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:393 3a57e7d85a704d7f9d5106f94c66b032
+msgid ":ref:`float<class_float>` **voice/1/cutoff_hz** = ``8000.0``"
+msgstr ":ref:`float<class_float>` **voice/1/cutoff_hz** = ``8000.0``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:395 32afc33862de4c22a1f6f061d61148a5
+msgid "Controls voice/1/cutoff hz."
+msgstr "控制    ``voice/1/cutoff_hz``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:405 2281e51711ec483787d47b506501306a
+msgid ":ref:`float<class_float>` **voice/2/cutoff_hz** = ``8000.0``"
+msgstr ":ref:`float<class_float>` **voice/2/cutoff_hz** = ``8000.0``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:407 cab289a66e964dd38701bad80a69dfd2
+msgid "Controls voice/2/cutoff hz."
+msgstr "控制    ``voice/2/cutoff_hz``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:417 6b10ae36980c421baf6bd9e52902def1
+msgid ":ref:`float<class_float>` **voice/3/cutoff_hz**"
+msgstr ":ref:`float<class_float>` **voice/3/cutoff_hz**"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:419 b9df4999c6224fa39b48eb016cd2ce5a
+msgid "Controls voice/3/cutoff hz."
+msgstr "控制    ``voice/3/cutoff_hz``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:429 92233f660cda4dc5aa3fc00dee7b52e9
+msgid ":ref:`float<class_float>` **voice/4/cutoff_hz**"
+msgstr ":ref:`float<class_float>` **voice/4/cutoff_hz**"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:431 7f3cd52a8cd14f56b3483995d64404f5
+msgid "Controls voice/4/cutoff hz."
+msgstr "控制    ``voice/4/cutoff_hz``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:441 5fdd3c0a6dfa4502a22834e50bdea1b0
+msgid ":ref:`float<class_float>` **voice/1/pan** = ``-0.5``"
+msgstr ":ref:`float<class_float>` **voice/1/pan** = ``-0.5``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:443 6897f21b0a004a93be4c249ede7e791b
+msgid "Controls voice/1/pan."
+msgstr "控制    ``voice/1/pan``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:453 7e74e481899f49758456df0ab56d2ec1
+msgid ":ref:`float<class_float>` **voice/2/pan** = ``0.5``"
+msgstr ":ref:`float<class_float>` **voice/2/pan** = ``0.5``"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:455 6be589754dd44df286b21dcfdc46ed46
+msgid "Controls voice/2/pan."
+msgstr "控制    ``voice/2/pan``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:465 ae686a612be64499b7b91bac8839671e
+msgid ":ref:`float<class_float>` **voice/3/pan**"
+msgstr ":ref:`float<class_float>` **voice/3/pan**"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:467 224d73d101934d4ab539ee3f55dc9dc6
+msgid "Controls voice/3/pan."
+msgstr "控制    ``voice/3/pan``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:477 83ed7a5074704086ab3ae51f6215add7
+msgid ":ref:`float<class_float>` **voice/4/pan**"
+msgstr ":ref:`float<class_float>` **voice/4/pan**"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:479 088867b57af443d784af265e20f50b44
+msgid "Controls voice/4/pan."
+msgstr "控制    ``voice/4/pan``   。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:488 a340b034b6f44a93875abb573c16dcad
+msgid "Method Descriptions"
+msgstr "方法说明"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:498 d039a5bc39354abaa8130076a24b384d
+msgid "Sets the number of active chorus voices (1-4)."
+msgstr "设置 voice 数量。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:512 467c469d591749f5a7ab85a35978a1d6
+msgid "Returns the number of active chorus voices (1-4)."
+msgstr "返回 voice 数量。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:526 f176c07fa7fd4adb9e3ad241e448b2f6
+msgid "Sets the wet (processed) signal level (0.0 to 1.0)."
+msgstr "设置效果信号电平。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:540 6e549d74b38743f88960a9607ae7bd39
+msgid "Returns the wet (processed) signal level."
+msgstr "返回效果信号电平。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:554 f7cc20704fc047a0b09c9409acb6141b
+msgid "Sets the dry (unprocessed) signal level (0.0 to 1.0)."
+msgstr "设置原始信号电平。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:568 a8920d71cb07446d847502095d79cca5
+msgid "Returns the dry (unprocessed) signal level."
+msgstr "返回原始信号电平。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:580 db286f830d064b99a081234249daf56d
+msgid ""
+"|void| **set_voice_delay_ms**\\ (\\ voice_idx\\: :ref:`int<class_int>`, delay_ms\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+"|void| **set_voice_delay_ms**\\ (\\ voice_idx\\: :ref:`int<class_int>`, delay_ms\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:582 957422dbb9d1414785e37df37221c7f9
+msgid "Sets the base delay time in milliseconds for the specified voice."
+msgstr "设置指定 voice 的延迟时间。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:594 0d82ff43bc144e56bc0a25534830e88f
+msgid ""
+":ref:`float<class_float>` **get_voice_delay_ms**\\ (\\ voice_idx\\: :ref:`int<class_int>`\\ ) "
+"|const|"
+msgstr ""
+":ref:`float<class_float>` **get_voice_delay_ms**\\ (\\ voice_idx\\: :ref:`int<class_int>`\\ ) "
+"|const|"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:596 cc90a3e0c1a74d479330b8c51e9f81d0
+msgid "Returns the base delay time in milliseconds for the specified voice."
+msgstr "返回指定 voice 的延迟时间。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:608 2feb5a6eb237409bbe934baee0e6cf25
+msgid ""
+"|void| **set_voice_rate_hz**\\ (\\ voice_idx\\: :ref:`int<class_int>`, rate_hz\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+"|void| **set_voice_rate_hz**\\ (\\ voice_idx\\: :ref:`int<class_int>`, rate_hz\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:610 4a8e796c9ca64428b9be421515c8ac47
+msgid "Sets the modulation rate in Hertz for the specified voice."
+msgstr "设置指定 voice 的调制速率。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:622 633d284a80db4e2a89807b7fee836fe5
+msgid ""
+":ref:`float<class_float>` **get_voice_rate_hz**\\ (\\ voice_idx\\: :ref:`int<class_int>`\\ ) "
+"|const|"
+msgstr ""
+":ref:`float<class_float>` **get_voice_rate_hz**\\ (\\ voice_idx\\: :ref:`int<class_int>`\\ ) "
+"|const|"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:624 f6725687a7034f84b713b72251f3d385
+msgid "Returns the modulation rate in Hertz for the specified voice."
+msgstr "返回指定 voice 的调制速率。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:636 8ed2afb1357e491b96db4386377227d7
+msgid ""
+"|void| **set_voice_depth_ms**\\ (\\ voice_idx\\: :ref:`int<class_int>`, depth_ms\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+"|void| **set_voice_depth_ms**\\ (\\ voice_idx\\: :ref:`int<class_int>`, depth_ms\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:638 d78b03319e11417495e939a4370ac4b9
+msgid "Sets the modulation depth in milliseconds for the specified voice."
+msgstr "设置指定 voice 的调制深度。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:650 f930295fd74a41309fdcaf893fbc3326
+msgid ""
+":ref:`float<class_float>` **get_voice_depth_ms**\\ (\\ voice_idx\\: :ref:`int<class_int>`\\ ) "
+"|const|"
+msgstr ""
+":ref:`float<class_float>` **get_voice_depth_ms**\\ (\\ voice_idx\\: :ref:`int<class_int>`\\ ) "
+"|const|"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:652 ec34ec69de6e4139b950096657129488
+msgid "Returns the modulation depth in milliseconds for the specified voice."
+msgstr "返回指定 voice 的调制深度。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:664 82b36cc8aa7f4000ab32af81a2d03c63
+msgid ""
+"|void| **set_voice_level_db**\\ (\\ voice_idx\\: :ref:`int<class_int>`, level_db\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+"|void| **set_voice_level_db**\\ (\\ voice_idx\\: :ref:`int<class_int>`, level_db\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:666 462c076de445443da14fde4492fa6551
+msgid "Sets the output level in decibels for the specified voice."
+msgstr "设置指定 voice 的电平。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:678 8db254ccf54f4f48aaf5feee2acdaea0
+msgid ""
+":ref:`float<class_float>` **get_voice_level_db**\\ (\\ voice_idx\\: :ref:`int<class_int>`\\ ) "
+"|const|"
+msgstr ""
+":ref:`float<class_float>` **get_voice_level_db**\\ (\\ voice_idx\\: :ref:`int<class_int>`\\ ) "
+"|const|"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:680 bbaafe732dce4f298fc790bcd4ace766
+msgid "Returns the output level in decibels for the specified voice."
+msgstr "返回指定 voice 的电平。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:692 b98c66140e464719b84e9a773df67eb8
+msgid ""
+"|void| **set_voice_cutoff_hz**\\ (\\ voice_idx\\: :ref:`int<class_int>`, cutoff_hz\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+"|void| **set_voice_cutoff_hz**\\ (\\ voice_idx\\: :ref:`int<class_int>`, cutoff_hz\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:694 f78e1b63708745589cb7ce0fdf5b6559
+msgid "Sets the lowpass filter cutoff frequency for the specified voice."
+msgstr "设置指定 voice 的截止频率。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:706 892f0a02d79f48ae98efe9026f6cd4eb
+msgid ""
+":ref:`float<class_float>` **get_voice_cutoff_hz**\\ (\\ voice_idx\\: :ref:`int<class_int>`\\ ) "
+"|const|"
+msgstr ""
+":ref:`float<class_float>` **get_voice_cutoff_hz**\\ (\\ voice_idx\\: :ref:`int<class_int>`\\ ) "
+"|const|"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:708 419fa15b306847dcb2880c1f8a45c103
+msgid "Returns the lowpass filter cutoff frequency for the specified voice."
+msgstr "返回指定 voice 的截止频率。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:720 07f5bdb132e74dc5b4e6e8b8885fe363
+msgid ""
+"|void| **set_voice_pan**\\ (\\ voice_idx\\: :ref:`int<class_int>`, pan\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+"|void| **set_voice_pan**\\ (\\ voice_idx\\: :ref:`int<class_int>`, pan\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:722 79180c6f89a44176a5bd04f462b51862
+msgid "Sets the stereo panning position for the specified voice (-1.0 = left, 1.0 = right)."
+msgstr "设置指定 voice 的声像。"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:734 96d91bea90904afeab35355d7fbbf809
+msgid ":ref:`float<class_float>` **get_voice_pan**\\ (\\ voice_idx\\: :ref:`int<class_int>`\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_voice_pan**\\ (\\ voice_idx\\: :ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectchorus.rst:736 7bfcb83d308c4b2e907fe50f68541333
+msgid "Returns the stereo panning position for the specified voice (-1.0 to 1.0)."
+msgstr "返回指定 voice 的声像。"

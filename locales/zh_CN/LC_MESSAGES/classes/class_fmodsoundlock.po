@@ -1,0 +1,147 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, LuYingYiLong
+# This file is distributed under the same license as the Godot FmodPlayer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot FmodPlayer \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/classes/class_fmodsoundlock.rst:12 47455754fab14a739a91c57ed3fee861
+msgid "FmodSoundLock"
+msgstr "FmodSoundLock"
+
+#: ../../source/classes/class_fmodsoundlock.rst:14 17a5ddd99e3d41778c600b3df340cb1d
+msgid "**Inherits:** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+msgstr "**继承：** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+
+#: ../../source/classes/class_fmodsoundlock.rst:16 707b98e19e9b424fb00eec0f7abaa6a9
+msgid "Provides direct access to sound sample data for reading or modification."
+msgstr "提供对声音样本数据的直接访问，以进行读取或修改"
+
+#: ../../source/classes/class_fmodsoundlock.rst:21 196130ff8d6849a491348794f4938092
+msgid "Description"
+msgstr "描述"
+
+#: ../../source/classes/class_fmodsoundlock.rst:23 0bd2547fea4a4808bc2bffb78052a7aa
+msgid ""
+"FmodSoundLock is used to lock a region of sound data for direct access. This allows reading or "
+"modifying the raw sample data of a sound."
+msgstr "FmodSoundLock 用于锁定声音数据的区域以进行直接访问。这允许读取或修改声音的原始采样数据"
+
+#: ../../source/classes/class_fmodsoundlock.rst:25 a06c26b7bd4340a38c9ca78979549c40
+msgid ""
+"When a sound is locked, FMOD provides one or two pointers to the data (two pointers are used if "
+"the locked region wraps around the end of the sound buffer)."
+msgstr "当声音被锁定时，FMOD 会提供一个或两个指向数据的指针（如果锁定的区域绕过了声音缓冲区的末尾，则使用两个指针）"
+
+#: ../../source/classes/class_fmodsoundlock.rst:27 0360a5e3ef3d40258f46dfe05b16822f
+msgid ""
+"\\ **Important:** Always call :ref:`unlock()<class_FmodSoundLock_method_unlock>` when finished "
+"accessing the data, or use the RAII pattern (let the object go out of scope) to automatically "
+"unlock."
+msgstr ""
+"**重要：**    数据访问结束后应调用    :ref:`unlock()<class_FmodSoundLock_method_unlock>`   ，也可让对象离开作用域，利用 RAII"
+" 自动解锁。"
+
+#: ../../source/classes/class_fmodsoundlock.rst:29 f0b595dd4489450a882ba37523ea94a3
+msgid ""
+"\\ **Note:** Locking a sound may be expensive as it can block the mixer thread. Use sparingly and"
+" for short durations."
+msgstr "**注意：**    锁定声音可能阻塞混音线程，开销较大，应减少使用频率和持有时间。"
+
+#: ../../source/classes/class_fmodsoundlock.rst:34 9ba79ab49e364681a0d6c444527b6c9b
+msgid "Methods"
+msgstr "方法"
+
+#: ../../source/classes/class_fmodsoundlock.rst:40 b17bd242da7242429c6ae8c56976d6f2
+msgid "|void|"
+msgstr "|void|"
+
+#: ../../source/classes/class_fmodsoundlock.rst:40 5188256695294062910c053555ce8e2e
+msgid ":ref:`unlock<class_FmodSoundLock_method_unlock>`\\ (\\ )"
+msgstr ":ref:`unlock<class_FmodSoundLock_method_unlock>`\\ (\\ )"
+
+#: ../../source/classes/class_fmodsoundlock.rst:42 ../../source/classes/class_fmodsoundlock.rst:44
+#: 51811eaf26424703ab22c55258a0890e 652fbd9dbf974f6b84b667eba6aed8d4
+msgid ":ref:`PackedByteArray<class_PackedByteArray>`"
+msgstr ":ref:`PackedByteArray<class_PackedByteArray>`"
+
+#: ../../source/classes/class_fmodsoundlock.rst:42 c3f1a31e682e4fa0be9abedd0629f3e9
+msgid ":ref:`get_data1<class_FmodSoundLock_method_get_data1>`\\ (\\ ) |const|"
+msgstr ":ref:`get_data1<class_FmodSoundLock_method_get_data1>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodsoundlock.rst:44 9fc23dc0ac8243f28b8a0131fdb1f786
+msgid ":ref:`get_data2<class_FmodSoundLock_method_get_data2>`\\ (\\ ) |const|"
+msgstr ":ref:`get_data2<class_FmodSoundLock_method_get_data2>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodsoundlock.rst:46 7ef33465b5ca4697b6fee541720fc57b
+msgid ":ref:`bool<class_bool>`"
+msgstr ":ref:`bool<class_bool>`"
+
+#: ../../source/classes/class_fmodsoundlock.rst:46 ba505fe4e9e34968b5f264f874385687
+msgid ":ref:`is_locked<class_FmodSoundLock_method_is_locked>`\\ (\\ ) |const|"
+msgstr ":ref:`is_locked<class_FmodSoundLock_method_is_locked>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodsoundlock.rst:56 c694cda2d82242299d3232edce612f2d
+msgid "Method Descriptions"
+msgstr "方法说明"
+
+#: ../../source/classes/class_fmodsoundlock.rst:64 d21d030e14bc43a58fd40e56dc1e782f
+msgid "|void| **unlock**\\ (\\ )"
+msgstr "|void| **unlock**\\ (\\ )"
+
+#: ../../source/classes/class_fmodsoundlock.rst:66 cc895f357f004839837b3d99e11ff6af
+msgid "Unlocks the sound data, allowing FMOD to resume normal processing."
+msgstr "解锁声音数据，允许 FMOD 恢复正常处理，在访问数据完成后应立即调用此函数"
+
+#: ../../source/classes/class_fmodsoundlock.rst:68 5565a543c54a45618279ab389e56acd5
+msgid "This should be called as soon as you're finished accessing the data."
+msgstr "完成数据访问后应尽快调用。"
+
+#: ../../source/classes/class_fmodsoundlock.rst:70 18c57b20bf60435195a82b7b5c2cce8f
+msgid "The destructor automatically calls this if the data is still locked."
+msgstr "对象析构时若仍处于锁定状态，会自动调用此方法。"
+
+#: ../../source/classes/class_fmodsoundlock.rst:82 30fb9db7aa0e444da674bceb40b5dda4
+msgid ":ref:`PackedByteArray<class_PackedByteArray>` **get_data1**\\ (\\ ) |const|"
+msgstr ":ref:`PackedByteArray<class_PackedByteArray>` **get_data1**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodsoundlock.rst:84 ca6c2ce60dcb42a28889ad55b9c10fae
+msgid "Returns the first portion of locked data as a byte array."
+msgstr "以    ``PackedByteArray``    的形式返回锁定数据的前一部分，在大多数情况下，这包含锁定区域的大部分内容"
+
+#: ../../source/classes/class_fmodsoundlock.rst:86 5b7e119b317c42d98486dfbfaf7332d8
+msgid "This contains the majority of the locked region in most cases."
+msgstr "多数情况下包含锁定区域的主要部分。"
+
+#: ../../source/classes/class_fmodsoundlock.rst:98 fa06233a5a744476b0ed3ed765f07726
+msgid ":ref:`PackedByteArray<class_PackedByteArray>` **get_data2**\\ (\\ ) |const|"
+msgstr ":ref:`PackedByteArray<class_PackedByteArray>` **get_data2**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodsoundlock.rst:100 d195ad14e5c54e68b563c0eb9e048ff0
+msgid "Returns the second portion of locked data as a byte array."
+msgstr "返回锁定数据的第二部分作为    ``PackedByteArray``   ，只有当锁定区域绕过声音缓冲区的末端时，这部分才非空"
+
+#: ../../source/classes/class_fmodsoundlock.rst:102 b5fb37565dd641bba7cfcfb5426cbcbf
+msgid "This is only non-empty when the locked region wraps around the end of the sound buffer."
+msgstr "只有锁定区域跨越声音缓冲区末尾时，此数组才非空。"
+
+#: ../../source/classes/class_fmodsoundlock.rst:114 29957760cfbe48f3a3fc5838ac9b8ae9
+msgid ":ref:`bool<class_bool>` **is_locked**\\ (\\ ) |const|"
+msgstr ":ref:`bool<class_bool>` **is_locked**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodsoundlock.rst:116 00c11c1d313e40af9a72c3ef77c07bef
+msgid "Returns ``true`` if the sound data is currently locked and accessible."
+msgstr "如果声音数据当前被锁定并且可访问，则返回    ``true``"

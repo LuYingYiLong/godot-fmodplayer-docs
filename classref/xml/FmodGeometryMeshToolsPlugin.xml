@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="FmodGeometryMeshToolsPlugin" inherits="EditorPlugin" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/godotengine/godot/master/doc/class.xsd">
+	<brief_description>
+		Editor tool for creating FMOD geometry nodes from selected meshes.
+	</brief_description>
+	<description>
+		FmodGeometryMeshToolsPlugin adds editor actions for selected [MeshInstance3D] nodes. It can create [FmodGeometryInstance3D] children configured for mesh or collision-shape based FMOD occlusion.
+		This class is registered for editor integration and is normally managed by the plugin automatically.
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_on_menu_id_pressed">
+			<return type="void" />
+			<param index="0" name="id" type="int" />
+			<description>
+				Internal editor or engine callback.
+			</description>
+		</method>
+	</methods>
+	<members />
+	<signals />
+	<constants />
+</class>

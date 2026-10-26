@@ -3,7 +3,7 @@ DSP 效果器
 
 本章讲“怎样给声音加效果”。
 
-:ref:`DSP<glossary-dsp>` 是音频效果处理单元。混响、滤波、延迟、压缩、频谱分析都可以看成 DSP。刚开始使用时，建议优先用 ``FmodAudioEffect*`` 这些资源类，把效果加到 :ref:`Bus<glossary-bus>` 上；只有需要非常底层的控制时，再直接操作 :ref:`FmodDSP<FmodDSP>`。
+:ref:`DSP<glossary-dsp>` 是音频效果处理单元。混响、滤波、延迟、压缩、频谱分析都可以看成 DSP。刚开始使用时，建议优先用 ``FmodAudioEffect*`` 这些资源类，把效果加到 :ref:`Bus<glossary-bus>` 上；只有需要非常底层的控制时，再直接操作 :ref:`FmodDSP<class_FmodDSP>`。
 
 先决定加在哪里
 --------------
@@ -20,7 +20,7 @@ DSP 效果器
   * - 只影响一次播放
     - 拿到这次播放的 :ref:`Channel<glossary-channel>` 后添加 DSP
   * - 只是调整左右位置
-    - 优先用 :ref:`FmodChannelControl.set_pan()<FmodChannelControl-set_pan>`，不需要单独加效果
+    - 优先用 :ref:`FmodChannelControl.set_pan()<class_FmodChannelControl_method_set_pan>`，不需要单独加效果
   * - 做频谱 UI
     - 使用 ``FmodAudioEffectSpectrumAnalyzer``
 
@@ -36,28 +36,28 @@ DSP 效果器
     - 类
     - 常见用途
   * - 增益
-    - :ref:`FmodAudioEffectAmplify<FmodAudioEffectAmplify>`
+    - :ref:`FmodAudioEffectAmplify<class_FmodAudioEffectAmplify>`
     - 放大或衰减声音
   * - 滤波器
-    - :ref:`FmodAudioEffectFilter<FmodAudioEffectFilter>`
+    - :ref:`FmodAudioEffectFilter<class_FmodAudioEffectFilter>`
     - 水下、墙后、暂停菜单变闷
   * - 均衡器
-    - :ref:`FmodAudioEffectEQ<FmodAudioEffectEQ>`
+    - :ref:`FmodAudioEffectEQ<class_FmodAudioEffectEQ>`
     - 调整低频、中频、高频
   * - 混响
-    - :ref:`FmodAudioEffectReverb<FmodAudioEffectReverb>`
+    - :ref:`FmodAudioEffectReverb<class_FmodAudioEffectReverb>`
     - 房间、洞穴、走廊空间感
   * - 延迟
-    - :ref:`FmodAudioEffectDelay<FmodAudioEffectDelay>`
+    - :ref:`FmodAudioEffectDelay<class_FmodAudioEffectDelay>`
     - 回声、节奏延迟
   * - 压缩器
-    - :ref:`FmodAudioEffectCompressor<FmodAudioEffectCompressor>`
+    - :ref:`FmodAudioEffectCompressor<class_FmodAudioEffectCompressor>`
     - 控制动态范围，让声音更稳定
   * - 频谱分析器
-    - :ref:`FmodAudioEffectSpectrumAnalyzer<FmodAudioEffectSpectrumAnalyzer>`
+    - :ref:`FmodAudioEffectSpectrumAnalyzer<class_FmodAudioEffectSpectrumAnalyzer>`
     - 音乐可视化、频段检测
   * - 录音
-    - :ref:`FmodAudioEffectRecord<FmodAudioEffectRecord>`
+    - :ref:`FmodAudioEffectRecord<class_FmodAudioEffectRecord>`
     - 录制经过某条总线的声音
 
 给总线添加效果
@@ -216,7 +216,7 @@ DSP 效果器
 
 ``FmodAudioEffect*`` 更适合用户指南里的常规用法；``FmodDSP`` 更接近底层 FMOD。
 
-只有在这些情况才建议直接用 :ref:`FmodDSP<FmodDSP>`：
+只有在这些情况才建议直接用 :ref:`FmodDSP<class_FmodDSP>`：
 
 - 需要访问 FMOD 内置 DSP 的原始参数索引。
 - 需要手动插入某个 :ref:`Channel<glossary-channel>` 的 DSP 链。

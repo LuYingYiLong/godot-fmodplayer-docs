@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="FmodAudioEffectPitchShift" inherits="FmodAudioEffect" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/godotengine/godot/master/doc/class.xsd">
+	<brief_description>
+		Pitch shifter for changing the pitch of audio without affecting playback speed.
+	</brief_description>
+	<description>
+		FmodAudioEffectPitchShift changes the pitch (perceived frequency) of the audio signal without changing its duration or playback speed. This is useful for creating harmonization effects, correcting pitch, or creating special sound effects.
+		The effect uses FFT (Fast Fourier Transform) based processing with adjustable FFT size and oversampling parameters to control the quality and latency trade-offs. Larger FFT sizes provide better frequency resolution but introduce more latency, while oversampling can improve quality at the cost of increased CPU usage.
+		Pitch can be adjusted via pitch scale (multiplier) for intuitive control. A pitch scale of 1.0 is unity, 2.0 is one octave up, and 0.5 is one octave down.
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="set_pitch_scale">
+			<return type="void" />
+			<param index="0" name="pitch_scale" type="float" />
+			<description>
+				Sets [member pitch_scale].
+			</description>
+		</method>
+		<method name="get_pitch_scale" qualifiers="const">
+			<return type="float" />
+			<description>
+				Returns [member pitch_scale].
+			</description>
+		</method>
+		<method name="set_fft_size">
+			<return type="void" />
+			<param index="0" name="fft_size" type="int" enum="FmodAudioEffectPitchShift.FFTSize" />
+			<description>
+				Sets [member fft_size].
+			</description>
+		</method>
+		<method name="get_fft_size" qualifiers="const">
+			<return type="int" enum="FmodAudioEffectPitchShift.FFTSize" />
+			<description>
+				Returns [member fft_size].
+			</description>
+		</method>
+		<method name="set_oversampling">
+			<return type="void" />
+			<param index="0" name="oversampling" type="int" />
+			<description>
+				Sets [member oversampling].
+			</description>
+		</method>
+		<method name="get_oversampling" qualifiers="const">
+			<return type="int" />
+			<description>
+				Returns [member oversampling].
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member type="float" name="pitch_scale" setter="set_pitch_scale" getter="get_pitch_scale" default="1.0">
+			The pitch scale factor applied to the audio. Range: 0.5 to 2.0. Default: 1.0 (unity, no change). A value of 2.0 shifts the pitch up by one octave, 0.5 shifts it down by one octave, and 1.0 leaves the pitch unchanged. This is a linear multiplier; use [code]pow(2, semitones/12)[/code] to convert from semitones.
+		</member>
+		<member type="int" enum="FmodAudioEffectPitchShift.FFTSize" name="fft_size" setter="set_fft_size" getter="get_fft_size" default="3">
+			The size of the FFT window used for pitch shifting. Larger sizes provide better frequency resolution but increase latency. Options: [constant FFT_SIZE_256], [constant FFT_SIZE_512], [constant FFT_SIZE_1024], [constant FFT_SIZE_2048], [constant FFT_SIZE_4096]. Default: [constant FFT_SIZE_2048]. Use smaller sizes for lower latency and larger sizes for better quality.
+		</member>
+		<member type="int" name="oversampling" setter="set_oversampling" getter="get_oversampling" default="4">
+			The oversampling factor for the FFT processing. Range: 1 to 8. Default: 4. Higher oversampling values can reduce artifacts and improve quality, especially at extreme pitch shifts, but increase CPU usage proportionally. Values above 4 provide diminishing returns for most content.
+		</member>
+	</members>
+	<signals />
+	<constants>
+		<constant name="FFT_SIZE_256" value="0" enum="FFTSize">
+			FFT window size of 256 samples. Lowest latency but poorest frequency resolution. Best for real-time applications where low latency is critical.
+		</constant>
+		<constant name="FFT_SIZE_512" value="1" enum="FFTSize">
+			FFT window size of 512 samples. Low latency with moderate frequency resolution.
+		</constant>
+		<constant name="FFT_SIZE_1024" value="2" enum="FFTSize">
+			FFT window size of 1024 samples. Balanced latency and frequency resolution.
+		</constant>
+		<constant name="FFT_SIZE_2048" value="3" enum="FFTSize">
+			FFT window size of 2048 samples. Good frequency resolution with acceptable latency. This is the default setting.
+		</constant>
+		<constant name="FFT_SIZE_4096" value="4" enum="FFTSize">
+			FFT window size of 4096 samples. Highest frequency resolution but highest latency. Best for offline processing or when quality is more important than real-time response.
+		</constant>
+		<constant name="FFT_SIZE_MAX" value="5" enum="FFTSize">
+			Maximum FFT size value (marker constant, not a valid setting).
+		</constant>
+	</constants>
+</class>

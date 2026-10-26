@@ -4,271 +4,174 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Godot FmodPlayer
-"
-"Report-Msgid-Bugs-To: 
-"
-"POT-Creation-Date: 2026-04-26 23:57+0800
-"
-"PO-Revision-Date: 2026-04-27 00:00+0800
-"
-"Last-Translator: Codex <codex@example.invalid>
-"
-"Language: en
-"
-"Language-Team: en <LL@li.org>
-"
-"Plural-Forms: nplurals=2; plural=(n != 1);
-"
-"MIME-Version: 1.0
-"
-"Content-Type: text/plain; charset=utf-8
-"
-"Content-Transfer-Encoding: 8bit
-"
+"Project-Id-Version: Godot FmodPlayeReport-Msgid-Bugs-ToPOT-Creation-Date: 2026-04-26 23:57+080PO-"
+"Revision-Date: 2026-04-27 00:00+080Last-Translator: Codex <codex@example.invalidLanguage: "
+"eLanguage-Team: en <LL@li.orgPlural-Forms: nplurals=2; plural=(n != 1)MIME-Version: 1.Content-"
+"Type: text/plain; charset=utf-Content-Transfer-Encoding: 8bi\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-10-26 14:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
 
-
-#: ../../source/user_guide/dsp_effects.rst:2
-#: 874dd54387384dcab85d7f37bf97821c
+#: ../../source/user_guide/dsp_effects.rst:2 874dd54387384dcab85d7f37bf97821c
 msgid "DSP 效果器"
 msgstr "DSP Effects"
 
-#: ../../source/user_guide/dsp_effects.rst:4
-#: 7821d15513a841abacf18284b76c5bf0
+#: ../../source/user_guide/dsp_effects.rst:4 7821d15513a841abacf18284b76c5bf0
 msgid "本章讲“怎样给声音加效果”。"
 msgstr "This chapter explains how to add effects to sounds."
 
-#: ../../source/user_guide/dsp_effects.rst:6
-#: a89df723353d45049478deb07e1f5ac7
-msgid ""
-":ref:`DSP<glossary-dsp>` 是音频效果处理单元。混响、滤波、延迟、压缩、频谱分析都可以看成 DSP。刚开始使用时，建议优先用 ``FmodAudioEffect*`` 这些资源类，把效果加到 :ref:`Bus<glossary-bus>` 上；只有需要非常底层的控制时，再直接操作 :ref:`FmodDSP<FmodDSP>`。"
-msgstr ""
-"A :ref:`DSP<glossary-dsp>` is an audio effect processing unit. Reverb, filtering, delay, compression, and spectrum analysis can all be treated as DSPs. When getting started, prefer the ``FmodAudioEffect*`` resource classes and add effects to a :ref:`Bus<glossary-bus>`. Use :ref:`FmodDSP<FmodDSP>` directly only when you need very low-level control."
-
-#: ../../source/user_guide/dsp_effects.rst:9
-#: d4cf22905bb142559374174fcaefd408
+#: ../../source/user_guide/dsp_effects.rst:9 d4cf22905bb142559374174fcaefd408
 msgid "先决定加在哪里"
 msgstr "Choose Where to Apply the Effect First"
 
-#: ../../source/user_guide/dsp_effects.rst:14
-#: a372d5b1a7e74c268a8b1ebf8bd8f28e
+#: ../../source/user_guide/dsp_effects.rst:14 a372d5b1a7e74c268a8b1ebf8bd8f28e
 msgid "需求"
 msgstr "Need"
 
-#: ../../source/user_guide/dsp_effects.rst:15
-#: cfb4a36012254455bd2c0c3b5b603fbb
+#: ../../source/user_guide/dsp_effects.rst:15 cfb4a36012254455bd2c0c3b5b603fbb
 msgid "推荐做法"
 msgstr "Recommended approach"
 
-#: ../../source/user_guide/dsp_effects.rst:16
-#: bccf6f8acbc84a489a995f546885b1eb
+#: ../../source/user_guide/dsp_effects.rst:16 bccf6f8acbc84a489a995f546885b1eb
 msgid "所有音乐一起加滤波"
 msgstr "Apply filtering to all music"
 
-#: ../../source/user_guide/dsp_effects.rst:17
-#: cc0a668089f843ff926d298d6fc54287
+#: ../../source/user_guide/dsp_effects.rst:17 cc0a668089f843ff926d298d6fc54287
 msgid "把效果加到 ``Music`` 总线"
 msgstr "Add the effect to the ``Music`` bus."
 
-#: ../../source/user_guide/dsp_effects.rst:18
-#: ebd7cba4f1114a7aa2f9414b7c060c31
+#: ../../source/user_guide/dsp_effects.rst:18 ebd7cba4f1114a7aa2f9414b7c060c31
 msgid "所有环境声一起加混响"
 msgstr "Add reverb to all ambience"
 
-#: ../../source/user_guide/dsp_effects.rst:19
-#: 428631ce772a421284108059c95e78fc
+#: ../../source/user_guide/dsp_effects.rst:19 428631ce772a421284108059c95e78fc
 msgid "把效果加到 ``Ambient`` 总线"
 msgstr "Add the effect to the ``Ambient`` bus."
 
-#: ../../source/user_guide/dsp_effects.rst:20
-#: 93d3df3d83224942a6e971071c89a72b
+#: ../../source/user_guide/dsp_effects.rst:20 93d3df3d83224942a6e971071c89a72b
 msgid "只影响一次播放"
 msgstr "Affect only one playback instance"
 
-#: ../../source/user_guide/dsp_effects.rst:21
-#: ef36299206d941cabfc6d97a57b72047
+#: ../../source/user_guide/dsp_effects.rst:21 ef36299206d941cabfc6d97a57b72047
 msgid "拿到这次播放的 :ref:`Channel<glossary-channel>` 后添加 DSP"
 msgstr "Get the :ref:`Channel<glossary-channel>` for that playback and add the DSP there."
 
-#: ../../source/user_guide/dsp_effects.rst:22
-#: 110029c6259b40a79fff691f36680392
+#: ../../source/user_guide/dsp_effects.rst:22 110029c6259b40a79fff691f36680392
 msgid "只是调整左右位置"
 msgstr "Only adjust left/right position"
 
-#: ../../source/user_guide/dsp_effects.rst:23
-#: 2fafee027d444817b19c6819c4d1518e
-msgid "优先用 :ref:`FmodChannelControl.set_pan()<FmodChannelControl-set_pan>`，不需要单独加效果"
-msgstr "Prefer :ref:`FmodChannelControl.set_pan()<FmodChannelControl-set_pan>`; no separate effect is needed."
-
-#: ../../source/user_guide/dsp_effects.rst:24
-#: 8277eda17f8648758519af135cc336e2
+#: ../../source/user_guide/dsp_effects.rst:24 8277eda17f8648758519af135cc336e2
 msgid "做频谱 UI"
 msgstr "Build a spectrum UI"
 
-#: ../../source/user_guide/dsp_effects.rst:25
-#: 9b1a891f60e9419e9e7c16124e927527
+#: ../../source/user_guide/dsp_effects.rst:25 9b1a891f60e9419e9e7c16124e927527
 msgid "使用 ``FmodAudioEffectSpectrumAnalyzer``"
 msgstr "Use ``FmodAudioEffectSpectrumAnalyzer``."
 
-#: ../../source/user_guide/dsp_effects.rst:27
-#: b06e6e3cd7d442949d5851bc13a0c1fe
+#: ../../source/user_guide/dsp_effects.rst:27 b06e6e3cd7d442949d5851bc13a0c1fe
 msgid "对多数项目来说，“效果加到总线”最容易维护。比如暂停菜单打开时，只要给 ``Music`` 总线加低通或降低音量，所有音乐都会一起变化。"
 msgstr ""
-"For most projects, adding effects to a bus is the easiest to maintain. For example, when the pause menu opens, adding a low-pass filter or lowering volume on the ``Music`` bus affects all music together."
+"For most projects, adding effects to a bus is the easiest to maintain. For example, when the "
+"pause menu opens, adding a low-pass filter or lowering volume on the ``Music`` bus affects all "
+"music together."
 
-#: ../../source/user_guide/dsp_effects.rst:30
-#: 36f83db11e3148c5b9d41764cb2cd84f
+#: ../../source/user_guide/dsp_effects.rst:30 36f83db11e3148c5b9d41764cb2cd84f
 msgid "常用效果怎么选"
 msgstr "Choosing Common Effects"
 
-#: ../../source/user_guide/dsp_effects.rst:35
-#: 41ca41effbe04fa7982ac90e733df767
+#: ../../source/user_guide/dsp_effects.rst:35 41ca41effbe04fa7982ac90e733df767
 msgid "效果"
 msgstr "Effect"
 
-#: ../../source/user_guide/dsp_effects.rst:36
-#: 0da0a27e32734f8a8a33fae426f33886
+#: ../../source/user_guide/dsp_effects.rst:36 0da0a27e32734f8a8a33fae426f33886
 msgid "类"
 msgstr "Class"
 
-#: ../../source/user_guide/dsp_effects.rst:37
-#: 8bba5dfaa701468294f23341205f97ca
+#: ../../source/user_guide/dsp_effects.rst:37 8bba5dfaa701468294f23341205f97ca
 msgid "常见用途"
 msgstr "Common uses"
 
-#: ../../source/user_guide/dsp_effects.rst:38
-#: 86d5a93a8220406bb4f6455282ae9ef1
+#: ../../source/user_guide/dsp_effects.rst:38 86d5a93a8220406bb4f6455282ae9ef1
 msgid "增益"
 msgstr "Gain"
 
-#: ../../source/user_guide/dsp_effects.rst:39
-#: 875b0c49f51649468b0752d3a0c244b4
-msgid ":ref:`FmodAudioEffectAmplify<FmodAudioEffectAmplify>`"
-msgstr ":ref:`FmodAudioEffectAmplify<FmodAudioEffectAmplify>`"
-
-#: ../../source/user_guide/dsp_effects.rst:40
-#: 43d24126a0634ba791de1d78c1c67c12
+#: ../../source/user_guide/dsp_effects.rst:40 43d24126a0634ba791de1d78c1c67c12
 msgid "放大或衰减声音"
 msgstr "Amplify or attenuate sound."
 
-#: ../../source/user_guide/dsp_effects.rst:41
-#: 221cdc3d49ec424cb6a53ae5452a454b
+#: ../../source/user_guide/dsp_effects.rst:41 221cdc3d49ec424cb6a53ae5452a454b
 msgid "滤波器"
 msgstr "Filter"
 
-#: ../../source/user_guide/dsp_effects.rst:42
-#: 03ab0c2b41714c51aac22c9f552451f0
-msgid ":ref:`FmodAudioEffectFilter<FmodAudioEffectFilter>`"
-msgstr ":ref:`FmodAudioEffectFilter<FmodAudioEffectFilter>`"
-
-#: ../../source/user_guide/dsp_effects.rst:43
-#: 73458ae9e0ee4ea4ad1ae47e151c5ccc
+#: ../../source/user_guide/dsp_effects.rst:43 73458ae9e0ee4ea4ad1ae47e151c5ccc
 msgid "水下、墙后、暂停菜单变闷"
 msgstr "Underwater sound, sounds behind walls, or muffled pause-menu audio."
 
-#: ../../source/user_guide/dsp_effects.rst:44
-#: e6d0c0619df84de8bd7eae047140025c
+#: ../../source/user_guide/dsp_effects.rst:44 e6d0c0619df84de8bd7eae047140025c
 msgid "均衡器"
 msgstr "Equalizer"
 
-#: ../../source/user_guide/dsp_effects.rst:45
-#: 46fc11078aa045e68b6d700106b2d664
-msgid ":ref:`FmodAudioEffectEQ<FmodAudioEffectEQ>`"
-msgstr ":ref:`FmodAudioEffectEQ<FmodAudioEffectEQ>`"
-
-#: ../../source/user_guide/dsp_effects.rst:46
-#: d5441ac575b14676b8591a5c87b02807
+#: ../../source/user_guide/dsp_effects.rst:46 d5441ac575b14676b8591a5c87b02807
 msgid "调整低频、中频、高频"
 msgstr "Adjust low, mid, and high frequencies."
 
-#: ../../source/user_guide/dsp_effects.rst:47
-#: a09e6e138bf04d87a908ca8b4340d56b
+#: ../../source/user_guide/dsp_effects.rst:47 a09e6e138bf04d87a908ca8b4340d56b
 msgid "混响"
 msgstr "Reverb"
 
-#: ../../source/user_guide/dsp_effects.rst:48
-#: f01d4b4feb5d40fd8221299d05aa776a
-msgid ":ref:`FmodAudioEffectReverb<FmodAudioEffectReverb>`"
-msgstr ":ref:`FmodAudioEffectReverb<FmodAudioEffectReverb>`"
-
-#: ../../source/user_guide/dsp_effects.rst:49
-#: c597f60d1985433597c27c9b6433a58b
+#: ../../source/user_guide/dsp_effects.rst:49 c597f60d1985433597c27c9b6433a58b
 msgid "房间、洞穴、走廊空间感"
 msgstr "Room, cave, and corridor space."
 
-#: ../../source/user_guide/dsp_effects.rst:50
-#: b3602e43be1f46de9126b5d40bfd4227
+#: ../../source/user_guide/dsp_effects.rst:50 b3602e43be1f46de9126b5d40bfd4227
 msgid "延迟"
 msgstr "Delay"
 
-#: ../../source/user_guide/dsp_effects.rst:51
-#: 49c332dd93be4817a942ac4d4d0d1c86
-msgid ":ref:`FmodAudioEffectDelay<FmodAudioEffectDelay>`"
-msgstr ":ref:`FmodAudioEffectDelay<FmodAudioEffectDelay>`"
-
-#: ../../source/user_guide/dsp_effects.rst:52
-#: dc048ff3bb7a46c690b3049763b2a23c
+#: ../../source/user_guide/dsp_effects.rst:52 dc048ff3bb7a46c690b3049763b2a23c
 msgid "回声、节奏延迟"
 msgstr "Echo and rhythmic delay."
 
-#: ../../source/user_guide/dsp_effects.rst:53
-#: d925125344ec4f7db6179333dc0782bb
+#: ../../source/user_guide/dsp_effects.rst:53 d925125344ec4f7db6179333dc0782bb
 msgid "压缩器"
 msgstr "Compressor"
 
-#: ../../source/user_guide/dsp_effects.rst:54
-#: 0d9aeb3b659a4079bfa1bdc967610f2a
-msgid ":ref:`FmodAudioEffectCompressor<FmodAudioEffectCompressor>`"
-msgstr ":ref:`FmodAudioEffectCompressor<FmodAudioEffectCompressor>`"
-
-#: ../../source/user_guide/dsp_effects.rst:55
-#: f4f401eb682b46f99409d4b7b6d7fc69
+#: ../../source/user_guide/dsp_effects.rst:55 f4f401eb682b46f99409d4b7b6d7fc69
 msgid "控制动态范围，让声音更稳定"
 msgstr "Control dynamic range and make sound more stable."
 
-#: ../../source/user_guide/dsp_effects.rst:56
-#: 7a1a1dfb8d2e44baaf7a0737edfc5f08
+#: ../../source/user_guide/dsp_effects.rst:56 7a1a1dfb8d2e44baaf7a0737edfc5f08
 msgid "频谱分析器"
 msgstr "Spectrum analyzer"
 
-#: ../../source/user_guide/dsp_effects.rst:57
-#: e797cb6d99b64dfaa55906c9b7f7719c
-msgid ":ref:`FmodAudioEffectSpectrumAnalyzer<FmodAudioEffectSpectrumAnalyzer>`"
-msgstr ":ref:`FmodAudioEffectSpectrumAnalyzer<FmodAudioEffectSpectrumAnalyzer>`"
-
-#: ../../source/user_guide/dsp_effects.rst:58
-#: f3aaef2dd7fe406c8ac8dcaa0248fe94
+#: ../../source/user_guide/dsp_effects.rst:58 f3aaef2dd7fe406c8ac8dcaa0248fe94
 msgid "音乐可视化、频段检测"
 msgstr "Music visualization and frequency-band detection."
 
-#: ../../source/user_guide/dsp_effects.rst:59
-#: 2b64b3f4a9964727a0b09432326e28c9
+#: ../../source/user_guide/dsp_effects.rst:59 2b64b3f4a9964727a0b09432326e28c9
 msgid "录音"
 msgstr "Recording"
 
-#: ../../source/user_guide/dsp_effects.rst:60
-#: dd98f6a1ca9e4b0e8ba54e46754e59d8
-msgid ":ref:`FmodAudioEffectRecord<FmodAudioEffectRecord>`"
-msgstr ":ref:`FmodAudioEffectRecord<FmodAudioEffectRecord>`"
-
-#: ../../source/user_guide/dsp_effects.rst:61
-#: 5350e6426142403c89ea46305ec0eed4
+#: ../../source/user_guide/dsp_effects.rst:61 5350e6426142403c89ea46305ec0eed4
 msgid "录制经过某条总线的声音"
 msgstr "Record audio passing through a bus."
 
-#: ../../source/user_guide/dsp_effects.rst:64
-#: 5e5d392bc8b24e63a145f45ea096cc13
+#: ../../source/user_guide/dsp_effects.rst:64 5e5d392bc8b24e63a145f45ea096cc13
 msgid "给总线添加效果"
 msgstr "Add an Effect to a Bus"
 
-#: ../../source/user_guide/dsp_effects.rst:66
-#: 87cabf9ffe884a68a7c77196b72cf63d
+#: ../../source/user_guide/dsp_effects.rst:66 87cabf9ffe884a68a7c77196b72cf63d
 msgid "下面示例给 ``Music`` 总线加一个低通滤波器。它会让音乐听起来更闷，适合暂停菜单、角色潜水、隔墙听声等场景。"
 msgstr ""
-"The following example adds a low-pass filter to the ``Music`` bus. It makes the music sound muffled, which is useful for pause menus, underwater scenes, or hearing sound through walls."
+"The following example adds a low-pass filter to the ``Music`` bus. It makes the music sound "
+"muffled, which is useful for pause menus, underwater scenes, or hearing sound through walls."
 
-#: ../../source/user_guide/dsp_effects.rst:68
-#: 896ef3e9eb64485c86a0f7cbc9b3ea21
+#: ../../source/user_guide/dsp_effects.rst:68 896ef3e9eb64485c86a0f7cbc9b3ea21
 msgid ""
 "func add_pause_filter():\n"
 "    var layout := FmodServer.get_audio_bus_layout()\n"
@@ -288,23 +191,23 @@ msgstr ""
 "\n"
 "    layout.add_bus_effect(\"Music\", filter)"
 
-#: ../../source/user_guide/dsp_effects.rst:79
-#: a9471e7d949e49bb976b7f5554e89408
+#: ../../source/user_guide/dsp_effects.rst:79 a9471e7d949e49bb976b7f5554e89408
 msgid "效果加到总线后，经过这条 :ref:`Bus<glossary-bus>` 的声音都会受影响。"
-msgstr "After an effect is added to a bus, all sounds passing through that :ref:`Bus<glossary-bus>` are affected."
+msgstr ""
+"After an effect is added to a bus, all sounds passing through that :ref:`Bus<glossary-bus>` are "
+"affected."
 
-#: ../../source/user_guide/dsp_effects.rst:82
-#: b7009ff036f54367adc964d6de5687b4
+#: ../../source/user_guide/dsp_effects.rst:82 b7009ff036f54367adc964d6de5687b4
 msgid "旁路效果"
 msgstr "Bypass Effects"
 
-#: ../../source/user_guide/dsp_effects.rst:84
-#: fa3f1993782b492da98cb9faa5a86544
+#: ../../source/user_guide/dsp_effects.rst:84 fa3f1993782b492da98cb9faa5a86544
 msgid "如果只是临时关闭效果，优先用旁路，而不是反复创建和删除。"
-msgstr "If you only need to temporarily disable an effect, prefer bypassing it instead of repeatedly creating and deleting it."
+msgstr ""
+"If you only need to temporarily disable an effect, prefer bypassing it instead of repeatedly "
+"creating and deleting it."
 
-#: ../../source/user_guide/dsp_effects.rst:86
-#: 91dcc7a137804fc5b565567260328d88
+#: ../../source/user_guide/dsp_effects.rst:86 91dcc7a137804fc5b565567260328d88
 msgid ""
 "func set_music_effects_enabled(enabled: bool):\n"
 "    var layout := FmodServer.get_audio_bus_layout()\n"
@@ -314,23 +217,19 @@ msgstr ""
 "    var layout := FmodServer.get_audio_bus_layout()\n"
 "    layout.set_bus_bypass(\"Music\", not enabled)"
 
-#: ../../source/user_guide/dsp_effects.rst:92
-#: a0f47c551ea1405f9f0a3d36c736e5e8
+#: ../../source/user_guide/dsp_effects.rst:92 a0f47c551ea1405f9f0a3d36c736e5e8
 msgid "旁路的意思是：信号仍然通过，但跳过这条总线上的效果处理。"
 msgstr "Bypass means the signal still passes through, but the effects on that bus are skipped."
 
-#: ../../source/user_guide/dsp_effects.rst:95
-#: 66c970088c574d1295b4020e8c1ba066
+#: ../../source/user_guide/dsp_effects.rst:95 66c970088c574d1295b4020e8c1ba066
 msgid "常用效果示例"
 msgstr "Common Effect Examples"
 
-#: ../../source/user_guide/dsp_effects.rst:98
-#: 46396afdda504f22a57b205040402fa5
+#: ../../source/user_guide/dsp_effects.rst:98 46396afdda504f22a57b205040402fa5
 msgid "暂停菜单：音乐变闷"
 msgstr "Pause menu: muffle the music"
 
-#: ../../source/user_guide/dsp_effects.rst:100
-#: 8499d32852b14458b6889c5dd20eb10c
+#: ../../source/user_guide/dsp_effects.rst:100 8499d32852b14458b6889c5dd20eb10c
 msgid ""
 "var pause_filter := FmodAudioEffectFilter.new()\n"
 "\n"
@@ -354,13 +253,11 @@ msgstr ""
 "func set_paused_audio(paused: bool):\n"
 "    FmodServer.get_audio_bus_layout().set_bus_bypass(\"Music\", not paused)"
 
-#: ../../source/user_guide/dsp_effects.rst:114
-#: 79ac375ae23945aea452a186ec529e51
+#: ../../source/user_guide/dsp_effects.rst:114 79ac375ae23945aea452a186ec529e51
 msgid "房间混响：给环境声加空间感"
 msgstr "Room reverb: add space to ambience"
 
-#: ../../source/user_guide/dsp_effects.rst:116
-#: ca2db947206941bd8d776fca791b7900
+#: ../../source/user_guide/dsp_effects.rst:116 ca2db947206941bd8d776fca791b7900
 msgid ""
 "func setup_room_reverb():\n"
 "    var reverb := FmodAudioEffectReverb.new()\n"
@@ -380,13 +277,11 @@ msgstr ""
 "\n"
 "    FmodServer.get_audio_bus_layout().add_bus_effect(\"Ambient\", reverb)"
 
-#: ../../source/user_guide/dsp_effects.rst:128
-#: a560d9a8464b4eb9ac1bcdc285251d68
+#: ../../source/user_guide/dsp_effects.rst:128 a560d9a8464b4eb9ac1bcdc285251d68
 msgid "均衡器：削弱刺耳频段"
 msgstr "Equalizer: reduce harsh frequencies"
 
-#: ../../source/user_guide/dsp_effects.rst:130
-#: 9d0921fcbade41189f7e4521dfb01d50
+#: ../../source/user_guide/dsp_effects.rst:130 9d0921fcbade41189f7e4521dfb01d50
 msgid ""
 "func soften_sfx():\n"
 "    var eq := FmodAudioEffectEQ10.new()\n"
@@ -406,13 +301,11 @@ msgstr ""
 "\n"
 "    FmodServer.get_audio_bus_layout().add_bus_effect(\"SFX\", eq)"
 
-#: ../../source/user_guide/dsp_effects.rst:142
-#: 5525ce2df4f44ab2865bc0242411f279
+#: ../../source/user_guide/dsp_effects.rst:142 5525ce2df4f44ab2865bc0242411f279
 msgid "延迟：给特殊音效加回声"
 msgstr "Delay: add echo to a special voice effect"
 
-#: ../../source/user_guide/dsp_effects.rst:144
-#: 2ee7569a0f2a4f77be26ceed71941381
+#: ../../source/user_guide/dsp_effects.rst:144 2ee7569a0f2a4f77be26ceed71941381
 msgid ""
 "func add_echo_to_voice_bus():\n"
 "    var delay := FmodAudioEffectDelay.new()\n"
@@ -436,19 +329,17 @@ msgstr ""
 "\n"
 "    FmodServer.get_audio_bus_layout().add_bus_effect(\"Voice\", delay)"
 
-#: ../../source/user_guide/dsp_effects.rst:158
-#: 9ab284cff90244baaacdb040afe22575
+#: ../../source/user_guide/dsp_effects.rst:158 9ab284cff90244baaacdb040afe22575
 msgid "频谱分析：读取音乐能量"
 msgstr "Spectrum analysis: read music energy"
 
-#: ../../source/user_guide/dsp_effects.rst:160
-#: 96a6aa48e15c4d52a25db7dd4a27a583
+#: ../../source/user_guide/dsp_effects.rst:160 96a6aa48e15c4d52a25db7dd4a27a583
 msgid "``FmodAudioEffectSpectrumAnalyzer`` 不改变声音，它只是读取频谱数据。适合音乐可视化、根据低频驱动画面等。"
 msgstr ""
-"``FmodAudioEffectSpectrumAnalyzer`` does not change the sound. It only reads spectrum data, which is useful for music visualization or driving visuals from bass energy."
+"``FmodAudioEffectSpectrumAnalyzer`` does not change the sound. It only reads spectrum data, which"
+" is useful for music visualization or driving visuals from bass energy."
 
-#: ../../source/user_guide/dsp_effects.rst:162
-#: 20d6cb165e974e9db5eae34a989b44c0
+#: ../../source/user_guide/dsp_effects.rst:162 20d6cb165e974e9db5eae34a989b44c0
 msgid ""
 "var analyzer := FmodAudioEffectSpectrumAnalyzer.new()\n"
 "\n"
@@ -484,19 +375,17 @@ msgstr ""
 "\n"
 "    print(\"bass energy: \", bass.length())"
 
-#: ../../source/user_guide/dsp_effects.rst:182
-#: b4c90b0462b2418ba2710eefd173168e
+#: ../../source/user_guide/dsp_effects.rst:182 b4c90b0462b2418ba2710eefd173168e
 msgid "录音：录下某条总线"
 msgstr "Recording: record a bus"
 
-#: ../../source/user_guide/dsp_effects.rst:184
-#: 092d14abfe234ef6af74e9ba6976cc79
+#: ../../source/user_guide/dsp_effects.rst:184 092d14abfe234ef6af74e9ba6976cc79
 msgid "``FmodAudioEffectRecord`` 会让声音原样通过，同时在录制开启时缓存经过总线的音频。"
 msgstr ""
-"``FmodAudioEffectRecord`` lets the sound pass through unchanged while caching the audio that passes through the bus when recording is enabled."
+"``FmodAudioEffectRecord`` lets the sound pass through unchanged while caching the audio that "
+"passes through the bus when recording is enabled."
 
-#: ../../source/user_guide/dsp_effects.rst:186
-#: c7b151a36fa449fba724db70e11a1bd4
+#: ../../source/user_guide/dsp_effects.rst:186 c7b151a36fa449fba724db70e11a1bd4
 msgid ""
 "var recorder := FmodAudioEffectRecord.new()\n"
 "\n"
@@ -524,75 +413,61 @@ msgstr ""
 "    recorder.recording_active = false\n"
 "    return recorder.get_recording()"
 
-#: ../../source/user_guide/dsp_effects.rst:202
-#: 429d3d2ee4054165bcadd72352bfbc0b
+#: ../../source/user_guide/dsp_effects.rst:202 429d3d2ee4054165bcadd72352bfbc0b
 msgid "效果顺序"
 msgstr "Effect Order"
 
-#: ../../source/user_guide/dsp_effects.rst:204
-#: ae7ae9c2c4484756adeadb7a46109a94
+#: ../../source/user_guide/dsp_effects.rst:204 ae7ae9c2c4484756adeadb7a46109a94
 msgid "多个 :ref:`DSP<glossary-dsp>` 会组成 :ref:`DSP 链<glossary-dsp-chain>`。声音会按顺序经过它们，所以顺序会影响听感。"
 msgstr ""
-"Multiple :ref:`DSP<glossary-dsp>` units form a :ref:`DSP Chain<glossary-dsp-chain>`. Sound passes through them in order, so the order affects how it sounds."
+"Multiple :ref:`DSP<glossary-dsp>` units form a :ref:`DSP Chain<glossary-dsp-chain>`. Sound passes"
+" through them in order, so the order affects how it sounds."
 
-#: ../../source/user_guide/dsp_effects.rst:206
-#: 845fcd279ed440efb6f5059aebad39a6
+#: ../../source/user_guide/dsp_effects.rst:206 845fcd279ed440efb6f5059aebad39a6
 msgid "一个容易理解的默认顺序是："
 msgstr "An easy default order to understand is:"
 
-#: ../../source/user_guide/dsp_effects.rst:208
-#: 0e367de634b74d0c92abf0e7016978c0
+#: ../../source/user_guide/dsp_effects.rst:208 0e367de634b74d0c92abf0e7016978c0
 msgid "均衡器 / 滤波器 -> 压缩器 -> 失真 -> 延迟 / 混响 -> 分析器 / 录音"
 msgstr "Equalizer / filter -> compressor -> distortion -> delay / reverb -> analyzer / recorder"
 
-#: ../../source/user_guide/dsp_effects.rst:212
-#: 5e0ec1c0de31476ebc5fb15f1e3aa56a
+#: ../../source/user_guide/dsp_effects.rst:212 5e0ec1c0de31476ebc5fb15f1e3aa56a
 msgid "这不是硬规则。比如先失真再混响，和先混响再失真，听起来会很不一样。调效果时建议一次只改一个变量，边听边调。"
 msgstr ""
-"This is not a hard rule. Distortion before reverb and reverb before distortion can sound very different. When tuning effects, change one variable at a time and listen as you adjust."
+"This is not a hard rule. Distortion before reverb and reverb before distortion can sound very "
+"different. When tuning effects, change one variable at a time and listen as you adjust."
 
-#: ../../source/user_guide/dsp_effects.rst:215
-#: a9d5004c72c943c3a4f006830cc55c7e
+#: ../../source/user_guide/dsp_effects.rst:215 a9d5004c72c943c3a4f006830cc55c7e
 msgid "什么时候直接用 FmodDSP"
 msgstr "When to Use FmodDSP Directly"
 
-#: ../../source/user_guide/dsp_effects.rst:217
-#: 531cb0c03bdf499682919967c9353f99
+#: ../../source/user_guide/dsp_effects.rst:217 531cb0c03bdf499682919967c9353f99
 msgid "``FmodAudioEffect*`` 更适合用户指南里的常规用法；``FmodDSP`` 更接近底层 FMOD。"
-msgstr "``FmodAudioEffect*`` is better for the common workflows in this guide; ``FmodDSP`` is closer to low-level FMOD."
+msgstr ""
+"``FmodAudioEffect*`` is better for the common workflows in this guide; ``FmodDSP`` is closer to "
+"low-level FMOD."
 
-#: ../../source/user_guide/dsp_effects.rst:219
-#: fa03e2105de84b5ebbf1a1b8a5a41b8e
-msgid "只有在这些情况才建议直接用 :ref:`FmodDSP<FmodDSP>`："
-msgstr "Use :ref:`FmodDSP<FmodDSP>` directly only when:"
-
-#: ../../source/user_guide/dsp_effects.rst:221
-#: c01bfadd1e9a497ab25f5d23dfa06450
+#: ../../source/user_guide/dsp_effects.rst:221 c01bfadd1e9a497ab25f5d23dfa06450
 msgid "需要访问 FMOD 内置 DSP 的原始参数索引。"
 msgstr "You need access to raw parameter indices of FMOD built-in DSPs."
 
-#: ../../source/user_guide/dsp_effects.rst:222
-#: 68334579149744bb8a777fee2069f976
+#: ../../source/user_guide/dsp_effects.rst:222 68334579149744bb8a777fee2069f976
 msgid "需要手动插入某个 :ref:`Channel<glossary-channel>` 的 DSP 链。"
 msgstr "You need to manually insert a DSP into a specific :ref:`Channel<glossary-channel>` DSP chain."
 
-#: ../../source/user_guide/dsp_effects.rst:223
-#: 453b204222a44adc99c8de0b04097e56
+#: ../../source/user_guide/dsp_effects.rst:223 453b204222a44adc99c8de0b04097e56
 msgid "需要自定义 DSP 回调或做实验性处理。"
 msgstr "You need custom DSP callbacks or experimental processing."
 
-#: ../../source/user_guide/dsp_effects.rst:224
-#: 4f1bddd085764e659f3c271eee8dda30
+#: ../../source/user_guide/dsp_effects.rst:224 4f1bddd085764e659f3c271eee8dda30
 msgid "你已经知道对应 DSP 的参数含义和范围。"
 msgstr "You already know the meaning and range of the corresponding DSP parameters."
 
-#: ../../source/user_guide/dsp_effects.rst:226
-#: 36b803f46ccb4f77809d3f9e75f03759
+#: ../../source/user_guide/dsp_effects.rst:226 36b803f46ccb4f77809d3f9e75f03759
 msgid "一个最小示例："
 msgstr "A minimal example:"
 
-#: ../../source/user_guide/dsp_effects.rst:228
-#: db5b1376d4324ffdb4707dbce881da09
+#: ../../source/user_guide/dsp_effects.rst:228 db5b1376d4324ffdb4707dbce881da09
 msgid ""
 "func add_low_level_reverb():\n"
 "    var system := FmodServer.main_system\n"
@@ -608,73 +483,116 @@ msgstr ""
 "\n"
 "    master.add_dsp(0, reverb)"
 
-#: ../../source/user_guide/dsp_effects.rst:237
-#: 1d784797f4dd42288984402782e5b5fc
+#: ../../source/user_guide/dsp_effects.rst:237 1d784797f4dd42288984402782e5b5fc
 msgid "低层 DSP 参数通常是数字索引，不如 ``FmodAudioEffectReverb.room_size`` 这类属性直观。普通项目优先使用效果资源类。"
 msgstr ""
-"Low-level DSP parameters are usually numeric indices and are less intuitive than properties such as ``FmodAudioEffectReverb.room_size``. For regular projects, prefer effect resource classes."
+"Low-level DSP parameters are usually numeric indices and are less intuitive than properties such "
+"as ``FmodAudioEffectReverb.room_size``. For regular projects, prefer effect resource classes."
 
-#: ../../source/user_guide/dsp_effects.rst:240
-#: ca33ea2576bc4bc0a888c6d2e84630a5
+#: ../../source/user_guide/dsp_effects.rst:240 ca33ea2576bc4bc0a888c6d2e84630a5
 msgid "性能建议"
 msgstr "Performance Tips"
 
-#: ../../source/user_guide/dsp_effects.rst:242
-#: 797c8baf0fb948ed838bbd2f245e2c63
+#: ../../source/user_guide/dsp_effects.rst:242 797c8baf0fb948ed838bbd2f245e2c63
 msgid "每个启用的 :ref:`DSP<glossary-dsp>` 都会增加 CPU 开销。"
 msgstr "Each enabled :ref:`DSP<glossary-dsp>` adds CPU cost."
 
-#: ../../source/user_guide/dsp_effects.rst:243
-#: 8b4e41fd09324294803e28232e35b8a1
+#: ../../source/user_guide/dsp_effects.rst:243 8b4e41fd09324294803e28232e35b8a1
 msgid "多个声音共享同一种效果时，放到总线上通常更省。"
 msgstr "When multiple sounds share the same effect, putting it on a bus is usually cheaper."
 
-#: ../../source/user_guide/dsp_effects.rst:244
-#: c4aee91a15e743f4a4cc9096b104b6a0
+#: ../../source/user_guide/dsp_effects.rst:244 c4aee91a15e743f4a4cc9096b104b6a0
 msgid "临时关闭效果时，用旁路比反复添加、移除更稳定。"
-msgstr "When temporarily disabling an effect, bypassing is more stable than repeatedly adding and removing it."
+msgstr ""
+"When temporarily disabling an effect, bypassing is more stable than repeatedly adding and "
+"removing it."
 
-#: ../../source/user_guide/dsp_effects.rst:245
-#: 7c3a3354ebc44e4cb20fe51f6608cda2
+#: ../../source/user_guide/dsp_effects.rst:245 7c3a3354ebc44e4cb20fe51f6608cda2
 msgid "频谱分析和音高变换这类 FFT 效果更容易吃 CPU。"
 msgstr "FFT effects such as spectrum analysis and pitch shifting are more CPU-hungry."
 
-#: ../../source/user_guide/dsp_effects.rst:246
-#: d83fe1a5a1084b88856888df293ba87f
+#: ../../source/user_guide/dsp_effects.rst:246 d83fe1a5a1084b88856888df293ba87f
 msgid "不要每帧大幅跳变参数；需要变化时用插值或 Tween。"
-msgstr "Do not make large parameter jumps every frame; use interpolation or Tween when values need to change."
+msgstr ""
+"Do not make large parameter jumps every frame; use interpolation or Tween when values need to "
+"change."
 
-#: ../../source/user_guide/dsp_effects.rst:249
-#: 1b6b5988a870482da2a17b9011d8645a
+#: ../../source/user_guide/dsp_effects.rst:249 1b6b5988a870482da2a17b9011d8645a
 msgid "排查清单"
 msgstr "Troubleshooting Checklist"
 
-#: ../../source/user_guide/dsp_effects.rst:251
-#: 9225639cead14e45a3bf922775292404
+#: ../../source/user_guide/dsp_effects.rst:251 9225639cead14e45a3bf922775292404
 msgid "效果没有声音变化时，先检查："
 msgstr "If an effect does not change the sound, check:"
 
-#: ../../source/user_guide/dsp_effects.rst:253
-#: a52603d494c44bc88780fd9b77254c9e
+#: ../../source/user_guide/dsp_effects.rst:253 a52603d494c44bc88780fd9b77254c9e
 msgid "声音是否真的输出到这条 :ref:`Bus<glossary-bus>`。"
 msgstr "Whether the sound is really routed to this :ref:`Bus<glossary-bus>`."
 
-#: ../../source/user_guide/dsp_effects.rst:254
-#: 7fa3900daf8541468196127291899425
+#: ../../source/user_guide/dsp_effects.rst:254 7fa3900daf8541468196127291899425
 msgid "总线是否被旁路。"
 msgstr "Whether the bus is bypassed."
 
-#: ../../source/user_guide/dsp_effects.rst:255
-#: c39b1e31bfe942b58303c00fe54453df
+#: ../../source/user_guide/dsp_effects.rst:255 c39b1e31bfe942b58303c00fe54453df
 msgid "效果参数是否太轻，听不出来。"
 msgstr "Whether the effect parameters are too subtle to hear."
 
-#: ../../source/user_guide/dsp_effects.rst:256
-#: 4866a1370a0345b596cb4719c6b5b40b
+#: ../../source/user_guide/dsp_effects.rst:256 4866a1370a0345b596cb4719c6b5b40b
 msgid "效果是否加到了错误的总线。"
 msgstr "Whether the effect was added to the wrong bus."
 
-#: ../../source/user_guide/dsp_effects.rst:257
-#: 4e2bdc592796441fbaa2fd0dd137d94e
+#: ../../source/user_guide/dsp_effects.rst:257 4e2bdc592796441fbaa2fd0dd137d94e
 msgid "多个效果顺序是否和预期一致。"
 msgstr "Whether the order of multiple effects matches your expectation."
+
+#: ../../source/user_guide/dsp_effects.rst:6 a89df723353d45049478deb07e1f5ac7
+msgid ""
+":ref:`DSP<glossary-dsp>` 是音频效果处理单元。混响、滤波、延迟、压缩、频谱分析都可以看成 DSP。刚开始使用时，建议优先用 ``FmodAudioEffect*`` "
+"这些资源类，把效果加到 :ref:`Bus<glossary-bus>` 上；只有需要非常底层的控制时，再直接操作 :ref:`FmodDSP<class_FmodDSP>`。"
+msgstr ""
+"A :ref:`DSP<glossary-dsp>` is an audio effect processing unit. Reverb, filtering, delay, "
+"compression, and spectrum analysis can all be treated as DSPs. When getting started, prefer the "
+"``FmodAudioEffect*`` resource classes and add effects to a :ref:`Bus<glossary-bus>`. Use "
+":ref:`FmodDSP<class_FmodDSP>` directly only when you need very low-level control."
+
+#: ../../source/user_guide/dsp_effects.rst:23 2fafee027d444817b19c6819c4d1518e
+msgid "优先用 :ref:`FmodChannelControl.set_pan()<class_FmodChannelControl_method_set_pan>`，不需要单独加效果"
+msgstr ""
+"Prefer :ref:`FmodChannelControl.set_pan()<class_FmodChannelControl_method_set_pan>`; no separate "
+"effect is needed."
+
+#: ../../source/user_guide/dsp_effects.rst:39 875b0c49f51649468b0752d3a0c244b4
+msgid ":ref:`FmodAudioEffectAmplify<class_FmodAudioEffectAmplify>`"
+msgstr ":ref:`FmodAudioEffectAmplify<class_FmodAudioEffectAmplify>`"
+
+#: ../../source/user_guide/dsp_effects.rst:42 03ab0c2b41714c51aac22c9f552451f0
+msgid ":ref:`FmodAudioEffectFilter<class_FmodAudioEffectFilter>`"
+msgstr ":ref:`FmodAudioEffectFilter<class_FmodAudioEffectFilter>`"
+
+#: ../../source/user_guide/dsp_effects.rst:45 46fc11078aa045e68b6d700106b2d664
+msgid ":ref:`FmodAudioEffectEQ<class_FmodAudioEffectEQ>`"
+msgstr ":ref:`FmodAudioEffectEQ<class_FmodAudioEffectEQ>`"
+
+#: ../../source/user_guide/dsp_effects.rst:48 f01d4b4feb5d40fd8221299d05aa776a
+msgid ":ref:`FmodAudioEffectReverb<class_FmodAudioEffectReverb>`"
+msgstr ":ref:`FmodAudioEffectReverb<class_FmodAudioEffectReverb>`"
+
+#: ../../source/user_guide/dsp_effects.rst:51 49c332dd93be4817a942ac4d4d0d1c86
+msgid ":ref:`FmodAudioEffectDelay<class_FmodAudioEffectDelay>`"
+msgstr ":ref:`FmodAudioEffectDelay<class_FmodAudioEffectDelay>`"
+
+#: ../../source/user_guide/dsp_effects.rst:54 0d9aeb3b659a4079bfa1bdc967610f2a
+msgid ":ref:`FmodAudioEffectCompressor<class_FmodAudioEffectCompressor>`"
+msgstr ":ref:`FmodAudioEffectCompressor<class_FmodAudioEffectCompressor>`"
+
+#: ../../source/user_guide/dsp_effects.rst:57 e797cb6d99b64dfaa55906c9b7f7719c
+msgid ":ref:`FmodAudioEffectSpectrumAnalyzer<class_FmodAudioEffectSpectrumAnalyzer>`"
+msgstr ":ref:`FmodAudioEffectSpectrumAnalyzer<class_FmodAudioEffectSpectrumAnalyzer>`"
+
+#: ../../source/user_guide/dsp_effects.rst:60 dd98f6a1ca9e4b0e8ba54e46754e59d8
+msgid ":ref:`FmodAudioEffectRecord<class_FmodAudioEffectRecord>`"
+msgstr ":ref:`FmodAudioEffectRecord<class_FmodAudioEffectRecord>`"
+
+#: ../../source/user_guide/dsp_effects.rst:219 fa03e2105de84b5ebbf1a1b8a5a41b8e
+msgid "只有在这些情况才建议直接用 :ref:`FmodDSP<class_FmodDSP>`："
+msgstr "Use :ref:`FmodDSP<class_FmodDSP>` directly only when:"

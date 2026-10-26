@@ -1,0 +1,352 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, LuYingYiLong
+# This file is distributed under the same license as the Godot FmodPlayer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot FmodPlayer \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:12 49dc02fe0d9d45f9949481db76ac03a9
+msgid "FmodAudioEffectPhaser"
+msgstr "FmodAudioEffectPhaser"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:14 1a9ebd838bad41378705f0278947466b
+msgid ""
+"**Inherits:** :ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>`"
+" **<** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+msgstr ""
+"**继承：** :ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>` **<**"
+" :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:16 2b5f01684d394763a1aee15c9a6aaaed
+msgid "Phaser effect using flanger DSP for sweeping filter effects."
+msgstr "移相器效果。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:21 88b40fc585a941258ce053238b10379b
+msgid "Description"
+msgstr "描述"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:23 918d070ccb014eb39899e99e1186e8eb
+msgid ""
+"FmodAudioEffectPhaser creates a phaser effect by using FMOD's flange DSP. It produces a sweeping "
+"filter effect by modulating the frequency range of all-pass filters."
+msgstr ""
+"**FmodAudioEffectPhaser**    通过扫频相位偏移制造流动、旋转或镂空的调制音色。   ``range_min_hz``    与    ``range_max_hz``"
+"    控制扫频范围，   ``rate_hz``    控制移动速度，   ``depth``    与    ``feedback``    控制效果强度。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:25 5a27898c4cc440e09c6db088e81b8ea1
+msgid ""
+"Note: While phasers and flangers have different underlying principles, this implementation uses "
+"flanger DSP to approximate phaser-like effects. Use this effect to add movement, space, and "
+"character to audio."
+msgstr "此实现使用镶边 DSP 近似移相效果，可为音频增加运动感和空间感。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:30 9e5c74a505b6461abf31854199e307e8
+msgid "Properties"
+msgstr "属性"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:36
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:38
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:40
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:42
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:44
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:58
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:62
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:66
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:70
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:74 02f0f19e6f8d4484a7dfe56d3909c39d
+#: 28d5e9dd8d5c4e70aefeaa2fea5de6f5 2946319b38f8459eb1409d6bb06d6725 39bb019203f54715ba47432e8e4f0f42
+#: 55ebb3bc66c6466ab0dae779586f1331 5d0350a9e11e4a7b8a3111f9b88124fe 8da44b46d06e4bd3b810660b13ced9dd
+#: a609992ac0a0440090ffc2f14fc7c941 c68a4b9352f9485dbd7c0c38ce074c9c d4847698e9e94e93a7b87ffc3142c409
+msgid ":ref:`float<class_float>`"
+msgstr ":ref:`float<class_float>`"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:36 5db040413503490483440f50bedabd8f
+msgid ":ref:`depth<class_FmodAudioEffectPhaser_property_depth>`"
+msgstr ":ref:`depth<class_FmodAudioEffectPhaser_property_depth>`"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:36 3d0076b9d5a44b32a840bebf0dbcdb0b
+msgid "``1.0``"
+msgstr "``1.0``"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:38 b0cb4e28f1e24005a10f58269e8429c4
+msgid ":ref:`feedback<class_FmodAudioEffectPhaser_property_feedback>`"
+msgstr ":ref:`feedback<class_FmodAudioEffectPhaser_property_feedback>`"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:38 ad4685c3efbf4f17a573267ac991b358
+msgid "``0.7``"
+msgstr "``0.7``"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:40 b35509f6ea5147b9b5d374af3dbeb1d4
+msgid ":ref:`range_max_hz<class_FmodAudioEffectPhaser_property_range_max_hz>`"
+msgstr ":ref:`range_max_hz<class_FmodAudioEffectPhaser_property_range_max_hz>`"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:40 e27cbcdff09049119b28a60741e443d4
+msgid "``1600.0``"
+msgstr "``1600.0``"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:42 577c057b087e4428875982dca069adad
+msgid ":ref:`range_min_hz<class_FmodAudioEffectPhaser_property_range_min_hz>`"
+msgstr ":ref:`range_min_hz<class_FmodAudioEffectPhaser_property_range_min_hz>`"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:42 5de1d534a379479d90895008381c9d24
+msgid "``440.0``"
+msgstr "``440.0``"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:44 2b39a8168d404f15bc05815872dc0d8b
+msgid ":ref:`rate_hz<class_FmodAudioEffectPhaser_property_rate_hz>`"
+msgstr ":ref:`rate_hz<class_FmodAudioEffectPhaser_property_rate_hz>`"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:44 bb22b7ae40af466aab6adc454453f118
+msgid "``0.5``"
+msgstr "``0.5``"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:50 0d09a9f636cf4f0fa953f8331253c539
+msgid "Methods"
+msgstr "方法"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:56
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:60
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:64
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:68
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:72 54c4640ee8084437a9a2df676e96f1c9
+#: 6ebdb9ebcd7f438aa9481958b6bbec2e 8dd756a8531849318067898416b1c041 cb21b9cd435d40f0ab8ddbb3b850c81f
+#: d1add5b1cadf4c3c812c29adbc27462e
+msgid "|void|"
+msgstr "|void|"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:56 5a8fdbe25a5c4c998ff3bab99d798bd1
+msgid ""
+":ref:`set_depth<class_FmodAudioEffectPhaser_method_set_depth>`\\ (\\ depth\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_depth<class_FmodAudioEffectPhaser_method_set_depth>`\\ (\\ depth\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:58 6ce707fd610d400286eb5723f409c23b
+msgid ":ref:`get_depth<class_FmodAudioEffectPhaser_method_get_depth>`\\ (\\ ) |const|"
+msgstr ":ref:`get_depth<class_FmodAudioEffectPhaser_method_get_depth>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:60 9b9936bc8fc24f449eab7856fa61337a
+msgid ""
+":ref:`set_feedback<class_FmodAudioEffectPhaser_method_set_feedback>`\\ (\\ feedback\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_feedback<class_FmodAudioEffectPhaser_method_set_feedback>`\\ (\\ feedback\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:62 23d1eca7dfb24e18b955ab2dcd75b84c
+msgid ":ref:`get_feedback<class_FmodAudioEffectPhaser_method_get_feedback>`\\ (\\ ) |const|"
+msgstr ":ref:`get_feedback<class_FmodAudioEffectPhaser_method_get_feedback>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:64 43cc20b9a28f476f8b7d820345e14a9e
+msgid ""
+":ref:`set_range_max_hz<class_FmodAudioEffectPhaser_method_set_range_max_hz>`\\ (\\ "
+"range_max_hz\\: :ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_range_max_hz<class_FmodAudioEffectPhaser_method_set_range_max_hz>`\\ (\\ "
+"range_max_hz\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:66 179bd3c094dd4a8b8130cb981a079659
+msgid ":ref:`get_range_max_hz<class_FmodAudioEffectPhaser_method_get_range_max_hz>`\\ (\\ ) |const|"
+msgstr ":ref:`get_range_max_hz<class_FmodAudioEffectPhaser_method_get_range_max_hz>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:68 e02d30ebc44f433ab6e132af7c8d2e51
+msgid ""
+":ref:`set_range_min_hz<class_FmodAudioEffectPhaser_method_set_range_min_hz>`\\ (\\ "
+"range_min_hz\\: :ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_range_min_hz<class_FmodAudioEffectPhaser_method_set_range_min_hz>`\\ (\\ "
+"range_min_hz\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:70 dfa93fc06f6645adbfe23aa71d250fa5
+msgid ":ref:`get_range_min_hz<class_FmodAudioEffectPhaser_method_get_range_min_hz>`\\ (\\ ) |const|"
+msgstr ":ref:`get_range_min_hz<class_FmodAudioEffectPhaser_method_get_range_min_hz>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:72 625ba8916b474d26bb278e58fdcacc53
+msgid ""
+":ref:`set_rate_hz<class_FmodAudioEffectPhaser_method_set_rate_hz>`\\ (\\ rate_hz\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_rate_hz<class_FmodAudioEffectPhaser_method_set_rate_hz>`\\ (\\ rate_hz\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:74 378939d7bd3c431b964f9b98919e11f4
+msgid ":ref:`get_rate_hz<class_FmodAudioEffectPhaser_method_get_rate_hz>`\\ (\\ ) |const|"
+msgstr ":ref:`get_rate_hz<class_FmodAudioEffectPhaser_method_get_rate_hz>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:84 645ae00b43ff4a779a23b074123cac9c
+msgid "Property Descriptions"
+msgstr "属性说明"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:90 e3bde84542974436a320b64108182b10
+msgid ":ref:`float<class_float>` **depth** = ``1.0``"
+msgstr ":ref:`float<class_float>` **depth** = ``1.0``"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:94
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:182 15fdf1ccf61741c0b1e6bedb2a248c53
+#: 49e0ca0b82454978b302b19441f8a8b4
+msgid "|void| **set_depth**\\ (\\ depth\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_depth**\\ (\\ depth\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:95
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:198 2199bd39330040b59e26fcbe151a2176
+#: 3b14176daf514ab1a577122db648c7f2
+msgid ":ref:`float<class_float>` **get_depth**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_depth**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:97 d387b6e6b7d64deaa57bc41066484311
+msgid ""
+"The filter frequency sweep depth. Range: 0.1 to 4.0. Higher values create more pronounced "
+"filtering effects."
+msgstr "调制深度"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:107 cd2c54ef2a594b2abc2d0cf519a8f966
+msgid ":ref:`float<class_float>` **feedback** = ``0.7``"
+msgstr ":ref:`float<class_float>` **feedback** = ``0.7``"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:111
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:212 240b309bc684498aa0e7f6f2777880a2
+#: 2ba6e8b6f371464182fbab1c5ef9afcf
+msgid "|void| **set_feedback**\\ (\\ feedback\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_feedback**\\ (\\ feedback\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:112
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:228 9253657fcb6d475fa751793816081ead
+#: e4ee1caef1de4f83bf2c01fa0cb9f237
+msgid ":ref:`float<class_float>` **get_feedback**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_feedback**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:114 bcb2a5333c34493ba9536cd7eb951166
+msgid ""
+"The feedback amount. Range: 0.1 to 0.9. Higher feedback creates more resonant, intense phasing "
+"effects."
+msgstr "反馈量"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:124 815d1b28f5964ce3bff02554d734f2e5
+msgid ":ref:`float<class_float>` **range_max_hz** = ``1600.0``"
+msgstr ":ref:`float<class_float>` **range_max_hz** = ``1600.0``"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:128
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:242 639a75fc6ce94609b437bfbf083e81af
+#: fb8d46d2b243426db5308eaa9854d121
+msgid "|void| **set_range_max_hz**\\ (\\ range_max_hz\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_range_max_hz**\\ (\\ range_max_hz\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:129
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:256 2ebcd7dea2c14370a1287dbf462d7c39
+#: cd15a3f493ae418888587dc47f6762b4
+msgid ":ref:`float<class_float>` **get_range_max_hz**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_range_max_hz**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:131 a190c7046a0242e79387d0b7a867983b
+msgid "The maximum frequency of the LFO sweep in Hz. Range: 10 to 10000."
+msgstr "扫频范围上限"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:141 90f593490f614885bf18e5f00704023d
+msgid ":ref:`float<class_float>` **range_min_hz** = ``440.0``"
+msgstr ":ref:`float<class_float>` **range_min_hz** = ``440.0``"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:145
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:270 66f990154d8940c8935c70a2c078769e
+#: 702c7d9e069b472b9ad97227452d4e1a
+msgid "|void| **set_range_min_hz**\\ (\\ range_min_hz\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_range_min_hz**\\ (\\ range_min_hz\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:146
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:284 09181890730046f38640fd483fb6ff53
+#: fb79dac12a264e4b973048ecc6c83c57
+msgid ":ref:`float<class_float>` **get_range_min_hz**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_range_min_hz**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:148 4f2f039b28ff40db9a883f36b3493a6c
+msgid "The minimum frequency of the LFO sweep in Hz. Range: 10 to 10000."
+msgstr "扫频范围下限"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:158 945ae2cc0aa34c0e9c58380ecba175cf
+msgid ":ref:`float<class_float>` **rate_hz** = ``0.5``"
+msgstr ":ref:`float<class_float>` **rate_hz** = ``0.5``"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:162
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:298 4145d4cec9074337b38707769f7fa5b5
+#: 49a91e902a46476eaefce6d35b67d71b
+msgid "|void| **set_rate_hz**\\ (\\ rate_hz\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_rate_hz**\\ (\\ rate_hz\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:163
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:314 16d32004603a46c9a0dbd52c667efb5a
+#: f1dbfe4ca3b44f8aa0259f76ed008f2a
+msgid ":ref:`float<class_float>` **get_rate_hz**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_rate_hz**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:165 a777d5a291264ce8b7c4df534d2be563
+msgid "The modulation rate in Hz. Range: 0.5 to 20.0. Higher rates create faster sweeping effects."
+msgstr "调制速率"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:174 3859ea127475425ba3d12d6248402885
+msgid "Method Descriptions"
+msgstr "方法说明"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:184 2787e6f0b23c470aa885525a52d73f1c
+msgid "Sets the filter frequency sweep depth. Range: 0.1 to 4.0."
+msgstr "设置调制深度。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:186 10f97e390e514177b7007b4fa9acdf15
+msgid "Higher values create more pronounced filtering effects."
+msgstr "值越大，滤波效果越明显。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:200 dc7ce0f7b41d407d850033d8b5ccc525
+msgid "Returns the filter frequency sweep depth."
+msgstr "返回调制深度。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:214 6be399db5e974f299902b99fd9a1fe46
+msgid "Sets the feedback amount. Range: 0.1 to 0.9."
+msgstr "设置反馈量。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:216 981bb57ac16f428fbb020f3f044e77d7
+msgid "Higher feedback creates more resonant, intense phasing effects."
+msgstr "反馈越强，移相效果的谐振感越明显。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:230 9f1884035f024895b87bcfb2ce0e3962
+msgid "Returns the feedback amount."
+msgstr "返回反馈量。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:244 e298b8499a4840d395f6d45543a4e38c
+msgid "Sets the maximum frequency of the LFO sweep in Hertz. Range: 10 to 10000."
+msgstr "设置扫频范围上限。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:258 20de5cf758034c9993a752369079ce69
+msgid "Returns the maximum frequency of the LFO sweep in Hertz."
+msgstr "返回扫频范围上限。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:272 c4d45b5de2a64843a5ab53b7d5adb544
+msgid "Sets the minimum frequency of the LFO sweep in Hertz. Range: 10 to 10000."
+msgstr "设置扫频范围下限。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:286 bb0f76d768a54aa0992864aa88ed895f
+msgid "Returns the minimum frequency of the LFO sweep in Hertz."
+msgstr "返回扫频范围下限。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:300 067668bd6f9b4085a1b07bf4d54c92c2
+msgid "Sets the modulation rate in Hertz. Range: 0.5 to 20.0."
+msgstr "设置调制速率。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:302 6ecb0f55f5fb4ce0be88e1d82c490cc0
+msgid "Higher rates create faster sweeping effects."
+msgstr "速率越高，扫频越快。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:316 c8cf2479fa084b52a421fe18411ad95d
+msgid "Returns the modulation rate in Hertz."
+msgstr "返回调制速率。"

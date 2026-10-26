@@ -1,0 +1,183 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, LuYingYiLong
+# This file is distributed under the same license as the Godot FmodPlayer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot FmodPlayer \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:12 1cb2715c399f4c27923247d32efb6032
+msgid "FmodAudioEffectAmplify"
+msgstr "FmodAudioEffectAmplify"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:14 0e49d4d2edd04e44a192189ae94a7a89
+msgid ""
+"**Inherits:** :ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>`"
+" **<** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+msgstr ""
+"**继承：** :ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>` **<**"
+" :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:16 a9e21d158efe4d00885d7f8654218cbf
+msgid "A simple gain/volume effect for amplifying or attenuating audio signals."
+msgstr "简单增益效果，用于放大或衰减信号。"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:21 233627c3bba248daaf2dda96a109f59f
+msgid "Description"
+msgstr "描述"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:23 51f6da25431b469296f9d37d6fbe354e
+msgid ""
+"FmodAudioEffectAmplify is a basic gain control effect that increases or decreases the volume of "
+"the audio signal. It provides both decibel (dB) and linear control over the amplification level."
+msgstr ""
+"**FmodAudioEffectAmplify**    会在总线效果链中创建一个增益 DSP。它适合做总线音量微调、临时放大或衰减，也可以在运行时用    ``volume_db``    "
+"或    ``volume_linear``    做平滑的强度控制。"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:25 d04bdbd8c88d44fe9fdebdeae596481e
+msgid ""
+"Use this effect for simple volume adjustments, boosting quiet signals, or attenuating loud "
+"signals in your audio pipeline."
+msgstr "用于调整音量、放大较弱的信号或衰减过强的信号。"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:30 ff2ed0918076456f9d4c3ac5da9decbb
+msgid "Properties"
+msgstr "属性"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:36
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:38
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:52
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:56 494fe65108a741c0b73af7a21503d82d
+#: 580dbdf50d9b4ec3911e48cc2a624b24 63262b07ee5d468590572a4d452bb570 9295c3d142d64bec8bdf2a22add5b619
+msgid ":ref:`float<class_float>`"
+msgstr ":ref:`float<class_float>`"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:36 a4b280ad832743abb5fd9744c1ec6f84
+msgid ":ref:`volume_db<class_FmodAudioEffectAmplify_property_volume_db>`"
+msgstr ":ref:`volume_db<class_FmodAudioEffectAmplify_property_volume_db>`"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:36 1691b14d047d41e68a267ec9e15b2f9a
+msgid "``0.0``"
+msgstr "``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:38 63ccc87ee9a24079b964d6566af28dbf
+msgid ":ref:`volume_linear<class_FmodAudioEffectAmplify_property_volume_linear>`"
+msgstr ":ref:`volume_linear<class_FmodAudioEffectAmplify_property_volume_linear>`"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:44 b7cddf163ef54efbaabcddc413ad3168
+msgid "Methods"
+msgstr "方法"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:50
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:54 313cae121dd4464aa7a79ea4760577d6
+#: 4d2530c240094bb7a31d132fca06b808
+msgid "|void|"
+msgstr "|void|"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:50 d2543aef4c034803b13307e7840b9a25
+msgid ""
+":ref:`set_volume_db<class_FmodAudioEffectAmplify_method_set_volume_db>`\\ (\\ volume_db\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_volume_db<class_FmodAudioEffectAmplify_method_set_volume_db>`\\ (\\ volume_db\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:52 15db6001ba1f48aa8094124d5b18d0b7
+msgid ":ref:`get_volume_db<class_FmodAudioEffectAmplify_method_get_volume_db>`\\ (\\ ) |const|"
+msgstr ":ref:`get_volume_db<class_FmodAudioEffectAmplify_method_get_volume_db>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:54 07cc6a206d17408bab38194d7638a2b7
+msgid ""
+":ref:`set_volume_linear<class_FmodAudioEffectAmplify_method_set_volume_linear>`\\ (\\ "
+"volume_linear\\: :ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_volume_linear<class_FmodAudioEffectAmplify_method_set_volume_linear>`\\ (\\ "
+"volume_linear\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:56 fcc85635c3934a93b7520fddc8c71154
+msgid ":ref:`get_volume_linear<class_FmodAudioEffectAmplify_method_get_volume_linear>`\\ (\\ ) |const|"
+msgstr ":ref:`get_volume_linear<class_FmodAudioEffectAmplify_method_get_volume_linear>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:66 8102979f50f64172b3702a9dcd812354
+msgid "Property Descriptions"
+msgstr "属性说明"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:72 dc97fc528c544b2e9e51d2f0e3a6e444
+msgid ":ref:`float<class_float>` **volume_db** = ``0.0``"
+msgstr ":ref:`float<class_float>` **volume_db** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:76
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:113 8a74aebfcc5241528f551e1779f32b76
+#: a2a039b1fccc48f7a856cab6574e66d3
+msgid "|void| **set_volume_db**\\ (\\ volume_db\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_volume_db**\\ (\\ volume_db\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:77
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:127 f5e3307657f44d9894a259048f7878b0
+#: fb15c11dc7614b818ac9d316b17a6cb6
+msgid ":ref:`float<class_float>` **get_volume_db**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_volume_db**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:79 2c1fca8e3b1c4be69b0280fe9fe8df96
+msgid ""
+"The amplification level in decibels (dB). Range: -80 dB to +24 dB. Default value of 0 dB means no"
+" change to the signal. Negative values attenuate the signal, positive values amplify it."
+msgstr "增益，单位为分贝"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:89 5dee5163a2ee4409b17fa4a253324741
+msgid ":ref:`float<class_float>` **volume_linear**"
+msgstr ":ref:`float<class_float>` **volume_linear**"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:93
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:141 020d40f27a1c458eb11d15fab331606e
+#: 3bda9d56084443479810e7578f63946b
+msgid "|void| **set_volume_linear**\\ (\\ volume_linear\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_volume_linear**\\ (\\ volume_linear\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:94
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:155 6293a376078f4fe5a80f2d04644549ec
+#: bbd1aca9519e4d73b2ca2f0750ea4c98
+msgid ":ref:`float<class_float>` **get_volume_linear**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_volume_linear**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:96 f1d6adad8ad74780ac7ebaac9dcc124b
+msgid ""
+"The amplification level as a linear value. Range: 0.0 to 4.0 (approximate). A value of 1.0 means "
+"unity gain (no change), values below 1.0 attenuate, and values above 1.0 amplify. This is "
+"automatically converted to/from "
+":ref:`volume_db<class_FmodAudioEffectAmplify_property_volume_db>`."
+msgstr ""
+"线性增益；该属性隐藏在 Inspector 中，但可以从脚本访问 （参见   "
+":ref:`volume_db<class_FmodAudioEffectAmplify_property_volume_db>`  ）"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:105 bad67f3fbc3d4f73976fa2f904e65f44
+msgid "Method Descriptions"
+msgstr "方法说明"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:115 d4230ea549174b6a9ac8318490d99cbb
+msgid "Sets :ref:`volume_db<class_FmodAudioEffectAmplify_property_volume_db>`."
+msgstr "Sets :ref:`volume_db<class_FmodAudioEffectAmplify_property_volume_db>`."
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:129 e0c8152e1a8f459392d743e9090bb141
+msgid "Returns :ref:`volume_db<class_FmodAudioEffectAmplify_property_volume_db>`."
+msgstr "Returns :ref:`volume_db<class_FmodAudioEffectAmplify_property_volume_db>`."
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:143 aa3610e155024653988bd4a416b6b1f1
+msgid "Sets :ref:`volume_linear<class_FmodAudioEffectAmplify_property_volume_linear>`."
+msgstr "Sets :ref:`volume_linear<class_FmodAudioEffectAmplify_property_volume_linear>`."
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:157 9b27aa6a786c48eebbfcfdd69b948fa2
+msgid "Returns :ref:`volume_linear<class_FmodAudioEffectAmplify_property_volume_linear>`."
+msgstr "Returns :ref:`volume_linear<class_FmodAudioEffectAmplify_property_volume_linear>`."

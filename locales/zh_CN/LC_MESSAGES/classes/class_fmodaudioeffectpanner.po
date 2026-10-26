@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, LuYingYiLong
+# This file is distributed under the same license as the Godot FmodPlayer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot FmodPlayer \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:12 ea0a38f59f7c408b93a2dd11c05aa927
+msgid "FmodAudioEffectPanner"
+msgstr "FmodAudioEffectPanner"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:14 3569daada5df499aa869d9bd753191f5
+msgid ""
+"**Inherits:** :ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>`"
+" **<** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+msgstr ""
+"**继承：** :ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>` **<**"
+" :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:16 8dc2c30214a7424d98de125ab94c625b
+msgid "Stereo panner for positioning audio in the stereo field."
+msgstr "左右声像控制。"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:21 5d866790a0c849a49a57101fc7e55669
+msgid "Description"
+msgstr "描述"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:23 3d675278168846e3bc2bba9ce20e9742
+msgid ""
+"FmodAudioEffectPanner is a stereo panning effect that controls the position of audio in the left-"
+"right stereo field. It uses FMOD's PAN DSP to distribute the signal between the left and right "
+"channels."
+msgstr "**FmodAudioEffectPanner**    提供简单的左右声像偏移。   ``pan``    为负时偏左，为正时偏右，适合 2D UI 声音、非空间化音效或总线级声像调整。"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:25 bee04178b1044f28b4091d92efcdea9c
+msgid ""
+"A pan value of 0.0 centers the audio equally in both channels. Negative values move the audio "
+"toward the left channel, while positive values move it toward the right channel."
+msgstr "声像为 0.0 时左右声道均衡；负值偏向左声道，正值偏向右声道。"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:27 4b2559eb477d49f7a49fa754d4664e87
+msgid ""
+"This effect simulates Godot's AudioEffectPanner and provides a simple way to spatialize mono or "
+"stereo audio in a 2D stereo soundstage."
+msgstr "模拟 Godot 的 AudioEffectPanner，用于在二维立体声声场中调整单声道或立体声音频的位置。"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:32 17499f1170cf485e82459796ec9983fa
+msgid "Properties"
+msgstr "属性"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:38
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:52 0de0d16648f843c1825fa8c7c38cdc37
+#: f40310d67d2c470492cd2834178eac72
+msgid ":ref:`float<class_float>`"
+msgstr ":ref:`float<class_float>`"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:38 724db59547f14a48a11b784729ea5cf1
+msgid ":ref:`pan<class_FmodAudioEffectPanner_property_pan>`"
+msgstr ":ref:`pan<class_FmodAudioEffectPanner_property_pan>`"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:38 fe11217bce3b4ac48f4944d0ec7ab086
+msgid "``0.0``"
+msgstr "``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:44 d73c5ed4ff634236a13d00b5e6d12a76
+msgid "Methods"
+msgstr "方法"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:50 8d30f3404efd418f8558713cc7e9841f
+msgid "|void|"
+msgstr "|void|"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:50 10d50e2d30df43b68d8d2e86f30c3ddf
+msgid ""
+":ref:`set_pan<class_FmodAudioEffectPanner_method_set_pan>`\\ (\\ pan\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_pan<class_FmodAudioEffectPanner_method_set_pan>`\\ (\\ pan\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:52 ed6930a0b1ce4e3b8dd4518f1f8dde2c
+msgid ":ref:`get_pan<class_FmodAudioEffectPanner_method_get_pan>`\\ (\\ ) |const|"
+msgstr ":ref:`get_pan<class_FmodAudioEffectPanner_method_get_pan>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:62 c41c833c1bdb4fd58c6e7abef4513308
+msgid "Property Descriptions"
+msgstr "属性说明"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:68 775b41c827ed4664a2b234afb8eac9c8
+msgid ":ref:`float<class_float>` **pan** = ``0.0``"
+msgstr ":ref:`float<class_float>` **pan** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:72
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:92 6382e1ceb55546039423d119088db96c
+#: 84e94ede36ba48cf9ad309f4d7a251de
+msgid "|void| **set_pan**\\ (\\ pan\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_pan**\\ (\\ pan\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:73
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:106 3f8bc4538a984e39aa585027ee754586
+#: ae4baefcefbd408d95291408c68d33e6
+msgid ":ref:`float<class_float>` **get_pan**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_pan**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:75 36aaf7d2adbd4303a0a1e532781adc66
+msgid ""
+"The pan position in the stereo field. Range: -1.0 to 1.0. Default: 0.0. A value of -1.0 sends the"
+" signal fully to the left channel, 0.0 is centered (equal in both channels), and 1.0 sends the "
+"signal fully to the right channel. Values in between provide smooth positioning."
+msgstr "声像位置，负值偏左，正值偏右"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:84 ab928cbc2a7c489fb7560b54ae3f6542
+msgid "Method Descriptions"
+msgstr "方法说明"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:94 1f7c53db6a4c4d4c8ea521e73cc9994f
+msgid "Sets :ref:`pan<class_FmodAudioEffectPanner_property_pan>`."
+msgstr "Sets :ref:`pan<class_FmodAudioEffectPanner_property_pan>`."
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:108 5c1bebae6b664ee2b43ca0a4474baf44
+msgid "Returns :ref:`pan<class_FmodAudioEffectPanner_property_pan>`."
+msgstr "Returns :ref:`pan<class_FmodAudioEffectPanner_property_pan>`."

@@ -15,118 +15,102 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Sphinx gettext + Codex PO generator\n"
+"Generated-By: Babel 2.18.0\n"
 
-
-#: ../../source/user_guide/mixer.rst:2
-#: 3b2411c670634a01ae54b817969cfdb3
+#: ../../source/user_guide/mixer.rst:2 3b2411c670634a01ae54b817969cfdb3
 msgid "混音系统"
 msgstr "Mixing System"
 
-#: ../../source/user_guide/mixer.rst:4
-#: 628dd517f5024ee88cd9efeb85b5c1ab
+#: ../../source/user_guide/mixer.rst:4 628dd517f5024ee88cd9efeb85b5c1ab
 msgid "本章讲的是“声音最后从哪里出来、怎样一起调音量、怎样一起加效果”。"
-msgstr "This chapter explains where sound is routed, how to adjust groups of sounds together, and how to apply effects to them."
-
-#: ../../source/user_guide/mixer.rst:6
-#: 316bc2e9ae974b3bac18561a96f092ef
-msgid ""
-"如果你刚开始使用 Godot-FmodPlayer，可以先把 :ref:`Bus<glossary-bus>` 理解成 Godot 的音频总线：音乐走 ``Music``，音效走 ``SFX``，对白走 ``Voice``。把声音分到不同总线后，就可以一次性控制一整类声音。"
 msgstr ""
-"If you are new to Godot-FmodPlayer, think of a :ref:`Bus<glossary-bus>` like a Godot audio bus: music goes to ``Music``, sound effects go to ``SFX``, and dialogue goes to ``Voice``. Once sounds are separated into buses, you can control an entire category at once."
+"This chapter explains where sound is routed, how to adjust groups of sounds together, and how to "
+"apply effects to them."
 
-#: ../../source/user_guide/mixer.rst:9
-#: cafdcfe0d62c4c92a2e1323f41366ea4
+#: ../../source/user_guide/mixer.rst:6 316bc2e9ae974b3bac18561a96f092ef
+msgid ""
+"如果你刚开始使用 Godot-FmodPlayer，可以先把 :ref:`Bus<glossary-bus>` 理解成 Godot 的音频总线：音乐走 ``Music``，音效走 "
+"``SFX``，对白走 ``Voice``。把声音分到不同总线后，就可以一次性控制一整类声音。"
+msgstr ""
+"If you are new to Godot-FmodPlayer, think of a :ref:`Bus<glossary-bus>` like a Godot audio bus: "
+"music goes to ``Music``, sound effects go to ``SFX``, and dialogue goes to ``Voice``. Once sounds"
+" are separated into buses, you can control an entire category at once."
+
+#: ../../source/user_guide/mixer.rst:9 cafdcfe0d62c4c92a2e1323f41366ea4
 msgid "什么时候需要混音系统"
 msgstr "When is a mixing system needed"
 
-#: ../../source/user_guide/mixer.rst:11
-#: ffdc6e1e1faa4baa815243351ee7df7c
+#: ../../source/user_guide/mixer.rst:11 ffdc6e1e1faa4baa815243351ee7df7c
 msgid "常见需求可以这样对应："
 msgstr "Common needs map to these approaches:"
 
-#: ../../source/user_guide/mixer.rst:16
-#: 73e54377febd495eb92b75688e192d5f
+#: ../../source/user_guide/mixer.rst:16 73e54377febd495eb92b75688e192d5f
 msgid "你想做的事"
 msgstr "What you want to do"
 
-#: ../../source/user_guide/mixer.rst:17
-#: 05709ff5de9c4d46befb44c1885ff351
+#: ../../source/user_guide/mixer.rst:17 05709ff5de9c4d46befb44c1885ff351
 msgid "推荐做法"
 msgstr "Recommended approach"
 
-#: ../../source/user_guide/mixer.rst:18
-#: d1adabb464414935914c5d51d1c2316f
+#: ../../source/user_guide/mixer.rst:18 d1adabb464414935914c5d51d1c2316f
 msgid "调低所有音乐"
 msgstr "Lower all music"
 
-#: ../../source/user_guide/mixer.rst:19
-#: 50a0774e02d646d78c54c811e81d3258
+#: ../../source/user_guide/mixer.rst:19 50a0774e02d646d78c54c811e81d3258
 msgid "把音乐播放到 ``Music`` 总线，然后调这个总线的 ``volume_db``"
 msgstr "Play music through the ``Music`` bus, then adjust that bus's ``volume_db``."
 
-#: ../../source/user_guide/mixer.rst:20
-#: c3d328516e054de7b3b20980ca54ea2c
+#: ../../source/user_guide/mixer.rst:20 c3d328516e054de7b3b20980ca54ea2c
 msgid "暂停时让音效静音"
 msgstr "Mute sound effects while paused"
 
-#: ../../source/user_guide/mixer.rst:21
-#: 4e8cd2f414d841eab7d5ecf728f0f5f6
+#: ../../source/user_guide/mixer.rst:21 4e8cd2f414d841eab7d5ecf728f0f5f6
 msgid "静音 ``SFX`` 总线"
 msgstr "Mute the ``SFX`` bus."
 
-#: ../../source/user_guide/mixer.rst:22
-#: 4f598a64806c4a30ae0499b895a83946
+#: ../../source/user_guide/mixer.rst:22 4f598a64806c4a30ae0499b895a83946
 msgid "对所有脚步声加滤波"
 msgstr "Apply filtering to all footsteps"
 
-#: ../../source/user_guide/mixer.rst:23
-#: 466ea977f1dd4908877fcbd9ffb9ed55
+#: ../../source/user_guide/mixer.rst:23 466ea977f1dd4908877fcbd9ffb9ed55
 msgid "建一个 ``Footsteps`` 总线，并把效果加到这个总线上"
 msgstr "Create a ``Footsteps`` bus and add the effect to that bus."
 
-#: ../../source/user_guide/mixer.rst:24
-#: 0149c4e035324c76972887b2ba2d64de
+#: ../../source/user_guide/mixer.rst:24 0149c4e035324c76972887b2ba2d64de
 msgid "对单个正在播放的声音微调"
 msgstr "Fine-tune a single currently playing sound"
 
-#: ../../source/user_guide/mixer.rst:25
-#: 0fae5bdf92e8405da33e2f081db3c4af
+#: ../../source/user_guide/mixer.rst:25 0fae5bdf92e8405da33e2f081db3c4af
 msgid "取得 :ref:`Channel<glossary-channel>`，只控制这一次播放"
 msgstr "Get the :ref:`Channel<glossary-channel>` and control only that playback instance."
 
-#: ../../source/user_guide/mixer.rst:26
-#: ebc5957594c142ccb2085b838be94de0
+#: ../../source/user_guide/mixer.rst:26 ebc5957594c142ccb2085b838be94de0
 msgid "对一组声音统一控制"
 msgstr "Control a group of sounds together"
 
-#: ../../source/user_guide/mixer.rst:27
-#: 86da5c856aba40cba10fb33802ed45e9
+#: ../../source/user_guide/mixer.rst:27 86da5c856aba40cba10fb33802ed45e9
 msgid "使用 :ref:`Bus<glossary-bus>` 或它底层的 :ref:`ChannelGroup<glossary-channelgroup>`"
 msgstr "Use a :ref:`Bus<glossary-bus>` or its underlying :ref:`ChannelGroup<glossary-channelgroup>`."
 
-#: ../../source/user_guide/mixer.rst:30
-#: 3147126a3c704161af0b8d8f730dcc22
+#: ../../source/user_guide/mixer.rst:30 3147126a3c704161af0b8d8f730dcc22
 msgid "核心概念"
 msgstr "Core Concepts"
 
-#: ../../source/user_guide/mixer.rst:33
-#: 0dd4b66619044d32b7a007cd08b0dcc1
+#: ../../source/user_guide/mixer.rst:33 0dd4b66619044d32b7a007cd08b0dcc1
 msgid "Bus"
 msgstr "Bus"
 
-#: ../../source/user_guide/mixer.rst:35
-#: c0a1e27a55ab4a4188ad8f066298d4ba
+#: ../../source/user_guide/mixer.rst:35 c0a1e27a55ab4a4188ad8f066298d4ba
 msgid ":ref:`Bus<glossary-bus>` 是一条混音路径。你可以把它想成一条“声音分类管道”。"
-msgstr "A :ref:`Bus<glossary-bus>` is a mixing route. You can think of it as a pipeline for a category of sounds."
+msgstr ""
+"A :ref:`Bus<glossary-bus>` is a mixing route. You can think of it as a pipeline for a category of"
+" sounds."
 
-#: ../../source/user_guide/mixer.rst:37
-#: cdda51c2eb974cdea8f25a7be0c41ca1
+#: ../../source/user_guide/mixer.rst:37 cdda51c2eb974cdea8f25a7be0c41ca1
 msgid "例如："
 msgstr "For example:"
 
-#: ../../source/user_guide/mixer.rst:39
-#: fa1db5f988134b0ab2e9d7abeda44d80
+#: ../../source/user_guide/mixer.rst:39 fa1db5f988134b0ab2e9d7abeda44d80
 msgid ""
 "Master\n"
 "├── Music\n"
@@ -140,47 +124,36 @@ msgstr ""
 "├── Voice\n"
 "└── Ambient"
 
-#: ../../source/user_guide/mixer.rst:47
-#: cb90da2c35164f08bab2cd2dd6bae968
+#: ../../source/user_guide/mixer.rst:47 cb90da2c35164f08bab2cd2dd6bae968
 msgid "所有声音最后都会汇入 ``Master``。如果把背景音乐送到 ``Music``，把按钮音效送到 ``SFX``，以后就可以分别控制它们。"
 msgstr ""
-"All sounds eventually flow into ``Master``. If background music goes to ``Music`` and button sounds go to ``SFX``, you can control them separately later."
+"All sounds eventually flow into ``Master``. If background music goes to ``Music`` and button "
+"sounds go to ``SFX``, you can control them separately later."
 
-#: ../../source/user_guide/mixer.rst:50
-#: ad17fe187c4248e5b1dc1755803a01d8
+#: ../../source/user_guide/mixer.rst:50 ad17fe187c4248e5b1dc1755803a01d8
 msgid "ChannelGroup"
 msgstr "ChannelGroup"
 
-#: ../../source/user_guide/mixer.rst:52
-#: f076ec7994984466997448e13fa79926
-msgid ""
-":ref:`ChannelGroup<glossary-channelgroup>` 是 FMOD 底层用于混合一组 :ref:`Channel<glossary-channel>` 的对象。普通使用时优先操作 :ref:`FmodAudioBus<FmodAudioBus>` 或总线布局；只有需要更底层的播放控制时，才直接拿 :ref:`FmodChannelGroup<FmodChannelGroup>`。"
-msgstr ""
-"A :ref:`ChannelGroup<glossary-channelgroup>` is the lower-level FMOD object used to mix a group of :ref:`Channel<glossary-channel>` objects. For normal use, prefer :ref:`FmodAudioBus<FmodAudioBus>` or the bus layout; access :ref:`FmodChannelGroup<FmodChannelGroup>` directly only when you need lower-level playback control."
-
-#: ../../source/user_guide/mixer.rst:55
-#: 8e2bea35f960453e82f6b2caa1fe1148
+#: ../../source/user_guide/mixer.rst:55 8e2bea35f960453e82f6b2caa1fe1148
 msgid "DSP"
 msgstr "DSP"
 
-#: ../../source/user_guide/mixer.rst:57
-#: 86a67b1d35bb4db38442bb3102ab6045
+#: ../../source/user_guide/mixer.rst:57 86a67b1d35bb4db38442bb3102ab6045
 msgid ":ref:`DSP<glossary-dsp>` 是音频效果处理单元。混响、滤波、延迟、压缩、频谱分析都属于 DSP。多个声音要共享同一个效果时，通常把效果加到总线上，而不是给每个声音单独加。"
 msgstr ""
-"A :ref:`DSP<glossary-dsp>` is an audio effect processing unit. Reverb, filtering, delay, compression, and spectrum analysis are all DSPs. When multiple sounds should share the same effect, usually add the effect to a bus instead of adding it to every sound individually."
+"A :ref:`DSP<glossary-dsp>` is an audio effect processing unit. Reverb, filtering, delay, "
+"compression, and spectrum analysis are all DSPs. When multiple sounds should share the same "
+"effect, usually add the effect to a bus instead of adding it to every sound individually."
 
-#: ../../source/user_guide/mixer.rst:60
-#: b78020326825434b8a40dfadf0a78891
+#: ../../source/user_guide/mixer.rst:60 b78020326825434b8a40dfadf0a78891
 msgid "把声音送到总线"
 msgstr "Send Audio to a Bus"
 
-#: ../../source/user_guide/mixer.rst:62
-#: a8fdd5436fe34428879752f2b21d0c50
+#: ../../source/user_guide/mixer.rst:62 a8fdd5436fe34428879752f2b21d0c50
 msgid "最简单的方式是设置播放节点的 ``bus``："
 msgstr "The simplest way is to set the playback node's ``bus``:"
 
-#: ../../source/user_guide/mixer.rst:64
-#: 51ca5664c2b94bd2bd3ea8338c04310b
+#: ../../source/user_guide/mixer.rst:64 51ca5664c2b94bd2bd3ea8338c04310b
 msgid ""
 "extends Node\n"
 "\n"
@@ -212,14 +185,15 @@ msgstr ""
 "func play_hit():\n"
 "    hit_sfx.play()"
 
-#: ../../source/user_guide/mixer.rst:81
-#: 7c585cf0526941d9b920a3b54eb5266a
-msgid "如果你直接用代码播放 :ref:`Sound<glossary-sound>`，就把目标 :ref:`ChannelGroup<glossary-channelgroup>` 传给 ``play_sound()``："
+#: ../../source/user_guide/mixer.rst:81 7c585cf0526941d9b920a3b54eb5266a
+msgid ""
+"如果你直接用代码播放 :ref:`Sound<glossary-sound>`，就把目标 :ref:`ChannelGroup<glossary-channelgroup>` 传给 "
+"``play_sound()``："
 msgstr ""
-"If you play a :ref:`Sound<glossary-sound>` directly from code, pass the target :ref:`ChannelGroup<glossary-channelgroup>` to ``play_sound()``:"
+"If you play a :ref:`Sound<glossary-sound>` directly from code, pass the target :ref:`ChannelGroup"
+"<glossary-channelgroup>` to ``play_sound()``:"
 
-#: ../../source/user_guide/mixer.rst:83
-#: 11b3ee6387f84c1aa54ae372e7920529
+#: ../../source/user_guide/mixer.rst:83 11b3ee6387f84c1aa54ae372e7920529
 msgid ""
 "func play_ui_sound(path: String):\n"
 "    var system := FmodServer.main_system\n"
@@ -233,33 +207,27 @@ msgstr ""
 "    var sound := system.create_sound_from_file(path)\n"
 "    return system.play_sound(sound, ui_bus, false)"
 
-#: ../../source/user_guide/mixer.rst:92
-#: c3c5457cd20c42eb93cc4cf0143913f3
+#: ../../source/user_guide/mixer.rst:92 c3c5457cd20c42eb93cc4cf0143913f3
 msgid "控制总线音量、静音和独奏"
 msgstr "Control Bus Volume, Mute, and Solo"
 
-#: ../../source/user_guide/mixer.rst:94
-#: e04fb5849ed4418480256d68a68ca2c4
+#: ../../source/user_guide/mixer.rst:94 e04fb5849ed4418480256d68a68ca2c4
 msgid "音量通常用分贝（dB）表示："
 msgstr "Volume is usually expressed in decibels (dB):"
 
-#: ../../source/user_guide/mixer.rst:96
-#: 7b2428bc26fe41548cfad95a95b904f9
+#: ../../source/user_guide/mixer.rst:96 7b2428bc26fe41548cfad95a95b904f9
 msgid "``0.0`` 表示原始音量。"
 msgstr "``0.0`` means the original volume."
 
-#: ../../source/user_guide/mixer.rst:97
-#: dcbf0f8a1aa7447d9c2b52d2aa6c27fb
+#: ../../source/user_guide/mixer.rst:97 dcbf0f8a1aa7447d9c2b52d2aa6c27fb
 msgid "负数表示变小，例如 ``-6.0``。"
 msgstr "Negative values make it quieter, such as ``-6.0``."
 
-#: ../../source/user_guide/mixer.rst:98
-#: a4b33388d8f246539754ef28037013db
+#: ../../source/user_guide/mixer.rst:98 a4b33388d8f246539754ef28037013db
 msgid "正数表示变大，但要小心失真。"
 msgstr "Positive values make it louder, but be careful about distortion."
 
-#: ../../source/user_guide/mixer.rst:100
-#: 772ceb66308c498aa1caeabf413b8ce9
+#: ../../source/user_guide/mixer.rst:100 772ceb66308c498aa1caeabf413b8ce9
 msgid ""
 "func set_music_quiet():\n"
 "    var system := FmodServer.main_system\n"
@@ -297,32 +265,26 @@ msgstr ""
 "\n"
 "    voice.solo = enabled"
 
-#: ../../source/user_guide/mixer.rst:120
-#: 61d805210e934d2690c05a790ba79c4b
+#: ../../source/user_guide/mixer.rst:120 61d805210e934d2690c05a790ba79c4b
 msgid "``mute`` 是让这条总线静音。``solo`` 是只听这条总线，常用于调试对白、环境声或音乐。"
 msgstr ""
-"``mute`` silences this bus. ``solo`` lets you hear only this bus, which is useful when debugging dialogue, ambience, or music."
+"``mute`` silences this bus. ``solo`` lets you hear only this bus, which is useful when debugging "
+"dialogue, ambience, or music."
 
-#: ../../source/user_guide/mixer.rst:123
-#: 35e88f3add534b76ac3685d73b4305da
+#: ../../source/user_guide/mixer.rst:123 35e88f3add534b76ac3685d73b4305da
 msgid "和 Godot 音频总线同步"
 msgstr "Synchronize with Godot Audio Buses"
 
-#: ../../source/user_guide/mixer.rst:125
-#: 1460aff5c4d5450b971fc987a5fde7cd
+#: ../../source/user_guide/mixer.rst:125 1460aff5c4d5450b971fc987a5fde7cd
 msgid ""
-"Godot-FmodPlayer 的 FMOD 总线布局会和 Godot 的 `AudioServer`_ 总线布局同步。也就是说，你在 Godot 的音频总线面板里创建的 ``Music``、``SFX``、``Voice`` 等总线，也可以被映射到 FMOD 侧使用。"
+"Godot-FmodPlayer 的 FMOD 总线布局会和 Godot 的 `AudioServer`_ 总线布局同步。也就是说，你在 Godot 的音频总线面板里创建的 "
+"``Music``、``SFX``、``Voice`` 等总线，也可以被映射到 FMOD 侧使用。"
 msgstr ""
-"Godot-FmodPlayer can synchronize the FMOD bus layout with Godot's `AudioServer`_ bus layout. This means buses such as ``Music``, ``SFX``, and ``Voice`` created in Godot's audio bus panel can also be mapped to the FMOD side."
+"Godot-FmodPlayer can synchronize the FMOD bus layout with Godot's `AudioServer`_ bus layout. This"
+" means buses such as ``Music``, ``SFX``, and ``Voice`` created in Godot's audio bus panel can "
+"also be mapped to the FMOD side."
 
-#: ../../source/user_guide/mixer.rst:127
-#: 18ab3f59d0ce4f27972be35675ff6329
-msgid "通常情况下，你只需要通过 :ref:`FmodServer.get_audio_bus_layout()<FmodServer-get_audio_bus_layout>` 取得当前布局："
-msgstr ""
-"Usually, you only need to get the current layout through :ref:`FmodServer.get_audio_bus_layout()<FmodServer-get_audio_bus_layout>`:"
-
-#: ../../source/user_guide/mixer.rst:129
-#: e15d2d09270241e781de7ec300f455dd
+#: ../../source/user_guide/mixer.rst:129 e15d2d09270241e781de7ec300f455dd
 msgid ""
 "func get_layout():\n"
 "    var layout := FmodServer.get_audio_bus_layout()\n"
@@ -332,13 +294,13 @@ msgstr ""
 "    var layout := FmodServer.get_audio_bus_layout()\n"
 "    return layout"
 
-#: ../../source/user_guide/mixer.rst:135
-#: 756af04d453f43b492f380d02fdca482
+#: ../../source/user_guide/mixer.rst:135 756af04d453f43b492f380d02fdca482
 msgid "如果你在运行时修改了 Godot 的音频总线结构，可以让 FMOD 侧按需同步："
-msgstr "If you modify Godot's audio bus structure at runtime, you can synchronize the FMOD side when needed:"
+msgstr ""
+"If you modify Godot's audio bus structure at runtime, you can synchronize the FMOD side when "
+"needed:"
 
-#: ../../source/user_guide/mixer.rst:137
-#: 8c75bf5d41294d4eb6a4375a652af8dd
+#: ../../source/user_guide/mixer.rst:137 8c75bf5d41294d4eb6a4375a652af8dd
 msgid ""
 "func sync_buses_from_godot():\n"
 "    var layout := FmodServer.get_audio_bus_layout()\n"
@@ -348,32 +310,28 @@ msgstr ""
 "    var layout := FmodServer.get_audio_bus_layout()\n"
 "    layout.sync_from_audio_server_if_changed()"
 
-#: ../../source/user_guide/mixer.rst:143
-#: d68e95037d0540b18319c910e29f1c4d
+#: ../../source/user_guide/mixer.rst:143 d68e95037d0540b18319c910e29f1c4d
 msgid "同步会保留或创建 ``Master`` 总线，并根据 Godot 当前的总线结构更新 FMOD 侧的总线、父子关系、音量、静音、独奏、旁路状态和支持的音频效果。"
 msgstr ""
-"Synchronization keeps or creates the ``Master`` bus, then updates FMOD-side buses, parent-child relationships, volume, mute, solo, bypass state, and supported audio effects according to Godot's current bus structure."
+"Synchronization keeps or creates the ``Master`` bus, then updates FMOD-side buses, parent-child "
+"relationships, volume, mute, solo, bypass state, and supported audio effects according to Godot's"
+" current bus structure."
 
-#: ../../source/user_guide/mixer.rst:147
-#: 6be29626e03a47e8b055d2379ba13290
+#: ../../source/user_guide/mixer.rst:147 6be29626e03a47e8b055d2379ba13290
 msgid ""
-"如果项目的总线结构主要在 Godot 编辑器里维护，推荐优先通过 Godot 音频总线面板创建总线，再让 FMOD 布局同步。只有运行时需要临时总线，或者你明确希望由代码管理总线结构时，再手动调用 ``create_audio_bus()``。"
+"如果项目的总线结构主要在 Godot 编辑器里维护，推荐优先通过 Godot 音频总线面板创建总线，再让 FMOD "
+"布局同步。只有运行时需要临时总线，或者你明确希望由代码管理总线结构时，再手动调用 ``create_audio_bus()``。"
 msgstr ""
-"If your project's bus structure is mainly maintained in the Godot editor, prefer creating buses in Godot's audio bus panel and then synchronizing the FMOD layout. Call ``create_audio_bus()`` manually only when you need temporary buses at runtime or explicitly want code to manage the bus structure."
+"If your project's bus structure is mainly maintained in the Godot editor, prefer creating buses "
+"in Godot's audio bus panel and then synchronizing the FMOD layout. Call ``create_audio_bus()`` "
+"manually only when you need temporary buses at runtime or explicitly want code to manage the bus "
+"structure."
 
-#: ../../source/user_guide/mixer.rst:150
-#: e1a05db305384b9f90c5d9abdf1ce8df
+#: ../../source/user_guide/mixer.rst:150 e1a05db305384b9f90c5d9abdf1ce8df
 msgid "创建自己的总线"
 msgstr "Create Your Own Buses"
 
-#: ../../source/user_guide/mixer.rst:152
-#: 452b11c383f549b5a19ccdc564a610d1
-msgid "默认总线不够用时，可以通过 Godot 音频总线面板新增总线，然后同步到 FMOD。也可以直接通过 :ref:`FmodAudioBusLayout<FmodAudioBusLayout>` 在代码中创建新总线："
-msgstr ""
-"When the default buses are not enough, you can add buses in Godot's audio bus panel and synchronize them to FMOD. You can also create new buses directly in code through :ref:`FmodAudioBusLayout<FmodAudioBusLayout>`:"
-
-#: ../../source/user_guide/mixer.rst:154
-#: 4d8429a816ed4e15b75bc686f7a709f6
+#: ../../source/user_guide/mixer.rst:154 4d8429a816ed4e15b75bc686f7a709f6
 msgid ""
 "func setup_extra_buses():\n"
 "    var layout := FmodServer.get_audio_bus_layout()\n"
@@ -389,13 +347,11 @@ msgstr ""
 "    layout.create_audio_bus(\"Weapons\", \"SFX\")\n"
 "    layout.create_audio_bus(\"Footsteps\", \"SFX\")"
 
-#: ../../source/user_guide/mixer.rst:163
-#: 70353aeae7224dbd93280dcbd0dc17ab
+#: ../../source/user_guide/mixer.rst:163 70353aeae7224dbd93280dcbd0dc17ab
 msgid "建议总线层级先保持简单："
 msgstr "Keep the bus hierarchy simple at first:"
 
-#: ../../source/user_guide/mixer.rst:165
-#: 8fe3c4c36d3744b8b50d110cbbea15ca
+#: ../../source/user_guide/mixer.rst:165 8fe3c4c36d3744b8b50d110cbbea15ca
 msgid ""
 "Master\n"
 "├── Music\n"
@@ -413,25 +369,23 @@ msgstr ""
 "├── Voice\n"
 "└── UI"
 
-#: ../../source/user_guide/mixer.rst:175
-#: 5973bd88411d418ea62ba1eb6c744c9f
+#: ../../source/user_guide/mixer.rst:175 5973bd88411d418ea62ba1eb6c744c9f
 msgid "如果不确定是否要新建总线，先问自己一句：以后是否要单独调它的音量、静音或效果？如果答案是“是”，就适合拆成总线。"
 msgstr ""
-"If you are not sure whether to create a new bus, ask: will I need to control its volume, mute state, or effects separately later? If the answer is yes, it is a good candidate for its own bus."
+"If you are not sure whether to create a new bus, ask: will I need to control its volume, mute "
+"state, or effects separately later? If the answer is yes, it is a good candidate for its own bus."
 
-#: ../../source/user_guide/mixer.rst:178
-#: bebfbe2ade064f6182d20ec882ab0aba
+#: ../../source/user_guide/mixer.rst:178 bebfbe2ade064f6182d20ec882ab0aba
 msgid "给总线添加效果"
 msgstr "Add Effects to a Bus"
 
-#: ../../source/user_guide/mixer.rst:180
-#: 297f3358f6e74316bf206fd3fb1f3c40
+#: ../../source/user_guide/mixer.rst:180 297f3358f6e74316bf206fd3fb1f3c40
 msgid "总线效果适合处理“一整类声音”。例如所有室内脚步声都变闷，或者暂停菜单打开时让音乐带一点低通。"
 msgstr ""
-"Bus effects are useful for processing an entire category of sounds, such as making all indoor footsteps muffled or adding a low-pass effect to music when the pause menu opens."
+"Bus effects are useful for processing an entire category of sounds, such as making all indoor "
+"footsteps muffled or adding a low-pass effect to music when the pause menu opens."
 
-#: ../../source/user_guide/mixer.rst:182
-#: 84eb17f33848425d8e72a8c39b4f1b72
+#: ../../source/user_guide/mixer.rst:182 84eb17f33848425d8e72a8c39b4f1b72
 msgid ""
 "func add_pause_filter():\n"
 "    var layout := FmodServer.get_audio_bus_layout()\n"
@@ -451,25 +405,26 @@ msgstr ""
 "\n"
 "    layout.add_bus_effect(\"Music\", filter)"
 
-#: ../../source/user_guide/mixer.rst:193
-#: 88080b85b8a54d34baafabdfbf8ecea1
-msgid "这里的滤波器就是一个 :ref:`DSP<glossary-dsp>`。如果只想影响某一次播放，不要加到总线上；去控制那一次播放返回的 :ref:`Channel<glossary-channel>` 会更合适。"
+#: ../../source/user_guide/mixer.rst:193 88080b85b8a54d34baafabdfbf8ecea1
+msgid ""
+"这里的滤波器就是一个 :ref:`DSP<glossary-dsp>`。如果只想影响某一次播放，不要加到总线上；去控制那一次播放返回的 :ref:`Channel<glossary-"
+"channel>` 会更合适。"
 msgstr ""
-"The filter here is a :ref:`DSP<glossary-dsp>`. If you only want to affect one playback instance, do not add it to the bus; controlling the returned :ref:`Channel<glossary-channel>` is a better fit."
+"The filter here is a :ref:`DSP<glossary-dsp>`. If you only want to affect one playback instance, "
+"do not add it to the bus; controlling the returned :ref:`Channel<glossary-channel>` is a better "
+"fit."
 
-#: ../../source/user_guide/mixer.rst:196
-#: c89ebbb98f3b4eea89e5d91a601ef35b
+#: ../../source/user_guide/mixer.rst:196 c89ebbb98f3b4eea89e5d91a601ef35b
 msgid "淡入淡出"
 msgstr "Fade In and Fade Out"
 
-#: ../../source/user_guide/mixer.rst:198
-#: 8224c2259ff14f84859a4e5624057deb
+#: ../../source/user_guide/mixer.rst:198 8224c2259ff14f84859a4e5624057deb
 msgid "总线对象不是 Godot 节点，不能直接用 ``tween_property()`` 绑属性动画。可以用一个循环逐帧插值："
 msgstr ""
-"Bus objects are not Godot nodes, so you cannot bind property animation with ``tween_property()`` directly. You can interpolate frame by frame in a loop:"
+"Bus objects are not Godot nodes, so you cannot bind property animation with ``tween_property()`` "
+"directly. You can interpolate frame by frame in a loop:"
 
-#: ../../source/user_guide/mixer.rst:200
-#: 6dbdc0ef7ce84a1a9130057de30cad77
+#: ../../source/user_guide/mixer.rst:200 6dbdc0ef7ce84a1a9130057de30cad77
 msgid ""
 "func fade_bus(bus_name: String, target_db: float, duration: float):\n"
 "    var system := FmodServer.main_system\n"
@@ -507,13 +462,11 @@ msgstr ""
 "\n"
 "    bus.set_volume_db(target_db)"
 
-#: ../../source/user_guide/mixer.rst:220
-#: 38f0155fe03b4b3d965d76b96558fd4e
+#: ../../source/user_guide/mixer.rst:220 38f0155fe03b4b3d965d76b96558fd4e
 msgid "常见用法是暂停时压低音乐："
 msgstr "A common use is lowering music while paused:"
 
-#: ../../source/user_guide/mixer.rst:222
-#: 4f9cd9d6ac104ac4864951cbad20eba0
+#: ../../source/user_guide/mixer.rst:222 4f9cd9d6ac104ac4864951cbad20eba0
 msgid ""
 "func on_pause_changed(paused: bool):\n"
 "    if paused:\n"
@@ -527,18 +480,17 @@ msgstr ""
 "    else:\n"
 "        fade_bus(\"Music\", 0.0, 0.25)"
 
-#: ../../source/user_guide/mixer.rst:231
-#: c5414990ae65459ea69fdb5fb99e73dd
+#: ../../source/user_guide/mixer.rst:231 c5414990ae65459ea69fdb5fb99e73dd
 msgid "降低音乐给对白让位"
 msgstr "Lower Music to Make Room for Dialogue"
 
-#: ../../source/user_guide/mixer.rst:233
-#: de7d12476f544c849a610141319cdb7c
+#: ../../source/user_guide/mixer.rst:233 de7d12476f544c849a610141319cdb7c
 msgid "这个效果常被叫作 ducking，意思是对白播放时先把音乐压低，播放结束后再恢复。"
-msgstr "This effect is often called ducking: lower the music while dialogue plays, then restore it afterward."
+msgstr ""
+"This effect is often called ducking: lower the music while dialogue plays, then restore it "
+"afterward."
 
-#: ../../source/user_guide/mixer.rst:235
-#: 175124bd6f224415a32593280ad49aa3
+#: ../../source/user_guide/mixer.rst:235 175124bd6f224415a32593280ad49aa3
 msgid ""
 "var normal_music_db := 0.0\n"
 "var ducked_music_db := -12.0\n"
@@ -572,56 +524,41 @@ msgstr ""
 "\n"
 "    await fade_bus(\"Music\", normal_music_db, 0.3)"
 
-#: ../../source/user_guide/mixer.rst:253
-#: f39170fc1ab549c2b527eb376b549a5e
+#: ../../source/user_guide/mixer.rst:253 f39170fc1ab549c2b527eb376b549a5e
 msgid "这不是必须使用压缩器才能完成。对多数游戏来说，直接调低音乐总线已经足够清楚，也更容易理解和调试。"
 msgstr ""
-"You do not have to use a compressor for this. For most games, directly lowering the music bus is clear enough and easier to understand and debug."
+"You do not have to use a compressor for this. For most games, directly lowering the music bus is "
+"clear enough and easier to understand and debug."
 
-#: ../../source/user_guide/mixer.rst:256
-#: 44db81f71ccf4f7ab25c3b6f31983cfc
+#: ../../source/user_guide/mixer.rst:256 44db81f71ccf4f7ab25c3b6f31983cfc
 msgid "高级：混音矩阵什么时候需要看"
 msgstr "Advanced: When to Look at the Mix Matrix"
 
-#: ../../source/user_guide/mixer.rst:258
-#: dfc8f90f94b3496eac293ae08318ecef
-msgid ""
-":ref:`Mix Matrix<glossary-mix-matrix>` 可以精确控制“哪个输入声道送到哪个输出声道”。如果你只是想让声音偏左或偏右，优先用 :ref:`FmodChannelControl.set_pan()<FmodChannelControl-set_pan>`。"
-msgstr ""
-"A :ref:`Mix Matrix<glossary-mix-matrix>` precisely controls which input channel is sent to which output channel. If you only want to move a sound left or right, prefer :ref:`FmodChannelControl.set_pan()<FmodChannelControl-set_pan>`."
-
-#: ../../source/user_guide/mixer.rst:260
-#: 2dad829f93b644dea0dfd5a2ac21ca6c
-msgid "只有在这些情况下，才建议继续研究 :ref:`FmodChannelControl.set_mix_matrix()<FmodChannelControl-set_mix_matrix>`："
-msgstr "Continue to :ref:`FmodChannelControl.set_mix_matrix()<FmodChannelControl-set_mix_matrix>` only in cases like these:"
-
-#: ../../source/user_guide/mixer.rst:262
-#: 34f62650be9c41d5a632ad6f1abec955
+#: ../../source/user_guide/mixer.rst:262 34f62650be9c41d5a632ad6f1abec955
 msgid "要把单声道手动分配到多声道输出，也就是 :ref:`Upmix<glossary-upmix>`。"
-msgstr "You need to manually distribute mono audio to multi-channel output, which is :ref:`Upmix<glossary-upmix>`."
+msgstr ""
+"You need to manually distribute mono audio to multi-channel output, which is :ref:`Upmix"
+"<glossary-upmix>`."
 
-#: ../../source/user_guide/mixer.rst:263
-#: b9af6542a28848ae945ee7e699bce360
+#: ../../source/user_guide/mixer.rst:263 b9af6542a28848ae945ee7e699bce360
 msgid "要把 5.1 等多声道内容折叠成立体声，也就是 :ref:`Downmix<glossary-downmix>`。"
-msgstr "You need to fold multi-channel content such as 5.1 down to stereo, which is :ref:`Downmix<glossary-downmix>`."
+msgstr ""
+"You need to fold multi-channel content such as 5.1 down to stereo, which is :ref:`Downmix"
+"<glossary-downmix>`."
 
-#: ../../source/user_guide/mixer.rst:264
-#: 98797f4e7b9f4391992c937720697668
+#: ../../source/user_guide/mixer.rst:264 98797f4e7b9f4391992c937720697668
 msgid "要交换左右声道或做特殊声道路由。"
 msgstr "You need to swap left and right channels or do special channel routing."
 
-#: ../../source/user_guide/mixer.rst:265
-#: ce9e27af392f495a8ab2dd5bf6003d3b
+#: ../../source/user_guide/mixer.rst:265 ce9e27af392f495a8ab2dd5bf6003d3b
 msgid "要调试某个音频资产的声道顺序。"
 msgstr "You need to debug the channel order of an audio asset."
 
-#: ../../source/user_guide/mixer.rst:267
-#: 4e2fac3e834a4a49876f4f4794a4ffb0
+#: ../../source/user_guide/mixer.rst:267 4e2fac3e834a4a49876f4f4794a4ffb0
 msgid "一个最小示例：把立体声左右声道对调。"
 msgstr "A minimal example: swap the left and right channels of a stereo sound."
 
-#: ../../source/user_guide/mixer.rst:269
-#: 467d8678725a4a5f9e55f6f1cb350ce6
+#: ../../source/user_guide/mixer.rst:269 467d8678725a4a5f9e55f6f1cb350ce6
 msgid ""
 "func swap_stereo(channel: FmodChannel):\n"
 "    var matrix := PackedFloat32Array([\n"
@@ -639,38 +576,32 @@ msgstr ""
 "\n"
 "    channel.set_mix_matrix(matrix, 2, 2)"
 
-#: ../../source/user_guide/mixer.rst:280
-#: d487fff1174a4d3788d84ea0c2d6f85f
+#: ../../source/user_guide/mixer.rst:280 d487fff1174a4d3788d84ea0c2d6f85f
 msgid "性能与排查"
 msgstr "Performance and Troubleshooting"
 
-#: ../../source/user_guide/mixer.rst:282
-#: 61725647995848198ee04446818c538d
+#: ../../source/user_guide/mixer.rst:282 61725647995848198ee04446818c538d
 msgid "混音相关问题可以从三处开始看："
 msgstr "For mixing-related issues, start with these three checks:"
 
-#: ../../source/user_guide/mixer.rst:284
-#: ddd7c1b5b0bf42cdad70a7c7a86c2875
+#: ../../source/user_guide/mixer.rst:284 ddd7c1b5b0bf42cdad70a7c7a86c2875
 msgid "声音是否被送到了正确的 :ref:`Bus<glossary-bus>`。"
 msgstr "Whether the sound is routed to the correct :ref:`Bus<glossary-bus>`."
 
-#: ../../source/user_guide/mixer.rst:285
-#: ec663aba92ff43058c65cbf7cca2de5b
+#: ../../source/user_guide/mixer.rst:285 ec663aba92ff43058c65cbf7cca2de5b
 msgid "目标总线是否被静音、独奏或音量过低。"
 msgstr "Whether the target bus is muted, soloed, or too quiet."
 
-#: ../../source/user_guide/mixer.rst:286
-#: eaadb8d2a1474d1aa222e4b1354b8fc1
+#: ../../source/user_guide/mixer.rst:286 eaadb8d2a1474d1aa222e4b1354b8fc1
 msgid "是否有过多 :ref:`DSP<glossary-dsp>` 同时启用。"
 msgstr "Whether too many :ref:`DSP<glossary-dsp>` effects are enabled at the same time."
 
-#: ../../source/user_guide/mixer.rst:288
-#: 9314359c7ad14c0bb78db20e722c067c
+#: ../../source/user_guide/mixer.rst:288 9314359c7ad14c0bb78db20e722c067c
 msgid "可以在 Godot 性能监视器中查看 FMOD 注册的性能项："
 msgstr "You can view FMOD's registered performance metrics in Godot's performance monitors:"
 
-#: ../../source/user_guide/mixer.rst:290
-#: 1b04d1ec80bb47658d7208089768c655
+#: ../../source/user_guide/mixer.rst:290 1b04d1ec80bb47658d7208089768c655
+#, python-format
 msgid ""
 "func _process(_delta):\n"
 "    var dsp_usage = Performance.get_monitor(\"FmodCPUUsage/DSP\")\n"
@@ -696,39 +627,83 @@ msgstr ""
 "        channels[\"virtual\"],\n"
 "    ])"
 
-#: ../../source/user_guide/mixer.rst:304
-#: 070e3af31d7b4f59809a2a8146aa2426
+#: ../../source/user_guide/mixer.rst:304 070e3af31d7b4f59809a2a8146aa2426
 msgid "这里的 ``Virtual`` 指 :ref:`Virtual Channel<glossary-virtual-channel>`。它不一定是错误，很多时候只是 FMOD 在帮你节省混音资源。"
 msgstr ""
-"Here, ``Virtual`` refers to :ref:`Virtual Channel<glossary-virtual-channel>`. It is not necessarily an error; often it simply means FMOD is saving mixing resources for you."
+"Here, ``Virtual`` refers to :ref:`Virtual Channel<glossary-virtual-channel>`. It is not "
+"necessarily an error; often it simply means FMOD is saving mixing resources for you."
 
-#: ../../source/user_guide/mixer.rst:307
-#: 457ccfbc4f0f419eb66207be2bff55f2
+#: ../../source/user_guide/mixer.rst:307 457ccfbc4f0f419eb66207be2bff55f2
 msgid "建议"
 msgstr "Recommendations"
 
-#: ../../source/user_guide/mixer.rst:309
-#: 1bc5478a4f944caf93d93daf67d48b5f
+#: ../../source/user_guide/mixer.rst:309 1bc5478a4f944caf93d93daf67d48b5f
 msgid "先用 ``Master``、``Music``、``SFX``、``Voice``、``UI`` 这样的简单结构。"
 msgstr "Start with a simple structure such as ``Master``, ``Music``, ``SFX``, ``Voice``, and ``UI``."
 
-#: ../../source/user_guide/mixer.rst:310
-#: b7984b6a49294bffba0b60b9df33609d
+#: ../../source/user_guide/mixer.rst:310 b7984b6a49294bffba0b60b9df33609d
 msgid "只有需要单独控制时才继续拆分总线。"
 msgstr "Split buses further only when you need separate control."
 
-#: ../../source/user_guide/mixer.rst:311
-#: 96cad291a7a44273ad0ef86747e4f667
+#: ../../source/user_guide/mixer.rst:311 96cad291a7a44273ad0ef86747e4f667
 msgid "多个声音共享效果时，把 :ref:`DSP<glossary-dsp>` 加到总线上。"
 msgstr "When multiple sounds share an effect, add the :ref:`DSP<glossary-dsp>` to the bus."
 
-#: ../../source/user_guide/mixer.rst:312
-#: e3334a6288474f75b114526cd08d1f06
+#: ../../source/user_guide/mixer.rst:312 e3334a6288474f75b114526cd08d1f06
 msgid "单个声音的临时控制，优先使用播放返回的 :ref:`Channel<glossary-channel>`。"
-msgstr "For temporary control of one sound, prefer the :ref:`Channel<glossary-channel>` returned by playback."
+msgstr ""
+"For temporary control of one sound, prefer the :ref:`Channel<glossary-channel>` returned by "
+"playback."
 
-#: ../../source/user_guide/mixer.rst:313
-#: 3725cb29fe3c45e8a695f1928af5fe15
+#: ../../source/user_guide/mixer.rst:313 3725cb29fe3c45e8a695f1928af5fe15
 msgid "不要一开始就设计很深的总线树；能听清、能维护，比“看起来专业”更重要。"
 msgstr ""
-"Do not design a very deep bus tree at the beginning. Being easy to hear and maintain matters more than looking professional."
+"Do not design a very deep bus tree at the beginning. Being easy to hear and maintain matters more"
+" than looking professional."
+
+#: ../../source/user_guide/mixer.rst:52 f076ec7994984466997448e13fa79926
+msgid ""
+":ref:`ChannelGroup<glossary-channelgroup>` 是 FMOD 底层用于混合一组 :ref:`Channel<glossary-channel>` "
+"的对象。普通使用时优先操作 :ref:`FmodAudioBus<class_FmodAudioBus>` 或总线布局；只有需要更底层的播放控制时，才直接拿 "
+":ref:`FmodChannelGroup<class_FmodChannelGroup>`。"
+msgstr ""
+"A :ref:`ChannelGroup<glossary-channelgroup>` is the lower-level FMOD object used to mix a group "
+"of :ref:`Channel<glossary-channel>` objects. For normal use, prefer "
+":ref:`FmodAudioBus<class_FmodAudioBus>` or the bus layout; access "
+":ref:`FmodChannelGroup<class_FmodChannelGroup>` directly only when you need lower-level playback "
+"control."
+
+#: ../../source/user_guide/mixer.rst:127 18ab3f59d0ce4f27972be35675ff6329
+msgid ""
+"通常情况下，你只需要通过 "
+":ref:`FmodServer.get_audio_bus_layout()<class_FmodServer_method_get_audio_bus_layout>` 取得当前布局："
+msgstr ""
+"Usually, you only need to get the current layout through "
+":ref:`FmodServer.get_audio_bus_layout()<class_FmodServer_method_get_audio_bus_layout>`:"
+
+#: ../../source/user_guide/mixer.rst:152 452b11c383f549b5a19ccdc564a610d1
+msgid ""
+"默认总线不够用时，可以通过 Godot 音频总线面板新增总线，然后同步到 FMOD。也可以直接通过 "
+":ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>` 在代码中创建新总线："
+msgstr ""
+"When the default buses are not enough, you can add buses in Godot's audio bus panel and "
+"synchronize them to FMOD. You can also create new buses directly in code through "
+":ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`:"
+
+#: ../../source/user_guide/mixer.rst:258 dfc8f90f94b3496eac293ae08318ecef
+msgid ""
+":ref:`Mix Matrix<glossary-mix-matrix>` 可以精确控制“哪个输入声道送到哪个输出声道”。如果你只是想让声音偏左或偏右，优先用 "
+":ref:`FmodChannelControl.set_pan()<class_FmodChannelControl_method_set_pan>`。"
+msgstr ""
+"A :ref:`Mix Matrix<glossary-mix-matrix>` precisely controls which input channel is sent to which "
+"output channel. If you only want to move a sound left or right, prefer "
+":ref:`FmodChannelControl.set_pan()<class_FmodChannelControl_method_set_pan>`."
+
+#: ../../source/user_guide/mixer.rst:260 2dad829f93b644dea0dfd5a2ac21ca6c
+msgid ""
+"只有在这些情况下，才建议继续研究 "
+":ref:`FmodChannelControl.set_mix_matrix()<class_FmodChannelControl_method_set_mix_matrix>`："
+msgstr ""
+"Continue to "
+":ref:`FmodChannelControl.set_mix_matrix()<class_FmodChannelControl_method_set_mix_matrix>` only "
+"in cases like these:"

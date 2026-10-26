@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="FmodChannelGroup" inherits="FmodChannelControl" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/godotengine/godot/master/doc/class.xsd">
+	<brief_description>
+		Represents a group of channels for sub-mixing and collective control.
+	</brief_description>
+	<description>
+		FmodChannelGroup is used to organize multiple channels into a group for collective control. It extends [FmodChannelControl], inheriting all its functionality including volume control, panning, DSP effects, and sample-accurate scheduling.
+		Channel groups form a hierarchical tree structure where each group can contain channels and other groups. Audio from all child channels and groups flows through the parent group, allowing for complex mixing hierarchies. The root of this tree is the master channel group, accessible via [method FmodServer.get_master_channel_group].
+		Common use cases include:
+		- Creating separate mix buses for music, SFX, and dialogue
+		- Applying effects (reverb, EQ) to groups of sounds
+		- Controlling volume of entire categories of audio
+		- Managing complex routing configurations with nested groups
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="channel_group_is_valid" qualifiers="const">
+			<return type="bool" />
+			<description>
+				Returns [code]true[/code] if the ChannelGroup handle is valid and can be used for operations.
+				A valid channel group can be controlled and queried for information about its contents.
+			</description>
+		</method>
+		<method name="channel_group_is_null" qualifiers="const">
+			<return type="bool" />
+			<description>
+				Returns [code]true[/code] if the ChannelGroup handle is null or invalid.
+				A null channel group indicates that the group has been released or was never properly initialized.
+			</description>
+		</method>
+		<method name="get_num_channels" qualifiers="const">
+			<return type="int" />
+			<description>
+				Returns the number of channels currently feeding into this ChannelGroup.
+				Returns [code]-1[/code] if the channel group is invalid.
+				This count includes only direct channel inputs, not channels in nested groups.
+			</description>
+		</method>
+		<method name="get_channel" qualifiers="const">
+			<return type="FmodChannel" />
+			<param index="0" name="index" type="int" />
+			<description>
+				Returns the [FmodChannel] at the specified [param index] that is feeding into this group.
+				The index ranges from 0 to [method get_num_channels] - 1.
+				Returns [code]null[/code] if the index is out of bounds or the channel group is invalid.
+			</description>
+		</method>
+		<method name="add_group">
+			<return type="void" />
+			<param index="0" name="child_group" type="FmodChannelGroup" />
+			<param index="1" name="propagatedspclock" type="bool" default="true" />
+			<description>
+				Adds a child [FmodChannelGroup] to this group as an input.
+				When [param propagatedspclock] is [code]true[/code], the child group's DSP clock is synchronized with this group, enabling sample-accurate scheduling across the hierarchy.
+				This method creates the parent-child relationship in the channel group tree, causing all audio from the child group to flow through this group.
+			</description>
+		</method>
+		<method name="get_num_groups" qualifiers="const">
+			<return type="int" />
+			<description>
+				Returns the number of child ChannelGroups currently feeding into this group.
+				Returns [code]0[/code] if the channel group is invalid.
+				This count represents the number of nested channel groups that have been added via [method add_group].
+			</description>
+		</method>
+		<method name="get_group" qualifiers="const">
+			<return type="FmodChannelGroup" />
+			<param index="0" name="index" type="int" />
+			<description>
+				Returns the child [FmodChannelGroup] at the specified [param index] that is feeding into this group.
+				The index ranges from 0 to [method get_num_groups] - 1.
+				Returns [code]null[/code] if the index is out of bounds or the channel group is invalid.
+				Use this to traverse the channel group hierarchy.
+			</description>
+		</method>
+		<method name="get_parent_group" qualifiers="const">
+			<return type="FmodChannelGroup" />
+			<description>
+				Returns the parent [FmodChannelGroup] that this group outputs to.
+				Returns [code]null[/code] if this group outputs directly to the master channel group.
+				Use this to traverse up the channel group hierarchy.
+			</description>
+		</method>
+		<method name="get_name" qualifiers="const">
+			<return type="String" />
+			<description>
+				Returns the name of this ChannelGroup as specified when it was created.
+				Returns an empty string if the channel group is invalid.
+				Channel group names are useful for identification and debugging purposes.
+			</description>
+		</method>
+		<method name="release">
+			<return type="void" />
+			<description>
+				Releases this ChannelGroup and all its resources.
+				After calling this method, all channels feeding into this group will be stopped,
+				and the group becomes invalid. The ChannelGroup handle should not be used after release.
+				[b]Note:[/b] This does not release child groups; they remain valid but will be disconnected from this group.
+			</description>
+		</method>
+	</methods>
+	<members />
+	<signals />
+	<constants />
+</class>

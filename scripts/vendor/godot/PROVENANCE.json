@@ -1,0 +1,13 @@
+{
+  "upstream": "https://github.com/godotengine/godot",
+  "revision": "f6ab5db28b9d989a3ae710d57410a123cf0e4b23",
+  "files": {
+    "doc/tools/make_rst.py": "33cf6905dccccab610fe0bb6e5ce8b964c186f898bdfa38923272433dbd2419e",
+    "misc/utility/color.py": "09b4e0a20f676ef47ca83d4a8623b3e1726f62244ec1e13ecf60cbce0bdc2036",
+    "version.py": "a1e47e8f0ecba555e13df91dd91f03e5940dd8ebf7ca84f77c3030318d28051e",
+    "types.json": "4cc04b3974ad437b83464d454fbba1b5afc21ab69789459cad884d0cae5129dc",
+    "objects.inv": "efd4fec64cd3db49fcee3ed20135133680d9d1550b011f9a5a6bfdef1d4621e6"
+  },
+  "inventory_url": "https://docs.godotengine.org/en/stable/objects.inv",
+  "type_catalog": "Class names, inheritance, enum values and member names extracted from the same Godot revision; no descriptions copied."
+}

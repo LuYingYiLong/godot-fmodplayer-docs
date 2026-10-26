@@ -1,0 +1,205 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, LuYingYiLong
+# This file is distributed under the same license as the Godot FmodPlayer package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot FmodPlayer \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:12 536c8059a0af4f989e357481b23001ec
+msgid "FmodAudioPreviewProperty"
+msgstr "FmodAudioPreviewProperty"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:14 e8b2eeb2cdb940de9d4bb17af5543d87
+msgid ""
+"**Inherits:** :ref:`ColorRect<class_ColorRect>` **<** :ref:`Control<class_Control>` **<** "
+":ref:`CanvasItem<class_CanvasItem>` **<** :ref:`Node<class_Node>` **<** "
+":ref:`Object<class_Object>`"
+msgstr ""
+"**继承：** :ref:`ColorRect<class_ColorRect>` **<** :ref:`Control<class_Control>` **<** "
+":ref:`CanvasItem<class_CanvasItem>` **<** :ref:`Node<class_Node>` **<** "
+":ref:`Object<class_Object>`"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:16 3029a3cc34b34b368a4c986da16c6bcd
+msgid "Custom property editor control for previewing FMOD audio streams in the editor."
+msgstr "用于在编辑器中预览 FMOD 音频流的自定义属性控件。"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:21 ac3d45c93c3d416baff26f28e22c37e1
+msgid "Description"
+msgstr "描述"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:23 5158dc50ddbc46fea8258ec641031a7a
+msgid ""
+"FmodAudioPreviewProperty provides a visual audio preview widget that displays in the Godot "
+"inspector when viewing :ref:`FmodAudioStream<class_FmodAudioStream>` resources. It features:"
+msgstr ""
+"FmodAudioPreviewProperty 在 Godot 检查器查看    :ref:`FmodAudioStream<class_FmodAudioStream>`    "
+"资源时显示音频预览控件，提供以下功能："
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:25 7c77b927bc324d688c0fd692bd9811d6
+msgid "Visual waveform display"
+msgstr "波形显示"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:27 badd1312726e44a2b4166f4df74d7156
+msgid "Play/pause/stop controls"
+msgstr "播放、暂停和停止控制"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:29 9b2f3e7417f345a0955d23f6b087b03b
+msgid "Playback position indicator"
+msgstr "播放位置指示器"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:31 54fafe02fc5144e1ac3223344dd4604e
+msgid "Current time and duration display"
+msgstr "当前时间和总时长显示"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:33 7674aff1deee4fd9aa18e2578ab1291d
+msgid "Click-to-seek functionality on the waveform"
+msgstr "点击波形定位播放位置"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:35 ceaa88eb3176437db4a9e668a28d8da0
+msgid "The preview is generated asynchronously to avoid blocking the editor."
+msgstr "异步生成预览，避免阻塞编辑器。"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:40 67b94ca664064f0982b39c89d8e96ab2
+msgid "Methods"
+msgstr "方法"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:46
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:50
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:52
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:54
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:56
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:58
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:60
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:62 11cc76f930f943039c3f4b2578710f08
+#: 2109261c4a804e29bdadc72fa82620e0 3cbd372f919c4a099bb602b489506adc 474ca5f547734e0bada96176a9dc744f
+#: 4ed504792adb4e5b92c2bfa420078f4d a4243fc906164e75a7245fc4fbc44fcd c60fa7dab0b14f30aafdb16026ff50bf
+#: e63902875d524873b626c76b8de149a4
+msgid "|void|"
+msgstr "|void|"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:46 8a8a4d2dc9d5411b89a6bb1f66ddb0e6
+msgid ""
+":ref:`set_stream<class_FmodAudioPreviewProperty_method_set_stream>`\\ (\\ stream\\: "
+":ref:`FmodAudioStream<class_FmodAudioStream>`\\ )"
+msgstr ""
+":ref:`set_stream<class_FmodAudioPreviewProperty_method_set_stream>`\\ (\\ stream\\: "
+":ref:`FmodAudioStream<class_FmodAudioStream>`\\ )"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:48 14b01430e5dd49a9a01e0c92fc38f022
+msgid ":ref:`FmodAudioStream<class_FmodAudioStream>`"
+msgstr ":ref:`FmodAudioStream<class_FmodAudioStream>`"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:48 759999e07747464c9ee1e5ac72a2fc80
+msgid ":ref:`get_stream<class_FmodAudioPreviewProperty_method_get_stream>`\\ (\\ ) |const|"
+msgstr ":ref:`get_stream<class_FmodAudioPreviewProperty_method_get_stream>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:50 2f65abbc829f40f0a49dd08477f9cd7c
+msgid ":ref:`_draw_waveform<class_FmodAudioPreviewProperty_private_method__draw_waveform>`\\ (\\ )"
+msgstr ":ref:`_draw_waveform<class_FmodAudioPreviewProperty_private_method__draw_waveform>`\\ (\\ )"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:52 0b3237ad139f43e498ae36fd7a485f67
+msgid ":ref:`_draw_indicator<class_FmodAudioPreviewProperty_private_method__draw_indicator>`\\ (\\ )"
+msgstr ":ref:`_draw_indicator<class_FmodAudioPreviewProperty_private_method__draw_indicator>`\\ (\\ )"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:54 7030c061dd78425c9995552021a4414b
+msgid ""
+":ref:`_on_indicator_gui_input<class_FmodAudioPreviewProperty_private_method__on_indicator_gui_input>`\\"
+" (\\ event\\: :ref:`InputEvent<class_InputEvent>`\\ )"
+msgstr ""
+":ref:`_on_indicator_gui_input<class_FmodAudioPreviewProperty_private_method__on_indicator_gui_input>`\\"
+" (\\ event\\: :ref:`InputEvent<class_InputEvent>`\\ )"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:56 9c05179f36044991a1a71a2920d01c70
+msgid ":ref:`_play<class_FmodAudioPreviewProperty_private_method__play>`\\ (\\ )"
+msgstr ":ref:`_play<class_FmodAudioPreviewProperty_private_method__play>`\\ (\\ )"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:58 e8bbd4a47bec4900932e1ea312def271
+msgid ":ref:`_stop<class_FmodAudioPreviewProperty_private_method__stop>`\\ (\\ )"
+msgstr ":ref:`_stop<class_FmodAudioPreviewProperty_private_method__stop>`\\ (\\ )"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:60 1b720d3083fd48a6b6ae95993b30e313
+msgid ":ref:`_on_finished<class_FmodAudioPreviewProperty_private_method__on_finished>`\\ (\\ )"
+msgstr ":ref:`_on_finished<class_FmodAudioPreviewProperty_private_method__on_finished>`\\ (\\ )"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:62 9fb36147aef24e0f80818fe0aa715dee
+msgid ""
+":ref:`_generate_waveform_async<class_FmodAudioPreviewProperty_private_method__generate_waveform_async>`\\"
+" (\\ )"
+msgstr ""
+":ref:`_generate_waveform_async<class_FmodAudioPreviewProperty_private_method__generate_waveform_async>`\\"
+" (\\ )"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:72 9328e1f34b874a4594341f9516d43733
+msgid "Method Descriptions"
+msgstr "方法说明"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:78 ecf2ee13ecb64344a1dc43b2eac7ee96
+msgid "|void| **set_stream**\\ (\\ stream\\: :ref:`FmodAudioStream<class_FmodAudioStream>`\\ )"
+msgstr "|void| **set_stream**\\ (\\ stream\\: :ref:`FmodAudioStream<class_FmodAudioStream>`\\ )"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:80 d2d3c76f24c844c99f76cc73b801d76e
+msgid ""
+"Sets the :ref:`FmodAudioStream<class_FmodAudioStream>` to preview. This regenerates the waveform "
+"display."
+msgstr "设置要预览的    :ref:`FmodAudioStream<class_FmodAudioStream>`   ，并重新生成波形。"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:90 cc995628719e4f6dab7f7ea7fc5cad39
+msgid ":ref:`FmodAudioStream<class_FmodAudioStream>` **get_stream**\\ (\\ ) |const|"
+msgstr ":ref:`FmodAudioStream<class_FmodAudioStream>` **get_stream**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:92 af0a457e094940bfa1fd2a4daf7ceb59
+msgid "Returns the :ref:`FmodAudioStream<class_FmodAudioStream>` currently being previewed."
+msgstr "返回当前正在预览的    :ref:`FmodAudioStream<class_FmodAudioStream>`   。"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:102 bbdd97685fc1444d8c364245e64876c7
+msgid "|void| **_draw_waveform**\\ (\\ )"
+msgstr "|void| **_draw_waveform**\\ (\\ )"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:104
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:116
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:128
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:140
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:152
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:164
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:176 091ccd1184cb4704bc4dff39d2cc0380
+#: 09b4f304fe9a4583ba52c64f37bc3c5e 120fa6daa5d44586a30b4c9084351b16 1e4b87ca5eda458c9c47c47b2da97d3d
+#: 2444925d83634056a1d860eff83799b9 c7b582af0d8e42e09796a13dc1c8ceba cfc32820f9a94610836a863d4cb44e21
+msgid "Internal editor or engine callback."
+msgstr "编辑器或引擎内部回调。"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:114 d265f8b873df4604ba68aba4ea38c71f
+msgid "|void| **_draw_indicator**\\ (\\ )"
+msgstr "|void| **_draw_indicator**\\ (\\ )"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:126 9c24abfcb59e4c308a2e1b5ec8c5b5cc
+msgid "|void| **_on_indicator_gui_input**\\ (\\ event\\: :ref:`InputEvent<class_InputEvent>`\\ )"
+msgstr "|void| **_on_indicator_gui_input**\\ (\\ event\\: :ref:`InputEvent<class_InputEvent>`\\ )"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:138 6b53c4f7f18b4197aaeb3d980574d9da
+msgid "|void| **_play**\\ (\\ )"
+msgstr "|void| **_play**\\ (\\ )"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:150 d34fef04f33246c59277402f2ee93bbc
+msgid "|void| **_stop**\\ (\\ )"
+msgstr "|void| **_stop**\\ (\\ )"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:162 50488d505167420daed3017bc68324bb
+msgid "|void| **_on_finished**\\ (\\ )"
+msgstr "|void| **_on_finished**\\ (\\ )"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:174 bd6eaa96490144bba1ff5caecc450888
+msgid "|void| **_generate_waveform_async**\\ (\\ )"
+msgstr "|void| **_generate_waveform_async**\\ (\\ )"

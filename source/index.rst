@@ -86,13 +86,7 @@ Godot-FmodPlayer 是一个 Godot 4 GDExtension 插件，基于 FMOD Core API 提
    :maxdepth: 2
    :caption: API 参考
 
-   api_reference/core
-   api_reference/audio
-   api_reference/playback
-   api_reference/nodes
-   api_reference/dsp
-   api_reference/mixer
-   api_reference/spatial
+   classes/index
 
 .. toctree::
    :maxdepth: 2

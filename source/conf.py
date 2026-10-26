@@ -5,9 +5,10 @@
 
 import os
 import sys
+from pathlib import Path
 
 # 将 _extensions 目录加入 Python 路径，以便加载本地 Sphinx 扩展
-sys.path.insert(0, os.path.abspath('_extensions'))
+sys.path.insert(0, str(Path(__file__).resolve().parent / '_extensions'))
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -23,6 +24,9 @@ html_logo = "_static/fmod_player_docs_logo.png"
 extensions = [
     'sphinx_copybutton',
     'gdscript',
+    'sphinx_tabs.tabs',
+    'sphinx.ext.intersphinx',
+    'classref',
 ]
 
 templates_path = ['_templates']
@@ -42,7 +46,7 @@ html_css_files = [
 html_theme_options = {
   "show_toc_level": 4,
   "use_repository_button": True,
-  "repository_url": "https://github.com/PigeonLab-Dev/Godot-FmodPlayerDocs",
+  "repository_url": "https://github.com/LuYingYiLong/godot-fmodplayer-docs",
   "use_issues_button": True,
 }
 
@@ -94,3 +98,10 @@ locale_dirs = ['../locales/']                   # 翻译文件存放目录
 gettext_compact = False                         # 为每个源文件生成独立的 .po 文件
 gettext_uuid = True                             # 为翻译字符串添加唯一标识符
 gettext_additional_targets = ['literal-block']  # 允许翻译代码块
+
+
+# Use the checked-in inventory so class references build without network access.
+intersphinx_mapping = {
+    'godot': ('https://docs.godotengine.org/en/stable/', str(Path(__file__).resolve().parents[1] / 'scripts/vendor/godot/objects.inv')),
+}
+sphinx_tabs_nowarn = True

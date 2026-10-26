@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="FmodAudioEffectEQ10" inherits="FmodAudioEffectEQ" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/godotengine/godot/master/doc/class.xsd">
+	<brief_description>
+		10-band graphic equalizer audio effect.
+	</brief_description>
+	<description>
+		FmodAudioEffectEQ10 is a 10-band graphic equalizer using FMOD's MULTIBAND_EQ DSP. It provides frequency equalization across ten bands spanning from 31Hz to 16000Hz, suitable for detailed audio shaping.
+		Each band can be individually adjusted for gain (-60 dB to +24 dB), frequency, Q value, and filter type. By default, all bands use peaking filters with a Q value of 0.707.
+		The frequency bands are: 31Hz, 62Hz, 125Hz, 250Hz, 500Hz, 1000Hz, 2000Hz, 4000Hz, 8000Hz, and 16000Hz.
+		[b]Note:[/b] For simpler control, use [FmodAudioEffectEQ6]. For professional-grade equalization, use [FmodAudioEffectEQ21].
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods />
+	<members>
+		<member name="preset" type="int" setter="set_preset" getter="get_preset" overrides="FmodAudioEffectEQ" enum="FmodAudioEffectEQ.Preset" default="1">
+			The preset is fixed to [constant FmodAudioEffectEQ.PRESET_10_BANDS] for this class.
+		</member>
+		<member type="float" name="band_0_gain" default="0.0">
+			Gain for the first band (31Hz) in decibels. Range: -60 to +24 dB.
+		</member>
+		<member type="float" name="band_0_frequency" default="31.25">
+			Center frequency for the first band in Hz.
+		</member>
+		<member type="float" name="band_0_q" default="0.707">
+			Q value for the first band. Range: 0.01 to 10.0.
+		</member>
+		<member type="int" enum="FmodAudioEffectEQ.FilterType" name="band_0_filter_type" default="9">
+			Filter type for the first band. Default is [constant FmodAudioEffectEQ.FILTER_PEAKING].
+		</member>
+		<member type="float" name="band_1_gain" default="0.0">
+			Gain for the second band (62Hz) in decibels. Range: -60 to +24 dB.
+		</member>
+		<member type="float" name="band_1_frequency" default="62.5">
+			Center frequency for the second band in Hz.
+		</member>
+		<member type="float" name="band_1_q" default="0.707">
+			Q value for the second band. Range: 0.01 to 10.0.
+		</member>
+		<member type="int" enum="FmodAudioEffectEQ.FilterType" name="band_1_filter_type" default="9">
+			Filter type for the second band. Default is [constant FmodAudioEffectEQ.FILTER_PEAKING].
+		</member>
+		<member type="float" name="band_2_gain" default="0.0">
+			Gain for the third band (125Hz) in decibels. Range: -60 to +24 dB.
+		</member>
+		<member type="float" name="band_2_frequency" default="125.0">
+			Center frequency for the third band in Hz.
+		</member>
+		<member type="float" name="band_2_q" default="0.707">
+			Q value for the third band. Range: 0.01 to 10.0.
+		</member>
+		<member type="int" enum="FmodAudioEffectEQ.FilterType" name="band_2_filter_type" default="9">
+			Filter type for the third band. Default is [constant FmodAudioEffectEQ.FILTER_PEAKING].
+		</member>
+		<member type="float" name="band_3_gain" default="0.0">
+			Gain for the fourth band (250Hz) in decibels. Range: -60 to +24 dB.
+		</member>
+		<member type="float" name="band_3_frequency" default="250.0">
+			Center frequency for the fourth band in Hz.
+		</member>
+		<member type="float" name="band_3_q" default="0.707">
+			Q value for the fourth band. Range: 0.01 to 10.0.
+		</member>
+		<member type="int" enum="FmodAudioEffectEQ.FilterType" name="band_3_filter_type" default="9">
+			Filter type for the fourth band. Default is [constant FmodAudioEffectEQ.FILTER_PEAKING].
+		</member>
+		<member type="float" name="band_4_gain" default="0.0">
+			Gain for the fifth band (500Hz) in decibels. Range: -60 to +24 dB.
+		</member>
+		<member type="float" name="band_4_frequency" default="500.0">
+			Center frequency for the fifth band in Hz.
+		</member>
+		<member type="float" name="band_4_q" default="0.707">
+			Q value for the fifth band. Range: 0.01 to 10.0.
+		</member>
+		<member type="int" enum="FmodAudioEffectEQ.FilterType" name="band_4_filter_type" default="9">
+			Filter type for the fifth band. Default is [constant FmodAudioEffectEQ.FILTER_PEAKING].
+		</member>
+		<member type="float" name="band_5_gain" default="0.0">
+			Gain for the sixth band (1000Hz) in decibels. Range: -60 to +24 dB.
+		</member>
+		<member type="float" name="band_5_frequency" default="1000.0">
+			Center frequency for the sixth band in Hz.
+		</member>
+		<member type="float" name="band_5_q" default="0.707">
+			Q value for the sixth band. Range: 0.01 to 10.0.
+		</member>
+		<member type="int" enum="FmodAudioEffectEQ.FilterType" name="band_5_filter_type" default="9">
+			Filter type for the sixth band. Default is [constant FmodAudioEffectEQ.FILTER_PEAKING].
+		</member>
+		<member type="float" name="band_6_gain" default="0.0">
+			Gain for the seventh band (2000Hz) in decibels. Range: -60 to +24 dB.
+		</member>
+		<member type="float" name="band_6_frequency" default="2000.0">
+			Center frequency for the seventh band in Hz.
+		</member>
+		<member type="float" name="band_6_q" default="0.707">
+			Q value for the seventh band. Range: 0.01 to 10.0.
+		</member>
+		<member type="int" enum="FmodAudioEffectEQ.FilterType" name="band_6_filter_type" default="9">
+			Filter type for the seventh band. Default is [constant FmodAudioEffectEQ.FILTER_PEAKING].
+		</member>
+		<member type="float" name="band_7_gain" default="0.0">
+			Gain for the eighth band (4000Hz) in decibels. Range: -60 to +24 dB.
+		</member>
+		<member type="float" name="band_7_frequency" default="4000.0">
+			Center frequency for the eighth band in Hz.
+		</member>
+		<member type="float" name="band_7_q" default="0.707">
+			Q value for the eighth band. Range: 0.01 to 10.0.
+		</member>
+		<member type="int" enum="FmodAudioEffectEQ.FilterType" name="band_7_filter_type" default="9">
+			Filter type for the eighth band. Default is [constant FmodAudioEffectEQ.FILTER_PEAKING].
+		</member>
+		<member type="float" name="band_8_gain" default="0.0">
+			Gain for the ninth band (8000Hz) in decibels. Range: -60 to +24 dB.
+		</member>
+		<member type="float" name="band_8_frequency" default="8000.0">
+			Center frequency for the ninth band in Hz.
+		</member>
+		<member type="float" name="band_8_q" default="0.707">
+			Q value for the ninth band. Range: 0.01 to 10.0.
+		</member>
+		<member type="int" enum="FmodAudioEffectEQ.FilterType" name="band_8_filter_type" default="9">
+			Filter type for the ninth band. Default is [constant FmodAudioEffectEQ.FILTER_PEAKING].
+		</member>
+		<member type="float" name="band_9_gain" default="0.0">
+			Gain for the tenth band (16000Hz) in decibels. Range: -60 to +24 dB.
+		</member>
+		<member type="float" name="band_9_frequency" default="16000.0">
+			Center frequency for the tenth band in Hz.
+		</member>
+		<member type="float" name="band_9_q" default="0.707">
+			Q value for the tenth band. Range: 0.01 to 10.0.
+		</member>
+		<member type="int" enum="FmodAudioEffectEQ.FilterType" name="band_9_filter_type" default="9">
+			Filter type for the tenth band. Default is [constant FmodAudioEffectEQ.FILTER_PEAKING].
+		</member>
+	</members>
+	<signals />
+	<constants />
+</class>
