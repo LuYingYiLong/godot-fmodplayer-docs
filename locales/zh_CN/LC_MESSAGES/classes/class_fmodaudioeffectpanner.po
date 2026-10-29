@@ -38,19 +38,6 @@ msgstr "左右声像控制。"
 msgid "Description"
 msgstr "描述"
 
-#: ../../source/classes/class_fmodaudioeffectpanner.rst:23 3d675278168846e3bc2bba9ce20e9742
-msgid ""
-"FmodAudioEffectPanner is a stereo panning effect that controls the position of audio in the left-"
-"right stereo field. It uses FMOD's PAN DSP to distribute the signal between the left and right "
-"channels."
-msgstr "**FmodAudioEffectPanner**    提供简单的左右声像偏移。   ``pan``    为负时偏左，为正时偏右，适合 2D UI 声音、非空间化音效或总线级声像调整。"
-
-#: ../../source/classes/class_fmodaudioeffectpanner.rst:25 bee04178b1044f28b4091d92efcdea9c
-msgid ""
-"A pan value of 0.0 centers the audio equally in both channels. Negative values move the audio "
-"toward the left channel, while positive values move it toward the right channel."
-msgstr "声像为 0.0 时左右声道均衡；负值偏向左声道，正值偏向右声道。"
-
 #: ../../source/classes/class_fmodaudioeffectpanner.rst:27 4b2559eb477d49f7a49fa754d4664e87
 msgid ""
 "This effect simulates Godot's AudioEffectPanner and provides a simple way to spatialize mono or "
@@ -115,21 +102,34 @@ msgstr "|void| **set_pan**\\ (\\ pan\\: :ref:`float<class_float>`\\ )"
 msgid ":ref:`float<class_float>` **get_pan**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_pan**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectpanner.rst:75 36aaf7d2adbd4303a0a1e532781adc66
-msgid ""
-"The pan position in the stereo field. Range: -1.0 to 1.0. Default: 0.0. A value of -1.0 sends the"
-" signal fully to the left channel, 0.0 is centered (equal in both channels), and 1.0 sends the "
-"signal fully to the right channel. Values in between provide smooth positioning."
-msgstr "声像位置，负值偏左，正值偏右"
-
 #: ../../source/classes/class_fmodaudioeffectpanner.rst:84 ab928cbc2a7c489fb7560b54ae3f6542
 msgid "Method Descriptions"
 msgstr "方法说明"
 
-#: ../../source/classes/class_fmodaudioeffectpanner.rst:94 1f7c53db6a4c4d4c8ea521e73cc9994f
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:90 df3a20ba4e3e4dd19826c9799b36e03c
 msgid "Sets :ref:`pan<class_FmodAudioEffectPanner_property_pan>`."
-msgstr "Sets :ref:`pan<class_FmodAudioEffectPanner_property_pan>`."
+msgstr "设置  :ref:`pan<class_FmodAudioEffectPanner_property_pan>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectpanner.rst:108 5c1bebae6b664ee2b43ca0a4474baf44
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:102 5945f1d385c04ac0a48c3834d10b19a3
 msgid "Returns :ref:`pan<class_FmodAudioEffectPanner_property_pan>`."
-msgstr "Returns :ref:`pan<class_FmodAudioEffectPanner_property_pan>`."
+msgstr "返回  :ref:`pan<class_FmodAudioEffectPanner_property_pan>` 。"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:21 f0a021428c5f40c19b5bfd22c3a551ac
+msgid ""
+"FmodAudioEffectPanner uses a custom DSP to distribute the first two input channels between "
+"the left and right output channels. Additional channels pass through unchanged."
+msgstr "FmodAudioEffectPanner 使用自定义 DSP，将前两个输入声道分配到左右输出声道，其他声道保持不变。"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:23 febfb2874a164854b3d5cb7de2e929a4
+msgid ""
+"A pan value of 0.0 preserves the original left and right signals. Negative values move the "
+"signal toward the left output, while positive values move it toward the right output. Stereo "
+"input is not summed to mono at the center position."
+msgstr "声像为 0.0 时保留原始左右声道信号。负值将信号移向左输出，正值将信号移向右输出。位于中央时不会将立体声输入合并为单声道。"
+
+#: ../../source/classes/class_fmodaudioeffectpanner.rst:73 a9d41593038e4afd95ac44ca3979137e
+msgid ""
+"The pan position, clamped to -1.0 through 1.0. The default 0.0 preserves the input stereo "
+"image. At -1.0 the two input channels are summed into the left output, and at 1.0 they are "
+"summed into the right output."
+msgstr "声像位置，限制在 -1.0 到 1.0。默认值 0.0 保留输入的立体声声像。-1.0 将两个输入声道相加送到左输出，1.0 将其相加送到右输出。"

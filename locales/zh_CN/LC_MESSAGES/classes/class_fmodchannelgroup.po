@@ -181,25 +181,9 @@ msgstr "方法说明"
 msgid ":ref:`bool<class_bool>` **channel_group_is_valid**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **channel_group_is_valid**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodchannelgroup.rst:84 bbc665bbe9304470ae99e6ced3485acd
-msgid "Returns ``true`` if the ChannelGroup handle is valid and can be used for operations."
-msgstr "如果底层 FMOD::ChannelGroup 句柄有效，则返回    ``true``   。"
-
-#: ../../source/classes/class_fmodchannelgroup.rst:86 c21c4577265c4398a5eea263c8884a34
-msgid "A valid channel group can be controlled and queried for information about its contents."
-msgstr "有效通道组可用于控制播放并查询其内容。"
-
 #: ../../source/classes/class_fmodchannelgroup.rst:98 7ae34ddead094964b1a8988e1b73cd65
 msgid ":ref:`bool<class_bool>` **channel_group_is_null**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **channel_group_is_null**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodchannelgroup.rst:100 ffe56230dc8044cda47c5fc27fa47e57
-msgid "Returns ``true`` if the ChannelGroup handle is null or invalid."
-msgstr "如果底层 FMOD::ChannelGroup 句柄为空或不可用，则返回    ``true``   。"
-
-#: ../../source/classes/class_fmodchannelgroup.rst:102 08be44697e7c40b5b3aa3408f2160f6d
-msgid "A null channel group indicates that the group has been released or was never properly initialized."
-msgstr "空通道组表示该组已经释放，或尚未正确初始化。"
 
 #: ../../source/classes/class_fmodchannelgroup.rst:114 cec297b509384731967bc25978ffec7c
 msgid ":ref:`int<class_int>` **get_num_channels**\\ (\\ ) |const|"
@@ -311,18 +295,6 @@ msgstr "用于遍历通道组层级。"
 msgid ":ref:`FmodChannelGroup<class_FmodChannelGroup>` **get_parent_group**\\ (\\ ) |const|"
 msgstr ":ref:`FmodChannelGroup<class_FmodChannelGroup>` **get_parent_group**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodchannelgroup.rst:208 2839a55fa2ce488ea46e67ad4f595ebf
-msgid "Returns the parent **FmodChannelGroup** that this group outputs to."
-msgstr "返回当前 ChannelGroup 输出到的父 ChannelGroup。"
-
-#: ../../source/classes/class_fmodchannelgroup.rst:210 76b1cb922443482cbd35eca8fb08e681
-msgid "Returns ``null`` if this group outputs directly to the master channel group."
-msgstr "此组直接输出到主通道组时返回  ``null`` 。"
-
-#: ../../source/classes/class_fmodchannelgroup.rst:212 0c6ce9f044db403885fdd09696bb8bd1
-msgid "Use this to traverse up the channel group hierarchy."
-msgstr "用于向上遍历通道组层级。"
-
 #: ../../source/classes/class_fmodchannelgroup.rst:224 0d394a30f102412d97309c69c7c099a4
 msgid ":ref:`String<class_String>` **get_name**\\ (\\ ) |const|"
 msgstr ":ref:`String<class_String>` **get_name**\\ (\\ ) |const|"
@@ -343,20 +315,26 @@ msgstr "通道组名称可用于识别和调试。"
 msgid "|void| **release**\\ (\\ )"
 msgstr "|void| **release**\\ (\\ )"
 
-#: ../../source/classes/class_fmodchannelgroup.rst:244 1fdc3d95a79e4a36b9975f7a056a5972
-msgid "Releases this ChannelGroup and all its resources."
-msgstr "释放 ChannelGroup。释放后底层句柄不应继续使用。"
-
-#: ../../source/classes/class_fmodchannelgroup.rst:246 b89639a2eb644ecda9720e9ad33ad8f5
-msgid "After calling this method, all channels feeding into this group will be stopped,"
-msgstr "调用后，所有输入到本组的通道都会停止，"
-
-#: ../../source/classes/class_fmodchannelgroup.rst:248 66e1b13f457740d3bba58b696ab0ce36
-msgid "and the group becomes invalid. The ChannelGroup handle should not be used after release."
-msgstr "通道组也将失效。释放后不应继续使用其句柄。"
-
-#: ../../source/classes/class_fmodchannelgroup.rst:250 ff1a73fe2475420fab2a557759a268b8
+#: ../../source/classes/class_fmodchannelgroup.rst:80 e8e07fbff34e4719b9d5ee0482656d2e
 msgid ""
-"\\ **Note:** This does not release child groups; they remain valid but will be disconnected from "
-"this group."
-msgstr "**注意：**    子组不会被释放，仍然有效，但会断开与本组的连接。"
+"Returns ``true`` if the stored ChannelGroup pointer is non-null. This checks the wrapper "
+"pointer, not the native object lifetime."
+msgstr "保存的 ChannelGroup 指针为非空时返回  ``true`` 。此方法只检查封装中的指针，不验证底层对象的生命周期。"
+
+#: ../../source/classes/class_fmodchannelgroup.rst:92 cbc472ff3ec447568b37bf1c95d9e82d
+msgid ""
+"Returns ``true`` if the stored ChannelGroup pointer is null. This checks the wrapper pointer,"
+" not the native object lifetime."
+msgstr "保存的 ChannelGroup 指针为空时返回  ``true`` 。此方法只检查封装中的指针，不验证底层对象的生命周期。"
+
+#: ../../source/classes/class_fmodchannelgroup.rst:186 6c6c3a6ae6b4414c9defdccc957e5637
+msgid ""
+"Returns the parent **FmodChannelGroup** that this group outputs to, including the master "
+"group when it is the parent. Returns ``null`` if there is no parent or the query fails."
+msgstr "返回当前组输出到的父  **FmodChannelGroup** ，父级为主通道组时也会返回该组。没有父级或查询失败时返回  ``null`` 。"
+
+#: ../../source/classes/class_fmodchannelgroup.rst:214 330df6adab1b43cfa1108ae121600b5a
+msgid ""
+"Releases this ChannelGroup. Its input channels and child groups are moved to the master "
+"channel group. After a successful release, this wrapper has no FMOD handle."
+msgstr "释放当前 ChannelGroup。输入通道和子通道组会被移到主通道组；释放成功后，该封装不再持有 FMOD 句柄。"

@@ -262,10 +262,6 @@ msgstr "属性说明"
 msgid ":ref:`float<class_float>` **volume** = ``0.0``"
 msgstr ":ref:`float<class_float>` **volume** = ``0.0``"
 
-#: ../../source/classes/class_fmodaudiobus.rst:120 f27711f5625e4fd391f8aa96715800cf
-msgid "Controls volume."
-msgstr "总线层级管理（主总线及子总线）"
-
 #: ../../source/classes/class_fmodaudiobus.rst:130 ab15bbd726f141c4b08a2c9241cfaabe
 msgid ":ref:`bool<class_bool>` **solo** = ``false``"
 msgstr ":ref:`bool<class_bool>` **solo** = ``false``"
@@ -364,14 +360,6 @@ msgstr "如果总线尚未初始化，则返回    ``null``"
 msgid ":ref:`FmodChannelGroup<class_FmodChannelGroup>` **get_parent**\\ (\\ ) |const|"
 msgstr ":ref:`FmodChannelGroup<class_FmodChannelGroup>` **get_parent**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiobus.rst:236 059fbe6429414d128cda2e108194e3f2
-msgid "Returns the parent :ref:`FmodChannelGroup<class_FmodChannelGroup>` that this bus outputs to."
-msgstr "返回此总线输出到的父    :ref:`FmodChannelGroup<class_FmodChannelGroup>`"
-
-#: ../../source/classes/class_fmodaudiobus.rst:238 874952d772fd46f882b9610759441f22
-msgid "Returns ``null`` for the master bus."
-msgstr "对于主总线返回    ``null``"
-
 #: ../../source/classes/class_fmodaudiobus.rst:250 14bd2496e7914cc5b4916152aa879c69
 msgid ":ref:`String<class_String>` **get_bus_name**\\ (\\ ) |const|"
 msgstr ":ref:`String<class_String>` **get_bus_name**\\ (\\ ) |const|"
@@ -384,10 +372,6 @@ msgstr "返回此音频总线的名称"
 msgid "|void| **release**\\ (\\ )"
 msgstr "|void| **release**\\ (\\ )"
 
-#: ../../source/classes/class_fmodaudiobus.rst:264 2e87a2f2fc794c329d2af958df0b1b91
-msgid "Release."
-msgstr "Release."
-
 #: ../../source/classes/class_fmodaudiobus.rst:276 1db032d88d60444fbc744a9004971e86
 msgid ""
 "|void| **add_effect**\\ (\\ effect\\: :ref:`FmodAudioEffect<class_FmodAudioEffect>`, index\\: "
@@ -395,18 +379,6 @@ msgid ""
 msgstr ""
 "|void| **add_effect**\\ (\\ effect\\: :ref:`FmodAudioEffect<class_FmodAudioEffect>`, index\\: "
 ":ref:`int<class_int>` = 0\\ )"
-
-#: ../../source/classes/class_fmodaudiobus.rst:278 c6124303b2de4883986b5e15684cd97c
-msgid "Adds an audio effect to this bus at the specified ``index`` in the effect chain."
-msgstr "向此总线添加一个音频效果，并将效果应用到内部通道组"
-
-#: ../../source/classes/class_fmodaudiobus.rst:280 ea0929d8b769429d88a029fb0013728c
-msgid "If ``index`` is negative or exceeds the current effect count, the effect is appended to the end."
-msgstr "当前实现会将效果追加到效果列表中；如果总线已启用    ``bypass``   ，添加后会立即同步旁路状态"
-
-#: ../../source/classes/class_fmodaudiobus.rst:282 a06418139bb046688b022e0657836b4a
-msgid "The effect chain is processed in order, with each effect feeding into the next."
-msgstr "效果链按顺序处理，每个效果器的输出作为下一个效果器的输入。"
 
 #: ../../source/classes/class_fmodaudiobus.rst:294 5067b30edbaa4192b8eaf58401b6a03e
 msgid "|void| **remove_effect**\\ (\\ index\\: :ref:`int<class_int>`\\ )"
@@ -462,62 +434,102 @@ msgstr ":ref:`float<class_float>` **get_volume_db**\\ (\\ ) |const|"
 msgid "Returns the volume of this bus in decibels."
 msgstr "返回总线音量，单位为分贝"
 
-#: ../../source/classes/class_fmodaudiobus.rst:368 6324fee91250468395533a58899226cd
-msgid "Sets the mute state of this bus."
-msgstr "设置用户静音状态"
-
-#: ../../source/classes/class_fmodaudiobus.rst:370 453b3afca131465bb1a171f86a3a05c1
-msgid "Muted buses produce no audible output."
-msgstr "此方法只记录用户设置，实际 FMOD 静音状态由    ``apply_mute()``    应用"
-
-#: ../../source/classes/class_fmodaudiobus.rst:384 9bd43eb1aa1144778a619945a3cd8a14
-msgid "Returns ``true`` if this bus is muted."
-msgstr "如果此总线被用户设置为静音，则返回    ``true``"
-
 #: ../../source/classes/class_fmodaudiobus.rst:396 41471774b8714ab2be15971c34b6175e
 msgid "|void| **apply_mute**\\ (\\ mute\\: :ref:`bool<class_bool>`\\ )"
 msgstr "|void| **apply_mute**\\ (\\ mute\\: :ref:`bool<class_bool>`\\ )"
-
-#: ../../source/classes/class_fmodaudiobus.rst:398 d6ba03d653b84b06843944cfdd935978
-msgid "Apply mute."
-msgstr "根据用户静音状态和布局中的独奏状态，将最终静音状态应用到内部通道组"
-
-#: ../../source/classes/class_fmodaudiobus.rst:412 78d0c4abadbc4c6a82bd3e380387cf44
-msgid "Sets the solo state of this bus."
-msgstr "设置总线的独奏状态"
-
-#: ../../source/classes/class_fmodaudiobus.rst:414 f1c9e5257bc54cfa89120bd0d878b201
-msgid "When any bus is soloed, only soloed buses are audible."
-msgstr "独奏状态需要由    ``FmodAudioBusLayout``    统一计算并应用到各总线的静音状态"
-
-#: ../../source/classes/class_fmodaudiobus.rst:428 d4e4d48c3d464058a3944e50e4c8be85
-msgid "Returns ``true`` if this bus is in solo mode."
-msgstr "如果此总线处于独奏状态，则返回    ``true``"
-
-#: ../../source/classes/class_fmodaudiobus.rst:430 36e3c9ce850540619cc1c5ce2dc9ae22
-msgid "When any bus is soloed, only soloed buses produce audible output."
-msgstr "存在独奏总线时，只有独奏总线会输出可听见的声音。"
-
-#: ../../source/classes/class_fmodaudiobus.rst:444 bd7977509dac42a48d832b0b0dc011da
-msgid "Enables or disables effects bypass for this bus."
-msgstr "设置总线的效果旁路状态"
-
-#: ../../source/classes/class_fmodaudiobus.rst:446 6e41182fb12d4394bd8cf4dc9811a5c9
-msgid "When ``true``, effects are not processed."
-msgstr "此方法只记录旁路状态，调用    ``sync_bypass()``    后才会同步到现有效果"
-
-#: ../../source/classes/class_fmodaudiobus.rst:460 4fd7f4c7b7404dedab76df40b340784b
-msgid "Returns ``true`` if effects bypass is enabled for this bus."
-msgstr "如果此总线启用了效果旁路，则返回    ``true``"
-
-#: ../../source/classes/class_fmodaudiobus.rst:462 6be8ac1dd87843cb91ae4b69491b8e8b
-msgid "When bypassed, effects are not processed but the audio still passes through."
-msgstr "旁通时跳过效果处理，音频仍会通过总线。"
 
 #: ../../source/classes/class_fmodaudiobus.rst:474 12c58bf733e7499db1a37fc798fb8c25
 msgid "|void| **sync_bypass**\\ (\\ )"
 msgstr "|void| **sync_bypass**\\ (\\ )"
 
-#: ../../source/classes/class_fmodaudiobus.rst:476 fceee35d62984854a677de6f7c075c3e
-msgid "Sync bypass."
-msgstr "将此总线的旁路状态同步到内部通道组上的所有 DSP"
+#: ../../source/classes/class_fmodaudiobus.rst:123 292b8dfcf15e407e9984a431f9fc16c6
+msgid "Bus volume in decibels. A value of ``0.0`` is unity gain."
+msgstr "总线音量，单位为分贝。\\  ``0.0``  表示单位增益。"
+
+#: ../../source/classes/class_fmodaudiobus.rst:231 e93f9e740fdd486e8149d3131d55904e
+msgid ""
+"Returns the explicitly stored parent channel group. This cache may differ from native routing"
+" after a layout synchronization. Query the channel group's "
+":ref:`FmodChannelGroup.get_parent_group()<class_FmodChannelGroup_method_get_parent_group>` "
+"for its current native parent."
+msgstr ""
+"返回显式保存的父通道组。布局同步后，该缓存可能与原生路由不同。可通过通道组的  "
+":ref:`FmodChannelGroup.get_parent_group()<class_FmodChannelGroup_method_get_parent_group>`  "
+"查询当前原生父级。"
+
+#: ../../source/classes/class_fmodaudiobus.rst:255 0fb57d285db243ee92891b9da5d28f92
+msgid ""
+"Removes this bus's effects and clears its channel-group references. Releases the native "
+"channel group for buses other than ``Master``."
+msgstr "移除此总线的效果器并清除通道组引用。总线名称不是  ``Master``  时，还会释放原生通道组。"
+
+#: ../../source/classes/class_fmodaudiobus.rst:267 de3d0197742e4d1cbaf1721f41be0248
+msgid "Inserts ``effect`` into the stored effect list at ``index`` and applies it to this bus."
+msgstr "将  ``effect``  插入保存的效果器列表中  ``index``  指定的位置，并应用到此总线。"
+
+#: ../../source/classes/class_fmodaudiobus.rst:269 5f5cc66cebe34d789ff4d0dd74313259
+msgid ""
+"The list index is clamped between ``0`` and "
+":ref:`get_effect_count()<class_FmodAudioBus_method_get_effect_count>`. It does not specify "
+"the FMOD DSP insertion position."
+msgstr ""
+"列表索引会限制在  ``0``  到  :ref:`get_effect_count()<class_FmodAudioBus_method_get_effect_count>`  "
+"之间，不用于指定 FMOD DSP 的插入位置。"
+
+#: ../../source/classes/class_fmodaudiobus.rst:345 f3e69c56a0c0400c8e697e22bf856eb9
+msgid ""
+"Stores the user mute flag. Call :ref:`apply_mute()<class_FmodAudioBus_method_apply_mute>` to "
+"apply it, or use "
+":ref:`FmodAudioBusLayout.set_bus_mute()<class_FmodAudioBusLayout_method_set_bus_mute>` to "
+"update muting across the layout."
+msgstr ""
+"保存用户静音标志。调用  :ref:`apply_mute()<class_FmodAudioBus_method_apply_mute>`  应用，或使用  "
+":ref:`FmodAudioBusLayout.set_bus_mute()<class_FmodAudioBusLayout_method_set_bus_mute>`  "
+"更新布局中的静音状态。"
+
+#: ../../source/classes/class_fmodaudiobus.rst:357 fb364f7527b04d4383d1df55beb61c44
+msgid "Returns the stored user mute flag. A bus can also be muted by another bus's solo state."
+msgstr "返回保存的用户静音标志。其他总线的独奏状态也可能使此总线静音。"
+
+#: ../../source/classes/class_fmodaudiobus.rst:369 91cd9161b73e47ae939bdc8fc63cea40
+msgid ""
+"Applies the stored mute flag and solo state to the channel group. The ``mute`` argument means"
+" that any bus in the layout is soloed; this bus is muted when that argument is ``true`` and "
+"its own solo flag is ``false``."
+msgstr "将保存的静音标志和独奏状态应用到通道组。\\  ``mute``  参数表示布局中存在独奏总线；此参数为  ``true``  且当前总线未独奏时，当前总线会被静音。"
+
+#: ../../source/classes/class_fmodaudiobus.rst:381 6412ec7551b74a9290db6f7864ff2c13
+msgid ""
+"Stores the solo flag. Use "
+":ref:`FmodAudioBusLayout.set_bus_solo()<class_FmodAudioBusLayout_method_set_bus_solo>` to "
+"also recompute muting across the layout."
+msgstr ""
+"保存独奏标志。使用  "
+":ref:`FmodAudioBusLayout.set_bus_solo()<class_FmodAudioBusLayout_method_set_bus_solo>`  "
+"可同时重新计算布局中的静音状态。"
+
+#: ../../source/classes/class_fmodaudiobus.rst:405 56bac9aab001408b9f61b57e2af7b702
+msgid ""
+"Stores the bypass flag. Call :ref:`sync_bypass()<class_FmodAudioBus_method_sync_bypass>` to "
+"apply it to the channel group's DSPs."
+msgstr "保存旁路标志。调用  :ref:`sync_bypass()<class_FmodAudioBus_method_sync_bypass>`  将其应用到通道组的 DSP。"
+
+#: ../../source/classes/class_fmodaudiobus.rst:417 1a5a93a83a1c40f09aef70027bfac521
+msgid ""
+"Returns the stored bypass flag. :ref:`sync_bypass()<class_FmodAudioBus_method_sync_bypass>` "
+"applies this flag to the channel group's DSPs."
+msgstr "返回保存的旁路标志。\\  :ref:`sync_bypass()<class_FmodAudioBus_method_sync_bypass>`  会将该标志应用到通道组的 DSP。"
+
+#: ../../source/classes/class_fmodaudiobus.rst:429 2cb87c206e544c079618cf7bdf77ba57
+msgid "Applies the stored bypass flag to every DSP currently in this bus's channel group."
+msgstr "将保存的旁路标志应用到此总线通道组中的每个 DSP。"
+
+#: ../../source/classes/class_fmodaudiobus.rst:393 0cfb9e09e131494a8754237ad69417bb
+msgid ""
+"Returns the stored solo flag, independently of the user mute flag. Use "
+":ref:`FmodAudioBusLayout.set_bus_solo()<class_FmodAudioBusLayout_method_set_bus_solo>` to "
+"apply solo muting across the layout."
+msgstr ""
+"返回保存的独奏标志，不受用户静音标志影响。可通过  "
+":ref:`FmodAudioBusLayout.set_bus_solo()<class_FmodAudioBusLayout_method_set_bus_solo>`  "
+"将独奏静音状态应用到整个布局。"

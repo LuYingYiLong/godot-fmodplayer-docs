@@ -34,53 +34,6 @@ msgstr "FMOD 3D 混响对象，用于在空间中创建球形混响区域"
 msgid "Description"
 msgstr "描述"
 
-#: ../../source/classes/class_fmodreverb3d.rst:23 12c8c033aa16420ea0b2378f4b744ddf
-msgid ""
-"FmodReverb3D creates a spherical reverb zone in 3D space that applies environmental reverberation"
-" to sounds based on their distance from the reverb center. This allows you to create realistic "
-"spatial audio environments where sounds become more reverberant as they enter specific areas "
-"(like caves, halls, or rooms)."
-msgstr ""
-"**FmodReverb3D**    表示一个低层级 3D "
-"混响区域。它通过中心位置、最小距离和最大距离定义影响范围：声源在最小距离内获得完整混响，在最小距离到最大距离之间逐渐衰减，超过最大距离则基本不受影响。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:25 4fe3ffe6683d421780e5a162156a40f2
-msgid "Key features:"
-msgstr "主要特性："
-
-#: ../../source/classes/class_fmodreverb3d.rst:27 f9798113fb7e4706a6d3a4d23dac684d
-msgid "Spherical reverb zone with configurable min/max distance"
-msgstr ""
-"通常使用    ``FmodSystem.create_reverb_3d()``    创建此对象；如果希望直接放在场景树中并跟随节点位置，请使用    "
-"``FmodReverbZone3D``   。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:29 2384f3fa21484c87ac942e1a227b193a
-msgid "Full control over reverb parameters (decay time, delays, diffusion, density)"
-msgstr "控制混响衰减时间、延迟、扩散和密度"
-
-#: ../../source/classes/class_fmodreverb3d.rst:31 5cfcd2545f8e4a16ad0572d895b7a9cb
-msgid "High and low frequency control for realistic room modeling"
-msgstr "通过高低频控制模拟房间"
-
-#: ../../source/classes/class_fmodreverb3d.rst:33 2e2a779007524fdc8ba8ad600a0d89a5
-msgid "Smooth transition as sounds enter/exit the reverb zone"
-msgstr "音源进入和离开混响区域时平滑过渡"
-
-#: ../../source/classes/class_fmodreverb3d.rst:35 a92ab301acd247f993b18e0dc05ead17
-msgid ""
-"When a sound source is within the min_distance, it receives full reverb. Between min and max "
-"distance, the reverb amount fades based on the rolloff curve. Beyond max_distance, no reverb is "
-"applied."
-msgstr "音源位于 min_distance 内时获得完整混响；在最小和最大距离之间按衰减曲线淡出；超过 max_distance 后不再应用混响。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:37 34268274fad44751acb2f24c17a3bc8f
-msgid ""
-"\\ **Note:** Use :ref:`FmodSystem.create_reverb_3d()<class_FmodSystem_method_create_reverb_3d>` "
-"to create instances of this class."
-msgstr ""
-"**注意：**    使用    :ref:`FmodSystem.create_reverb_3d()<class_FmodSystem_method_create_reverb_3d>`"
-"    创建此类实例。"
-
 #: ../../source/classes/class_fmodreverb3d.rst:42 45793485c1124b068fe6f1c8ae72d8a8
 msgid "Properties"
 msgstr "属性"
@@ -634,10 +587,6 @@ msgstr "|void| **set_high_cut**\\ (\\ high_cut\\: :ref:`float<class_float>`\\ )"
 msgid ":ref:`float<class_float>` **get_high_cut**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_high_cut**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodreverb3d.rst:341 e848407c984948bc9516ac56ca549c50
-msgid "High frequency cutoff in dB."
-msgstr "高频截止或衰减参数"
-
 #: ../../source/classes/class_fmodreverb3d.rst:351 7c4bca6b53df482da9c26748f34c15b0
 msgid ":ref:`float<class_float>` **early_late_mix** = ``96.0``"
 msgstr ":ref:`float<class_float>` **early_late_mix** = ``96.0``"
@@ -651,10 +600,6 @@ msgstr "|void| **set_early_late_mix**\\ (\\ early_late_mix\\: :ref:`float<class_
 #: 83861fe3ee964ad5a2ef0218f7bfcf7d b35608ebddbd46588e223acbd7e47e3e
 msgid ":ref:`float<class_float>` **get_early_late_mix**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_early_late_mix**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodreverb3d.rst:358 ce4348883f184c20bb8fd3eebc5d5803
-msgid "Early reflections level relative to room effect."
-msgstr "早期反射与后期混响的混合比例"
 
 #: ../../source/classes/class_fmodreverb3d.rst:368 76b6336a734b49bcafe54faec546a38e
 msgid ":ref:`float<class_float>` **wet_level** = ``-8.0``"
@@ -682,25 +627,9 @@ msgstr "方法说明"
 msgid ":ref:`bool<class_bool>` **reverb_3d_is_valid**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **reverb_3d_is_valid**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodreverb3d.rst:394 adf318deea674cbfa3a7188c2ff8f0dd
-msgid "Returns ``true`` if the reverb handle is valid and ready for use."
-msgstr "如果底层 FMOD Reverb3D 句柄有效，则返回    ``true``   。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:396 88043579d85d44078fdf62376bc3ae69
-msgid "A valid reverb can have its parameters modified and will contribute to the audio output."
-msgstr "有效混响对象可修改参数并参与音频输出。"
-
 #: ../../source/classes/class_fmodreverb3d.rst:408 33e178325359439291d5dcc1c5a68853
 msgid ":ref:`bool<class_bool>` **reverb_3d_is_null**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **reverb_3d_is_null**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodreverb3d.rst:410 1dc15494ed1a4485857532de498a31e1
-msgid "Returns ``true`` if the reverb handle is null or invalid."
-msgstr "如果底层 FMOD Reverb3D 句柄为空或不可用，则返回    ``true``   。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:412 cbe1451451024e56b8975729dd3186c8
-msgid "A null reverb indicates that the object has not been properly initialized or has been released."
-msgstr "空混响表示对象尚未正确初始化或已经释放。"
 
 #: ../../source/classes/class_fmodreverb3d.rst:424 25f9c6c71bb049829a8ce4284d95ffec
 msgid ""
@@ -778,14 +707,6 @@ msgstr "未激活（   ``false``   ）时不参与音频输出。"
 msgid "Use this to toggle reverb on/off without destroying and recreating it."
 msgstr "可直接切换混响的启用状态，无需销毁并重新创建。"
 
-#: ../../source/classes/class_fmodreverb3d.rst:514 11cf37f6261d4410a00bf68605785137
-msgid "Returns ``true`` if this reverb zone is active and processing audio."
-msgstr "如果混响区域处于激活状态，则返回    ``true``   。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:516 4abbdb4d15b94f25a7d95123d3422d44
-msgid "Inactive reverb zones do not contribute to the audio output."
-msgstr "未激活的混响区域不参与音频输出。"
-
 #: ../../source/classes/class_fmodreverb3d.rst:528 2e475e1869914c4b8e35ea67a2157055
 msgid "|void| **release**\\ (\\ )"
 msgstr "|void| **release**\\ (\\ )"
@@ -797,26 +718,6 @@ msgstr "释放底层 FMOD Reverb3D。"
 #: ../../source/classes/class_fmodreverb3d.rst:532 4e8128d9448d42f7ab27c4c312b515d7
 msgid "After calling this method, the reverb becomes invalid and should not be used."
 msgstr "调用后混响对象失效，不应继续使用。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:544 0ec1cd5681684bdd834cc2ad043d7ff0
-msgid "Sets the reverberation decay time in milliseconds (range: 0.0 to 20000.0)."
-msgstr "设置混响衰减时间，单位为毫秒，范围为 0.0 到 20000.0。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:546 45f0c0051bbd44b18f55173b0ee00a2e
-msgid "This controls how long the reverb tail lasts. Typical values:"
-msgstr "控制混响尾音的持续时间，常见值如下："
-
-#: ../../source/classes/class_fmodreverb3d.rst:548 63b2629aba224ed997c4d558e7117be1
-msgid "Small room: 200-800 ms"
-msgstr "小房间：200 到 800 ms"
-
-#: ../../source/classes/class_fmodreverb3d.rst:550 755d5d417c764bdf9794e4f3b43b4f66
-msgid "Large room: 800-1500 ms"
-msgstr "大房间：800 到 1500 ms"
-
-#: ../../source/classes/class_fmodreverb3d.rst:552 cc2cb56e1c2e4d41b0628b9bf27951f1
-msgid "Hall/Cave: 1500-3000 ms"
-msgstr "Hall/Cave: 1500-3000 ms"
 
 #: ../../source/classes/class_fmodreverb3d.rst:564 72b701a80c8a4ea2a3edb817782d41d6
 msgid "Returns the reverberation decay time in milliseconds."
@@ -874,65 +775,25 @@ msgstr "返回高频参考频率，单位为 Hz。"
 msgid "Frequencies above this value are affected by the HF decay ratio."
 msgstr "高于该频率的信号受高频衰减比例影响。"
 
-#: ../../source/classes/class_fmodreverb3d.rst:662 6e15f9d5ce7b445db974bb869a707e2f
-msgid "Sets the high frequency decay ratio in percent (range: 10.0 to 100.0, default: 50.0)."
-msgstr "设置高频衰减比例，单位为百分比，范围为 10.0 到 100.0，默认值为 50.0。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:664 a239ab96e138453d822a2af27ab13cca
-msgid "Controls how quickly high frequencies decay compared to mid frequencies."
-msgstr "控制    ``set_hf_decay_ratio``   。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:666 17ee2516f4da43999d5ca411c492ef58
-msgid "Lower values simulate air absorption in large spaces or soft materials."
-msgstr "较低的值可模拟大空间或柔软材料造成的高频吸收。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:678 532d086b9c6047d683b8f13b13db7f54
-msgid "Returns the high frequency decay ratio (0.0 to 100.0)."
-msgstr "返回高频衰减比例，范围为 0.0 到 100.0。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:680 198d87308eb34e7c9fbb84081c19c78c
-msgid "Percentage of the high frequency decay time relative to the mid-frequency decay time."
-msgstr "表示高频衰减时间相对于中频衰减时间的百分比。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:682 2e230c862752409a9a7b89a16d13333f
-msgid "Lower values simulate air absorption in large spaces."
-msgstr "较低的值可模拟大空间中的高频吸收。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:694 5683d1d8997240f6a0f9f20c0e77faf4
-msgid "Sets the echo density (range: 0.0 to 100.0, default: 50.0)."
-msgstr "设置回声密度，范围为 0.0 到 100.0，默认值为 50.0。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:696 0d0c28ef4f5e4259a39efd84a68aa1ea
-msgid "Controls how dense the late reverb tail sounds. Higher values sound smoother and more natural."
-msgstr "控制    ``set_diffusion``   。"
-
 #: ../../source/classes/class_fmodreverb3d.rst:708 003d2aaaf41547d4b95d547c94d64114
 msgid "Returns the echo density value (0.0 to 100.0)."
 msgstr "返回回声密度，范围为 0.0 到 100.0。"
 
-#: ../../source/classes/class_fmodreverb3d.rst:710 553f6b0455154e78bbacf0da49202057
+#: ../../source/classes/class_fmodreverb3d.rst:656 6cf6d32c55ed45bf9e1ca239ff9dec32
 msgid ""
-"Controls the density of echoes in the late reverb decay. Higher values create a smoother, more "
-"dense reverb tail."
-msgstr "控制    ``get_diffusion``   。"
+"Controls the density of echoes in the late reverb decay. Higher values create a smoother, "
+"more dense reverb tail."
+msgstr "控制后期混响衰减中的回声密度，值越大，尾音越平滑、密集。"
 
 #: ../../source/classes/class_fmodreverb3d.rst:722 6e13ecef960443e1bfcbb2964197906a
 msgid "Sets the modal density (range: 0.0 to 100.0, default: 100.0)."
 msgstr "设置模态密度，范围为 0.0 到 100.0，默认值为 100.0。"
 
-#: ../../source/classes/class_fmodreverb3d.rst:724 7d6bd9d423c14891b4e02167ca5212ab
+#: ../../source/classes/class_fmodreverb3d.rst:670 6ab3ee171618484290f91dc0273a1455
 msgid ""
 "Controls the coloration of the late reverb. Lower values create more distinct echoes, higher "
 "values create a smoother decay."
-msgstr "控制    ``set_density``   。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:736 aa32577545a94908b7cda66b35b8d911
-msgid "Returns the modal density value (0.0 to 100.0)."
-msgstr "返回模态密度，范围为 0.0 到 100.0。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:738 0f78f27deaa849669bd8b3b54e0e4d82
-msgid "Controls the coloration of the late reverb decay. Higher values result in more metallic ringing."
-msgstr "控制    ``get_density``   。"
+msgstr "控制后期混响的音色，值较低时回声更清晰，较高时衰减更平滑。"
 
 #: ../../source/classes/class_fmodreverb3d.rst:750 a3d7e149a68b4c4189d8a300f416b344
 msgid "Sets the reference low frequency in Hz (range: 20.0 to 1000.0, default: 250.0)."
@@ -950,18 +811,6 @@ msgstr "返回低频参考频率，单位为 Hz。"
 msgid "Frequencies below this value are affected by the low shelf gain."
 msgstr "低于该频率的信号受低架增益影响。"
 
-#: ../../source/classes/class_fmodreverb3d.rst:778 4b93c85cefc04e5cad2ef2ce70d32f4b
-msgid "Sets the low shelf gain in dB (range: -100.0 to 100.0, default: 0.0)."
-msgstr "设置低架增益，单位为 dB，范围为 -100.0 到 100.0，默认值为 0.0。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:780 b8779beb93054ccbb505471d1301eca5
-msgid "Boosts or cuts low frequency reverb to simulate room size and materials."
-msgstr "提升或衰减低频混响，以模拟房间尺寸和材料。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:782 2cce2c896eed4dfea38fab8998f5774e
-msgid "Positive values simulate larger rooms or hard surfaces."
-msgstr "正值可模拟较大的房间或坚硬表面。"
-
 #: ../../source/classes/class_fmodreverb3d.rst:794 9b3278336d514fb084f769308db6fcc0
 msgid "Returns the low shelf gain in dB."
 msgstr "返回低架增益，单位为 dB。"
@@ -970,43 +819,6 @@ msgstr "返回低架增益，单位为 dB。"
 msgid "Controls the relative room effect level for low frequencies."
 msgstr "控制    ``get_low_shelf_gain``   。"
 
-#: ../../source/classes/class_fmodreverb3d.rst:808 32da42485c614c148aca1c73133d262b
-msgid "Sets the high frequency cutoff in dB (range: -100.0 to 0.0, default: 0.0)."
-msgstr "设置高频截止增益，单位为 dB，范围为 -100.0 到 0.0，默认值为 0.0。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:810 e712793793dd4efbae5b12444588058e
-msgid "Attenuates high frequency reflections to simulate soft materials or air absorption."
-msgstr "衰减高频反射，以模拟柔软材料或空气吸收。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:822 b5bd676f980f4f979cba8793298d13ac
-msgid "Returns the high frequency cutoff relative to the room effect in dB."
-msgstr "返回相对于房间混响效果的高频截止增益，单位为 dB。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:824 2cb8791e3d21485cb86d9e66fe98b36b
-msgid "Controls the level of high frequency reflections."
-msgstr "控制    ``get_high_cut``   。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:836 9977fa6aff8245b1b582e844ac870faf
-msgid "Sets the early reflections level in dB (range: -100.0 to 100.0, default: 50.0)."
-msgstr "设置早期反射电平，单位为 dB，范围为 -100.0 到 100.0，默认值为 50.0。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:838 ../../source/classes/class_fmodreverb3d.rst:852
-#: 0498adbd099a4959a73828ba3cf19864 b253a4b02b6149c58da7d61ca1301320
-msgid "Controls the balance between early reflections and the late reverb tail."
-msgstr "控制    ``set_early_late_mix``   。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:850 68c4998f539044a7baf5d4a8a2220d06
-msgid "Returns the early reflections level relative to the room effect in dB."
-msgstr "返回相对于房间混响效果的早期反射电平，单位为 dB。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:864 dabf6741c6c141329d4c734f67244dcc
-msgid "Sets the wet (reverb) signal level in dB (range: -100.0 to 20.0, default: -6.0)."
-msgstr "设置混响湿信号电平，单位为 dB，范围为 -100.0 到 20.0，默认值为 -6.0。"
-
-#: ../../source/classes/class_fmodreverb3d.rst:866 0c7d9570891740c3b0e3f5efdfaf3eba
-msgid "Controls the overall loudness of the reverb effect."
-msgstr "控制    ``set_wet_level``   。"
-
 #: ../../source/classes/class_fmodreverb3d.rst:878 617b9f43ae08427181086b25022c888f
 msgid "Returns the wet signal level in dB."
 msgstr "返回湿信号电平，单位为 dB。"
@@ -1014,3 +826,111 @@ msgstr "返回湿信号电平，单位为 dB。"
 #: ../../source/classes/class_fmodreverb3d.rst:880 ebb4b99a67f141ddb476e0c11ce2c2dd
 msgid "Controls the overall reverb output level relative to the dry signal."
 msgstr "控制    ``get_wet_level``   。"
+
+#: ../../source/classes/class_fmodreverb3d.rst:21 973dfd0da4cd4dc8905b6186717061f5
+msgid ""
+"Represents a spherical 3D reverb environment whose contribution depends on the listener "
+"position. The reverb has full influence inside ``min_distance`` and fades out by "
+"``max_distance``."
+msgstr "表示球形 3D 混响环境，其影响程度取决于监听者的位置。在  ``min_distance``  内完全生效，到  ``max_distance``  时淡出。"
+
+#: ../../source/classes/class_fmodreverb3d.rst:23 c6bb65abf11f437e97533fdca02c45b6
+msgid ""
+"FMOD blends the environments that cover the listener. When none covers the listener, FMOD "
+"uses the global reverb settings."
+msgstr "FMOD 会混合覆盖监听者的混响环境；没有环境覆盖监听者时，使用全局混响设置。"
+
+#: ../../source/classes/class_fmodreverb3d.rst:25 eb95f63b440b48c1b48bf2b1b74f5aff
+msgid ""
+"Create an instance with "
+":ref:`FmodSystem.create_reverb_3d()<class_FmodSystem_method_create_reverb_3d>`."
+msgstr "通过  :ref:`FmodSystem.create_reverb_3d()<class_FmodSystem_method_create_reverb_3d>`  创建实例。"
+
+#: ../../source/classes/class_fmodreverb3d.rst:329 d2ffe79723794e5f905c8e9cffa7bf7f
+msgid "High-cut frequency in Hz."
+msgstr "高频截止频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodreverb3d.rst:346 2a1a8f1a21e3403084fd08d3469b2925
+msgid "Early/late reflection mix in percent."
+msgstr "早期与后期反射的混合百分比。"
+
+#: ../../source/classes/class_fmodreverb3d.rst:380 033c456ef16c4311a7633047aeda115c
+msgid ""
+"Returns ``true`` if the stored Reverb3D pointer is non-null. This checks the wrapper pointer,"
+" not the native object lifetime."
+msgstr "保存的 Reverb3D 指针为非空时返回  ``true`` 。此方法只检查封装中的指针，不验证底层对象的生命周期。"
+
+#: ../../source/classes/class_fmodreverb3d.rst:392 ea0b2b62fc0b4652afd918b790131d8b
+msgid ""
+"Returns ``true`` if the stored Reverb3D pointer is null. This checks the wrapper pointer, not"
+" the native object lifetime."
+msgstr "保存的 Reverb3D 指针为空时返回  ``true`` 。此方法只检查封装中的指针，不验证底层对象的生命周期。"
+
+#: ../../source/classes/class_fmodreverb3d.rst:482 a74aa401078641f29350968b9090ce66
+msgid ""
+"Returns the configured active state. Check "
+":ref:`reverb_3d_is_valid()<class_FmodReverb3D_method_reverb_3d_is_valid>` separately to "
+"determine whether this wrapper holds a reverb handle."
+msgstr ""
+"返回配置的激活状态。可另行通过  :ref:`reverb_3d_is_valid()<class_FmodReverb3D_method_reverb_3d_is_valid>`  "
+"检查封装是否持有混响句柄。"
+
+#: ../../source/classes/class_fmodreverb3d.rst:508 9fded0aa880646d2af2e190cc7af07e9
+msgid ""
+"Sets the reverb decay time in milliseconds, clamped to ``100.0`` through ``20000.0``. The "
+"initial value is ``1500.0``."
+msgstr "设置混响衰减时间，单位为毫秒，限制在  ``100.0``  到  ``20000.0``  之间，初始值为  ``1500.0`` 。"
+
+#: ../../source/classes/class_fmodreverb3d.rst:618 a4dbdf9ee5e847468983cc4e18072bb7
+msgid ""
+"Sets the high-frequency to mid-frequency decay-time ratio in percent, clamped to ``10.0`` "
+"through ``200.0``. The initial value is ``83.0``."
+msgstr "设置高频与中频衰减时间的百分比，限制在  ``10.0``  到  ``200.0``  之间，初始值为  ``83.0`` 。"
+
+#: ../../source/classes/class_fmodreverb3d.rst:630 5b8a36461b704cbfbb9634cde9710a48
+msgid ""
+"Returns the high-frequency to mid-frequency decay-time ratio in percent, from ``10.0`` to "
+"``200.0``."
+msgstr "返回高频与中频衰减时间的百分比，范围为  ``10.0``  到  ``200.0`` 。"
+
+#: ../../source/classes/class_fmodreverb3d.rst:642 38167d0738f04d7dbd8bdc996a9f761e
+msgid ""
+"Sets the late-reverb echo density in percent, clamped to ``0.0`` through ``100.0``. The "
+"initial value is ``100.0``."
+msgstr "设置后期混响的回声密度百分比，限制在  ``0.0``  到  ``100.0``  之间，初始值为  ``100.0`` 。"
+
+#: ../../source/classes/class_fmodreverb3d.rst:682 0fa256da3308461084817c76fbf127bd
+msgid "Returns the modal density of the late reverb in percent, from ``0.0`` to ``100.0``."
+msgstr "返回后期混响的模态密度百分比，范围为  ``0.0``  到  ``100.0`` 。"
+
+#: ../../source/classes/class_fmodreverb3d.rst:722 eff8c678b9754c138feea3c5b6d6a680
+msgid ""
+"Sets the low-shelf gain in dB, clamped to ``-36.0`` through ``12.0``. The initial value is "
+"``0.0``."
+msgstr "设置低频搁架增益，单位为 dB，限制在  ``-36.0``  到  ``12.0``  之间，初始值为  ``0.0`` 。"
+
+#: ../../source/classes/class_fmodreverb3d.rst:748 6a4f40b9e2ef4e32a138adc355233736
+msgid ""
+"Sets the high-cut frequency in Hz, clamped to ``20.0`` through ``20000.0``. The initial value"
+" is ``14500.0``."
+msgstr "设置高频截止频率，单位为 Hz，限制在  ``20.0``  到  ``20000.0``  之间，初始值为  ``14500.0`` 。"
+
+#: ../../source/classes/class_fmodreverb3d.rst:760 fbb8b4acedc94431a752a8e74d816c49
+msgid "Returns the high-cut frequency in Hz."
+msgstr "返回高频截止频率，单位为 Hz。"
+
+#: ../../source/classes/class_fmodreverb3d.rst:772 38f90be656124167892a8e35b12b0002
+msgid ""
+"Sets the early/late reflection mix in percent, clamped to ``0.0`` through ``100.0``. The "
+"initial value is ``96.0``."
+msgstr "设置早期与后期反射的混合百分比，限制在  ``0.0``  到  ``100.0``  之间，初始值为  ``96.0`` 。"
+
+#: ../../source/classes/class_fmodreverb3d.rst:784 aa316cd8edbc413686b7a4eb1fd6207a
+msgid "Returns the early/late reflection mix in percent."
+msgstr "返回早期与后期反射的混合百分比。"
+
+#: ../../source/classes/class_fmodreverb3d.rst:796 b899b38af51e40ea86cb2fb0bb066b84
+msgid ""
+"Sets the wet reverb level in dB, clamped to ``-80.0`` through ``20.0``. The initial value is "
+"``-8.0``."
+msgstr "设置混响湿声电平，单位为 dB，限制在  ``-80.0``  到  ``20.0``  之间，初始值为  ``-8.0`` 。"

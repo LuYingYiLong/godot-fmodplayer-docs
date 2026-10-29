@@ -38,42 +38,27 @@ msgstr "将 FMOD Android 库安装到 Android 构建模板中的编辑器插件�
 msgid "Description"
 msgstr "描述"
 
-#: ../../source/classes/class_modifyandroidbuildtemplateplugin.rst:23 580173c9cae9405689ceffc55fdb37af
+#: ../../source/classes/class_modifyandroidbuildtemplateplugin.rst:21
+#: 2291db85ba6a47c59b54a089a3a5a397
 msgid ""
-"ModifyAndroidBuildTemplatePlugin is an editor-only plugin that simplifies the installation of "
-"FMOD Android libraries into Godot's Android build template. It provides a GUI for selecting the "
-"FMOD Android API folder and automatically copies the required files (fmod.jar and native "
-"libraries) to the correct locations."
+"Adds ``Configure FMOD Android Export`` to the editor Tools menu. Accepts an extracted FMOD "
+"Core Android SDK folder or a ``.tar.gz``/``.tgz`` archive and presents the proposed changes "
+"for review."
 msgstr ""
-"ModifyAndroidBuildTemplatePlugin 用于在编辑器中选择 FMOD Android API 目录，并将 fmod.jar 和原生库复制到 Godot Android "
-"构建模板的对应位置。"
+"在编辑器的工具菜单中添加  ``Configure FMOD Android Export`` \\ 。可选择解压后的 FMOD Core Android SDK 目录或  "
+"``.tar.gz`` / ``.tgz``  压缩包，并在执行前预览更改。"
 
-#: ../../source/classes/class_modifyandroidbuildtemplateplugin.rst:25 a99b16dcd39f435aa0b2fe24b1303545
+#: ../../source/classes/class_modifyandroidbuildtemplateplugin.rst:23
+#: 8fe4859e087b44d6aba64ebf103cce55
 msgid ""
-"This plugin adds a menu item \"Install FMOD Android Libraries\" to the editor's Tools menu. When "
-"activated, it:"
-msgstr "插件在编辑器的工具菜单中添加“Install FMOD Android Libraries”菜单项，执行以下操作："
+"Configures the installed Android build template: copies ``fmod.jar`` and available ABI "
+"runtime libraries into debug, dev, and release directories; copies available arm64 extension "
+"libraries; updates Gradle dependencies and Java runtime initialization."
+msgstr ""
+"配置已安装的 Android 构建模板：复制  ``fmod.jar`` \\ ，将可用架构的运行库复制到 debug、dev 和 release 目录，复制可用的 arm64 "
+"扩展库，并更新 Gradle 依赖和 Java 运行时初始化代码。"
 
-#: ../../source/classes/class_modifyandroidbuildtemplateplugin.rst:27 71bfd6a154ff4fa7b3ec986be34635e1
-msgid "Checks if the Android build template is installed"
-msgstr "检查是否已安装 Android 构建模板"
-
-#: ../../source/classes/class_modifyandroidbuildtemplateplugin.rst:29 e83cf5a8995c4a968e593039400d7ae3
-msgid "Prompts for the FMOD Android API folder location"
-msgstr "提示选择 FMOD Android API 目录"
-
-#: ../../source/classes/class_modifyandroidbuildtemplateplugin.rst:31 da968414da214e98aaa050dc93c0dba2
-msgid "Copies fmod.jar to the libs folder"
-msgstr "将 fmod.jar 复制到 libs 目录"
-
-#: ../../source/classes/class_modifyandroidbuildtemplateplugin.rst:33 cb017114473242b1bbad3104d7f9d368
-msgid "Copies native libraries for all supported architectures (arm64-v8a, armeabi-v7a, x86, x86_64)"
-msgstr "为支持的架构复制原生库，包括 arm64-v8a、armeabi-v7a、x86 和 x86_64"
-
-#: ../../source/classes/class_modifyandroidbuildtemplateplugin.rst:35 dfdb602afd2c482cb4c2f52cc20af3ad
-msgid "Creates separate debug and release configurations"
-msgstr "分别创建 debug 和 release 配置"
-
-#: ../../source/classes/class_modifyandroidbuildtemplateplugin.rst:37 14ce6133c4ba452887de5c2f19e918b2
-msgid "\\ **Note:** This is an editor-only class and is not available in exported projects."
-msgstr "**注意：**    此类仅在编辑器中可用，导出项目中不可用。"
+#: ../../source/classes/class_modifyandroidbuildtemplateplugin.rst:25
+#: ee876a7bb6c94041ae72db1c98cf68dc
+msgid "This class is only available in the editor."
+msgstr "此类仅在编辑器中可用。"

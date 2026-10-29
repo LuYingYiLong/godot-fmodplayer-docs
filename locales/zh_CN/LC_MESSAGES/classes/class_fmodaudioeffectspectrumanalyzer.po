@@ -68,19 +68,6 @@ msgstr ""
 "总线 DSP 时钟未变化时，查询会复用频谱快照。下一个音频块会刷新快照，同一游戏帧中手动混音多个音频块时也会更新。修改    "
 ":ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>`    或将效果器挂载到其他总线会使快照失效。"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:29 88f85fbed0284d539b72e3a5b98c8f68
-msgid ""
-"The :ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>` determines the "
-"frequency resolution: larger FFT sizes provide finer frequency detail but require more processing"
-" and have worse time resolution. The "
-":ref:`buffer_length<class_FmodAudioEffectSpectrumAnalyzer_property_buffer_length>` affects how "
-"much audio history is kept for analysis."
-msgstr ""
-":ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>`    决定频率分辨率：FFT "
-"越大，频率细节越精确，但处理开销更大，时间分辨率更低。   "
-":ref:`buffer_length<class_FmodAudioEffectSpectrumAnalyzer_property_buffer_length>`    "
-"影响保留的音频历史长度。"
-
 #: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:34 2e6334e6dc24497099c2c27ba865bb5d
 msgid "Properties"
 msgstr "属性"
@@ -279,10 +266,6 @@ msgstr "4096 点 FFT"
 msgid ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>` **FFT_SIZE_MAX** = ``5``"
 msgstr ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>` **FFT_SIZE_MAX** = ``5``"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:142 cf4e7ac9f695425dac92eb273f16a79d
-msgid "Maximum FFT size option. Provides the highest frequency resolution available."
-msgstr "边界值"
-
 #: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:154 b3e4e5642423425a9a4b9d1cf76200db
 msgid "enum **MagnitudeMode**:"
 msgstr "enum **MagnitudeMode**:"
@@ -351,13 +334,6 @@ msgstr "|void| **set_buffer_length**\\ (\\ buffer_length\\: :ref:`float<class_fl
 msgid ":ref:`float<class_float>` **get_buffer_length**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_buffer_length**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:209 5d4a2c3239e74f1fba0f19d6b2827665
-msgid ""
-"The internal buffer length in seconds used for spectrum analysis. A larger buffer provides more "
-"stable analysis results but increases latency. The default value of 2.0 seconds is suitable for "
-"most visualization applications."
-msgstr "分析缓冲长度，单位为秒"
-
 #: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:219 011b449bce0f4fcbaaec34c11d060fa3
 msgid ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>` **fft_size** = ``2``"
 msgstr ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>` **fft_size** = ``2``"
@@ -403,21 +379,25 @@ msgstr "启用同步 FFT 计算以进行离线分析。此模式会关闭 FMOD F
 msgid "Returns whether immediate FFT mode is enabled."
 msgstr "返回是否启用了即时 FFT 模式。"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:269 819722fd00714f1d96405059dd813266
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:261
+#: abfbdf39bc2b4096859a51d3e67f0dd5
 msgid "Sets :ref:`buffer_length<class_FmodAudioEffectSpectrumAnalyzer_property_buffer_length>`."
-msgstr "Sets :ref:`buffer_length<class_FmodAudioEffectSpectrumAnalyzer_property_buffer_length>`."
+msgstr "设置  :ref:`buffer_length<class_FmodAudioEffectSpectrumAnalyzer_property_buffer_length>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:283 0349f0f1e9994376ad70c75a6ee5a480
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:273
+#: f6d5d52941de4274ba9ba26d904b3cce
 msgid "Returns :ref:`buffer_length<class_FmodAudioEffectSpectrumAnalyzer_property_buffer_length>`."
-msgstr "Returns :ref:`buffer_length<class_FmodAudioEffectSpectrumAnalyzer_property_buffer_length>`."
+msgstr "返回  :ref:`buffer_length<class_FmodAudioEffectSpectrumAnalyzer_property_buffer_length>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:297 cc21dc6024c9459f8a90722174d8bfbc
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:285
+#: 4e8cde22a1584aeb96e11f64a5ee8c0e
 msgid "Sets :ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>`."
-msgstr "Sets :ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>`."
+msgstr "设置  :ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:311 b8cd820e391d4efe9ba73bced7db0921
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:297
+#: 88d5d997db0a44279c6d1ad7f26b7503
 msgid "Returns :ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>`."
-msgstr "Returns :ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>`."
+msgstr "返回  :ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>` 。"
 
 #: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:323 4dade3872df649bd9e97a71b8346fa74
 msgid "|void| **update_spectrum**\\ (\\ )"
@@ -489,3 +469,35 @@ msgid ""
 "Magnitude values are in linear scale (0.0 to 1.0+). Use ``linear_to_db()`` to convert to decibels"
 " for display purposes."
 msgstr "幅度采用线性刻度（0.0 到 1.0 及以上）。显示时可用    ``linear_to_db()``    转换为分贝。"
+
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:27
+#: ebf51b701eb7466ca5f2ce54001c225b
+msgid ""
+"The :ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>` determines the "
+"analysis window and frequency resolution. Larger FFT sizes provide finer frequency detail at "
+"the cost of time resolution and processing work. "
+":ref:`buffer_length<class_FmodAudioEffectSpectrumAnalyzer_property_buffer_length>` is "
+"currently stored for compatibility and does not change the FFT window or retain audio "
+"history."
+msgstr ""
+":ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>`  决定分析窗口和频率分辨率。FFT "
+"越大，频率细节越精确，但时间分辨率更低、处理开销更大。 "
+":ref:`buffer_length<class_FmodAudioEffectSpectrumAnalyzer_property_buffer_length>`  "
+"当前仅为兼容而保存，不会改变 FFT 窗口，也不会保留音频历史。"
+
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:138
+#: 4e2adc212efd4983b64979abcfb3d153
+msgid ""
+"Sentinel marking the end of the FFT size enumeration. It is not a valid size and is rejected "
+"by :ref:`set_fft_size()<class_FmodAudioEffectSpectrumAnalyzer_method_set_fft_size>`."
+msgstr ""
+"标记 FFT 大小枚举末尾的边界值，不是有效大小， "
+":ref:`set_fft_size()<class_FmodAudioEffectSpectrumAnalyzer_method_set_fft_size>`  会拒绝该值。"
+
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:203
+#: 04d7b56c30a64b86a3e54e3d8433d853
+msgid ""
+"Stored compatibility value in seconds, clamped to 0.1 through 10.0. The default is 2.0. The "
+"current implementation does not use this property to allocate history, smooth results, or "
+"change analysis latency."
+msgstr "保存的兼容值，单位为秒，限制在 0.1 到 10.0，默认为 2.0。当前实现不使用该属性分配历史缓冲、平滑结果或改变分析延迟。"

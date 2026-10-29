@@ -40,15 +40,6 @@ msgstr "6 段均衡器预设。"
 msgid "Description"
 msgstr "描述"
 
-#: ../../source/classes/class_fmodaudioeffecteq6.rst:23 5f5cc74f87cd427ca58e4d37b73cdaea
-msgid ""
-"FmodAudioEffectEQ6 is a 6-band equalizer using FMOD's MULTIBAND_EQ DSP. It provides frequency "
-"equalization across six bands spanning from 32Hz to 10000Hz with octave spacing."
-msgstr ""
-"**FmodAudioEffectEQ6**    是    ``FmodAudioEffectEQ``    的 6 频段预设版本。默认频段为    ``32``   、   ``100``"
-"   、   ``320``   、   ``1000``   、   ``3200``   、   ``10000``    Hz。它继承    ``FmodAudioEffectEQ``"
-"    的全部属性和方法。"
-
 #: ../../source/classes/class_fmodaudioeffecteq6.rst:25 0c9bb694fb0542fabe629cfd63d29700
 msgid ""
 "Each band can be individually adjusted for gain (-60 dB to +24 dB), frequency, Q value, and "
@@ -493,3 +484,9 @@ msgid ""
 msgstr ""
 "第 6 个频段的滤波类型，默认为    "
 ":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq6.rst:21 8612b589505d4550a58e9fe0678f27eb
+msgid ""
+"FmodAudioEffectEQ6 is a 6-band equalizer using FMOD's MULTIBAND_EQ DSP. Its initial center "
+"frequencies span 32 Hz through 10000 Hz, at approximately logarithmic intervals."
+msgstr "FmodAudioEffectEQ6 是使用 FMOD MULTIBAND_EQ DSP 的六频段均衡器，初始中心频率以近似对数间隔分布在 32 Hz 到 10000 Hz 之间。"

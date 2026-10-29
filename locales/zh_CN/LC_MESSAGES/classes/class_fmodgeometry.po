@@ -47,11 +47,9 @@ msgstr ""
 msgid "Key features:"
 msgstr "主要特性："
 
-#: ../../source/classes/class_fmodgeometry.rst:27 a05b0a4d255649e0888d681ca3022ac6
+#: ../../source/classes/class_fmodgeometry.rst:25 2af0b91755b9491eba5abcc830650da4
 msgid "Create polygonal shapes that block sound paths between sources and listeners"
-msgstr ""
-"几何体通常通过    ``FmodSystem.create_geometry()``    创建，也可以通过    ``FmodSystem.load_geometry()``    "
-"从保存后的字节数据加载。"
+msgstr "创建多边形，遮挡音源与监听者之间的声音路径"
 
 #: ../../source/classes/class_fmodgeometry.rst:29 c5b8147c248347f88e077bdc472c0bd9
 msgid "Configure occlusion properties (direct and reverb path attenuation)"
@@ -75,16 +73,6 @@ msgid ""
 " that can be used to muffle the sound (direct occlusion) and reduce its reverb contribution "
 "(reverb occlusion)."
 msgstr "音源相对听者位于几何体背后时，FMOD 计算直达声和混响声的遮挡值，可用于减弱高频和混响贡献。"
-
-#: ../../source/classes/class_fmodgeometry.rst:39 1b255a752e8a44b8b270793854298430
-msgid ""
-"\\ **Note:** Geometry occlusion requires "
-":ref:`FmodSystem.FMOD_INIT_FLAG_CHANNEL_LOWPASS<class_FmodSystem_constant_FMOD_INIT_FLAG_CHANNEL_LOWPASS>`"
-" to be set during system initialization."
-msgstr ""
-"**注意：**    使用几何遮挡时，系统初始化需要设置    "
-":ref:`FmodSystem.FMOD_INIT_FLAG_CHANNEL_LOWPASS<class_FmodSystem_constant_FMOD_INIT_FLAG_CHANNEL_LOWPASS>`"
-"   。"
 
 #: ../../source/classes/class_fmodgeometry.rst:44 dc797363286d4146819cb262122500c8
 msgid "Properties"
@@ -333,10 +321,6 @@ msgstr "|void| **set_rotation**\\ (\\ rotation\\: :ref:`Vector3<class_Vector3>`\
 msgid ":ref:`Vector3<class_Vector3>` **get_rotation**\\ (\\ ) |const|"
 msgstr ":ref:`Vector3<class_Vector3>` **get_rotation**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodgeometry.rst:148 c0ed47b5dca54386983f494456abf41e
-msgid "The rotation of this geometry object in world space (in degrees)."
-msgstr "几何体在世界空间中的旋转，编辑器中按角度显示"
-
 #: ../../source/classes/class_fmodgeometry.rst:158 9d685de5c06e427ba28f3d34ab464ba4
 msgid ":ref:`Vector3<class_Vector3>` **scale** = ``Vector3(0, 0, 0)``"
 msgstr ":ref:`Vector3<class_Vector3>` **scale** = ``Vector3(0, 0, 0)``"
@@ -381,25 +365,9 @@ msgstr "方法说明"
 msgid ":ref:`bool<class_bool>` **geometry_is_valid**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **geometry_is_valid**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodgeometry.rst:201 685565e18d18499aabd193982aa09d82
-msgid "Returns ``true`` if the geometry handle is valid and ready for use."
-msgstr "如果底层 FMOD Geometry 句柄有效，则返回    ``true``   。"
-
-#: ../../source/classes/class_fmodgeometry.rst:203 e894dd02b2a14b76ab643b0f0f1e40f1
-msgid "A valid geometry can have polygons added and can be used for occlusion calculations."
-msgstr "有效几何体可以添加多边形并参与遮挡计算。"
-
 #: ../../source/classes/class_fmodgeometry.rst:215 4c3fea8d59ba4dfc81117d434660ad63
 msgid ":ref:`bool<class_bool>` **geometry_is_null**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **geometry_is_null**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodgeometry.rst:217 9809af5b7edf4f9faef85d0c1b1e9dd8
-msgid "Returns ``true`` if the geometry handle is null or invalid."
-msgstr "如果底层 FMOD Geometry 句柄为空或不可用，则返回    ``true``   。"
-
-#: ../../source/classes/class_fmodgeometry.rst:219 a513e3ec6c7141dfa747d36813e02bb2
-msgid "A null geometry indicates that the object has not been properly initialized or has been released."
-msgstr "空几何体表示对象尚未正确初始化，或已经释放。"
 
 #: ../../source/classes/class_fmodgeometry.rst:231 2c3a8cd5097a425389607c70520a9f06
 msgid ""
@@ -469,14 +437,6 @@ msgstr ""
 ":ref:`int<class_int>` **get_polygon_num_vertices**\\ (\\ index\\: :ref:`int<class_int>`\\ ) "
 "|const|"
 
-#: ../../source/classes/class_fmodgeometry.rst:277 dc8d0f3cdeec41b08d4e41d347d242b2
-msgid "Returns the number of vertices in the specified polygon."
-msgstr "返回指定多边形的顶点数量。"
-
-#: ../../source/classes/class_fmodgeometry.rst:279 25cb89d76118459fac821be66cc2d1b5
-msgid "Returns ``-1`` if the polygon index is invalid."
-msgstr "多边形索引无效时返回    ``-1``   。"
-
 #: ../../source/classes/class_fmodgeometry.rst:291 84f4a60f217f46fba150bd076740e807
 msgid ""
 "|void| **set_polygon_vertex**\\ (\\ index\\: :ref:`int<class_int>`, vertex_index\\: "
@@ -537,22 +497,6 @@ msgstr "返回几何体位置。"
 msgid "The position is applied to all polygons in the geometry."
 msgstr "此位置应用到几何体中的所有多边形。"
 
-#: ../../source/classes/class_fmodgeometry.rst:365 f119fa4f5b8b47b0ae31927969367279
-msgid "Sets the rotation of this geometry object in world space (in degrees)."
-msgstr "设置几何体旋转。"
-
-#: ../../source/classes/class_fmodgeometry.rst:367 bd408c3c277d405cba9da2169e074a3c
-msgid "All polygons in the geometry are transformed by this rotation."
-msgstr "此旋转变换应用到几何体中的所有多边形。"
-
-#: ../../source/classes/class_fmodgeometry.rst:381 2f3c62116e2142eba6c31e4fdeb70a6a
-msgid "Returns the rotation of this geometry object in world space (in degrees)."
-msgstr "返回几何体旋转。"
-
-#: ../../source/classes/class_fmodgeometry.rst:383 913a40da674446778505eb45ce7452f6
-msgid "The rotation is applied to all polygons in the geometry."
-msgstr "此旋转应用到几何体中的所有多边形。"
-
 #: ../../source/classes/class_fmodgeometry.rst:397 629ca9d5c983423aa3f56e3ecefd722a
 msgid "Sets the scale of this geometry object."
 msgstr "设置几何体缩放。"
@@ -586,50 +530,6 @@ msgstr ""
 ":ref:`int<class_int>` **add_polygon**\\ (\\ direct_occlusion\\: :ref:`float<class_float>`, "
 "reverb_occlusion\\: :ref:`float<class_float>`, double_sided\\: :ref:`bool<class_bool>`, "
 "vertices\\: :ref:`PackedVector3Array<class_PackedVector3Array>`\\ ) |const|"
-
-#: ../../source/classes/class_fmodgeometry.rst:443 64eff471cb9e44629f8ce481fd09b7b3
-msgid "Adds a polygon to this geometry object."
-msgstr ""
-"向几何体添加一个遮挡多边形，并返回新多边形索引。   ``direct_occlusion``    控制直达声遮挡，   ``reverb_occlusion``    "
-"控制混响路径遮挡，范围通常为    ``0.0``    到    ``1.0``   。"
-
-#: ../../source/classes/class_fmodgeometry.rst:445 27b419d0d2014111b04f2d40543a0f88
-msgid ""
-"``direct_occlusion``: Occlusion factor for direct sound path (0.0 = no occlusion, 1.0 = full "
-"occlusion)"
-msgstr "``direct_occlusion``   ：直达声路径的遮挡系数，0.0 为无遮挡，1.0 为完全遮挡"
-
-#: ../../source/classes/class_fmodgeometry.rst:447 c38101d517d04ec8964d09406c8502ba
-msgid "``reverb_occlusion``: Occlusion factor for reverb path (0.0 = no occlusion, 1.0 = full occlusion)"
-msgstr "``reverb_occlusion``   ：混响路径的遮挡系数，0.0 为无遮挡，1.0 为完全遮挡"
-
-#: ../../source/classes/class_fmodgeometry.rst:449 2e079c6b437945dfb3cda88665f26795
-msgid ""
-"``double_sided``: If ``true``, the polygon blocks sound from both sides. If ``false``, only "
-"blocks from the front side."
-msgstr "``double_sided``   ：为    ``true``    时从两侧阻挡声音，为    ``false``    时仅从正面阻挡"
-
-#: ../../source/classes/class_fmodgeometry.rst:451 e091099817784f3eadb426e322dfd19b
-msgid "``vertices``: Number of vertices in the polygon (must be at least 3)"
-msgstr "``vertices``   ：多边形顶点数量，至少为 3"
-
-#: ../../source/classes/class_fmodgeometry.rst:453 b0980baeea8d4de19208ffeef4d8accd
-msgid "``vertices``: Array of vertex positions defining the polygon"
-msgstr "``vertices``   ：定义多边形的顶点位置数组"
-
-#: ../../source/classes/class_fmodgeometry.rst:455 91b747e1db0a4897b6d60591806e4cc8
-msgid "Returns the index of the newly created polygon, or -1 on failure."
-msgstr "返回新多边形的索引，失败时返回 -1。"
-
-#: ../../source/classes/class_fmodgeometry.rst:457 5385f41e2fad4161ab5eb6f8a6e61fd4
-msgid ""
-"\\ **Note:** The total number of polygons and vertices is limited by the max_polygons and "
-"max_vertices parameters specified when creating the geometry via "
-":ref:`FmodSystem.create_geometry()<class_FmodSystem_method_create_geometry>`."
-msgstr ""
-"**注意：**    多边形和顶点总数受到    "
-":ref:`FmodSystem.create_geometry()<class_FmodSystem_method_create_geometry>`    创建几何体时指定的 "
-"max_polygons 和 max_vertices 参数限制。"
 
 #: ../../source/classes/class_fmodgeometry.rst:471 53c082c0d127450b9c4961ccbf43c2f6
 msgid "Enables or disables this geometry object."
@@ -679,37 +579,9 @@ msgstr "这些值由    :ref:`FmodSystem.create_geometry()<class_FmodSystem_meth
 msgid ":ref:`PackedByteArray<class_PackedByteArray>` **save**\\ (\\ ) |const|"
 msgstr ":ref:`PackedByteArray<class_PackedByteArray>` **save**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodgeometry.rst:525 c03be242eebf42d687dd45ac0f77f6e2
-msgid "Serializes this geometry object to a PackedByteArray."
-msgstr "将几何体序列化为字节数组，可之后通过    ``FmodSystem.load_geometry()``    加载。"
-
-#: ../../source/classes/class_fmodgeometry.rst:527 32370d94aba5437b99f6ed261edd1e5c
-msgid ""
-"The saved data can be loaded later using "
-":ref:`FmodSystem.load_geometry()<class_FmodSystem_method_load_geometry>`."
-msgstr "保存的数据可通过    :ref:`FmodSystem.load_geometry()<class_FmodSystem_method_load_geometry>`    重新加载。"
-
-#: ../../source/classes/class_fmodgeometry.rst:529 8bba2b5a06b84e04831974e5895b4d19
-msgid "This is useful for saving complex geometry to disk or transmitting it over a network."
-msgstr "用于将复杂几何体保存到磁盘或通过网络传输。"
-
-#: ../../source/classes/class_fmodgeometry.rst:531 962ebace663b401c863b5616f3480c06
-msgid ""
-"\\ **Note:** Use :ref:`get_save_size()<class_FmodGeometry_method_get_save_size>` to determine the"
-" required buffer size beforehand."
-msgstr "**注意：**    可预先调用    :ref:`get_save_size()<class_FmodGeometry_method_get_save_size>`    确定所需缓冲大小。"
-
 #: ../../source/classes/class_fmodgeometry.rst:543 6cf0ce7b839545519b8307bf6bdd9c30
 msgid ":ref:`int<class_int>` **get_save_size**\\ (\\ ) |const|"
 msgstr ":ref:`int<class_int>` **get_save_size**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodgeometry.rst:545 388aea5da16a480c947c893d37c9defe
-msgid "Returns the size in bytes required to serialize this geometry object."
-msgstr "返回序列化当前几何体所需的字节数。"
-
-#: ../../source/classes/class_fmodgeometry.rst:547 ee284330b8584088967bf5f6b690b719
-msgid "Use this to allocate a buffer for :ref:`save()<class_FmodGeometry_method_save>`."
-msgstr "用于为    :ref:`save()<class_FmodGeometry_method_save>`    分配缓冲区。"
 
 #: ../../source/classes/class_fmodgeometry.rst:559 2f9f31969c414a4f90d4724905972ce0
 msgid "|void| **release**\\ (\\ )"
@@ -726,3 +598,82 @@ msgstr "调用后几何体失效，不应继续使用。"
 #: ../../source/classes/class_fmodgeometry.rst:565 0a1597b4785940ee81398197c620ba5e
 msgid "Any polygons in the geometry are also destroyed."
 msgstr "几何体中的所有多边形也会被销毁。"
+
+#: ../../source/classes/class_fmodgeometry.rst:37 67bfc74c5f5f4b9c84e589aab1815d52
+msgid ""
+"To apply automatic geometry filtering to channels, enable "
+":ref:`FmodSystem.FMOD_INIT_FLAG_CHANNEL_LOWPASS<class_FmodSystem_constant_FMOD_INIT_FLAG_CHANNEL_LOWPASS>`"
+" or "
+":ref:`FmodSystem.FMOD_INIT_FLAG_CHANNEL_DISTANCEFILTER<class_FmodSystem_constant_FMOD_INIT_FLAG_CHANNEL_DISTANCEFILTER>`"
+" when initializing the system."
+msgstr ""
+"要将几何遮挡自动应用到通道滤波，初始化系统时启用  "
+":ref:`FmodSystem.FMOD_INIT_FLAG_CHANNEL_LOWPASS<class_FmodSystem_constant_FMOD_INIT_FLAG_CHANNEL_LOWPASS>`"
+"  或  "
+":ref:`FmodSystem.FMOD_INIT_FLAG_CHANNEL_DISTANCEFILTER<class_FmodSystem_constant_FMOD_INIT_FLAG_CHANNEL_DISTANCEFILTER>`"
+" 。"
+
+#: ../../source/classes/class_fmodgeometry.rst:146 e457db8ccabb426293ad8bcadf847ceb
+msgid "The world-space Euler rotation in radians, displayed in degrees in the Inspector."
+msgstr "世界空间的欧拉旋转，脚本中使用弧度，检查器中以度显示。"
+
+#: ../../source/classes/class_fmodgeometry.rst:197 f3b7b39d74b64d54bed98c54e245f4e6
+msgid ""
+"Returns ``true`` if the stored Geometry pointer is non-null. This checks the wrapper pointer,"
+" not the native object lifetime."
+msgstr "保存的 Geometry 指针为非空时返回  ``true`` 。此方法只检查封装中的指针，不验证底层对象的生命周期。"
+
+#: ../../source/classes/class_fmodgeometry.rst:209 413f40cc031a4e47b50797c653eca1ec
+msgid ""
+"Returns ``true`` if the stored Geometry pointer is null. This checks the wrapper pointer, not"
+" the native object lifetime."
+msgstr "保存的 Geometry 指针为空时返回  ``true`` 。此方法只检查封装中的指针，不验证底层对象的生命周期。"
+
+#: ../../source/classes/class_fmodgeometry.rst:261 da728a072853452ea6301782343c0cd9
+msgid ""
+"Returns the number of vertices in the specified polygon, or ``0`` if the geometry or index is"
+" invalid or the query fails."
+msgstr "返回指定多边形的顶点数。几何体或索引无效，或查询失败时返回  ``0`` 。"
+
+#: ../../source/classes/class_fmodgeometry.rst:337 f78e6284ca84466b9a7b82cba97ba98f
+msgid ""
+"Sets the world-space Euler rotation in radians. The Inspector displays this property in "
+"degrees."
+msgstr "设置世界空间的欧拉旋转，单位为弧度；检查器中以度显示。"
+
+#: ../../source/classes/class_fmodgeometry.rst:349 c7062e298b8c43faa6419f432d97d58c
+msgid "Returns the world-space Euler rotation in radians."
+msgstr "返回世界空间的欧拉旋转，单位为弧度。"
+
+#: ../../source/classes/class_fmodgeometry.rst:401 0ee7ac3188394c4b93b16ff6d5435e5b
+msgid ""
+"Adds a polygon using the positions in ``vertices``. The array must contain at least three "
+"finite vertices. ``direct_occlusion`` and ``reverb_occlusion`` are clamped to ``0.0`` through"
+" ``1.0``. ``double_sided`` enables occlusion from both sides."
+msgstr ""
+"使用  ``vertices``  中的位置添加多边形。数组至少应包含三个有限顶点； ``direct_occlusion``  和  ``reverb_occlusion``  "
+"会限制在  ``0.0``  到  ``1.0``  之间， ``double_sided``  启用双面遮挡。"
+
+#: ../../source/classes/class_fmodgeometry.rst:403 6b7533ee510243daaf45c48795b4c32a
+msgid ""
+"Returns the new polygon index, or ``-1`` on failure. Capacity is fixed by "
+":ref:`FmodSystem.create_geometry()<class_FmodSystem_method_create_geometry>`."
+msgstr ""
+"返回新多边形的索引，失败时返回  ``-1`` 。容量由  "
+":ref:`FmodSystem.create_geometry()<class_FmodSystem_method_create_geometry>`  确定。"
+
+#: ../../source/classes/class_fmodgeometry.rst:463 3fdc9717ddc54cd6a2367b6add2d0df7
+msgid ""
+"Serializes the geometry into a newly allocated :ref:`PackedByteArray<class_PackedByteArray>`."
+" Load the saved data with "
+":ref:`FmodSystem.load_geometry()<class_FmodSystem_method_load_geometry>`. Returns an empty "
+"array on failure."
+msgstr ""
+"将几何体序列化到新分配的  :ref:`PackedByteArray<class_PackedByteArray>` ，可通过  "
+":ref:`FmodSystem.load_geometry()<class_FmodSystem_method_load_geometry>`  加载。失败时返回空数组。"
+
+#: ../../source/classes/class_fmodgeometry.rst:475 fcd31b451a6b44bc9ecb12b09634fe5c
+msgid ""
+"Returns the serialized size in bytes, or ``0`` on failure. "
+":ref:`save()<class_FmodGeometry_method_save>` allocates its output buffer automatically."
+msgstr "返回序列化数据的字节数，失败时返回  ``0`` 。 :ref:`save()<class_FmodGeometry_method_save>`  会自动分配输出缓冲区。"

@@ -38,19 +38,6 @@ msgstr "场景树中的 3D 混响区域节点"
 msgid "Description"
 msgstr "描述"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:23 fc276cb87c1146969493093f1105bda8
-msgid ""
-"FmodReverbZone3D creates and owns an internal :ref:`FmodReverb3D<class_FmodReverb3D>` object "
-"while it is inside the scene tree. The node position is used as the center of the spherical "
-"reverb zone. :ref:`min_distance<class_FmodReverbZone3D_property_min_distance>` receives the full "
-"reverb effect, and the effect fades out until "
-":ref:`max_distance<class_FmodReverbZone3D_property_max_distance>`."
-msgstr ""
-"**FmodReverbZone3D**    是    :ref:`FmodReverb3D<class_FmodReverb3D>`    "
-"的节点封装。节点进入场景树后会创建内部混响对象，并使用节点的全局位置作为球形混响区域中心。启用    ``sync_transform``    时，节点移动会同步到 FMOD 混响区域。 "
-"（参见   :ref:`min_distance<class_FmodReverbZone3D_property_min_distance>`  ） （参见   "
-":ref:`max_distance<class_FmodReverbZone3D_property_max_distance>`  ）"
-
 #: ../../source/classes/class_fmodreverbzone3d.rst:28 e90155115cbb458189009bd7ef4414d7
 msgid "Properties"
 msgstr "属性"
@@ -1005,141 +992,141 @@ msgstr "混响湿声电平，单位为分贝"
 msgid "Method Descriptions"
 msgstr "方法说明"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:635 93190051e3924107abe1e6f6344fd7ab
+#: ../../source/classes/class_fmodreverbzone3d.rst:631 081cbef8c20f47a98d57c7441b9e40a4
 msgid "Sets :ref:`active<class_FmodReverbZone3D_property_active>`."
-msgstr "Sets :ref:`active<class_FmodReverbZone3D_property_active>`."
+msgstr "设置  :ref:`active<class_FmodReverbZone3D_property_active>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:647 efebf4912efa4da68fa493c03ebf491b
+#: ../../source/classes/class_fmodreverbzone3d.rst:643 5c2301ab2b3a4c4395dccf88635e9931
 msgid "Returns :ref:`active<class_FmodReverbZone3D_property_active>`."
-msgstr "Returns :ref:`active<class_FmodReverbZone3D_property_active>`."
+msgstr "返回  :ref:`active<class_FmodReverbZone3D_property_active>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:659 2cef0218b70f4521a8b9eec2f8c8f63e
+#: ../../source/classes/class_fmodreverbzone3d.rst:655 e7e1f1c2aa8e4740acc9b4cb90a75b8a
 msgid "Sets :ref:`sync_transform<class_FmodReverbZone3D_property_sync_transform>`."
-msgstr "Sets :ref:`sync_transform<class_FmodReverbZone3D_property_sync_transform>`."
+msgstr "设置  :ref:`sync_transform<class_FmodReverbZone3D_property_sync_transform>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:671 9ee8da1b820e45cd8bdcb91e02ccf4c7
+#: ../../source/classes/class_fmodreverbzone3d.rst:667 28022b7718a54f84b4a37ccfb65b1b72
 msgid "Returns :ref:`sync_transform<class_FmodReverbZone3D_property_sync_transform>`."
-msgstr "Returns :ref:`sync_transform<class_FmodReverbZone3D_property_sync_transform>`."
+msgstr "返回  :ref:`sync_transform<class_FmodReverbZone3D_property_sync_transform>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:683 3f5e2c86fffd46539d1fdf7a3be3a498
+#: ../../source/classes/class_fmodreverbzone3d.rst:679 4d731c1dd16e40dc896bf6d80587d921
 msgid "Sets :ref:`min_distance<class_FmodReverbZone3D_property_min_distance>`."
-msgstr "Sets :ref:`min_distance<class_FmodReverbZone3D_property_min_distance>`."
+msgstr "设置  :ref:`min_distance<class_FmodReverbZone3D_property_min_distance>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:695 69e82634f6fc47fbbb1d9b1824e36148
+#: ../../source/classes/class_fmodreverbzone3d.rst:691 9aaf6ece1e674455bdb278f0abb8c310
 msgid "Returns :ref:`min_distance<class_FmodReverbZone3D_property_min_distance>`."
-msgstr "Returns :ref:`min_distance<class_FmodReverbZone3D_property_min_distance>`."
+msgstr "返回  :ref:`min_distance<class_FmodReverbZone3D_property_min_distance>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:707 0746915f7ba84409b3ecfb0ed38c61a0
+#: ../../source/classes/class_fmodreverbzone3d.rst:703 54fc5586840449bba043f94c3dedd4ab
 msgid "Sets :ref:`max_distance<class_FmodReverbZone3D_property_max_distance>`."
-msgstr "Sets :ref:`max_distance<class_FmodReverbZone3D_property_max_distance>`."
+msgstr "设置  :ref:`max_distance<class_FmodReverbZone3D_property_max_distance>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:719 0363097242394fe6828ff8c9fec35efb
+#: ../../source/classes/class_fmodreverbzone3d.rst:715 7665106dca8a400697f5a4667f9b1506
 msgid "Returns :ref:`max_distance<class_FmodReverbZone3D_property_max_distance>`."
-msgstr "Returns :ref:`max_distance<class_FmodReverbZone3D_property_max_distance>`."
+msgstr "返回  :ref:`max_distance<class_FmodReverbZone3D_property_max_distance>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:731 552bbfa16baa40a1a3ec270734c976ef
+#: ../../source/classes/class_fmodreverbzone3d.rst:727 a3fe74f6f2c044eb8d0265c5ae118fd7
 msgid "Sets :ref:`preset<class_FmodReverbZone3D_property_preset>`."
-msgstr "Sets :ref:`preset<class_FmodReverbZone3D_property_preset>`."
+msgstr "设置  :ref:`preset<class_FmodReverbZone3D_property_preset>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:743 7cf72c038de04a2693d38d5675ea96f9
+#: ../../source/classes/class_fmodreverbzone3d.rst:739 89035f5d80b8443cbe57643c584bc7a8
 msgid "Returns :ref:`preset<class_FmodReverbZone3D_property_preset>`."
-msgstr "Returns :ref:`preset<class_FmodReverbZone3D_property_preset>`."
+msgstr "返回  :ref:`preset<class_FmodReverbZone3D_property_preset>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:755 59dd657f58d943889859653358cf66c1
+#: ../../source/classes/class_fmodreverbzone3d.rst:751 176033787ec948f1b86562b83c2b2d50
 msgid "Sets :ref:`decay_time<class_FmodReverbZone3D_property_decay_time>`."
-msgstr "Sets :ref:`decay_time<class_FmodReverbZone3D_property_decay_time>`."
+msgstr "设置  :ref:`decay_time<class_FmodReverbZone3D_property_decay_time>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:767 10e55a86423346cb9952b941f4a9f730
+#: ../../source/classes/class_fmodreverbzone3d.rst:763 04cee771c18d4c38841c2d875bd2179a
 msgid "Returns :ref:`decay_time<class_FmodReverbZone3D_property_decay_time>`."
-msgstr "Returns :ref:`decay_time<class_FmodReverbZone3D_property_decay_time>`."
+msgstr "返回  :ref:`decay_time<class_FmodReverbZone3D_property_decay_time>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:779 cf896732c48a499fb776355aa3c1cf8d
+#: ../../source/classes/class_fmodreverbzone3d.rst:775 66ff5ecfa4994988b0ae4ba97ec3a5f2
 msgid "Sets :ref:`early_delay<class_FmodReverbZone3D_property_early_delay>`."
-msgstr "Sets :ref:`early_delay<class_FmodReverbZone3D_property_early_delay>`."
+msgstr "设置  :ref:`early_delay<class_FmodReverbZone3D_property_early_delay>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:791 2e076fec72a843a285cb41ba3c6272f1
+#: ../../source/classes/class_fmodreverbzone3d.rst:787 1ffe9c4de1be49eca9f039906840189a
 msgid "Returns :ref:`early_delay<class_FmodReverbZone3D_property_early_delay>`."
-msgstr "Returns :ref:`early_delay<class_FmodReverbZone3D_property_early_delay>`."
+msgstr "返回  :ref:`early_delay<class_FmodReverbZone3D_property_early_delay>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:803 02efc916d1d8466e8feede4ea1a28448
+#: ../../source/classes/class_fmodreverbzone3d.rst:799 314d9af0c4694057b084f37a761d3c1d
 msgid "Sets :ref:`late_delay<class_FmodReverbZone3D_property_late_delay>`."
-msgstr "Sets :ref:`late_delay<class_FmodReverbZone3D_property_late_delay>`."
+msgstr "设置  :ref:`late_delay<class_FmodReverbZone3D_property_late_delay>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:815 8af7c7afcb6340af9904d02560bf0a3b
+#: ../../source/classes/class_fmodreverbzone3d.rst:811 ddbdb5fc04b0498ca8b36f7009eacf81
 msgid "Returns :ref:`late_delay<class_FmodReverbZone3D_property_late_delay>`."
-msgstr "Returns :ref:`late_delay<class_FmodReverbZone3D_property_late_delay>`."
+msgstr "返回  :ref:`late_delay<class_FmodReverbZone3D_property_late_delay>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:827 cd4da9849d864d01b725acb2b1494bca
+#: ../../source/classes/class_fmodreverbzone3d.rst:823 11a13bb6216b4d9eb644eb33a3c6bd04
 msgid "Sets :ref:`hf_reference<class_FmodReverbZone3D_property_hf_reference>`."
-msgstr "Sets :ref:`hf_reference<class_FmodReverbZone3D_property_hf_reference>`."
+msgstr "设置  :ref:`hf_reference<class_FmodReverbZone3D_property_hf_reference>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:839 070ba08feb394697ae1581f46eb7d12c
+#: ../../source/classes/class_fmodreverbzone3d.rst:835 85e4515e20e54ebdbd9c4b5439730ef5
 msgid "Returns :ref:`hf_reference<class_FmodReverbZone3D_property_hf_reference>`."
-msgstr "Returns :ref:`hf_reference<class_FmodReverbZone3D_property_hf_reference>`."
+msgstr "返回  :ref:`hf_reference<class_FmodReverbZone3D_property_hf_reference>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:851 c66f73004de8423da7982a4c1634b358
+#: ../../source/classes/class_fmodreverbzone3d.rst:847 3e190911e61e445aa024cc491cda8b09
 msgid "Sets :ref:`hf_decay_ratio<class_FmodReverbZone3D_property_hf_decay_ratio>`."
-msgstr "Sets :ref:`hf_decay_ratio<class_FmodReverbZone3D_property_hf_decay_ratio>`."
+msgstr "设置  :ref:`hf_decay_ratio<class_FmodReverbZone3D_property_hf_decay_ratio>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:863 12ce4c01a3fb439ba98b1ad5bd464122
+#: ../../source/classes/class_fmodreverbzone3d.rst:859 10fcee5e87474069b648f4ab6f85551b
 msgid "Returns :ref:`hf_decay_ratio<class_FmodReverbZone3D_property_hf_decay_ratio>`."
-msgstr "Returns :ref:`hf_decay_ratio<class_FmodReverbZone3D_property_hf_decay_ratio>`."
+msgstr "返回  :ref:`hf_decay_ratio<class_FmodReverbZone3D_property_hf_decay_ratio>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:875 6a2faf96387341a7bc05d03b2bae9966
+#: ../../source/classes/class_fmodreverbzone3d.rst:871 d09f97c1cd024ca49dbfb144b68d0ff4
 msgid "Sets :ref:`diffusion<class_FmodReverbZone3D_property_diffusion>`."
-msgstr "Sets :ref:`diffusion<class_FmodReverbZone3D_property_diffusion>`."
+msgstr "设置  :ref:`diffusion<class_FmodReverbZone3D_property_diffusion>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:887 5bd8122435bd4635a2d91ee10fc68f6a
+#: ../../source/classes/class_fmodreverbzone3d.rst:883 26fbef8b047c4dda91bd18b478b076e8
 msgid "Returns :ref:`diffusion<class_FmodReverbZone3D_property_diffusion>`."
-msgstr "Returns :ref:`diffusion<class_FmodReverbZone3D_property_diffusion>`."
+msgstr "返回  :ref:`diffusion<class_FmodReverbZone3D_property_diffusion>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:899 ab5617074d5c4a908a18c28ab1235acf
+#: ../../source/classes/class_fmodreverbzone3d.rst:895 af4f234ae09d4a4b9dac956a037e5ea6
 msgid "Sets :ref:`density<class_FmodReverbZone3D_property_density>`."
-msgstr "Sets :ref:`density<class_FmodReverbZone3D_property_density>`."
+msgstr "设置  :ref:`density<class_FmodReverbZone3D_property_density>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:911 a97767f98c64446684bc546e3f6ebd4c
+#: ../../source/classes/class_fmodreverbzone3d.rst:907 f6e6298510104f9cb462695899ba9f16
 msgid "Returns :ref:`density<class_FmodReverbZone3D_property_density>`."
-msgstr "Returns :ref:`density<class_FmodReverbZone3D_property_density>`."
+msgstr "返回  :ref:`density<class_FmodReverbZone3D_property_density>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:923 1275fdd7543243938042849548535d8a
+#: ../../source/classes/class_fmodreverbzone3d.rst:919 b7c31a131043407e81cf52325c51864a
 msgid "Sets :ref:`low_shelf_frequency<class_FmodReverbZone3D_property_low_shelf_frequency>`."
-msgstr "Sets :ref:`low_shelf_frequency<class_FmodReverbZone3D_property_low_shelf_frequency>`."
+msgstr "设置  :ref:`low_shelf_frequency<class_FmodReverbZone3D_property_low_shelf_frequency>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:935 3926889620d043bf85c47fdc7f592ce1
+#: ../../source/classes/class_fmodreverbzone3d.rst:931 6292c81b2bed466ba51869fe3e0ec794
 msgid "Returns :ref:`low_shelf_frequency<class_FmodReverbZone3D_property_low_shelf_frequency>`."
-msgstr "Returns :ref:`low_shelf_frequency<class_FmodReverbZone3D_property_low_shelf_frequency>`."
+msgstr "返回  :ref:`low_shelf_frequency<class_FmodReverbZone3D_property_low_shelf_frequency>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:947 4cc0d016070643f380191c0423f3d764
+#: ../../source/classes/class_fmodreverbzone3d.rst:943 cfdc1d8d0ee54790a35c6ccbdd6df79e
 msgid "Sets :ref:`low_shelf_gain<class_FmodReverbZone3D_property_low_shelf_gain>`."
-msgstr "Sets :ref:`low_shelf_gain<class_FmodReverbZone3D_property_low_shelf_gain>`."
+msgstr "设置  :ref:`low_shelf_gain<class_FmodReverbZone3D_property_low_shelf_gain>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:959 9af92569499c4269a715f9f1dc71361f
+#: ../../source/classes/class_fmodreverbzone3d.rst:955 4834b770cc6f48b4b4f295cee7ffef57
 msgid "Returns :ref:`low_shelf_gain<class_FmodReverbZone3D_property_low_shelf_gain>`."
-msgstr "Returns :ref:`low_shelf_gain<class_FmodReverbZone3D_property_low_shelf_gain>`."
+msgstr "返回  :ref:`low_shelf_gain<class_FmodReverbZone3D_property_low_shelf_gain>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:971 a1b1ff0b4e19456f8007ab65f93fb760
+#: ../../source/classes/class_fmodreverbzone3d.rst:967 f0eed56791394c40a8868ecf8351c5b4
 msgid "Sets :ref:`high_cut<class_FmodReverbZone3D_property_high_cut>`."
-msgstr "Sets :ref:`high_cut<class_FmodReverbZone3D_property_high_cut>`."
+msgstr "设置  :ref:`high_cut<class_FmodReverbZone3D_property_high_cut>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:983 79b71fb0fc464ce890427d7e1947b38b
+#: ../../source/classes/class_fmodreverbzone3d.rst:979 1a499d4de4e74692ade181e5ce7b69ba
 msgid "Returns :ref:`high_cut<class_FmodReverbZone3D_property_high_cut>`."
-msgstr "Returns :ref:`high_cut<class_FmodReverbZone3D_property_high_cut>`."
+msgstr "返回  :ref:`high_cut<class_FmodReverbZone3D_property_high_cut>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:995 7d65c5df34e34f8a9a22bba78175d2b8
+#: ../../source/classes/class_fmodreverbzone3d.rst:991 0fcbb92a8ad0459e8269a12482079d1f
 msgid "Sets :ref:`early_late_mix<class_FmodReverbZone3D_property_early_late_mix>`."
-msgstr "Sets :ref:`early_late_mix<class_FmodReverbZone3D_property_early_late_mix>`."
+msgstr "设置  :ref:`early_late_mix<class_FmodReverbZone3D_property_early_late_mix>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:1007 778713d5df864a568da22f5a3e07daee
+#: ../../source/classes/class_fmodreverbzone3d.rst:1003 28d192dffea0403bac7972bf39183dc6
 msgid "Returns :ref:`early_late_mix<class_FmodReverbZone3D_property_early_late_mix>`."
-msgstr "Returns :ref:`early_late_mix<class_FmodReverbZone3D_property_early_late_mix>`."
+msgstr "返回  :ref:`early_late_mix<class_FmodReverbZone3D_property_early_late_mix>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:1019 3cf8da1ebd1d4aeb8acd2fc438fb2328
+#: ../../source/classes/class_fmodreverbzone3d.rst:1015 d0a5c96b8991437985e10b4d3f4b2b15
 msgid "Sets :ref:`wet_level<class_FmodReverbZone3D_property_wet_level>`."
-msgstr "Sets :ref:`wet_level<class_FmodReverbZone3D_property_wet_level>`."
+msgstr "设置  :ref:`wet_level<class_FmodReverbZone3D_property_wet_level>` 。"
 
-#: ../../source/classes/class_fmodreverbzone3d.rst:1031 1a719c65a4d044dab2f6bbafbef4eb33
+#: ../../source/classes/class_fmodreverbzone3d.rst:1027 b6db5e6fbbb041cfaf58d325b559d69d
 msgid "Returns :ref:`wet_level<class_FmodReverbZone3D_property_wet_level>`."
-msgstr "Returns :ref:`wet_level<class_FmodReverbZone3D_property_wet_level>`."
+msgstr "返回  :ref:`wet_level<class_FmodReverbZone3D_property_wet_level>` 。"
 
 #: ../../source/classes/class_fmodreverbzone3d.rst:1043 90641c2b947e4375bcfdd6929bc6d30f
 msgid ":ref:`FmodReverb3D<class_FmodReverb3D>` **get_reverb**\\ (\\ ) |const|"
@@ -1150,3 +1137,15 @@ msgid ""
 "Returns the internal low-level :ref:`FmodReverb3D<class_FmodReverb3D>` object, or ``null`` if it "
 "has not been created."
 msgstr "返回该节点内部创建并管理的    :ref:`FmodReverb3D<class_FmodReverb3D>`   。如果节点尚未进入场景树或创建失败，则返回    ``null``   。"
+
+#: ../../source/classes/class_fmodreverbzone3d.rst:21 d4ee4dc42c884b979a1fe4cf9542cf81
+msgid ""
+"FmodReverbZone3D owns an internal :ref:`FmodReverb3D<class_FmodReverb3D>` while inside the "
+"scene tree. Its global position is the center of the reverb environment. The environment has "
+"full influence when the listener is within "
+":ref:`min_distance<class_FmodReverbZone3D_property_min_distance>`, and fades out at "
+":ref:`max_distance<class_FmodReverbZone3D_property_max_distance>`."
+msgstr ""
+"FmodReverbZone3D 进入场景树后持有内部  :ref:`FmodReverb3D<class_FmodReverb3D>` ，全局位置作为混响环境的中心。监听者位于  "
+":ref:`min_distance<class_FmodReverbZone3D_property_min_distance>`  内时完全生效，到  "
+":ref:`max_distance<class_FmodReverbZone3D_property_max_distance>`  时淡出。"

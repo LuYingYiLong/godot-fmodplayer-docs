@@ -26,40 +26,9 @@ msgstr "FmodSoundLock"
 msgid "**Inherits:** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
 msgstr "**继承：** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
 
-#: ../../source/classes/class_fmodsoundlock.rst:16 707b98e19e9b424fb00eec0f7abaa6a9
-msgid "Provides direct access to sound sample data for reading or modification."
-msgstr "提供对声音样本数据的直接访问，以进行读取或修改"
-
 #: ../../source/classes/class_fmodsoundlock.rst:21 196130ff8d6849a491348794f4938092
 msgid "Description"
 msgstr "描述"
-
-#: ../../source/classes/class_fmodsoundlock.rst:23 0bd2547fea4a4808bc2bffb78052a7aa
-msgid ""
-"FmodSoundLock is used to lock a region of sound data for direct access. This allows reading or "
-"modifying the raw sample data of a sound."
-msgstr "FmodSoundLock 用于锁定声音数据的区域以进行直接访问。这允许读取或修改声音的原始采样数据"
-
-#: ../../source/classes/class_fmodsoundlock.rst:25 a06c26b7bd4340a38c9ca78979549c40
-msgid ""
-"When a sound is locked, FMOD provides one or two pointers to the data (two pointers are used if "
-"the locked region wraps around the end of the sound buffer)."
-msgstr "当声音被锁定时，FMOD 会提供一个或两个指向数据的指针（如果锁定的区域绕过了声音缓冲区的末尾，则使用两个指针）"
-
-#: ../../source/classes/class_fmodsoundlock.rst:27 0360a5e3ef3d40258f46dfe05b16822f
-msgid ""
-"\\ **Important:** Always call :ref:`unlock()<class_FmodSoundLock_method_unlock>` when finished "
-"accessing the data, or use the RAII pattern (let the object go out of scope) to automatically "
-"unlock."
-msgstr ""
-"**重要：**    数据访问结束后应调用    :ref:`unlock()<class_FmodSoundLock_method_unlock>`   ，也可让对象离开作用域，利用 RAII"
-" 自动解锁。"
-
-#: ../../source/classes/class_fmodsoundlock.rst:29 f0b595dd4489450a882ba37523ea94a3
-msgid ""
-"\\ **Note:** Locking a sound may be expensive as it can block the mixer thread. Use sparingly and"
-" for short durations."
-msgstr "**注意：**    锁定声音可能阻塞混音线程，开销较大，应减少使用频率和持有时间。"
 
 #: ../../source/classes/class_fmodsoundlock.rst:34 9ba79ab49e364681a0d6c444527b6c9b
 msgid "Methods"
@@ -118,25 +87,9 @@ msgstr "对象析构时若仍处于锁定状态，会自动调用此方法。"
 msgid ":ref:`PackedByteArray<class_PackedByteArray>` **get_data1**\\ (\\ ) |const|"
 msgstr ":ref:`PackedByteArray<class_PackedByteArray>` **get_data1**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodsoundlock.rst:84 ca6c2ce60dcb42a28889ad55b9c10fae
-msgid "Returns the first portion of locked data as a byte array."
-msgstr "以    ``PackedByteArray``    的形式返回锁定数据的前一部分，在大多数情况下，这包含锁定区域的大部分内容"
-
-#: ../../source/classes/class_fmodsoundlock.rst:86 5b7e119b317c42d98486dfbfaf7332d8
-msgid "This contains the majority of the locked region in most cases."
-msgstr "多数情况下包含锁定区域的主要部分。"
-
 #: ../../source/classes/class_fmodsoundlock.rst:98 fa06233a5a744476b0ed3ed765f07726
 msgid ":ref:`PackedByteArray<class_PackedByteArray>` **get_data2**\\ (\\ ) |const|"
 msgstr ":ref:`PackedByteArray<class_PackedByteArray>` **get_data2**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodsoundlock.rst:100 d195ad14e5c54e68b563c0eb9e048ff0
-msgid "Returns the second portion of locked data as a byte array."
-msgstr "返回锁定数据的第二部分作为    ``PackedByteArray``   ，只有当锁定区域绕过声音缓冲区的末端时，这部分才非空"
-
-#: ../../source/classes/class_fmodsoundlock.rst:102 b5fb37565dd641bba7cfcfb5426cbcbf
-msgid "This is only non-empty when the locked region wraps around the end of the sound buffer."
-msgstr "只有锁定区域跨越声音缓冲区末尾时，此数组才非空。"
 
 #: ../../source/classes/class_fmodsoundlock.rst:114 29957760cfbe48f3a3fc5838ac9b8ae9
 msgid ":ref:`bool<class_bool>` **is_locked**\\ (\\ ) |const|"
@@ -145,3 +98,51 @@ msgstr ":ref:`bool<class_bool>` **is_locked**\\ (\\ ) |const|"
 #: ../../source/classes/class_fmodsoundlock.rst:116 00c11c1d313e40af9a72c3ef77c07bef
 msgid "Returns ``true`` if the sound data is currently locked and accessible."
 msgstr "如果声音数据当前被锁定并且可访问，则返回    ``true``"
+
+#: ../../source/classes/class_fmodsoundlock.rst:14 3d64ec8cf305499db1bb7ec280ababcf
+msgid "Locks sound sample data and exposes copies for reading."
+msgstr "锁定声音采样数据，并提供可读取的副本。"
+
+#: ../../source/classes/class_fmodsoundlock.rst:21 8c74be2a0c6b43c788d872ed20f5c6fc
+msgid ""
+"FmodSoundLock locks a region of sound data and copies its contents into "
+":ref:`PackedByteArray<class_PackedByteArray>` values returned by "
+":ref:`get_data1()<class_FmodSoundLock_method_get_data1>` and "
+":ref:`get_data2()<class_FmodSoundLock_method_get_data2>`. Editing these arrays does not write"
+" back to the sound."
+msgstr ""
+"FmodSoundLock 锁定声音数据区域，并将内容复制到  :ref:`get_data1()<class_FmodSoundLock_method_get_data1>`  和  "
+":ref:`get_data2()<class_FmodSoundLock_method_get_data2>`  返回的  "
+":ref:`PackedByteArray<class_PackedByteArray>`  中。修改这些数组不会写回声音。"
+
+#: ../../source/classes/class_fmodsoundlock.rst:23 6dc52fcb812f4a269e8bee680e010f00
+msgid "A locked region can have two portions if it wraps around the end of the sound buffer."
+msgstr "锁定区域跨越声音缓冲区末尾时，数据会分为两部分。"
+
+#: ../../source/classes/class_fmodsoundlock.rst:25 bccaf948c9f947138a2d9ed882624237
+msgid ""
+"Keep the source :ref:`FmodSound<class_FmodSound>` alive until "
+":ref:`unlock()<class_FmodSoundLock_method_unlock>` is called. The lock stores a native "
+"pointer and does not retain the sound wrapper."
+msgstr ""
+"调用  :ref:`unlock()<class_FmodSoundLock_method_unlock>`  前必须保持源  "
+":ref:`FmodSound<class_FmodSound>`  存活。锁对象只保存原生指针，不会持有声音包装器的引用。"
+
+#: ../../source/classes/class_fmodsoundlock.rst:27 fcad0573caad40c086a95cd7a6275f19
+msgid ""
+"Call :ref:`unlock()<class_FmodSoundLock_method_unlock>` when finished. Destroying the lock "
+"object also unlocks the region."
+msgstr "读取完成后调用  :ref:`unlock()<class_FmodSoundLock_method_unlock>` 。销毁锁对象也会解锁该区域。"
+
+#: ../../source/classes/class_fmodsoundlock.rst:78 45d5a4b18d5043c0b9a5d58e5b736cb6
+msgid ""
+"Returns a copy of the first portion of the locked data. Returns an empty array after "
+"unlocking. Editing the returned array does not modify the sound."
+msgstr "返回锁定数据第一部分的副本。解锁后返回空数组。修改返回数组不会修改声音。"
+
+#: ../../source/classes/class_fmodsoundlock.rst:90 a91c45abc4a04c65817e266608e7696a
+msgid ""
+"Returns a copy of the second portion of the locked data, which is present only when the "
+"region wraps around the end of the sound buffer. Returns an empty array after unlocking. "
+"Editing the returned array does not modify the sound."
+msgstr "返回锁定数据第二部分的副本，仅当区域跨越声音缓冲区末尾时存在。解锁后返回空数组。修改返回数组不会修改声音。"

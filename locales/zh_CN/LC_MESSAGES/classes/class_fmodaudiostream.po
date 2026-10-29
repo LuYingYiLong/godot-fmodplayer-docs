@@ -578,20 +578,9 @@ msgstr "enum **CreateMode**:"
 msgid ":ref:`CreateMode<enum_FmodAudioStream_CreateMode>` **MODE_DEFAULT** = ``0``"
 msgstr ":ref:`CreateMode<enum_FmodAudioStream_CreateMode>` **MODE_DEFAULT** = ``0``"
 
-#: ../../source/classes/class_fmodaudiostream.rst:198 c84346ac552a413987026a96794afb40
-msgid "Default creation mode. No special flags are set."
-msgstr "默认创建模式。没有设置特殊标志"
-
 #: ../../source/classes/class_fmodaudiostream.rst:204 e9c18dd7e71f4debb3accf56243d244d
 msgid ":ref:`CreateMode<enum_FmodAudioStream_CreateMode>` **MODE_STREAM** = ``1``"
 msgstr ":ref:`CreateMode<enum_FmodAudioStream_CreateMode>` **MODE_STREAM** = ``1``"
-
-#: ../../source/classes/class_fmodaudiostream.rst:206 7e6684b948134197b032ae326c3206df
-msgid ""
-"Stream the audio from memory. The audio data is read progressively rather than being fully "
-"decoded at once. This reduces memory usage for large files but may have higher CPU overhead "
-"during playback."
-msgstr "从内存中流式传输音频。音频数据是逐步读取的，而不是一次性完全解码。这可以减少大文件的内存使用，但在播放时可能会增加 CPU 开销"
 
 #: ../../source/classes/class_fmodaudiostream.rst:212 6c848b4b3893470fa4d00976847e39f7
 msgid ":ref:`CreateMode<enum_FmodAudioStream_CreateMode>` **MODE_SAMPLE** = ``2``"
@@ -685,9 +674,9 @@ msgstr ""
 ":ref:`FmodResamplerMethod<enum_FmodSystem_FmodResamplerMethod>` **get_resampler_method**\\ (\\ ) "
 "|const|"
 
-#: ../../source/classes/class_fmodaudiostream.rst:276 018c23c5f4924ebca4b961cb5f580a50
+#: ../../source/classes/class_fmodaudiostream.rst:272 bb8ebf54f5d94814b8276bb3075429dc
 msgid "Per-sound resampler; Default follows the system setting."
-msgstr "软件混音器重采样方法"
+msgstr "单个声音的重采样方法；Default 跟随系统设置。"
 
 #: ../../source/classes/class_fmodaudiostream.rst:286 fbce1e06c1294ab4be0a6e1feb18da6b
 msgid ":ref:`PackedByteArray<class_PackedByteArray>` **audio_data** = ``PackedByteArray()``"
@@ -751,12 +740,9 @@ msgstr ""
 "值的位掩码。当这些标志被更改时，内部的    :ref:`FmodSound<class_FmodSound>`    会被释放，并将在下一次调用    "
 ":ref:`get_sound()<class_FmodAudioStream_method_get_sound>`    时使用新的标志重新创建"
 
-#: ../../source/classes/class_fmodaudiostream.rst:314 bde977ef838d4319be13863559f734d2
+#: ../../source/classes/class_fmodaudiostream.rst:310 aada78289488439a8d5d8106df4370de
 msgid "Default value is :ref:`MODE_STREAM<class_FmodAudioStream_constant_MODE_STREAM>` (1)."
-msgstr ""
-"创建模式标志，用于确定音频的加载和播放方式。这是    ``CreateMode``    值的位掩码。当这些标志被更改时，内部的    ``FmodSound``    "
-"会被释放，并将在下一次调用    ``get_sound()``    时使用新的标志重新创建 （参见   "
-":ref:`MODE_STREAM<class_FmodAudioStream_constant_MODE_STREAM>`  ）"
+msgstr "默认值为  :ref:`MODE_STREAM<class_FmodAudioStream_constant_MODE_STREAM>` （1）。"
 
 #: ../../source/classes/class_fmodaudiostream.rst:324 8af276d480f344bcbfcd5b8f50b2d6d8
 msgid ":ref:`int<class_int>` **length_override** = ``0``"
@@ -773,10 +759,6 @@ msgstr "|void| **set_length_override**\\ (\\ length\\: :ref:`int<class_int>`\\ )
 #: ad7897e7563e4770b6a0c6b6053d09f7
 msgid ":ref:`int<class_int>` **get_length_override**\\ (\\ ) |const|"
 msgstr ":ref:`int<class_int>` **get_length_override**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostream.rst:331 0bc5324f226649eea208b87c3bdbb95d
-msgid "Optional byte length override. A value of ``0`` uses the imported data size."
-msgstr "可选的字节长度覆盖值，   ``0``    表示使用导入数据的长度。"
 
 #: ../../source/classes/class_fmodaudiostream.rst:341 4bdc9f256d1e4f158bd0a828698b3f78
 msgid ":ref:`int<class_int>` **file_offset** = ``0``"
@@ -970,14 +952,15 @@ msgstr "|void| **set_format**\\ (\\ format\\: :ref:`FmodSoundFormat<enum_FmodSou
 msgid ":ref:`FmodSoundFormat<enum_FmodSound_FmodSoundFormat>` **get_format**\\ (\\ ) |const|"
 msgstr ":ref:`FmodSoundFormat<enum_FmodSound_FmodSoundFormat>` **get_format**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiostream.rst:486 3269fb44e90f4fdf816d98d84e2245cc
+#: ../../source/classes/class_fmodaudiostream.rst:482 f313395bba9d40bca88b525586fda2cc
 msgid ""
 "Raw PCM format. This is mainly used with "
 ":ref:`suggested_sound_type<class_FmodAudioStream_property_suggested_sound_type>` set to "
 "``FMOD_SOUND_TYPE_RAW``."
 msgstr ""
-"导出为   ``AudioStreamWAV``   时使用的采样格式 （参见   "
-":ref:`suggested_sound_type<class_FmodAudioStream_property_suggested_sound_type>`  ）"
+"原始 PCM 格式。主要用于将  "
+":ref:`suggested_sound_type<class_FmodAudioStream_property_suggested_sound_type>`  设为  "
+"``FMOD_SOUND_TYPE_RAW``  的情况。"
 
 #: ../../source/classes/class_fmodaudiostream.rst:496 a3f418653ad14dc5982c305751a12c4f
 msgid ":ref:`String<class_String>` **dls_name** = ``\"\"``"
@@ -1035,11 +1018,11 @@ msgstr "|void| **set_max_polyphony**\\ (\\ polyphony\\: :ref:`int<class_int>`\\ 
 msgid ":ref:`int<class_int>` **get_max_polyphony**\\ (\\ ) |const|"
 msgstr ":ref:`int<class_int>` **get_max_polyphony**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiostream.rst:537 180dc089192d48e797faaa67ba5f7403
+#: ../../source/classes/class_fmodaudiostream.rst:533 ac08afd624414002bf72025dd4f81a8b
 msgid ""
-"Optional maximum polyphony for formats that support it. A value of ``0`` leaves FMOD's default "
-"unchanged."
-msgstr "最大复音数量"
+"Optional maximum polyphony for formats that support it. A value of ``0`` leaves FMOD's "
+"default unchanged."
+msgstr "可选的最大复音数，仅适用于支持此设置的格式。 ``0``  保留 FMOD 默认值。"
 
 #: ../../source/classes/class_fmodaudiostream.rst:547 4d850753ed054caaa794bf30ed8974e7
 msgid ":ref:`int<class_int>` **initial_seek_position** = ``0``"
@@ -1125,149 +1108,149 @@ msgstr "设置单个声音的 FMOD 重采样器。修改会使缓存的声音失
 msgid "Returns the per-sound resampler."
 msgstr "返回该声音的重采样器。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:631 54d5383c888e4acfbcbd918d3390f963
+#: ../../source/classes/class_fmodaudiostream.rst:625 4f2ad3888a694372b4a50b1188fbef70
 msgid "Sets :ref:`audio_data<class_FmodAudioStream_property_audio_data>`."
-msgstr "Sets :ref:`audio_data<class_FmodAudioStream_property_audio_data>`."
+msgstr "设置  :ref:`audio_data<class_FmodAudioStream_property_audio_data>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:645 9af1f413b37d4987a6f469c9011daa5b
+#: ../../source/classes/class_fmodaudiostream.rst:637 8c9b13121ce04a438ef387a5dd1b78f9
 msgid "Returns :ref:`audio_data<class_FmodAudioStream_property_audio_data>`."
-msgstr "Returns :ref:`audio_data<class_FmodAudioStream_property_audio_data>`."
+msgstr "返回  :ref:`audio_data<class_FmodAudioStream_property_audio_data>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:659 e055412b99104f05aa14205d13b02cae
+#: ../../source/classes/class_fmodaudiostream.rst:649 4a77622082ae44d2b01c476e7d5c2c08
 msgid "Sets :ref:`mode_flags<class_FmodAudioStream_property_mode_flags>`."
-msgstr "Sets :ref:`mode_flags<class_FmodAudioStream_property_mode_flags>`."
+msgstr "设置  :ref:`mode_flags<class_FmodAudioStream_property_mode_flags>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:673 c8b6348d3fb54a67ae86b2cdd0f48e5e
+#: ../../source/classes/class_fmodaudiostream.rst:661 5028f419ede84501a063f7132498e3fe
 msgid "Returns :ref:`mode_flags<class_FmodAudioStream_property_mode_flags>`."
-msgstr "Returns :ref:`mode_flags<class_FmodAudioStream_property_mode_flags>`."
+msgstr "返回  :ref:`mode_flags<class_FmodAudioStream_property_mode_flags>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:685 1f88a9296d5e4e5cb85272d41046589a
+#: ../../source/classes/class_fmodaudiostream.rst:673 4fd300379b6d43f196dd6b61cde5cd10
 msgid "Sets :ref:`length_override<class_FmodAudioStream_property_length_override>`."
-msgstr "Sets :ref:`length_override<class_FmodAudioStream_property_length_override>`."
+msgstr "设置  :ref:`length_override<class_FmodAudioStream_property_length_override>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:697 58370d0e3ac140b9852203df3dd28142
+#: ../../source/classes/class_fmodaudiostream.rst:685 c0759b220c4747749ad588ec2e107aec
 msgid "Returns :ref:`length_override<class_FmodAudioStream_property_length_override>`."
-msgstr "Returns :ref:`length_override<class_FmodAudioStream_property_length_override>`."
+msgstr "返回  :ref:`length_override<class_FmodAudioStream_property_length_override>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:709 20b560e447424545a50c2e8653168588
+#: ../../source/classes/class_fmodaudiostream.rst:697 6a9dbd8f58c642dba9433c3e89c8db04
 msgid "Sets :ref:`file_offset<class_FmodAudioStream_property_file_offset>`."
-msgstr "Sets :ref:`file_offset<class_FmodAudioStream_property_file_offset>`."
+msgstr "设置  :ref:`file_offset<class_FmodAudioStream_property_file_offset>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:721 87a09c7ba10b4a85b8cc39c621fe6065
+#: ../../source/classes/class_fmodaudiostream.rst:709 1005fc34e612492ea6cb0a815996a5b2
 msgid "Returns :ref:`file_offset<class_FmodAudioStream_property_file_offset>`."
-msgstr "Returns :ref:`file_offset<class_FmodAudioStream_property_file_offset>`."
+msgstr "返回  :ref:`file_offset<class_FmodAudioStream_property_file_offset>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:733 aba054bb902b423b9dc50dbf02fea213
+#: ../../source/classes/class_fmodaudiostream.rst:721 505144f49d2247419fd402c8f13c24e2
 msgid "Sets :ref:`decode_buffer_size<class_FmodAudioStream_property_decode_buffer_size>`."
-msgstr "Sets :ref:`decode_buffer_size<class_FmodAudioStream_property_decode_buffer_size>`."
+msgstr "设置  :ref:`decode_buffer_size<class_FmodAudioStream_property_decode_buffer_size>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:745 6efbd1251ea2449bbe5533cebc4539b8
+#: ../../source/classes/class_fmodaudiostream.rst:733 fe6b922442d3458c8788fc338846705f
 msgid "Returns :ref:`decode_buffer_size<class_FmodAudioStream_property_decode_buffer_size>`."
-msgstr "Returns :ref:`decode_buffer_size<class_FmodAudioStream_property_decode_buffer_size>`."
+msgstr "返回  :ref:`decode_buffer_size<class_FmodAudioStream_property_decode_buffer_size>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:757 2474e2bdcac6479a8a3d1d6ba0b7d3e4
+#: ../../source/classes/class_fmodaudiostream.rst:745 a1e53b0d8e8d4274aaa8558e6294fbf4
 msgid "Sets :ref:`initial_subsound<class_FmodAudioStream_property_initial_subsound>`."
-msgstr "Sets :ref:`initial_subsound<class_FmodAudioStream_property_initial_subsound>`."
+msgstr "设置  :ref:`initial_subsound<class_FmodAudioStream_property_initial_subsound>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:769 b1a7aced6cfc4a65ba6821d2c04e5a75
+#: ../../source/classes/class_fmodaudiostream.rst:757 c605efbc735d43f89c1bb0248c8fc2c6
 msgid "Returns :ref:`initial_subsound<class_FmodAudioStream_property_initial_subsound>`."
-msgstr "Returns :ref:`initial_subsound<class_FmodAudioStream_property_initial_subsound>`."
+msgstr "返回  :ref:`initial_subsound<class_FmodAudioStream_property_initial_subsound>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:781 61a7ac91e3ff48d5b848cb85d786fe8d
+#: ../../source/classes/class_fmodaudiostream.rst:769 b7be2cea66fb453687ad88b19c921a1f
 msgid "Sets :ref:`num_subsounds<class_FmodAudioStream_property_num_subsounds>`."
-msgstr "Sets :ref:`num_subsounds<class_FmodAudioStream_property_num_subsounds>`."
+msgstr "设置  :ref:`num_subsounds<class_FmodAudioStream_property_num_subsounds>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:793 ffa8a751ae3a469f817f844730539756
+#: ../../source/classes/class_fmodaudiostream.rst:781 51b179aafca54a92a6d135db73f2dbca
 msgid "Returns :ref:`num_subsounds<class_FmodAudioStream_property_num_subsounds>`."
-msgstr "Returns :ref:`num_subsounds<class_FmodAudioStream_property_num_subsounds>`."
+msgstr "返回  :ref:`num_subsounds<class_FmodAudioStream_property_num_subsounds>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:805 c561fb6efada443abef4041bf3ed50eb
+#: ../../source/classes/class_fmodaudiostream.rst:793 e852acde72514675afd4a7aa61f22c6c
 msgid "Sets :ref:`inclusion_list<class_FmodAudioStream_property_inclusion_list>`."
-msgstr "Sets :ref:`inclusion_list<class_FmodAudioStream_property_inclusion_list>`."
+msgstr "设置  :ref:`inclusion_list<class_FmodAudioStream_property_inclusion_list>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:817 f2f18249061b4c6189b4cb843b42f2d0
+#: ../../source/classes/class_fmodaudiostream.rst:805 6292bc4a917545e182940c75258313c4
 msgid "Returns :ref:`inclusion_list<class_FmodAudioStream_property_inclusion_list>`."
-msgstr "Returns :ref:`inclusion_list<class_FmodAudioStream_property_inclusion_list>`."
+msgstr "返回  :ref:`inclusion_list<class_FmodAudioStream_property_inclusion_list>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:829 c6145d1bdc3d4448bfb079fd2e262b73
+#: ../../source/classes/class_fmodaudiostream.rst:817 d387e12e49124728b68e8bcb2ad48ed0
 msgid "Sets :ref:`suggested_sound_type<class_FmodAudioStream_property_suggested_sound_type>`."
-msgstr "Sets :ref:`suggested_sound_type<class_FmodAudioStream_property_suggested_sound_type>`."
+msgstr "设置  :ref:`suggested_sound_type<class_FmodAudioStream_property_suggested_sound_type>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:841 45eaf8a972cc412a80b47e276628cc09
+#: ../../source/classes/class_fmodaudiostream.rst:829 be1a3bd331b84f4192c7a53137931d61
 msgid "Returns :ref:`suggested_sound_type<class_FmodAudioStream_property_suggested_sound_type>`."
-msgstr "Returns :ref:`suggested_sound_type<class_FmodAudioStream_property_suggested_sound_type>`."
+msgstr "返回  :ref:`suggested_sound_type<class_FmodAudioStream_property_suggested_sound_type>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:853 63458b8340374a1a8d4905aa51db128a
+#: ../../source/classes/class_fmodaudiostream.rst:841 76fee13d34a342f0bf3ce42442e2f871
 msgid "Sets :ref:`default_frequency<class_FmodAudioStream_property_default_frequency>`."
-msgstr "Sets :ref:`default_frequency<class_FmodAudioStream_property_default_frequency>`."
+msgstr "设置  :ref:`default_frequency<class_FmodAudioStream_property_default_frequency>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:865 da992966fd8b467bac1bb613c2fc42c4
+#: ../../source/classes/class_fmodaudiostream.rst:853 5468663730b84b6cb9d34c70279a6071
 msgid "Returns :ref:`default_frequency<class_FmodAudioStream_property_default_frequency>`."
-msgstr "Returns :ref:`default_frequency<class_FmodAudioStream_property_default_frequency>`."
+msgstr "返回  :ref:`default_frequency<class_FmodAudioStream_property_default_frequency>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:877 27d6a2c9fb9e4045936988b3c6c08430
+#: ../../source/classes/class_fmodaudiostream.rst:865 b7f95dc34ef24ed4b70181ebafe97d31
 msgid "Sets :ref:`num_channels<class_FmodAudioStream_property_num_channels>`."
-msgstr "Sets :ref:`num_channels<class_FmodAudioStream_property_num_channels>`."
+msgstr "设置  :ref:`num_channels<class_FmodAudioStream_property_num_channels>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:889 adf9fc7213a84948ab4deab350a4ebe8
+#: ../../source/classes/class_fmodaudiostream.rst:877 12f0e34e68cc46bfae1cff3feba2545b
 msgid "Returns :ref:`num_channels<class_FmodAudioStream_property_num_channels>`."
-msgstr "Returns :ref:`num_channels<class_FmodAudioStream_property_num_channels>`."
+msgstr "返回  :ref:`num_channels<class_FmodAudioStream_property_num_channels>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:901 ea7a18e5e68d4f3a910ab33934717027
+#: ../../source/classes/class_fmodaudiostream.rst:889 a7b03b37d24d4afcbb0fc2d8190f4070
 msgid "Sets :ref:`format<class_FmodAudioStream_property_format>`."
-msgstr "Sets :ref:`format<class_FmodAudioStream_property_format>`."
+msgstr "设置  :ref:`format<class_FmodAudioStream_property_format>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:913 e7c2d8f7ec174530b76a585aec1f87f1
+#: ../../source/classes/class_fmodaudiostream.rst:901 feaa8815ffd847d59305b8d838744b04
 msgid "Returns :ref:`format<class_FmodAudioStream_property_format>`."
-msgstr "Returns :ref:`format<class_FmodAudioStream_property_format>`."
+msgstr "返回  :ref:`format<class_FmodAudioStream_property_format>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:925 7246bfc50d634367a87295dd9d2b9fcd
+#: ../../source/classes/class_fmodaudiostream.rst:913 009273606308499b8d9229290458f304
 msgid "Sets :ref:`dls_name<class_FmodAudioStream_property_dls_name>`."
-msgstr "Sets :ref:`dls_name<class_FmodAudioStream_property_dls_name>`."
+msgstr "设置  :ref:`dls_name<class_FmodAudioStream_property_dls_name>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:937 460eb276cec5408c89ef05d8e0d2107e
+#: ../../source/classes/class_fmodaudiostream.rst:925 cd5c20486d274ed8bfca7f08e61bf2b9
 msgid "Returns :ref:`dls_name<class_FmodAudioStream_property_dls_name>`."
-msgstr "Returns :ref:`dls_name<class_FmodAudioStream_property_dls_name>`."
+msgstr "返回  :ref:`dls_name<class_FmodAudioStream_property_dls_name>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:949 b643a49b90d34206ad4f9146418a1cc5
+#: ../../source/classes/class_fmodaudiostream.rst:937 bfc272d12fce4ddea7b2cb118bb98cef
 msgid "Sets :ref:`encryption_key<class_FmodAudioStream_property_encryption_key>`."
-msgstr "Sets :ref:`encryption_key<class_FmodAudioStream_property_encryption_key>`."
+msgstr "设置  :ref:`encryption_key<class_FmodAudioStream_property_encryption_key>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:961 9a0b489953554f53a05e29734dfef004
+#: ../../source/classes/class_fmodaudiostream.rst:949 37514a8e8c6a4e298e3f211abc0b0c5f
 msgid "Returns :ref:`encryption_key<class_FmodAudioStream_property_encryption_key>`."
-msgstr "Returns :ref:`encryption_key<class_FmodAudioStream_property_encryption_key>`."
+msgstr "返回  :ref:`encryption_key<class_FmodAudioStream_property_encryption_key>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:973 e49506190abc4b41b12cfaabe4ed0ac0
+#: ../../source/classes/class_fmodaudiostream.rst:961 c1c725ec9fdb4f5f8dec606a73244fd8
 msgid "Sets :ref:`max_polyphony<class_FmodAudioStream_property_max_polyphony>`."
-msgstr "Sets :ref:`max_polyphony<class_FmodAudioStream_property_max_polyphony>`."
+msgstr "设置  :ref:`max_polyphony<class_FmodAudioStream_property_max_polyphony>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:985 f68cae6888674dd4a68a177c2da6d50c
+#: ../../source/classes/class_fmodaudiostream.rst:973 ac5c0956241c4400bcfe4e75e405b957
 msgid "Returns :ref:`max_polyphony<class_FmodAudioStream_property_max_polyphony>`."
-msgstr "Returns :ref:`max_polyphony<class_FmodAudioStream_property_max_polyphony>`."
+msgstr "返回  :ref:`max_polyphony<class_FmodAudioStream_property_max_polyphony>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:997 db0f2a540a184b4cb8d2ee6b29441999
+#: ../../source/classes/class_fmodaudiostream.rst:985 5b4d928ef7184ad896c8b3581d380e54
 msgid "Sets :ref:`initial_seek_position<class_FmodAudioStream_property_initial_seek_position>`."
-msgstr "Sets :ref:`initial_seek_position<class_FmodAudioStream_property_initial_seek_position>`."
+msgstr "设置  :ref:`initial_seek_position<class_FmodAudioStream_property_initial_seek_position>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:1009 bd9d6bb7315c42878d6c7b66131fbcb3
+#: ../../source/classes/class_fmodaudiostream.rst:997 d131ebcea6dd47159b622ab3b153fd5a
 msgid "Returns :ref:`initial_seek_position<class_FmodAudioStream_property_initial_seek_position>`."
-msgstr "Returns :ref:`initial_seek_position<class_FmodAudioStream_property_initial_seek_position>`."
+msgstr "返回  :ref:`initial_seek_position<class_FmodAudioStream_property_initial_seek_position>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:1021 553d4394ac4e4467bf9c9aa890268773
+#: ../../source/classes/class_fmodaudiostream.rst:1009 4bb494b9ea3e427dadc83a414bc4a20d
 msgid "Sets :ref:`initial_seek_postype<class_FmodAudioStream_property_initial_seek_postype>`."
-msgstr "Sets :ref:`initial_seek_postype<class_FmodAudioStream_property_initial_seek_postype>`."
+msgstr "设置  :ref:`initial_seek_postype<class_FmodAudioStream_property_initial_seek_postype>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:1033 d9a81ebf8e7142ec8b144d723503cd1e
+#: ../../source/classes/class_fmodaudiostream.rst:1021 74db2452e2254d2ba56b36610438c930
 msgid "Returns :ref:`initial_seek_postype<class_FmodAudioStream_property_initial_seek_postype>`."
-msgstr "Returns :ref:`initial_seek_postype<class_FmodAudioStream_property_initial_seek_postype>`."
+msgstr "返回  :ref:`initial_seek_postype<class_FmodAudioStream_property_initial_seek_postype>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:1045 3eafb3be4cab47b9a848274856a49531
+#: ../../source/classes/class_fmodaudiostream.rst:1033 a3f0bf927c534886aab397cecc6f237f
 msgid "Sets :ref:`ignore_set_file_system<class_FmodAudioStream_property_ignore_set_file_system>`."
-msgstr "Sets :ref:`ignore_set_file_system<class_FmodAudioStream_property_ignore_set_file_system>`."
+msgstr "设置  :ref:`ignore_set_file_system<class_FmodAudioStream_property_ignore_set_file_system>` 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:1057 acf0b94e45a24bf6a6ff3ebf201f931e
+#: ../../source/classes/class_fmodaudiostream.rst:1045 1643187dcf4f44498ef368e50f4efb57
 msgid "Returns :ref:`ignore_set_file_system<class_FmodAudioStream_property_ignore_set_file_system>`."
-msgstr "Returns :ref:`ignore_set_file_system<class_FmodAudioStream_property_ignore_set_file_system>`."
+msgstr "返回  :ref:`ignore_set_file_system<class_FmodAudioStream_property_ignore_set_file_system>` 。"
 
 #: ../../source/classes/class_fmodaudiostream.rst:1069 576c1a83731047c68832a585f558dd7e
 msgid ":ref:`FmodSound<class_FmodSound>` **get_sound**\\ (\\ )"
@@ -1356,21 +1339,51 @@ msgstr ""
 ":ref:`FmodAudioStream<class_FmodAudioStream>` **load_from_file**\\ (\\ path\\: "
 ":ref:`String<class_String>`, flags\\: :ref:`int<class_int>` = 1\\ ) |static|"
 
-#: ../../source/classes/class_fmodaudiostream.rst:1161 b17d980b429d446998bf55b2825ddaa2
+#: ../../source/classes/class_fmodaudiostream.rst:194 c835cec0f31a42efa20c09849d582c9f
 msgid ""
-"Loads an audio stream from a file path. The path can be a Godot resource path (e.g., "
-"``\"res://audio/music.mp3\"``) or an absolute file path."
-msgstr "从文件路径加载音频流。路径可以是 Godot 资源路径（例如    ``\"res://audio/music.mp3\"``   ）或绝对文件路径。"
-
-#: ../../source/classes/class_fmodaudiostream.rst:1163 f2bdd2b70eaf4d52bdea79019500f833
-msgid ""
-"The ``flags`` parameter specifies the creation mode flags (bitmask of "
-":ref:`CreateMode<enum_FmodAudioStream_CreateMode>`). Defaults to "
-":ref:`MODE_STREAM<class_FmodAudioStream_constant_MODE_STREAM>` for streaming playback from disk."
+"With no flags set, creates a non-looping 2D sample. The resource property default is "
+":ref:`MODE_STREAM<class_FmodAudioStream_constant_MODE_STREAM>`."
 msgstr ""
-"``flags``    参数指定创建模式标志（    :ref:`CreateMode<enum_FmodAudioStream_CreateMode>`    的位掩码）。默认为    "
-":ref:`MODE_STREAM<class_FmodAudioStream_constant_MODE_STREAM>`   。"
+"未设置标志时创建不循环的 2D 采样音频。资源属性的默认值为  "
+":ref:`MODE_STREAM<class_FmodAudioStream_constant_MODE_STREAM>` \\ 。"
 
-#: ../../source/classes/class_fmodaudiostream.rst:1165 eb1ed508d0474347b3f0ef6445ca7b10
-msgid "Returns an empty reference if the file cannot be opened or read."
-msgstr "如果文件无法打开或读取，则返回一个空引用。"
+#: ../../source/classes/class_fmodaudiostream.rst:202 3069add9af1f4a3196faa2f226308cea
+msgid ""
+"Decodes the in-memory audio data progressively. The complete source file remains in "
+":ref:`audio_data<class_FmodAudioStream_property_audio_data>`; streaming avoids decoding the "
+"entire sound into PCM at creation time."
+msgstr ""
+"逐步解码内存中的音频数据。完整源文件仍保存在  :ref:`audio_data<class_FmodAudioStream_property_audio_data>`  "
+"中；流式模式避免在创建声音时将整段音频解码为 PCM。"
+
+#: ../../source/classes/class_fmodaudiostream.rst:327 616600b126c64989af924c49f668f9d0
+msgid ""
+"Optional byte length passed to FMOD, clamped to the size of "
+":ref:`audio_data<class_FmodAudioStream_property_audio_data>`. A value of ``0`` uses the "
+"complete data size."
+msgstr ""
+"传递给 FMOD 的可选字节长度，上限为  :ref:`audio_data<class_FmodAudioStream_property_audio_data>`  的大小。\\  "
+"``0``  表示使用全部数据。"
+
+#: ../../source/classes/class_fmodaudiostream.rst:1135 f7ab0c86a50141618b3994b0bdeb89c6
+msgid ""
+"Reads the entire file at ``path`` into "
+":ref:`audio_data<class_FmodAudioStream_property_audio_data>` and returns a new stream. "
+"Resource paths and absolute file paths are supported."
+msgstr ""
+"读取  ``path``  指定文件的全部内容到  :ref:`audio_data<class_FmodAudioStream_property_audio_data>` \\ "
+"，并返回新的音频流。支持资源路径和绝对文件路径。"
+
+#: ../../source/classes/class_fmodaudiostream.rst:1137 0ab10c11d5ee4b00be0459e81648bbe2
+msgid ""
+"\\ ``flags`` controls FMOD decoding and playback using "
+":ref:`CreateMode<enum_FmodAudioStream_CreateMode>`. The default "
+":ref:`MODE_STREAM<class_FmodAudioStream_constant_MODE_STREAM>` streams decoding from the in-"
+"memory data, not directly from disk."
+msgstr ""
+"``flags``  通过  :ref:`CreateMode<enum_FmodAudioStream_CreateMode>`  控制 FMOD 的解码和播放。默认的  "
+":ref:`MODE_STREAM<class_FmodAudioStream_constant_MODE_STREAM>`  从内存中的数据流式解码，不会直接从磁盘流式读取。"
+
+#: ../../source/classes/class_fmodaudiostream.rst:1139 f0a1e811fd0b46f9b8d36a8c087bcbf8
+msgid "Returns ``null`` if the file cannot be opened or contains no readable data."
+msgstr "无法打开文件或没有可读取的数据时返回  ``null`` \\ 。"

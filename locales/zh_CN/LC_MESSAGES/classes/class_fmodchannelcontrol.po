@@ -44,25 +44,6 @@ msgstr ""
 msgid "Description"
 msgstr "描述"
 
-#: ../../source/classes/class_fmodchannelcontrol.rst:25 59a9997435dd439e974d6b60f0a7d7e4
-msgid ""
-"FmodChannelControl is an abstract base class that provides shared functionality for both "
-":ref:`FmodChannel<class_FmodChannel>` (single channel playback control) and "
-":ref:`FmodChannelGroup<class_FmodChannelGroup>` (channel mixing group). It handles playback "
-"control, volume management, panning, filtering, DSP chain configuration, and sample-accurate "
-"scheduling."
-msgstr ""
-"该类主要作为基类使用，通常通过    :ref:`FmodChannel<class_FmodChannel>`    或    "
-":ref:`FmodChannelGroup<class_FmodChannelGroup>`    获取实例。"
-
-#: ../../source/classes/class_fmodchannelcontrol.rst:27 78ec3d0efede454796069ee534f1e712
-msgid ""
-"This class cannot be instantiated directly - use :ref:`FmodChannel<class_FmodChannel>` or "
-":ref:`FmodChannelGroup<class_FmodChannelGroup>` instead."
-msgstr ""
-"此类不能直接实例化，请使用    :ref:`FmodChannel<class_FmodChannel>`    或    "
-":ref:`FmodChannelGroup<class_FmodChannelGroup>`   。"
-
 #: ../../source/classes/class_fmodchannelcontrol.rst:32 598a5db7e8314fd4b0f2319dad73fe19
 msgid "Properties"
 msgstr "属性"
@@ -981,21 +962,9 @@ msgstr "方法说明"
 msgid ":ref:`bool<class_bool>` **channel_control_is_valid**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **channel_control_is_valid**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodchannelcontrol.rst:444 8e18aa7892394ede80bedfe68b373683
-msgid ""
-"Returns ``true`` if the underlying FMOD::ChannelControl object is valid and can be used for "
-"operations."
-msgstr "如果底层 FMOD::ChannelControl 句柄有效，则返回    ``true``   。"
-
 #: ../../source/classes/class_fmodchannelcontrol.rst:456 b2a02301a49f4234b657ebbf8e2d60a5
 msgid ":ref:`bool<class_bool>` **channel_control_is_null**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **channel_control_is_null**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodchannelcontrol.rst:458 f7f28c2d0538475fae163eed069844a2
-msgid ""
-"Returns ``true`` if the underlying FMOD::ChannelControl object is null (not initialized or "
-"already released)."
-msgstr "如果底层 FMOD::ChannelControl 句柄为空或不可用，则返回    ``true``   。"
 
 #: ../../source/classes/class_fmodchannelcontrol.rst:470 f11669767f2d43818f56027f956c6c84
 msgid ":ref:`bool<class_bool>` **is_playing**\\ (\\ ) |const|"
@@ -1011,12 +980,6 @@ msgstr "返回该 Channel 或 ChannelGroup 当前是否正在播放。"
 msgid "|void| **stop**\\ (\\ )"
 msgstr "|void| **stop**\\ (\\ )"
 
-#: ../../source/classes/class_fmodchannelcontrol.rst:486 436ef3282ab347c08d80da92e6ac3266
-msgid ""
-"Stops playback of the channel (or all channels in nested ChannelGroups). The channel becomes "
-"invalid after stopping and cannot be reused."
-msgstr "停止该 Channel 的播放，或停止嵌套在 ChannelGroup 中的所有 Channel。"
-
 #: ../../source/classes/class_fmodchannelcontrol.rst:500 b65a83c89d0f469a8785a438b18ef30e
 msgid ""
 "Sets the pause state of the channel. When paused, playback is temporarily suspended and can be "
@@ -1030,14 +993,6 @@ msgstr "返回当前暂停状态。"
 #: ../../source/classes/class_fmodchannelcontrol.rst:526 09437cf5929747c3ab47b8e9ddc31ae7
 msgid "|void| **set_mode**\\ (\\ mode\\: :ref:`FmodMode<enum_FmodSystem_FmodMode>`\\ )"
 msgstr "|void| **set_mode**\\ (\\ mode\\: :ref:`FmodMode<enum_FmodSystem_FmodMode>`\\ )"
-
-#: ../../source/classes/class_fmodchannelcontrol.rst:528 c4844ba95c674515bf705637ef5dda8f
-msgid ""
-"Sets the playback mode flags that control the behavior of this channel. Mode flags include loop "
-"settings (LOOP_OFF, LOOP_NORMAL, LOOP_BIDI), spatial audio settings (2D, 3D with various rolloff "
-"types), and creation options (CREATESTREAM, CREATESAMPLE). See "
-":ref:`FmodMode<enum_FmodSystem_FmodMode>` for all available options."
-msgstr "设置 FMOD 播放模式标志，用于控制循环、2D/3D、距离衰减等行为。 （参见   :ref:`FmodMode<enum_FmodSystem_FmodMode>`  ）"
 
 #: ../../source/classes/class_fmodchannelcontrol.rst:540 fcb71183dd4b461e9a03143e3391f592
 msgid ":ref:`FmodMode<enum_FmodSystem_FmodMode>` **get_mode**\\ (\\ ) |const|"
@@ -1306,9 +1261,9 @@ msgstr "返回多普勒效果缩放量。"
 msgid "Sets the 3D panning level (0.0 to 1.0)."
 msgstr "设置 3D 平移与 2D 平移之间的混合比例。"
 
-#: ../../source/classes/class_fmodchannelcontrol.rst:904 b4c624b20f4648618439dd0813c32e69
+#: ../../source/classes/class_fmodchannelcontrol.rst:840 f91fc68e704442fa9cd6b9a45def0543
 msgid "0.0 = full 2D panning, 1.0 = full 3D spatialization."
-msgstr "0.0 = full 2D panning, 1.0 = full 3D spatialization."
+msgstr "0.0 表示完全使用 2D 声像，1.0 表示完全使用 3D 空间化。"
 
 #: ../../source/classes/class_fmodchannelcontrol.rst:918 6f3b9e8ba25247a3a88e9f1780f2474f
 msgid "Returns the current 3D panning level."
@@ -1398,9 +1353,9 @@ msgstr "设置左右声像。   ``-1.0``    为左，   ``0.0``    为中间， 
 msgid "``-1.0``: Full left"
 msgstr "``-1.0``   ：完全偏左"
 
-#: ../../source/classes/class_fmodchannelcontrol.rst:1062 ca226320515d4ece9980a253ff5b8d86
+#: ../../source/classes/class_fmodchannelcontrol.rst:978 83f79e539f6148fdbb6fedcde501f560
 msgid "``0.0``: Center (default)"
-msgstr "``0.0``: Center (default)"
+msgstr "``0.0`` ：居中（默认值）"
 
 #: ../../source/classes/class_fmodchannelcontrol.rst:1064 25ef4bcd80174ec9b60f0fc43c08e6ac
 msgid "``1.0``: Full right"
@@ -1456,27 +1411,27 @@ msgstr ""
 "outchannels\\: :ref:`int<class_int>`, inchannels\\: :ref:`int<class_int>`, inchannel_hop\\: "
 ":ref:`int<class_int>` = 0\\ )"
 
-#: ../../source/classes/class_fmodchannelcontrol.rst:1112 5b00d37986d24c9c849010b97bf02a21
+#: ../../source/classes/class_fmodchannelcontrol.rst:1024 f9360bbc48514e7abfd542b501918df8
 msgid "Sets a custom mix matrix that maps input channels (columns) to output speaker channels (rows)."
-msgstr ""
-"设置二维声像矩阵，将输入通道列映射到输出扬声器行。   ``matrix``    的长度应至少覆盖    ``outchannels * inchannel_hop``   ，当    "
-"``inchannel_hop``    为    ``0``    时使用    ``inchannels``   。"
+msgstr "设置自定义混音矩阵，将输入通道（列）映射到输出扬声器通道（行）。"
 
-#: ../../source/classes/class_fmodchannelcontrol.rst:1114 4d3e3fb457a544a98df401988ef69f01
+#: ../../source/classes/class_fmodchannelcontrol.rst:1026 2d7b1f8f99d44f52b5b65658dc89d8f3
 msgid ""
 "The matrix is row-major. If ``inchannel_hop`` is ``0``, each row is assumed to contain "
 "``inchannels`` values."
-msgstr "矩阵采用行优先排列。   ``inchannel_hop``    为    ``0``    时，每行按包含    ``inchannels``    个值处理。"
+msgstr "矩阵按行优先顺序排列。\\  ``inchannel_hop``  为  ``0``  时，每行视为包含  ``inchannels``  个元素。"
 
 #: ../../source/classes/class_fmodchannelcontrol.rst:1126 0e2b152e20e14c75bcedf602d6e364f3
 msgid ":ref:`Dictionary<class_Dictionary>` **get_mix_matrix**\\ (\\ ) |const|"
 msgstr ":ref:`Dictionary<class_Dictionary>` **get_mix_matrix**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodchannelcontrol.rst:1128 78a56359683b47bfac831f6949274c4e
+#: ../../source/classes/class_fmodchannelcontrol.rst:1036 f3512424cba94524a68c99b0d6d9cfab
 msgid ""
 "Returns the current final mix matrix as a Dictionary with ``matrix``, ``outchannels``, "
 "``inchannels``, and ``inchannel_hop``."
-msgstr "返回当前混音矩阵信息，包含矩阵数据、输出通道数、输入通道数和输入通道步长。"
+msgstr ""
+"返回当前混音矩阵字典，包含  ``matrix`` （矩阵数据）、 ``outchannels`` （输出声道数）、 ``inchannels`` （输入声道数）和  "
+"``inchannel_hop`` （输入声道步长）。"
 
 #: ../../source/classes/class_fmodchannelcontrol.rst:1140 1df7eefc3e7d40df971148a8bc3a9339
 msgid ""
@@ -1551,11 +1506,11 @@ msgstr "返回 DSP 链中的 DSP 单元数量。"
 msgid ":ref:`FmodDSP<class_FmodDSP>` **get_dsp**\\ (\\ index\\: :ref:`int<class_int>`\\ ) |const|"
 msgstr ":ref:`FmodDSP<class_FmodDSP>` **get_dsp**\\ (\\ index\\: :ref:`int<class_int>`\\ ) |const|"
 
-#: ../../source/classes/class_fmodchannelcontrol.rst:1240 abd1cca368f54468aad06444524fde20
+#: ../../source/classes/class_fmodchannelcontrol.rst:1132 7e956aae80f14fe4963382b60ca6b64f
 msgid ""
-"Retrieves the DSP unit at the specified index in the DSP chain. Returns ``null`` if the index is "
-"invalid."
-msgstr "返回 DSP 链中指定索引处的 DSP 单元。"
+"Retrieves the DSP unit at the specified index in the DSP chain. Returns ``null`` if the index"
+" is invalid."
+msgstr "返回 DSP 链中指定索引处的 DSP 单元；索引无效时返回  ``null`` 。"
 
 #: ../../source/classes/class_fmodchannelcontrol.rst:1252 082ed4098f184b72ab00612604068cba
 msgid ""
@@ -1699,47 +1654,87 @@ msgstr "移除两个 DSP 时钟值之间的所有淡变点。"
 msgid ":ref:`Dictionary<class_Dictionary>` **get_fade_points**\\ (\\ ) |const|"
 msgstr ":ref:`Dictionary<class_Dictionary>` **get_fade_points**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodchannelcontrol.rst:1384 d5a9159747894211ab551f158653dc58
-msgid ""
-"Returns a :ref:`Dictionary<class_Dictionary>` containing fade point information with the "
-"following keys:"
-msgstr "返回当前存储的淡变点信息。 （参见   :ref:`Dictionary<class_Dictionary>`  ）"
-
-#: ../../source/classes/class_fmodchannelcontrol.rst:1386 3b9c66f472cf4faf963f5b544a46ed86
-msgid "``\"num_points\"`` (``int``): The number of fade points currently set."
-msgstr "``\"num_points\"`` （ ``int`` ）：当前设置的淡入淡出点数量。"
-
-#: ../../source/classes/class_fmodchannelcontrol.rst:1388 d6ff540f1df74df399b072b64ed70d08
-msgid "``\"point_dspclock\"`` (``int``): The DSP clock of the fade point (for single-point queries)."
-msgstr "``\"point_dspclock\"``   （   ``int``   ）：淡入淡出点的 DSP 时钟，适用于单点查询。"
-
-#: ../../source/classes/class_fmodchannelcontrol.rst:1390 fc93f618981540f2b67911cf6bf08e7f
-msgid "``\"point_volume\"`` (``float``): The volume level of the fade point (for single-point queries)."
-msgstr "``\"point_volume\"``   （   ``float``   ）：淡入淡出点的音量，适用于单点查询。"
-
 #: ../../source/classes/class_fmodchannelcontrol.rst:1402 3c8e31cadee343d4ab60c1cdff918643
 msgid "|void| **set_callback**\\ (\\ )"
 msgstr "|void| **set_callback**\\ (\\ )"
-
-#: ../../source/classes/class_fmodchannelcontrol.rst:1404 a5a9a83f11db4488b8d234d797a35511
-msgid ""
-"Sets up a callback for receiving notifications from FMOD about channel events. When enabled, the "
-":ref:`callback_received<class_FmodChannelControl_signal_callback_received>` signal will be "
-"emitted when FMOD events occur on this channel."
-msgstr ""
-"设置 ChannelControl 级别的 FMOD 回调，并通过    "
-":ref:`callback_received<class_FmodChannelControl_signal_callback_received>`    信号转发回 Godot。"
 
 #: ../../source/classes/class_fmodchannelcontrol.rst:1416 48b864b04b764ca8b5c5eaf2eedf1e45
 msgid "|void| **clear_callback**\\ (\\ )"
 msgstr "|void| **clear_callback**\\ (\\ )"
 
-#: ../../source/classes/class_fmodchannelcontrol.rst:1418 d0082b8014c74d9e99cdc8f08ba5525f
+#: ../../source/classes/class_fmodchannelcontrol.rst:23 06e42adb601f4326897271760a87d86b
 msgid ""
-"Clears the callback set by :ref:`set_callback()<class_FmodChannelControl_method_set_callback>`. "
-"After calling this, the "
-":ref:`callback_received<class_FmodChannelControl_signal_callback_received>` signal will no longer"
-" be emitted when FMOD events occur."
+"FmodChannelControl provides shared playback, volume, spatialization, DSP-chain, and "
+"scheduling operations for :ref:`FmodChannel<class_FmodChannel>` and "
+":ref:`FmodChannelGroup<class_FmodChannelGroup>`. Obtain an initialized channel or group from "
+":ref:`FmodSystem<class_FmodSystem>`; a newly instantiated base object has no FMOD handle."
 msgstr ""
-"清除 ChannelControl 回调。 （参见   :ref:`set_callback()<class_FmodChannelControl_method_set_callback>`  "
-"） （参见   :ref:`callback_received<class_FmodChannelControl_signal_callback_received>`  ）"
+"FmodChannelControl 为  :ref:`FmodChannel<class_FmodChannel>`  和  "
+":ref:`FmodChannelGroup<class_FmodChannelGroup>`  提供播放、音量、空间化、DSP 链和调度操作。通过  "
+":ref:`FmodSystem<class_FmodSystem>`  获取已绑定句柄的通道或组；直接实例化基类不会创建 FMOD 句柄。"
+
+#: ../../source/classes/class_fmodchannelcontrol.rst:438 ee76b6e992994d68b141929afe668794
+msgid ""
+"Returns ``true`` if this wrapper stores a non-null ChannelControl pointer. It does not "
+"validate the native handle or check whether a channel is still playing."
+msgstr "封装保存了非空 ChannelControl 指针时返回  ``true`` 。此方法不会验证底层句柄，也不会检查通道是否仍在播放。"
+
+#: ../../source/classes/class_fmodchannelcontrol.rst:450 929383cee3be426dabe2da444190249d
+msgid ""
+"Returns ``true`` if this wrapper has no ChannelControl pointer. A stopped channel can still "
+"have a non-null stored pointer."
+msgstr "封装没有 ChannelControl 指针时返回  ``true`` 。已经停止的通道仍可能保存非空指针。"
+
+#: ../../source/classes/class_fmodchannelcontrol.rst:474 f787ad3e3a82416991a9bc6f95b4e714
+msgid ""
+"Stops this channel, or all channels in this group and its nested groups. A stopped Channel "
+"handle becomes invalid; a ChannelGroup remains available for subsequent playback."
+msgstr "停止当前通道，或停止当前组及其嵌套组中的所有通道。停止后的 Channel 句柄失效；ChannelGroup 仍可用于后续播放。"
+
+#: ../../source/classes/class_fmodchannelcontrol.rst:510 8ad170cd57554aa296de59f69700a743
+msgid ""
+"Sets supported playback mode flags, including looping and 2D/3D spatialization. See "
+":ref:`FmodMode<enum_FmodSystem_FmodMode>` for the flags; sound creation flags must be "
+"supplied when creating the sound."
+msgstr ""
+"设置支持的播放模式标志，包括循环和 2D/3D 空间化。标志见  :ref:`FmodSystem.FmodMode<enum_FmodSystem_FmodMode>` "
+"；声音创建标志应在创建声音时传入。"
+
+#: ../../source/classes/class_fmodchannelcontrol.rst:1258 20dd0d8d668449289aebf68ab2833098
+msgid ""
+"Returns a dictionary containing ``num_points`` (int), ``point_dspclocks`` (PackedInt64Array),"
+" and ``point_volumes`` (PackedFloat32Array). Matching array indices describe the clock and "
+"linear volume of each fade point. Returns an empty dictionary on failure."
+msgstr ""
+"返回包含  ``num_points`` （int）、 ``point_dspclocks`` （PackedInt64Array）和  ``point_volumes`` "
+"（PackedFloat32Array）的字典。两个数组的相同索引分别给出淡变点的时钟和线性音量；失败时返回空字典。"
+
+#: ../../source/classes/class_fmodchannelcontrol.rst:1270 c2c528c3ef3347a8b45339b25c8857be
+msgid ""
+"Installs the wrapper callback for FMOD channel events. Notifications are deferred to Godot. "
+":ref:`FmodChannel<class_FmodChannel>` emits its specific signals such as "
+":ref:`FmodChannel.ended<class_FmodChannel_signal_ended>`; the base implementation emits "
+":ref:`callback_received<class_FmodChannelControl_signal_callback_received>`."
+msgstr ""
+"安装封装的 FMOD 通道事件回调，通知会延迟到 Godot 执行。 :ref:`FmodChannel<class_FmodChannel>`  发出  "
+":ref:`FmodChannel.ended<class_FmodChannel_signal_ended>`  等专用信号；基类实现发出  "
+":ref:`callback_received<class_FmodChannelControl_signal_callback_received>` 。"
+
+#: ../../source/classes/class_fmodchannelcontrol.rst:1282 fab88f25ba2745a296b912f90733b9a1
+msgid ""
+"Removes the FMOD callback installed by "
+":ref:`set_callback()<class_FmodChannelControl_method_set_callback>`, stopping both base and "
+"derived channel-event notifications for this handle."
+msgstr ""
+"移除  :ref:`set_callback()<class_FmodChannelControl_method_set_callback>`  安装的 FMOD "
+"回调，停止该句柄的基类和派生类通道事件通知。"
+
+#: ../../source/classes/class_fmodchannelcontrol.rst:1022 6a99a1b9f1cc4e3c96641e5cd1f9d184
+msgid ""
+"Channel counts must be between ``1`` and ``32``. ``inchannel_hop`` must be ``0`` or between "
+"``inchannels`` and ``32``. The input must include every active element; padding after the "
+"last row is optional. Invalid dimensions, strides, and short arrays are rejected before "
+"calling FMOD."
+msgstr ""
+"通道数必须在  ``1``  到  ``32``  之间。\\  ``inchannel_hop``  必须为  ``0`` \\ ，或介于  ``inchannels``  和  "
+"``32``  之间。输入必须包含所有有效元素，最后一行末尾可省略填充。无效尺寸、步长和过短数组会在调用 FMOD 前被拒绝。"

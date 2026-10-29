@@ -53,9 +53,9 @@ msgstr ""
 ":ref:`CollisionShape3D<class_CollisionShape3D>`  ） （参见   "
 ":ref:`MeshInstance3D<class_MeshInstance3D>`  ） （参见   :ref:`Mesh<class_Mesh>`  ）"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:25 13a47c221c10466791a3272d6781a8eb
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:23 612837306622403b95c8cc9abdcd3905
 msgid "The node keeps the FMOD geometry transform synchronized with its global transform at runtime."
-msgstr "此节点可以自动扫描父级或指定节点，也可以直接使用    ``mesh``    资源创建 FMOD 几何体。它继承自   ``StaticBody3D``  ，方便作为场景遮挡体一起组织。"
+msgstr "该节点在运行时将全局变换同步到 FMOD 几何体。"
 
 #: ../../source/classes/class_fmodgeometryinstance3d.rst:30 d10ba33475f3466b91b7909e08215a73
 msgid "Properties"
@@ -699,9 +699,9 @@ msgstr "|void| **set_recursive_source_scan**\\ (\\ value\\: :ref:`bool<class_boo
 msgid ":ref:`bool<class_bool>` **get_recursive_source_scan**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **get_recursive_source_scan**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:396 dfddd8b8333543e7a793e69ddb305003
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:392 5c62e27d1e054da4aa4997e2820cb2f3
 msgid "If enabled, child collision shapes are collected recursively."
-msgstr "自动模式下是否递归扫描子节点"
+msgstr "启用后递归收集子节点中的碰撞形状。"
 
 #: ../../source/classes/class_fmodgeometryinstance3d.rst:406 3911f5a759a34104b0dd268ca61eeeec
 msgid ":ref:`int<class_int>` **primitive_segments** = ``16``"
@@ -747,101 +747,109 @@ msgstr "是否显示编辑器调试 Gizmo"
 msgid "Method Descriptions"
 msgstr "方法说明"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:449 2b537baab38e467a8d29480ea595b135
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:443 88bcf085bf7844f28edbd8b1b7be2004
 msgid "Sets :ref:`source_mode<class_FmodGeometryInstance3D_property_source_mode>`."
-msgstr "Sets :ref:`source_mode<class_FmodGeometryInstance3D_property_source_mode>`."
+msgstr "设置  :ref:`source_mode<class_FmodGeometryInstance3D_property_source_mode>` 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:463 dbcd780e35034d60a3a8ee4502b4d538
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:455 bb92a69ed36b48f4a79e7aa1f4fc5524
 msgid "Returns :ref:`source_mode<class_FmodGeometryInstance3D_property_source_mode>`."
-msgstr "Returns :ref:`source_mode<class_FmodGeometryInstance3D_property_source_mode>`."
+msgstr "返回  :ref:`source_mode<class_FmodGeometryInstance3D_property_source_mode>` 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:477 f3d233c6385045c8a0ebdb4b3406a25c
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:467 daec522119bb4a39bbae539363c87609
 msgid "Sets :ref:`source_node_path<class_FmodGeometryInstance3D_property_source_node_path>`."
-msgstr "Sets :ref:`source_node_path<class_FmodGeometryInstance3D_property_source_node_path>`."
+msgstr "设置  :ref:`source_node_path<class_FmodGeometryInstance3D_property_source_node_path>` 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:491 3b6a0213a44f4c299026ae441ee31a51
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:479 78a605466888475d92a8b2b8edf2bd0a
 msgid "Returns :ref:`source_node_path<class_FmodGeometryInstance3D_property_source_node_path>`."
-msgstr "Returns :ref:`source_node_path<class_FmodGeometryInstance3D_property_source_node_path>`."
+msgstr "返回  :ref:`source_node_path<class_FmodGeometryInstance3D_property_source_node_path>` 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:505 a3a75b0fe5c045deb2be9d386e703a21
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:491 84d280801d0f4a009abb4fd8d8696240
 msgid "Sets :ref:`mesh<class_FmodGeometryInstance3D_property_mesh>`."
-msgstr "Sets :ref:`mesh<class_FmodGeometryInstance3D_property_mesh>`."
+msgstr "设置  :ref:`mesh<class_FmodGeometryInstance3D_property_mesh>` 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:519 976d3763806f4407b09d51465ebfd7d8
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:503 a7a3aa00a9ee45808d23a543896be06e
 msgid "Returns :ref:`mesh<class_FmodGeometryInstance3D_property_mesh>`."
-msgstr "Returns :ref:`mesh<class_FmodGeometryInstance3D_property_mesh>`."
+msgstr "返回  :ref:`mesh<class_FmodGeometryInstance3D_property_mesh>` 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:533 d4a3329237db47e9856e025a915a664b
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:515 8cb8f037151746c69b692fab03457af3
 msgid "Sets :ref:`direct_occlusion<class_FmodGeometryInstance3D_property_direct_occlusion>`."
-msgstr "Sets :ref:`direct_occlusion<class_FmodGeometryInstance3D_property_direct_occlusion>`."
+msgstr "设置  :ref:`direct_occlusion<class_FmodGeometryInstance3D_property_direct_occlusion>` 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:547 5950f99473d54a4db4af7f4e167c45d7
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:527 7ab9dc491535432ea907707b6b293e1d
 msgid "Returns :ref:`direct_occlusion<class_FmodGeometryInstance3D_property_direct_occlusion>`."
-msgstr "Returns :ref:`direct_occlusion<class_FmodGeometryInstance3D_property_direct_occlusion>`."
+msgstr "返回  :ref:`direct_occlusion<class_FmodGeometryInstance3D_property_direct_occlusion>` 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:561 c6fd32e303f34e6d9ba48b34db51dafc
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:539 8ddb171876e743428ea2e9e6c35847c4
 msgid "Sets :ref:`reverb_occlusion<class_FmodGeometryInstance3D_property_reverb_occlusion>`."
-msgstr "Sets :ref:`reverb_occlusion<class_FmodGeometryInstance3D_property_reverb_occlusion>`."
+msgstr "设置  :ref:`reverb_occlusion<class_FmodGeometryInstance3D_property_reverb_occlusion>` 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:575 98eda598a48c4117b4aabaf98df0fe85
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:551 c35add04b2724ec6965a24226f2a266f
 msgid "Returns :ref:`reverb_occlusion<class_FmodGeometryInstance3D_property_reverb_occlusion>`."
-msgstr "Returns :ref:`reverb_occlusion<class_FmodGeometryInstance3D_property_reverb_occlusion>`."
+msgstr "返回  :ref:`reverb_occlusion<class_FmodGeometryInstance3D_property_reverb_occlusion>` 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:589 70e21ec331a142938b9e292bfd9c34da
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:563 4c06f79c4d8e45aeb827363466ffdeec
 msgid "Sets :ref:`double_sided<class_FmodGeometryInstance3D_property_double_sided>`."
-msgstr "Sets :ref:`double_sided<class_FmodGeometryInstance3D_property_double_sided>`."
+msgstr "设置  :ref:`double_sided<class_FmodGeometryInstance3D_property_double_sided>` 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:603 c7f1fb7da044496f89833ac0a6780eb8
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:575 c8346524743b43238e8cc100bb3b5acc
 msgid "Returns :ref:`double_sided<class_FmodGeometryInstance3D_property_double_sided>`."
-msgstr "Returns :ref:`double_sided<class_FmodGeometryInstance3D_property_double_sided>`."
+msgstr "返回  :ref:`double_sided<class_FmodGeometryInstance3D_property_double_sided>` 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:617 fc0d75d2f189487fa2ba6c3216fbec80
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:587 2fd542b7540f412ea037ffad93a0b83a
 msgid "Sets :ref:`active<class_FmodGeometryInstance3D_property_active>`."
-msgstr "Sets :ref:`active<class_FmodGeometryInstance3D_property_active>`."
+msgstr "设置  :ref:`active<class_FmodGeometryInstance3D_property_active>` 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:631 f160154ca2174c5eb7ef3d0f119cb70f
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:599 2a8eb0492fd04aca9e30f313bca0cb75
 msgid "Returns :ref:`active<class_FmodGeometryInstance3D_property_active>`."
-msgstr "Returns :ref:`active<class_FmodGeometryInstance3D_property_active>`."
+msgstr "返回  :ref:`active<class_FmodGeometryInstance3D_property_active>` 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:645 0881642c34704248961e1667eff8457d
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:611 b41460c1b5f442b59ecfb58af5928d4f
 msgid "Sets :ref:`auto_rebuild<class_FmodGeometryInstance3D_property_auto_rebuild>`."
-msgstr "Sets :ref:`auto_rebuild<class_FmodGeometryInstance3D_property_auto_rebuild>`."
+msgstr "设置  :ref:`auto_rebuild<class_FmodGeometryInstance3D_property_auto_rebuild>` 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:659 9f0dfec14cf14e9da6d4dac91b1204f9
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:623 e12515e533ce450aa056d0edaf57f29c
 msgid "Returns :ref:`auto_rebuild<class_FmodGeometryInstance3D_property_auto_rebuild>`."
-msgstr "Returns :ref:`auto_rebuild<class_FmodGeometryInstance3D_property_auto_rebuild>`."
+msgstr "返回  :ref:`auto_rebuild<class_FmodGeometryInstance3D_property_auto_rebuild>` 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:673 4b4939ea081a44eaaa405134e2ce840f
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:635 650e7b2d6cbc435eb8ac15d59220360a
 msgid "Sets :ref:`sync_transform<class_FmodGeometryInstance3D_property_sync_transform>`."
-msgstr "Sets :ref:`sync_transform<class_FmodGeometryInstance3D_property_sync_transform>`."
+msgstr "设置  :ref:`sync_transform<class_FmodGeometryInstance3D_property_sync_transform>` 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:687 db8a6395b8b34bccb4c88bace2ffde35
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:647 fab5fed3537a423996c7aad065d4387a
 msgid "Returns :ref:`sync_transform<class_FmodGeometryInstance3D_property_sync_transform>`."
-msgstr "Returns :ref:`sync_transform<class_FmodGeometryInstance3D_property_sync_transform>`."
+msgstr "返回  :ref:`sync_transform<class_FmodGeometryInstance3D_property_sync_transform>` 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:701 16ba5db6470f4f64841b90dd2989fb4f
-msgid "Sets :ref:`recursive_source_scan<class_FmodGeometryInstance3D_property_recursive_source_scan>`."
-msgstr "Sets :ref:`recursive_source_scan<class_FmodGeometryInstance3D_property_recursive_source_scan>`."
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:659 96a15de0fbcc4bd6879970bdcbaaab6b
+msgid ""
+"Sets "
+":ref:`recursive_source_scan<class_FmodGeometryInstance3D_property_recursive_source_scan>`."
+msgstr ""
+"设置  :ref:`recursive_source_scan<class_FmodGeometryInstance3D_property_recursive_source_scan>`"
+" 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:715 55e766c22ac8432aa2fd51403833181b
-msgid "Returns :ref:`recursive_source_scan<class_FmodGeometryInstance3D_property_recursive_source_scan>`."
-msgstr "Returns :ref:`recursive_source_scan<class_FmodGeometryInstance3D_property_recursive_source_scan>`."
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:671 669df9490d814e86bbb21f514de97ec1
+msgid ""
+"Returns "
+":ref:`recursive_source_scan<class_FmodGeometryInstance3D_property_recursive_source_scan>`."
+msgstr ""
+"返回  :ref:`recursive_source_scan<class_FmodGeometryInstance3D_property_recursive_source_scan>`"
+" 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:729 4dd7072bb9d84acc958f706a8280775f
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:683 2fc1d6d1de844ae6b7d8a0eb65c7d088
 msgid "Sets :ref:`primitive_segments<class_FmodGeometryInstance3D_property_primitive_segments>`."
-msgstr "Sets :ref:`primitive_segments<class_FmodGeometryInstance3D_property_primitive_segments>`."
+msgstr "设置  :ref:`primitive_segments<class_FmodGeometryInstance3D_property_primitive_segments>` 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:743 61966f7c955442fd969a709a76aac552
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:695 062ac6ecf01b4d1f8157712d3294fd09
 msgid "Returns :ref:`primitive_segments<class_FmodGeometryInstance3D_property_primitive_segments>`."
-msgstr "Returns :ref:`primitive_segments<class_FmodGeometryInstance3D_property_primitive_segments>`."
+msgstr "返回  :ref:`primitive_segments<class_FmodGeometryInstance3D_property_primitive_segments>` 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:757 1e1df6a076ac41fd947f1062a51a12be
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:707 845e1602d38d40d2826a8399626edbf5
 msgid "Sets :ref:`show_debug_gizmo<class_FmodGeometryInstance3D_property_show_debug_gizmo>`."
-msgstr "Sets :ref:`show_debug_gizmo<class_FmodGeometryInstance3D_property_show_debug_gizmo>`."
+msgstr "设置  :ref:`show_debug_gizmo<class_FmodGeometryInstance3D_property_show_debug_gizmo>` 。"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:771 a531663b19e348fc8414c4dd2541bda5
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:719 df66b315dc5947fa851a37bdce8bc098
 msgid "Returns :ref:`show_debug_gizmo<class_FmodGeometryInstance3D_property_show_debug_gizmo>`."
-msgstr "Returns :ref:`show_debug_gizmo<class_FmodGeometryInstance3D_property_show_debug_gizmo>`."
+msgstr "返回  :ref:`show_debug_gizmo<class_FmodGeometryInstance3D_property_show_debug_gizmo>` 。"
 
 #: ../../source/classes/class_fmodgeometryinstance3d.rst:783 8412f8218f0a43e58ca94a19159734e6
 msgid "|void| **rebuild_geometry**\\ (\\ )"
@@ -895,8 +903,8 @@ msgstr "返回当前构建出的顶点数量。"
 msgid ":ref:`FmodGeometry<class_FmodGeometry>` **get_geometry**\\ (\\ ) |const|"
 msgstr ":ref:`FmodGeometry<class_FmodGeometry>` **get_geometry**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodgeometryinstance3d.rst:869 47a49972b53b4e1f9175d85b1a4dc7ae
+#: ../../source/classes/class_fmodgeometryinstance3d.rst:803 02f4d47115534e2083a6cbf97b373dd0
 msgid ""
-"Returns the internal :ref:`FmodGeometry<class_FmodGeometry>`, or ``null`` when no geometry has "
-"been built."
-msgstr "返回内部    :ref:`FmodGeometry<class_FmodGeometry>`    对象"
+"Returns the internal :ref:`FmodGeometry<class_FmodGeometry>`, or ``null`` when no geometry "
+"has been built."
+msgstr "返回内部  :ref:`FmodGeometry<class_FmodGeometry>` ；尚未构建几何体时返回  ``null`` 。"

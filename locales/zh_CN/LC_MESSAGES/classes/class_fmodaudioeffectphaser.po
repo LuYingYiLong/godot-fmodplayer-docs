@@ -30,28 +30,9 @@ msgstr ""
 "**继承：** :ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>` **<**"
 " :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
 
-#: ../../source/classes/class_fmodaudioeffectphaser.rst:16 2b5f01684d394763a1aee15c9a6aaaed
-msgid "Phaser effect using flanger DSP for sweeping filter effects."
-msgstr "移相器效果。"
-
 #: ../../source/classes/class_fmodaudioeffectphaser.rst:21 88b40fc585a941258ce053238b10379b
 msgid "Description"
 msgstr "描述"
-
-#: ../../source/classes/class_fmodaudioeffectphaser.rst:23 918d070ccb014eb39899e99e1186e8eb
-msgid ""
-"FmodAudioEffectPhaser creates a phaser effect by using FMOD's flange DSP. It produces a sweeping "
-"filter effect by modulating the frequency range of all-pass filters."
-msgstr ""
-"**FmodAudioEffectPhaser**    通过扫频相位偏移制造流动、旋转或镂空的调制音色。   ``range_min_hz``    与    ``range_max_hz``"
-"    控制扫频范围，   ``rate_hz``    控制移动速度，   ``depth``    与    ``feedback``    控制效果强度。"
-
-#: ../../source/classes/class_fmodaudioeffectphaser.rst:25 5a27898c4cc440e09c6db088e81b8ea1
-msgid ""
-"Note: While phasers and flangers have different underlying principles, this implementation uses "
-"flanger DSP to approximate phaser-like effects. Use this effect to add movement, space, and "
-"character to audio."
-msgstr "此实现使用镶边 DSP 近似移相效果，可为音频增加运动感和空间感。"
 
 #: ../../source/classes/class_fmodaudioeffectphaser.rst:30 9e5c74a505b6461abf31854199e307e8
 msgid "Properties"
@@ -207,12 +188,6 @@ msgstr "|void| **set_depth**\\ (\\ depth\\: :ref:`float<class_float>`\\ )"
 msgid ":ref:`float<class_float>` **get_depth**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_depth**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectphaser.rst:97 d387b6e6b7d64deaa57bc41066484311
-msgid ""
-"The filter frequency sweep depth. Range: 0.1 to 4.0. Higher values create more pronounced "
-"filtering effects."
-msgstr "调制深度"
-
 #: ../../source/classes/class_fmodaudioeffectphaser.rst:107 cd2c54ef2a594b2abc2d0cf519a8f966
 msgid ":ref:`float<class_float>` **feedback** = ``0.7``"
 msgstr ":ref:`float<class_float>` **feedback** = ``0.7``"
@@ -291,25 +266,9 @@ msgstr "|void| **set_rate_hz**\\ (\\ rate_hz\\: :ref:`float<class_float>`\\ )"
 msgid ":ref:`float<class_float>` **get_rate_hz**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_rate_hz**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectphaser.rst:165 a777d5a291264ce8b7c4df534d2be563
-msgid "The modulation rate in Hz. Range: 0.5 to 20.0. Higher rates create faster sweeping effects."
-msgstr "调制速率"
-
 #: ../../source/classes/class_fmodaudioeffectphaser.rst:174 3859ea127475425ba3d12d6248402885
 msgid "Method Descriptions"
 msgstr "方法说明"
-
-#: ../../source/classes/class_fmodaudioeffectphaser.rst:184 2787e6f0b23c470aa885525a52d73f1c
-msgid "Sets the filter frequency sweep depth. Range: 0.1 to 4.0."
-msgstr "设置调制深度。"
-
-#: ../../source/classes/class_fmodaudioeffectphaser.rst:186 10f97e390e514177b7007b4fa9acdf15
-msgid "Higher values create more pronounced filtering effects."
-msgstr "值越大，滤波效果越明显。"
-
-#: ../../source/classes/class_fmodaudioeffectphaser.rst:200 dc7ce0f7b41d407d850033d8b5ccc525
-msgid "Returns the filter frequency sweep depth."
-msgstr "返回调制深度。"
 
 #: ../../source/classes/class_fmodaudioeffectphaser.rst:214 6be399db5e974f299902b99fd9a1fe46
 msgid "Sets the feedback amount. Range: 0.1 to 0.9."
@@ -339,14 +298,53 @@ msgstr "设置扫频范围下限。"
 msgid "Returns the minimum frequency of the LFO sweep in Hertz."
 msgstr "返回扫频范围下限。"
 
-#: ../../source/classes/class_fmodaudioeffectphaser.rst:300 067668bd6f9b4085a1b07bf4d54c92c2
-msgid "Sets the modulation rate in Hertz. Range: 0.5 to 20.0."
-msgstr "设置调制速率。"
-
-#: ../../source/classes/class_fmodaudioeffectphaser.rst:302 6ecb0f55f5fb4ce0be88e1d82c490cc0
-msgid "Higher rates create faster sweeping effects."
-msgstr "速率越高，扫频越快。"
-
 #: ../../source/classes/class_fmodaudioeffectphaser.rst:316 c8cf2479fa084b52a421fe18411ad95d
 msgid "Returns the modulation rate in Hertz."
 msgstr "返回调制速率。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:14 89ed7fcbe6cc4ad1a46c1a38344beeba
+msgid "Phaser effect using a modulated chain of six all-pass filters."
+msgstr "使用六级全通滤波器调制链的移相效果器。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:21 a2a5bc9621a9424584c87c0520716b38
+msgid ""
+"FmodAudioEffectPhaser uses a custom DSP with six modulated all-pass stages per channel. The "
+"filtered signal is mixed with the original signal, and feedback controls the amount fed back "
+"through the filter chain."
+msgstr "FmodAudioEffectPhaser 使用自定义 DSP，为每个声道设置六级受调制的全通滤波器。滤波信号会与原始信号混合，反馈量控制重新送入滤波链的信号强度。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:23 19155796785947b7b1cae800b34dae38
+msgid ""
+"The modulation sweeps between "
+":ref:`range_min_hz<class_FmodAudioEffectPhaser_property_range_min_hz>` and "
+":ref:`range_max_hz<class_FmodAudioEffectPhaser_property_range_max_hz>` at "
+":ref:`rate_hz<class_FmodAudioEffectPhaser_property_rate_hz>`. "
+":ref:`depth<class_FmodAudioEffectPhaser_property_depth>` controls the filtered signal level "
+"added to the original signal."
+msgstr ""
+"调制以  :ref:`rate_hz<class_FmodAudioEffectPhaser_property_rate_hz>`  指定的速率在  "
+":ref:`range_min_hz<class_FmodAudioEffectPhaser_property_range_min_hz>`  和  "
+":ref:`range_max_hz<class_FmodAudioEffectPhaser_property_range_max_hz>`  之间扫频。 "
+":ref:`depth<class_FmodAudioEffectPhaser_property_depth>`  控制叠加到原始信号上的滤波信号电平。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:95 e2b16074b9d14b6b94b2b0a8e36c2025
+msgid ""
+"The gain of the filtered signal mixed with the original signal, clamped to 0.1 through 4.0. "
+"The default is 1.0. This controls effect intensity rather than the frequency sweep limits."
+msgstr "与原始信号混合的滤波信号增益，限制在 0.1 到 4.0，默认为 1.0。该属性控制效果强度，扫频边界由频率范围属性控制。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:163 79473053afb94e69a3b1c6c04cedf25c
+msgid "The modulation rate in Hz, clamped to 0.01 through 20.0. The default is 0.5 Hz."
+msgstr "调制速率，单位为 Hz，限制在 0.01 到 20.0，默认为 0.5 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:180 3a3189fba1884fb0a62fa602045acd32
+msgid "Sets the filtered signal gain added to the original signal, clamped to 0.1 through 4.0."
+msgstr "设置叠加到原始信号上的滤波信号增益，限制在 0.1 到 4.0。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:192 977835bdfea04af7b04fe388f98b248a
+msgid "Returns the filtered signal gain added to the original signal."
+msgstr "返回叠加到原始信号上的滤波信号增益。"
+
+#: ../../source/classes/class_fmodaudioeffectphaser.rst:278 d4881087bf324d2b9b5f59e9a3bc7616
+msgid "Sets the modulation rate in Hz, clamped to 0.01 through 20.0."
+msgstr "设置调制速率，单位为 Hz，限制在 0.01 到 20.0。"

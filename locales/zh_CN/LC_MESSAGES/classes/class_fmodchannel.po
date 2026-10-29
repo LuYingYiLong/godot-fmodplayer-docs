@@ -267,32 +267,6 @@ msgstr "或在所有循环次数完成后触发。"
 msgid "**virtualvoice**\\ (\\ is_becoming_virtual\\: :ref:`bool<class_bool>`\\ )"
 msgstr "**virtualvoice**\\ (\\ is_becoming_virtual\\: :ref:`bool<class_bool>`\\ )"
 
-#: ../../source/classes/class_fmodchannel.rst:122 2fa5e89e62414c1ab9bb6cf0651a3d62
-msgid "Emitted when this channel becomes virtualized or returns to being a real voice."
-msgstr "通道转为虚拟声部，或恢复为实际声部时发出。"
-
-#: ../../source/classes/class_fmodchannel.rst:124 51aeb06cdd0b40b2971bea22a9c1dc29
-msgid "``true``: The channel is becoming virtual (silently processing without hardware voice)"
-msgstr "``true``   ：正在转为虚拟声部，静默处理且不占用硬件声部"
-
-#: ../../source/classes/class_fmodchannel.rst:126 a6a2fa3c1013447fb459a63619f26068
-msgid "``false``: The channel is becoming real (has been assigned a hardware voice)"
-msgstr "``false``   ：正在恢复为实际声部，已分配硬件声部"
-
-#: ../../source/classes/class_fmodchannel.rst:128 d60f751402b74e8685cc0cfd87fd6f7b
-msgid "This happens automatically as part of FMOD's virtual voice system when there are more"
-msgstr "播放的声音数超过可用物理声部时，FMOD 的虚拟声部系统会自动调整。"
-
-#: ../../source/classes/class_fmodchannel.rst:130 ea493bb52311433793b8c162d00747be
-msgid ""
-"playing sounds than available physical voices. Channels with lower "
-":ref:`priority<class_FmodChannel_property_priority>`"
-msgstr "播放的声音超过可用物理声部时，   :ref:`priority<class_FmodChannel_property_priority>`    较低的通道"
-
-#: ../../source/classes/class_fmodchannel.rst:132 0355266c457447e4a9eae24e662eec94
-msgid "are more likely to become virtualized."
-msgstr "更容易转为虚拟声部。"
-
 #: ../../source/classes/class_fmodchannel.rst:142 3707d92580934532a5af3016139faa87
 msgid "**syncpoint**\\ (\\ sync_point_index\\: :ref:`int<class_int>`\\ )"
 msgstr "**syncpoint**\\ (\\ sync_point_index\\: :ref:`int<class_int>`\\ )"
@@ -368,20 +342,6 @@ msgstr "|void| **set_frequency**\\ (\\ frequency\\: :ref:`float<class_float>`\\ 
 msgid ":ref:`float<class_float>` **get_frequency**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_frequency**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodchannel.rst:192 544b9b97cd5f42edb35015371da8f3c8
-msgid "Playback frequency in Hertz (Hz). Default is 0, which means the sound's native sample rate."
-msgstr "播放频率，单位为 Hz。默认值 0 表示声音的原始采样率。"
-
-#: ../../source/classes/class_fmodchannel.rst:194 a9def803dd444946b4c85d0c34d408e9
-msgid "Changing this value affects both playback speed and pitch proportionally."
-msgstr "修改此值会按比例同时改变播放速度和音高。"
-
-#: ../../source/classes/class_fmodchannel.rst:196 8c6629e599944569bcbe04d9f59b00c3
-msgid ""
-"\\ **Note:** 0 indicates the default frequency; the actual frequency depends on the sound's "
-"sample rate."
-msgstr "**注意：**    0 表示默认频率，实际值取决于声音的采样率。"
-
 #: ../../source/classes/class_fmodchannel.rst:206 c20dece39a6e4e9b9a704dc4535eb4c1
 msgid ":ref:`int<class_int>` **priority** = ``0``"
 msgstr ":ref:`int<class_int>` **priority** = ``0``"
@@ -395,14 +355,6 @@ msgstr "|void| **set_priority**\\ (\\ priority\\: :ref:`int<class_int>`\\ )"
 #: d4e1b79f9e814e2f825f093dda15b212 f5024948cd0f48b78370772dcf7f9404
 msgid ":ref:`int<class_int>` **get_priority**\\ (\\ ) |const|"
 msgstr ":ref:`int<class_int>` **get_priority**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodchannel.rst:213 ae21a740d9da437a8d56e953a0d8a2cc
-msgid "Virtual voice priority (0 = highest, 256 = lowest). Default is 0."
-msgstr "虚拟声部优先级，0 为最高，256 为最低。默认值为 0。"
-
-#: ../../source/classes/class_fmodchannel.rst:215 1c87ee389be648ae816737c75edcdb11
-msgid "Lower priority channels are virtualized first when FMOD runs out of physical voices."
-msgstr "FMOD 的物理声部不足时，会优先将低优先级通道转为虚拟声部。"
 
 #: ../../source/classes/class_fmodchannel.rst:225 66d7acf04a934f2ab2f0e084adb683a6
 msgid ":ref:`Object<class_Object>` **channel_group**"
@@ -471,25 +423,9 @@ msgstr "方法说明"
 msgid ":ref:`bool<class_bool>` **channel_is_valid**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **channel_is_valid**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodchannel.rst:276 00083a4fd9354b6282b57bebc907b090
-msgid "Returns ``true`` if the Channel handle is valid and active."
-msgstr "如果底层 FMOD::Channel 句柄有效，则返回    ``true``   。"
-
-#: ../../source/classes/class_fmodchannel.rst:278 a6eede6a0ab749328d4bab0bfd08501e
-msgid "A valid channel can be controlled and queried for playback information."
-msgstr "有效通道可用于控制播放并查询信息。"
-
 #: ../../source/classes/class_fmodchannel.rst:290 fc7a4acca1044ed1b1261efb08485371
 msgid ":ref:`bool<class_bool>` **channel_is_null**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **channel_is_null**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodchannel.rst:292 ea565053a5d84532aa9b94cff020dd7a
-msgid "Returns ``true`` if the Channel handle is null or invalid."
-msgstr "如果底层 FMOD::Channel 句柄为空或不可用，则返回    ``true``   。"
-
-#: ../../source/classes/class_fmodchannel.rst:294 0dc4debf9404413e8a56e76f70bd5b59
-msgid "A null channel indicates that the sound has finished playing or the channel has been released."
-msgstr "空通道表示声音已经播放结束，或通道已经释放。"
 
 #: ../../source/classes/class_fmodchannel.rst:308 9e899549a1da49ac8881ff778a881dbe
 msgid "Sets the playback frequency in Hertz (Hz)."
@@ -587,11 +523,11 @@ msgstr "用于定位到声音中的指定位置。"
 msgid "The ``timeunit`` parameter specifies the unit for the position value:"
 msgstr "``timeunit``    指定位置值的单位："
 
-#: ../../source/classes/class_fmodchannel.rst:398 ../../source/classes/class_fmodchannel.rst:422
-#: ../../source/classes/class_fmodchannel.rst:538 ad1e9a9c1b86434485325726fa31982f
-#: b549a1881fb54f4f84d4dfa40d6c3e8b cca3babed7a046168ee73941b21b0f6a
+#: ../../source/classes/class_fmodchannel.rst:362 ../../source/classes/class_fmodchannel.rst:384
+#: ../../source/classes/class_fmodchannel.rst:480 047f6ff45c4c497385759bc69ca17234
+#: 13a72c4fb6274d56992b66157d063e5c a84c776d7f724b909bae90dc353618bb
 msgid "``FMOD_TIME_UNIT_MS``: Milliseconds (default)"
-msgstr "``FMOD_TIME_UNIT_MS``: Milliseconds (default)"
+msgstr "``FMOD_TIME_UNIT_MS`` ：毫秒（默认值）"
 
 #: ../../source/classes/class_fmodchannel.rst:400 ../../source/classes/class_fmodchannel.rst:424
 #: ../../source/classes/class_fmodchannel.rst:540 617ad444dc484414b28b28618d6a0a7c
@@ -635,34 +571,6 @@ msgstr "``FMOD_TIME_UNIT_RAWBYTES``   ：原始文件字节数"
 #: ../../source/classes/class_fmodchannel.rst:430 05525a9018fc4cd590e557beeef6bd4c
 msgid "See :ref:`FmodTimeUnit<enum_FmodSystem_FmodTimeUnit>` for all available options."
 msgstr "所有可用选项见    :ref:`FmodTimeUnit<enum_FmodSystem_FmodTimeUnit>`   。"
-
-#: ../../source/classes/class_fmodchannel.rst:444 78da44f6d526486a89f7b2e064e9e89c
-msgid "Sets the :ref:`FmodChannelGroup<class_FmodChannelGroup>` that this channel outputs to."
-msgstr "设置该 Channel 输出到的 ChannelGroup。 （参见   :ref:`FmodChannelGroup<class_FmodChannelGroup>`  ）"
-
-#: ../../source/classes/class_fmodchannel.rst:446 e7d0ad1007964446b410e5206a027505
-msgid "All audio from this channel will be routed through the specified channel group,"
-msgstr "当前通道的所有音频将路由到指定通道组，"
-
-#: ../../source/classes/class_fmodchannel.rst:448 d0a3309970424a10a4d28a7d98787c4b
-msgid "allowing for sub-mixing and group-level effects processing."
-msgstr "以便进行子混音和通道组效果处理。"
-
-#: ../../source/classes/class_fmodchannel.rst:450 5ad3b8543612467290b40c96c80cb2f2
-msgid "Set to ``null`` to route to the master channel group."
-msgstr "设为    ``null``    可路由到主通道组。"
-
-#: ../../source/classes/class_fmodchannel.rst:464 f4fac6cb55a545f59699ca6523c3637e
-msgid "Returns the :ref:`FmodChannelGroup<class_FmodChannelGroup>` that this channel outputs to."
-msgstr "返回该 Channel 当前输出到的 ChannelGroup。 （参见   :ref:`FmodChannelGroup<class_FmodChannelGroup>`  ）"
-
-#: ../../source/classes/class_fmodchannel.rst:466 afae6883fceb4f2ea5a2f54385d8bf71
-msgid "If no channel group has been set, returns ``null``."
-msgstr "未设置通道组时返回    ``null``   。"
-
-#: ../../source/classes/class_fmodchannel.rst:468 b6f8ef99b2ef44f2846d7c1f30d24057
-msgid "The channel group determines the sub-mix that this channel's audio is routed through."
-msgstr "通道组决定当前通道的音频路由到哪个子混音。"
 
 #: ../../source/classes/class_fmodchannel.rst:482 f7f33d85226d421eb408c5c1f5fb1734
 msgid "Sets the number of times to loop before stopping."
@@ -824,3 +732,61 @@ msgstr "每个通道都有唯一索引，范围从 0 到最大通道数减一。
 #: ../../source/classes/class_fmodchannel.rst:624 b8ad32464eed43de85721467061de5c1
 msgid "Returns ``-1`` if the channel is invalid."
 msgstr "通道无效时返回    ``-1``   。"
+
+#: ../../source/classes/class_fmodchannel.rst:120 71896c7ce9c44129b20c4cf8ce4937be
+msgid ""
+"Emitted when the channel becomes virtual (``is_becoming_virtual`` is ``true``) or real "
+"(``false``). Channels with larger priority numbers have lower priority and are virtualized "
+"first when voices are scarce."
+msgstr ""
+"通道变为虚拟声部时发出， ``is_becoming_virtual``  为  ``true`` ；恢复实际声部时为  ``false`` "
+"。优先级数值越大，实际优先级越低，声部不足时会先被虚拟化。"
+
+#: ../../source/classes/class_fmodchannel.rst:180 569bfc444a4c45e9b6694b2b0aa2136f
+msgid ""
+"Playback frequency in Hz. Changing it affects both playback speed and pitch. Values assigned "
+"to this property must be greater than ``0.0``. A wrapper without a Channel pointer reports "
+"``0.0``."
+msgstr "播放频率，单位为 Hz，改变它会同时影响速度和音高。设置值必须大于  ``0.0`` ；没有 Channel 指针的封装读取时返回  ``0.0`` 。"
+
+#: ../../source/classes/class_fmodchannel.rst:197 7223fed26ffa410f8ff6622e95ff1f9d
+msgid ""
+"Virtual voice priority from ``0`` (highest) to ``256`` (lowest). A playing channel inherits "
+"its initial priority from the sound defaults. Lower-priority channels are virtualized first."
+msgstr "虚拟声部优先级， ``0``  最高， ``256``  最低。播放通道的初始优先级继承声音的默认设置；低优先级通道会先被虚拟化。"
+
+#: ../../source/classes/class_fmodchannel.rst:256 f3015ebe40c54410891bc0c07f5384e8
+msgid ""
+"Returns ``true`` if this wrapper stores a non-null Channel pointer. This does not check "
+"whether FMOD has stopped or stolen the channel. Use "
+":ref:`FmodChannelControl.is_playing()<class_FmodChannelControl_method_is_playing>` to query "
+"playback."
+msgstr ""
+"封装保存了非空 Channel 指针时返回  ``true`` 。此方法不会检查通道是否已停止或被 FMOD 回收；可通过  "
+":ref:`FmodChannelControl.is_playing()<class_FmodChannelControl_method_is_playing>`  查询播放状态。"
+
+#: ../../source/classes/class_fmodchannel.rst:268 2cecdb4ac16846beb7ea7a6d0e9a803f
+msgid ""
+"Returns ``true`` if this wrapper has no Channel pointer. Playback ending or stopping does not"
+" automatically clear the stored pointer."
+msgstr "封装没有 Channel 指针时返回  ``true`` 。播放结束或停止时，保存的指针不会自动清空。"
+
+#: ../../source/classes/class_fmodchannel.rst:404 ef376f122ac24bef94cef7566c10c600
+msgid ""
+"Routes this channel to the supplied :ref:`FmodChannelGroup<class_FmodChannelGroup>` and "
+"stores that wrapper for "
+":ref:`get_channel_group()<class_FmodChannel_method_get_channel_group>`. The group must be "
+"non-null and contain a valid FMOD handle."
+msgstr ""
+"将通道路由到指定的  :ref:`FmodChannelGroup<class_FmodChannelGroup>` ，并保存该封装供  "
+":ref:`get_channel_group()<class_FmodChannel_method_get_channel_group>`  返回。通道组必须非空且包含有效的 FMOD"
+" 句柄。"
+
+#: ../../source/classes/class_fmodchannel.rst:416 70f99414461e43a5a7ce0cef9f1555b4
+msgid ""
+"Returns the group wrapper last assigned through "
+":ref:`set_channel_group()<class_FmodChannel_method_set_channel_group>`, or ``null`` if no "
+"group is cached. This method does not query the current routing from FMOD."
+msgstr ""
+"返回上次通过  :ref:`set_channel_group()<class_FmodChannel_method_set_channel_group>`  "
+"设置的通道组封装；没有缓存时返回  ``null`` 。此方法不会向 FMOD 查询当前路由。"

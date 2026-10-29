@@ -222,14 +222,25 @@ msgstr "返回用于管理音频总线及其路由的音频总线布局。该总
 msgid "|void| **generate_bus_layout**\\ (\\ ) |static|"
 msgstr "|void| **generate_bus_layout**\\ (\\ ) |static|"
 
-#: ../../source/classes/class_fmodserver.rst:172 3bf95819b4d344c1862c3846c391c4a6
-msgid "Generate bus layout."
-msgstr "生成音频总线布局"
-
 #: ../../source/classes/class_fmodserver.rst:184 6ff0b315a9bf40208e3add8bb7256ba9
 msgid "|void| **reset_main_system**\\ (\\ system\\: :ref:`FmodSystem<class_FmodSystem>`\\ ) |static|"
 msgstr "|void| **reset_main_system**\\ (\\ system\\: :ref:`FmodSystem<class_FmodSystem>`\\ ) |static|"
 
-#: ../../source/classes/class_fmodserver.rst:186 34c6c14966b6453480ed7a71b228c18e
-msgid "Reset main system."
-msgstr "重置主 FMOD 系统实例。"
+#: ../../source/classes/class_fmodserver.rst:162 700c7782db3a4cab82b724e44fbe2241
+msgid ""
+"Synchronizes FMOD audio buses and their effects with the current Godot "
+":ref:`AudioServer<class_AudioServer>` bus layout."
+msgstr "将 FMOD 音频总线及效果器与当前 Godot  :ref:`AudioServer<class_AudioServer>`  总线布局同步。"
+
+#: ../../source/classes/class_fmodserver.rst:174 282b5f20a8514980812e840e3f08da80
+msgid ""
+"Replaces the main system with ``system``. Configure and initialize the new system before "
+"calling this method; this method does not initialize it."
+msgstr "用  ``system``  替换主系统。调用前应完成新系统的配置和初始化；此方法不会初始化新系统。"
+
+#: ../../source/classes/class_fmodserver.rst:176 ed159c5f8e544f348215d6ca5319b0cd
+msgid ""
+"Clears the current bus layout, releases the previous system, and rebuilds the buses for the "
+"new system from :ref:`AudioServer<class_AudioServer>`. Objects belonging to the previous "
+"system must not be reused."
+msgstr "清空当前总线布局，释放旧系统，再根据  :ref:`AudioServer<class_AudioServer>`  为新系统重建总线。旧系统所属的对象不可继续使用。"

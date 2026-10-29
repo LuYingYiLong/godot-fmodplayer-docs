@@ -38,14 +38,13 @@ msgstr "失真效果，支持削波、反正切、低保真、过载、波形整
 msgid "Description"
 msgstr "描述"
 
-#: ../../source/classes/class_fmodaudioeffectdistortion.rst:23 92e94bb3cee24ade9706dd203712c6ad
+#: ../../source/classes/class_fmodaudioeffectdistortion.rst:21 edf48627969a482e9211a686872145eb
 msgid ""
-"FmodAudioEffectDistortion applies various types of distortion to audio signals, creating effects "
-"ranging from subtle overdrive to harsh digital artifacts. It supports multiple distortion modes "
-"including hard clipping, soft clipping, tube overdrive, lo-fi reduction, and bitcrushing."
-msgstr ""
-"**FmodAudioEffectDistortion**    会在效果链中创建自定义失真 DSP。它通过    ``mode``    "
-"切换不同失真算法，并提供前级增益、驱动量、后级增益、高频保留和过采样控制。"
+"FmodAudioEffectDistortion applies various types of distortion to audio signals, creating "
+"effects ranging from subtle overdrive to harsh digital artifacts. It supports multiple "
+"distortion modes including hard clipping, soft clipping, tube overdrive, lo-fi reduction, and"
+" bitcrushing."
+msgstr "**FmodAudioEffectDistortion**  使用自定义 DSP 提供削波、软削波、低保真量化、过载和波形整形等失真模式，可调节前级增益、驱动量、后级增益及高频保留频率。"
 
 #: ../../source/classes/class_fmodaudioeffectdistortion.rst:25 9ca553a10363407f999199e1f46640c4
 msgid "Use this effect to add grit, warmth, or aggressive character to audio."
@@ -239,10 +238,6 @@ msgstr "反正切软削波"
 msgid ":ref:`Mode<enum_FmodAudioEffectDistortion_Mode>` **MODE_LOFI** = ``2``"
 msgstr ":ref:`Mode<enum_FmodAudioEffectDistortion_Mode>` **MODE_LOFI** = ``2``"
 
-#: ../../source/classes/class_fmodaudioeffectdistortion.rst:122 11035a1c70fc451d95f040377898d554
-msgid "Lo-fi reduction. Reduces bit depth and sample rate for a retro digital sound."
-msgstr "低保真失真"
-
 #: ../../source/classes/class_fmodaudioeffectdistortion.rst:128 33b3472b6dbb4a53ae8cc1ac3ca6b0ca
 msgid ":ref:`Mode<enum_FmodAudioEffectDistortion_Mode>` **MODE_OVERDRIVE** = ``3``"
 msgstr ":ref:`Mode<enum_FmodAudioEffectDistortion_Mode>` **MODE_OVERDRIVE** = ``3``"
@@ -389,10 +384,6 @@ msgstr "|void| **set_oversample**\\ (\\ oversample\\: :ref:`int<class_int>`\\ )"
 msgid ":ref:`int<class_int>` **get_oversample**\\ (\\ ) |const|"
 msgstr ":ref:`int<class_int>` **get_oversample**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectdistortion.rst:253 a30a7992c3bd4618bd9ad05cf21fa3c1
-msgid "The oversampling factor. Higher values reduce aliasing artifacts at the cost of more CPU usage."
-msgstr "过采样倍数"
-
 #: ../../source/classes/class_fmodaudioeffectdistortion.rst:262 cd648b82182045b09edf3b00a6627237
 msgid "Method Descriptions"
 msgstr "方法说明"
@@ -455,10 +446,30 @@ msgstr "高于该频率的信号会被保留，并与失真后的信号混合。
 msgid "Returns the high-frequency preservation cutoff in Hertz."
 msgstr "返回高频保留频率。"
 
-#: ../../source/classes/class_fmodaudioeffectdistortion.rst:420 0f6c08c4caa34cc184b6784b7db01fdd
-msgid "Sets the oversampling factor. Higher values reduce aliasing artifacts."
-msgstr "设置过采样倍数。"
-
 #: ../../source/classes/class_fmodaudioeffectdistortion.rst:434 1580f4fae7824229b748683705927501
 msgid "Returns the oversampling factor."
 msgstr "返回过采样倍数。"
+
+#: ../../source/classes/class_fmodaudioeffectdistortion.rst:118 284962fd28ef4b8cb00bc8014b4083a6
+msgid ""
+"Lo-fi amplitude quantization controlled by "
+":ref:`drive<class_FmodAudioEffectDistortion_property_drive>`. The current implementation uses"
+" the same quantizer as "
+":ref:`MODE_BITCRUSH<class_FmodAudioEffectDistortion_constant_MODE_BITCRUSH>` and does not "
+"reduce the sample rate."
+msgstr ""
+"由  :ref:`drive<class_FmodAudioEffectDistortion_property_drive>`  控制的低保真幅度量化。当前实现与  "
+":ref:`MODE_BITCRUSH<class_FmodAudioEffectDistortion_constant_MODE_BITCRUSH>`  "
+"使用相同的量化算法，不会降低采样率。"
+
+#: ../../source/classes/class_fmodaudioeffectdistortion.rst:249 7139a088cd124447aa17d76aea1dc76e
+msgid ""
+"Stored oversampling setting, clamped to 1 through 16. The default is 4. The current "
+"implementation does not perform oversampling and does not use this value in the DSP."
+msgstr "保存的过采样设置，限制在 1 到 16，默认为 4。当前实现不执行过采样，DSP 也不使用该值。"
+
+#: ../../source/classes/class_fmodaudioeffectdistortion.rst:394 bfa6ce0f35e1498a8858b1e29cb57993
+msgid ""
+"Stores the oversampling setting, clamped to 1 through 16. The current DSP does not use this "
+"setting, so it does not change the audio processing."
+msgstr "保存过采样设置，限制在 1 到 16。当前 DSP 不使用该设置，因此不会改变音频处理结果。"

@@ -1237,15 +1237,6 @@ msgstr ""
 ":ref:`FmodInitFlags<enum_FmodSystem_FmodInitFlags>` **FMOD_INIT_FLAG_CHANNEL_DISTANCEFILTER** = "
 "``512``"
 
-#: ../../source/classes/class_fmodsystem.rst:398 44d3fe15a8e7425dbfe4695fa96604dd
-msgid ""
-"All 3D-based voices have software lowpass and highpass filters added to the DSP chain as an "
-"automatic distance-based bandpass filter. Use ``set_advanced_settings`` to adjust center "
-"frequencies."
-msgstr ""
-"所有基于    ``FmodMode``    中的    ``FMOD_MODE_3D``    的语音都会在DSP链中添加软件低通和高通滤波效果，作为距离自动带通滤波器。请调整 "
-"FmodSystem 属性来处理中心频率"
-
 #: ../../source/classes/class_fmodsystem.rst:404 9f217803d83440afa8ed4b2dfb1a8360
 msgid ":ref:`FmodInitFlags<enum_FmodSystem_FmodInitFlags>` **FMOD_INIT_FLAG_PROFILE_ENABLE** = ``65536``"
 msgstr ":ref:`FmodInitFlags<enum_FmodSystem_FmodInitFlags>` **FMOD_INIT_FLAG_PROFILE_ENABLE** = ``65536``"
@@ -1357,9 +1348,9 @@ msgstr "选择平台的最佳输出模式，这是默认的"
 msgid ":ref:`FmodOutputType<enum_FmodSystem_FmodOutputType>` **FMOD_OUTPUT_TYPE_UNKNOWN** = ``1``"
 msgstr ":ref:`FmodOutputType<enum_FmodSystem_FmodOutputType>` **FMOD_OUTPUT_TYPE_UNKNOWN** = ``1``"
 
-#: ../../source/classes/class_fmodsystem.rst:482 4967be8a15ce463693052d88e60ba337
+#: ../../source/classes/class_fmodsystem.rst:476 d4a7964d9e83410daffba2a4e7c36c3e
 msgid "Unknown output type, returned when the system cannot determine the output mode."
-msgstr "仅用于    ``FmodSystem.get_output()``"
+msgstr "未知输出类型，无法确定输出模式时返回。"
 
 #: ../../source/classes/class_fmodsystem.rst:488 13394e711a9b42b39cf0a008361f95da
 msgid ":ref:`FmodOutputType<enum_FmodSystem_FmodOutputType>` **FMOD_OUTPUT_TYPE_NOSOUND** = ``2``"
@@ -1888,10 +1879,6 @@ msgstr "按原始 PCM 数据打开"
 msgid ":ref:`FmodMode<enum_FmodSystem_FmodMode>` **FMOD_MODE_OPENONLY** = ``8192``"
 msgstr ":ref:`FmodMode<enum_FmodSystem_FmodMode>` **FMOD_MODE_OPENONLY** = ``8192``"
 
-#: ../../source/classes/class_fmodsystem.rst:1022 5c66df4701a34bffa88bf454415b7e1f
-msgid "Opens the file for metadata reading only. No audio data is loaded and the sound cannot be played."
-msgstr "仅打开不预载"
-
 #: ../../source/classes/class_fmodsystem.rst:1028 f74d6fe366554204a8b6864195753a23
 msgid ":ref:`FmodMode<enum_FmodSystem_FmodMode>` **FMOD_MODE_ACCURATETIME** = ``16384``"
 msgstr ":ref:`FmodMode<enum_FmodSystem_FmodMode>` **FMOD_MODE_ACCURATETIME** = ``16384``"
@@ -1926,10 +1913,6 @@ msgstr "非阻塞方式打开 （参见   :ref:`FmodSound.get_open_state()<class
 #: ../../source/classes/class_fmodsystem.rst:1052 c34415b245d84782aeb35e076e062db2
 msgid ":ref:`FmodMode<enum_FmodSystem_FmodMode>` **FMOD_MODE_UNIQUE** = ``131072``"
 msgstr ":ref:`FmodMode<enum_FmodSystem_FmodMode>` **FMOD_MODE_UNIQUE** = ``131072``"
-
-#: ../../source/classes/class_fmodsystem.rst:1054 92fd15dbf2b14a3d94e3fb24f106348e
-msgid "Creates a unique sound instance that is not shared with other sounds referencing the same file."
-msgstr "创建唯一声音实例"
 
 #: ../../source/classes/class_fmodsystem.rst:1060 d89968b40d2e4cdb9dcc64ae028255d0
 msgid ":ref:`FmodMode<enum_FmodSystem_FmodMode>` **FMOD_MODE_3D_HEADRELATIVE** = ``262144``"
@@ -2194,10 +2177,10 @@ msgstr ":ref:`FmodPortType<enum_FmodSystem_FmodPortType>` **FMOD_PORT_TYPE_CONTR
 msgid "Controller speaker port (e.g., DualShock 4 speaker, Nintendo Switch controller)."
 msgstr "控制器输出端口"
 
-#: ../../source/classes/class_fmodsystem.rst:1332 ../../source/classes/class_fmodsystem.rst:1342
-#: 901fcd883d4949c3a5f5e2964f7e374b f3564eaae12d497d9a3a0c5b020b7805
+#: ../../source/classes/class_fmodsystem.rst:1314 ../../source/classes/class_fmodsystem.rst:1324
+#: 0710491dad0e4e93902f369a1bf093b2 c4df27cf4d844dcc8a95d0f9195cbf99
 msgid "Use the platform-specific user ID as the port index."
-msgstr "控制器输出端口"
+msgstr "使用平台专用的用户 ID 作为端口索引。"
 
 #: ../../source/classes/class_fmodsystem.rst:1338 0c08a6f671f84704b220f24915b7cc91
 msgid ":ref:`FmodPortType<enum_FmodSystem_FmodPortType>` **FMOD_PORT_TYPE_PERSONAL** = ``4``"
@@ -2707,40 +2690,37 @@ msgstr "方法说明"
 msgid ":ref:`bool<class_bool>` **system_is_valid**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **system_is_valid**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodsystem.rst:1826 8eb12b5a7ad646e8a0d1f67a025af786
-msgid "Returns ``true`` if the internal FMOD System object is valid and ready for use."
-msgstr "如果系统实例已成功初始化并且 FMOD 系统可用，则返回    ``true``   。这表示 FMOD 系统已准备好处理音频操作。"
-
 #: ../../source/classes/class_fmodsystem.rst:1838 32b060e2ff59451cab18ccfd103977ac
 msgid ":ref:`bool<class_bool>` **system_is_null**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **system_is_null**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodsystem.rst:1840 ee7ab43475c1465b890d964c415b3dfe
-msgid "Returns ``true`` if the internal FMOD System object is null (not created)."
-msgstr "如果系统实例未初始化或无效，则返回    ``true``   。这表示 FMOD 系统尚未准备好使用。"
 
 #: ../../source/classes/class_fmodsystem.rst:1852 3efe7f4fc94d49b28236c7c7acd2f8f6
 msgid ":ref:`FmodSystem<class_FmodSystem>` **create_system**\\ (\\ ) |static|"
 msgstr ":ref:`FmodSystem<class_FmodSystem>` **create_system**\\ (\\ ) |static|"
 
-#: ../../source/classes/class_fmodsystem.rst:1854 66118a226f70427fab43a76165ef22c6
-msgid ""
-"Creates and initializes a new FmodSystem instance with the specified maximum number of channels "
-"and initialization flags."
-msgstr "创建并返回一个新的 FMOD System 实例。对于大多数应用程序，建议使用    ``FmodServer``    的全局单例系统，而不是直接创建多个系统实例。"
+#: ../../source/classes/class_fmodsystem.rst:1830 d860274c2c77426a8059f23c2d21ce88
+msgid "Creates and returns a new, uninitialized **FmodSystem**. Returns ``null`` if creation fails."
+msgstr "创建并返回一个尚未初始化的 **FmodSystem** 实例。创建失败时返回 ``null``。"
 
-#: ../../source/classes/class_fmodsystem.rst:1856 ../../source/classes/class_fmodsystem.rst:1874
-#: 4853a118fb7a474dba9282081bff6d7e b8007f6c7a374767a6aff1215db4eb20
+#: ../../source/classes/class_fmodsystem.rst:1832 fad4ecc45bdc491aa2a64e08bb2f3fa7
 msgid ""
-"The max_channels parameter limits the total number of simultaneously playing channels (range: "
-"0-4096)."
-msgstr "max_channels 限制同时播放的通道总数，范围为 0 到 4096。"
+"Configure the system as needed, then call :ref:`init()<class_FmodSystem_method_init>` to "
+"initialize it."
+msgstr "根据需要配置系统，再调用 :ref:`init()<class_FmodSystem_method_init>` 完成初始化。"
 
-#: ../../source/classes/class_fmodsystem.rst:1858 8b461e821f4f4609b49cbcebcf554653
+#: ../../source/classes/class_fmodsystem.rst:1848 3b465c29c27f49a8b9f19d4f893e55e0
 msgid ""
-"The flags parameter specifies initialization options using "
-":ref:`FmodInitFlags<enum_FmodSystem_FmodInitFlags>` bitmask."
-msgstr "flags 使用    :ref:`FmodInitFlags<enum_FmodSystem_FmodInitFlags>`    位掩码指定初始化选项。"
+"\\ ``max_channels`` sets the maximum number of simultaneously playing channels and must be "
+"greater than ``0``."
+msgstr "``max_channels`` 设置同时播放的最大通道数，必须大于 ``0``。"
+
+#: ../../source/classes/class_fmodsystem.rst:1834 617f45db4e98481685806d6f6038489a
+msgid ""
+"To use the system managed by :ref:`FmodServer<class_FmodServer>`, call "
+":ref:`FmodServer.get_main_system()<class_FmodServer_method_get_main_system>`."
+msgstr ""
+"可通过 :ref:`FmodServer.get_main_system()<class_FmodServer_method_get_main_system>` 获取 "
+":ref:`FmodServer<class_FmodServer>` 管理的系统。"
 
 #: ../../source/classes/class_fmodsystem.rst:1870 70602eb60e114a2189682c4965833314
 msgid ""
@@ -2750,17 +2730,13 @@ msgstr ""
 "|void| **init**\\ (\\ max_channels\\: :ref:`int<class_int>` = 32, flags\\: "
 ":ref:`FmodInitFlags<enum_FmodSystem_FmodInitFlags>` = 0\\ )"
 
-#: ../../source/classes/class_fmodsystem.rst:1872 5eb2aa35a36d4118a557662a399969fd
-msgid ""
-"Initializes the FMOD System with the specified maximum number of channels and initialization "
-"flags."
-msgstr "使用指定的最大通道数和初始化标志初始化 FMOD 系统。"
+#: ../../source/classes/class_fmodsystem.rst:1846 b2aff7f8fde94b49ab7720203c072906
+msgid "Initializes a system created by :ref:`create_system()<class_FmodSystem_method_create_system>`."
+msgstr "初始化通过 :ref:`create_system()<class_FmodSystem_method_create_system>` 创建的系统。"
 
-#: ../../source/classes/class_fmodsystem.rst:1876 d08e87f412ec43ceb5de6829cdfd0c60
-msgid "The flags parameter is a bitmask of :ref:`FmodInitFlags<enum_FmodSystem_FmodInitFlags>` values."
-msgstr ""
-"``max_channels``    —— 参数限制同时播放通道的总数（范围：0-4096） （参见   "
-":ref:`FmodInitFlags<enum_FmodSystem_FmodInitFlags>`  ）"
+#: ../../source/classes/class_fmodsystem.rst:1850 14fa3d0bf59e4551914e2cb44067caf5
+msgid "\\ ``flags`` is a bitmask of :ref:`FmodInitFlags<enum_FmodSystem_FmodInitFlags>` values."
+msgstr "``flags`` 是 :ref:`FmodInitFlags<enum_FmodSystem_FmodInitFlags>` 值组成的位掩码。"
 
 #: ../../source/classes/class_fmodsystem.rst:1888 92759d0e257742799f8c2a544f624f65
 msgid "|void| **close**\\ (\\ )"
@@ -2795,15 +2771,14 @@ msgid ""
 "streams, 3D positioning, and non-realtime output modes."
 msgstr "更新 FMOD 系统。这个方法应该定期调用（通常每帧一次），以处理流、3D 定位和非实时输出模式。"
 
-#: ../../source/classes/class_fmodsystem.rst:1920 dcd72cdf97d545138f5712e6b2c87357
+#: ../../source/classes/class_fmodsystem.rst:1892 fd7316e43ec940968c5d0ab7bcdfd8dd
 msgid ""
 "\\ "
 ":ref:`FMOD_INIT_FLAG_STREAM_FROM_UPDATE<class_FmodSystem_constant_FMOD_INIT_FLAG_STREAM_FROM_UPDATE>`"
 " decodes streams during update. NRT outputs also perform mixing during update."
 msgstr ""
-"当使用    ``FmodInitFlags``    中的    "
 ":ref:`FMOD_INIT_FLAG_STREAM_FROM_UPDATE<class_FmodSystem_constant_FMOD_INIT_FLAG_STREAM_FROM_UPDATE>`"
-"    或    ``FMOD_INIT_FLAG_MIX_FROM_UPDATE``    时，这个方法更为关键，因为它驱动音频处理。"
+"  使流解码在更新时进行。非实时输出模式也会在更新时执行混音。"
 
 #: ../../source/classes/class_fmodsystem.rst:1932 089691ccd1244f95bd1bfa1d25783b73
 msgid "|void| **mixer_suspend**\\ (\\ )"
@@ -2834,12 +2809,6 @@ msgid ""
 msgstr ""
 "|void| **set_output**\\ (\\ output_type\\: "
 ":ref:`FmodOutputType<enum_FmodSystem_FmodOutputType>`\\ )"
-
-#: ../../source/classes/class_fmodsystem.rst:1962 e5d51da6711c4e9c9725bc96ebe2918f
-msgid ""
-"Sets the output interface type used to run the mixer. Must be called before "
-":ref:`init()<class_FmodSystem_method_init>`."
-msgstr "设置用于运行混音器的输出接口类型。必须在   :ref:`init()<class_FmodSystem_method_init>`   之前调用。"
 
 #: ../../source/classes/class_fmodsystem.rst:1964 98cd1336b0ce48b089d2d5ab4acfb576
 msgid ""
@@ -2938,14 +2907,6 @@ msgstr "返回当前选定输出类型的活动输出驱动程序的索引。"
 #: ../../source/classes/class_fmodsystem.rst:2058 ce43689951fe498bbcc32857c0907c7b
 msgid "|void| **set_software_channels**\\ (\\ num_software_channels\\: :ref:`int<class_int>`\\ )"
 msgstr "|void| **set_software_channels**\\ (\\ num_software_channels\\: :ref:`int<class_int>`\\ )"
-
-#: ../../source/classes/class_fmodsystem.rst:2060 87cf0e3586b2419b9c90c6c293be5a72
-msgid "Sets the maximum number of software channels for the mixer."
-msgstr "设置软件混音器可使用的最大 Channel 数量。"
-
-#: ../../source/classes/class_fmodsystem.rst:2062 7d91cde3f7b447d2a41987257bce1a2d
-msgid "This determines how many channels can be mixed in software when hardware voices are exhausted."
-msgstr "决定硬件声部用完后，可由软件混音的通道数量。"
 
 #: ../../source/classes/class_fmodsystem.rst:2064 ../../source/classes/class_fmodsystem.rst:2100
 #: ../../source/classes/class_fmodsystem.rst:2138 ../../source/classes/class_fmodsystem.rst:2402
@@ -3112,13 +3073,13 @@ msgstr ""
 msgid "Returns the position of the specified speaker as a Dictionary with:"
 msgstr "返回指定扬声器的位置，作为一个字典，包括："
 
-#: ../../source/classes/class_fmodsystem.rst:2224 1b54e22ac08f4db8a3a8bda57dd0e105
+#: ../../source/classes/class_fmodsystem.rst:2158 1c45546ee357475ea1273dc727e818fc
 msgid "``x``: X coordinate"
-msgstr "``x``: X coordinate"
+msgstr "``x`` ：X 坐标"
 
-#: ../../source/classes/class_fmodsystem.rst:2226 74a5bd5978484d0897e03fad2e07590d
+#: ../../source/classes/class_fmodsystem.rst:2160 9bee714d866b4ee4881bdeaa2c962809
 msgid "``y``: Y coordinate"
-msgstr "``y``: Y coordinate"
+msgstr "``y`` ：Y 坐标"
 
 #: ../../source/classes/class_fmodsystem.rst:2228 9bcd74085f5e479ca80abcc8cd22f5a4
 msgid "``active``: Whether the speaker is active"
@@ -3179,10 +3140,6 @@ msgstr "设置 3D 声音场景中的监听器数量。"
 #: ../../source/classes/class_fmodsystem.rst:2340 1f25391230a5470eb238203f0b27e636
 msgid "Multiple listeners can be used for split-screen multiplayer or other scenarios."
 msgstr "多个听者可用于分屏多人游戏等场景。"
-
-#: ../../source/classes/class_fmodsystem.rst:2342 6658ba4d6c584838821a5b28b1efc0d7
-msgid "Maximum number of listeners is platform-dependent."
-msgstr "最大听者数量取决于平台。"
 
 #: ../../source/classes/class_fmodsystem.rst:2356 a759facfd8824ba883deff355c365af5
 msgid "Returns the number of active 3D listeners."
@@ -3397,10 +3354,6 @@ msgstr "返回每个 FmodSystem 可预留的最大空间对象数量。"
 msgid "|void| **set_3d_rolloff_callback**\\ (\\ callback\\: :ref:`Callable<class_Callable>`\\ )"
 msgstr "|void| **set_3d_rolloff_callback**\\ (\\ callback\\: :ref:`Callable<class_Callable>`\\ )"
 
-#: ../../source/classes/class_fmodsystem.rst:2936 4e14b9814be9472d8b162b46f26eecc5
-msgid "Sets 3d rolloff callback."
-msgstr "设置自定义 3D 距离衰减回调。回调应接收距离并返回衰减值。"
-
 #: ../../source/classes/class_fmodsystem.rst:2948 9bc7d1e4ab5542199445b2321b1c73c5
 msgid ":ref:`Callable<class_Callable>` **get_3d_rolloff_callback**\\ (\\ ) |const|"
 msgstr ":ref:`Callable<class_Callable>` **get_3d_rolloff_callback**\\ (\\ ) |const|"
@@ -3453,9 +3406,9 @@ msgstr ":ref:`Dictionary<class_Dictionary>` **get_version**\\ (\\ ) |const|"
 msgid "Returns the FMOD version information."
 msgstr "返回 FMOD 版本信息"
 
-#: ../../source/classes/class_fmodsystem.rst:3024 fde65924023a4e579ae3973d791840d3
+#: ../../source/classes/class_fmodsystem.rst:2854 7a04b9944b1b4b8583b54ec5dc51a65e
 msgid "``version``: The FMOD version string in format \"product.major.minor\"."
-msgstr "返回的字典包含："
+msgstr "``version`` ：格式为“产品版本.主版本.次版本”的 FMOD 版本字符串。"
 
 #: ../../source/classes/class_fmodsystem.rst:3026 90063eb5779d416bbec25c12790d2281
 msgid "``build_number``: The FMOD build number string."
@@ -3479,9 +3432,9 @@ msgstr ":ref:`Dictionary<class_Dictionary>` **get_channels_playing**\\ (\\ ) |co
 msgid "Returns a dictionary with information about currently playing channels."
 msgstr "返回一个包含当前播放频道信息的字典。"
 
-#: ../../source/classes/class_fmodsystem.rst:3058 bc9ea3ec0e1a45c89b2eac410e4d57d8
+#: ../../source/classes/class_fmodsystem.rst:2884 6b02a1461119427899f836d92c8530fc
 msgid "``channels``: Total number of channels currently playing (including virtual voices)."
-msgstr "返回的字典包含："
+msgstr "``channels`` ：当前正在播放的通道总数，包含虚拟通道。"
 
 #: ../../source/classes/class_fmodsystem.rst:3060 5f833ba184664ca88d49fd35d585806b
 msgid "``real_channels``: Number of channels that are actually audible (not virtual)."
@@ -3555,14 +3508,6 @@ msgstr ""
 msgid "Retrieves the default mixing matrix used to convert audio from one speaker mode to another."
 msgstr "返回从一种扬声器模式转换到另一种扬声器模式的默认混音矩阵。"
 
-#: ../../source/classes/class_fmodsystem.rst:3126 784c5c591c944d429f1061daa552517c
-msgid "This matrix maps source channels to destination channels for upmixing or downmixing."
-msgstr "此矩阵将源声道映射到目标声道，用于声道扩展或缩减。"
-
-#: ../../source/classes/class_fmodsystem.rst:3128 19143996f6aa4b8dab5715e8c28132cf
-msgid "The hop parameter specifies the stride between matrix rows."
-msgstr "hop 参数指定矩阵行之间的步长。"
-
 #: ../../source/classes/class_fmodsystem.rst:3140 013b32a317a54c4ebb9050d7c7d375db
 msgid ""
 ":ref:`int<class_int>` **get_speaker_mode_channels**\\ (\\ mode\\: "
@@ -3619,15 +3564,6 @@ msgstr ""
 "resampler_method\\: :ref:`FmodResamplerMethod<enum_FmodSystem_FmodResamplerMethod>` = 0\\ ) "
 "|const|"
 
-#: ../../source/classes/class_fmodsystem.rst:3172 8aed598d11e645039f815c5d8684217e
-msgid ""
-"Creates a :ref:`FmodSound<class_FmodSound>` from audio data loaded in memory. The data array must"
-" remain valid while the sound is in use. This is useful for loading sounds from encrypted files "
-"or network streams."
-msgstr ""
-"从内存中加载的音频数据创建一个    :ref:`FmodSound<class_FmodSound>`   ，它会自动添加    ``FMOD_MODE_OPENMEMORY``    "
-"标志。音频数据数组在声音使用期间必须保持有效。这对于从加密文件或网络流加载声音非常有用。"
-
 #: ../../source/classes/class_fmodsystem.rst:3174 ../../source/classes/class_fmodsystem.rst:3190
 #: ../../source/classes/class_fmodsystem.rst:3206 8398b5c5ffa94ab2935eddbaa961e169
 #: a1832adf6f424761b269d5842c3aaf02 f87a2de1923d4cb1b47db7e448dfd188
@@ -3682,14 +3618,14 @@ msgstr ""
 "4294967295, input_channels\\: :ref:`int<class_int>` = 0, output_channels\\: :ref:`int<class_int>`"
 " = 0\\ ) |const|"
 
-#: ../../source/classes/class_fmodsystem.rst:3220 586a2b4d556e446eb15ff08503466bd7
+#: ../../source/classes/class_fmodsystem.rst:3032 26f0030a3e3b4f59b2422edab3a98ead
 msgid ""
-"Creates a custom FMOD 2.04 filter or generator. Cooldown is measured in sample frames. A channel "
-"count of zero follows the input/system format. Set the sample callback using "
+"Creates a custom FMOD 2.04 filter or generator. Cooldown is measured in sample frames. A "
+"channel count of zero follows the input/system format. Set the sample callback using "
 ":ref:`FmodDSP.set_process_callback()<class_FmodDSP_method_set_process_callback>`."
 msgstr ""
-"使用指定的名称创建自定义 DSP 效果。创建的 DSP 可以插入信号链中以实时处理音频。 （参见   "
-":ref:`FmodDSP.set_process_callback()<class_FmodDSP_method_set_process_callback>`  ）"
+"创建 FMOD 2.04 自定义滤波器或信号生成器。冷却时间以采样帧计；通道数为零表示跟随输入或系统格式。通过  "
+":ref:`FmodDSP.set_process_callback()<class_FmodDSP_method_set_process_callback>`  设置采样回调。"
 
 #: ../../source/classes/class_fmodsystem.rst:3230 ccd1dce10c394bd4b1b065cc2a824c2c
 msgid ""
@@ -3833,12 +3769,6 @@ msgstr ""
 ":ref:`FmodChannel<class_FmodChannel>` **get_channel**\\ (\\ id\\: :ref:`int<class_int>`\\ ) "
 "|const|"
 
-#: ../../source/classes/class_fmodsystem.rst:3344 7b137fa6eec244fdae81538f8b0913eb
-msgid ""
-"Retrieves a :ref:`FmodChannel<class_FmodChannel>` handle by its ID. Channels are assigned IDs "
-"sequentially as they are allocated."
-msgstr "通过其 ID 检索    :ref:`FmodChannel<class_FmodChannel>`    句柄。通道在分配时会按顺序分配 ID。"
-
 #: ../../source/classes/class_fmodsystem.rst:3356 a12fbaf08a5b465aab9ba6abda9427b7
 msgid ""
 ":ref:`Dictionary<class_Dictionary>` **get_dsp_info_by_type**\\ (\\ type\\: "
@@ -3851,13 +3781,13 @@ msgstr ""
 msgid "Retrieves information about a built-in DSP type."
 msgstr "检索有关内置 DSP 类型的信息。"
 
-#: ../../source/classes/class_fmodsystem.rst:3362 6712dda0e6554cf49aadfbf00d3dc730
+#: ../../source/classes/class_fmodsystem.rst:3158 4ccf0501105546d4af8c88da820b88b3
 msgid "``name``: Name of the DSP."
-msgstr "检索有关内置 DSP 类型的信息。"
+msgstr "``name`` ：DSP 的名称。"
 
-#: ../../source/classes/class_fmodsystem.rst:3364 baa4f9fd68ae44329c80a308066e8847
+#: ../../source/classes/class_fmodsystem.rst:3160 dc150ab0c94648a9aa286db2b757f190
 msgid "``version``: Plugin version number."
-msgstr "返回的字典包含："
+msgstr "``version`` ：插件版本号。"
 
 #: ../../source/classes/class_fmodsystem.rst:3366 e4adfffe79b44bba9ec984d24e17dded
 msgid "``plugin_sdk_version``: FMOD Plugin SDK version."
@@ -3965,9 +3895,9 @@ msgstr "以字典形式返回指定监听器的 3D 属性："
 msgid "``position``: World position (Vector3)"
 msgstr "``position``   ：世界空间位置，类型为 Vector3"
 
-#: ../../source/classes/class_fmodsystem.rst:3450 5c275b67fce449a5a3122ec890331011
+#: ../../source/classes/class_fmodsystem.rst:3238 5281a78ca1a84e21a6b7df8da122fdd3
 msgid "``velocity``: Velocity (Vector3)"
-msgstr "``velocity``: Velocity (Vector3)"
+msgstr "``velocity`` ：速度，类型为 Vector3"
 
 #: ../../source/classes/class_fmodsystem.rst:3452 60bf7185bd014440a119974c0f34b391
 msgid "``forward``: Forward direction (Vector3)"
@@ -3999,9 +3929,9 @@ msgstr ""
 msgid "Sets the reverb properties for the specified global reverb instance."
 msgstr "设置指定混响实例的混响属性。"
 
-#: ../../source/classes/class_fmodsystem.rst:3470 78a54ec9025d40fd8b2d4bcff9f82548
+#: ../../source/classes/class_fmodsystem.rst:3256 d0061a296593493180313a5e0f2eb013
 msgid "Parameters control various aspects of the reverb effect:"
-msgstr "混响实例 ID 是通过    ``create_reverb_3d()``    创建的    ``FmodReverb3D``    对象的 ID。"
+msgstr "以下参数控制混响效果的各个方面："
 
 #: ../../source/classes/class_fmodsystem.rst:3474 14d1255c1f7640ea8c9639de4229d697
 msgid "``early_time``: Initial reflection delay time"
@@ -4111,9 +4041,9 @@ msgstr ":ref:`Dictionary<class_Dictionary>` **get_record_num_drivers**\\ (\\ ) |
 msgid "Returns information about available recording devices."
 msgstr "返回有关可用录音设备的信息"
 
-#: ../../source/classes/class_fmodsystem.rst:3560 44e34715d85a4de98cd455c0d848da26
+#: ../../source/classes/class_fmodsystem.rst:3338 4e20847d1d59414080303c5f24fbf2d3
 msgid "``num_drivers``: Total number of recording devices available."
-msgstr "返回的字典包含："
+msgstr "``num_drivers`` ：可用录音设备总数。"
 
 #: ../../source/classes/class_fmodsystem.rst:3562 a00cf1238a8f4f6dae82ab3b9a9179b6
 msgid "``num_connected``: Number of currently connected recording devices."
@@ -4131,9 +4061,9 @@ msgstr ""
 msgid "Returns identification information for a recording device specified by its index."
 msgstr "返回由其索引指定的录音设备的识别信息。"
 
-#: ../../source/classes/class_fmodsystem.rst:3580 c0b59b7685084664952d29025b5c14be
+#: ../../source/classes/class_fmodsystem.rst:3356 86b806cf59f9464bbfa8baaa88ce0852
 msgid "``name``: The name of the recording device."
-msgstr "返回的字典包含："
+msgstr "``name`` ：录音设备名称。"
 
 #: ../../source/classes/class_fmodsystem.rst:3584 ed8f8e3f079b4337870e54d6393ba509
 msgid "``system_rate``: The default sample rate."
@@ -4249,9 +4179,9 @@ msgstr ""
 msgid "Calculates occlusion between a listener and a sound source position."
 msgstr "计算听者与声源位置之间的遮挡情况"
 
-#: ../../source/classes/class_fmodsystem.rst:3722 a2684a0bc99c407f9ea797ad76bce7cc
+#: ../../source/classes/class_fmodsystem.rst:3484 5a874acd0bf14a00860db4c557085c53
 msgid "Returns a Dictionary with occlusion values for direct and reverb paths."
-msgstr "返回的字典包含："
+msgstr "返回包含直达声和混响路径遮挡量的字典。"
 
 #: ../../source/classes/class_fmodsystem.rst:3734 38f2cf1ceadb4431a3669b4b006dce25
 msgid "|void| **lock_dsp**\\ (\\ )"
@@ -4261,15 +4191,13 @@ msgstr "|void| **lock_dsp**\\ (\\ )"
 msgid "Locks the DSP engine mutex."
 msgstr "锁住 DSP 引擎互斥锁。"
 
-#: ../../source/classes/class_fmodsystem.rst:3738 f07dbf9fa9704838a1a2766ba8192d32
+#: ../../source/classes/class_fmodsystem.rst:3498 229201ed9be84a57a512dffdbacb7d97
 msgid "Use this when making multiple DSP calls that need to be atomic."
-msgstr "锁住 DSP 引擎互斥锁。"
+msgstr "需要原子地完成多个 DSP 调用时使用此方法。"
 
-#: ../../source/classes/class_fmodsystem.rst:3740 97fc7557f1564bdaadbef9bb204590a8
+#: ../../source/classes/class_fmodsystem.rst:3500 906633bf0a5340f3afd3b215b3401ee1
 msgid "Always pair with :ref:`unlock_dsp()<class_FmodSystem_method_unlock_dsp>`."
-msgstr ""
-"在需要原子操作的多次DSP调用时使用，这对于确保在执行这些调用时 DSP 处理不会被中断非常有用。 （参见   "
-":ref:`unlock_dsp()<class_FmodSystem_method_unlock_dsp>`  ）"
+msgstr "必须与  :ref:`unlock_dsp()<class_FmodSystem_method_unlock_dsp>`  配对使用。"
 
 #: ../../source/classes/class_fmodsystem.rst:3752 ddb0fac20b2a472ab577266db9c3e32f
 msgid "|void| **unlock_dsp**\\ (\\ )"
@@ -4279,9 +4207,130 @@ msgstr "|void| **unlock_dsp**\\ (\\ )"
 msgid "Unlocks the DSP engine mutex."
 msgstr "解锁 DSP 引擎互斥锁。"
 
-#: ../../source/classes/class_fmodsystem.rst:3756 84eea986337d4db79f07f80da600ec6d
+#: ../../source/classes/class_fmodsystem.rst:3514 5b99c7b949e442f3aad1bcd3be0083e9
 msgid "Must be called after :ref:`lock_dsp()<class_FmodSystem_method_lock_dsp>`."
-msgstr "解锁 DSP 引擎互斥锁。 （参见   :ref:`lock_dsp()<class_FmodSystem_method_lock_dsp>`  ）"
+msgstr "必须在  :ref:`lock_dsp()<class_FmodSystem_method_lock_dsp>`  之后调用。"
 
 msgid "``decay_time``: Reverberation decay time in milliseconds"
 msgstr "``decay_time``：混响衰减时间，单位为毫秒"
+
+#: ../../source/classes/class_fmodsystem.rst:394 b01c66fb212140b58021ee6af4d6c4ad
+msgid ""
+"All 3D-based voices have software lowpass and highpass filters added to the DSP chain as an "
+"automatic distance-based bandpass filter. Use "
+":ref:`set_distance_filter_center_freq()<class_FmodSystem_method_set_distance_filter_center_freq>`"
+" to adjust the default center frequency."
+msgstr ""
+"为所有 3D 声音的 DSP 链添加软件低通和高通滤波器，作为随距离变化的带通滤波器。通过  "
+":ref:`set_distance_filter_center_freq()<class_FmodSystem_method_set_distance_filter_center_freq>`"
+"  调整默认中心频率。"
+
+#: ../../source/classes/class_fmodsystem.rst:1010 6d8ef82a30cc4092b99c0300bd54e6aa
+msgid ""
+"Opens a sound without prebuffering or reading audio data. Use "
+":ref:`FmodSound.read_data()<class_FmodSound_method_read_data>` to decode and read its audio "
+"data."
+msgstr ""
+"打开声音，但不预缓冲或读取音频数据。通过  :ref:`FmodSound.read_data()<class_FmodSound_method_read_data>`  "
+"解码并读取音频数据。"
+
+#: ../../source/classes/class_fmodsystem.rst:1042 d251d4d865dd490a831f7384daf6b532
+msgid "Allows only one playback of this sound at a time."
+msgstr "同一时间只允许播放此声音的一个实例。"
+
+#: ../../source/classes/class_fmodsystem.rst:1806 38fe7c8a00f14d3a8e4c457c817b5406
+msgid ""
+"Returns ``true`` if this wrapper holds a non-null FMOD System pointer. This does not check "
+"whether :ref:`init()<class_FmodSystem_method_init>` has succeeded."
+msgstr ""
+"如果包装器持有非空的 FMOD System 指针，则返回  ``true`` 。此方法不检查  :ref:`init()<class_FmodSystem_method_init>`"
+"  是否成功。"
+
+#: ../../source/classes/class_fmodsystem.rst:1818 605a6dc94ac84d188718663fe5b14c40
+msgid ""
+"Returns ``true`` if this wrapper holds no FMOD System pointer. A created but uninitialized "
+"system returns ``false``."
+msgstr "如果包装器没有持有 FMOD System 指针，则返回  ``true`` 。已创建但尚未初始化的系统返回  ``false`` 。"
+
+#: ../../source/classes/class_fmodsystem.rst:1864 ../../source/classes/class_fmodsystem.rst:1878
+#: 17b25144207f40c0bcdd311cf71c8148 f57951c669954bff8032f3fb7af1d670
+msgid ""
+"This method rejects borrowed system wrappers, such as those returned by "
+":ref:`FmodDSP.get_system_object()<class_FmodDSP_method_get_system_object>`."
+msgstr ""
+"此方法不接受借用的系统包装器，例如  :ref:`FmodDSP.get_system_object()<class_FmodDSP_method_get_system_object>`"
+"  返回的包装器。"
+
+#: ../../source/classes/class_fmodsystem.rst:1928 592c47399aff4c4091fa801b7b094cbb
+msgid ""
+"Sets the output interface type used to run the mixer. Call this before "
+":ref:`init()<class_FmodSystem_method_init>` for portability across platforms."
+msgstr "设置混音器使用的输出接口类型。为兼容不同平台，应在  :ref:`init()<class_FmodSystem_method_init>`  之前调用。"
+
+#: ../../source/classes/class_fmodsystem.rst:2014 5921bca3e91f4fc69e5707d74033d48c
+msgid ""
+"Sets the maximum number of real, software-mixed channels. Additional playing channels may "
+"become virtual when this limit is reached."
+msgstr "设置实际参与软件混音的最大通道数。达到此上限后，其他正在播放的通道可能转为虚拟通道。"
+
+#: ../../source/classes/class_fmodsystem.rst:2262 7dcffcb4dcb646948e6579c935790be3
+msgid "\\ ``num_listeners`` must be between ``1`` and ``8``, inclusive."
+msgstr "``num_listeners``  必须在  ``1``  到  ``8``  之间，包含两端。"
+
+#: ../../source/classes/class_fmodsystem.rst:2776 888df03bbb1e4986adef891b855d5850
+msgid ""
+"Sets the custom distance attenuation callback. The callback receives the distance and must "
+"return a :ref:`float<class_float>` attenuation value."
+msgstr "设置自定义距离衰减回调。回调接收距离，必须返回  :ref:`float<class_float>`  类型的衰减值。"
+
+#: ../../source/classes/class_fmodsystem.rst:2778 c79b7a69a35c4e7787b2a032d3e8dad2
+msgid ""
+"The script callback is invoked only on the main thread. Calls from other threads return "
+"``1.0`` without invoking it. Only one system can be the active callback target at a time."
+msgstr "脚本回调仅在主线程执行。其他线程上的调用直接返回  ``1.0`` ，不执行脚本。同一时间只有一个系统可作为活动回调目标。"
+
+#: ../../source/classes/class_fmodsystem.rst:2946 67216f5c43284118b58537e13aa3f236
+msgid ""
+"The returned array is always compact and ordered by target channel, then source channel. Its "
+"length is the source channel count multiplied by the target channel count."
+msgstr "返回的数组始终紧密排列，先按目标声道、再按源声道排序。数组长度等于源声道数乘以目标声道数。"
+
+#: ../../source/classes/class_fmodsystem.rst:2948 2d17376a947a47f184b4d2a1a462918a
+msgid ""
+"\\ ``hop`` controls the temporary FMOD matrix row stride. A nonpositive value uses the source"
+" channel count; a positive value must be at least that count and no greater than ``32``. It "
+"does not add padding to the returned array."
+msgstr "``hop``  控制传给 FMOD 的临时矩阵行步长。非正值表示使用源声道数；正值不得小于源声道数，也不得大于  ``32`` 。返回数组不会保留这些填充。"
+
+#: ../../source/classes/class_fmodsystem.rst:2950 1dca1fd07cdb42f1835719396e315df7
+msgid ""
+"\\ ``array_length`` controls temporary storage. A positive value must be at least the target "
+"channel count multiplied by the effective row stride; a nonpositive value allocates the "
+"required size automatically. Raw speaker modes and invalid arguments return an empty array."
+msgstr "``array_length``  控制临时存储空间。正值不得小于目标声道数乘以实际行步长；非正值表示自动分配所需空间。原始扬声器模式或无效参数返回空数组。"
+
+#: ../../source/classes/class_fmodsystem.rst:2988 9a2380272f664221bfd74a30c3618500
+msgid ""
+"Creates a :ref:`FmodSound<class_FmodSound>` from audio data loaded in memory and adds "
+":ref:`FMOD_MODE_OPENMEMORY<class_FmodSystem_constant_FMOD_MODE_OPENMEMORY>` to ``mode``. The "
+"returned sound retains the data array, so the caller does not need to keep a separate "
+"reference to it."
+msgstr ""
+"从内存中的音频数据创建  :ref:`FmodSound<class_FmodSound>` ，并向  ``mode``  添加  "
+":ref:`FMOD_MODE_OPENMEMORY<class_FmodSystem_constant_FMOD_MODE_OPENMEMORY>`  "
+"标志。返回的声音会保留数据数组，调用者无需额外持有该数组。"
+
+#: ../../source/classes/class_fmodsystem.rst:3018 5d55af13873745aa918b2ab5e32b06df
+msgid ""
+"For ``res://`` paths, the wrapper loads the whole encoded file into memory and retains it for"
+" the lifetime of the sound; decoding still happens as a stream."
+msgstr "对于  ``res://``  路径，包装器会将整个编码文件载入内存，并在声音存活期间保留；音频仍按流式方式解码。"
+
+#: ../../source/classes/class_fmodsystem.rst:3142 e6abbd2027c347a3b6587ded24cfc358
+msgid ""
+"Retrieves a :ref:`FmodChannel<class_FmodChannel>` by its channel index, as returned by "
+":ref:`FmodChannel.get_index()<class_FmodChannel_method_get_index>`. Returns ``null`` if the "
+"lookup fails. Channel indices may be reused and are not persistent playback IDs."
+msgstr ""
+"通过  :ref:`FmodChannel.get_index()<class_FmodChannel_method_get_index>`  返回的通道索引获取  "
+":ref:`FmodChannel<class_FmodChannel>` 。查找失败时返回  ``null`` 。通道索引可能被重复使用，不是持久的播放 ID。"

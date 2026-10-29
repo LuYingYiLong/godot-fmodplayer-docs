@@ -152,32 +152,32 @@ msgstr "|void| **set_volume_linear**\\ (\\ volume_linear\\: :ref:`float<class_fl
 msgid ":ref:`float<class_float>` **get_volume_linear**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_volume_linear**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectamplify.rst:96 f1d6adad8ad74780ac7ebaac9dcc124b
-msgid ""
-"The amplification level as a linear value. Range: 0.0 to 4.0 (approximate). A value of 1.0 means "
-"unity gain (no change), values below 1.0 attenuate, and values above 1.0 amplify. This is "
-"automatically converted to/from "
-":ref:`volume_db<class_FmodAudioEffectAmplify_property_volume_db>`."
-msgstr ""
-"线性增益；该属性隐藏在 Inspector 中，但可以从脚本访问 （参见   "
-":ref:`volume_db<class_FmodAudioEffectAmplify_property_volume_db>`  ）"
-
 #: ../../source/classes/class_fmodaudioeffectamplify.rst:105 bad67f3fbc3d4f73976fa2f904e65f44
 msgid "Method Descriptions"
 msgstr "方法说明"
 
-#: ../../source/classes/class_fmodaudioeffectamplify.rst:115 d4230ea549174b6a9ac8318490d99cbb
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:111 12e18df939af44b49f3714749d5d6576
 msgid "Sets :ref:`volume_db<class_FmodAudioEffectAmplify_property_volume_db>`."
-msgstr "Sets :ref:`volume_db<class_FmodAudioEffectAmplify_property_volume_db>`."
+msgstr "设置  :ref:`volume_db<class_FmodAudioEffectAmplify_property_volume_db>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectamplify.rst:129 e0c8152e1a8f459392d743e9090bb141
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:123 7344d743d7b14199a7b0c4253a900d14
 msgid "Returns :ref:`volume_db<class_FmodAudioEffectAmplify_property_volume_db>`."
-msgstr "Returns :ref:`volume_db<class_FmodAudioEffectAmplify_property_volume_db>`."
+msgstr "返回  :ref:`volume_db<class_FmodAudioEffectAmplify_property_volume_db>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectamplify.rst:143 aa3610e155024653988bd4a416b6b1f1
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:135 28daec1bc19842b1a56cabd0a6def22b
 msgid "Sets :ref:`volume_linear<class_FmodAudioEffectAmplify_property_volume_linear>`."
-msgstr "Sets :ref:`volume_linear<class_FmodAudioEffectAmplify_property_volume_linear>`."
+msgstr "设置  :ref:`volume_linear<class_FmodAudioEffectAmplify_property_volume_linear>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectamplify.rst:157 9b27aa6a786c48eebbfcfdd69b948fa2
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:147 41fac103fed04a179cc6b753d4bc4725
 msgid "Returns :ref:`volume_linear<class_FmodAudioEffectAmplify_property_volume_linear>`."
-msgstr "Returns :ref:`volume_linear<class_FmodAudioEffectAmplify_property_volume_linear>`."
+msgstr "返回  :ref:`volume_linear<class_FmodAudioEffectAmplify_property_volume_linear>` 。"
+
+#: ../../source/classes/class_fmodaudioeffectamplify.rst:94 dd9feeac8bd340718d5fcb383aacc537
+msgid ""
+"The amplification level as a linear value. It is converted to "
+":ref:`volume_db<class_FmodAudioEffectAmplify_property_volume_db>` and clamped to that "
+"property's -80 to +24 dB range, corresponding to approximately 0.0001 to 15.8489. A value of "
+"1.0 is unity gain; setting 0.0 produces the minimum gain rather than silence."
+msgstr ""
+"线性增益值。该值会转换为  :ref:`volume_db<class_FmodAudioEffectAmplify_property_volume_db>` ，并限制在 -80 到 "
+"+24 dB，对应的线性范围约为 0.0001 到 15.8489。1.0 为单位增益；设置 0.0 会得到最小增益，而非静音。"

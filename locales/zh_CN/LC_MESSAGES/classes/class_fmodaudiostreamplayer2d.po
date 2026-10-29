@@ -38,57 +38,6 @@ msgstr "用于在 2D 场景中播放带距离衰减和声像的音频流"
 msgid "Description"
 msgstr "描述"
 
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:23 bcb460718bca486391b7992db9a2e480
-msgid ""
-"FmodAudioStreamPlayer2D is a 2D node that plays :ref:`FmodAudioStream<class_FmodAudioStream>` "
-"resources using the FMOD audio engine. It provides spatial audio capabilities in 2D environments,"
-" with distance-based attenuation and panning relative to the camera/listener."
-msgstr ""
-"FmodAudioStreamPlayer2D 使用 FMOD 播放  :ref:`FmodAudioStream<class_FmodAudioStream>`  "
-"资源，根据与相机或听者的相对位置计算二维距离衰减和声像。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:25 7b680783ee17448c8967e943007d4bea
-msgid "Key features:"
-msgstr "主要特性："
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:27 b65fa1109f794b399136c335b9f97d1f
-msgid "2D spatial audio with distance attenuation"
-msgstr "监听位置优先使用    ``FmodServer``    中记录的 2D 摄像机信息；如果没有记录，则尝试使用当前视口的   ``Camera2D``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:29 76cd93bb8c0248d499436ed2d2f3ef4d
-msgid "Automatic panning based on position relative to camera"
-msgstr "根据与相机的相对位置自动调整声像"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:31 f32d8ee409104f279e56c24f51fb0de8
-msgid "Configurable max distance and attenuation curve"
-msgstr "可配置最大距离和衰减曲线"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:33 b31f10b9124c4531a480a466da640037
-msgid "Panning strength control"
-msgstr "声像强度控制"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:35 b57addfe4296464696c08ac73218a214
-msgid "Area mask for filtering by physics layers"
-msgstr "通过物理层掩码筛选区域"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:37 7c2a3e59596048e987add9020142a58c
-msgid "Stream playback with play/pause/stop/seek controls"
-msgstr "播放、暂停、停止和定位控制"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:39 2034369390fd478aa5ee6350baf99063
-msgid "Volume and pitch control"
-msgstr "音量和音高控制"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:41 9348c694f60e48c8bf0fa73058181a17
-msgid "Bus routing for mixing"
-msgstr "通过总线路由进行混音"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:43 d4c963c1732247e8aedfa389ac0b0e06
-msgid ""
-"This node is ideal for 2D games where audio needs to be positioned in the game world and respond "
-"to the player's location."
-msgstr "适合需要根据玩家位置调整世界内音源的二维游戏。"
-
 #: ../../source/classes/class_fmodaudiostreamplayer2d.rst:48 3e0b6d85eab14b7d9b3d85985b8305bb
 msgid "Properties"
 msgstr "属性"
@@ -503,10 +452,6 @@ msgstr "信号"
 msgid "**finished**\\ (\\ )"
 msgstr "**finished**\\ (\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:176 014877f2db094f40bc44e3fa9aa4c375
-msgid "Emitted when playback finishes (reaches the end of the stream)."
-msgstr "播放到音频流末尾时发出。"
-
 #: ../../source/classes/class_fmodaudiostreamplayer2d.rst:185 42b7ec73ad70405a86f26ac79070e90c
 msgid "Property Descriptions"
 msgstr "属性说明"
@@ -627,10 +572,6 @@ msgstr "|void| **set_autoplay**\\ (\\ enable\\: :ref:`bool<class_bool>`\\ )"
 msgid ":ref:`bool<class_bool>` **is_autoplay_enabled**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **is_autoplay_enabled**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:283 c321b0b132e44914aa25b1f1ce41fea0
-msgid "If ``true``, audio plays automatically when the node enters the scene tree."
-msgstr "进入场景树后自动播放"
-
 #: ../../source/classes/class_fmodaudiostreamplayer2d.rst:293 70a9d84564974c1cb0166b6921fda397
 msgid ":ref:`bool<class_bool>` **preload_on_set_stream** = ``false``"
 msgstr ":ref:`bool<class_bool>` **preload_on_set_stream** = ``false``"
@@ -668,10 +609,6 @@ msgstr "|void| **set_max_distance**\\ (\\ pixels\\: :ref:`float<class_float>`\\ 
 #: 864b59c86b974a99aadb7390a4880e8d
 msgid ":ref:`float<class_float>` **get_max_distance**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_max_distance**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:317 e89c7b3d9ce84a9aa9793cdea07c609c
-msgid "Maximum distance in pixels at which the sound is audible."
-msgstr "超过该像素距离后静音"
 
 #: ../../source/classes/class_fmodaudiostreamplayer2d.rst:327 8e311e7cfb024637ab30dae2ad215cf8
 msgid ":ref:`float<class_float>` **attenuation** = ``1.0``"
@@ -749,10 +686,6 @@ msgstr "|void| **set_area_mask**\\ (\\ mask\\: :ref:`int<class_int>`\\ )"
 msgid ":ref:`int<class_int>` **get_area_mask**\\ (\\ ) |const|"
 msgstr ":ref:`int<class_int>` **get_area_mask**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:385 d90c243881de49cb936565bf29867218
-msgid "Physics layer mask for area-based audio filtering."
-msgstr "2D 物理区域遮罩"
-
 #: ../../source/classes/class_fmodaudiostreamplayer2d.rst:395 7d9958bbdd41416a94e0029c9ca2f249
 msgid ":ref:`int<class_int>` **max_polyphony** = ``1``"
 msgstr ":ref:`int<class_int>` **max_polyphony** = ``1``"
@@ -769,23 +702,9 @@ msgstr "|void| **set_max_polyphony**\\ (\\ max_polyphony\\: :ref:`int<class_int>
 msgid ":ref:`int<class_int>` **get_max_polyphony**\\ (\\ ) |const|"
 msgstr ":ref:`int<class_int>` **get_max_polyphony**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:402 b3bc044857e7436483fec4ad8b86a72b
-msgid "Maximum number of simultaneous voices this player can play."
-msgstr "最大复音数量"
-
 #: ../../source/classes/class_fmodaudiostreamplayer2d.rst:411 2f501a5ef1644f02a5a30039a05656dd
 msgid "Method Descriptions"
 msgstr "方法说明"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:421 af4776bca4204b39b926504c42abbffb
-msgid ""
-"Sets the :ref:`FmodAudioStream<class_FmodAudioStream>` to play. The stream can be changed during "
-"playback,"
-msgstr "设置要播放的音频流 （参见   :ref:`FmodAudioStream<class_FmodAudioStream>`  ）"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:423 0869fbabba5941d9aa27bcf57bf8e51c
-msgid "which will stop the current playback and start the new stream if playing."
-msgstr "如果当前正在播放，会先停止当前通道并清除播放状态"
 
 #: ../../source/classes/class_fmodaudiostreamplayer2d.rst:437 be68de90e2d549309095f6c01ed9fcc9
 msgid "Returns the :ref:`FmodAudioStream<class_FmodAudioStream>` currently assigned to this player."
@@ -799,27 +718,9 @@ msgstr "未设置音频流时返回    ``null``   。"
 msgid ":ref:`bool<class_bool>` **preload_stream**\\ (\\ )"
 msgstr ":ref:`bool<class_bool>` **preload_stream**\\ (\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:453 c55226fbd28e48fe9906e664134d2a15
-msgid ""
-"Preloads the assigned stream by creating its internal :ref:`FmodSound<class_FmodSound>` before "
-"playback starts."
-msgstr "预加载当前    ``stream``   ，提前创建内部    :ref:`FmodSound<class_FmodSound>`   。创建成功返回    ``true``   。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:455 254766ff9fa0478b935ffef9c0b0adf2
-msgid "This reduces first-play latency when the stream is later played."
-msgstr "可降低后续首次播放该音频流的延迟。"
-
 #: ../../source/classes/class_fmodaudiostreamplayer2d.rst:467 26e915ee0ae74d109828f576ceb1f099
 msgid "|void| **play**\\ (\\ from_position\\: :ref:`float<class_float>` = 0.0\\ )"
 msgstr "|void| **play**\\ (\\ from_position\\: :ref:`float<class_float>` = 0.0\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:469 a9dcc7d62c9641b4947b2f8b9ab53441
-msgid "Starts playing the assigned stream from the specified position in seconds."
-msgstr "从指定位置开始播放，单位为秒"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:471 a57176825b40458695cfef5524b5b239
-msgid "If ``from_position`` is negative, playback starts from the beginning."
-msgstr "播放前会为音频流添加    ``FmodMode``    里的    ``FMOD_MODE_2D``    标志并重新创建缓存声音"
 
 #: ../../source/classes/class_fmodaudiostreamplayer2d.rst:483 bc302ee03610445eb84034847e6fb498
 msgid "|void| **seek**\\ (\\ to_position\\: :ref:`float<class_float>`\\ )"
@@ -841,21 +742,13 @@ msgstr "|void| **stop**\\ (\\ )"
 msgid "Stops playback and resets the position to the beginning."
 msgstr "停止播放并清除暂停状态"
 
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:515 f9c40033e762420db4e509d6487a78c5
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:473 497e49c63e8844dbb4506a07cc5e01b1
 msgid "Controls playback state. Setting to ``true`` starts playback from the beginning."
-msgstr "设置播放状态"
+msgstr "控制播放状态。设置为  ``true``  会从头开始播放。"
 
 #: ../../source/classes/class_fmodaudiostreamplayer2d.rst:517 6ad6d2fac9f045c39c661e272cb3f498
 msgid "Setting to ``false`` stops playback."
 msgstr "设为    ``false``    会停止播放。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:531 8f8fcabe28a24c6fadc8086709e5cf93
-msgid "Returns ``true`` if audio is currently playing."
-msgstr "如果内部通道有效且正在播放，则返回    ``true``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:533 549658989bce40d3920075929679b282
-msgid "Note that this returns ``false`` when paused, even though playback is active."
-msgstr "暂停时返回    ``false``   ，即使播放尚未结束。"
 
 #: ../../source/classes/class_fmodaudiostreamplayer2d.rst:547 8a04c1cad3ec4d64a6f0931bd3020ad6
 msgid "Pauses or resumes playback without changing position."
@@ -868,14 +761,6 @@ msgstr "返回当前播放流的暂停状态"
 #: ../../source/classes/class_fmodaudiostreamplayer2d.rst:573 f473e640b8e74f0ba422ff42e806de65
 msgid ":ref:`float<class_float>` **get_playback_position**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_playback_position**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:575 b502cd662abd44d4b40591ac6e279051
-msgid "Returns the current playback position in seconds."
-msgstr "返回当前播放位置，单位为秒"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:577 0c81997d52d0419691c0b05eac47b4a1
-msgid "Returns ``0.0`` if not playing."
-msgstr "未播放时返回    ``0.0``   。"
 
 #: ../../source/classes/class_fmodaudiostreamplayer2d.rst:591 77e774a03746415fb2a559ca16b85795
 msgid "Sets the volume in decibels."
@@ -933,20 +818,6 @@ msgstr "返回当前播放速度和音高缩放"
 msgid "\\ ``1.0`` is the default pitch, ``0.5`` is one octave lower, ``2.0`` is one octave higher."
 msgstr "``1.0``    为默认音高，   ``0.5``    降低一个八度，   ``2.0``    升高一个八度。"
 
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:687 add6ceca47fe480190fd7bfb81d6a5b7
-msgid ""
-"Enables or disables autoplay. When enabled, the stream starts playing automatically when the node"
-" enters the scene tree."
-msgstr "设置是否在进入场景树后自动播放"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:701 6257283c57ff4c0ab23113de9ada2d2a
-msgid "Returns ``true`` if autoplay is enabled."
-msgstr "如果启用了自动播放，则返回    ``true``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:703 74e5bda1720e45d9a6ba14dac3dbf03a
-msgid "When enabled, playback starts automatically when the node enters the scene tree."
-msgstr "启用后，节点进入场景树时自动开始播放。"
-
 #: ../../source/classes/class_fmodaudiostreamplayer2d.rst:717 2338d6195bd449c2b14c08b0485f7b00
 msgid ""
 "If enabled, assigning :ref:`stream<class_FmodAudioStreamPlayer2D_property_stream>` immediately "
@@ -957,33 +828,13 @@ msgstr "设置是否在赋值    :ref:`stream<class_FmodAudioStreamPlayer2D_prop
 msgid "Returns ``true`` if streams are preloaded as soon as they are assigned."
 msgstr "如果启用了赋值时预加载，则返回    ``true``   。"
 
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:745 082d9b0bb81348e58d0af1c409f0b893
-msgid "Sets the maximum distance in pixels at which the sound is audible."
-msgstr "设置最大可听距离，单位为像素"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:747 d654a8e55a5b480b9ef385a7f0790f77
-msgid "Beyond this distance, the volume is set to minimum (-80 dB)."
-msgstr "小于等于    ``0.0``    的值会被限制为    ``1.0``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:761 3ff35b6d39a24911b52c5ead7a1c4b78
-msgid "Returns the maximum distance in pixels at which the sound is audible."
-msgstr "返回最大可听距离，单位为像素"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:763 005a09a8867d4a45b50e17cc38e5f1db
-msgid "Beyond this distance, the volume is set to minimum."
-msgstr "超过此距离后，音量降至最小。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:765 2e520cf784614658aa373c2be6dffd41
-msgid "The default value is ``2000.0`` pixels."
-msgstr "默认值为    ``2000.0``    像素。"
-
 #: ../../source/classes/class_fmodaudiostreamplayer2d.rst:779 e546d7398dcb4eeda7be26bbabd57b91
 msgid "Sets the attenuation factor controlling how quickly sound fades with distance."
 msgstr "设置距离衰减曲线强度"
 
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:781 aeeb91b091104018b8505cc42c4e5713
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:693 9214a0bb82ac432bafa9dcea97b10adb
 msgid "\\ ``1.0`` is linear attenuation. Higher values cause faster fade-out."
-msgstr "数值越大，随距离衰减越快"
+msgstr "``1.0``  表示线性衰减。值越大，随距离衰减越快。"
 
 #: ../../source/classes/class_fmodaudiostreamplayer2d.rst:795 3536ddce4a434f33bf62bccae058f3c8
 msgid "Returns the current attenuation factor."
@@ -997,9 +848,9 @@ msgstr "值越大，音量随距离衰减得越快。"
 msgid "Sets the panning strength multiplier."
 msgstr "设置左右声像强度"
 
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:813 cf770adf8f6c4984bf3f1e928ff8ecd0
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:721 47ec052d71c647b4bcbfc542a13be2b2
 msgid "Higher values create more pronounced left/right panning effect."
-msgstr "小于    ``0.0``    的值会被限制为    ``0.0``"
+msgstr "值越大，左右声像变化越明显。"
 
 #: ../../source/classes/class_fmodaudiostreamplayer2d.rst:815 2f7d8a51264a43008897678e94bd32f2
 msgid "Set to ``0.0`` to disable panning."
@@ -1017,49 +868,13 @@ msgstr "值越大，左右声像变化越明显。"
 msgid "The default value is ``1.0``."
 msgstr "默认值为    ``1.0``   。"
 
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:847 a80a948fc7e04bb7957b571966906e03
-msgid "Sets the audio bus to route this player's output to."
-msgstr "设置输出总线名称"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:849 1b7bdb3d19aa4cb5a500fc5d8be11d02
-msgid "The bus name should match a bus in the :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`."
-msgstr "总线名称应与    :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`    中的总线匹配。"
-
 #: ../../source/classes/class_fmodaudiostreamplayer2d.rst:863 bb4aa25c4f864d588ed161955b5e3cc7
 msgid "Returns the name of the audio bus this player outputs to."
 msgstr "返回当前输出总线名称"
 
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:865 bb090f6f57fe4d7893b0745ec3303d69
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:767 9c63c916ccc94934b198fec9e9668b08
 msgid "The default value is ``&\"Master\"``."
-msgstr "如果没有设置，则返回    ``\"Master\"``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:879 e7715852f37d486d894f7f02499d1992
-msgid "Sets the area mask for physics-based audio filtering."
-msgstr "设置 2D 物理区域遮罩"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:881 8496593d3435485a87c9feda2e2971a0
-msgid "Only areas matching this mask will affect this player's audio."
-msgstr "只有与此掩码匹配的区域会影响该播放器的音频。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:895 0ec5db46601b43c383f4f4284e342b56
-msgid "Returns the area mask used for physics-based audio filtering."
-msgstr "返回 2D 物理区域遮罩"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:897 967dfa66a1c64900995329608746aae4
-msgid "The default value is ``1`` (first layer)."
-msgstr "默认值为    ``1``   ，即第一层。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:911 2a6bfbe8a7b54d47ae9fab1b4d7ab6d0
-msgid "Sets the maximum number of simultaneous voices this player can play."
-msgstr "设置最大复音数量"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:925 6011dec7989a46cda149551aefda115d
-msgid "Returns the maximum number of simultaneous voices this player can play."
-msgstr "返回最大复音数量"
-
-#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:927 0387145687c54769af54e20cc2281bee
-msgid "The default value is ``1``."
-msgstr "默认值为    ``1``   。"
+msgstr "默认值为  ``&\"Master\"`` 。"
 
 #: ../../source/classes/class_fmodaudiostreamplayer2d.rst:939 d939388dd3f54bc88dcabeeaf07d17f6
 msgid ":ref:`bool<class_bool>` **has_stream_playback**\\ (\\ ) |const|"
@@ -1084,3 +899,109 @@ msgstr "没有活动通道时返回  ``null`` 。"
 #: ../../source/classes/class_fmodaudiostreamplayer2d.rst:959 2f95323d491c489d98c0ab6475aa94ad
 msgid "This can be used for advanced control over the playing sound."
 msgstr "可用于进一步控制正在播放的声音。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:21 fa1c930f278c4fb2b39db6c90b5fb335
+msgid ""
+"Plays :ref:`FmodAudioStream<class_FmodAudioStream>` resources with distance attenuation and "
+"stereo panning relative to the 2D listener. Each player uses one playback channel."
+msgstr ""
+"播放  :ref:`FmodAudioStream<class_FmodAudioStream>` \\ ，根据与 2D "
+"监听器的距离和方位调整衰减与立体声声像。每个播放器使用一个播放通道。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:154 0951c3ff70fd4350a9031e57ce3f1a1a
+msgid ""
+"Emitted when the playback channel ends. Calling "
+":ref:`stop()<class_FmodAudioStreamPlayer2D_method_stop>` or replacing "
+":ref:`stream<class_FmodAudioStreamPlayer2D_property_stream>` does not emit this signal."
+msgstr ""
+"播放通道结束时发出。调用  :ref:`stop()<class_FmodAudioStreamPlayer2D_method_stop>`  或替换  "
+":ref:`stream<class_FmodAudioStreamPlayer2D_property_stream>`  不会发出此信号。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:261 e7247709c2204fafb37a36cf09701e8f
+msgid "If ``true``, defers playback until the node is ready, outside the editor."
+msgstr "为  ``true``  时，在节点就绪后延迟开始播放，在编辑器中不生效。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:295
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:667
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:679 271047719695418c9a83aff4ae72794b
+#: 4a30f5e841c049c7a2958189fdbcfee8 bb0899bd84394bf7abbe74e9b5460785
+msgid ""
+"Distance attenuation range in pixels, clamped to at least ``1.0``. The player sets its "
+"channel volume to ``-80.0`` dB when the listener is farther than this distance."
+msgstr "以像素表示的距离衰减范围，最小为  ``1.0`` \\ 。监听器距离大于此值时，播放器将通道音量设为  ``-80.0``  dB。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:363 3bfa7feede77428bba3794dfd9fb0ce9
+msgid "Stored area mask. Area-based audio filtering is not implemented."
+msgstr "保存的区域掩码。尚未实现基于区域的音频过滤。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:380
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:803 3162678cbc4843cba32bdd345d1c1163
+#: be45bc23e19e4b79a3570838a334fef7
+msgid ""
+"Stores the requested voice limit, clamped to at least ``1``. This player currently uses one "
+"channel; this setting does not enable overlapping voices."
+msgstr "保存请求的声部上限，最小为  ``1`` \\ 。此播放器目前只使用一个通道，该设置不会启用重叠播放。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:397 e8bab748347f418b9b72f2497e054e4a
+msgid ""
+"Stops the current playback and assigns ``stream``. Playback must be started again with "
+":ref:`play()<class_FmodAudioStreamPlayer2D_method_play>`."
+msgstr ""
+"停止当前播放并设置  ``stream`` \\ ，之后需调用  :ref:`play()<class_FmodAudioStreamPlayer2D_method_play>`  "
+"开始播放。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:423 8cb166db67b84b0a8052b20dfe636595
+msgid ""
+"Preloads the assigned stream by creating its internal :ref:`FmodSound<class_FmodSound>`. "
+"Returns ``false`` if no stream is assigned or sound creation fails."
+msgstr "通过创建内部  :ref:`FmodSound<class_FmodSound>`  预加载音频流。未设置音频流或声音创建失败时返回  ``false`` \\ 。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:435 75a3d7d69373496bb9204ea8947ef876
+msgid "Starts or restarts playback at ``from_position``, in seconds. Use a nonnegative position."
+msgstr "从  ``from_position``  指定的位置开始或重新播放，单位为秒。位置应为非负数。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:487 d8f1adfc0ab2438dadc0360960521b97
+msgid "Returns ``true`` while a playback channel is active, including while paused."
+msgstr "播放通道处于活动状态时返回  ``true`` \\ ，暂停时也返回  ``true`` \\ 。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:523 4ac95c6d29d946e8acdc1d8c0b9a0492
+msgid ""
+"Returns the playback position in seconds, including while paused. Returns ``0.0`` if there is"
+" no valid playback channel."
+msgstr "返回播放位置，单位为秒，暂停时仍可查询。没有有效播放通道时返回  ``0.0`` \\ 。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:619 17e23ac7b6cd421c9e0d039838e4d028
+msgid ""
+"Sets :ref:`autoplay<class_FmodAudioStreamPlayer2D_property_autoplay>`. Automatic playback is "
+"deferred until the node is ready and is disabled in the editor."
+msgstr ""
+"设置  :ref:`autoplay<class_FmodAudioStreamPlayer2D_property_autoplay>` \\ "
+"。自动播放会延迟到节点就绪后执行，在编辑器中不生效。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:631 8176a83a21f04e81b0e94cd4b573edde
+msgid "Returns whether :ref:`autoplay<class_FmodAudioStreamPlayer2D_property_autoplay>` is enabled."
+msgstr "返回是否启用了  :ref:`autoplay<class_FmodAudioStreamPlayer2D_property_autoplay>` \\ 。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:751 237787dfeb3c48a29c678332e1cd37ca
+msgid ""
+"Selects the bus used when the next playback channel is created. Changing this value does not "
+"reroute an existing channel."
+msgstr "设置下次创建播放通道时使用的总线。修改此值不会改变现有通道的路由。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:753 b0981b46c78749a9a1579c0e31d85c75
+msgid ""
+"If the bus is not found in :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`, playback uses"
+" the master channel group."
+msgstr "在  :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`  中找不到该总线时，播放使用主通道组。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:779 3ecb42e9588944b3a8403ce50bdfa1ac
+msgid "Stores ``mask``. Area-based audio filtering is not implemented by this player."
+msgstr "保存  ``mask`` \\ 。此播放器尚未实现基于区域的音频过滤。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:791 dc4d79e1d2fc4c849d6af7cd85bea055
+msgid "Returns the stored area mask. It currently has no effect on playback."
+msgstr "返回保存的区域掩码，此值目前不影响播放。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer2d.rst:815 de10080d2b7e498cb65a039ed44a2df8
+msgid "Returns the stored requested voice limit. The player currently uses only one playback channel."
+msgstr "返回保存的声部上限。此播放器目前只使用一个播放通道。"

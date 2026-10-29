@@ -236,14 +236,6 @@ msgstr "|void| **set_pitch_scale**\\ (\\ pitch_scale\\: :ref:`float<class_float>
 msgid ":ref:`float<class_float>` **get_pitch_scale**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_pitch_scale**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectpitchshift.rst:152 6f42864a3ebc45e6a220316d573e0839
-msgid ""
-"The pitch scale factor applied to the audio. Range: 0.5 to 2.0. Default: 1.0 (unity, no change). "
-"A value of 2.0 shifts the pitch up by one octave, 0.5 shifts it down by one octave, and 1.0 "
-"leaves the pitch unchanged. This is a linear multiplier; use ``pow(2, semitones/12)`` to convert "
-"from semitones."
-msgstr "音高倍率"
-
 #: ../../source/classes/class_fmodaudioeffectpitchshift.rst:162 06aa75fe0ab1489ba7f35b7b97077f7c
 msgid ":ref:`FFTSize<enum_FmodAudioEffectPitchShift_FFTSize>` **fft_size** = ``3``"
 msgstr ":ref:`FFTSize<enum_FmodAudioEffectPitchShift_FFTSize>` **fft_size** = ``3``"
@@ -299,37 +291,45 @@ msgstr "|void| **set_oversampling**\\ (\\ oversampling\\: :ref:`int<class_int>`\
 msgid ":ref:`int<class_int>` **get_oversampling**\\ (\\ ) |const|"
 msgstr ":ref:`int<class_int>` **get_oversampling**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectpitchshift.rst:186 119ba69547dd42d7ba4f169a81dc1517
-msgid ""
-"The oversampling factor for the FFT processing. Range: 1 to 8. Default: 4. Higher oversampling "
-"values can reduce artifacts and improve quality, especially at extreme pitch shifts, but increase"
-" CPU usage proportionally. Values above 4 provide diminishing returns for most content."
-msgstr "过采样倍数"
-
 #: ../../source/classes/class_fmodaudioeffectpitchshift.rst:195 dfd5099a115f47fc8c1f2e8ad3838a01
 msgid "Method Descriptions"
 msgstr "方法说明"
 
-#: ../../source/classes/class_fmodaudioeffectpitchshift.rst:205 31cecd2022bd47baa2320e8053364daa
+#: ../../source/classes/class_fmodaudioeffectpitchshift.rst:199 711ed49ff36d420fa4aceabb7b979aea
 msgid "Sets :ref:`pitch_scale<class_FmodAudioEffectPitchShift_property_pitch_scale>`."
-msgstr "Sets :ref:`pitch_scale<class_FmodAudioEffectPitchShift_property_pitch_scale>`."
+msgstr "设置  :ref:`pitch_scale<class_FmodAudioEffectPitchShift_property_pitch_scale>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectpitchshift.rst:219 adce522d561040b4acb061c9592f8ffd
+#: ../../source/classes/class_fmodaudioeffectpitchshift.rst:211 3d28b3375a274a6ab0ef7cfe253e723c
 msgid "Returns :ref:`pitch_scale<class_FmodAudioEffectPitchShift_property_pitch_scale>`."
-msgstr "Returns :ref:`pitch_scale<class_FmodAudioEffectPitchShift_property_pitch_scale>`."
+msgstr "返回  :ref:`pitch_scale<class_FmodAudioEffectPitchShift_property_pitch_scale>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectpitchshift.rst:233 e9feb1ea451648f5998260c325a57e34
+#: ../../source/classes/class_fmodaudioeffectpitchshift.rst:223 28151f226d624422b53c22212124a2b6
 msgid "Sets :ref:`fft_size<class_FmodAudioEffectPitchShift_property_fft_size>`."
-msgstr "Sets :ref:`fft_size<class_FmodAudioEffectPitchShift_property_fft_size>`."
+msgstr "设置  :ref:`fft_size<class_FmodAudioEffectPitchShift_property_fft_size>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectpitchshift.rst:247 b746c8d7ab7c48f3a8aa52cbeb1655ab
+#: ../../source/classes/class_fmodaudioeffectpitchshift.rst:235 39a524f5070c4d5c95a97124987debdd
 msgid "Returns :ref:`fft_size<class_FmodAudioEffectPitchShift_property_fft_size>`."
-msgstr "Returns :ref:`fft_size<class_FmodAudioEffectPitchShift_property_fft_size>`."
+msgstr "返回  :ref:`fft_size<class_FmodAudioEffectPitchShift_property_fft_size>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectpitchshift.rst:261 11bd1cb9e47d4708b68f75408ba80ec9
+#: ../../source/classes/class_fmodaudioeffectpitchshift.rst:247 fc4b316bbd3342c3b7c652b37996c8af
 msgid "Sets :ref:`oversampling<class_FmodAudioEffectPitchShift_property_oversampling>`."
-msgstr "Sets :ref:`oversampling<class_FmodAudioEffectPitchShift_property_oversampling>`."
+msgstr "设置  :ref:`oversampling<class_FmodAudioEffectPitchShift_property_oversampling>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectpitchshift.rst:275 1e64e44cbacc4a19ae60b5c92c45f654
+#: ../../source/classes/class_fmodaudioeffectpitchshift.rst:259 84f23eb806db4c739a392b5274a19eea
 msgid "Returns :ref:`oversampling<class_FmodAudioEffectPitchShift_property_oversampling>`."
-msgstr "Returns :ref:`oversampling<class_FmodAudioEffectPitchShift_property_oversampling>`."
+msgstr "返回  :ref:`oversampling<class_FmodAudioEffectPitchShift_property_oversampling>` 。"
+
+#: ../../source/classes/class_fmodaudioeffectpitchshift.rst:148 2eb0a925fe0e4cf89fa29f48c8765930
+msgid ""
+"The pitch multiplier, clamped to 0.01 through 16.0. It must be greater than 0.0; invalid "
+"nonpositive values are rejected. The default is 1.0. A value of 2.0 shifts up one octave and "
+"0.5 shifts down one octave. Convert semitones with ``pow(2.0, semitones / 12.0)``."
+msgstr ""
+"音高倍率，限制在 0.01 到 16.0，必须大于 0.0，非正值会被拒绝。默认为 1.0。2.0 升高一个八度，0.5 降低一个八度。半音数可使用  ``pow(2.0, "
+"semitones / 12.0)``  转换。"
+
+#: ../../source/classes/class_fmodaudioeffectpitchshift.rst:182 1a40cfbcf68445fda7810241dd190a48
+msgid ""
+"The overlap factor passed to FMOD's pitch-shift DSP, clamped to 4 through 32. The default is "
+"4. This property controls FFT overlap, rather than increasing the output sample rate."
+msgstr "传给 FMOD 音高变换 DSP 的重叠因子，限制在 4 到 32，默认为 4。该属性控制 FFT 重叠，不会提高输出采样率。"

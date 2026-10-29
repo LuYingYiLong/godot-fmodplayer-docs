@@ -30,28 +30,9 @@ msgstr ""
 "**继承：** :ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>` **<**"
 " :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
 
-#: ../../source/classes/class_fmodaudioeffectfilter.rst:16 5aa534bb3ceb472488216043e4a9ecb8
-msgid "A multi-mode filter effect supporting lowpass, highpass, and bandpass filter types."
-msgstr "滤波器效果，用于按截止频率、斜率、增益和共振塑造频率响应。"
-
 #: ../../source/classes/class_fmodaudioeffectfilter.rst:21 f7a20ed623924cf19bd0f1098f5a307b
 msgid "Description"
 msgstr "描述"
-
-#: ../../source/classes/class_fmodaudioeffectfilter.rst:23 00c72ca068ec45a59bb6457e646004b6
-msgid ""
-"FmodAudioEffectFilter is a versatile filter that can operate in multiple modes (lowpass, "
-"highpass, bandpass) to shape the frequency content of an audio signal. It provides control over "
-"cutoff frequency, rolloff steepness, gain, and resonance."
-msgstr ""
-"**FmodAudioEffectFilter**    提供基础滤波控制，可通过    ``cutoff_hz``    设置截止频率，通过    ``db``    选择截止曲线斜率，并用"
-"    ``gain``    与    ``resonance``    调整滤波后的信号强度和共振感。它适合制作低通、高通、遮挡、远近感或菜单过渡等效果。"
-
-#: ../../source/classes/class_fmodaudioeffectfilter.rst:25 7dc1b393239446ef8edbfb82eccfb537
-msgid ""
-"This effect is useful for removing unwanted frequencies, creating muffled or telephone-like "
-"sounds, isolating frequency bands, or adding character to audio through resonance."
-msgstr "用于去除不需要的频率、制作闷声或电话音效、隔离频段，也可通过谐振改变音色。"
 
 #: ../../source/classes/class_fmodaudioeffectfilter.rst:30 4b07e72268174a509a5f9522327f828c
 msgid "Properties"
@@ -194,10 +175,6 @@ msgstr "每倍频程 12 dB 的斜率"
 msgid ":ref:`FilterDB<enum_FmodAudioEffectFilter_FilterDB>` **FILTER_18DB** = ``2``"
 msgstr ":ref:`FilterDB<enum_FmodAudioEffectFilter_FilterDB>` **FILTER_18DB** = ``2``"
 
-#: ../../source/classes/class_fmodaudioeffectfilter.rst:110 7fb6b3b39d644a4e97a9dfa624522e85
-msgid "18 dB per octave rolloff. Steep slope, stronger frequency isolation."
-msgstr "每倍频程 18 dB 的斜率"
-
 #: ../../source/classes/class_fmodaudioeffectfilter.rst:116 5b6133d670224c24adaa8a6416e6e65c
 msgid ":ref:`FilterDB<enum_FmodAudioEffectFilter_FilterDB>` **FILTER_24DB** = ``3``"
 msgstr ":ref:`FilterDB<enum_FmodAudioEffectFilter_FilterDB>` **FILTER_24DB** = ``3``"
@@ -227,13 +204,6 @@ msgstr "|void| **set_cutoff_hz**\\ (\\ cutoff_hz\\: :ref:`float<class_float>`\\ 
 #: cb533166e9e54de1b142c0f15af2f740
 msgid ":ref:`float<class_float>` **get_cutoff_hz**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_cutoff_hz**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudioeffectfilter.rst:140 16c6d6b41c844cb2b598dda25157aaea
-msgid ""
-"The cutoff frequency of the filter in Hertz (Hz). Frequencies above this point are attenuated "
-"(lowpass), below this point are attenuated (highpass), or a band around this point is passed "
-"(bandpass) depending on the filter mode."
-msgstr "截止频率，单位为 Hz"
 
 #: ../../source/classes/class_fmodaudioeffectfilter.rst:150 9753c093fcbc4179adceeed7a7ced030
 msgid ":ref:`FilterDB<enum_FmodAudioEffectFilter_FilterDB>` **db** = ``0``"
@@ -307,34 +277,69 @@ msgstr "截止频率附近的共振提升"
 msgid "Method Descriptions"
 msgstr "方法说明"
 
-#: ../../source/classes/class_fmodaudioeffectfilter.rst:210 73bd135b3d2b474f8bd9b31204c02400
+#: ../../source/classes/class_fmodaudioeffectfilter.rst:204 f3502310c69341c1a54b6ff07d2e913d
 msgid "Sets :ref:`cutoff_hz<class_FmodAudioEffectFilter_property_cutoff_hz>`."
-msgstr "Sets :ref:`cutoff_hz<class_FmodAudioEffectFilter_property_cutoff_hz>`."
+msgstr "设置  :ref:`cutoff_hz<class_FmodAudioEffectFilter_property_cutoff_hz>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectfilter.rst:224 0ad3cfb71753490d827f654bfa86c75d
+#: ../../source/classes/class_fmodaudioeffectfilter.rst:216 7e46ec7685384f3d84c598ab0e4b909d
 msgid "Returns :ref:`cutoff_hz<class_FmodAudioEffectFilter_property_cutoff_hz>`."
-msgstr "Returns :ref:`cutoff_hz<class_FmodAudioEffectFilter_property_cutoff_hz>`."
+msgstr "返回  :ref:`cutoff_hz<class_FmodAudioEffectFilter_property_cutoff_hz>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectfilter.rst:238 91f722986fda4aa99de642a2e77819b6
+#: ../../source/classes/class_fmodaudioeffectfilter.rst:228 2648e70450f74f59986c082854c99760
 msgid "Sets :ref:`db<class_FmodAudioEffectFilter_property_db>`."
-msgstr "Sets :ref:`db<class_FmodAudioEffectFilter_property_db>`."
+msgstr "设置  :ref:`db<class_FmodAudioEffectFilter_property_db>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectfilter.rst:252 93332278326f4a8d96b6f0fc34135428
+#: ../../source/classes/class_fmodaudioeffectfilter.rst:240 9abc463e4deb4c39b831a0e7cfe544b1
 msgid "Returns :ref:`db<class_FmodAudioEffectFilter_property_db>`."
-msgstr "Returns :ref:`db<class_FmodAudioEffectFilter_property_db>`."
+msgstr "返回  :ref:`db<class_FmodAudioEffectFilter_property_db>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectfilter.rst:266 c1d1adc7d0a84ec8b4508e0f2780903f
+#: ../../source/classes/class_fmodaudioeffectfilter.rst:252 02adca8ac37249f7992aa9ce3e2e650a
 msgid "Sets :ref:`gain<class_FmodAudioEffectFilter_property_gain>`."
-msgstr "Sets :ref:`gain<class_FmodAudioEffectFilter_property_gain>`."
+msgstr "设置  :ref:`gain<class_FmodAudioEffectFilter_property_gain>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectfilter.rst:280 fa4b023ce4504d2492a89a595c38d3b6
+#: ../../source/classes/class_fmodaudioeffectfilter.rst:264 7941d998a34e46c48d42252338c15a11
 msgid "Returns :ref:`gain<class_FmodAudioEffectFilter_property_gain>`."
-msgstr "Returns :ref:`gain<class_FmodAudioEffectFilter_property_gain>`."
+msgstr "返回  :ref:`gain<class_FmodAudioEffectFilter_property_gain>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectfilter.rst:294 f3b7c4436b694f019c1c89e72166cf07
+#: ../../source/classes/class_fmodaudioeffectfilter.rst:276 ed7933383c9d4b98b0da5a345c0ac13a
 msgid "Sets :ref:`resonance<class_FmodAudioEffectFilter_property_resonance>`."
-msgstr "Sets :ref:`resonance<class_FmodAudioEffectFilter_property_resonance>`."
+msgstr "设置  :ref:`resonance<class_FmodAudioEffectFilter_property_resonance>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectfilter.rst:308 a7f708d667cd43f9b0abe0d50b64ad72
+#: ../../source/classes/class_fmodaudioeffectfilter.rst:288 ebb920c7de9a44039ef4bb05fa723a7c
 msgid "Returns :ref:`resonance<class_FmodAudioEffectFilter_property_resonance>`."
-msgstr "Returns :ref:`resonance<class_FmodAudioEffectFilter_property_resonance>`."
+msgstr "返回  :ref:`resonance<class_FmodAudioEffectFilter_property_resonance>` 。"
+
+#: ../../source/classes/class_fmodaudioeffectfilter.rst:14 5ba2472b979f4b339195c56049217e6f
+msgid "Low-pass filter effect with adjustable cutoff, slope, gain, and resonance."
+msgstr "可调节截止频率、斜率、增益和共振的低通滤波效果器。"
+
+#: ../../source/classes/class_fmodaudioeffectfilter.rst:21 959595e8811d443f92d77a5bf89f469a
+msgid ""
+"FmodAudioEffectFilter configures one low-pass band in FMOD's MULTIBAND_EQ DSP. It exposes "
+"cutoff frequency, slope, gain, and resonance settings. It does not expose high-pass or band-"
+"pass modes; use :ref:`FmodAudioEffectEQ<class_FmodAudioEffectEQ>` for those filter types."
+msgstr ""
+"FmodAudioEffectFilter 配置 FMOD MULTIBAND_EQ DSP "
+"中的一个低通频段，并提供截止频率、斜率、增益和共振设置。该类没有高通或带通模式；这些滤波类型可使用  "
+":ref:`FmodAudioEffectEQ<class_FmodAudioEffectEQ>` 。"
+
+#: ../../source/classes/class_fmodaudioeffectfilter.rst:23 f057f41f740a45bb8349109b5c1f66b3
+msgid ""
+"Use this effect to attenuate high frequencies, create muffled audio, or emphasize the cutoff "
+"region through resonance."
+msgstr "可用于衰减高频、制作沉闷音效，或通过共振突出截止频率附近的声音。"
+
+#: ../../source/classes/class_fmodaudioeffectfilter.rst:106 e4f4a9b0bb434d2f82544aeaf3b321e6
+msgid ""
+"Compatibility slope option. The current implementation maps this value to the same 24 "
+"dB/octave low-pass filter as "
+":ref:`FILTER_24DB<class_FmodAudioEffectFilter_constant_FILTER_24DB>`."
+msgstr ""
+"用于兼容的斜率选项。当前实现将其映射到与  :ref:`FILTER_24DB<class_FmodAudioEffectFilter_constant_FILTER_24DB>`  "
+"相同的每倍频程 24 dB 低通滤波器。"
+
+#: ../../source/classes/class_fmodaudioeffectfilter.rst:136 10adabb489154cb89aa870d54541314a
+msgid ""
+"The low-pass cutoff frequency in Hz, clamped to 1.0 through 20500.0. Frequencies above the "
+"cutoff are attenuated."
+msgstr "低通截止频率，单位为 Hz，限制在 1.0 到 20500.0。截止频率以上的成分会被衰减。"

@@ -40,38 +40,6 @@ msgstr "用于在编辑器中预览 FMOD 音频流的自定义属性控件。"
 msgid "Description"
 msgstr "描述"
 
-#: ../../source/classes/class_fmodaudiopreviewproperty.rst:23 5158dc50ddbc46fea8258ec641031a7a
-msgid ""
-"FmodAudioPreviewProperty provides a visual audio preview widget that displays in the Godot "
-"inspector when viewing :ref:`FmodAudioStream<class_FmodAudioStream>` resources. It features:"
-msgstr ""
-"FmodAudioPreviewProperty 在 Godot 检查器查看    :ref:`FmodAudioStream<class_FmodAudioStream>`    "
-"资源时显示音频预览控件，提供以下功能："
-
-#: ../../source/classes/class_fmodaudiopreviewproperty.rst:25 7c77b927bc324d688c0fd692bd9811d6
-msgid "Visual waveform display"
-msgstr "波形显示"
-
-#: ../../source/classes/class_fmodaudiopreviewproperty.rst:27 badd1312726e44a2b4166f4df74d7156
-msgid "Play/pause/stop controls"
-msgstr "播放、暂停和停止控制"
-
-#: ../../source/classes/class_fmodaudiopreviewproperty.rst:29 9b2f3e7417f345a0955d23f6b087b03b
-msgid "Playback position indicator"
-msgstr "播放位置指示器"
-
-#: ../../source/classes/class_fmodaudiopreviewproperty.rst:31 54fafe02fc5144e1ac3223344dd4604e
-msgid "Current time and duration display"
-msgstr "当前时间和总时长显示"
-
-#: ../../source/classes/class_fmodaudiopreviewproperty.rst:33 7674aff1deee4fd9aa18e2578ab1291d
-msgid "Click-to-seek functionality on the waveform"
-msgstr "点击波形定位播放位置"
-
-#: ../../source/classes/class_fmodaudiopreviewproperty.rst:35 ceaa88eb3176437db4a9e668a28d8da0
-msgid "The preview is generated asynchronously to avoid blocking the editor."
-msgstr "异步生成预览，避免阻塞编辑器。"
-
 #: ../../source/classes/class_fmodaudiopreviewproperty.rst:40 67b94ca664064f0982b39c89d8e96ab2
 msgid "Methods"
 msgstr "方法"
@@ -203,3 +171,16 @@ msgstr "|void| **_on_finished**\\ (\\ )"
 #: ../../source/classes/class_fmodaudiopreviewproperty.rst:174 bd6eaa96490144bba1ff5caecc450888
 msgid "|void| **_generate_waveform_async**\\ (\\ )"
 msgstr "|void| **_generate_waveform_async**\\ (\\ )"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:21 d75e6206b2054b4a98cc1d34ef4cd5ba
+msgid ""
+"Displays an audio waveform, playback controls, a position indicator, and time labels for "
+":ref:`FmodAudioStream<class_FmodAudioStream>` in the inspector. Clicking the waveform seeks "
+"playback."
+msgstr "在检查器中为  :ref:`FmodAudioStream<class_FmodAudioStream>`  显示波形、播放控件、位置指示器和时间标签。点击波形可跳转播放位置。"
+
+#: ../../source/classes/class_fmodaudiopreviewproperty.rst:23 5eacd0f3150c43abbeaa83717344c4e8
+msgid ""
+"Waveform generation is deferred to a later main-thread call; it does not run on a background "
+"worker."
+msgstr "波形生成会延迟到后续的主线程调用中执行，不会在后台工作线程运行。"

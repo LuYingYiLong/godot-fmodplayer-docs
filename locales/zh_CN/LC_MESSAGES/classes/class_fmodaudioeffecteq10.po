@@ -40,27 +40,11 @@ msgstr "10 段均衡器预设。"
 msgid "Description"
 msgstr "描述"
 
-#: ../../source/classes/class_fmodaudioeffecteq10.rst:23 55db32837cc442d2a512f0c30d84b254
-msgid ""
-"FmodAudioEffectEQ10 is a 10-band graphic equalizer using FMOD's MULTIBAND_EQ DSP. It provides "
-"frequency equalization across ten bands spanning from 31Hz to 16000Hz, suitable for detailed "
-"audio shaping."
-msgstr ""
-"**FmodAudioEffectEQ10**    是    ``FmodAudioEffectEQ``    的 10 频段预设版本。默认频段为    ``31.25``   、   "
-"``62.5``   、   ``125``   、   ``250``   、   ``500``   、   ``1000``   、   ``2000``   、   ``4000``"
-"   、   ``8000``   、   ``16000``    Hz。它继承    ``FmodAudioEffectEQ``    的全部属性和方法。"
-
 #: ../../source/classes/class_fmodaudioeffecteq10.rst:25 5c5f9ce02c3f4d6d94e435c33d17fe39
 msgid ""
 "Each band can be individually adjusted for gain (-60 dB to +24 dB), frequency, Q value, and "
 "filter type. By default, all bands use peaking filters with a Q value of 0.707."
 msgstr "每个频段均可独立设置增益（-60 dB 到 +24 dB）、频率、Q 值和滤波类型。默认使用 Q 值为 0.707 的峰值滤波器。"
-
-#: ../../source/classes/class_fmodaudioeffecteq10.rst:27 dc6fca11413548628b2c8cb1f86a4153
-msgid ""
-"The frequency bands are: 31Hz, 62Hz, 125Hz, 250Hz, 500Hz, 1000Hz, 2000Hz, 4000Hz, 8000Hz, and "
-"16000Hz."
-msgstr "频段中心频率依次为 31、62、125、250、500、1000、2000、4000、8000 和 16000 Hz。"
 
 #: ../../source/classes/class_fmodaudioeffecteq10.rst:29 193b7a2b61654291936775402ed49348
 msgid ""
@@ -401,10 +385,6 @@ msgstr "属性说明"
 msgid ":ref:`float<class_float>` **band_0_gain** = ``0.0``"
 msgstr ":ref:`float<class_float>` **band_0_gain** = ``0.0``"
 
-#: ../../source/classes/class_fmodaudioeffecteq10.rst:138 bd3af52450ac4d71b4854b81ec9793e3
-msgid "Gain for the first band (31Hz) in decibels. Range: -60 to +24 dB."
-msgstr "第 1 个频段（31Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
-
 #: ../../source/classes/class_fmodaudioeffecteq10.rst:148 42ad78da337847dc9876b933ddc6ac38
 msgid ":ref:`float<class_float>` **band_0_frequency** = ``31.25``"
 msgstr ":ref:`float<class_float>` **band_0_frequency** = ``31.25``"
@@ -436,10 +416,6 @@ msgstr ""
 #: ../../source/classes/class_fmodaudioeffecteq10.rst:184 f2bc9ca33aae4f90992bb2b42b7f6ec0
 msgid ":ref:`float<class_float>` **band_1_gain** = ``0.0``"
 msgstr ":ref:`float<class_float>` **band_1_gain** = ``0.0``"
-
-#: ../../source/classes/class_fmodaudioeffecteq10.rst:186 fc6a16bdf2a4422bb28b91527b5edd16
-msgid "Gain for the second band (62Hz) in decibels. Range: -60 to +24 dB."
-msgstr "第 2 个频段（62Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
 
 #: ../../source/classes/class_fmodaudioeffecteq10.rst:196 ccaac864f6fe4de681ef8e9149f7d34e
 msgid ":ref:`float<class_float>` **band_1_frequency** = ``62.5``"
@@ -756,3 +732,23 @@ msgid ""
 msgstr ""
 "第 10 个频段的滤波类型，默认为    "
 ":ref:`FmodAudioEffectEQ.FILTER_PEAKING<class_FmodAudioEffectEQ_constant_FILTER_PEAKING>`   。"
+
+#: ../../source/classes/class_fmodaudioeffecteq10.rst:21 703988689fdc44f8ad325e18d7f7e57b
+msgid ""
+"FmodAudioEffectEQ10 is a 10-band graphic equalizer using FMOD's MULTIBAND_EQ DSP. Its initial"
+" center frequencies span 31.25 Hz through 16000 Hz."
+msgstr "FmodAudioEffectEQ10 是使用 FMOD MULTIBAND_EQ DSP 的十频段均衡器，初始中心频率覆盖 31.25 Hz 到 16000 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq10.rst:25 36bfd80105c1443aba641e5de78cded1
+msgid ""
+"The initial center frequencies are 31.25 Hz, 62.5 Hz, 125 Hz, 250 Hz, 500 Hz, 1000 Hz, 2000 "
+"Hz, 4000 Hz, 8000 Hz, and 16000 Hz."
+msgstr "初始中心频率依次为 31.25、62.5、125、250、500、1000、2000、4000、8000 和 16000 Hz。"
+
+#: ../../source/classes/class_fmodaudioeffecteq10.rst:136 6146e4831edd419d85db63598b848951
+msgid "Gain for the first band (initially 31.25 Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 1 个频段（初始为 31.25 Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"
+
+#: ../../source/classes/class_fmodaudioeffecteq10.rst:184 bb9774650ae6420facb38e9682f48c0a
+msgid "Gain for the second band (initially 62.5 Hz) in decibels. Range: -60 to +24 dB."
+msgstr "第 2 个频段（初始为 62.5 Hz）的增益，单位为分贝，范围为 -60 到 +24 dB。"

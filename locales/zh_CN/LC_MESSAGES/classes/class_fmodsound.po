@@ -34,15 +34,14 @@ msgstr "FMOD::Sound 的引用计数包装器，表示已加载的音频资源"
 msgid "Description"
 msgstr "描述"
 
-#: ../../source/classes/class_fmodsound.rst:23 7133735d0e154a4389a5619295c84b76
+#: ../../source/classes/class_fmodsound.rst:21 41fc83bc85ad414e99d76fe01a6481de
 msgid ""
-"FmodSound is a RefCounted wrapper around FMOD::Sound, representing a loaded sound resource. It "
-"provides access to sound metadata, format information, raw audio data, music-specific controls "
-"for tracker formats (MOD/S3M/XM/IT/MIDI), and metadata tags."
+"FmodSound is a RefCounted wrapper around FMOD::Sound, representing a loaded sound resource. "
+"It provides access to sound metadata, format information, raw audio data, music-specific "
+"controls for tracker formats (MOD/S3M/XM/IT/MIDI), and metadata tags."
 msgstr ""
-"**FmodSound**    是   ``FMOD::Sound <https://www.fmod.com/docs/2.02/api/core-api-sound.html>``   "
-"的一个   ``RefCounted``   "
-"包装器，表示已加载的音频资源。它提供对音频元数据、格式信息、原始音频数据、追踪器格式（MOD/S3M/XM/IT/MIDI）的音乐专用控制以及元数据标签的访问"
+"FmodSound 是 FMOD::Sound "
+"的引用计数包装器，表示已加载的声音资源。它提供声音元数据、格式信息、原始音频数据、模块音乐格式（MOD/S3M/XM/IT/MIDI）的专用控制和元数据标签。"
 
 #: ../../source/classes/class_fmodsound.rst:27 ba09672455fe4398a903149bbac5af63
 msgid ""
@@ -465,9 +464,9 @@ msgstr "Apple 音频队列解码器（.mp4、.m4a、.mp3）。支持的编码：
 msgid ":ref:`FmodSoundType<enum_FmodSound_FmodSoundType>` **FMOD_SOUND_TYPE_AT9** = ``19``"
 msgstr ":ref:`FmodSoundType<enum_FmodSound_FmodSoundType>` **FMOD_SOUND_TYPE_AT9** = ``19``"
 
-#: ../../source/classes/class_fmodsound.rst:274 416f1965b2ad453c95e9360add2c7bbb
+#: ../../source/classes/class_fmodsound.rst:270 a7463bef79624b48ae7437618caca846
 msgid "PlayStation 4 ATRAC9 format."
-msgstr "PlayStation 4 ATRAC9 format."
+msgstr "PlayStation 4 ATRAC9 格式。"
 
 #: ../../source/classes/class_fmodsound.rst:280 48dbee8a52934f058da2cec984aa0da8
 msgid ":ref:`FmodSoundType<enum_FmodSound_FmodSoundType>` **FMOD_SOUND_TYPE_VORBIS** = ``20``"
@@ -707,9 +706,9 @@ msgstr "浮点数"
 msgid ":ref:`FmodTagDataType<enum_FmodSound_FmodTagDataType>` **FMOD_TAG_DATA_TYPE_STRING** = ``3``"
 msgstr ":ref:`FmodTagDataType<enum_FmodSound_FmodTagDataType>` **FMOD_TAG_DATA_TYPE_STRING** = ``3``"
 
-#: ../../source/classes/class_fmodsound.rst:542 a2289eda11a740a284547550f653f3ad
+#: ../../source/classes/class_fmodsound.rst:532 4f9972a07b9d4328be5dbc54b7b12633
 msgid "String (ASCII/UTF-8)."
-msgstr "String (ASCII/UTF-8)."
+msgstr "字符串（ASCII/UTF-8）。"
 
 #: ../../source/classes/class_fmodsound.rst:548 1f87422f305f4189a2f1b45fd15f04bb
 msgid ":ref:`FmodTagDataType<enum_FmodSound_FmodTagDataType>` **FMOD_TAG_DATA_TYPE_STRING_UTF16** = ``4``"
@@ -842,17 +841,9 @@ msgstr "\\ **Example:**"
 msgid ":ref:`bool<class_bool>` **sound_is_valid**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **sound_is_valid**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodsound.rst:699 da6a957a77714edea9aad1e8259ea65f
-msgid "Sound is valid."
-msgstr "如果声音实例已成功初始化并且音效可用，则返回    ``true``   。这表示声音已准备好处理音频操作"
-
 #: ../../source/classes/class_fmodsound.rst:711 6a35563f71524343908f257fa74124d5
 msgid ":ref:`bool<class_bool>` **sound_is_null**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **sound_is_null**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodsound.rst:713 e4bf0203e6964828841f8457ec98dc7d
-msgid "Sound is null."
-msgstr "如果声音实例未初始化或无效，则返回    ``true``   。这表示声音尚未准备好使用"
 
 #: ../../source/classes/class_fmodsound.rst:725 9fe6585cfaf04dc3a634330d60dc13f5
 msgid ":ref:`String<class_String>` **get_name**\\ (\\ ) |const|"
@@ -1066,19 +1057,6 @@ msgstr ""
 ":ref:`FmodSoundLock<class_FmodSoundLock>` **lock**\\ (\\ offset\\: :ref:`int<class_int>`, "
 "length\\: :ref:`int<class_int>`\\ ) |const|"
 
-#: ../../source/classes/class_fmodsound.rst:909 cb0a46a6f6fb47c3af7cb96432f60bd8
-msgid ""
-"Locks a region of the sound's sample data for direct access. This allows reading or modifying the"
-" raw PCM data. Returns an :ref:`FmodSoundLock<class_FmodSoundLock>` object that provides access "
-"to the locked memory region."
-msgstr "锁定声音的采样数据区域，以直接读取或修改原始 PCM 数据。返回用于访问锁定内存的  :ref:`FmodSoundLock<class_FmodSoundLock>`  对象。"
-
-#: ../../source/classes/class_fmodsound.rst:913 77b34cdd4d6e4b24b52cfbbc8dd40272
-msgid ""
-"\\ **Note:** Always ensure the :ref:`FmodSoundLock<class_FmodSoundLock>` is freed (goes out of "
-"scope) to unlock the data."
-msgstr "**注意：**  使用完毕后应释放  :ref:`FmodSoundLock<class_FmodSoundLock>` ，例如让其离开作用域，以解锁数据。"
-
 #: ../../source/classes/class_fmodsound.rst:934 f28884b968cd4ac09ec8935634efa8c0
 msgid ":ref:`int<class_int>` **get_music_num_channels**\\ (\\ ) |const|"
 msgstr ":ref:`int<class_int>` **get_music_num_channels**\\ (\\ ) |const|"
@@ -1275,10 +1253,6 @@ msgstr "**注意：**  MP3、WAV 等普通音频文件通常返回 0。"
 msgid "|void| **set_pcmread_callback**\\ (\\ callback\\: :ref:`Callable<class_Callable>`\\ )"
 msgstr "|void| **set_pcmread_callback**\\ (\\ callback\\: :ref:`Callable<class_Callable>`\\ )"
 
-#: ../../source/classes/class_fmodsound.rst:1114 749fdec9a9f04742995c022a093a61c0
-msgid "Sets pcmread callback."
-msgstr "设置 PCM 读取回调函数。当 FMOD 需要更多音频数据进行解码和播放时，会调用此回调"
-
 #: ../../source/classes/class_fmodsound.rst:1126 c9331fbab5764254b06f3ccec1a2ca19
 msgid ":ref:`Callable<class_Callable>` **get_pcmread_callback**\\ (\\ ) |const|"
 msgstr ":ref:`Callable<class_Callable>` **get_pcmread_callback**\\ (\\ ) |const|"
@@ -1290,10 +1264,6 @@ msgstr "返回当前设置的 PCM 读取回调函数。如果未设置回调，�
 #: ../../source/classes/class_fmodsound.rst:1140 338cb0f298044b6bb278bbf4e08ad045
 msgid "|void| **set_pcmsetpos_callback**\\ (\\ callback\\: :ref:`Callable<class_Callable>`\\ )"
 msgstr "|void| **set_pcmsetpos_callback**\\ (\\ callback\\: :ref:`Callable<class_Callable>`\\ )"
-
-#: ../../source/classes/class_fmodsound.rst:1142 52ea3e26d70248b5885ae2bc5e1dd829
-msgid "Sets pcmsetpos callback."
-msgstr "设置 PCM 定位回调函数。当 FMOD 需要改变声音的内部读取位置时（例如循环或跳转），会调用此回调"
 
 #: ../../source/classes/class_fmodsound.rst:1154 471259cf772f430eb4ecfc6ce18cff4a
 msgid ":ref:`Callable<class_Callable>` **get_pcmsetpos_callback**\\ (\\ ) |const|"
@@ -1307,10 +1277,6 @@ msgstr "返回当前设置的 PCM 定位回调函数。如果未设置回调，�
 msgid "|void| **set_nonblock_callback**\\ (\\ callback\\: :ref:`Callable<class_Callable>`\\ )"
 msgstr "|void| **set_nonblock_callback**\\ (\\ callback\\: :ref:`Callable<class_Callable>`\\ )"
 
-#: ../../source/classes/class_fmodsound.rst:1170 9aeb7cc4ba0743c89423249ee68e2551
-msgid "Sets nonblock callback."
-msgstr "设置非阻塞加载完成回调函数。当使用非阻塞标志（    ``FMOD_NONBLOCKING``    ）打开声音且加载完成时，会调用此回调"
-
 #: ../../source/classes/class_fmodsound.rst:1182 6b66b02311f343349f95d43dca7e3ff9
 msgid ":ref:`Callable<class_Callable>` **get_nonblock_callback**\\ (\\ ) |const|"
 msgstr ":ref:`Callable<class_Callable>` **get_nonblock_callback**\\ (\\ ) |const|"
@@ -1322,9 +1288,50 @@ msgstr "返回当前设置的非阻塞加载完成回调函数。如果未设置
 msgid "var sound: FmodSound = FmodSound.load_from_file(\"res://music.mp3\")"
 msgstr "var sound: FmodSound = FmodSound.load_from_file(\"res://music.mp3\")"
 
+#: ../../source/classes/class_fmodsound.rst:683 256a0004433a408bb2448ee02435cd8d
 msgid ""
-"var lock: FmodSoundLock = sound.lock(0, sound.get_length(FmodSystem.FMOD_TIME_UNIT_PCMBYTES))\n"
-"# Access data through lock object"
+"Returns ``true`` if this wrapper holds a non-null FMOD Sound pointer. For nonblocking sounds,"
+" use :ref:`get_open_state()<class_FmodSound_method_get_open_state>` to check loading "
+"progress."
 msgstr ""
-"var lock: FmodSoundLock = sound.lock(0, sound.get_length(FmodSystem.FMOD_TIME_UNIT_PCMBYTES))\n"
-"# Access data through lock object"
+"如果包装器持有非空的 FMOD Sound 指针，则返回  ``true`` 。对于非阻塞加载的声音，应通过  "
+":ref:`get_open_state()<class_FmodSound_method_get_open_state>`  检查加载进度。"
+
+#: ../../source/classes/class_fmodsound.rst:695 6f0d9f2694a14aadb168fdd823f1356d
+msgid "Returns ``true`` if this wrapper holds no FMOD Sound pointer."
+msgstr "如果包装器没有持有 FMOD Sound 指针，则返回  ``true`` 。"
+
+#: ../../source/classes/class_fmodsound.rst:873 cee4145c96b34d72bbafce382daa0aed
+msgid ""
+"Locks a region of the sound buffer and returns a :ref:`FmodSoundLock<class_FmodSoundLock>` "
+"for reading copies of the PCM data. ``offset`` and ``length`` are measured in bytes. Returns "
+"``null`` if locking fails."
+msgstr ""
+"锁定声音缓冲区的一段区域，并返回用于读取 PCM 数据副本的  :ref:`FmodSoundLock<class_FmodSoundLock>` 。 ``offset``  和  "
+"``length``  以字节为单位。锁定失败时返回  ``null`` 。"
+
+#: ../../source/classes/class_fmodsound.rst:875 04218c48f3cd4acebf1e52652bdfe035
+msgid ""
+"Keep this sound alive until the lock is unlocked. Modifying arrays returned by "
+":ref:`FmodSoundLock<class_FmodSoundLock>` does not modify the sound buffer."
+msgstr "解锁前必须保持此声音存活。修改  :ref:`FmodSoundLock<class_FmodSoundLock>`  返回的数组不会修改声音缓冲区。"
+
+#: ../../source/classes/class_fmodsound.rst:1049 8aab794ca36b40b8a113a439d549bcf7
+msgid "Stores the PCM read callback on this wrapper."
+msgstr "在此包装器上保存PCM 读取回调。"
+
+#: ../../source/classes/class_fmodsound.rst:1051 ../../source/classes/class_fmodsound.rst:1077
+#: ../../source/classes/class_fmodsound.rst:1103 5d65847b81054058af9e52740647c3b9
+#: 69bf33be10c14634b86819eda0f5d044 d2d7ad666dd9430d877cf7f49a8447af
+msgid ""
+"The current sound creation methods do not register the corresponding native FMOD callback; "
+"assigning a :ref:`Callable<class_Callable>` here does not enable callback delivery."
+msgstr "当前声音创建方法未注册相应的原生 FMOD 回调；在此处设置  :ref:`Callable<class_Callable>`  不会启用回调通知。"
+
+#: ../../source/classes/class_fmodsound.rst:1075 0f88411c4cdc4065a136a521daf93720
+msgid "Stores the PCM position callback on this wrapper."
+msgstr "在此包装器上保存PCM 定位回调。"
+
+#: ../../source/classes/class_fmodsound.rst:1101 32e54af9e62d4e5f97444e4c85fee8da
+msgid "Stores the nonblocking load callback on this wrapper."
+msgstr "在此包装器上保存非阻塞加载回调。"

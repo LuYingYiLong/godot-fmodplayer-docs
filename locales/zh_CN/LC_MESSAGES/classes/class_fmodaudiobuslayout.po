@@ -38,41 +38,6 @@ msgstr "管理音频总线的布局和层级"
 msgid "Description"
 msgstr "描述"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:23 4bcf0eb88636448d9bf31b075343a6d2
-msgid ""
-"FmodAudioBusLayout manages the complete hierarchy of audio buses in the FMOD audio system. It "
-"maintains a collection of :ref:`FmodAudioBus<class_FmodAudioBus>` instances and their "
-"relationships."
-msgstr ""
-"**FmodAudioBusLayout**    管理 FMOD 音频系统中音频总线的完整层级结构。它维护了    "
-":ref:`FmodAudioBus<class_FmodAudioBus>`    实例及其相互关系的集合"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:25 8106874c6b184f0b8fc458177e132afe
-msgid ""
-"The layout automatically synchronizes with Godot's AudioServer bus layout, allowing seamless "
-"integration with Godot's built-in audio system."
-msgstr "该布局会自动与 Godot 的   ``AudioServer``   总线布局同步，实现与 Godot 内置音频系统的集成"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:27 19cfa8989a06485d9e46f759aa7827dc
-msgid "Key features:"
-msgstr "主要特性："
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:29 12399935860e4457a9fdfc64fca4a978
-msgid "Bus hierarchy management (master bus + sub-buses)"
-msgstr "主要特性："
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:31 0cf08d2924224a1fbeda87bad87fbbc4
-msgid "Volume, solo, and mute state control per bus"
-msgstr "逐总线控制音量、独奏和静音"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:33 9819b6169ade47eea507f82e1461d008
-msgid "Effect chain management for each bus"
-msgstr "逐总线管理效果链"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:35 09431dd1ef184c51833df54c30013ede
-msgid "Synchronization with Godot AudioServer"
-msgstr "与 Godot AudioServer 同步"
-
 #: ../../source/classes/class_fmodaudiobuslayout.rst:40 2443df9626304b1da2be40dd740cc572
 msgid "Methods"
 msgstr "方法"
@@ -272,14 +237,6 @@ msgstr ""
 "|void| **create_audio_bus**\\ (\\ name\\: :ref:`String<class_String>`, parent\\: "
 ":ref:`FmodAudioBus<class_FmodAudioBus>` = null\\ )"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:100 18faf32fccd24388b7b2630bcfcca710
-msgid "Creates a new audio bus with the specified ``name`` and optional ``parent``."
-msgstr "使用指定名称和可选父级创建新的音频总线"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:102 e518917afac64ae5a3cecaef9e89228a
-msgid "The master bus is created automatically and should not be created manually."
-msgstr "总线名称必须唯一。    ``Master``    总线由布局自动确保存在，不应手动移除"
-
 #: ../../source/classes/class_fmodaudiobuslayout.rst:114 480b4db4bac64c4f83fe0d04038fd24d
 msgid ""
 ":ref:`FmodAudioBus<class_FmodAudioBus>` **get_audio_bus**\\ (\\ name\\: "
@@ -292,9 +249,9 @@ msgstr ""
 msgid "Returns the :ref:`FmodAudioBus<class_FmodAudioBus>` with the specified ``name``."
 msgstr "返回具有指定名称的    :ref:`FmodAudioBus<class_FmodAudioBus>`"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:118 9f66c6c018924cb09c74974108191d7a
+#: ../../source/classes/class_fmodaudiobuslayout.rst:100 3684d782d37e447884fd5dc7761e7b59
 msgid "Returns ``null`` if no bus with that name exists."
-msgstr "返回具有指定名称的    ``FmodAudioBus``"
+msgstr "不存在该名称的总线时返回  ``null`` 。"
 
 #: ../../source/classes/class_fmodaudiobuslayout.rst:130 cb4f56b74eb442b8a27cabe8eb5a1ef1
 msgid ":ref:`bool<class_bool>` **has_audio_bus**\\ (\\ name\\: :ref:`String<class_String>`\\ ) |const|"
@@ -371,10 +328,6 @@ msgstr "设置指定总线的用户静音状态，并更新所有总线的最终
 #: ../../source/classes/class_fmodaudiobuslayout.rst:230 32f2d0af2fa347d2aa6537a2abdf131d
 msgid ":ref:`bool<class_bool>` **bus_is_mute**\\ (\\ name\\: :ref:`String<class_String>`\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **bus_is_mute**\\ (\\ name\\: :ref:`String<class_String>`\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:232 bb4a978e97c643ef90f21cda5dc6714a
-msgid "Returns ``true`` if the specified bus is muted."
-msgstr "如果指定总线被用户设置为静音，则返回    ``true``"
 
 #: ../../source/classes/class_fmodaudiobuslayout.rst:244 efaf20a4192b47afa24c68a69b846e8a
 msgid ""
@@ -456,22 +409,57 @@ msgstr "如果总线或效果不存在，则返回    ``null``"
 msgid "|void| **sync_from_audio_server**\\ (\\ )"
 msgstr "|void| **sync_from_audio_server**\\ (\\ )"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:330 d5f3934ed73841cea895cd301ba69058
-msgid "Synchronizes the entire bus layout with Godot's AudioServer."
-msgstr "将此布局与 Godot   ``AudioServer``   的当前总线布局同步"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:332 6f37800f2e944856b142a038b7d3bc4d
-msgid "This creates/updates buses to match the AudioServer layout and copies all state."
-msgstr "同步会保留或创建    ``Master``    总线，重建其他总线，连接父子关系，并同步音量、静音、独奏、旁路状态和支持的 Godot 音频效果"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:334 67156ee81569444690c39c15ef35a51b
-msgid "Called automatically when the bus layout changes in Godot."
-msgstr "Godot 中的总线布局变化时会自动调用。"
-
 #: ../../source/classes/class_fmodaudiobuslayout.rst:344 a45451a51c7a4f0b926e60aaf0c0278c
 msgid ":ref:`bool<class_bool>` **sync_from_audio_server_if_changed**\\ (\\ )"
 msgstr ":ref:`bool<class_bool>` **sync_from_audio_server_if_changed**\\ (\\ )"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:346 6780bf88dc5b4a7e9967c5013da3f540
-msgid "Sync from audio server if changed."
-msgstr "检测到变化时从 AudioServer 同步。"
+#: ../../source/classes/class_fmodaudiobuslayout.rst:21 91f14f9896ac40279a88b284adb2d01d
+msgid ""
+"Stores :ref:`FmodAudioBus<class_FmodAudioBus>` instances and their routing, mixing state, and"
+" effects. The layout managed by :ref:`FmodServer<class_FmodServer>` is synchronized from "
+":ref:`AudioServer<class_AudioServer>`; an independently created layout requires explicit "
+"synchronization."
+msgstr ""
+"保存  :ref:`FmodAudioBus<class_FmodAudioBus>`  实例及其路由、混音状态和效果器。\\  "
+":ref:`FmodServer<class_FmodServer>`  管理的布局会从  :ref:`AudioServer<class_AudioServer>`  "
+"同步；独立创建的布局需要显式同步。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:86 c4098b874719471689f11fc7ff0df91e
+msgid ""
+"\\ :ref:`sync_from_audio_server()<class_FmodAudioBusLayout_method_sync_from_audio_server>` "
+"creates the master bus when needed."
+msgstr ""
+":ref:`sync_from_audio_server()<class_FmodAudioBusLayout_method_sync_from_audio_server>`  "
+"会在需要时创建主总线。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:198 3457959362224196bc0f0086efd51382
+msgid ""
+"Returns the bus's stored user mute flag. It does not include muting caused by another bus's "
+"solo state."
+msgstr "返回总线保存的用户静音标志，不包含其他总线独奏造成的静音。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:284 eb0ef61290ec4e6ea7c79aa2519956e8
+msgid ""
+"Synchronizes bus names, routing, volume, mute, solo, and supported enabled effects from "
+":ref:`AudioServer<class_AudioServer>`. Unsupported effect types are skipped."
+msgstr "从  :ref:`AudioServer<class_AudioServer>`  同步总线名称、路由、音量、静音、独奏以及受支持且已启用的效果器。不支持的效果器类型会被跳过。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:286 f9015ebf30684669af63a8e34b4cb826
+msgid ""
+"The layout managed by :ref:`FmodServer<class_FmodServer>` is synchronized automatically. "
+"Independently created layouts must be synchronized explicitly."
+msgstr ":ref:`FmodServer<class_FmodServer>`  管理的布局会自动同步。独立创建的布局需显式调用同步。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:298 488cab2e0dec4c8d9fa40e3986f16b98
+msgid ""
+"Checks for changes and updates the layout or bus state when needed. Returns ``true`` when an "
+"update was triggered. Bus and effect-slot checks are spread across calls, so a single call "
+"may not detect every change."
+msgstr "检查变化，并在需要时更新布局或总线状态。触发更新时返回  ``true`` \\ 。总线和效果器槽位的检查分散到多次调用中，单次调用可能无法发现所有变化。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:84 743d2cff53914664ab7ba8b712fcf7e6
+msgid ""
+"Creates a bus with ``name`` and routes it to ``parent``'s channel group. An omitted parent "
+"routes to the master group. A parent without an initialized channel group is rejected without"
+" adding a bus."
+msgstr "创建名为  ``name``  的总线，并路由到  ``parent``  的通道组。未指定父级时路由到主通道组。父级没有有效通道组时拒绝创建，不会添加总线。"

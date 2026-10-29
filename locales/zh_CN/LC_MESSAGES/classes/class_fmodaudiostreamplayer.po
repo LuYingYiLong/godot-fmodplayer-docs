@@ -34,49 +34,6 @@ msgstr "用于播放 2D 非空间化音频流的节点"
 msgid "Description"
 msgstr "描述"
 
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:23 3f591129584f48bcb379b06156c3ed20
-msgid ""
-"FmodAudioStreamPlayer is a node that plays :ref:`FmodAudioStream<class_FmodAudioStream>` "
-"resources using the FMOD audio engine. It provides high-level playback control similar to Godot's"
-" built-in AudioStreamPlayer but with FMOD's advanced features."
-msgstr ""
-"**FmodAudioStreamPlayer**    用于播放    :ref:`FmodAudioStream<class_FmodAudioStream>`    "
-"资源，适合背景音乐、UI 音效和不需要空间定位的音频"
-
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:25 2c9bfdb57b974ef9af9951d65122cdfc
-msgid "Key features:"
-msgstr "主要特性："
-
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:27 3c2dafbc44d6425c9e7cc7af6cfe6aa7
-msgid "Stream playback with play/pause/stop/seek controls"
-msgstr "播放、暂停、停止和定位控制"
-
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:29 ba2ed536bb57483fade5f005dcb36eda
-msgid "Volume and pitch control in decibels"
-msgstr "以分贝控制音量，并控制音高"
-
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:31 f099e53157974483aa8b049ab7fe1cc4
-msgid "Automatic playback on node entry (autoplay)"
-msgstr "节点进入场景树时自动播放"
-
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:33 95e2439989be41608b58894a3d83e25f
-msgid "Stereo, surround, or center mix target routing"
-msgstr "立体声、环绕声或中置声道混音目标"
-
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:35 286c4af2f3d5462b9e0dcebac64c5ab8
-msgid "Bus routing for mixing"
-msgstr "通过总线路由进行混音"
-
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:37 2a3a630f95e3401b9a4039e54caa6cec
-msgid "Integration with FMOD's channel group system"
-msgstr "与 FMOD 通道组系统集成"
-
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:39 4b4acd6269744e3a9766084ea2d09af1
-msgid ""
-"This node is suitable for music, ambient sounds, and any audio that requires full playback "
-"control."
-msgstr "适合音乐、环境声和需要完整播放控制的音频。"
-
 #: ../../source/classes/class_fmodaudiostreamplayer.rst:44 c72eeff724af4cd3ade0f36013de59be
 msgid "Properties"
 msgstr "属性"
@@ -359,10 +316,6 @@ msgstr "信号"
 msgid "**finished**\\ (\\ )"
 msgstr "**finished**\\ (\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:140 7868049ebba6496b8d87d9fe03a9e5c8
-msgid "Emitted when finished."
-msgstr "播放结束时发出。"
-
 #: ../../source/classes/class_fmodaudiostreamplayer.rst:149 cc5172969e18427cae3181144db5fd7e
 msgid "Enumerations"
 msgstr "枚举"
@@ -539,10 +492,6 @@ msgstr "|void| **set_auto_play**\\ (\\ enable\\: :ref:`bool<class_bool>`\\ )"
 msgid ":ref:`bool<class_bool>` **is_autoplay_enabled**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **is_autoplay_enabled**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:303 c3105b84039d4553b621c5c21c0054a5
-msgid "If ``true``, audio plays automatically when the node enters the scene tree."
-msgstr "进入场景树后自动播放"
-
 #: ../../source/classes/class_fmodaudiostreamplayer.rst:313 21d8d8ea32d84af9a110b51472fef5f3
 msgid ":ref:`bool<class_bool>` **preload_on_set_stream** = ``false``"
 msgstr ":ref:`bool<class_bool>` **preload_on_set_stream** = ``false``"
@@ -589,16 +538,6 @@ msgstr "输出到的音频总线名称"
 msgid "Method Descriptions"
 msgstr "方法说明"
 
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:356 1ac4665d39e74561a93da503e8cd8bae
-msgid ""
-"Sets the :ref:`FmodAudioStream<class_FmodAudioStream>` to play. The stream can be changed during "
-"playback,"
-msgstr "设置要播放的音频流 （参见   :ref:`FmodAudioStream<class_FmodAudioStream>`  ）"
-
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:358 a3e941529e064f28a272fb0d85bde353
-msgid "which will stop the current playback and start the new stream if playing."
-msgstr "如果当前正在播放，会先停止当前通道并清除播放状态"
-
 #: ../../source/classes/class_fmodaudiostreamplayer.rst:372 e6e8145fdc8b42afab444897723b8c1a
 msgid "Returns the :ref:`FmodAudioStream<class_FmodAudioStream>` currently assigned to this player."
 msgstr "返回当前设置的音频流 （参见   :ref:`FmodAudioStream<class_FmodAudioStream>`  ）"
@@ -611,29 +550,9 @@ msgstr "未设置音频流时返回    ``null``   。"
 msgid ":ref:`bool<class_bool>` **preload_stream**\\ (\\ )"
 msgstr ":ref:`bool<class_bool>` **preload_stream**\\ (\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:388 8c4ae2e826ae42d491471c58e7aa030e
-msgid ""
-"Preloads the assigned stream by creating its internal :ref:`FmodSound<class_FmodSound>` before "
-"playback starts."
-msgstr ""
-"预加载当前    ``stream``   ，提前创建内部    :ref:`FmodSound<class_FmodSound>`   ，用于减少第一次播放时的延迟。创建成功返回    "
-"``true``   。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:390 530881dc2802493aad91934fafdd7e05
-msgid "This reduces first-play latency when the stream is later played."
-msgstr "可降低后续首次播放该音频流的延迟。"
-
 #: ../../source/classes/class_fmodaudiostreamplayer.rst:402 23066a7f6ab0452c8f3cc5d4e63f82d0
 msgid "|void| **play**\\ (\\ from_position\\: :ref:`float<class_float>` = 0.0\\ )"
 msgstr "|void| **play**\\ (\\ from_position\\: :ref:`float<class_float>` = 0.0\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:404 0e07a81ee7e3461b9002fbf5e2335d4f
-msgid "Starts playing the assigned stream from the specified position in seconds."
-msgstr "从指定位置开始播放，单位为秒"
-
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:406 6a735ecd71d04e54b3b45b72b1edc1f8
-msgid "If ``from_position`` is negative, playback starts from the beginning."
-msgstr "如果内部通道仍然有效，会复用该通道并跳转到指定位置；否则会从当前    ``stream``    创建新的 FMOD 通道"
 
 #: ../../source/classes/class_fmodaudiostreamplayer.rst:418 8934f891eaf043e6a1838aa59244e1f7
 msgid "|void| **seek**\\ (\\ to_position\\: :ref:`float<class_float>`\\ )"
@@ -655,21 +574,13 @@ msgstr "|void| **stop**\\ (\\ )"
 msgid "Stops playback and resets the position to the beginning."
 msgstr "停止播放并清除暂停状态"
 
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:450 4b7287e11b8940969d3849185f1418e2
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:412 5c295a8eb4a847ceacf1176069ecf990
 msgid "Controls playback state. Setting to ``true`` starts playback from the beginning."
-msgstr "设置播放状态"
+msgstr "控制播放状态。设置为  ``true``  会从头开始播放。"
 
 #: ../../source/classes/class_fmodaudiostreamplayer.rst:452 04d6cdc0517c41389ea81b21583da558
 msgid "Setting to ``false`` stops playback."
 msgstr "设为    ``false``    会停止播放。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:466 7f16f7a01c064325858cfcba0fdd99b6
-msgid "Returns ``true`` if audio is currently playing."
-msgstr "如果内部通道有效且正在播放，则返回    ``true``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:468 9c0643d254724300a1837ec58d1237e3
-msgid "Note that this returns ``false`` when paused, even though playback is active."
-msgstr "暂停时返回    ``false``   ，即使播放尚未结束。"
 
 #: ../../source/classes/class_fmodaudiostreamplayer.rst:482 187fddc602a14daaa19d2ec1344a7d02
 msgid "Pauses or resumes playback without changing position."
@@ -682,14 +593,6 @@ msgstr "返回当前播放流的暂停状态"
 #: ../../source/classes/class_fmodaudiostreamplayer.rst:508 ad754b05a1af41e583926fd434b5389b
 msgid ":ref:`float<class_float>` **get_playback_position**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_playback_position**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:510 f29fc3d9e6e74e18b999f5bcf6de939c
-msgid "Returns the current playback position in seconds."
-msgstr "返回当前播放位置，单位为秒"
-
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:512 c08855cd6a274d3cbc42e79f5f25d502
-msgid "Returns ``0.0`` if not playing."
-msgstr "未播放时返回    ``0.0``   。"
 
 #: ../../source/classes/class_fmodaudiostreamplayer.rst:526 ecd8c4d3064b4695af1675813552c9ce
 msgid "Sets the volume in decibels."
@@ -743,20 +646,6 @@ msgstr ""
 msgid "Returns the mix target used to route this player's output across available speakers."
 msgstr "返回当前播放器用于向扬声器路由音频的混音目标。"
 
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:614 214642b5e6654d83a219e4ac34da83f6
-msgid ""
-"Enables or disables autoplay. When enabled, the stream starts playing automatically when the node"
-" enters the scene tree."
-msgstr "设置是否在进入场景树后自动播放"
-
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:628 89b91417b9fa497e8cc48fad6b8c079d
-msgid "Returns ``true`` if autoplay is enabled."
-msgstr "如果启用了自动播放，则返回    ``true``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:630 36577188a8e744f6aa63e3ed76475107
-msgid "When enabled, playback starts automatically when the node enters the scene tree."
-msgstr "启用后，节点进入场景树时自动开始播放。"
-
 #: ../../source/classes/class_fmodaudiostreamplayer.rst:644 6a60994a58324f4eabfb2e016d3000b6
 msgid ""
 "If enabled, assigning :ref:`stream<class_FmodAudioStreamPlayer_property_stream>` immediately "
@@ -767,18 +656,79 @@ msgstr "设置是否在赋值    :ref:`stream<class_FmodAudioStreamPlayer_proper
 msgid "Returns ``true`` if streams are preloaded as soon as they are assigned."
 msgstr "如果启用了赋值时预加载，则返回    ``true``   。"
 
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:672 951a330f61fa42128e2295b3854999d5
-msgid "Sets the audio bus to route this player's output to."
-msgstr "设置输出总线名称"
-
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:674 94755d5125cc457b9f61fec201ebe579
-msgid "The bus name should match a bus in the :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`."
-msgstr "总线名称应与    :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`    中的总线匹配。"
-
 #: ../../source/classes/class_fmodaudiostreamplayer.rst:688 b0606c4b718847ccbdb9e2982a13ef08
 msgid "Returns the name of the audio bus this player outputs to."
 msgstr "返回当前输出总线名称"
 
-#: ../../source/classes/class_fmodaudiostreamplayer.rst:690 34a6a324f5994a87832edc4e8caf6216
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:618 5f26cedeb01d4124bbd7d7df7c722ac6
 msgid "The default value is ``&\"Master\"``."
-msgstr "如果设置的总线不存在，则返回    ``\"Master\"``"
+msgstr "默认值为  ``&\"Master\"`` 。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:21 63656de04fdd4df4a493047216a75bd1
+msgid ""
+"Plays :ref:`FmodAudioStream<class_FmodAudioStream>` resources through FMOD with volume in "
+"decibels, a pitch multiplier, playback controls, speaker mix targets, and bus routing."
+msgstr "通过 FMOD 播放  :ref:`FmodAudioStream<class_FmodAudioStream>` \\ ，支持分贝音量、音调倍率、播放控制、扬声器混音目标和总线路由。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:122 4cfffc7091c94893955c1538632f164c
+msgid ""
+"Emitted when the playback channel ends. Calling "
+":ref:`stop()<class_FmodAudioStreamPlayer_method_stop>` or replacing "
+":ref:`stream<class_FmodAudioStreamPlayer_property_stream>` does not emit this signal."
+msgstr ""
+"播放通道结束时发出。调用  :ref:`stop()<class_FmodAudioStreamPlayer_method_stop>`  或替换  "
+":ref:`stream<class_FmodAudioStreamPlayer_property_stream>`  不会发出此信号。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:285 c1443d5f87c64655b7a6345c4a1d66c0
+msgid "If ``true``, defers playback until the node is ready, outside the editor."
+msgstr "为  ``true``  时，在节点就绪后延迟开始播放，在编辑器中不生效。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:336 eddad39a526946fc89488f46c12e05e8
+msgid ""
+"Stops the current playback and assigns ``stream``. Playback must be started again with "
+":ref:`play()<class_FmodAudioStreamPlayer_method_play>`."
+msgstr "停止当前播放并设置  ``stream`` \\ ，之后需调用  :ref:`play()<class_FmodAudioStreamPlayer_method_play>`  开始播放。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:362 89c50001082f4c4ab90861e32870f16c
+msgid ""
+"Preloads the assigned stream by creating its internal :ref:`FmodSound<class_FmodSound>`. "
+"Returns ``false`` if no stream is assigned or sound creation fails."
+msgstr "通过创建内部  :ref:`FmodSound<class_FmodSound>`  预加载音频流。未设置音频流或声音创建失败时返回  ``false`` \\ 。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:374 bacddfbcf073402891b13786c57cd4c9
+msgid "Starts or restarts playback at ``from_position``, in seconds. Use a nonnegative position."
+msgstr "从  ``from_position``  指定的位置开始或重新播放，单位为秒。位置应为非负数。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:426 6fd3c776648b4f06ae8f508c9cb8459d
+msgid "Returns ``true`` while a playback channel is active, including while paused."
+msgstr "播放通道处于活动状态时返回  ``true`` \\ ，暂停时也返回  ``true`` \\ 。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:462 29d02aa6d9ee47978d86e370bf8ec684
+msgid ""
+"Returns the playback position in seconds, including while paused. Returns ``0.0`` if there is"
+" no valid playback channel."
+msgstr "返回播放位置，单位为秒，暂停时仍可查询。没有有效播放通道时返回  ``0.0`` \\ 。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:554 e60c38ecf00e46749293d68e9c10e3a2
+msgid ""
+"Sets :ref:`auto_play<class_FmodAudioStreamPlayer_property_auto_play>`. Automatic playback is "
+"deferred until the node is ready and is disabled in the editor."
+msgstr ""
+"设置  :ref:`auto_play<class_FmodAudioStreamPlayer_property_auto_play>` \\ "
+"。自动播放会延迟到节点就绪后执行，在编辑器中不生效。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:566 810c1ab76e1c41d8ac689f1bf1d56f36
+msgid "Returns whether :ref:`auto_play<class_FmodAudioStreamPlayer_property_auto_play>` is enabled."
+msgstr "返回是否启用了  :ref:`auto_play<class_FmodAudioStreamPlayer_property_auto_play>` \\ 。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:602 eeb30610bd434ab0b43330c4073dad11
+msgid ""
+"Selects the bus used when the next playback channel is created. Changing this value does not "
+"reroute an existing channel."
+msgstr "设置下次创建播放通道时使用的总线。修改此值不会改变现有通道的路由。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer.rst:604 70f88a78b4ce4392b2a4701dc8c32937
+msgid ""
+"If the bus is not found in :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`, playback uses"
+" the master channel group."
+msgstr "在  :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`  中找不到该总线时，播放使用主通道组。"

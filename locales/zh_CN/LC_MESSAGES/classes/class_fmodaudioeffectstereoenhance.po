@@ -54,13 +54,6 @@ msgid ""
 "special stereo effects, or ensure mono compatibility when needed."
 msgstr "可扩展音乐和音效的立体声声场，也可缩窄声像以改善单声道兼容性。"
 
-#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:27 1d6d8d43a10c443ea9f7df71c3b52086
-msgid ""
-"The pan pullout spreads low frequencies to the sides while keeping mid frequencies centered, time"
-" pullout introduces micro-delays between channels for width, and surround adds depth to the "
-"stereo field."
-msgstr "声像扩展将低频向两侧展开并保持中频居中；时间扩展通过声道间的微小延迟增加宽度；环绕参数增加声场深度。"
-
 #: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:32 462b4a926cd243a5b3da1c0cb61b0174
 msgid "Properties"
 msgstr "属性"
@@ -169,14 +162,6 @@ msgstr "|void| **set_pan_pullout**\\ (\\ amount\\: :ref:`float<class_float>`\\ )
 msgid ":ref:`float<class_float>` **get_pan_pullout**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_pan_pullout**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:87 043803d2ffce4aa08048dce3988540d6
-msgid ""
-"The amount of pan-based stereo widening applied. Range: 0.0 to 4.0. Default: 1.0. Higher values "
-"spread the stereo image wider by moving different frequency components to different positions in "
-"the stereo field. This creates a sense of width while maintaining center image stability. A value"
-" of 0.0 disables this effect."
-msgstr "声像拉开量"
-
 #: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:97 07c7eba9f73b45fab243acc35678b44e
 msgid ":ref:`float<class_float>` **time_pullout_ms** = ``0.0``"
 msgstr ":ref:`float<class_float>` **time_pullout_ms** = ``0.0``"
@@ -218,25 +203,17 @@ msgstr "|void| **set_surround**\\ (\\ amount\\: :ref:`float<class_float>`\\ )"
 msgid ":ref:`float<class_float>` **get_surround**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_surround**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:121 f4bb23fb8ed04fcc8c77bd1de26abf86
-msgid ""
-"The amount of surround processing applied to the stereo field. Range: -100.0 to 100.0. Default: "
-"0.0. Positive values enhance the ambient/spatial components of the signal, creating a more "
-"enveloping sound. Negative values can make the stereo image more focused and direct. This "
-"parameter manipulates the difference (L-R) signal to alter spaciousness."
-msgstr "环绕增强量"
-
 #: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:130 f08c1aad4664433aadad448f9005740b
 msgid "Method Descriptions"
 msgstr "方法说明"
 
-#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:140 69be9bec590b4ed29c98b5a9b627becf
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:136 b8a14177762e4a678b39fb70db235c26
 msgid "Sets :ref:`pan_pullout<class_FmodAudioEffectStereoEnhance_property_pan_pullout>`."
-msgstr "Sets :ref:`pan_pullout<class_FmodAudioEffectStereoEnhance_property_pan_pullout>`."
+msgstr "设置  :ref:`pan_pullout<class_FmodAudioEffectStereoEnhance_property_pan_pullout>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:154 51d575f5c9bc42538fc7cfb21396fe1d
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:148 ffe8501b978a419698385f6a2d7711fa
 msgid "Returns :ref:`pan_pullout<class_FmodAudioEffectStereoEnhance_property_pan_pullout>`."
-msgstr "Returns :ref:`pan_pullout<class_FmodAudioEffectStereoEnhance_property_pan_pullout>`."
+msgstr "返回  :ref:`pan_pullout<class_FmodAudioEffectStereoEnhance_property_pan_pullout>` 。"
 
 #: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:168 2a191d24e1bf42aaad0beb6d4b14c7a4
 msgid "Sets time pullout."
@@ -246,10 +223,32 @@ msgstr "设置时间差拉开量。"
 msgid "Returns time pullout."
 msgstr "返回时间差拉开量。"
 
-#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:196 4a83942429fe452b9dc6ea8a238c5f39
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:184 b12a6ec6f55b4e30a244fdd40d4eba30
 msgid "Sets :ref:`surround<class_FmodAudioEffectStereoEnhance_property_surround>`."
-msgstr "Sets :ref:`surround<class_FmodAudioEffectStereoEnhance_property_surround>`."
+msgstr "设置  :ref:`surround<class_FmodAudioEffectStereoEnhance_property_surround>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:210 77d7424a1ad0414f811f4a3a9554b6be
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:196 6e92dd7c225b467d822c9aa1f8741688
 msgid "Returns :ref:`surround<class_FmodAudioEffectStereoEnhance_property_surround>`."
-msgstr "Returns :ref:`surround<class_FmodAudioEffectStereoEnhance_property_surround>`."
+msgstr "返回  :ref:`surround<class_FmodAudioEffectStereoEnhance_property_surround>` 。"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:25 8f582cf896bf4be2a2f05e7cb59af36a
+msgid ""
+"Pan pullout scales the side signal around the average of the left and right channels across "
+"the full frequency range. With surround disabled, time pullout delays the right channel. With"
+" surround enabled, it delays the mid signal and adds it to the left channel while subtracting"
+" it from the right channel."
+msgstr "声像扩展以左右声道平均值为中心，缩放全频段的侧信号。关闭环绕时，时间扩展会延迟右声道；启用环绕时，会延迟中间信号，再加到左声道并从右声道减去。"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:85 ebf1aa5a07bb41e0bb3367aa0f2fed2f
+msgid ""
+"The side-signal multiplier used for stereo width, clamped to 0.0 through 4.0. At 0.0, the "
+"first two channels collapse to their mono average before delay or surround processing. The "
+"default 1.0 preserves their width; values above 1.0 widen the stereo difference."
+msgstr "用于控制立体声宽度的侧信号倍率，限制在 0.0 到 4.0。0.0 会在延迟或环绕处理前将前两个声道合并为单声道平均值；默认值 1.0 保留原有宽度，大于 1.0 会放大立体声差异。"
+
+#: ../../source/classes/class_fmodaudioeffectstereoenhance.rst:119 3a19f28dd706429ba6919f11da32d5f3
+msgid ""
+"The delayed mid-signal gain used for surround processing, clamped to 0.0 through 1.0. The "
+"default 0.0 disables surround processing. Positive values add the delayed mid signal to the "
+"left channel and subtract it from the right channel."
+msgstr "环绕处理中延迟的中间信号增益，限制在 0.0 到 1.0。默认值 0.0 关闭环绕处理；正值会将延迟的中间信号加到左声道，并从右声道减去。"

@@ -1075,12 +1075,6 @@ msgstr "将一个 DSP 单元添加为当前 DSP 的输入，返回连接对象�
 msgid ":ref:`Dictionary<class_Dictionary>` **get_input**\\ (\\ index\\: :ref:`int<class_int>`\\ ) |const|"
 msgstr ":ref:`Dictionary<class_Dictionary>` **get_input**\\ (\\ index\\: :ref:`int<class_int>`\\ ) |const|"
 
-#: ../../source/classes/class_fmoddsp.rst:691 3d2b9ed08ed74822a8cb57f14b81df74
-msgid ""
-"Gets the DSP and connection at the specified input index. Returns a dictionary with ``output`` "
-"and ``output_connection``."
-msgstr "返回指定输入索引处的 DSP 和连接，字典包含     ``output``     和     ``output_connection``    。"
-
 #: ../../source/classes/class_fmoddsp.rst:703 1d29629f001c455d9d9a08da1e3c82f6
 msgid ""
 ":ref:`Dictionary<class_Dictionary>` **get_output**\\ (\\ index\\: :ref:`int<class_int>`\\ ) "
@@ -1088,12 +1082,6 @@ msgid ""
 msgstr ""
 ":ref:`Dictionary<class_Dictionary>` **get_output**\\ (\\ index\\: :ref:`int<class_int>`\\ ) "
 "|const|"
-
-#: ../../source/classes/class_fmoddsp.rst:705 c12dab2e08c142d7936ea40bc90ccd5b
-msgid ""
-"Gets the DSP and connection at the specified output index. Returns a dictionary with ``input`` "
-"and ``input_connection``."
-msgstr "返回指定输出索引处的 DSP 和连接，字典包含     ``input``     和     ``input_connection``    。"
 
 #: ../../source/classes/class_fmoddsp.rst:717 7fb7c04fb1184348989b977c796e619a
 msgid ":ref:`int<class_int>` **get_num_inputs**\\ (\\ ) |const|"
@@ -1381,10 +1369,6 @@ msgstr "重置 DSP 内部状态，准备接收新的输入信号。"
 msgid "|void| **release**\\ (\\ )"
 msgstr "|void| **release**\\ (\\ )"
 
-#: ../../source/classes/class_fmoddsp.rst:1109 e8fa585af52e486a9f1f483ac98e6cdb
-msgid "Releases the DSP unit and frees its memory."
-msgstr "释放 DSP 单元及其内存。"
-
 #: ../../source/classes/class_fmoddsp.rst:1121 b32b050c522745ce8c3187c3513c7149
 msgid ":ref:`FmodDSPType<enum_FmodDSP_FmodDSPType>` **get_type**\\ (\\ ) |const|"
 msgstr ":ref:`FmodDSPType<enum_FmodDSP_FmodDSPType>` **get_type**\\ (\\ ) |const|"
@@ -1417,10 +1401,6 @@ msgstr "返回当前 DSP 的 CPU 用量，包含     ``exclusive``     和     `
 #: ../../source/classes/class_fmoddsp.rst:1163 c6a8feb06d5e459fb10847ecc9537f3a
 msgid ":ref:`FmodSystem<class_FmodSystem>` **get_system_object**\\ (\\ ) |const|"
 msgstr ":ref:`FmodSystem<class_FmodSystem>` **get_system_object**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmoddsp.rst:1165 923282c95d9d45ea8cd0354cd87e83ad
-msgid "Gets the parent FMOD system object."
-msgstr "返回所属的 FMOD 系统对象。"
 
 #: ../../source/classes/class_fmoddsp.rst:1175 7b2faecf221f45799732f6dbcd52b438
 msgid "|void| **set_create_callback**\\ (\\ callback\\: :ref:`Callable<class_Callable>`\\ )"
@@ -1773,3 +1753,27 @@ msgid ""
 msgstr ""
 "返回由     :ref:`set_getparam_data_callback()<class_FmodDSP_method_set_getparam_data_callback>`     "
 "设置的回调。"
+
+#: ../../source/classes/class_fmoddsp.rst:681 bbdc0a3e25e147f8b3c8fa2de7cd0c43
+msgid ""
+"Gets the DSP and connection at the specified input index. Returns a dictionary with ``input``"
+" and ``input_connection``, or an empty dictionary on failure."
+msgstr "返回指定输入索引处的 DSP 和连接，字典包含  ``input``  和  ``input_connection`` ；失败时返回空字典。"
+
+#: ../../source/classes/class_fmoddsp.rst:693 b568b0d9f9554addb2f0936bdef90444
+msgid ""
+"Gets the DSP and connection at the specified output index. Returns a dictionary with "
+"``output`` and ``output_connection``, or an empty dictionary on failure."
+msgstr "返回指定输出索引处的 DSP 和连接，字典包含  ``output``  和  ``output_connection`` ；失败时返回空字典。"
+
+#: ../../source/classes/class_fmoddsp.rst:1053 f326b614092b43c2aaf044f62bec0bab
+msgid ""
+"Releases an owned DSP unit and frees its memory. Borrowed DSP handles returned by graph or "
+"channel queries cannot be released through this method."
+msgstr "释放当前对象拥有的 DSP 单元及其内存。通过 DSP 图或通道查询取得的借用句柄不能调用此方法释放。"
+
+#: ../../source/classes/class_fmoddsp.rst:1101 2aa20bceca094d8d944b44a69b66d7d9
+msgid ""
+"Returns a borrowed wrapper for the parent FMOD system, or ``null`` on failure. The returned "
+"wrapper cannot close or release the system."
+msgstr "返回所属 FMOD 系统的借用封装，失败时返回  ``null`` 。该封装不能关闭或释放系统。"

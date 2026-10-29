@@ -30,10 +30,6 @@ msgstr ""
 "**继承：** :ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>` **<**"
 " :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
 
-#: ../../source/classes/class_fmodaudioeffectrecord.rst:16 38827040f8774557aff1d84de2101c7e
-msgid "Records audio input or output to a WAV file."
-msgstr "录音效果，会让信号原样通过，并在录制时缓存经过该总线的音频。"
-
 #: ../../source/classes/class_fmodaudioeffectrecord.rst:21 f657a614171c4500912bcc3a872c5f4f
 msgid "Description"
 msgstr "描述"
@@ -186,12 +182,6 @@ msgstr "导出 16-bit PCM WAV"
 msgid ":ref:`Format<enum_FmodAudioEffectRecord_Format>` **FORMAT_IMA_ADPCM** = ``2``"
 msgstr ":ref:`Format<enum_FmodAudioEffectRecord_Format>` **FORMAT_IMA_ADPCM** = ``2``"
 
-#: ../../source/classes/class_fmodaudioeffectrecord.rst:104 567a77b6076949bab9c3072834601324
-msgid ""
-"IMA ADPCM compressed audio format. Significantly smaller file size with acceptable quality. "
-"Useful when storage space is limited, though slightly lower quality than PCM formats."
-msgstr "请求 IMA ADPCM；当前会以有效 16-bit PCM WAV 数据导出"
-
 #: ../../source/classes/class_fmodaudioeffectrecord.rst:113 dae0c3f7af7643c5b8dd0f83be578996
 msgid "Property Descriptions"
 msgstr "属性说明"
@@ -211,16 +201,6 @@ msgstr "|void| **set_format**\\ (\\ format\\: :ref:`Format<enum_FmodAudioEffectR
 #: d3af917c86ad48538f6f29e1fadde9f4
 msgid ":ref:`Format<enum_FmodAudioEffectRecord_Format>` **get_format**\\ (\\ ) |const|"
 msgstr ":ref:`Format<enum_FmodAudioEffectRecord_Format>` **get_format**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudioeffectrecord.rst:126 c03dcf8bea184705b6ef93c07781da83
-msgid ""
-"The audio format used for recording. See :ref:`Format<enum_FmodAudioEffectRecord_Format>` for "
-"available options. The default "
-":ref:`FORMAT_16_BITS<class_FmodAudioEffectRecord_constant_FORMAT_16_BITS>` provides good quality "
-"and reasonable file size."
-msgstr ""
-"导出为   ``AudioStreamWAV``   时使用的采样格式 （参见   :ref:`Format<enum_FmodAudioEffectRecord_Format>`  ） （参见"
-"   :ref:`FORMAT_16_BITS<class_FmodAudioEffectRecord_constant_FORMAT_16_BITS>`  ）"
 
 #: ../../source/classes/class_fmodaudioeffectrecord.rst:136 3376da71b2e04c02a68570a9019bea32
 msgid ":ref:`bool<class_bool>` **recording_active** = ``false``"
@@ -250,36 +230,21 @@ msgstr "是否正在录制 （参见   :ref:`get_recording()<class_FmodAudioEffe
 msgid "Method Descriptions"
 msgstr "方法说明"
 
-#: ../../source/classes/class_fmodaudioeffectrecord.rst:162 5d754eb6237044559caffc7dbe423400
-msgid "Sets :ref:`recording_active<class_FmodAudioEffectRecord_property_recording_active>`."
-msgstr "Sets :ref:`recording_active<class_FmodAudioEffectRecord_property_recording_active>`."
-
-#: ../../source/classes/class_fmodaudioeffectrecord.rst:176 abce8647d0204fc19115001fcc533df3
+#: ../../source/classes/class_fmodaudioeffectrecord.rst:168 65669d022ba84cca8d16a46894c80dc7
 msgid "Returns :ref:`recording_active<class_FmodAudioEffectRecord_property_recording_active>`."
-msgstr "Returns :ref:`recording_active<class_FmodAudioEffectRecord_property_recording_active>`."
+msgstr "返回  :ref:`recording_active<class_FmodAudioEffectRecord_property_recording_active>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectrecord.rst:190 bde32d9069d54129974ff5cdbbf525e7
+#: ../../source/classes/class_fmodaudioeffectrecord.rst:180 125adc5612304144850c3405b0e8070a
 msgid "Sets :ref:`format<class_FmodAudioEffectRecord_property_format>`."
-msgstr "Sets :ref:`format<class_FmodAudioEffectRecord_property_format>`."
+msgstr "设置  :ref:`format<class_FmodAudioEffectRecord_property_format>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectrecord.rst:204 71581119cd1c4a6f9910ba4fa302ffac
+#: ../../source/classes/class_fmodaudioeffectrecord.rst:192 d87dbae0c5f5436ca0b22b5a252e3bc3
 msgid "Returns :ref:`format<class_FmodAudioEffectRecord_property_format>`."
-msgstr "Returns :ref:`format<class_FmodAudioEffectRecord_property_format>`."
+msgstr "返回  :ref:`format<class_FmodAudioEffectRecord_property_format>` 。"
 
 #: ../../source/classes/class_fmodaudioeffectrecord.rst:216 fd27ee7518844798bc1c36561e0a8235
 msgid ":ref:`AudioStreamWAV<class_AudioStreamWAV>` **get_recording**\\ (\\ ) |const|"
 msgstr ":ref:`AudioStreamWAV<class_AudioStreamWAV>` **get_recording**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudioeffectrecord.rst:218 d0bbf9094ef044e48271d8ae9aabc856
-msgid ""
-"Returns the recorded audio as an :ref:`AudioStreamWAV<class_AudioStreamWAV>` resource. The "
-"returned audio stream can be played back, saved to disk, or used like any other audio resource. "
-"This method should be called after setting "
-":ref:`recording_active<class_FmodAudioEffectRecord_property_recording_active>` to ``false`` to "
-"stop the recording."
-msgstr ""
-"返回当前缓存内容生成的 WAV 音频流。 （参见   :ref:`AudioStreamWAV<class_AudioStreamWAV>`  ） （参见   "
-":ref:`recording_active<class_FmodAudioEffectRecord_property_recording_active>`  ）"
 
 #: ../../source/classes/class_fmodaudioeffectrecord.rst:230 ba975b0ba0954601ad6837a0f8edb5aa
 msgid ""
@@ -289,6 +254,58 @@ msgstr ""
 ":ref:`PackedVector2Array<class_PackedVector2Array>` **get_waveform_snapshot**\\ (\\ width\\: "
 ":ref:`int<class_int>` = 512, seconds\\: :ref:`float<class_float>` = 5.0\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectrecord.rst:232 c848a46c1600429f9fe77c2d0d6b1ee9
-msgid "Returns waveform snapshot."
-msgstr "返回最近一段录音的波形快照。"
+#: ../../source/classes/class_fmodaudioeffectrecord.rst:14 1819d1b11dc3455480922545bf637847
+msgid "Captures audio passing through a bus and exposes it as a WAV resource."
+msgstr "捕获流经总线的音频，并以 WAV 资源提供录音。"
+
+#: ../../source/classes/class_fmodaudioeffectrecord.rst:100 e8cd2c8df6b445189a7301ca7a2bffa7
+msgid ""
+"IMA ADPCM request value. The current implementation exports 16-bit PCM WAV data for this "
+"setting; it does not encode IMA ADPCM."
+msgstr "IMA ADPCM 请求值。当前实现对此设置导出 16 位 PCM WAV 数据，不执行 IMA ADPCM 编码。"
+
+#: ../../source/classes/class_fmodaudioeffectrecord.rst:122 03f1e47e03ff4481829261ccbb01630a
+msgid ""
+"The sample format used when "
+":ref:`get_recording()<class_FmodAudioEffectRecord_method_get_recording>` exports the captured"
+" floating-point samples. Changing it does not change the capture buffer. "
+":ref:`FORMAT_IMA_ADPCM<class_FmodAudioEffectRecord_constant_FORMAT_IMA_ADPCM>` currently "
+"exports 16-bit PCM, like "
+":ref:`FORMAT_16_BITS<class_FmodAudioEffectRecord_constant_FORMAT_16_BITS>`."
+msgstr ""
+":ref:`get_recording()<class_FmodAudioEffectRecord_method_get_recording>`  "
+"导出已捕获浮点采样时使用的采样格式。修改它不会改变捕获缓冲。 "
+":ref:`FORMAT_IMA_ADPCM<class_FmodAudioEffectRecord_constant_FORMAT_IMA_ADPCM>`  当前与  "
+":ref:`FORMAT_16_BITS<class_FmodAudioEffectRecord_constant_FORMAT_16_BITS>`  一样导出 16 位 PCM。"
+
+#: ../../source/classes/class_fmodaudioeffectrecord.rst:156 68f44fe282b842f2a0c0859d82e77dc0
+msgid ""
+"Starts or stops recording. Changing from inactive to active clears the previous recording and"
+" allocates a new capture buffer. Setting the current state again does nothing. Stopping "
+"preserves captured samples for "
+":ref:`get_recording()<class_FmodAudioEffectRecord_method_get_recording>`."
+msgstr ""
+"开始或停止录音。从停止切换到录音会清除上一次录音并分配新的捕获缓冲；重复设置当前状态没有效果。停止后保留已捕获采样，供  "
+":ref:`get_recording()<class_FmodAudioEffectRecord_method_get_recording>`  读取。"
+
+#: ../../source/classes/class_fmodaudioeffectrecord.rst:204 0e5385d7b548412293b6b75ee4e862b2
+msgid ""
+"Returns a new :ref:`AudioStreamWAV<class_AudioStreamWAV>` containing a copy of the captured "
+"samples, or ``null`` if no audio has been recorded. It does not consume or clear the "
+"recording. Stop recording first when a completed recording is required."
+msgstr ""
+"返回包含已捕获采样副本的新  :ref:`AudioStreamWAV<class_AudioStreamWAV>` ；尚无录音时返回  ``null`` "
+"。读取不会消耗或清除录音。需要完整录音时，应先停止录制。"
+
+#: ../../source/classes/class_fmodaudioeffectrecord.rst:216 52aad080ee8643eea7944311c5621819
+msgid ""
+"Returns a waveform envelope for the latest ``seconds`` of recorded audio. A nonpositive "
+"duration uses the entire recording. For each of ``width`` horizontal buckets, two "
+":ref:`Vector2<class_Vector2>` elements contain the normalized x position and the minimum or "
+"maximum sample value, in that order. Channels are averaged and amplitudes are clamped to -1.0"
+" through 1.0. Returns an empty array for a nonpositive width or no recorded audio; otherwise "
+"the array has ``width * 2`` elements."
+msgstr ""
+"返回最近  ``seconds``  秒录音的波形包络；时长非正时使用全部录音。每个  ``width``  水平分桶返回两个  "
+":ref:`Vector2<class_Vector2>` ，依次存放归一化的 x 位置和最小、最大采样值。各声道先取平均，幅度限制在 -1.0 到 "
+"1.0。宽度非正或尚无录音时返回空数组，否则数组包含  ``width * 2``  个元素。"

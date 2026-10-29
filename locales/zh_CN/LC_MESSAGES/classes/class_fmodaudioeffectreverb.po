@@ -346,12 +346,6 @@ msgstr "|void| **set_predelay_feedback**\\ (\\ predelay_feedback\\: :ref:`float<
 msgid ":ref:`float<class_float>` **get_predelay_feedback**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_predelay_feedback**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectreverb.rst:166 29328b849e3e414b814c10d9088de3df
-msgid ""
-"The amount of feedback in the predelay section. Range: 0.0 to 1.0. Controls how much of the "
-"predelay output is fed back into itself, affecting the density of early reflections."
-msgstr "预延迟反馈量"
-
 #: ../../source/classes/class_fmodaudioeffectreverb.rst:176 0a0940bccf4d4e66909c10751223611e
 msgid ":ref:`float<class_float>` **predelay_msec** = ``150.0``"
 msgstr ":ref:`float<class_float>` **predelay_msec** = ``150.0``"
@@ -367,12 +361,6 @@ msgstr "|void| **set_predelay_msec**\\ (\\ predelay_msec\\: :ref:`float<class_fl
 #: dbfd226ce72c4feb9d5279fc8e93ab7f
 msgid ":ref:`float<class_float>` **get_predelay_msec**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_predelay_msec**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudioeffectreverb.rst:183 81d34e7fec1446fc96b72fa8c6b0d66f
-msgid ""
-"The delay time before the reverb tail begins, measured in milliseconds. Range: 0.0 to 300.0 ms. "
-"Simulates the time it takes for sound to reach the first reflecting surfaces in a room."
-msgstr "预延迟时间，单位为毫秒"
 
 #: ../../source/classes/class_fmodaudioeffectreverb.rst:193 1b52e75614e14bdba33aa37d76e3f951
 msgid ":ref:`float<class_float>` **room_size** = ``0.8``"
@@ -445,21 +433,21 @@ msgstr "混响信号电平"
 msgid "Method Descriptions"
 msgstr "方法说明"
 
-#: ../../source/classes/class_fmodaudioeffectreverb.rst:253 ab7b9674b7c442c5a93efe077e9f484e
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:249 6da9439cd20e41b1a6906c721523ada5
 msgid "Sets :ref:`damping<class_FmodAudioEffectReverb_property_damping>`."
-msgstr "Sets :ref:`damping<class_FmodAudioEffectReverb_property_damping>`."
+msgstr "设置  :ref:`damping<class_FmodAudioEffectReverb_property_damping>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectreverb.rst:267 78636faa8fa240129030bec5345e9daf
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:261 e76c505737bd4a908af725499e5b0307
 msgid "Returns :ref:`damping<class_FmodAudioEffectReverb_property_damping>`."
-msgstr "Returns :ref:`damping<class_FmodAudioEffectReverb_property_damping>`."
+msgstr "返回  :ref:`damping<class_FmodAudioEffectReverb_property_damping>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectreverb.rst:281 d8475359b39e449d8336a86318271232
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:273 6e8ebdd7b24944a592308cb6d211f8fd
 msgid "Sets :ref:`dry<class_FmodAudioEffectReverb_property_dry>`."
-msgstr "Sets :ref:`dry<class_FmodAudioEffectReverb_property_dry>`."
+msgstr "设置  :ref:`dry<class_FmodAudioEffectReverb_property_dry>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectreverb.rst:295 be4e06b6c23046fd9f417cd8e0820e4f
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:285 3b4a8ba819c84dd78d4981836bae7360
 msgid "Returns :ref:`dry<class_FmodAudioEffectReverb_property_dry>`."
-msgstr "Returns :ref:`dry<class_FmodAudioEffectReverb_property_dry>`."
+msgstr "返回  :ref:`dry<class_FmodAudioEffectReverb_property_dry>` 。"
 
 #: ../../source/classes/class_fmodaudioeffectreverb.rst:309 371eda1e3dce47f3b62d7cec79587e1e
 msgid "Sets hpf."
@@ -469,42 +457,54 @@ msgstr "设置高通滤波量。"
 msgid "Returns hpf."
 msgstr "返回高通滤波量。"
 
-#: ../../source/classes/class_fmodaudioeffectreverb.rst:337 30bc2a02d0754fd5a6d94ff03c4678bc
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:321 84a7942c947748af807dbc610890d834
 msgid "Sets :ref:`predelay_feedback<class_FmodAudioEffectReverb_property_predelay_feedback>`."
-msgstr "Sets :ref:`predelay_feedback<class_FmodAudioEffectReverb_property_predelay_feedback>`."
+msgstr "设置  :ref:`predelay_feedback<class_FmodAudioEffectReverb_property_predelay_feedback>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectreverb.rst:351 bbef4a75530e400d9ea110025091556a
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:333 7755c00476174aa9883e283443ff31b1
 msgid "Returns :ref:`predelay_feedback<class_FmodAudioEffectReverb_property_predelay_feedback>`."
-msgstr "Returns :ref:`predelay_feedback<class_FmodAudioEffectReverb_property_predelay_feedback>`."
+msgstr "返回  :ref:`predelay_feedback<class_FmodAudioEffectReverb_property_predelay_feedback>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectreverb.rst:365 d1886a33f1d94cc298c5bcd9b2f89521
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:345 50f9057c9b0e4fb494100a7800e497cc
 msgid "Sets :ref:`predelay_msec<class_FmodAudioEffectReverb_property_predelay_msec>`."
-msgstr "Sets :ref:`predelay_msec<class_FmodAudioEffectReverb_property_predelay_msec>`."
+msgstr "设置  :ref:`predelay_msec<class_FmodAudioEffectReverb_property_predelay_msec>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectreverb.rst:379 648ace4e9fcf4f5185dfa24a7b1aa122
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:357 79ea0324448a4784a7d0a640de20c12e
 msgid "Returns :ref:`predelay_msec<class_FmodAudioEffectReverb_property_predelay_msec>`."
-msgstr "Returns :ref:`predelay_msec<class_FmodAudioEffectReverb_property_predelay_msec>`."
+msgstr "返回  :ref:`predelay_msec<class_FmodAudioEffectReverb_property_predelay_msec>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectreverb.rst:393 bb1b717e32ae4abf9402b1a10e80d333
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:369 1f82e8de4b024b00b949fa60b8206ebb
 msgid "Sets :ref:`room_size<class_FmodAudioEffectReverb_property_room_size>`."
-msgstr "Sets :ref:`room_size<class_FmodAudioEffectReverb_property_room_size>`."
+msgstr "设置  :ref:`room_size<class_FmodAudioEffectReverb_property_room_size>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectreverb.rst:407 6d9d759aca7b4cad9fc2928b5c1b8263
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:381 2e732015e0784ff5a65bf2288044d9d3
 msgid "Returns :ref:`room_size<class_FmodAudioEffectReverb_property_room_size>`."
-msgstr "Returns :ref:`room_size<class_FmodAudioEffectReverb_property_room_size>`."
+msgstr "返回  :ref:`room_size<class_FmodAudioEffectReverb_property_room_size>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectreverb.rst:421 512da6f109294d9299014eb67042ef8e
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:393 ad08c1b0ff094586b3ba446921a28152
 msgid "Sets :ref:`spread<class_FmodAudioEffectReverb_property_spread>`."
-msgstr "Sets :ref:`spread<class_FmodAudioEffectReverb_property_spread>`."
+msgstr "设置  :ref:`spread<class_FmodAudioEffectReverb_property_spread>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectreverb.rst:435 16ffe754cea44759937bab8a07bcdcd3
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:405 f1c9b63997b74736aeed08819f383ee7
 msgid "Returns :ref:`spread<class_FmodAudioEffectReverb_property_spread>`."
-msgstr "Returns :ref:`spread<class_FmodAudioEffectReverb_property_spread>`."
+msgstr "返回  :ref:`spread<class_FmodAudioEffectReverb_property_spread>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectreverb.rst:449 4bb44dcb2eb04e71935356c017321674
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:417 ac8571764d1840b2a723bccd2c356aff
 msgid "Sets :ref:`wet<class_FmodAudioEffectReverb_property_wet>`."
-msgstr "Sets :ref:`wet<class_FmodAudioEffectReverb_property_wet>`."
+msgstr "设置  :ref:`wet<class_FmodAudioEffectReverb_property_wet>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectreverb.rst:463 d1bdbad94b6b420693c0796cf7b26de3
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:429 e889af13ac1e42eeae34f10574176ebd
 msgid "Returns :ref:`wet<class_FmodAudioEffectReverb_property_wet>`."
-msgstr "Returns :ref:`wet<class_FmodAudioEffectReverb_property_wet>`."
+msgstr "返回  :ref:`wet<class_FmodAudioEffectReverb_property_wet>` 。"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:164 5a9b26607c4e425cb09bfc04c0ac8613
+msgid ""
+"The feedback amount in the predelay section, clamped to 0.0 through 0.98. The default is 0.4."
+" It controls how much of the predelay output is fed back into the delay."
+msgstr "预延迟部分的反馈量，限制在 0.0 到 0.98，默认为 0.4。控制预延迟输出重新送入延迟的比例。"
+
+#: ../../source/classes/class_fmodaudioeffectreverb.rst:181 ca97f9715d3c475fa299d6ea6f0edd18
+msgid ""
+"The predelay time in milliseconds, clamped to 0.0 through 500.0. The default is 150.0 ms. It "
+"delays the signal entering the reverb network."
+msgstr "预延迟时间，单位为毫秒，限制在 0.0 到 500.0，默认为 150.0 ms。用于延迟进入混响网络的信号。"

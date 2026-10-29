@@ -54,12 +54,6 @@ msgid ""
 "controlled by attack and release parameters."
 msgstr "压缩器检测输入电平，并在超过阈值时降低增益。压缩比决定增益衰减量，启动和释放参数决定响应速度。"
 
-#: ../../source/classes/class_fmodaudioeffectcompressor.rst:27 7201aea185b447cbb6995f539027fba9
-msgid ""
-"This effect can also apply gain makeup to compensate for the volume reduction caused by "
-"compression, and supports sidechain input for ducking and other advanced techniques."
-msgstr "支持补偿增益，用于弥补压缩造成的音量降低；也支持侧链输入，可实现闪避等处理。"
-
 #: ../../source/classes/class_fmodaudioeffectcompressor.rst:32 85a8fdb133d347a18401848b30c063f8
 msgid "Properties"
 msgstr "属性"
@@ -286,14 +280,6 @@ msgstr "|void| **set_ratio**\\ (\\ ratio\\: :ref:`float<class_float>`\\ )"
 msgid ":ref:`float<class_float>` **get_ratio**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_ratio**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectcompressor.rst:128 0b34ae67c61d4e318242eb7c68e6b66e
-msgid ""
-"The compression ratio, which determines how much the signal is compressed when it exceeds the "
-"threshold. Range: 1.0 to 50.0. Default: 4.0. A ratio of 4:1 means that for every 4 dB the input "
-"exceeds the threshold, the output increases by only 1 dB. Higher ratios result in more aggressive"
-" compression."
-msgstr "压缩比"
-
 #: ../../source/classes/class_fmodaudioeffectcompressor.rst:138 aba80f94b1fa4363bbeba7b00f873a46
 msgid ":ref:`float<class_float>` **gain_db** = ``0.0``"
 msgstr ":ref:`float<class_float>` **gain_db** = ``0.0``"
@@ -309,13 +295,6 @@ msgstr "|void| **set_gain**\\ (\\ gain_db\\: :ref:`float<class_float>`\\ )"
 #: 923c55a1eea64557bc6b0ed7b8ecf38d
 msgid ":ref:`float<class_float>` **get_gain**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_gain**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudioeffectcompressor.rst:145 5d206a00497e4f7ea58f23c83c043ef9
-msgid ""
-"The gain makeup applied after compression, in decibels (dB). Range: -30 dB to +30 dB. Default: 0 "
-"dB. Use this to compensate for the volume reduction caused by compression and bring the output "
-"level back up."
-msgstr "输出补偿增益"
 
 #: ../../source/classes/class_fmodaudioeffectcompressor.rst:155 e283a72a76834524b8738ea0d6e515d5
 msgid ":ref:`float<class_float>` **attack_us** = ``20.0``"
@@ -333,14 +312,6 @@ msgstr "|void| **set_attack_us**\\ (\\ attack_us\\: :ref:`float<class_float>`\\ 
 msgid ":ref:`float<class_float>` **get_attack_us**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_attack_us**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectcompressor.rst:162 dea93550e60f479da1a21072294c8769
-msgid ""
-"The attack time in microseconds (μs). This is the time it takes for the compressor to start "
-"reducing gain after the input signal exceeds the threshold. Range: 0 to 100000 μs (100 ms). "
-"Default: 20000 μs (20 ms). Shorter attack times respond faster but may cause distortion; longer "
-"times preserve transients."
-msgstr "启动时间，单位为微秒"
-
 #: ../../source/classes/class_fmodaudioeffectcompressor.rst:172 f8d5f465df8f4be0b48a77ebdd9fd836
 msgid ":ref:`float<class_float>` **release_ms** = ``250.0``"
 msgstr ":ref:`float<class_float>` **release_ms** = ``250.0``"
@@ -356,14 +327,6 @@ msgstr "|void| **set_release_ms**\\ (\\ release_ms\\: :ref:`float<class_float>`\
 #: 65c570f2492f488084da9e92bc9608e1
 msgid ":ref:`float<class_float>` **get_release_ms**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_release_ms**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudioeffectcompressor.rst:179 9b26457009d1452482cfdec90afee727
-msgid ""
-"The release time in milliseconds (ms). This is the time it takes for the compressor to return to "
-"unity gain after the input signal falls below the threshold. Range: 10 ms to 10000 ms. Default: "
-"250 ms. Longer release times produce smoother, more natural results; shorter times may cause "
-"pumping artifacts."
-msgstr "释放时间，单位为毫秒"
 
 #: ../../source/classes/class_fmodaudioeffectcompressor.rst:189 9bc35fc931d04a49ab8a39d1c0d8d79e
 msgid ":ref:`float<class_float>` **mix** = ``1.0``"
@@ -405,14 +368,6 @@ msgstr "|void| **set_sidechain**\\ (\\ sidechain\\: :ref:`StringName<class_Strin
 msgid ":ref:`StringName<class_StringName>` **get_sidechain**\\ (\\ ) |const|"
 msgstr ":ref:`StringName<class_StringName>` **get_sidechain**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectcompressor.rst:213 204d56a9fec6450da6d826c0d7688b29
-msgid ""
-"The name of the sidechain bus used to trigger compression. When set, the compressor uses the "
-"level of the specified bus instead of the input signal to control the gain reduction. This "
-"enables sidechain compression (ducking), where one signal controls the compression of another. "
-"Empty string means no sidechain is used."
-msgstr "侧链总线名；当前 FMOD 总线镜像尚未实际支持侧链路由"
-
 #: ../../source/classes/class_fmodaudioeffectcompressor.rst:222 177c43bf08c74f8399d6364f12fcfb5b
 msgid "Method Descriptions"
 msgstr "方法说明"
@@ -425,13 +380,13 @@ msgstr "设置压缩阈值。"
 msgid "Returns threshold."
 msgstr "返回压缩阈值。"
 
-#: ../../source/classes/class_fmodaudioeffectcompressor.rst:260 2baa8db450164eae916bf709d6b6725e
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:252 f06e0c8f013147dea982442847e0055a
 msgid "Sets :ref:`ratio<class_FmodAudioEffectCompressor_property_ratio>`."
-msgstr "Sets :ref:`ratio<class_FmodAudioEffectCompressor_property_ratio>`."
+msgstr "设置  :ref:`ratio<class_FmodAudioEffectCompressor_property_ratio>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectcompressor.rst:274 4701fcb4635541fbbd157eaf6b2c7883
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:264 a8c74faac91844c9929c2ac5f79ba47b
 msgid "Returns :ref:`ratio<class_FmodAudioEffectCompressor_property_ratio>`."
-msgstr "Returns :ref:`ratio<class_FmodAudioEffectCompressor_property_ratio>`."
+msgstr "返回  :ref:`ratio<class_FmodAudioEffectCompressor_property_ratio>` 。"
 
 #: ../../source/classes/class_fmodaudioeffectcompressor.rst:288 cd676310383a4bc3bfc8ffff18a30106
 msgid "Sets gain."
@@ -441,34 +396,78 @@ msgstr "设置输出补偿增益。"
 msgid "Returns gain."
 msgstr "返回输出补偿增益。"
 
-#: ../../source/classes/class_fmodaudioeffectcompressor.rst:316 13cdc9570f7b4dc6a52475b44880a6d6
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:300 22b9b2e160414b32b992513e8b3546d6
 msgid "Sets :ref:`attack_us<class_FmodAudioEffectCompressor_property_attack_us>`."
-msgstr "Sets :ref:`attack_us<class_FmodAudioEffectCompressor_property_attack_us>`."
+msgstr "设置  :ref:`attack_us<class_FmodAudioEffectCompressor_property_attack_us>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectcompressor.rst:330 23a9f6a7eb904a84b5a08f5fa65db38b
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:312 fc424c412cfb42d8af0678e2d40c2e04
 msgid "Returns :ref:`attack_us<class_FmodAudioEffectCompressor_property_attack_us>`."
-msgstr "Returns :ref:`attack_us<class_FmodAudioEffectCompressor_property_attack_us>`."
+msgstr "返回  :ref:`attack_us<class_FmodAudioEffectCompressor_property_attack_us>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectcompressor.rst:344 c6619799740b46088fe431b7e7c060e6
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:324 48a85258a6404d9db765250ff265f6bf
 msgid "Sets :ref:`release_ms<class_FmodAudioEffectCompressor_property_release_ms>`."
-msgstr "Sets :ref:`release_ms<class_FmodAudioEffectCompressor_property_release_ms>`."
+msgstr "设置  :ref:`release_ms<class_FmodAudioEffectCompressor_property_release_ms>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectcompressor.rst:358 59977e75abcd4bcba7cc37d598efb1be
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:336 58e055132e2c4ea996b74c32d0aa5878
 msgid "Returns :ref:`release_ms<class_FmodAudioEffectCompressor_property_release_ms>`."
-msgstr "Returns :ref:`release_ms<class_FmodAudioEffectCompressor_property_release_ms>`."
+msgstr "返回  :ref:`release_ms<class_FmodAudioEffectCompressor_property_release_ms>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectcompressor.rst:372 4e28cd879e524016abab54fe73d2d717
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:348 2ab562f5accd47dea8f1adb3a5ac2e75
 msgid "Sets :ref:`mix<class_FmodAudioEffectCompressor_property_mix>`."
-msgstr "Sets :ref:`mix<class_FmodAudioEffectCompressor_property_mix>`."
+msgstr "设置  :ref:`mix<class_FmodAudioEffectCompressor_property_mix>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectcompressor.rst:386 d299e848d857402fac51c70c37f5c414
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:360 2e8fb37d689e43789867e46ef6fec523
 msgid "Returns :ref:`mix<class_FmodAudioEffectCompressor_property_mix>`."
-msgstr "Returns :ref:`mix<class_FmodAudioEffectCompressor_property_mix>`."
+msgstr "返回  :ref:`mix<class_FmodAudioEffectCompressor_property_mix>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectcompressor.rst:400 15ad60475ca84c84bd0fb3fee9092767
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:372 c2dcad1def1e42629c50a87b8c2ef0b6
 msgid "Sets :ref:`sidechain<class_FmodAudioEffectCompressor_property_sidechain>`."
-msgstr "Sets :ref:`sidechain<class_FmodAudioEffectCompressor_property_sidechain>`."
+msgstr "设置  :ref:`sidechain<class_FmodAudioEffectCompressor_property_sidechain>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectcompressor.rst:414 645ca64af4674f2f9bc7bb6e1a7a5538
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:384 0b9679f89c914df99fb48b78526ce8dd
 msgid "Returns :ref:`sidechain<class_FmodAudioEffectCompressor_property_sidechain>`."
-msgstr "Returns :ref:`sidechain<class_FmodAudioEffectCompressor_property_sidechain>`."
+msgstr "返回  :ref:`sidechain<class_FmodAudioEffectCompressor_property_sidechain>` 。"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:25 23fe12640161461783529ce9060e4b25
+msgid ""
+"This effect supports makeup gain and a dry/wet mix for parallel compression. Sidechain "
+"routing is not implemented; setting "
+":ref:`sidechain<class_FmodAudioEffectCompressor_property_sidechain>` only stores the "
+"requested bus name."
+msgstr ""
+"该效果器支持补偿增益和用于并行压缩的干湿混合。当前尚未实现侧链路由；设置  "
+":ref:`sidechain<class_FmodAudioEffectCompressor_property_sidechain>`  只会保存请求的总线名称。"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:126 44be04723a6041a892fb82d19b2ee80d
+msgid ""
+"The compression ratio, clamped to 1.0 through 48.0. The default is 4.0: for every 4 dB the "
+"input exceeds the threshold, the output increases by 1 dB."
+msgstr "压缩比，限制在 1.0 到 48.0，默认为 4.0。输入超过阈值 4 dB 时，输出增加 1 dB。"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:143 01d149ca52f541e19bd20c459efa9b5d
+msgid ""
+"The makeup gain applied after compression, in decibels. Clamped to -20.0 through +20.0 dB; "
+"the default is 0.0 dB."
+msgstr "压缩后的补偿增益，单位为分贝。限制在 -20.0 到 +20.0 dB，默认为 0.0 dB。"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:160 da20706bc317404194420e7a2f40cc07
+msgid ""
+"The requested attack time in microseconds, clamped to 20.0 through 2000.0. The stored default"
+" is 20.0 microseconds. The value is converted to milliseconds for FMOD and clamped to a "
+"minimum of 0.1 ms, so requests below 100 microseconds use an effective attack time of 100 "
+"microseconds."
+msgstr ""
+"请求的启动时间，单位为微秒，限制在 20.0 到 2000.0，保存的默认值为 20.0 微秒。传给 FMOD 时会转换为毫秒，并限制为至少 0.1 ms，因此小于 100 "
+"微秒的请求实际使用 100 微秒。"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:177 0f4d69a1ea92474bb1bc1d047bfd8262
+msgid ""
+"The release time in milliseconds, clamped to 20.0 through 2000.0. The default is 250.0 ms. It"
+" controls how quickly compression recovers after the input level falls below the threshold."
+msgstr "释放时间，单位为毫秒，限制在 20.0 到 2000.0，默认为 250.0 ms。控制输入电平低于阈值后压缩恢复的速度。"
+
+#: ../../source/classes/class_fmodaudioeffectcompressor.rst:211 30ca1b74d71a454380ae00bc521eaa0f
+msgid ""
+"Stores a requested sidechain bus name. Sidechain routing is not implemented, so this property"
+" does not change which signal controls compression. The default is an empty name."
+msgstr "保存请求的侧链总线名称。当前尚未实现侧链路由，因此该属性不会改变用于控制压缩的信号，默认为空名称。"

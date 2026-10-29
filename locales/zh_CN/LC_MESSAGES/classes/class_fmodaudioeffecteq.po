@@ -408,12 +408,6 @@ msgstr "6 段均衡器"
 msgid ":ref:`Preset<enum_FmodAudioEffectEQ_Preset>` **PRESET_10_BANDS** = ``1``"
 msgstr ":ref:`Preset<enum_FmodAudioEffectEQ_Preset>` **PRESET_10_BANDS** = ``1``"
 
-#: ../../source/classes/class_fmodaudioeffecteq.rst:154 b76a397554464490ad55728f869bac92
-msgid ""
-"10-band graphic equalizer preset with frequencies: 31Hz, 62Hz, 125Hz, 250Hz, 500Hz, 1000Hz, "
-"2000Hz, 4000Hz, 8000Hz, 16000Hz."
-msgstr "10 段均衡器"
-
 #: ../../source/classes/class_fmodaudioeffecteq.rst:160 9619b9f53f114c2896a7c58e2a6c5920
 msgid ":ref:`Preset<enum_FmodAudioEffectEQ_Preset>` **PRESET_21_BANDS** = ``2``"
 msgstr ":ref:`Preset<enum_FmodAudioEffectEQ_Preset>` **PRESET_21_BANDS** = ``2``"
@@ -779,13 +773,13 @@ msgstr "控制    ``band_5_filter_type``   。"
 msgid "Method Descriptions"
 msgstr "方法说明"
 
-#: ../../source/classes/class_fmodaudioeffecteq.rst:629 9edb011a8e424f01ad42b542bab5a2f2
+#: ../../source/classes/class_fmodaudioeffecteq.rst:615 df88cfde5b1e4b43ae48fe219ee86c20
 msgid "Sets :ref:`preset<class_FmodAudioEffectEQ_property_preset>`."
-msgstr "Sets :ref:`preset<class_FmodAudioEffectEQ_property_preset>`."
+msgstr "设置  :ref:`preset<class_FmodAudioEffectEQ_property_preset>` 。"
 
-#: ../../source/classes/class_fmodaudioeffecteq.rst:649 3f8143f148f0439981dac943e18b4f86
+#: ../../source/classes/class_fmodaudioeffecteq.rst:627 f1fe9adda9004d219fe4da9a9d66cc1d
 msgid "Returns :ref:`preset<class_FmodAudioEffectEQ_property_preset>`."
-msgstr "Returns :ref:`preset<class_FmodAudioEffectEQ_property_preset>`."
+msgstr "返回  :ref:`preset<class_FmodAudioEffectEQ_property_preset>` 。"
 
 #: ../../source/classes/class_fmodaudioeffecteq.rst:667 9ca1e6be7db340e784465aec1ab59b00
 msgid ":ref:`int<class_int>` **get_band_count**\\ (\\ ) |const|"
@@ -886,3 +880,9 @@ msgid ""
 "Returns the Q value (quality factor) for the specified band. Higher Q values result in a narrower"
 " bandwidth."
 msgstr "返回指定频段的 Q 值。"
+
+#: ../../source/classes/class_fmodaudioeffecteq.rst:150 0202f2ff9cce49729be7c883e7932573
+msgid ""
+"10-band equalizer preset with initial frequencies: 31.25 Hz, 62.5 Hz, 125 Hz, 250 Hz, 500 Hz,"
+" 1000 Hz, 2000 Hz, 4000 Hz, 8000 Hz, 16000 Hz."
+msgstr "十频段均衡器预设，初始频率依次为 31.25、62.5、125、250、500、1000、2000、4000、8000 和 16000 Hz。"

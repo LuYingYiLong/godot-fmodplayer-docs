@@ -287,10 +287,6 @@ msgstr "|void| **set_max_audible**\\ (\\ max_audible\\: :ref:`int<class_int>`\\ 
 msgid ":ref:`int<class_int>` **get_max_audible**\\ (\\ ) |const|"
 msgstr ":ref:`int<class_int>` **get_max_audible**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodsoundgroup.rst:164 f77a0b7f76b84c7fb0a395dddb60bf81
-msgid "Maximum number of simultaneously audible sounds in this group. ``0`` means no limit."
-msgstr "同时可听到的最大播放数量"
-
 #: ../../source/classes/class_fmodsoundgroup.rst:174 d371d3fa588d492993986777871dd5d9
 msgid ":ref:`Behavior<enum_FmodSoundGroup_Behavior>` **behavior** = ``0``"
 msgstr ":ref:`Behavior<enum_FmodSoundGroup_Behavior>` **behavior** = ``0``"
@@ -329,10 +325,6 @@ msgstr "|void| **set_mute_fade_speed**\\ (\\ speed\\: :ref:`float<class_float>`\
 msgid ":ref:`float<class_float>` **get_mute_fade_speed**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_mute_fade_speed**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodsoundgroup.rst:198 6e2b2eb7bf13412882dc777edb8f457b
-msgid "Speed at which sounds fade when being muted/unmuted due to max audible behavior."
-msgstr "静音淡入淡出速度"
-
 #: ../../source/classes/class_fmodsoundgroup.rst:208 aee804e3e8e34480a96fbec4a7e23356
 msgid ":ref:`float<class_float>` **volume_db** = ``0.0``"
 msgstr ":ref:`float<class_float>` **volume_db** = ``0.0``"
@@ -359,39 +351,15 @@ msgstr "方法说明"
 msgid ":ref:`bool<class_bool>` **sound_group_is_valid**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **sound_group_is_valid**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodsoundgroup.rst:234 d7bec45e49874cb48e12b07474a08e14
-msgid "Returns ``true`` if the SoundGroup handle is valid."
-msgstr "如果底层 FMOD::SoundGroup 句柄有效，则返回    ``true``   。"
-
 #: ../../source/classes/class_fmodsoundgroup.rst:246 58b03b3f59ae401885d66c34f07edb3a
 msgid ":ref:`bool<class_bool>` **sound_group_is_null**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **sound_group_is_null**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodsoundgroup.rst:248 60c58b046bc7487ba0c739f18f126e92
-msgid "Returns ``true`` if the SoundGroup handle is null or invalid."
-msgstr "如果底层 FMOD::SoundGroup 句柄为空或不可用，则返回    ``true``   。"
-
-#: ../../source/classes/class_fmodsoundgroup.rst:262 b9255bc1dfd442e8a8c0690c2e519b40
-msgid "Sets the maximum number of sounds in this group that can be audible simultaneously."
-msgstr "设置 SoundGroup 中同时可听到的最大播放数量。"
-
-#: ../../source/classes/class_fmodsoundgroup.rst:264 5d9b5e94e26b4ca5b6e8866eec0892d6
-msgid "Set to ``0`` for no limit."
-msgstr "设为    ``0``    表示不限制。"
 
 #: ../../source/classes/class_fmodsoundgroup.rst:266 2fe633bec3bd4cd2a86c24e1bdd58c86
 msgid ""
 "When this limit is exceeded, the :ref:`behavior<class_FmodSoundGroup_property_behavior>` "
 "determines how new sounds are handled."
 msgstr "超过限制时，由    :ref:`behavior<class_FmodSoundGroup_property_behavior>`    决定如何处理新的声音。"
-
-#: ../../source/classes/class_fmodsoundgroup.rst:280 2b2f40b6b2164b539ff3228cc4784732
-msgid "Returns the maximum number of sounds in this group that can be audible simultaneously."
-msgstr "返回 SoundGroup 中同时可听到的最大播放数量。"
-
-#: ../../source/classes/class_fmodsoundgroup.rst:282 f4430adbd00e48e8a21a0fe791a8af62
-msgid "Returns ``0`` if there is no limit or the sound group is invalid."
-msgstr "未限制或声音组无效时返回    ``0``   。"
 
 #: ../../source/classes/class_fmodsoundgroup.rst:296 1af502f6dca84cc18ef40bfa267b2004
 msgid ""
@@ -412,27 +380,6 @@ msgstr "返回超过最大可听数量时的处理方式。 （参见   :ref:`ma
 #: ../../source/classes/class_fmodsoundgroup.rst:314 685dacdbc2e04671883b1e3ad663867e
 msgid "See :ref:`Behavior<enum_FmodSoundGroup_Behavior>` for possible values."
 msgstr "可用值见    :ref:`Behavior<enum_FmodSoundGroup_Behavior>`   。"
-
-#: ../../source/classes/class_fmodsoundgroup.rst:328 5ad7be52e430478ba402fdd3f947ad05
-msgid "Sets the speed at which sounds fade in/out when being muted/unmuted."
-msgstr "设置因最大可听数量限制而静音或恢复时的淡变速度。"
-
-#: ../../source/classes/class_fmodsoundgroup.rst:330 ../../source/classes/class_fmodsoundgroup.rst:348
-#: 57231a41e2af4336ba4851fa90afdb59 ab20f74f4420437e966882e50d4b292a
-msgid "Higher values result in faster fades."
-msgstr "值越大，淡变越快。"
-
-#: ../../source/classes/class_fmodsoundgroup.rst:332 a2ff58c409c645969c6b400bce097b5d
-msgid ""
-"This affects sounds muted due to "
-":ref:`BEHAVIOR_MUTE<class_FmodSoundGroup_constant_BEHAVIOR_MUTE>` or being stolen."
-msgstr "影响因    :ref:`BEHAVIOR_MUTE<class_FmodSoundGroup_constant_BEHAVIOR_MUTE>`    或声部抢占而被静音的声音。"
-
-#: ../../source/classes/class_fmodsoundgroup.rst:346 2334880a328f4e3c8e425aaa5fe1b8a2
-msgid ""
-"Returns the speed at which sounds fade in/out when being muted/unmuted due to the max audible "
-"behavior."
-msgstr "返回静音淡变速度。"
 
 #: ../../source/classes/class_fmodsoundgroup.rst:362 76a4573358454f89ae123b6e12ed42bc
 msgid "Sets the volume of this SoundGroup in decibels."
@@ -536,3 +483,59 @@ msgstr "调用后，SoundGroup 失效，不应继续使用。"
 #: ../../source/classes/class_fmodsoundgroup.rst:484 3d9b7762d2b44503aa7d4dd55b487460
 msgid "Sounds that were playing continue to play, but are no longer subject to this group's constraints."
 msgstr "正在播放的声音会继续播放，但不再受本组的限制。"
+
+#: ../../source/classes/class_fmodsoundgroup.rst:194 a611e278d39a4bb9a271d0bf8315a861
+msgid ""
+"Fade duration in seconds for "
+":ref:`BEHAVIOR_MUTE<class_FmodSoundGroup_constant_BEHAVIOR_MUTE>`. Larger values produce "
+"longer fades; ``0.0`` disables fading."
+msgstr ""
+":ref:`BEHAVIOR_MUTE<class_FmodSoundGroup_constant_BEHAVIOR_MUTE>`  "
+"使用的淡入淡出时长，单位为秒。数值越大，淡化时间越长； ``0.0``  表示不淡化。"
+
+#: ../../source/classes/class_fmodsoundgroup.rst:228 8bc9aed48cf148c8bf58ce071aa0e7a2
+msgid ""
+"Returns ``true`` if this wrapper holds a non-null FMOD SoundGroup pointer. This does not "
+"query the native handle for validity."
+msgstr "如果包装器持有非空的 FMOD SoundGroup 指针，则返回  ``true`` 。此方法不会向 FMOD 查询原生句柄是否仍然有效。"
+
+#: ../../source/classes/class_fmodsoundgroup.rst:240 46927e54414842fa84d7ec511af52e31
+msgid "Returns ``true`` if this wrapper holds no FMOD SoundGroup pointer."
+msgstr "如果包装器没有持有 FMOD SoundGroup 指针，则返回  ``true`` 。"
+
+#: ../../source/classes/class_fmodsoundgroup.rst:268 9c1dbcf757ab49e18a3bf4c22e2c4589
+msgid ""
+"Returns the maximum number of simultaneous audible playbacks. FMOD returns ``-1`` for an "
+"unlimited group. Returns ``0`` if this wrapper has no sound group or the query fails."
+msgstr "返回可同时发声的最大播放实例数。FMOD 以  ``-1``  表示无限制。包装器未持有声音组或查询失败时返回  ``0`` 。"
+
+#: ../../source/classes/class_fmodsoundgroup.rst:308 75d44681206f4c81a0730854330c9367
+msgid ""
+"Sets the fade duration in seconds for "
+":ref:`BEHAVIOR_MUTE<class_FmodSoundGroup_constant_BEHAVIOR_MUTE>`. ``speed`` must be "
+"nonnegative; ``0.0`` disables fading, and larger values produce longer fades."
+msgstr ""
+"设置  :ref:`BEHAVIOR_MUTE<class_FmodSoundGroup_constant_BEHAVIOR_MUTE>`  的淡入淡出时长，单位为秒。 "
+"``speed``  必须为非负数； ``0.0``  表示不淡化，数值越大，淡化时间越长。"
+
+#: ../../source/classes/class_fmodsoundgroup.rst:320 c12e500bc08c4fb5921b270231752b69
+msgid ""
+"Returns the fade duration in seconds used by "
+":ref:`BEHAVIOR_MUTE<class_FmodSoundGroup_constant_BEHAVIOR_MUTE>`. A value of ``0.0`` means "
+"no fading."
+msgstr ""
+"返回  :ref:`BEHAVIOR_MUTE<class_FmodSoundGroup_constant_BEHAVIOR_MUTE>`  使用的淡入淡出时长，单位为秒。 "
+"``0.0``  表示不淡化。"
+
+#: ../../source/classes/class_fmodsoundgroup.rst:160 12d8b6f8ffe046a78dd5f5f5423ac09a
+msgid ""
+"Maximum simultaneous audible playbacks. ``-1`` removes the limit; ``0`` permits no audible "
+"playbacks. Values below ``-1`` are rejected without changing the current limit."
+msgstr "同时可听的最大播放数量。\\  ``-1``  取消限制，\\  ``0``  表示不允许可听播放。小于  ``-1``  的值会被拒绝，当前限制保持不变。"
+
+#: ../../source/classes/class_fmodsoundgroup.rst:252 b280b3947be54fc88a190f9bbd24f82c
+msgid ""
+"Sets the maximum number of playbacks from this group that can be audible simultaneously. "
+"``-1`` removes the limit; ``0`` permits no audible playbacks. Values below ``-1`` are "
+"rejected without changing the current limit."
+msgstr "设置此组同时可听的最大播放数量。\\  ``-1``  取消限制，\\  ``0``  表示不允许可听播放。小于  ``-1``  的值会被拒绝，当前限制保持不变。"
