@@ -1,193 +1,97 @@
 DSP 效果器
-==========
+==================
 
-本章讲“怎样给声音加效果”。
+``FmodAudioEffect*`` 资源配置总线效果，``FmodDSP`` 提供低层 DSP 接口。相同总线上的声音依次经过其效果器槽位。
 
-:ref:`DSP<glossary-dsp>` 是音频效果处理单元。混响、滤波、延迟、压缩、频谱分析都可以看成 DSP。刚开始使用时，建议优先用 ``FmodAudioEffect*`` 这些资源类，把效果加到 :ref:`Bus<glossary-bus>` 上；只有需要非常底层的控制时，再直接操作 :ref:`FmodDSP<class_FmodDSP>`。
-
-先决定加在哪里
+选择效果器
 --------------
 
 .. list-table::
-  :header-rows: 1
+   :header-rows: 1
 
-  * - 需求
-    - 推荐做法
-  * - 所有音乐一起加滤波
-    - 把效果加到 ``Music`` 总线
-  * - 所有环境声一起加混响
-    - 把效果加到 ``Ambient`` 总线
-  * - 只影响一次播放
-    - 拿到这次播放的 :ref:`Channel<glossary-channel>` 后添加 DSP
-  * - 只是调整左右位置
-    - 优先用 :ref:`FmodChannelControl.set_pan()<class_FmodChannelControl_method_set_pan>`，不需要单独加效果
-  * - 做频谱 UI
-    - 使用 ``FmodAudioEffectSpectrumAnalyzer``
+   * - 处理
+     - 资源
+   * - 增益与声像
+     - ``Amplify``、``Panner``、``StereoEnhance``
+   * - 滤波与均衡
+     - ``Filter``、``EQ6``、``EQ10``、``EQ21``
+   * - 动态与失真
+     - ``Compressor``、``HardLimiter``、``Distortion``
+   * - 时间与调制
+     - ``Delay``、``Reverb``、``Chorus``、``Phaser``、``PitchShift``
+   * - 数据采集
+     - ``Capture``、``SpectrumAnalyzer``、``Record``
 
-对多数项目来说，“效果加到总线”最容易维护。比如暂停菜单打开时，只要给 ``Music`` 总线加低通或降低音量，所有音乐都会一起变化。
+表中的名称都以 ``FmodAudioEffect`` 开头，完整接口见 :doc:`../api_reference/dsp`。在检查器中编辑效果资源可使用对应预览；Panner 支持拖动，EQ 支持拖动频率和增益、悬停滚轮调节 Q。
 
-常用效果怎么选
+添加和旁路
 --------------
 
-.. list-table::
-  :header-rows: 1
-
-  * - 效果
-    - 类
-    - 常见用途
-  * - 增益
-    - :ref:`FmodAudioEffectAmplify<class_FmodAudioEffectAmplify>`
-    - 放大或衰减声音
-  * - 滤波器
-    - :ref:`FmodAudioEffectFilter<class_FmodAudioEffectFilter>`
-    - 水下、墙后、暂停菜单变闷
-  * - 均衡器
-    - :ref:`FmodAudioEffectEQ<class_FmodAudioEffectEQ>`
-    - 调整低频、中频、高频
-  * - 混响
-    - :ref:`FmodAudioEffectReverb<class_FmodAudioEffectReverb>`
-    - 房间、洞穴、走廊空间感
-  * - 延迟
-    - :ref:`FmodAudioEffectDelay<class_FmodAudioEffectDelay>`
-    - 回声、节奏延迟
-  * - 压缩器
-    - :ref:`FmodAudioEffectCompressor<class_FmodAudioEffectCompressor>`
-    - 控制动态范围，让声音更稳定
-  * - 频谱分析器
-    - :ref:`FmodAudioEffectSpectrumAnalyzer<class_FmodAudioEffectSpectrumAnalyzer>`
-    - 音乐可视化、频段检测
-  * - 录音
-    - :ref:`FmodAudioEffectRecord<class_FmodAudioEffectRecord>`
-    - 录制经过某条总线的声音
-
-给总线添加效果
---------------
-
-以下布局编辑示例使用独立模式：关闭 ``audio/fmod/sync_godot_audio_buses`` 并重新加载项目，先在 FMOD Audio 面板创建示例需要的总线。
-
-槽位保存效果配置，每个槽位都有独立运行实例。用 :ref:`FmodServer.get_bus_effect_instance()<class_FmodServer_method_get_bus_effect_instance>` 读取 Capture、SpectrumAnalyzer 和 Record 的实时数据。添加槽位后调用 ``flush_bus_updates()``，即可在同一帧取得实例。
-
-下面示例给 ``Music`` 总线加一个低通滤波器。它会让音乐听起来更闷，适合暂停菜单、角色潜水、隔墙听声等场景。
+以下示例使用 :doc:`mixer` 中的独立总线模式。为 Music 创建低通配置，将播放器的 Bus 设为 Music：
 
 .. code-block:: gdscript
 
-
-    func add_pause_filter() -> void:
+    func add_music_filter() -> int:
         var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()
+        var music_id: int = layout.find_bus_id(&"Music")
+        if music_id == -1:
+            music_id = layout.add_bus(&"Music")
+        var effect: FmodAudioEffectFilter = FmodAudioEffectFilter.new()
+        effect.cutoff_hz = 1200.0
+        return layout.add_bus_effect(music_id, effect)
 
-        var filter: FmodAudioEffectFilter = FmodAudioEffectFilter.new()
-        filter.cutoff_hz = 1200.0
-        filter.resonance = 0.2
+返回值是槽位 ID。通过 ``set_bus_effect_enabled(bus_id, slot_id, enabled)`` 控制该槽位，或用 ``set_bus_bypass(bus_id, bypass)`` 旁路整条总线的受管效果。暂时关闭效果时保留槽位，可维持 DSP 状态。
 
-        layout.add_bus_effect(layout.find_bus_id(&"Music"), filter)
+配置与实时数据
+------------------
 
-效果加到总线后，经过这条 :ref:`Bus<glossary-bus>` 的声音都会受影响。
+布局保存配置资源，每个槽位拥有独立运行实例。修改配置会同步到实例；Capture 缓冲、频谱和录音从运行实例读取。添加槽位后调用 ``flush_bus_updates()``，即可在同一帧获取实例。
 
-旁路效果
---------
+布局切换、槽位删除或效果替换后，应重新获取对应实例。共享配置不会共享各槽位的捕获和分析状态。
 
-如果只是临时关闭效果，优先用旁路，而不是反复创建和删除。
-
-.. code-block:: gdscript
-
-
-    func set_music_effects_enabled(enabled: bool) -> void:
-        var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()
-        layout.set_bus_bypass(layout.find_bus_id(&"Music"), not enabled)
-
-旁路的意思是：信号仍然通过，但跳过这条总线上的效果处理。
-
-常用效果示例
-------------
-
-暂停菜单：音乐变闷
-~~~~~~~~~~~~~~~~~~
+Capture：读取音频帧
+------------------------------
 
 .. code-block:: gdscript
 
-    var pause_filter: FmodAudioEffectFilter = FmodAudioEffectFilter.new()
+    extends Node
+
+    var capture: FmodAudioEffectCapture
 
 
     func _ready() -> void:
         var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()
-        pause_filter.cutoff_hz = 1000.0
-        pause_filter.resonance = 0.1
-        layout.add_bus_effect(layout.find_bus_id(&"Music"), pause_filter)
-        layout.set_bus_bypass(layout.find_bus_id(&"Music"), true)
+        var slot_id: int = layout.add_bus_effect(0, FmodAudioEffectCapture.new())
+        FmodServer.flush_bus_updates()
+        capture = FmodServer.get_bus_effect_instance(0, slot_id) as FmodAudioEffectCapture
 
 
-    func set_paused_audio(paused: bool) -> void:
-        var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()
-        layout.set_bus_bypass(layout.find_bus_id(&"Music"), not paused)
+    func _process(_delta: float) -> void:
+        if capture == null:
+            return
+        var frames: PackedVector2Array = capture.get_buffer(capture.get_frames_available())
+        if not frames.is_empty():
+            print(frames[0])
 
-房间混响：给环境声加空间感
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+每个 Vector2 的 x、y 分别为左、右采样。读取会消费缓冲帧；缓冲满时丢弃新帧，保留未读帧。``clear_buffer()`` 清空队列并重置计数。
 
-.. code-block:: gdscript
-
-
-    func setup_room_reverb() -> void:
-        var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()
-        var reverb: FmodAudioEffectReverb = FmodAudioEffectReverb.new()
-        reverb.room_size = 0.7
-        reverb.damping = 0.45
-        reverb.wet = 0.35
-        reverb.dry = 1.0
-
-        layout.add_bus_effect(layout.find_bus_id(&"Ambient"), reverb)
-
-均衡器：削弱刺耳频段
-~~~~~~~~~~~~~~~~~~~~
+SpectrumAnalyzer：读取频段
+----------------------------------------------
 
 .. code-block:: gdscript
 
-
-    func soften_sfx() -> void:
-        var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()
-        var eq: FmodAudioEffectEQ10 = FmodAudioEffectEQ10.new()
-
-        # 降低较高频段，让音效不那么刺耳
-        eq.set_band_gain_db(7, -3.0)
-        eq.set_band_gain_db(8, -4.0)
-
-        layout.add_bus_effect(layout.find_bus_id(&"SFX"), eq)
-
-延迟：给特殊音效加回声
-~~~~~~~~~~~~~~~~~~~~~~
-
-.. code-block:: gdscript
-
-
-    func add_echo_to_voice_bus() -> void:
-        var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()
-        var delay: FmodAudioEffectDelay = FmodAudioEffectDelay.new()
-        delay.tap1_delay_ms = 180.0
-        delay.tap1_level_db = -8.0
-        delay.tap2_active = false
-        delay.feedback_active = true
-        delay.feedback_delay_ms = 260.0
-        delay.feedback_level_db = -12.0
-
-        layout.add_bus_effect(layout.find_bus_id(&"Voice"), delay)
-
-频谱分析：读取音乐能量
-~~~~~~~~~~~~~~~~~~~~~~
-
-``FmodAudioEffectSpectrumAnalyzer`` 不改变声音，它只是读取频谱数据。适合音乐可视化、根据低频驱动画面等。
-
-.. code-block:: gdscript
+    extends Node
 
     var analyzer: FmodAudioEffectSpectrumAnalyzer
 
 
     func _ready() -> void:
         var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()
-        var music_id: int = layout.find_bus_id(&"Music")
         var settings: FmodAudioEffectSpectrumAnalyzer = FmodAudioEffectSpectrumAnalyzer.new()
         settings.fft_size = FmodAudioEffectSpectrumAnalyzer.FFT_SIZE_2048
-        var slot_id: int = layout.add_bus_effect(music_id, settings)
+        var slot_id: int = layout.add_bus_effect(0, settings)
         FmodServer.flush_bus_updates()
-        analyzer = FmodServer.get_bus_effect_instance(music_id, slot_id) as FmodAudioEffectSpectrumAnalyzer
+        analyzer = FmodServer.get_bus_effect_instance(0, slot_id) as FmodAudioEffectSpectrumAnalyzer
 
 
     func _process(_delta: float) -> void:
@@ -198,14 +102,16 @@ DSP 效果器
             250.0,
             FmodAudioEffectSpectrumAnalyzer.MAGNITUDE_AVERAGE,
         )
-        print("bass energy: ", bass.length())
+        print(bass)
 
-录音：录下某条总线
-~~~~~~~~~~~~~~~~~~
+频段查询返回左右声道的线性幅度。同一 DSP 时钟内复用频谱快照，新音频块到来后自动更新。增大 FFT 窗口会提高频率分辨率，并增加时间窗口和计算量。
 
-``FmodAudioEffectRecord`` 会让声音原样通过，同时在录制开启时缓存经过总线的音频。
+Record：导出录音
+--------------------------
 
 .. code-block:: gdscript
+
+    extends Node
 
     var recorder: FmodAudioEffectRecord
 
@@ -230,61 +136,13 @@ DSP 效果器
         recorder.recording_active = false
         return recorder.get_recording()
 
-效果顺序
---------
+``get_recording()`` 返回 AudioStreamWAV，可通过 ``save_to_wav(path)`` 保存。录制会持续积累音频数据；按需要限制时长并及时取出结果。
 
-多个 :ref:`DSP<glossary-dsp>` 会组成 :ref:`DSP 链<glossary-dsp-chain>`。声音会按顺序经过它们，所以顺序会影响听感。
+效果顺序与低层 DSP
+--------------------------
 
-一个容易理解的默认顺序是：
+槽位按布局顺序处理。可从“EQ/滤波 → 压缩 → 失真 → 延迟/混响 → 分析/录音”开始试听，再按目标音色调整；分析器和录音器的位置决定它们读取到的信号。
 
-.. code-block:: text
+需要原生参数索引或给单次播放添加处理时，使用 :ref:`FmodDSP<class_FmodDSP>` 和 :ref:`FmodChannelControl.add_dsp()<class_FmodChannelControl_method_add_dsp>`。直接创建的 DSP 由调用方管理挂接、移除和释放。
 
-    均衡器 / 滤波器 -> 压缩器 -> 失真 -> 延迟 / 混响 -> 分析器 / 录音
-
-这不是硬规则。比如先失真再混响，和先混响再失真，听起来会很不一样。调效果时建议一次只改一个变量，边听边调。
-
-什么时候直接用 FmodDSP
-----------------------
-
-``FmodAudioEffect*`` 更适合用户指南里的常规用法；``FmodDSP`` 更接近底层 FMOD。
-
-只有在这些情况才建议直接用 :ref:`FmodDSP<class_FmodDSP>`：
-
-- 需要访问 FMOD 内置 DSP 的原始参数索引。
-- 需要手动插入某个 :ref:`Channel<glossary-channel>` 的 DSP 链。
-- 需要自定义 DSP 回调或做实验性处理。
-- 你已经知道对应 DSP 的参数含义和范围。
-
-一个最小示例：
-
-.. code-block:: gdscript
-
-
-    func add_low_level_reverb() -> void:
-        var system: FmodSystem = FmodServer.get_main_system()
-        var reverb: FmodDSP = system.create_dsp_by_type(FmodDSP.DSP_TYPE_SFXREVERB)
-        var master: FmodChannelGroup = system.get_master_channel_group()
-
-        master.add_dsp(0, reverb)
-
-低层 DSP 参数通常是数字索引，不如 ``FmodAudioEffectReverb.room_size`` 这类属性直观。普通项目优先使用效果资源类。
-
-性能建议
---------
-
-- 每个启用的 :ref:`DSP<glossary-dsp>` 都会增加 CPU 开销。
-- 多个声音共享同一种效果时，放到总线上通常更省。
-- 临时关闭效果时，用旁路比反复添加、移除更稳定。
-- 频谱分析和音高变换这类 FFT 效果更容易吃 CPU。
-- 不要每帧大幅跳变参数；需要变化时用插值或 Tween。
-
-排查清单
---------
-
-效果没有声音变化时，先检查：
-
-- 声音是否真的输出到这条 :ref:`Bus<glossary-bus>`。
-- 总线是否被旁路。
-- 效果参数是否太轻，听不出来。
-- 效果是否加到了错误的总线。
-- 多个效果顺序是否和预期一致。
+频谱分析和音高变换等处理会增加 CPU 开销。运行项目后，在调试器监视器查看 ``FmodCPUUsage``；用相同音频、通道数和采样设置比较调整前后的结果。

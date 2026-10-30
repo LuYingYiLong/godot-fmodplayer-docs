@@ -5,13 +5,12 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Godot FmodPlayeReport-Msgid-Bugs-ToPOT-Creation-Date:"
-" 2026-04-26 23:57+080PO-Revision-Date: 2026-04-27 00:00+080Last-"
-"Translator: Codex <codex@example.invalidLanguage: eLanguage-Team: en "
-"<LL@li.orgPlural-Forms: nplurals=2; plural=(n != 1)MIME-Version: 1"
-".Content-Type: text/plain; charset=utf-Content-Transfer-Encoding: 8bi\n"
+"Project-Id-Version: Godot FmodPlayeReport-Msgid-Bugs-ToPOT-Creation-Date: 2026-04-26 23:57+080PO-"
+"Revision-Date: 2026-04-27 00:00+080Last-Translator: Codex <codex@example.invalidLanguage: "
+"eLanguage-Team: en <LL@li.orgPlural-Forms: nplurals=2; plural=(n != 1)MIME-Version: 1.Content-"
+"Type: text/plain; charset=utf-Content-Transfer-Encoding: 8bi\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-04-26 23:57+0800\n"
+"POT-Creation-Date: 2026-10-31 01:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,544 +19,202 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: ../../source/getting_started/quick_start.rst:2
-#: 091b13c086414d77986d9568d81a1290
+#: ../../source/getting_started/quick_start.rst:2 c26e128919224c049328e869fce82a9b
 msgid "快速开始"
-msgstr "Quick Start"
+msgstr "Quick start"
 
-#: ../../source/getting_started/quick_start.rst:4
-#: 2e06001fa4d540659fdc4dd28fdde8ed
-msgid "本指南会带你完成一次最小可用的播放流程：创建播放器、加载音频、播放、暂停和调整音量。 开始前请先完成 :doc:`installation`。"
+#: ../../source/getting_started/quick_start.rst:4 8db74569fbf34ddea17c33073d50cdfd
+msgid "安装完成后，将音频导入为 ``FmodAudioStream``，赋给播放器节点即可播放。安装步骤见 :doc:`installation`。"
 msgstr ""
-"This guide walks you through the smallest useful playback flow: create a "
-"player, load audio, play it, pause it, and adjust the volume. Complete "
-":doc:`installation` before starting."
+"After installation, import audio as ``FmodAudioStream`` and assign it to a player node. See "
+":doc:`installation` for setup."
 
-#: ../../source/getting_started/quick_start.rst:8
-#: 8d6f3ebe77284dee9e6156bc56c61e47
-msgid "你需要知道的三个概念"
-msgstr "Three Concepts You Need to Know"
-
-#: ../../source/getting_started/quick_start.rst:13
-#: f076c72925a243d0ab7e3fbb8ec545ac
-msgid "名称"
-msgstr "Name"
-
-#: ../../source/getting_started/quick_start.rst:14
-#: 979e279746ab43a18b9c5dfdf82af8f9
-msgid "作用"
-msgstr "Role"
-
-#: ../../source/getting_started/quick_start.rst:15
-#: cb47febd7db04a22a0ee4544032c2a64
-msgid "``FmodAudioStreamPlayer``"
-msgstr "``FmodAudioStreamPlayer``"
-
-#: ../../source/getting_started/quick_start.rst:16
-#: 5319d912dcca4da0a5f5810308c2efca
-msgid "场景中的播放节点，适合播放背景音乐、环境音和普通 2D 声音。"
-msgstr ""
-"A playback node in the scene, suitable for background music, ambience, "
-"and regular 2D sounds."
-
-#: ../../source/getting_started/quick_start.rst:17
-#: 94d3c1745bfb496dbf3df740a27f677d
-msgid "``FmodAudioStream``"
-msgstr "``FmodAudioStream``"
-
-#: ../../source/getting_started/quick_start.rst:18
-#: f095937dbe834e4793ccd73f682db249
-msgid "FMOD 音频资源，保存音频数据和加载模式。"
-msgstr "An FMOD audio resource that stores audio data and its loading mode."
-
-#: ../../source/getting_started/quick_start.rst:19
-#: 46597e841df244ea948f4490e6632875
-msgid "``FmodServer``"
-msgstr "``FmodServer``"
-
-#: ../../source/getting_started/quick_start.rst:20
-#: 57021f804cd145889cc31bfceaba6062
-msgid "全局 FMOD 系统入口，用于访问主系统、主通道组和性能数据。"
-msgstr ""
-"The global entry point for the FMOD system. Use it to access the main "
-"system, master channel group, and performance data."
-
-#: ../../source/getting_started/quick_start.rst:24
-#: ef0c50a0be154419a8b72149cbca41b6
-msgid ""
-"如果只是播放一段音乐，通常只需要 ``FmodAudioStreamPlayer`` 和 "
-"``FmodAudioStream``。``FmodSystem``、``FmodChannel``、``FmodDSP`` 等底层对象 "
-"可以等到需要混音、DSP 或更细控制时再学习。"
-msgstr ""
-"If you only want to play a piece of music, you usually only need "
-"``FmodAudioStreamPlayer`` and ``FmodAudioStream``. Lower-level objects "
-"such as ``FmodSystem``, ``FmodChannel``, and ``FmodDSP`` can wait until "
-"you need mixing, DSP, or finer control."
-
-#: ../../source/getting_started/quick_start.rst:29
-#: f60048c63a8043798311cea012ec9d3d
-msgid "在编辑器中播放第一段音频"
-msgstr "Play Your First Audio in the Editor"
-
-#: ../../source/getting_started/quick_start.rst:32
-#: 611f4137b42644a9aa692aca55cf581c
-msgid "创建场景"
-msgstr "Create a Scene"
-
-#: ../../source/getting_started/quick_start.rst:34
-#: 8d678b928433445caf65b567fd172e31
-msgid "新建一个 Godot 场景。"
-msgstr "Create a new Godot scene."
-
-#: ../../source/getting_started/quick_start.rst:35
-#: 488310bba0b14c659ff84ef0ffd5e74d
-msgid "添加一个 ``Node`` 作为根节点。"
-msgstr "Add a ``Node`` as the root node."
-
-#: ../../source/getting_started/quick_start.rst:36
-#: a0402e4467cf4ada956c8927d80e8115
-msgid "添加一个 ``FmodAudioStreamPlayer`` 子节点。"
-msgstr "Add a ``FmodAudioStreamPlayer`` child node."
-
-#: ../../source/getting_started/quick_start.rst:37
-#: 293292fe33714ffb89a2e56c56ef0b37
-msgid "保存场景，例如 ``main.tscn``。"
-msgstr "Save the scene, for example as ``main.tscn``."
-
-#: ../../source/getting_started/quick_start.rst:40
-#: 75d00c1954814782a8f1dd87ab95b01a
+#: ../../source/getting_started/quick_start.rst:7 60548a5a9f464fe39ed7ccf3142d9a80
 msgid "导入音频"
-msgstr "Import Audio"
+msgstr "Import audio"
 
-#: ../../source/getting_started/quick_start.rst:42
-#: 94f4b09ccb4445dfbe56d86f2f86bf31
-msgid "将音频文件放入项目目录，例如 ``res://music/background.mp3``。"
+#: ../../source/getting_started/quick_start.rst:9 bf63b971f999422082aae125238b48b0
+msgid "将音频文件放入项目，在文件系统面板选中它。"
+msgstr "Add an audio file to the project and select it in the FileSystem dock."
+
+#: ../../source/getting_started/quick_start.rst:10 977552baa1794aa7830e4470973858bc
+msgid "在导入面板将 **导入为** 改为 **FMOD Audio**。"
+msgstr "Set **Import As** to **FMOD Audio** in the Import dock."
+
+#: ../../source/getting_started/quick_start.rst:11 0eae05b0f6a246ddb84bc60d46f5bd40
+msgid "音乐选择 **Stream (Low memory)**；短音效选择 **Sample (High quality)**；循环短音效选择 **Loop Sample**。"
 msgstr ""
-"Place an audio file in the project, for example "
-"``res://music/background.mp3``."
+"Choose **Stream (Low memory)** for music, **Sample (High quality)** for short effects, or **Loop "
+"Sample** for looping short effects."
 
-#: ../../source/getting_started/quick_start.rst:43
-#: ed1fcfbaf6d44124993bd162e61ede8d
-msgid "在 Godot 的 **导入** 面板中，将导入类型设置为 **FMOD Audio**。"
-msgstr "In Godot's **Import** panel, set the import type to **FMOD Audio**."
-
-#: ../../source/getting_started/quick_start.rst:44
-#: e426cc8bec4348629e173101da194dc5
-msgid "根据用途选择导入预设："
-msgstr "Choose an import preset based on how the audio will be used:"
-
-#: ../../source/getting_started/quick_start.rst:46
-#: 26473e8396124f6daca705bd818c7bbd
-msgid "**Stream (Low memory)**：适合背景音乐和较长音频。"
-msgstr "**Stream (Low memory)**: suitable for background music and longer audio."
-
-#: ../../source/getting_started/quick_start.rst:47
-#: fd4f4a7882054c2baaa243099b96e831
-msgid "**Sample (High quality)**：适合短音效和需要低延迟的声音。"
-msgstr ""
-"**Sample (High quality)**: suitable for short sound effects and sounds "
-"that need low latency."
-
-#: ../../source/getting_started/quick_start.rst:48
-#: 6279911ac9534a38b7b282c5063845ee
-msgid "**Loop Sample**：适合需要循环播放的短音效。"
-msgstr "**Loop Sample**: suitable for short sound effects that need to loop."
-
-#: ../../source/getting_started/quick_start.rst:50
-#: c13c06fa5b8a4e86bf2263b91b4309ff
+#: ../../source/getting_started/quick_start.rst:12 17f0a652573a409d938fe514c41458ee
 msgid "点击 **重新导入**。"
 msgstr "Click **Reimport**."
 
-#: ../../source/getting_started/quick_start.rst:53
-#: b16e3bb53c1d4fdca83a452eb605fc6e
-msgid "播放音频"
-msgstr "Play Audio"
+#: ../../source/getting_started/quick_start.rst:15 9fedb5320a4f4a5cb99033772f312a5e
+msgid "创建播放器"
+msgstr "Create a player"
 
-#: ../../source/getting_started/quick_start.rst:55
-#: 742e76e84abb4e8ba21988561fb7afec
-msgid "选中 ``FmodAudioStreamPlayer`` 节点。"
-msgstr "Select the ``FmodAudioStreamPlayer`` node."
+#: ../../source/getting_started/quick_start.rst:17 a67466e00baa4327995ed368cae06a62
+msgid "新建场景，以 ``Node`` 为根节点，添加 ``FmodAudioStreamPlayer`` 子节点。"
+msgstr "Create a scene with a ``Node`` root and a ``FmodAudioStreamPlayer`` child."
 
-#: ../../source/getting_started/quick_start.rst:56
-#: 4e59ada6c3d54d18b2a9adb080a27fda
-msgid "在 Inspector 中，将导入后的 ``FmodAudioStream`` 资源设置到 ``Stream`` 属性。"
+#: ../../source/getting_started/quick_start.rst:18 b252a9f5fa804357b1f1e407740fd143
+msgid "将导入后的音频拖到播放器的 **Stream** 属性，**Bus** 保持 ``Master``。"
+msgstr "Drag the imported audio onto the player **Stream** property and keep **Bus** set to ``Master``."
+
+#: ../../source/getting_started/quick_start.rst:19 2addf15fa7134912a4575e14ce17cc23
+msgid "展开 Stream 资源，使用波形下方的播放按钮试听；点击波形可跳转。"
+msgstr "Expand the Stream resource and use its playback button to audition it. Click the waveform to seek."
+
+#: ../../source/getting_started/quick_start.rst:20 45eeef6bc6eb45d7a01459e7d4290df8
+msgid "启用播放器的 **Auto Play**，按 F6 运行当前场景。"
+msgstr "Enable **Auto Play** and press F6 to run the current scene."
+
+#: ../../source/getting_started/quick_start.rst:22 3614a20661d74d77855d8f4f1397ffd6
+msgid ""
+"``FmodAudioStreamPlayer2D`` 和 ``FmodAudioStreamPlayer3D`` 分别用于 2D 和 3D 位置音频，见 "
+":doc:`../user_guide/playback`。"
 msgstr ""
-"In the Inspector, assign the imported ``FmodAudioStream`` resource to the"
-" ``Stream`` property."
+"Use ``FmodAudioStreamPlayer2D`` and ``FmodAudioStreamPlayer3D`` for positional audio in 2D and "
+"3D; see :doc:`../user_guide/playback`."
 
-#: ../../source/getting_started/quick_start.rst:57
-#: 47bfe37f00644cb787818527dd287c7b
-msgid "勾选 ``Playing``，或启用 ``Auto Play`` 让它进入场景树时自动播放。"
-msgstr ""
-"Enable ``Playing``, or enable ``Auto Play`` so it starts when it enters "
-"the scene tree."
+#: ../../source/getting_started/quick_start.rst:25 50ff61b6ac5b4582bfe78a30ac33bf79
+msgid "用脚本控制"
+msgstr "Control playback with a script"
 
-#: ../../source/getting_started/quick_start.rst:59
-#: ea6cd0b36de643da96718c32b51536c1
-msgid "如果听不到声音，请先确认 FMOD 运行库已放入插件目录，并查看 Godot 输出面板是否有 GDExtension 或 FMOD 初始化错误。"
-msgstr ""
-"If you cannot hear anything, first make sure the FMOD runtime library is "
-"in the plugin directory, and check Godot's Output panel for GDExtension "
-"or FMOD initialization errors."
+#: ../../source/getting_started/quick_start.rst:27 a8ef612ae18d4dbea74bc12eeef78b6c
+msgid "将以下脚本挂到根节点，保留已设置的 Stream，关闭 Auto Play："
+msgstr "Attach this script to the root, keep the assigned Stream, and disable Auto Play:"
 
-#: ../../source/getting_started/quick_start.rst:63
-#: f873b492b7444ee781d66e007685eb83
-msgid "用代码加载并播放"
-msgstr "Load and Play from Code"
-
-#: ../../source/getting_started/quick_start.rst:65
-#: 2eadf8c76e874b98b16f497d43aec320
-msgid "如果不想通过导入器创建资源，也可以直接从路径加载音频文件。"
-msgstr ""
-"If you do not want to create a resource through the importer, you can "
-"also load an audio file directly from a path."
-
-#: ../../source/getting_started/quick_start.rst:67
-#: 4f818828838545aab9f277a339b160b8
+#: ../../source/getting_started/quick_start.rst:29 7a57b003c1ab40f08f56b279f02d2a84
 msgid ""
 "extends Node\n"
 "\n"
 "@onready var player: FmodAudioStreamPlayer = $FmodAudioStreamPlayer\n"
+"\n"
 "\n"
 "func _ready() -> void:\n"
-"    var stream := FmodAudioStream.load_from_file(\n"
-"        \"res://music/background.mp3\",\n"
-"        FmodAudioStream.MODE_STREAM | FmodAudioStream.MODE_LOOP\n"
-"    )\n"
+"    player.play()\n"
 "\n"
-"    if stream == null:\n"
-"        push_error(\"Failed to load audio file\")\n"
-"        return\n"
 "\n"
-"    player.stream = stream\n"
-"    player.play()"
+"func _unhandled_input(event: InputEvent) -> void:\n"
+"    if event.is_action_pressed(&\"ui_accept\"):\n"
+"        player.stream_paused = not player.stream_paused\n"
+"    elif event.is_action_pressed(&\"ui_cancel\"):\n"
+"        player.stop()\n"
+"    elif event.is_action_pressed(&\"ui_up\"):\n"
+"        player.volume_db = minf(player.volume_db + 3.0, 0.0)\n"
+"    elif event.is_action_pressed(&\"ui_down\"):\n"
+"        player.volume_db = maxf(player.volume_db - 3.0, -60.0)"
 msgstr ""
 "extends Node\n"
 "\n"
 "@onready var player: FmodAudioStreamPlayer = $FmodAudioStreamPlayer\n"
+"\n"
 "\n"
 "func _ready() -> void:\n"
-"    var stream := FmodAudioStream.load_from_file(\n"
-"        \"res://music/background.mp3\",\n"
-"        FmodAudioStream.MODE_STREAM | FmodAudioStream.MODE_LOOP\n"
-"    )\n"
+"    player.play()\n"
 "\n"
-"    if stream == null:\n"
-"        push_error(\"Failed to load audio file\")\n"
-"        return\n"
-"\n"
-"    player.stream = stream\n"
-"    player.play()"
-
-#: ../../source/getting_started/quick_start.rst:86
-#: ae316eb0a9794b6b99787c88df735eef
-msgid ""
-"``MODE_STREAM`` 适合长音频；``MODE_LOOP`` 会让音频循环播放。短音效通常更适合使用 "
-"``MODE_SAMPLE``，可以降低频繁触发时的播放延迟。"
-msgstr ""
-"``MODE_STREAM`` is suitable for long audio. ``MODE_LOOP`` makes the audio"
-" loop. Short sound effects are usually better with ``MODE_SAMPLE``, which"
-" can reduce latency when triggered frequently."
-
-#: ../../source/getting_started/quick_start.rst:90
-#: cc99087722c9420eb0f2b742185582d3
-msgid "控制播放"
-msgstr "Control Playback"
-
-#: ../../source/getting_started/quick_start.rst:92
-#: a0af3d13884e468a8c3c669175dd121b
-msgid "下面的示例使用键盘控制播放、暂停和音量。你可以把脚本挂到场景根节点上。"
-msgstr ""
-"The following example uses the keyboard to control playback, pause, and "
-"volume. You can attach the script to the scene root node."
-
-#: ../../source/getting_started/quick_start.rst:94
-#: 3425dc4710c64059a43388bfb29f54a4
-msgid ""
-"extends Node\n"
-"\n"
-"@onready var player: FmodAudioStreamPlayer = $FmodAudioStreamPlayer\n"
 "\n"
 "func _unhandled_input(event: InputEvent) -> void:\n"
-"    if event.is_action_pressed(\"ui_accept\"):\n"
-"        player.playing = not player.playing\n"
-"\n"
-"    if event.is_action_pressed(\"ui_cancel\"):\n"
+"    if event.is_action_pressed(&\"ui_accept\"):\n"
 "        player.stream_paused = not player.stream_paused\n"
-"\n"
-"    if event.is_action_pressed(\"ui_up\"):\n"
-"        player.volume_db += 3.0\n"
-"\n"
-"    if event.is_action_pressed(\"ui_down\"):\n"
-"        player.volume_db -= 3.0"
+"    elif event.is_action_pressed(&\"ui_cancel\"):\n"
+"        player.stop()\n"
+"    elif event.is_action_pressed(&\"ui_up\"):\n"
+"        player.volume_db = minf(player.volume_db + 3.0, 0.0)\n"
+"    elif event.is_action_pressed(&\"ui_down\"):\n"
+"        player.volume_db = maxf(player.volume_db - 3.0, -60.0)"
+
+#: ../../source/getting_started/quick_start.rst:50 8eaa97120e8f4fa6bfe2128709ed2831
+msgid "Enter 或空格切换暂停，Esc 停止，上下方向键调整音量。再次播放调用 ``play()``。暂停保留位置，停止后再播放从头开始。"
 msgstr ""
-"extends Node\n"
-"\n"
-"@onready var player: FmodAudioStreamPlayer = $FmodAudioStreamPlayer\n"
-"\n"
-"func _unhandled_input(event: InputEvent) -> void:\n"
-"    if event.is_action_pressed(\"ui_accept\"):\n"
-"        player.playing = not player.playing\n"
-"\n"
-"    if event.is_action_pressed(\"ui_cancel\"):\n"
-"        player.stream_paused = not player.stream_paused\n"
-"\n"
-"    if event.is_action_pressed(\"ui_up\"):\n"
-"        player.volume_db += 3.0\n"
-"\n"
-"    if event.is_action_pressed(\"ui_down\"):\n"
-"        player.volume_db -= 3.0"
+"Enter or Space toggles pause, Esc stops playback, and Up/Down adjusts volume. Call ``play()`` to "
+"start again. Pausing keeps the position; playing after a stop starts from the beginning."
 
-#: ../../source/getting_started/quick_start.rst:114
-#: cf913d6881b74e798414f2877ec45da1
-msgid "常用属性"
-msgstr "Common Properties"
-
-#: ../../source/getting_started/quick_start.rst:119
-#: 1c0166414c614e01966109b23ca745fe
+#: ../../source/getting_started/quick_start.rst:55 8fdb3633c66e49bcb4073385d59f16ce
 msgid "属性"
 msgstr "Property"
 
-#: ../../source/getting_started/quick_start.rst:120
-#: 5d697324c1b8452982349a5edf51f38b
-msgid "说明"
-msgstr "Description"
+#: ../../source/getting_started/quick_start.rst:56 8c833e4a5a674aef9fbc7c33a2711e9c
+msgid "作用"
+msgstr "Purpose"
 
-#: ../../source/getting_started/quick_start.rst:121
-#: 21994ae405a040d79625c3fcf3d98b2a
+#: ../../source/getting_started/quick_start.rst:57 178f68794c644785b8c40fd8bf8886ad
 msgid "``stream``"
 msgstr "``stream``"
 
-#: ../../source/getting_started/quick_start.rst:122
-#: 7d4b24cb27814b6a8b2abc79dbadc8a5
-msgid "要播放的 ``FmodAudioStream``。"
-msgstr "The ``FmodAudioStream`` to play."
+#: ../../source/getting_started/quick_start.rst:58 7753c0d92d074a20b0c49a8bd1844447
+msgid "要播放的音频资源"
+msgstr "Audio resource to play"
 
-#: ../../source/getting_started/quick_start.rst:123
-#: 5cbaa478d59d4707bf1db69cb6429f07
-msgid "``playing``"
-msgstr "``playing``"
-
-#: ../../source/getting_started/quick_start.rst:124
-#: 79419627fe8f4826a032372b0c596945
-msgid "开始或停止播放。"
-msgstr "Starts or stops playback."
-
-#: ../../source/getting_started/quick_start.rst:125
-#: bcfa9a48590a4710a77ebe52ae2bf0a6
-msgid "``stream_paused``"
-msgstr "``stream_paused``"
-
-#: ../../source/getting_started/quick_start.rst:126
-#: f6b2a3fafe0e496fae7db0373c3d8857
-msgid "暂停或恢复，不重置播放位置。"
-msgstr "Pauses or resumes playback without resetting the playback position."
-
-#: ../../source/getting_started/quick_start.rst:127
-#: c41765d06c744342aedb012e6b5e1e90
+#: ../../source/getting_started/quick_start.rst:59 89b48521c25940f085bd1f825301dd3f
 msgid "``volume_db``"
 msgstr "``volume_db``"
 
-#: ../../source/getting_started/quick_start.rst:128
-#: 97f55e88522246ecbb33ed384fcbd657
-msgid "播放音量，单位为 dB。"
-msgstr "Playback volume, in dB."
+#: ../../source/getting_started/quick_start.rst:60 83dd3a1f40654a27ad8a09178bb4bdbd
+msgid "分贝音量，``0.0`` 为单位增益"
+msgstr "Volume in decibels; ``0.0`` is unity gain"
 
-#: ../../source/getting_started/quick_start.rst:129
-#: 86b660e2e5d141a096fb4ae18bfee00f
-msgid "``pitch``"
-msgstr "``pitch``"
+#: ../../source/getting_started/quick_start.rst:61 bc1e9686e8fd4e4786028c9c803cb2ac
+msgid "``pitch_scale``"
+msgstr "``pitch_scale``"
 
-#: ../../source/getting_started/quick_start.rst:130
-#: 20d1b89e52c340ceb156e8cf8872126b
-msgid "播放速度和音高，``1.0`` 为原始音高。"
-msgstr "Playback speed and pitch. ``1.0`` is the original pitch."
+#: ../../source/getting_started/quick_start.rst:62 7d969018d5fd4f8eb3ca14654f7dbad1
+msgid "音高与速度倍率，``1.0`` 为原速"
+msgstr "Pitch and speed multiplier; ``1.0`` is normal speed"
 
-#: ../../source/getting_started/quick_start.rst:131
-#: 6a190062c4ae4ef1a72d84d8154f0049
+#: ../../source/getting_started/quick_start.rst:63 6adbfb28cf074dcebcacb9ddf9dc86db
+msgid "``stream_paused``"
+msgstr "``stream_paused``"
+
+#: ../../source/getting_started/quick_start.rst:64 a6b10fadfcb74739b73b9447b5b479ed
+msgid "暂停或恢复当前播放"
+msgstr "Pause or resume current playback"
+
+#: ../../source/getting_started/quick_start.rst:65 7f97eb0c3c5a426380d55c039a1e101f
 msgid "``bus``"
 msgstr "``bus``"
 
-#: ../../source/getting_started/quick_start.rst:132
-#: bc5bd95568084857aa8d055a812fb324
-msgid "输出到指定音频总线，默认是 ``Master``。"
-msgstr "Outputs to the specified audio bus. The default is ``Master``."
+#: ../../source/getting_started/quick_start.rst:66 9c6ed92ec13f4e2aab676ddd6a133cfb
+msgid "目标总线名称，默认为 ``Master``"
+msgstr "Destination bus name; defaults to ``Master``"
 
-#: ../../source/getting_started/quick_start.rst:135
-#: 185d993fc5824cda9b161a4c5861ce96
-msgid "播放一次性音效"
-msgstr "Play a One-Shot Sound Effect"
+#: ../../source/getting_started/quick_start.rst:69 b48a73c400a542518cfadda667074502
+msgid "试听与总线面板"
+msgstr "Audition and bus meters"
 
-#: ../../source/getting_started/quick_start.rst:137
-#: 9f187314780b41bcad31eb35ba4db56a
-msgid "如果只是播放一个短音效，也可以直接通过 ``FmodSystem`` 创建声音并播放。"
-msgstr ""
-"If you only need to play a short sound effect, you can also create and "
-"play a sound directly through ``FmodSystem``."
-
-#: ../../source/getting_started/quick_start.rst:139
-#: f55d9a82741e4fd9b7d0ce0b3b42b228
+#: ../../source/getting_started/quick_start.rst:71 6e434fcffe084b8b9d5699dead80a963
 msgid ""
-"func play_click_sound() -> void:\n"
-"    var system: FmodSystem = FmodServer.get_main_system()\n"
-"    var sound: FmodSound = system.create_sound_from_file(\n"
-"        \"res://sfx/click.wav\",\n"
-"        FmodSystem.FMOD_MODE_CREATESAMPLE\n"
-"    )\n"
-"\n"
-"    if sound == null:\n"
-"        push_error(\"Failed to load sound\")\n"
-"        return\n"
-"\n"
-"    var master: FmodChannelGroup = system.get_master_channel_group()\n"
-"    system.play_sound(sound, master, false)"
+"项目默认同步 Godot 音频总线。同步开启时，在原生 Audio 面板管理总线；FMOD Audio 面板显示同步提示。需要独立布局与编辑器内 FMOD 电平时，关闭 "
+"``audio/fmod/sync_godot_audio_buses`` 并重新加载项目，详见 :doc:`../user_guide/mixer`。"
 msgstr ""
-"func play_click_sound() -> void:\n"
-"    var system: FmodSystem = FmodServer.get_main_system()\n"
-"    var sound: FmodSound = system.create_sound_from_file(\n"
-"        \"res://sfx/click.wav\",\n"
-"        FmodSystem.FMOD_MODE_CREATESAMPLE\n"
-"    )\n"
-"\n"
-"    if sound == null:\n"
-"        push_error(\"Failed to load sound\")\n"
-"        return\n"
-"\n"
-"    var master: FmodChannelGroup = system.get_master_channel_group()\n"
-"    system.play_sound(sound, master, false)"
+"Projects synchronize Godot audio buses by default. Edit buses in the native Audio panel while "
+"synchronization is enabled; FMOD Audio shows a synchronization hint. For independent layouts and "
+"editor FMOD meters, disable ``audio/fmod/sync_godot_audio_buses`` and reload the project. See "
+":doc:`../user_guide/mixer`."
 
-#: ../../source/getting_started/quick_start.rst:155
-#: e25d2425a400423c9443ffd060e6f52f
-msgid ""
-"需要频繁播放同一个音效时，建议提前加载并复用 ``FmodAudioStream`` 或 ``FmodSound``， "
-"不要每次按键都重新从文件读取。"
-msgstr ""
-"If you need to play the same sound effect frequently, preload and reuse "
-"``FmodAudioStream`` or ``FmodSound`` instead of reading the file again on"
-" every input event."
+#: ../../source/getting_started/quick_start.rst:74 bdd3357ac10f455c9c9ec3285286b924
+msgid "继续阅读"
+msgstr "Continue reading"
 
-#: ../../source/getting_started/quick_start.rst:159
-#: 5be0909e0b3b48de85523f116406d410
-msgid "添加一个简单 DSP 效果"
-msgstr "Add a Simple DSP Effect"
+#: ../../source/getting_started/quick_start.rst:76 e16ada4c552f41f68d43b2395ebd5013
+msgid ":doc:`../user_guide/audio_resources`：加载模式、预加载和资源复用"
+msgstr ":doc:`../user_guide/audio_resources`: Loading modes, preloading, and resource reuse"
 
-#: ../../source/getting_started/quick_start.rst:161
-#: dbea5d9f242b45d29e8f65e8bba3b9b8
-msgid "下面的示例把混响添加到主通道组。这样所有经过主输出的声音都会带有混响。"
-msgstr ""
-"The following example adds reverb to the master channel group. All sounds"
-" that pass through the main output will have reverb."
+#: ../../source/getting_started/quick_start.rst:77 5665e50075df451e9c2cc17670f044aa
+msgid ":doc:`../user_guide/playback`：重叠播放、跳转、循环和空间音频"
+msgstr ":doc:`../user_guide/playback`: Overlapping playback, seeking, looping, and spatial audio"
 
-#: ../../source/getting_started/quick_start.rst:163
-#: 75ccd5749e3c4a91b55f1ebb27061eaa
-msgid ""
-"func add_reverb_to_master() -> void:\n"
-"    var system: FmodSystem = FmodServer.get_main_system()\n"
-"    var reverb: FmodDSP = "
-"system.create_dsp_by_type(FmodDSP.DSP_TYPE_SFXREVERB)\n"
-"\n"
-"    if reverb == null:\n"
-"        push_error(\"Failed to create reverb DSP\")\n"
-"        return\n"
-"\n"
-"    var master: FmodChannelGroup = system.get_master_channel_group()\n"
-"    master.add_dsp(-1, reverb)"
-msgstr ""
-"func add_reverb_to_master() -> void:\n"
-"    var system: FmodSystem = FmodServer.get_main_system()\n"
-"    var reverb: FmodDSP = "
-"system.create_dsp_by_type(FmodDSP.DSP_TYPE_SFXREVERB)\n"
-"\n"
-"    if reverb == null:\n"
-"        push_error(\"Failed to create reverb DSP\")\n"
-"        return\n"
-"\n"
-"    var master: FmodChannelGroup = system.get_master_channel_group()\n"
-"    master.add_dsp(-1, reverb)"
+#: ../../source/getting_started/quick_start.rst:78 276878fa60854d1b96c6dc7e6a27b43a
+msgid ":doc:`../user_guide/mixer`：布局、路由和音量控制"
+msgstr ":doc:`../user_guide/mixer`: Layouts, routing, and volume control"
 
-#: ../../source/getting_started/quick_start.rst:178
-#: 1d92b9a7548e475ab4e3fd79c04d227e
-msgid "``-1`` 表示把 DSP 添加到链末尾。实际项目中更推荐把效果添加到具体总线或通道组， 避免影响所有声音。"
-msgstr ""
-"``-1`` means adding the DSP to the end of the chain. In real projects, it"
-" is usually better to add effects to a specific bus or channel group so "
-"they do not affect every sound."
+#: ../../source/getting_started/quick_start.rst:79 185f78fa00654fba86fe7441daea475f
+msgid ":doc:`../user_guide/dsp_effects`：效果器、捕获、频谱和录音"
+msgstr ":doc:`../user_guide/dsp_effects`: Effects, capture, spectrum analysis, and recording"
 
-#: ../../source/getting_started/quick_start.rst:182
-#: 3cb27cb299ec4cd4a819f3b3447afce2
-msgid "查看性能数据"
-msgstr "View Performance Data"
-
-#: ../../source/getting_started/quick_start.rst:184
-#: 9b8c26e6af654f2488dbce36cbcbd0e7
-msgid ""
-"Godot-FmodPlayer 会把 FMOD 性能数据注册到 Godot 的性能监视器中。运行项目后， 可以在 **调试器 > 监视器** "
-"中查看 ``FmodCPUUsage`` 和 ``FmodFileUsage`` 相关指标。"
-msgstr ""
-"Godot-FmodPlayer registers FMOD performance data in Godot's performance "
-"monitors. After running the project, you can view ``FmodCPUUsage`` and "
-"``FmodFileUsage`` metrics in **Debugger > Monitors**."
-
-#: ../../source/getting_started/quick_start.rst:187
-#: a7fc80911c034d7585954e4537fe8b75
-msgid "也可以在代码中读取："
-msgstr "You can also read them from code:"
-
-#: ../../source/getting_started/quick_start.rst:189
-#: e40818c633794a14aab6b4eaacba4d25
-#, python-format
-msgid ""
-"func _process(_delta: float) -> void:\n"
-"    var system: FmodSystem = FmodServer.get_main_system()\n"
-"    var cpu_usage: Dictionary = system.get_cpu_usage()\n"
-"    var channels: Dictionary = system.get_channels_playing()\n"
-"\n"
-"    print(\"DSP CPU: %.2f%%\" % cpu_usage[\"dsp\"])\n"
-"    print(\"Real channels: %d\" % channels[\"real_channels\"])"
-msgstr ""
-"func _process(_delta: float) -> void:\n"
-"    var system: FmodSystem = FmodServer.get_main_system()\n"
-"    var cpu_usage: Dictionary = system.get_cpu_usage()\n"
-"    var channels: Dictionary = system.get_channels_playing()\n"
-"\n"
-"    print(\"DSP CPU: %.2f%%\" % cpu_usage[\"dsp\"])\n"
-"    print(\"Real channels: %d\" % channels[\"real_channels\"])"
-
-#: ../../source/getting_started/quick_start.rst:200
-#: 2a78048e6181436981f7bf05decc8588
-msgid "下一步"
-msgstr "Next Steps"
-
-#: ../../source/getting_started/quick_start.rst:202
-#: 4e1b2eab250c4edc97baa4105f36cae1
-msgid ""
-"阅读 :doc:`../user_guide/audio_resources`，了解 ``MODE_STREAM`` 和 "
-"``MODE_SAMPLE`` 的选择。"
-msgstr ""
-"Read :doc:`../user_guide/audio_resources` to understand when to choose "
-"``MODE_STREAM`` or ``MODE_SAMPLE``."
-
-#: ../../source/getting_started/quick_start.rst:203
-#: e4f85f2c71f24ed98404f5bdc9ba2551
-msgid "阅读 :doc:`../user_guide/playback`，学习播放、暂停、跳转和通道控制。"
-msgstr ""
-"Read :doc:`../user_guide/playback` to learn playback, pause, seeking, and"
-" channel control."
-
-#: ../../source/getting_started/quick_start.rst:204
-#: 58cb043da1c14b9c814b5b79fcae3ddb
-msgid "阅读 :doc:`../user_guide/mixer`，了解总线和混音系统。"
-msgstr ""
-"Read :doc:`../user_guide/mixer` to learn about buses and the mixing "
-"system."
-
-#: ../../source/getting_started/quick_start.rst:205
-#: 2c4a14342dbd4953aef5ecd2b7697459
-msgid "阅读 :doc:`../user_guide/dsp_effects`，学习使用 DSP 效果。"
-msgstr "Read :doc:`../user_guide/dsp_effects` to learn how to use DSP effects."
-
-#: ../../source/getting_started/quick_start.rst:206
-#: 74f70fb080014a56addfce5b0eae963f
-msgid "遇到问题时查看 :doc:`../user_guide/faq`。"
-msgstr "If you run into problems, see :doc:`../user_guide/faq`."
-
+#: ../../source/getting_started/quick_start.rst:80 f6785de289a44d3a9611dd7345473ee0
+msgid ":doc:`../user_guide/faq`：加载、无声和导出问题"
+msgstr ":doc:`../user_guide/faq`: Loading, silent playback, and export problems"

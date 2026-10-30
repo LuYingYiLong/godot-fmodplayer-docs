@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Godot FmodPlayer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-30 23:43+0800\n"
+"POT-Creation-Date: 2026-10-31 01:30+0800\n"
 "PO-Revision-Date: 2026-04-27 00:00+0800\n"
 "Last-Translator: Codex <codex@example.invalid>\n"
 "Language: en\n"
@@ -17,164 +17,124 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: ../../source/user_guide/mixer.rst:4 e8a7c3b8f62f4ab48b6084c53b04c520
+#: ../../source/user_guide/mixer.rst:4 61753a1a70384cb788122f14215e6562
 msgid "混音系统"
-msgstr "Mixing System"
+msgstr "Mixing system"
 
-#: ../../source/user_guide/mixer.rst:6 7ed4d151796943199b4d5b868980bbbb
+#: ../../source/user_guide/mixer.rst:6 64ad2379db8a4cc49827689570175889
 msgid ""
-":ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>` "
-"保存总线和效果器配置，:ref:`FmodServer<class_FmodServer>` 创建对应的运行时总线和 DSP。将音乐、音效和对白分别送到 "
-"``Music``、``SFX``、``Voice``，即可按类别调整音量和效果。"
+":ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>` 保存配置，:ref:`FmodServer<class_FmodServer>` "
+"管理运行时总线和 DSP。将声音送到 ``Music``、``SFX`` 或 ``Voice`` 后，可按类别调整音量、静音和效果。"
 msgstr ""
-":ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>` stores bus and effect configuration; "
-":ref:`FmodServer<class_FmodServer>` creates runtime buses and DSPs. Route music, sound effects, "
-"and dialogue to ``Music``, ``SFX``, and ``Voice`` to adjust volume and effects by category."
+":ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>` stores configuration; "
+":ref:`FmodServer<class_FmodServer>` manages runtime buses and DSPs. Route sounds to ``Music``, "
+"``SFX``, or ``Voice`` to control their volume, mute state, and effects by category."
 
-#: ../../source/user_guide/mixer.rst:9 1a83e6e9cd5847dea2b72cb1ae12f37d
-msgid "选择布局来源"
-msgstr "Choose the layout source"
+#: ../../source/user_guide/mixer.rst:9 52b9952f553444158e4251475b3df5c8
+msgid "同步模式与独立模式"
+msgstr "Synchronized and independent modes"
 
-#: ../../source/user_guide/mixer.rst:11 82362788745149768a6897157e5fd991
-msgid "项目设置中的 ``audio/fmod`` 提供两个选项："
-msgstr "Project Settings provides two options under ``audio/fmod``:"
+#: ../../source/user_guide/mixer.rst:14 8bf85104314c4b52a0486b0da418024c
+msgid "项目设置"
+msgstr "Project setting"
 
-#: ../../source/user_guide/mixer.rst:16 86f4729cbc3848e2ab0efc18319a6133
-msgid "设置"
-msgstr "Setting"
-
-#: ../../source/user_guide/mixer.rst:17 a08cd81ad1f242e6b7b2872749e8fe17
+#: ../../source/user_guide/mixer.rst:15 ae46ac1545984adea05b9fd7528f6263
 msgid "默认值"
 msgstr "Default"
 
-#: ../../source/user_guide/mixer.rst:18 40be76806a7b407593c58b1d5ce6ad53
-msgid "用途"
+#: ../../source/user_guide/mixer.rst:16 7721898a3ae64ed7ba78eb4a50f30722
+msgid "作用"
 msgstr "Purpose"
 
-#: ../../source/user_guide/mixer.rst:19 0375b593ccfd4bd2874bce19bc026486
-msgid "``sync_godot_audio_buses``"
-msgstr "``sync_godot_audio_buses``"
+#: ../../source/user_guide/mixer.rst:17 2c7db5463cb7478c9374320b9f60e67e
+msgid "``audio/fmod/sync_godot_audio_buses``"
+msgstr "``audio/fmod/sync_godot_audio_buses``"
 
-#: ../../source/user_guide/mixer.rst:20 10d5cfb952d24523b1c650b6bdc22448
+#: ../../source/user_guide/mixer.rst:18 c67757d81a8c47caaac4932b93c442bd
 msgid "``true``"
 msgstr "``true``"
 
-#: ../../source/user_guide/mixer.rst:21 8d786da58e4b4188a17fccbb988104b4
-msgid "使用 Godot Audio 面板中的总线配置，支持的效果器自动转换为 FMOD 效果"
-msgstr "Use the Godot Audio panel configuration and convert supported effects to FMOD effects"
+#: ../../source/user_guide/mixer.rst:19 bc99eab570fd44f2aaf4c6709ae5b19c
+msgid "从 Godot AudioServer 同步总线与支持的效果器"
+msgstr "Synchronize buses and supported effects from Godot AudioServer"
 
-#: ../../source/user_guide/mixer.rst:22 662948b549a242f6a5ab13088fc5b860
-msgid "``default_bus_layout``"
-msgstr "``default_bus_layout``"
+#: ../../source/user_guide/mixer.rst:20 77fdf21f879b4060a3f9b257ce7c3407
+msgid "``audio/fmod/default_bus_layout``"
+msgstr "``audio/fmod/default_bus_layout``"
 
-#: ../../source/user_guide/mixer.rst:23 ccc0284e2f06431aaee13d531d4f4095
+#: ../../source/user_guide/mixer.rst:21 888ea0ff7cc54d50a2ac39a1d3e7ac44
 msgid "``res://default_fmod_bus_layout.tres``"
 msgstr "``res://default_fmod_bus_layout.tres``"
 
-#: ../../source/user_guide/mixer.rst:24 1587b6ed0af74e3fa737e135263306df
-msgid "独立模式启动时加载的 FMOD 布局资源"
-msgstr "FMOD layout resource loaded at startup in independent mode"
+#: ../../source/user_guide/mixer.rst:22 dca92b28711e4faba39b405478bf7a30
+msgid "独立模式的启动布局"
+msgstr "Startup layout for independent mode"
 
-#: ../../source/user_guide/mixer.rst:26 6a18a14080b34637a6e3386fdf3b9ff6
-msgid "修改同步开关后重新加载项目。开启同步时，在原生 Audio 面板或通过 `AudioServer`_ 修改配置；FMOD Audio 面板显示同步提示和打开原生面板的入口。"
-msgstr ""
-"Reload the project after changing synchronization. With synchronization enabled, edit the "
-"configuration in the native Audio panel or through `AudioServer`_. The FMOD Audio panel displays "
-"a synchronization hint and an entry to open the native panel."
-
-#: ../../source/user_guide/mixer.rst:28 21ff8d862b944a0cbd2fa0e5d791c3ea
+#: ../../source/user_guide/mixer.rst:24 b780c453e8504fc982f36cf86560ed61
 msgid ""
-"关闭同步后，使用 FMOD Audio 面板编辑独立布局。默认文件不存在时，使用内存中的 ``Master``，首次编辑保存时创建文件。加载失败会报告错误并回退到 "
-"``Master``；编辑器会保留错误状态，避免自动覆盖损坏的默认文件。"
+"修改同步开关后重新加载项目。同步模式通过原生 Audio 面板编辑，FMOD Audio 面板显示提示和原生面板入口。独立模式通过 FMOD Audio 面板或布局 API "
+"编辑，下文代码使用独立模式。"
 msgstr ""
-"With synchronization disabled, edit an independent layout in FMOD Audio. A missing default file "
-"uses an in-memory ``Master`` and is created on the first authoring save. Loading errors are "
-"reported and fall back to ``Master``. The editor keeps the error state to prevent autosave from "
-"overwriting a damaged default file."
+"Reload the project after changing synchronization. Edit synchronized buses in the native Audio "
+"panel; FMOD Audio shows a hint and an entry to that panel. Edit independent layouts in FMOD Audio"
+" or through the layout API. The code below uses independent mode."
 
-#: ../../source/user_guide/mixer.rst:30 7997539bf4514e4b96d7499b78f25b28
-msgid "下文修改布局的代码示例使用独立模式。运行时修改配置会更新当前声音；写入文件需要调用 ``ResourceSaver.save()``。"
+#: ../../source/user_guide/mixer.rst:27 f9288033dd39456ebd2706564030e04a
+msgid "编辑器面板与保存"
+msgstr "Editor panel and saving"
+
+#: ../../source/user_guide/mixer.rst:29 16d7cb2c7eb149d6bec5d2eecac76f05
+msgid "FMOD Audio 默认位于编辑器底栏，可浮动并恢复布局。音量推子、效果器勾选、拖放、右键菜单和撤销重做沿用原生 Audio 的操作；按住 Ctrl 拖动音量使用整数分贝步进。"
 msgstr ""
-"The layout-editing examples below use independent mode. Runtime configuration changes affect "
-"current audio; writing them to a file requires ``ResourceSaver.save()``."
+"FMOD Audio opens in the editor bottom bar, supports floating, and restores its layout. Volume "
+"faders, effect checkboxes, drag and drop, context menus, and undo/redo follow native Audio "
+"behavior. Hold Ctrl while dragging volume for whole-decibel steps."
 
-#: ../../source/user_guide/mixer.rst:33 83f4f6a9316f4800b79d3e0e98e749f8
-msgid "FMOD Audio 面板"
-msgstr "FMOD Audio panel"
+#: ../../source/user_guide/mixer.rst:31 e36e3a7effeb4e75ab0d1c35c279d306
+msgid "**Add Bus** 添加总线；**Create** 创建并保存新布局。"
+msgstr "**Add Bus** adds a bus; **Create** creates and saves a new layout."
 
-#: ../../source/user_guide/mixer.rst:35 5110897b3d204b25a5cba3a0a1931b1b
+#: ../../source/user_guide/mixer.rst:32 17a555693f8343a0a837e5282bb2468c
+msgid "**Load** 打开布局，**Save As** 另存，**Load Default** 加载项目默认布局。"
+msgstr ""
+"**Load** opens a layout, **Save As** saves another copy, and **Load Default** opens the project "
+"default."
+
+#: ../../source/user_guide/mixer.rst:33 bec7e332668d41119e22857ecd2dd030
+msgid "**FMOD > Set as Default** 将当前布局设为项目默认值。"
+msgstr "**FMOD > Set as Default** makes the current layout the project default."
+
+#: ../../source/user_guide/mixer.rst:34 9eed574471154c0594533de64be49652
+msgid "**FMOD > Create FMOD Layout from Godot** 转换并保存独立布局，同时列出跳过的效果器。"
+msgstr ""
+"**FMOD > Create FMOD Layout from Godot** converts and saves an independent layout and reports "
+"skipped effects."
+
+#: ../../source/user_guide/mixer.rst:36 d4dd85b09516430ba70d7b5e5a17259d
 msgid ""
-"面板默认停靠在编辑器底栏，与 Audio 面板并列，可浮动并恢复保存的布局。音量推子、效果器勾选、右键菜单、拖放和撤销重做沿用原生 Audio 面板的操作方式。拖动音量时按住 Ctrl "
-"可使用整数分贝步进。"
+"编辑器修改在 0.8 秒后合并保存，失败时保留未保存状态。打开其他布局不会更换项目默认值。默认引用保存为 UID，导出插件会包含默认布局及其依赖。默认文件缺失时先使用内存 "
+"Master，首次编辑保存时创建文件；损坏文件会显示错误并阻止自动覆盖。"
 msgstr ""
-"The panel docks beside Audio in the editor bottom bar. It supports floating windows and saved "
-"layout restoration. Volume faders, effect checkboxes, context menus, drag and drop, and undo/redo"
-" follow the native Audio panel. Hold Ctrl while dragging volume for whole-decibel steps."
+"Editor changes are saved after a 0.8-second debounce; failed saves retain the unsaved state. "
+"Opening another layout keeps the project default. The default reference uses a UID, and the "
+"export plugin includes the layout and its dependencies. A missing default starts with an in-"
+"memory Master and is created on the first authoring save. A damaged default reports an error and "
+"blocks automatic overwrite."
 
-#: ../../source/user_guide/mixer.rst:37 38c814a68d8b4402b95f9c56fc25a46f
-msgid "顶部操作包括："
-msgstr "The toolbar provides:"
+#: ../../source/user_guide/mixer.rst:39 f93cc42b8fa54ddd96f097d0a87488c8
+msgid "总线 ID 与发送路由"
+msgstr "Bus IDs and send routing"
 
-#: ../../source/user_guide/mixer.rst:39 c11a1cd056af4d28aefeb428df535f24
-msgid "**Add Bus**：添加总线"
-msgstr "**Add Bus**: Add a bus"
-
-#: ../../source/user_guide/mixer.rst:40 8b079770595d479098baba82719809e1
-msgid "**Load**：打开布局，保留项目默认布局设置"
-msgstr "**Load**: Open a layout while keeping the project default"
-
-#: ../../source/user_guide/mixer.rst:41 14fd3be66bd94fc8b15139b2079f6916
-msgid "**Save As**：另存当前布局"
-msgstr "**Save As**: Save the current layout to another file"
-
-#: ../../source/user_guide/mixer.rst:42 e3c58712e94642058638a72569f57c69
-msgid "**Load Default**：加载项目默认布局"
-msgstr "**Load Default**: Open the project default layout"
-
-#: ../../source/user_guide/mixer.rst:43 181cd4eb65854680a930579cd22858ff
-msgid "**Create**：创建并保存新布局"
-msgstr "**Create**: Create and save a new layout"
-
-#: ../../source/user_guide/mixer.rst:44 4124a1de32ff4ddd8d8170c378349fdd
-msgid "**FMOD > Set as Default**：将当前布局设为项目默认值"
-msgstr "**FMOD > Set as Default**: Set the current layout as the project default"
-
-#: ../../source/user_guide/mixer.rst:45 97082726d29e4dc79f5104c9ca3b5dc0
-msgid "**FMOD > Create FMOD Layout from Godot**：转换 Godot 总线，保存为独立资源，并列出跳过的效果器"
+#: ../../source/user_guide/mixer.rst:41 753681f72aeb49d3857bc7c5a1cc696c
+msgid "Master 的稳定 ID 为 ``0``，始终位于首项。其他名称必须唯一、非空且不含逗号。ID 与显示索引分别管理，排序和改名会保留运行实例。"
 msgstr ""
-"**FMOD > Create FMOD Layout from Godot**: Convert Godot buses, save an independent resource, and "
-"report skipped effects"
+"Master has stable ID ``0`` and always stays first. Other names must be unique, nonblank, and "
+"contain no commas. IDs are distinct from display indices; sorting and renaming preserve runtime "
+"instances."
 
-#: ../../source/user_guide/mixer.rst:47 8b9c5d5da0ed483bab1080ab70a82817
-msgid "编辑器配置修改会在 0.8 秒后合并保存。保存失败时保留未保存状态。默认布局引用在保存后改用 UID，导出插件会包含默认布局及其依赖资源。"
-msgstr ""
-"Editor configuration edits are saved after a 0.8-second debounce. A failed save keeps the unsaved"
-" state. Saving the default layout replaces its project reference with a UID. The export plugin "
-"includes the default layout and its dependencies."
-
-#: ../../source/user_guide/mixer.rst:49 4b21a441426a40e8b2dd28435c3e847c
+#: ../../source/user_guide/mixer.rst:43 38a7f26113714f35b39d949ae3ac6f70
 msgid ""
-"独立模式下，电平表显示检查器试听和编辑器内播放的 FMOD 音频，使用编辑器 Audio Buses 的渐变颜色和 tint 设置。峰值保持 1.5 秒，然后以每秒 60 像素回落；电平条以每秒"
-" 60 dB 回落。界面最多以 30 Hz 刷新，隐藏时停止轮询。独立游戏进程的电平暂未接入面板。"
-msgstr ""
-"In independent mode, meters display FMOD inspector audition and editor playback, using the Audio "
-"Buses gradient and tint settings. Peaks hold for 1.5 seconds, then fall at 60 pixels per second; "
-"level bars fall at 60 dB per second. Presentation refreshes at up to 30 Hz and stops polling when"
-" hidden. Meters from a separate game process are not yet connected."
-
-#: ../../source/user_guide/mixer.rst:52 81c04b9f48094753ac69751e08133658
-msgid "稳定 ID 与路由"
-msgstr "Stable IDs and routing"
-
-#: ../../source/user_guide/mixer.rst:54 8a8b114c0105400d98876c649350ca98
-msgid "``Master`` 的 ID 固定为 ``0``，始终位于首项。其他总线名称唯一，不能留空或包含逗号。总线 ID 和效果器槽位 ID 都不等于显示索引。"
-msgstr ""
-"``Master`` always has ID ``0`` and stays first. Other bus names must be unique, nonblank, and "
-"contain no commas. Bus IDs and effect-slot IDs are distinct from display indices."
-
-#: ../../source/user_guide/mixer.rst:56 daa0586037a54e3b9d1a54c18cb05835
-msgid ""
-"func configure_buses() -> void:\n"
+"func create_sfx_route() -> void:\n"
 "    var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()\n"
 "    var sfx_id: int = layout.find_bus_id(&\"SFX\")\n"
 "    if sfx_id == -1:\n"
@@ -183,7 +143,7 @@ msgid ""
 "        layout.add_bus(&\"Footsteps\", sfx_id)\n"
 "    layout.set_bus_volume_db(sfx_id, -6.0)"
 msgstr ""
-"func configure_buses() -> void:\n"
+"func create_sfx_route() -> void:\n"
 "    var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()\n"
 "    var sfx_id: int = layout.find_bus_id(&\"SFX\")\n"
 "    if sfx_id == -1:\n"
@@ -192,153 +152,60 @@ msgstr ""
 "        layout.add_bus(&\"Footsteps\", sfx_id)\n"
 "    layout.set_bus_volume_db(sfx_id, -6.0)"
 
-#: ../../source/user_guide/mixer.rst:67 ef7c5549ab354ac99acc0ce4d6ae5b7e
+#: ../../source/user_guide/mixer.rst:54 ab13ea18efd24322ac74773da4773452
+msgid "``set_bus_send()`` 可发送到任意无环目标，拒绝自身发送；``move_bus()`` 只改变显示顺序。删除总线时，进入该总线的其他总线和播放通道转接到原发送目标。"
+msgstr ""
+"``set_bus_send()`` accepts any acyclic destination and rejects self-sends. ``move_bus()`` changes"
+" display order only. Deleting a bus redirects its incoming buses and playback channels to its "
+"previous send target."
+
+#: ../../source/user_guide/mixer.rst:56 d9f198afcc4d4920a684de2aee069883
+msgid "播放器的 ``bus`` 属性保存名称，选项来自当前布局。重命名总线后需同步更新播放器；未知名称在下次播放时回退到 Master，修改属性不会重新路由已有通道。"
+msgstr ""
+"Players store names in ``bus``, with options supplied by the current layout. Update players after"
+" renaming a bus. Unknown names fall back to Master on the next playback; changing the property "
+"does not reroute an existing channel."
+
+#: ../../source/user_guide/mixer.rst:59 be2ed797ef694884891ea83f51d27260
+msgid "音量、Mute 与 Solo"
+msgstr "Volume, Mute, and Solo"
+
+#: ../../source/user_guide/mixer.rst:61 d46f897dd4dc4eec9c559c039aaaaa56
 msgid ""
-"发送目标可以位于列表中的任意位置。``set_bus_send()`` 拒绝发送给自身和产生环路的连接；``move_bus()`` "
-"只调整显示顺序。删除总线时，发送到它的其他总线和正在播放的通道会转接到它原来的发送目标。"
+"通过 ``set_bus_volume_db()``、``set_bus_mute()`` 和 ``set_bus_solo()`` 修改配置。音量使用分贝，``0.0`` 为单位增益。Solo"
+" 保留选中总线及其到 Master 的发送路径可听；退出 Solo 后恢复应用保存的 Mute 标记。"
 msgstr ""
-"Sends can target any position in the list. ``set_bus_send()`` rejects self-sends and cycles; "
-"``move_bus()`` changes display order only. Removing a bus redirects its incoming buses and "
-"playing channels to its previous send target."
+"Edit configuration with ``set_bus_volume_db()``, ``set_bus_mute()``, and ``set_bus_solo()``. "
+"Volume is in decibels; ``0.0`` is unity gain. Solo keeps selected buses and their send paths to "
+"Master audible. Disabling Solo reapplies the stored Mute flags."
 
-#: ../../source/user_guide/mixer.rst:69 2219594225cb474684d516350fe5d9fd
+#: ../../source/user_guide/mixer.rst:64 c763dd928ec647bbbea0af27112dde22
+msgid "效果器槽位"
+msgstr "Effect slots"
+
+#: ../../source/user_guide/mixer.rst:66 3deee641102342fe928603b64071e7e5
 msgid ""
-"播放器的 ``bus`` 属性保存名称，检查器选项来自当前 FMOD 布局。未知名称在下次播放时回退到 ``Master``。重命名总线后，应同步修改播放器保存的名称；总线内部 ID "
-"和已绑定的运行实例保持不变。"
+"``add_bus_effect()`` 返回稳定槽位 ID。共享配置的槽位各有独立运行实例，参数修改更新现有 "
+"DSP，排序和跨总线移动保留其状态。``set_bus_effect_enabled()`` 控制单个槽位，``set_bus_bypass()`` 控制整条总线的受管效果。"
 msgstr ""
-"Players store bus names in ``bus``; inspector options come from the current FMOD layout. Unknown "
-"names fall back to ``Master`` on the next playback. After renaming a bus, update the names stored"
-" in players. Internal IDs and bound runtime instances remain stable."
+"``add_bus_effect()`` returns a stable slot ID. Slots sharing configuration have independent "
+"runtime instances. Parameter edits update existing DSPs, and reordering or moving slots across "
+"buses preserves their state. ``set_bus_effect_enabled()`` controls one slot; ``set_bus_bypass()``"
+" controls managed effects across a bus."
 
-#: ../../source/user_guide/mixer.rst:71 8af62836cc414b1c88706e11602f4ed2
+#: ../../source/user_guide/mixer.rst:68 b0e25dfa69a041bd9eade59711191e0f
 msgid ""
-"@onready var music: FmodAudioStreamPlayer = $MusicPlayer\n"
-"\n"
-"\n"
-"func _ready() -> void:\n"
-"    music.bus = &\"Music\"\n"
-"    music.play()"
+"``get_bus_effect()`` 返回配置资源。Capture、SpectrumAnalyzer 和 Record 的实时数据通过 "
+"``FmodServer.get_bus_effect_instance()`` 读取，示例见 :doc:`dsp_effects`。"
 msgstr ""
-"@onready var music: FmodAudioStreamPlayer = $MusicPlayer\n"
-"\n"
-"\n"
-"func _ready() -> void:\n"
-"    music.bus = &\"Music\"\n"
-"    music.play()"
+"``get_bus_effect()`` returns configuration. Read live Capture, SpectrumAnalyzer, and Record data "
+"through ``FmodServer.get_bus_effect_instance()``; see :doc:`dsp_effects` for examples."
 
-#: ../../source/user_guide/mixer.rst:81 cc87ff8b4c104c779084ec603e2f758d
-msgid "音量、静音与独奏"
-msgstr "Volume, mute, and solo"
+#: ../../source/user_guide/mixer.rst:71 ccb8cb834bf8401f9e1503f736aa97f8
+msgid "切换布局与运行时对象"
+msgstr "Switch layouts and access runtime objects"
 
-#: ../../source/user_guide/mixer.rst:83 4ab55dc8ff5b45869183779977cd5303
-msgid "``0.0`` dB 为单位增益，负值衰减，正值放大。通过布局修改这些参数会更新绑定的运行实例。"
-msgstr ""
-"``0.0`` dB is unity gain, negative values attenuate, and positive values amplify. Editing these "
-"values in the layout updates bound runtime instances."
-
-#: ../../source/user_guide/mixer.rst:85 af0fbe08e4654da194a8a5b10df0e9c9
-msgid ""
-"func mute_music(muted: bool) -> void:\n"
-"    var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()\n"
-"    var music_id: int = layout.find_bus_id(&\"Music\")\n"
-"    if music_id != -1:\n"
-"        layout.set_bus_mute(music_id, muted)\n"
-"\n"
-"\n"
-"func solo_voice(enabled: bool) -> void:\n"
-"    var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()\n"
-"    var voice_id: int = layout.find_bus_id(&\"Voice\")\n"
-"    if voice_id != -1:\n"
-"        layout.set_bus_solo(voice_id, enabled)"
-msgstr ""
-"func mute_music(muted: bool) -> void:\n"
-"    var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()\n"
-"    var music_id: int = layout.find_bus_id(&\"Music\")\n"
-"    if music_id != -1:\n"
-"        layout.set_bus_mute(music_id, muted)\n"
-"\n"
-"\n"
-"func solo_voice(enabled: bool) -> void:\n"
-"    var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()\n"
-"    var voice_id: int = layout.find_bus_id(&\"Voice\")\n"
-"    if voice_id != -1:\n"
-"        layout.set_bus_solo(voice_id, enabled)"
-
-#: ../../source/user_guide/mixer.rst:100 9fe14f1652de4635963fb6a8e1e9a2a6
-msgid "有总线处于 Solo 状态时，该总线及其通向 ``Master`` 的路径保持可听，其他总线静音。布局保留各总线原有的 Mute 标记，退出 Solo 后恢复应用。"
-msgstr ""
-"When any bus is soloed, that bus and its route to ``Master`` remain audible while unrelated buses"
-" are muted. Configured Mute flags are retained and applied again after Solo is disabled."
-
-#: ../../source/user_guide/mixer.rst:103 27652095b08a4ae58b339c5bb2a39bf6
-msgid "效果器配置与运行实例"
-msgstr "Effect configuration and runtime instances"
-
-#: ../../source/user_guide/mixer.rst:105 a01b53e8e86b40a9a292a5e5e0ea1032
-msgid ""
-"``add_bus_effect()`` 接收总线 ID，并返回稳定槽位 ID。同一个效果配置可以用于多个槽位，每个槽位拥有独立 DSP、Capture "
-"缓冲、频谱和录音状态。修改配置参数会更新对应实例；调整顺序和移动槽位保留 DSP 状态及延迟、混响尾音。"
-msgstr ""
-"``add_bus_effect()`` accepts a bus ID and returns a stable slot ID. Several slots can share an "
-"effect configuration; each owns independent DSPs, Capture buffers, spectrum data, and recording "
-"state. Editing configuration parameters updates the instances. Reordering or moving slots "
-"preserves DSP state and delay/reverb tails."
-
-#: ../../source/user_guide/mixer.rst:107 535f42f1624146b9bda50b24645af8c7
-msgid ""
-"var capture: FmodAudioEffectCapture\n"
-"\n"
-"\n"
-"func _ready() -> void:\n"
-"    var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()\n"
-"    var slot_id: int = layout.add_bus_effect(0, FmodAudioEffectCapture.new())\n"
-"    FmodServer.flush_bus_updates()\n"
-"    capture = FmodServer.get_bus_effect_instance(0, slot_id) as FmodAudioEffectCapture\n"
-"\n"
-"\n"
-"func _process(_delta: float) -> void:\n"
-"    if capture != null and capture.can_get_buffer(256):\n"
-"        var frames: PackedVector2Array = capture.get_buffer(256)\n"
-"        print(frames[0])"
-msgstr ""
-"var capture: FmodAudioEffectCapture\n"
-"\n"
-"\n"
-"func _ready() -> void:\n"
-"    var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()\n"
-"    var slot_id: int = layout.add_bus_effect(0, FmodAudioEffectCapture.new())\n"
-"    FmodServer.flush_bus_updates()\n"
-"    capture = FmodServer.get_bus_effect_instance(0, slot_id) as FmodAudioEffectCapture\n"
-"\n"
-"\n"
-"func _process(_delta: float) -> void:\n"
-"    if capture != null and capture.can_get_buffer(256):\n"
-"        var frames: PackedVector2Array = capture.get_buffer(256)\n"
-"        print(frames[0])"
-
-#: ../../source/user_guide/mixer.rst:124 c6b255146bdc4403b54a368b2a4c49bb
-msgid ""
-"使用 :ref:`FmodServer.get_bus_effect_instance()<class_FmodServer_method_get_bus_effect_instance>` "
-"读取实时数据。``get_bus_effect()`` 返回布局中的配置资源。新增槽位后调用 ``flush_bus_updates()``，即可在同一帧读取运行实例。"
-msgstr ""
-"Use :ref:`FmodServer.get_bus_effect_instance()<class_FmodServer_method_get_bus_effect_instance>` "
-"to read live data. ``get_bus_effect()`` returns the layout configuration resource. After adding a"
-" slot, call ``flush_bus_updates()`` to obtain its runtime instance in the same frame."
-
-#: ../../source/user_guide/mixer.rst:126 3db5c76cd40d4be4b53b154d543c71fc
-msgid ""
-"``set_bus_effect_enabled()`` 控制单个槽位，``set_bus_bypass()`` "
-"控制整条总线的受管效果。总线旁路和槽位禁用任一成立时，实例进入旁路。关闭临时效果时可保留槽位，避免重新分配 DSP。"
-msgstr ""
-"``set_bus_effect_enabled()`` controls one slot, and ``set_bus_bypass()`` controls all managed "
-"effects on a bus. Either bus bypass or a disabled slot bypasses the instance. Keep slots when "
-"disabling effects temporarily to avoid allocating DSPs again."
-
-#: ../../source/user_guide/mixer.rst:129 9a0483f49baa42d089ef6fe990e3f26b
-msgid "切换与保存布局"
-msgstr "Switch and save layouts"
-
-#: ../../source/user_guide/mixer.rst:131 93d27afb6d0c4f6ea5cb00531f2f7d8b
+#: ../../source/user_guide/mixer.rst:73 39939081e07c43d0863bc8e26bf956f7
 msgid ""
 "func activate_layout(path: String) -> Error:\n"
 "    var layout: FmodAudioBusLayout = load(path) as FmodAudioBusLayout\n"
@@ -352,75 +219,35 @@ msgstr ""
 "        return ERR_INVALID_DATA\n"
 "    return FmodServer.set_audio_bus_layout(layout)"
 
-#: ../../source/user_guide/mixer.rst:139 57eae133aa2a476080b6f0e0b4cd3ddb
+#: ../../source/user_guide/mixer.rst:81 25041ef0907f4c5e86d08ce4383bb259
 msgid ""
-"``set_audio_bus_layout()`` 先验证配置、创建新实例，再替换当前布局。失败时保留当前布局；成功时将播放通道转移到同名总线，找不到时转到 ``Master``。同步模式返回"
-" ``ERR_BUSY``。"
+"``set_audio_bus_layout()`` 先验证并创建新实例，成功后替换当前布局；失败时保留原布局，同步模式返回 ``ERR_BUSY``。播放通道移到同名总线，找不到时移到 "
+"Master。运行时修改写入文件需单独调用 ``ResourceSaver.save()``。"
 msgstr ""
-"``set_audio_bus_layout()`` validates the configuration and creates new instances before replacing"
-" the current layout. Failure preserves the current layout. Success moves playing channels to "
-"matching bus names, falling back to ``Master``. Synchronization mode returns ``ERR_BUSY``."
+"``set_audio_bus_layout()`` validates and creates new instances before replacing the current "
+"layout. Failure preserves the old layout; synchronization mode returns ``ERR_BUSY``. Playing "
+"channels move to matching bus names or Master. Save runtime changes explicitly with "
+"``ResourceSaver.save()``."
 
-#: ../../source/user_guide/mixer.rst:141 d3debca3c28e471db63a4773ba23d7d4
+#: ../../source/user_guide/mixer.rst:83 a594a37eafc54743bfd4153cd414d249
 msgid ""
-"切换布局与保存文件分别执行。保存时使用 ``ResourceSaver.save(layout, path)``；将布局设为项目默认值可通过 FMOD Audio "
-"面板完成。资源仅保存配置，运行时总线、DSP 和实时音频数据由服务器管理。"
+"布局修改在下一次服务器更新时应用，``flush_bus_updates()`` 可立即应用。通过 ``get_audio_bus()`` 或 ``get_audio_bus_by_id()``"
+" 获取运行时总线。直接修改运行对象不会写回配置；服务器管理其释放。"
 msgstr ""
-"Switching layouts and saving files are separate operations. Save with "
-"``ResourceSaver.save(layout, path)`` and use FMOD Audio to set a layout as the project default. "
-"Resources store configuration; the server owns runtime buses, DSPs, and live audio data."
+"Layout changes apply on the next server update; ``flush_bus_updates()`` applies them immediately."
+" Use ``get_audio_bus()`` or ``get_audio_bus_by_id()`` for runtime buses. Direct runtime edits do "
+"not write back to configuration; the server manages their release."
 
-#: ../../source/user_guide/mixer.rst:144 c9921ebd35834b769a0a7d2c3287ad33
-msgid "直接控制运行时对象"
-msgstr "Control runtime objects directly"
+#: ../../source/user_guide/mixer.rst:86 aecec657b7ee485bafc210513b6baf73
+msgid "编辑器电平"
+msgstr "Editor meters"
 
-#: ../../source/user_guide/mixer.rst:146 d237519290f94ccda281d885f8a165f5
+#: ../../source/user_guide/mixer.rst:88 98471f0cf3cf468280a31682cd766948
 msgid ""
-"``FmodServer.get_audio_bus(name)`` 和 ``get_audio_bus_by_id(id)`` 返回 "
-":ref:`FmodAudioBus<class_FmodAudioBus>`。可用 ``get_bus()`` 取得底层 "
-":ref:`FmodChannelGroup<class_FmodChannelGroup>`，用于低层播放和混音控制。"
+"独立模式下，面板显示检查器试听与编辑器内播放的电平，沿用编辑器 Audio Buses 的颜色和 tint。峰值保持 1.5 秒后以每秒 60 像素回落，电平条以每秒 60 dB 回落。界面最多"
+" 30 Hz 刷新，隐藏后停止轮询。独立游戏进程的电平暂未接入。"
 msgstr ""
-"``FmodServer.get_audio_bus(name)`` and ``get_audio_bus_by_id(id)`` return "
-":ref:`FmodAudioBus<class_FmodAudioBus>`. Call ``get_bus()`` to access the underlying "
-":ref:`FmodChannelGroup<class_FmodChannelGroup>` for low-level playback and mixing."
-
-#: ../../source/user_guide/mixer.rst:148 aed793de3a2a4685aac299707323a733
-msgid ""
-"func play_on_bus(sound: FmodSound, bus_name: StringName) -> FmodChannel:\n"
-"    var bus: FmodAudioBus = FmodServer.get_audio_bus(bus_name)\n"
-"    var group: FmodChannelGroup = bus.get_bus() if bus != null else "
-"FmodServer.get_master_channel_group()\n"
-"    return FmodServer.get_main_system().play_sound(sound, group, false)"
-msgstr ""
-"func play_on_bus(sound: FmodSound, bus_name: StringName) -> FmodChannel:\n"
-"    var bus: FmodAudioBus = FmodServer.get_audio_bus(bus_name)\n"
-"    var group: FmodChannelGroup = bus.get_bus() if bus != null else "
-"FmodServer.get_master_channel_group()\n"
-"    return FmodServer.get_main_system().play_sound(sound, group, false)"
-
-#: ../../source/user_guide/mixer.rst:155 77aa6dfb60d4480f936ed91aefaa00cd
-msgid "运行时对象的直接修改不会写回布局文件。总线 Solo、槽位开关和整条总线旁路应通过布局接口调整，以保持路由及各槽位状态一致。服务器管理的总线由服务器释放。"
-msgstr ""
-"Direct runtime edits do not write back to the layout file. Use layout APIs for Solo, slot enable "
-"state, and bus bypass to keep routing and slot states consistent. Server-managed buses are "
-"released by the server."
-
-#: ../../source/user_guide/mixer.rst:158 748b52a78f0d4535999547315289181c
-msgid "API 参考"
-msgstr "API reference"
-
-#: ../../source/user_guide/mixer.rst:160 179f4ade058c4711bf5efaf76fb39f13
-msgid ":ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`：配置、路由与效果器槽位"
-msgstr ":ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`: Configuration, routing, and effect slots"
-
-#: ../../source/user_guide/mixer.rst:161 81bd78f70632403aa06b87c809faf4bf
-msgid ":ref:`FmodAudioBus<class_FmodAudioBus>`：运行时总线"
-msgstr ":ref:`FmodAudioBus<class_FmodAudioBus>`: Runtime buses"
-
-#: ../../source/user_guide/mixer.rst:162 2ded1c83672044d39f4111747fb6bd73
-msgid ":ref:`FmodServer<class_FmodServer>`：布局切换和运行实例访问"
-msgstr ":ref:`FmodServer<class_FmodServer>`: Layout switching and runtime access"
-
-#: ../../source/user_guide/mixer.rst:163 067345aff64c415089273a362a5edcfc
-msgid ":doc:`dsp_effects`：效果配置、频谱和录音示例"
-msgstr ":doc:`dsp_effects`: Effect configuration, spectrum, and recording examples"
+"In independent mode, meters show inspector audition and editor playback using the editor Audio "
+"Buses colors and tint. Peaks hold for 1.5 seconds, then fall at 60 pixels per second; level bars "
+"fall at 60 dB per second. Presentation updates at up to 30 Hz and stops polling when hidden. "
+"Meters from a separate game process are not yet connected."

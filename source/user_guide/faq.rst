@@ -1,164 +1,120 @@
 .. _faq:
 
 常见问题
-========
+============
 
-本章节整理使用 Godot-FmodPlayer 时经常遇到的问题。若问题与 FMOD 授权、平台发布或商业项目有关，请以 FMOD 官方文档与实际项目合同为准。
-
-.. _faq-plugin-license:
-
-使用 Godot-FmodPlayer 插件有哪些许可条款？
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Godot-FmodPlayer 插件本身使用 `MIT 许可证 <https://opensource.org/license/MIT>`_。
-这意味着你可以自由使用、修改和分发本插件，但需要保留原始版权与许可证声明。
-
-需要注意的是，Godot-FmodPlayer 依赖 **FMOD Engine**。FMOD 是 Firelight
-Technologies Pty Ltd 的专有音频引擎，并不随本插件一起变成开源软件。
-如果你的项目会发布、商业化或在特定平台上分发，请阅读
-`FMOD Licensing <https://www.fmod.com/licensing>`_ 与
-`FMOD Legal Information <https://www.fmod.com/legal>`_，并根据你的项目情况
-注册项目或获取相应授权。
-
-.. _faq-fmod-studio-bank:
-
-Godot-FmodPlayer 支持 FMOD Studio Event 或 Bank 吗？
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-目前 Godot-FmodPlayer 主要面向 **FMOD Core API**，重点是音频文件播放、
-通道控制、混音、DSP 效果与 3D 音频等底层功能。
-
-它不等同于 FMOD Studio 集成，也不提供完整的 Studio Event 工作流。如果你的项目
-依赖 FMOD Studio 的事件、参数、Bank 构建与音频设计师工作流，可以考虑使用
-`fmod-gdextension <https://github.com/utopia-rise/fmod-gdextension>`_。
+安装与运行库
+----------------
 
 .. _faq-module-no-found:
 
-为什么导入 Godot-FmodPlayer 插件后 Godot 报错找不到指定模块？
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+加载时提示找不到模块
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-请检查是否手动将 FMOD 运行库（如 Windows 的 ``fmod.dll``）放在 ``res://addons/fmod_player/`` 目录之下。如果没有下载 FMOD 运行库请从 `FMOD <https://www.fmod.com>`_ 下载。
+查看输出面板中第一条动态库加载错误，检查：
 
-因为根据 `FMOD EULA <https://www.fmod.com/legal>`_，Godot-FmodPlayer 无权二次分发 FMOD 运行库。
+- 完整插件位于 ``res://addons/fmod_player/``。
+- ``fmod_player.gdextension`` 指定的扩展和 FMOD 依赖均存在于 bin 目录。
+- 架构、Debug/Release 类型和 FMOD 版本匹配。
+- 复制运行库后已重新启动编辑器。
+
+各平台文件名见 :doc:`../getting_started/installation`，导出配置见 :doc:`../export`。
+
+播放与资源
+--------------
 
 .. _faq-no-sound:
 
-为什么播放时没有声音？
-~~~~~~~~~~~~~~~~~~~~~~
+播放时没有声音
+~~~~~~~~~~~~~~~~~~
 
-可以按以下顺序检查：
-
-#. 确认场景中使用的是 ``FmodAudioStreamPlayer`` 或对应的 FMOD 播放节点。
-#. 确认 ``stream`` 已正确设置，并且音频路径存在。
-#. 确认播放器的 ``playing`` 状态、音量、暂停状态没有被脚本覆盖。
-#. 确认主通道组或目标通道组没有被静音，音量没有被设置为 0。
-#. 查看 Godot 输出面板中是否有 FMOD 初始化、文件加载或解码相关错误。
-
-如果使用代码加载音频，建议先用一个简单的 ``res://`` 路径测试，排除路径、
-导入设置和打包路径带来的影响。
+#. 确认音频重新导入为 FMOD Audio，且播放器的 Stream 有效。
+#. 检查 ``stream_paused``、``volume_db`` 和总线 Mute/Solo 状态。分贝音量 ``0.0`` 表示单位增益。
+#. 空间音频检查当前相机、声源距离和衰减设置。
+#. 查看输出面板中的文件、解码和 FMOD 错误。
 
 .. _faq-stream-vs-sample:
 
-背景音乐和短音效应该分别使用哪种加载模式？
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+首次播放延迟或音乐内存占用高
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-一般建议：
-
-- 背景音乐、语音、环境音等较长音频使用 ``MODE_STREAM``。
-- 点击音、攻击音效、爆炸声等短音效使用 ``MODE_SAMPLE``。
-
-``MODE_STREAM`` 会按需读取音频数据，适合较长文件，可以降低内存占用。
-``MODE_SAMPLE`` 会把音频加载到内存中，播放延迟更低，适合频繁触发的短音效。
-
-.. _faq-export-audio-missing:
-
-为什么导出后音频无法播放？
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-导出后无法播放通常与路径、资源打包或动态库有关：
-
-#. 确认音频文件被包含在 Godot 导出包中。
-#. 优先使用 ``res://`` 路径引用项目内资源，避免依赖开发机上的绝对路径。
-#. 确认目标平台包含对应架构的 FMOD 运行时库与 GDExtension 文件。
-#. 检查导出模板、平台架构和插件提供的二进制文件是否匹配。
-#. 在导出版本中打开日志输出，查看是否有文件找不到或动态库加载失败的错误。
-
-如果开发环境可以播放但导出后失败，优先检查导出预设中的资源过滤规则和插件二进制文件。
-
-.. _faq-native-audio-mix:
-
-可以把 Godot 原生 AudioStreamPlayer 和 FmodAudioStreamPlayer 混用吗？
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-可以混用，但两者属于不同的音频系统。Godot 原生 ``AudioStreamPlayer`` 走
-Godot 的音频服务器， ``FmodAudioStreamPlayer`` 走 FMOD 系统。
-
-如果同一个项目中同时使用两套系统，需要分别管理它们的音量、暂停、总线和生命周期。
-对于需要 FMOD DSP、通道组或 3D 音频控制的声音，建议统一使用 FMOD 播放节点，
-避免混音逻辑分散。
+短音效使用 Sample 并提前 ``preload()``；长音频可使用 Stream 减少完整解码样本的开销。FmodAudioStream 仍保留文件字节，两种模式的内存区别见 :doc:`audio_resources`。
 
 .. _faq-release-audio-resources:
 
-什么时候需要手动释放音频资源？
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+何时释放资源和临时播放器
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-大多数 Godot 资源会随着引用释放而自动清理，但在以下场景中建议主动管理：
+自然播放结束可通过 ``finished`` 回收临时节点，手动停止需自行回收。播放期间保留音频资源和 Sound 的所有者引用，停止所有使用者后再清理。服务器创建的总线和槽位实例由服务器管理，详见 :doc:`playback` 与 :doc:`mixer`。
 
-- 运行时动态加载了大量音频文件。
-- 使用 ``MODE_SAMPLE`` 预加载了大量短音效。
-- 关卡切换时需要释放当前关卡专用的音频资源。
-- 创建了临时播放器、发射器、DSP 或通道组。
+总线与效果器
+----------------
 
-对于不再使用的节点可以调用 ``queue_free()``。对于音频资源，如果文档或 API
-提供了 ``clear()`` 等清理方法，可以在确认没有播放器继续使用它之后再调用。
+.. _faq-bus-panel-empty:
+
+FMOD Audio 只显示同步提示
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``audio/fmod/sync_godot_audio_buses`` 默认为 true，此模式在原生 Audio 面板编辑。需要独立 FMOD 布局时关闭该设置并重新加载项目，再打开 FMOD Audio。
+
+.. _faq-editor-meter:
+
+运行游戏后看不到 FMOD 电平
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+FMOD Audio 当前显示编辑器内试听电平。F5/F6 启动的独立游戏进程尚未接入远程电平。独立模式下，可展开 Stream 子检查器试听并在 FMOD Audio 中查看 Master。
 
 .. _faq-dsp-not-working:
 
-DSP 效果没有生效怎么办？
-~~~~~~~~~~~~~~~~~~~~~~~~
+效果或实时数据没有变化
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-先确认 DSP 被添加到了正确的位置。DSP 可以挂在主通道组、指定通道组，或某个正在播放的
-通道上；如果加到了错误的通道组，目标声音就不会经过这个效果器。
+检查声音经过的总线、槽位启用状态、总线旁路和效果顺序。通过布局添加 Capture、SpectrumAnalyzer 或 Record 后，从 ``FmodServer.get_bus_effect_instance()`` 获取运行实例；读取配置资源得不到槽位的实时数据。示例见 :doc:`dsp_effects`。
 
-还需要检查：
+.. _faq-native-audio-mix:
 
-#. DSP 是否成功创建。
-#. 参数索引和参数类型是否正确。
-#. DSP 是否被 bypass。
-#. 目标声音是否正在通过该通道或通道组播放。
-#. DSP 的添加顺序是否符合预期。
+能否与原生 AudioStreamPlayer 混用
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-调试时可以先把 DSP 加到主通道组上确认效果本身可用，再移动到更具体的通道组。
+可以，两套系统分别管理播放、音量和 DSP。总线同步转换配置，不会将原生音频信号送入 FMOD，或将 FMOD 信号送入 Godot 总线。
+
+导出与性能
+--------------
+
+.. _faq-export-audio-missing:
+
+编辑器可播放，导出后失败
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+检查目标架构和 Release 运行库、资源导出过滤以及动态读取的原始文件。项目内已导入资源使用资源引用，独立总线默认布局由导出插件包含；完整步骤见 :doc:`../export`。
 
 .. _faq-mobile-platforms:
 
-移动平台上使用时需要注意什么？
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+移动设备上卡顿或延迟较高
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-移动平台更容易受到内存、CPU 和文件读取速度的影响。建议：
-
-- 背景音乐使用 ``MODE_STREAM``。
-- 高频短音效使用 ``MODE_SAMPLE`` 并提前加载。
-- 避免同时创建过多 DSP，尤其是混响、卷积、复杂滤波等较重效果。
-- 控制同时播放的通道数量。
-- 在真机上测试延迟、性能和导出包内容。
-
-模拟器和编辑器中的表现不能完全代表真机，发布前应以目标设备测试结果为准。
+预加载高频短音效，限制同时播放数量，检查 DSP CPU 和流式解码开销。在目标设备上使用同一段音频和相同通道数比较；模拟器和编辑器的结果用于辅助排查。
 
 .. _faq-crash-debugging:
 
-遇到崩溃或 FMOD 错误时应该如何定位？
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+如何报告错误或崩溃
+~~~~~~~~~~~~~~~~~~~~~~
 
-建议先收集以下信息：
+保留完整日志、Godot/FMOD/插件版本、平台架构及最小复现场景，说明是否仅在导出版本出现。可在 `GitHub Issues <https://github.com/LuYingYiLong/Godot-FmodPlayer/issues>`_ 提交；日志中附上首次错误及复现步骤。
 
-#. Godot 版本、插件版本和目标平台。
-#. 触发问题的最小复现场景。
-#. Godot 输出面板中的完整错误信息。
-#. 使用的音频格式、加载模式和播放方式。
-#. 是否只在导出版本或特定设备上出现。
+接口与许可
+--------------
 
-如果问题可以稳定复现，尽量创建一个只包含必要场景和音频文件的最小项目。这样更容易判断是
-路径、导入、平台二进制、FMOD 初始化，还是具体 API 调用导致的问题。
+.. _faq-fmod-studio-bank:
 
-如果无法解决问题，可以在 `Github issue <https://github.com/LuYingYiLong/Godot-FmodPlayer/issues>`_ 提出问题或寻求解决方法。
+是否支持 Studio Event 和 Bank
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+插件封装 FMOD Core API，提供音频文件播放、通道、DSP、总线和空间音频。当前接口没有提供 FMOD Studio Event 和 Bank 工作流。
+
+.. _faq-plugin-license:
+
+插件和 FMOD 分别使用什么许可
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+插件使用 `MIT 许可证 <https://opensource.org/license/MIT>`_。FMOD Engine 的许可与项目注册信息请查阅 `FMOD Licensing <https://www.fmod.com/licensing>`_ 和 `FMOD Legal Information <https://www.fmod.com/legal>`_。
