@@ -82,8 +82,11 @@
 
 .. code-block:: gdscript
 
-    func fade_music(target_db: float, duration: float):
-        var tween := create_tween()
+    @onready var music: FmodAudioStreamPlayer = $FmodAudioStreamPlayer
+
+
+    func fade_music(target_db: float, duration: float) -> void:
+        var tween: Tween = create_tween()
         tween.tween_property(music, "volume_db", target_db, duration)
 
 播放一次短音效
@@ -123,7 +126,8 @@
         var system := FmodServer.get_main_system()
 
         var sound := system.create_sound_from_file(path)
-        var bus := system.get_channel_group_by_name(bus_name)
+        var runtime_bus: FmodAudioBus = FmodServer.get_audio_bus(StringName(bus_name))
+        var bus: FmodChannelGroup = runtime_bus.get_bus() if runtime_bus != null else FmodServer.get_master_channel_group()
         var channel := system.play_sound(sound, bus, false)
 
         return channel
@@ -140,7 +144,8 @@
     func play_configured(path: String) -> FmodChannel:
         var system := FmodServer.get_main_system()
         var sound := system.create_sound_from_file(path)
-        var sfx_bus := system.get_channel_group_by_name("SFX")
+        var runtime_bus: FmodAudioBus = FmodServer.get_audio_bus(&"SFX")
+        var sfx_bus: FmodChannelGroup = runtime_bus.get_bus() if runtime_bus != null else FmodServer.get_master_channel_group()
 
         var channel := system.play_sound(sound, sfx_bus, true)
         channel.volume_db = -6.0
@@ -192,10 +197,10 @@
 .. code-block:: gdscript
 
     func jump_to_30_seconds(channel: FmodChannel):
-        channel.set_position(30000, FmodChannel.TIMEUNIT_MS)
+        channel.set_position(30000, FmodSystem.FMOD_TIME_UNIT_MS)
 
     func print_position(channel: FmodChannel):
-        var position_ms := channel.get_position(FmodChannel.TIMEUNIT_MS)
+        var position_ms := channel.get_position(FmodSystem.FMOD_TIME_UNIT_MS)
         print("position: ", position_ms, " ms")
 
 循环
@@ -245,8 +250,9 @@
 
     func play_3d_sound(path: String, position: Vector3):
         var system := FmodServer.get_main_system()
-        var sound := system.create_sound_from_file(path, FmodSystem.MODE_3D)
-        var bus := system.get_channel_group_by_name("SFX")
+        var sound := system.create_sound_from_file(path, FmodSystem.FMOD_MODE_3D)
+        var runtime_bus: FmodAudioBus = FmodServer.get_audio_bus(&"SFX")
+        var bus: FmodChannelGroup = runtime_bus.get_bus() if runtime_bus != null else FmodServer.get_master_channel_group()
 
         var channel := system.play_sound(sound, bus, true)
         channel.set_3d_attributes(position, Vector3.ZERO)
@@ -255,7 +261,7 @@
 
         return channel
 
-这里的 ``MODE_3D`` 很重要。没有用 3D 模式创建的声音，即使设置了位置，也不会按 3D 声源来计算。
+这里的 ``FMOD_MODE_3D`` 很重要。没有用 3D 模式创建的声音，即使设置了位置，也不会按 3D 声源来计算。
 
 监听器
 ~~~~~~

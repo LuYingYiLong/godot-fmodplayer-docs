@@ -9,7 +9,7 @@
 
 开始前请确认：
 
-- Godot 版本为 4.1 或更高版本。
+- Godot 版本为 4.7.2 或更高版本；当前编辑器 Dock 使用 4.7.2 的公开 API。
 - 目标平台目前为 Windows x86_64 或 Android arm64。
 - 已准备好从 FMOD 官网下载 FMOD Engine。
 

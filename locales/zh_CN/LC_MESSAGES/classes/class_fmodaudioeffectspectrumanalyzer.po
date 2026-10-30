@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Godot FmodPlayer \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"POT-Creation-Date: 2026-10-30 23:43+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:12 b80304c6a631441d929d53bcdb050ac5
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:10 c24b85b5f84946d6a060bc9ec38253b8
 msgid "FmodAudioEffectSpectrumAnalyzer"
 msgstr "FmodAudioEffectSpectrumAnalyzer"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:14 653a603f94bd4917a4fd5ecbf7cde1c9
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:12 aafa68fa08434900ba4d82edf74def65
 msgid ""
 "**Inherits:** :ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>`"
 " **<** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
@@ -30,15 +30,15 @@ msgstr ""
 "**继承：** :ref:`FmodAudioEffect<class_FmodAudioEffect>` **<** :ref:`Resource<class_Resource>` **<**"
 " :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:16 98d2d32f7e9c42d798589cc5e9f6f805
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:14 f9b0f03d6e394ffdbd9360d4642bad08
 msgid "Performs real-time frequency spectrum analysis on audio signals for visualization and analysis."
 msgstr "频谱分析器，可读取频段幅度、RMS 和频谱重心。"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:21 c84ef5b913b0431eb43ee6f833efd3fc
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:19 94dec664bc2d4138af2927b3d29729fa
 msgid "Description"
 msgstr "描述"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:23 6ec43ca52cde4e68a8b7f86ed3a604f7
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:21 acb8e3358d394bc9836e432c2eaa7490
 msgid ""
 "FmodAudioEffectSpectrumAnalyzer analyzes the frequency content of audio passing through an audio "
 "bus in real-time using Fast Fourier Transform (FFT). This is essential for creating audio "
@@ -47,7 +47,7 @@ msgstr ""
 "**FmodAudioEffectSpectrumAnalyzer**    会在总线效果链中插入 FFT "
 "DSP，并从中读取频谱数据。它不会主动改变声音，主要用于可视化、节拍/能量检测、频段驱动的 UI 或调试混音。"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:25 50df952a08be4773ab40ccac2bd06e21
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:23 628347b087964503b878eb91eab29ea1
 msgid ""
 "The effect processes incoming audio and provides frequency magnitude data that can be queried "
 "using "
@@ -58,7 +58,7 @@ msgstr ""
 ":ref:`get_magnitude_for_frequency_range()<class_FmodAudioEffectSpectrumAnalyzer_method_get_magnitude_for_frequency_range>`"
 "    分别查询低频、中频、高频等频段。"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:27 ff0843e6cb864b3b910d83fb809e288b
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:25 67937cd587644f08aecbbca4f7dbe37b
 msgid ""
 "Queries reuse a spectrum snapshot while the bus DSP clock is unchanged. The next audio block "
 "automatically refreshes the snapshot, including when manually mixing multiple blocks in one game "
@@ -68,67 +68,92 @@ msgstr ""
 "总线 DSP 时钟未变化时，查询会复用频谱快照。下一个音频块会刷新快照，同一游戏帧中手动混音多个音频块时也会更新。修改    "
 ":ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>`    或将效果器挂载到其他总线会使快照失效。"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:34 2e6334e6dc24497099c2c27ba865bb5d
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:27 8605184c7e754a5cb3a68c5c8d960341
+msgid ""
+"The :ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>` determines the "
+"analysis window and frequency resolution. Larger FFT sizes provide finer frequency detail at the "
+"cost of time resolution and processing work. "
+":ref:`buffer_length<class_FmodAudioEffectSpectrumAnalyzer_property_buffer_length>` is currently "
+"stored for compatibility and does not change the FFT window or retain audio history."
+msgstr ""
+":ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>`  决定分析窗口和频率分辨率。FFT "
+"越大，频率细节越精确，但时间分辨率更低、处理开销更大。 "
+":ref:`buffer_length<class_FmodAudioEffectSpectrumAnalyzer_property_buffer_length>`  "
+"当前仅为兼容而保存，不会改变 FFT 窗口，也不会保留音频历史。"
+
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:29 1ee6c9e77c1444a799db47dcac513038
+msgid ""
+"When configured in a :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>` slot, obtain its runtime"
+" instance with "
+":ref:`FmodServer.get_bus_effect_instance()<class_FmodServer_method_get_bus_effect_instance>` and "
+"query that instance. Shared configuration resources create independent analysis state for each "
+"slot."
+msgstr ""
+"配置在 :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>` 槽位中时，通过 "
+":ref:`FmodServer.get_bus_effect_instance()<class_FmodServer_method_get_bus_effect_instance>` "
+"获取运行实例并查询该实例。共享配置资源的槽位各自拥有独立分析状态。"
+
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:34 445a68fef1ac453c93c82f1daaf042de
 msgid "Properties"
 msgstr "属性"
 
 #: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:40
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:58 b3299ab58d1149f6961fe51c68847e20
-#: cbb7ff8ceccd45c280c710d9e1d5addf
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:58 49d673dc175e48c6a1c92d285f34e4f9
+#: 7bc56f8958aa46bfa7df03fd14de030d
 msgid ":ref:`bool<class_bool>`"
 msgstr ":ref:`bool<class_bool>`"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:40 06280ece26f743d58a0eafc5594df82e
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:40 3f5f65099a1445fd960fd9e13701b078
 msgid ":ref:`immediate_mode<class_FmodAudioEffectSpectrumAnalyzer_property_immediate_mode>`"
 msgstr ":ref:`immediate_mode<class_FmodAudioEffectSpectrumAnalyzer_property_immediate_mode>`"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:40 97140e1839e04680813d9db6d1cdcabc
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:40 a4aedc2532b14f658bc2c3a72ae5fb0b
 msgid "``false``"
 msgstr "``false``"
 
 #: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:42
 #: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:62
 #: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:72
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:74 0b13f218481c480b96d1dbef1ad9e484
-#: 58eda85156604d50b1993262194de51d 6ebd4e3706d24d3098f223531748ab2c e37d841d4a094895bfd6e5fea68c9c3a
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:74 048c875a865f42198edce2ee2e3bd94a
+#: 0a2d48d6a8004cada45c10f5326afe38 80b6abc508b44ee99b2206d16dbc8073 e0f055bc02dc49bfb9c2c2dbb5b04ee0
 msgid ":ref:`float<class_float>`"
 msgstr ":ref:`float<class_float>`"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:42 3af49f92bf54468bae1e0b8b1ba65842
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:42 c489d528103a4a20af2bcef12fce3c23
 msgid ":ref:`buffer_length<class_FmodAudioEffectSpectrumAnalyzer_property_buffer_length>`"
 msgstr ":ref:`buffer_length<class_FmodAudioEffectSpectrumAnalyzer_property_buffer_length>`"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:42 3bf7add1edd2432a84f9d9cad9fe4291
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:42 31bf9577b0f8402eba6e289d018714a4
 msgid "``2.0``"
 msgstr "``2.0``"
 
 #: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:44
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:66 0fd6f142b7f24d6fbb7c92568b32dd3a
-#: 8d626d737b2b469283f2aebec1d9f157
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:66 65a4b34535ba4a5b98595e51bd14c437
+#: aa23aa02966d44f7a886760971b3166f
 msgid ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>`"
 msgstr ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>`"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:44 f841ca12175d434e9c3c365e005582b0
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:44 d190a9ab473542298e8a279fa80d3ff6
 msgid ":ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>`"
 msgstr ":ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>`"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:44 776c8490674d4a6daa0f3e3e6a049961
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:44 fafa374a29d241b3a32a61fded97e56d
 msgid "``2``"
 msgstr "``2``"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:50 98c4b89c8ebd4bbf8d7724eb903059bb
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:50 5e0414d534054a3c9033ee760922f63d
 msgid "Methods"
 msgstr "方法"
 
 #: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:56
 #: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:60
 #: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:64
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:68 0a56370b1f594442900ea890c85d95ba
-#: 1ca13fea26b14029b8b28028567b10b0 3ba0b52171c640da8b3bd2fe7f842962 c0876d01de374b89989f3fa1c892cb75
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:68 237a215080ea4dd1b4aa5273c31448bb
+#: a7ba055ee0654097accb24526e81d9a7 b8aad8918cd54d84bf78d4dead9f2b76 db911b2f7d0d4476b67a53352916937b
 msgid "|void|"
 msgstr "|void|"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:56 5b1dac8234424ea18a22c426c653ffae
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:56 ae555e665ab84491920983e88bb92ecd
 msgid ""
 ":ref:`set_immediate_mode<class_FmodAudioEffectSpectrumAnalyzer_method_set_immediate_mode>`\\ (\\ "
 "enabled\\: :ref:`bool<class_bool>`\\ )"
@@ -136,7 +161,7 @@ msgstr ""
 ":ref:`set_immediate_mode<class_FmodAudioEffectSpectrumAnalyzer_method_set_immediate_mode>`\\ (\\ "
 "enabled\\: :ref:`bool<class_bool>`\\ )"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:58 e51bc1d611e248c0b75545485ea75ecb
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:58 3184a399ea474265a94753e4a57fa7ab
 msgid ""
 ":ref:`get_immediate_mode<class_FmodAudioEffectSpectrumAnalyzer_method_get_immediate_mode>`\\ (\\ "
 ") |const|"
@@ -144,7 +169,7 @@ msgstr ""
 ":ref:`get_immediate_mode<class_FmodAudioEffectSpectrumAnalyzer_method_get_immediate_mode>`\\ (\\ "
 ") |const|"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:60 040e28528bce4c78b45e33b803ba33a6
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:60 e8e09eae329d4ff2a21627ca605a436b
 msgid ""
 ":ref:`set_buffer_length<class_FmodAudioEffectSpectrumAnalyzer_method_set_buffer_length>`\\ (\\ "
 "buffer_length\\: :ref:`float<class_float>`\\ )"
@@ -152,7 +177,7 @@ msgstr ""
 ":ref:`set_buffer_length<class_FmodAudioEffectSpectrumAnalyzer_method_set_buffer_length>`\\ (\\ "
 "buffer_length\\: :ref:`float<class_float>`\\ )"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:62 e5a0b73f889540cdab0378bbdd9d35ff
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:62 8c102c4ed4cb49708db0c6d6f403f964
 msgid ""
 ":ref:`get_buffer_length<class_FmodAudioEffectSpectrumAnalyzer_method_get_buffer_length>`\\ (\\ ) "
 "|const|"
@@ -160,7 +185,7 @@ msgstr ""
 ":ref:`get_buffer_length<class_FmodAudioEffectSpectrumAnalyzer_method_get_buffer_length>`\\ (\\ ) "
 "|const|"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:64 05c93cd1f17f41a2a3e6936da1408222
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:64 96caa9d25e1c4d02ba6849a6d78eca82
 msgid ""
 ":ref:`set_fft_size<class_FmodAudioEffectSpectrumAnalyzer_method_set_fft_size>`\\ (\\ fft_size\\: "
 ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>`\\ )"
@@ -168,35 +193,35 @@ msgstr ""
 ":ref:`set_fft_size<class_FmodAudioEffectSpectrumAnalyzer_method_set_fft_size>`\\ (\\ fft_size\\: "
 ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>`\\ )"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:66 270c9ddf02504ccd88ac8cc250ec4cb1
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:66 480148727a0b4a9e943e5a651082246e
 msgid ":ref:`get_fft_size<class_FmodAudioEffectSpectrumAnalyzer_method_get_fft_size>`\\ (\\ ) |const|"
 msgstr ":ref:`get_fft_size<class_FmodAudioEffectSpectrumAnalyzer_method_get_fft_size>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:68 975efd8ba14246e49ef2ecbcc4445435
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:68 9aa1b2bee75e4237bb149b344f2aea89
 msgid ":ref:`update_spectrum<class_FmodAudioEffectSpectrumAnalyzer_method_update_spectrum>`\\ (\\ )"
 msgstr ":ref:`update_spectrum<class_FmodAudioEffectSpectrumAnalyzer_method_update_spectrum>`\\ (\\ )"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:70 da36a436b901414dbb8ebb8a98d56b88
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:70 14fd834f3bbd449683a0458bf12f75f2
 msgid ":ref:`int<class_int>`"
 msgstr ":ref:`int<class_int>`"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:70 968066d144c7498aae38e0bcdba17f3d
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:70 6753ddbd8400407a829b0d8abf380410
 msgid ":ref:`get_bin_count<class_FmodAudioEffectSpectrumAnalyzer_method_get_bin_count>`\\ (\\ ) |const|"
 msgstr ":ref:`get_bin_count<class_FmodAudioEffectSpectrumAnalyzer_method_get_bin_count>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:72 c7f583945bf84bc08b299246a330611b
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:72 5f736e50225b438b80bf88fe428342ff
 msgid ":ref:`get_rms<class_FmodAudioEffectSpectrumAnalyzer_method_get_rms>`\\ (\\ ) |const|"
 msgstr ":ref:`get_rms<class_FmodAudioEffectSpectrumAnalyzer_method_get_rms>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:74 e58f1d09f3ac4948a892f6a9692400e0
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:74 7eba01ca20e241519a25b721919d099f
 msgid ":ref:`get_centroid<class_FmodAudioEffectSpectrumAnalyzer_method_get_centroid>`\\ (\\ ) |const|"
 msgstr ":ref:`get_centroid<class_FmodAudioEffectSpectrumAnalyzer_method_get_centroid>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:76 cda44fa6e0a9496c9f0b17b1c82afb38
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:76 0f3c4d7eb7944533999b42f701811fb3
 msgid ":ref:`Vector2<class_Vector2>`"
 msgstr ":ref:`Vector2<class_Vector2>`"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:76 35b7b308f8194fb5aeb0a92fc3c48ac9
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:76 3f8261144f3b4621afee3729bae0becc
 msgid ""
 ":ref:`get_magnitude_for_frequency_range<class_FmodAudioEffectSpectrumAnalyzer_method_get_magnitude_for_frequency_range>`\\"
 " (\\ begin\\: :ref:`float<class_float>`, end\\: :ref:`float<class_float>`, mode\\: "
@@ -206,71 +231,79 @@ msgstr ""
 " (\\ begin\\: :ref:`float<class_float>`, end\\: :ref:`float<class_float>`, mode\\: "
 ":ref:`MagnitudeMode<enum_FmodAudioEffectSpectrumAnalyzer_MagnitudeMode>` = 1\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:86 abb6f429831541ddb94cc0e02da1c983
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:86 a5fef2149faf4d60ae1f6630798b3a0a
 msgid "Enumerations"
 msgstr "枚举"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:94 9e1d5d59210549049de9405f9224b57e
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:92 50ce0023ba964ff7b01b4d88eab24809
 msgid "enum **FFTSize**:"
 msgstr "enum **FFTSize**:"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:100 cb5311502eec45aeb48dd6258b80a93c
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:98 53b2a643f56d49d1aa7d728e064cd83e
 msgid ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>` **FFT_SIZE_256** = ``0``"
 msgstr ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>` **FFT_SIZE_256** = ``0``"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:102 d4d6a86a191b481ab2949738c567e055
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:100 c39b8b4952544578ae4527cd2f5248d1
 msgid ""
 "256-point FFT. Lower frequency resolution but better time resolution. Useful for analyzing "
 "transient sounds or when low latency is required."
 msgstr "256 点 FFT"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:108 60c998c45f2248049a882dbfb632b977
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:106 c6e9e5b8dddb4653bbd94f447d17279c
 msgid ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>` **FFT_SIZE_512** = ``1``"
 msgstr ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>` **FFT_SIZE_512** = ``1``"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:110 a910fd07a36e488084b511b363c43d0e
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:108 7121dc995ed4408997e4e1e49c933640
 msgid "512-point FFT. Moderate frequency resolution suitable for simple visualizations."
 msgstr "512 点 FFT"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:116 f7c12ad0ed1b49ea9fa949ff02f8891d
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:114 9a9dab09648d44048e90a315fb7e9eb3
 msgid ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>` **FFT_SIZE_1024** = ``2``"
 msgstr ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>` **FFT_SIZE_1024** = ``2``"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:118 0c684446ee7e431e8c8f34290e26a39f
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:116 7da796dbef6249cf878b4f6ac88bf0b6
 msgid ""
 "1024-point FFT (default). Good balance between frequency and time resolution. Recommended for "
 "most spectrum analyzer visualizations."
 msgstr "1024 点 FFT"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:124 9a9fd2d8f5b242a4bb2843edb8bca2ec
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:122 9d1b658afbf34fc0ae8d227616bf27e2
 msgid ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>` **FFT_SIZE_2048** = ``3``"
 msgstr ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>` **FFT_SIZE_2048** = ``3``"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:126 e035ac184ac044478fa9f9d461d62bc7
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:124 9ed0a0859b5a4b778de60213a6465dd4
 msgid ""
 "2048-point FFT. Higher frequency resolution for detailed spectrum analysis. Best for visualizing "
 "complex audio or musical content."
 msgstr "2048 点 FFT"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:132 5f1b0e2bfe114fd98c317f22dbc5c963
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:130 4f8b0dc285a849b5be3de58a5e67c388
 msgid ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>` **FFT_SIZE_4096** = ``4``"
 msgstr ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>` **FFT_SIZE_4096** = ``4``"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:134 147112fde46e4d72bbc8d2dde8637df3
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:132 f097bff5f2344d2389e8824ca8ff37d9
 msgid ""
 "4096-point FFT. Very high frequency resolution but poor time resolution. Best for analyzing low-"
 "frequency content or when precise frequency detection is needed."
 msgstr "4096 点 FFT"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:140 f86468b5cd944a51840acd89fba8126f
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:138 947d179f1edf4ae2a7010706123977f2
 msgid ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>` **FFT_SIZE_MAX** = ``5``"
 msgstr ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>` **FFT_SIZE_MAX** = ``5``"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:154 b3e4e5642423425a9a4b9d1cf76200db
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:140 5143d9a756094df8beb4bfe0096acd89
+msgid ""
+"Sentinel marking the end of the FFT size enumeration. It is not a valid size and is rejected by "
+":ref:`set_fft_size()<class_FmodAudioEffectSpectrumAnalyzer_method_set_fft_size>`."
+msgstr ""
+"标记 FFT 大小枚举末尾的边界值，不是有效大小， "
+":ref:`set_fft_size()<class_FmodAudioEffectSpectrumAnalyzer_method_set_fft_size>`  会拒绝该值。"
+
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:150 4f48ef4b29e941daa99111e0ef40b4c6
 msgid "enum **MagnitudeMode**:"
 msgstr "enum **MagnitudeMode**:"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:160 9fe1f797573a450bb78e9b0ade8fb2ec
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:156 962d417d784d4a6cbd5d787c7bc99036
 msgid ""
 ":ref:`MagnitudeMode<enum_FmodAudioEffectSpectrumAnalyzer_MagnitudeMode>` **MAGNITUDE_AVERAGE** = "
 "``0``"
@@ -278,69 +311,76 @@ msgstr ""
 ":ref:`MagnitudeMode<enum_FmodAudioEffectSpectrumAnalyzer_MagnitudeMode>` **MAGNITUDE_AVERAGE** = "
 "``0``"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:162 8fd78a9b87e7479eb9292c8d1970977e
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:158 1f7c130b8dde4791bbe35b27900126d7
 msgid ""
 "Calculates the average magnitude across the specified frequency range. This provides a smoother "
 "response that represents the overall energy in the range."
 msgstr "返回频率范围内的平均幅度"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:168 f201a5383049480fb7e7d8d0183280c9
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:164 0a7ad0a750d545c8b4a757a20f3b0c6b
 msgid ":ref:`MagnitudeMode<enum_FmodAudioEffectSpectrumAnalyzer_MagnitudeMode>` **MAGNITUDE_MAX** = ``1``"
 msgstr ":ref:`MagnitudeMode<enum_FmodAudioEffectSpectrumAnalyzer_MagnitudeMode>` **MAGNITUDE_MAX** = ``1``"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:170 084e2a096baa41e3b4898c12b146a5a8
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:166 4c02728512fe4bb2b39e69c3aff183c0
 msgid ""
 "Returns the maximum (peak) magnitude within the specified frequency range. This provides a more "
 "responsive visualization that highlights the strongest frequencies in the range."
 msgstr "返回频率范围内的最大幅度"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:179 6e719b8566524237911bed527a8a5694
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:175 fafd4535c21b4e0cafe702f30c43716e
 msgid "Property Descriptions"
 msgstr "属性说明"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:185 57e8f26ebc5c469fa728eda9c4f858a5
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:181 54284e5dc5934a1db373b45feadfda56
 msgid ":ref:`bool<class_bool>` **immediate_mode** = ``false``"
 msgstr ":ref:`bool<class_bool>` **immediate_mode** = ``false``"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:189
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:241 0d7ee0856c3442f597b24109440e855f
-#: b0b8c37fbf084db39ae3f739bb906716
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:185
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:237 2943134212ad4f4a97e1952e93132aaa
+#: 944e66260fcd4366a112a8de250a3134
 msgid "|void| **set_immediate_mode**\\ (\\ enabled\\: :ref:`bool<class_bool>`\\ )"
 msgstr "|void| **set_immediate_mode**\\ (\\ enabled\\: :ref:`bool<class_bool>`\\ )"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:190
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:253 aac55344e90b4fb18a0354e96b97d381
-#: d495691b4fa34e3a9616c760287d5911
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:186
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:249 1935c1b1efdd4625943856bef85cf63a
+#: fd9dd87258ff4861859cd7188ddd0954
 msgid ":ref:`bool<class_bool>` **get_immediate_mode**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **get_immediate_mode**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:192 43e8ecb07e8c4154ab9fa51df98b5253
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:188 a0a5469e4dc3427d86606dcadd53037d
 msgid "Calculates FFT data synchronously. Useful for offline processing and same-frame queries."
 msgstr "同步计算 FFT 数据，适合离线处理和同帧查询。"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:202 c81b92f7d90342b48752010a51d48cbd
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:198 952410308dfc4ef0a1a51a4966b46656
 msgid ":ref:`float<class_float>` **buffer_length** = ``2.0``"
 msgstr ":ref:`float<class_float>` **buffer_length** = ``2.0``"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:206
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:267 bea82051c7fb47e0a8139a48b23c1025
-#: f4f896979d5348dc8ca8318c49ccbd00
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:202
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:261 011c62345803489c8100b084ecc305af
+#: aafe95f5da8745c383c1675c3158fbfd
 msgid "|void| **set_buffer_length**\\ (\\ buffer_length\\: :ref:`float<class_float>`\\ )"
 msgstr "|void| **set_buffer_length**\\ (\\ buffer_length\\: :ref:`float<class_float>`\\ )"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:207
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:281 3d2f423bddc341e1ab43e11fcf0c862e
-#: cfa0a6057a954331aa745556fcad666a
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:203
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:273 084a572e43be4a468faa7e424bab7957
+#: 146c3a3940144954ba53b541bbae6f0b
 msgid ":ref:`float<class_float>` **get_buffer_length**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_buffer_length**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:219 011b449bce0f4fcbaaec34c11d060fa3
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:205 f0534fe6af40425aa00893e96ffef146
+msgid ""
+"Stored compatibility value in seconds, clamped to 0.1 through 10.0. The default is 2.0. The "
+"current implementation does not use this property to allocate history, smooth results, or change "
+"analysis latency."
+msgstr "保存的兼容值，单位为秒，限制在 0.1 到 10.0，默认为 2.0。当前实现不使用该属性分配历史缓冲、平滑结果或改变分析延迟。"
+
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:215 1a594f1d392047d5b660f42f1918a2de
 msgid ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>` **fft_size** = ``2``"
 msgstr ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>` **fft_size** = ``2``"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:223
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:295 95d826e22cd14e22b973b3b0180bbfaa
-#: 9b888876ce2547ed9e4ceb7d52d6a0ce
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:219
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:285 9d057d4ae3bd4317befb1ec79ab27991
+#: bc0eb5fb441349b391925a80cd835394
 msgid ""
 "|void| **set_fft_size**\\ (\\ fft_size\\: "
 ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>`\\ )"
@@ -348,13 +388,13 @@ msgstr ""
 "|void| **set_fft_size**\\ (\\ fft_size\\: "
 ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>`\\ )"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:224
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:309 043c0a52ff15428f9c6535c42cae4b51
-#: 0cdb400761a24d3caad07aae6b6573f0
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:220
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:297 31a877f6b8314766941b1f491c926b10
+#: 63993793d35a4b78b061fa9a866ee512
 msgid ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>` **get_fft_size**\\ (\\ ) |const|"
 msgstr ":ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>` **get_fft_size**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:226 42f2da9d87404a0d942454cb5975e2ec
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:222 958763d8781a4f7bbd833c7214f80430
 msgid ""
 "The FFT (Fast Fourier Transform) size used for spectrum analysis. Larger FFT sizes provide better"
 " frequency resolution (more frequency bins) but worse time resolution and higher CPU usage. See "
@@ -365,75 +405,71 @@ msgstr ""
 "FFT 窗口大小 （参见   :ref:`FFTSize<enum_FmodAudioEffectSpectrumAnalyzer_FFTSize>`  ） （参见   "
 ":ref:`FFT_SIZE_1024<class_FmodAudioEffectSpectrumAnalyzer_constant_FFT_SIZE_1024>`  ）"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:235 da40c325bea8482ab998447e2b5efbb8
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:231 83f69c82554644a39a004eb336f0a7b5
 msgid "Method Descriptions"
 msgstr "方法说明"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:243 2b52f7638a14403485ffe3f85005d838
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:239 6eab2ce37498485ba324040dca5493be
 msgid ""
 "Enables synchronous FFT calculation for offline analysis. This disables FMOD FFT hardware "
 "acceleration."
 msgstr "启用同步 FFT 计算以进行离线分析。此模式会关闭 FMOD FFT 硬件加速。"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:255 a259fb0c93c8426f8da31cc8aa8c3e70
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:251 707f0aedf3b04e8185a4a1588bcf9c33
 msgid "Returns whether immediate FFT mode is enabled."
 msgstr "返回是否启用了即时 FFT 模式。"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:261
-#: abfbdf39bc2b4096859a51d3e67f0dd5
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:263 76b16b4ba3bc402a89bba463fd67284f
 msgid "Sets :ref:`buffer_length<class_FmodAudioEffectSpectrumAnalyzer_property_buffer_length>`."
 msgstr "设置  :ref:`buffer_length<class_FmodAudioEffectSpectrumAnalyzer_property_buffer_length>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:273
-#: f6d5d52941de4274ba9ba26d904b3cce
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:275 74cca187675d4e17abc6ca1bfc4d33f9
 msgid "Returns :ref:`buffer_length<class_FmodAudioEffectSpectrumAnalyzer_property_buffer_length>`."
 msgstr "返回  :ref:`buffer_length<class_FmodAudioEffectSpectrumAnalyzer_property_buffer_length>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:285
-#: 4e8cde22a1584aeb96e11f64a5ee8c0e
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:287 7661516940bd469eb5906c901c368e06
 msgid "Sets :ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>`."
 msgstr "设置  :ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:297
-#: 88d5d997db0a44279c6d1ad7f26b7503
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:299 52a3730299c54be6991cb1deff5f4e08
 msgid "Returns :ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>`."
 msgstr "返回  :ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>` 。"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:323 4dade3872df649bd9e97a71b8346fa74
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:309 a157228cdaae465aa9ac50ea6cfe9e7f
 msgid "|void| **update_spectrum**\\ (\\ )"
 msgstr "|void| **update_spectrum**\\ (\\ )"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:325 e0e36659690241a793141d53e81bdb60
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:311 95c92123018f4960b3e2f7b629127230
 msgid ""
 "Forces a fresh spectrum snapshot even if the bus DSP clock has not advanced. Magnitude, bin "
 "count, RMS and centroid queries otherwise share the current snapshot."
 msgstr "主动刷新频谱数据。"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:337 6b87a3a75ecc41a8be80d15b2773f2fa
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:321 f5b37590d6114941b2742d636f4c5448
 msgid ":ref:`int<class_int>` **get_bin_count**\\ (\\ ) |const|"
 msgstr ":ref:`int<class_int>` **get_bin_count**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:339 f94eb96b8f07450c8c9d648195ccc368
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:323 c6187058dd0e4246a5f61dde18c84e21
 msgid "Returns bin count."
 msgstr "返回当前频谱 bin 数量。"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:351 69c3d0b3391b4e08a53658503f7e5eb6
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:333 45d4543bcd4b4d148281cbc6d1840808
 msgid ":ref:`float<class_float>` **get_rms**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_rms**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:353 766962da18fa497b9c07f31d01d817b0
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:335 9e882721a07a430099057223d7fababa
 msgid "Returns rms."
 msgstr "返回当前 RMS。"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:365 47b485085b41406d8af77435cac6b472
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:345 0ed548467e7645c3b69b5433da57bc2f
 msgid ":ref:`float<class_float>` **get_centroid**\\ (\\ ) |const|"
 msgstr ":ref:`float<class_float>` **get_centroid**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:367 634efbbc1c0c44d9aa1a91ba6a631b1a
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:347 4df3fb2f234f4701bfbf3933e7c372a3
 msgid "Returns centroid."
 msgstr "返回当前频谱重心。"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:379 c1596a03e16d4349863d80c0f1ebeb5a
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:357 72c2a455e1a14f348db9c67a23ef9fb2
 msgid ""
 ":ref:`Vector2<class_Vector2>` **get_magnitude_for_frequency_range**\\ (\\ begin\\: "
 ":ref:`float<class_float>`, end\\: :ref:`float<class_float>`, mode\\: "
@@ -443,14 +479,14 @@ msgstr ""
 ":ref:`float<class_float>`, end\\: :ref:`float<class_float>`, mode\\: "
 ":ref:`MagnitudeMode<enum_FmodAudioEffectSpectrumAnalyzer_MagnitudeMode>` = 1\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:381 dbb205aa0d59466e95373bd2c4653fd0
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:359 163d6c19423949b3a7d2db825d07e645
 msgid ""
 "Returns the magnitude (amplitude) of the specified frequency range as a "
 ":ref:`Vector2<class_Vector2>`. The ``x`` component contains the left channel magnitude and ``y`` "
 "contains the right channel magnitude."
 msgstr "返回指定频率范围内左右声道的幅度。 （参见   :ref:`Vector2<class_Vector2>`  ）"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:383 65fe12a42d2e43dfaad586c9528f956e
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:361 b49aa0c2e9394203b914477ad539982a
 msgid ""
 "The ``begin`` and ``end`` parameters specify the frequency range in Hz (e.g., 20.0 to 200.0 for "
 "bass frequencies). The ``mode`` determines how the magnitude is calculated across the range: "
@@ -464,40 +500,8 @@ msgstr ""
 "计算平均幅度， :ref:`MAGNITUDE_MAX<class_FmodAudioEffectSpectrumAnalyzer_constant_MAGNITUDE_MAX>`  "
 "返回峰值幅度。"
 
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:385 a147590ab9284147be8b8681d063544d
+#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:363 573b914ad01848dbabef209207deeb3e
 msgid ""
 "Magnitude values are in linear scale (0.0 to 1.0+). Use ``linear_to_db()`` to convert to decibels"
 " for display purposes."
 msgstr "幅度采用线性刻度（0.0 到 1.0 及以上）。显示时可用    ``linear_to_db()``    转换为分贝。"
-
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:27
-#: ebf51b701eb7466ca5f2ce54001c225b
-msgid ""
-"The :ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>` determines the "
-"analysis window and frequency resolution. Larger FFT sizes provide finer frequency detail at "
-"the cost of time resolution and processing work. "
-":ref:`buffer_length<class_FmodAudioEffectSpectrumAnalyzer_property_buffer_length>` is "
-"currently stored for compatibility and does not change the FFT window or retain audio "
-"history."
-msgstr ""
-":ref:`fft_size<class_FmodAudioEffectSpectrumAnalyzer_property_fft_size>`  决定分析窗口和频率分辨率。FFT "
-"越大，频率细节越精确，但时间分辨率更低、处理开销更大。 "
-":ref:`buffer_length<class_FmodAudioEffectSpectrumAnalyzer_property_buffer_length>`  "
-"当前仅为兼容而保存，不会改变 FFT 窗口，也不会保留音频历史。"
-
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:138
-#: 4e2adc212efd4983b64979abcfb3d153
-msgid ""
-"Sentinel marking the end of the FFT size enumeration. It is not a valid size and is rejected "
-"by :ref:`set_fft_size()<class_FmodAudioEffectSpectrumAnalyzer_method_set_fft_size>`."
-msgstr ""
-"标记 FFT 大小枚举末尾的边界值，不是有效大小， "
-":ref:`set_fft_size()<class_FmodAudioEffectSpectrumAnalyzer_method_set_fft_size>`  会拒绝该值。"
-
-#: ../../source/classes/class_fmodaudioeffectspectrumanalyzer.rst:203
-#: 04d7b56c30a64b86a3e54e3d8433d853
-msgid ""
-"Stored compatibility value in seconds, clamped to 0.1 through 10.0. The default is 2.0. The "
-"current implementation does not use this property to allocate history, smooth results, or "
-"change analysis latency."
-msgstr "保存的兼容值，单位为秒，限制在 0.1 到 10.0，默认为 2.0。当前实现不使用该属性分配历史缓冲、平滑结果或改变分析延迟。"

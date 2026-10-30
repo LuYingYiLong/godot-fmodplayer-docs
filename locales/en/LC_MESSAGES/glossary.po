@@ -10,7 +10,7 @@ msgstr ""
 "eLanguage-Team: en <LL@li.orgPlural-Forms: nplurals=2; plural=(n != 1)MIME-Version: 1.Content-"
 "Type: text/plain; charset=utf-Content-Transfer-Encoding: 8bi\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-04-26 23:57+0800\n"
+"POT-Creation-Date: 2026-10-30 23:43+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,11 +19,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: ../../source/glossary.rst:2 5be303ba7a16486a827e3529c340c42d
+#: ../../source/glossary.rst:2 00a9b64483fd429690e549c233d5cf8c
 msgid "术语表"
 msgstr "Glossary"
 
-#: ../../source/glossary.rst:4 257ee9b6872e4fa186051f10b7968a48
+#: ../../source/glossary.rst:4 367f8ca6ec4b40d18bacd112fd850a28
 msgid ""
 "本页整理使用 Godot-FmodPlayer 时常见的 FMOD 与音频术语。内容参考 `FMOD API Glossary "
 "<https://www.fmod.com/docs/2.02/api/glossary.html>`_， 并根据 Godot 引擎、FMOD Core API 与 Godot-"
@@ -33,7 +33,7 @@ msgstr ""
 " API Glossary <https://www.fmod.com/docs/2.02/api/glossary.html>`_ and adapts the explanations to"
 " Godot Engine, the FMOD Core API, and Godot-FmodPlayer usage."
 
-#: ../../source/glossary.rst:10 789b32d944af4df0b33210eab252ca35
+#: ../../source/glossary.rst:10 586552644e014682ae5d0cc919e9d911
 msgid ""
 "本页不是 FMOD 官方文档的中文翻译，也不替代 FMOD 官方许可、API 文档或技术支持。 FMOD、FMOD Engine 等名称归 Firelight Technologies Pty "
 "Ltd 所有。发布项目时请以 `FMOD Legal Information <https://www.fmod.com/legal>`_ 与 `FMOD Licensing "
@@ -44,515 +44,11 @@ msgstr ""
 "Engine belong to Firelight Technologies Pty Ltd. When publishing a project, always follow `FMOD "
 "Legal Information <https://www.fmod.com/legal>`_ and the official licensing terms."
 
-#: ../../source/glossary.rst:18 5d9d11a72663480aa6944c1f0fcd2589
+#: ../../source/glossary.rst:18 8a4c548d0a28415fa11cd162d1902d70
 msgid "2D 与 3D"
 msgstr "2D and 3D"
 
-#: ../../source/glossary.rst:35 b7353364fc8048419e8ea1064b629c8f
-msgid "音频资产"
-msgstr "Audio Asset"
-
-#: ../../source/glossary.rst:37 7de19d7582c14d39b11b04bbd719e474
-msgid "音频资产是项目中可播放的声音数据。它可以是 ``wav``、``ogg``、``mp3``、``flac`` 等独立音频文件， 也可以是运行时已经能够读取的其他 FMOD 支持格式。"
-msgstr ""
-"An audio asset is playable sound data in the project. It may be an independent audio file such as"
-" ``wav``, ``ogg``, ``mp3``, or ``flac``, or another runtime-readable format supported by FMOD."
-
-#: ../../source/glossary.rst:47 f743d28f15024019872353765b949fef
-msgid "音频通道"
-msgstr "Audio Channel"
-
-#: ../../source/glossary.rst:49 0959a35e57ab41f7b61a8ac8337c8b43
-msgid "音频通道可以指两种不同概念，需要区分："
-msgstr "Audio channel can mean two different things, so the distinction matters:"
-
-#: ../../source/glossary.rst:51 8ec5f9e74b5e448e843469b10998a560
-msgid "**声道**：音频信号里的扬声器通道，例如单声道、左声道、右声道、5.1 环绕声中的多个输出通道。"
-msgstr ""
-"**Speaker channel**: A speaker channel in the audio signal, such as mono, left, right, or "
-"multiple output channels in 5.1 surround."
-
-#: ../../source/glossary.rst:60 416a529a6dc049b8b643ae92090b493e
-msgid "Bus"
-msgstr "Bus"
-
-#: ../../source/glossary.rst:62 5860aefe2c4f491f9fa30cb89bf1feab
-msgid "Bus 即音频总线，用来把一组声音集中到同一个混音路径上。常见总线包括 ``Music``、``SFX``、``Voice`` 和 ``Ambient``。"
-msgstr ""
-"A Bus is an audio bus used to collect a group of sounds into the same mixing route. Common buses "
-"include ``Music``, ``SFX``, ``Voice``, and ``Ambient``."
-
-#: ../../source/glossary.rst:71 28b6423894ad47dcb18332792d9b8faa
-msgid "Channel"
-msgstr "Channel"
-
-#: ../../source/glossary.rst:73 ba5ca4d5487142c0992324e5df36de40
-msgid "Channel 是 FMOD 中一次正在播放或由虚拟语音系统托管的声音实例。它可以控制音量、暂停、音高、循环点、播放位置、 3D 属性、DSP 链和回调。"
-msgstr ""
-"A Channel is one sound instance currently playing in FMOD, or managed by the virtual voice "
-"system. It can control volume, pause, pitch, loop points, playback position, 3D properties, DSP "
-"chains, and callbacks."
-
-#: ../../source/glossary.rst:83 3bc8613a19cd40a8920fa086c2a07379
-msgid "ChannelGroup"
-msgstr "ChannelGroup"
-
-#: ../../source/glossary.rst:85 eae497092c7e4c108e8b85adaef0e816
-msgid ""
-"ChannelGroup 是多个 Channel 或子 ChannelGroup 的混音容器。它适合做分组控制，例如同时降低所有音乐音量、 暂停一组环境声，或给整个 ``SFX`` "
-"总线添加一个滤波器。"
-msgstr ""
-"A ChannelGroup is a mixing container for multiple Channels or child ChannelGroups. It is useful "
-"for grouped control, such as lowering all music, pausing a group of ambience sounds, or adding a "
-"filter to the whole ``SFX`` bus."
-
-#: ../../source/glossary.rst:94 640aef804f8143179b4d9f709481ab3e
-msgid "ChannelControl"
-msgstr "ChannelControl"
-
-#: ../../source/glossary.rst:96 0270ad4799d44685bfb56e00cc99d28e
-msgid "ChannelControl 是 Channel 和 ChannelGroup 共享的一组控制能力。它包含音量、静音、暂停、音高、3D 属性、声像矩阵、 DSP 插入、淡变点和回调等接口。"
-msgstr ""
-"ChannelControl is the shared control surface of Channel and ChannelGroup. It includes APIs for "
-"volume, mute, pause, pitch, 3D properties, pan matrix, DSP insertion, fade points, and callbacks."
-
-#: ../../source/glossary.rst:105 3b4f4c7fce07411db4f61e68d208e17f
-msgid "DSP"
-msgstr "DSP"
-
-#: ../../source/glossary.rst:107 fb28cc435c5440a68049d81ba373e3d2
-msgid "DSP 是 Digital Signal Processing 的缩写，表示数字信号处理单元。混响、均衡器、滤波器、延迟、失真、压缩器、 频谱分析器等都可以作为 DSP 参与音频处理。"
-msgstr ""
-"DSP stands for Digital Signal Processing. Reverb, equalizers, filters, delay, distortion, "
-"compressors, and spectrum analyzers can all participate in audio processing as DSP units."
-
-#: ../../source/glossary.rst:116 85b129cba7f945c9b96758f82f60f171
-msgid "DSP 链"
-msgstr "DSP Chain"
-
-#: ../../source/glossary.rst:118 5538af25e12f49ab990a8514b7cdda56
-msgid "DSP 链是多个 DSP 按顺序连接形成的处理路径。声音进入链后，会依次经过这些处理单元。 不同顺序会产生不同结果，例如先失真再混响，和先混响再失真，听感通常不同。"
-msgstr ""
-"A DSP chain is a processing path formed by connecting multiple DSPs in order. Once sound enters "
-"the chain, it passes through each processing unit sequentially. Different orders produce "
-"different results; distortion before reverb usually sounds different from reverb before "
-"distortion."
-
-#: ../../source/glossary.rst:130 7a99d8a11a644bc2948eefc2c500b1a6
-msgid "DSP Clock"
-msgstr "DSP Clock"
-
-#: ../../source/glossary.rst:132 63c317bc9675478cae90abc6c0e4a7f4
-msgid "DSP Clock 是 FMOD 混音器使用的样本级时间计数。它常用于精确调度播放、延迟启动、淡入淡出或和其他声音对齐。"
-msgstr ""
-"DSP Clock is FMOD mixer time counted at sample precision. It is commonly used for precise "
-"playback scheduling, delayed starts, fades, or aligning sounds."
-
-#: ../../source/glossary.rst:141 c1cd133569104ea583503c889ddfe73d
-msgid "Listener"
-msgstr "Listener"
-
-#: ../../source/glossary.rst:143 ac0e1de70b2a4ff6b129ac2959f27f7d
-msgid "Listener 即监听器，表示玩家“听见世界”的位置和朝向。3D 声音会根据监听器与声源之间的距离、方向和相对速度计算结果。"
-msgstr ""
-"A Listener represents where the player hears the world from, including position and orientation. "
-"3D sounds are calculated from the distance, direction, and relative velocity between the listener"
-" and the source."
-
-#: ../../source/glossary.rst:152 ac46a3b908204f1abfe7c85c5fc667e9
-msgid "Sound"
-msgstr "Sound"
-
-#: ../../source/glossary.rst:154 220b6977def5430e8372ee38839ac3cb
-msgid "Sound 是 FMOD 对音频数据的运行时表示。它通常由文件、内存数据或流式数据创建，然后通过 System 播放为 Channel。"
-msgstr ""
-"Sound is FMOD's runtime representation of audio data. It is usually created from a file, memory "
-"data, or streaming data, and then played by the System as a Channel."
-
-#: ../../source/glossary.rst:162 436646e2fcc04382975e8d8d88e5f1c9
-msgid "Stream 与 Sample"
-msgstr "Stream and Sample"
-
-#: ../../source/glossary.rst:164 5ea00a05f44f41a2a91ac4a88b2ba7a2
-msgid "Stream 表示边读取边解码的播放方式，适合音乐、长旁白、长环境声等体积较大的音频。 Sample 表示把音频数据加载到内存后播放，适合短音效、频繁触发的 UI 声和需要低延迟响应的声音。"
-msgstr ""
-"Stream means audio is read and decoded while playing, which is suitable for large audio such as "
-"music, long narration, and long ambience. Sample means the audio data is loaded into memory "
-"before playback, which is suitable for short sound effects, frequently triggered UI sounds, and "
-"low-latency responses."
-
-#: ../../source/glossary.rst:173 d09eb9d96da0483d888ecde8d25ccdfb
-msgid "Virtual Channel"
-msgstr "Virtual Channel"
-
-#: ../../source/glossary.rst:175 bf396a65ddf8469f988fbf80b01a8dbf
-msgid "Virtual Channel 即虚拟通道。当同时播放的声音很多时，FMOD 可以让听不见或优先级较低的声音进入虚拟状态。 虚拟通道仍然保留播放时间和状态，但不一定消耗完整的混音资源。"
-msgstr ""
-"A Virtual Channel is a channel in FMOD's virtual voice system. When many sounds play at the same "
-"time, FMOD may virtualize inaudible or low-priority sounds. A virtual channel keeps playback time"
-" and state, but may not consume full mixing resources."
-
-#: ../../source/glossary.rst:184 dc75ea5e9a764421854d32dce95085a2
-msgid "Rolloff"
-msgstr "Rolloff"
-
-#: ../../source/glossary.rst:186 6c6730a419d74e2e9e57f960fcd7bf6e
-msgid "Rolloff 表示 3D 声音随距离变远而衰减的曲线。不同曲线会影响声音从近处到远处的听感变化。"
-msgstr ""
-"Rolloff is the curve describing how a 3D sound attenuates as distance increases. Different curves"
-" change how the sound feels from near to far."
-
-#: ../../source/glossary.rst:195 8d80f3f15d5d4ed2ab7a0f79c8697f7c
-msgid "Doppler"
-msgstr "Doppler"
-
-#: ../../source/glossary.rst:197 56f2edaf2b71407883132de2904fef12
-msgid "Doppler 即多普勒效果。当声源和监听器之间存在相对速度时，音高会发生变化。 快速掠过的车辆、飞行物或高速移动的物体可以使用该效果增强速度感。"
-msgstr ""
-"Doppler is the pitch shift caused by relative velocity between a sound source and the listener. "
-"Fast passing vehicles, projectiles, or moving objects can use it to enhance the sense of speed."
-
-#: ../../source/glossary.rst:206 8c263b0b323f46af8b73a9c616571469
-msgid "Occlusion"
-msgstr "Occlusion"
-
-#: ../../source/glossary.rst:208 d5b59e7c877a4a2092e9ecdf21a478ba
-msgid "Occlusion 即遮挡。它描述墙体、地形或其他几何体阻挡声音传播后，音量和高频内容被削弱的效果。"
-msgstr ""
-"Occlusion describes how walls, terrain, or other geometry block sound propagation, reducing "
-"volume and high-frequency content."
-
-#: ../../source/glossary.rst:216 08ab57d9c7fd4b8fa713e289f0c3bc69
-msgid "Pan 与 Mix Matrix"
-msgstr "Pan and Mix Matrix"
-
-#: ../../source/glossary.rst:218 729736e0e67f40e6b91e0bdbc27a66b2
-msgid "Pan 即声像，通常用于控制声音在左右声道或环绕声场中的位置。Mix Matrix 则是更底层的输入到输出声道矩阵， 可以精确控制每个输入声道如何分配到输出声道。"
-msgstr ""
-"Pan usually controls where a sound sits in the left/right channels or surround field. Mix Matrix "
-"is a lower-level input-to-output channel matrix that can precisely control how each input channel"
-" is distributed to output channels."
-
-#: ../../source/glossary.rst:227 f380b08ef30f445b81034fdb688b5b7b
-msgid "Mix Matrix"
-msgstr "Mix Matrix"
-
-#: ../../source/glossary.rst:229 46fb213eddff4905beecd0e0b6a0dffa
-msgid ""
-"Mix Matrix 即混音矩阵，用来控制 **输入声道** 如何分配到 **输出声道**。 可以把它理解成一张权重表：每一列是一个输入声道，每一行是一个输出声道，表格中的数值表示 "
-"“这个输入声道有多少信号送到这个输出声道”。"
-msgstr ""
-"Mix Matrix controls how **input channels** are distributed to **output channels**. You can think "
-"of it as a weight table: each column is an input channel, each row is an output channel, and each"
-" value says how much of that input channel is sent to that output channel."
-
-#: ../../source/glossary.rst:233 17795e5f271548bd80d171bd88f3bfca
-msgid "以一个立体声输入原样送到立体声输出为例："
-msgstr "For example, a stereo input sent unchanged to stereo output:"
-
-#: ../../source/glossary.rst:235 c6362d7ad1ff4e25a4e8e3725ea7c99d
-msgid "立体声输入原样输出到立体声输出的混音矩阵"
-msgstr "Mix matrix for sending stereo input unchanged to stereo output"
-
-#: ../../source/glossary.rst:240 421cc51423844f93bed5e0b86d7f49e9
-msgid "这个矩阵表示左声道只进左扬声器，右声道只进右扬声器。用更直观的形式写就是："
-msgstr ""
-"This matrix means the left channel goes only to the left speaker, and the right channel goes only"
-" to the right speaker. Written more directly:"
-
-#: ../../source/glossary.rst:242 ceda5092b2ce437a9676e64e8b984828
-msgid ""
-"输出 L = 输入 L * 1.0 + 输入 R * 0.0\n"
-"输出 R = 输入 L * 0.0 + 输入 R * 1.0"
-msgstr ""
-"Output L = Input L * 1.0 + Input R * 0.0\n"
-"Output R = Input L * 0.0 + Input R * 1.0"
-
-#: ../../source/glossary.rst:251 fc4d6120a57944f783e7ff661bf70bac
-msgid "下面示例把立体声左右声道对调："
-msgstr "The example below swaps the left and right channels of a stereo sound:"
-
-#: ../../source/glossary.rst:253 a51ac308fad646b7842834f2f44dc231
-msgid ""
-"func swap_stereo(channel: FmodChannel) -> void:\n"
-"    var matrix := PackedFloat32Array([\n"
-"        0.0, 1.0, # Out L = In R\n"
-"        1.0, 0.0, # Out R = In L\n"
-"    ])\n"
-"\n"
-"    channel.set_mix_matrix(matrix, 2, 2)"
-msgstr ""
-"func swap_stereo(channel: FmodChannel) -> void:\n"
-"    var matrix := PackedFloat32Array([\n"
-"        0.0, 1.0, # Out L = In R\n"
-"        1.0, 0.0, # Out R = In L\n"
-"    ])\n"
-"\n"
-"    channel.set_mix_matrix(matrix, 2, 2)"
-
-#: ../../source/glossary.rst:270 ea588057db2b4248ac74242d5f13e098
-msgid "Upmix"
-msgstr "Upmix"
-
-#: ../../source/glossary.rst:272 b24f32bfd22c43329bfc1e226ad33e10
-msgid "Upmix 即上混，是把较少的输入声道分配到更多输出声道。例如把单声道音效送到立体声输出， 或者把立体声音乐送到 5.1 输出。"
-msgstr ""
-"Upmix means distributing fewer input channels to more output channels. For example, sending a "
-"mono sound effect to stereo output, or sending stereo music to 5.1 output."
-
-#: ../../source/glossary.rst:275 ebad2d61381e4b6dbc487f82cf1cd0ff
-msgid "最常见的单声道到立体声上混，是把同一份单声道信号同时送到左右声道。听感上它会位于正中间。 如果希望这个单声道声音偏左，可以降低右声道电平："
-msgstr ""
-"The most common mono-to-stereo upmix sends the same mono signal to both left and right channels, "
-"which sounds centered. If you want the mono sound to lean left, reduce the right channel level:"
-
-#: ../../source/glossary.rst:278 1e97b52ea25446f88fc61d4602ddac05
-msgid "单声道上混到偏左立体声输出的混音矩阵"
-msgstr "Mix matrix for upmixing mono to left-biased stereo output"
-
-#: ../../source/glossary.rst:283 5e4053b93bf2456083636cfbc35cc1b6
-msgid "对应代码可以写成："
-msgstr "The corresponding code can be written as:"
-
-#: ../../source/glossary.rst:285 788b086801a34db1a30d23b711234bcd
-msgid ""
-"func mono_to_left_biased_stereo(channel: FmodChannel) -> void:\n"
-"    var matrix := PackedFloat32Array([\n"
-"        1.0,  # Out L = Mono * 1.0\n"
-"        0.35, # Out R = Mono * 0.35\n"
-"    ])\n"
-"\n"
-"    channel.set_mix_matrix(matrix, 2, 1)"
-msgstr ""
-"func mono_to_left_biased_stereo(channel: FmodChannel) -> void:\n"
-"    var matrix := PackedFloat32Array([\n"
-"        1.0,  # Out L = Mono * 1.0\n"
-"        0.35, # Out R = Mono * 0.35\n"
-"    ])\n"
-"\n"
-"    channel.set_mix_matrix(matrix, 2, 1)"
-
-#: ../../source/glossary.rst:302 03e7c6a129844888a4013be6e9375e2f
-msgid "Downmix"
-msgstr "Downmix"
-
-#: ../../source/glossary.rst:304 6f83f6d6fe4349648b9691ed907ce389
-msgid "Downmix 即下混，是把较多的输入声道折叠到较少输出声道。例如把立体声转为单声道， 或者把 5.1 输出到立体声设备。"
-msgstr ""
-"Downmix means folding more input channels into fewer output channels. For example, converting "
-"stereo to mono, or outputting 5.1 content to a stereo device."
-
-#: ../../source/glossary.rst:307 16c445255d5646b587c4d13b0b9b96ef
-msgid "一个常见的立体声到单声道下混矩阵如下："
-msgstr "A common stereo-to-mono downmix matrix is:"
-
-#: ../../source/glossary.rst:309 27f850bf44884d9d8a831e44ca22beda
-msgid "立体声下混到单声道的混音矩阵"
-msgstr "Mix matrix for downmixing stereo to mono"
-
-#: ../../source/glossary.rst:314 007b08dad01e4fa1adfdd41a97ecb7a5
-msgid "这表示左右声道各取一半相加："
-msgstr "This means the left and right channels are each added at half level:"
-
-#: ../../source/glossary.rst:316 f24886f0728345c9b6bf7b479257b215
-msgid "输出 Mono = 输入 L * 0.5 + 输入 R * 0.5"
-msgstr "Output Mono = Input L * 0.5 + Input R * 0.5"
-
-#: ../../source/glossary.rst:320 a7b10784c02045aaa22a5a5418337792
-msgid ""
-"不要简单使用 ``1.0 + 1.0`` 做下混。两个满电平信号直接相加可能让输出超过正常范围， 造成削波或听感上的突然变大。实际项目里可以从 ``0.5``、``0.707`` "
-"或更保守的值开始， 再根据素材响度和目标平台调整。"
-msgstr ""
-"Do not simply use ``1.0 + 1.0`` for downmixing. Adding two full-level signals directly can exceed"
-" the normal range, causing clipping or a sudden loudness increase. In real projects, start with "
-"``0.5``, ``0.707``, or a more conservative value, then adjust based on material loudness and the "
-"target platform."
-
-#: ../../source/glossary.rst:324 835bc58248544f1ab5d8875f484477a4
-msgid "代码示例："
-msgstr "Code example:"
-
-#: ../../source/glossary.rst:326 e241b56142b5449ba8221354c015c83b
-msgid ""
-"func stereo_to_mono(channel: FmodChannel) -> void:\n"
-"    var matrix := PackedFloat32Array([\n"
-"        0.5, 0.5, # Out Mono = In L * 0.5 + In R * 0.5\n"
-"    ])\n"
-"\n"
-"    channel.set_mix_matrix(matrix, 1, 2)"
-msgstr ""
-"func stereo_to_mono(channel: FmodChannel) -> void:\n"
-"    var matrix := PackedFloat32Array([\n"
-"        0.5, 0.5, # Out Mono = In L * 0.5 + In R * 0.5\n"
-"    ])\n"
-"\n"
-"    channel.set_mix_matrix(matrix, 1, 2)"
-
-#: ../../source/glossary.rst:336 d4458d9a00344465989b82da1884cd03
-msgid "5.1 到立体声的简化示例"
-msgstr "Simplified 5.1-to-stereo example"
-
-#: ../../source/glossary.rst:338 e0fe0b9ad52b4bb787da99368c985008
-msgid "5.1 声道通常可以按以下顺序理解："
-msgstr "5.1 channels can usually be understood in this order:"
-
-#: ../../source/glossary.rst:340 069c1b8c1de1457bbc2b3b99314c96c8
-msgid "Front Left, Front Right, Center, LFE, Surround Left, Surround Right"
-msgstr "Front Left, Front Right, Center, LFE, Surround Left, Surround Right"
-
-#: ../../source/glossary.rst:344 f8ce234b7e9a4c1e823d700c161e0eef
-msgid "一个简化的 5.1 到立体声下混矩阵可以写成："
-msgstr "A simplified 5.1-to-stereo downmix matrix can be written as:"
-
-#: ../../source/glossary.rst:346 1658f75f6d014587be9f40b1d370ff05
-msgid "5.1 声道下混到立体声的混音矩阵"
-msgstr "Mix matrix for downmixing 5.1 channels to stereo"
-
-#: ../../source/glossary.rst:351 340c0d80bf584dd0b129195f5d859ff9
-msgid "这里的思路是："
-msgstr "The idea is:"
-
-#: ../../source/glossary.rst:353 73b75b11da634f96a31d7defc6d3298c
-msgid "左前和右前分别进入对应的左右输出。"
-msgstr "Front left and front right go to the corresponding left and right outputs."
-
-#: ../../source/glossary.rst:354 9da2cc109ef1444aae49753b55ee2348
-msgid "中置声道同时进入左右输出，并降低到 ``0.707``，避免居中内容过响。"
-msgstr ""
-"The center channel goes to both left and right output, reduced to ``0.707`` to avoid making "
-"centered content too loud."
-
-#: ../../source/glossary.rst:355 15bb9b0afd8d414f8a28e8837534d581
-msgid "左环绕进入左输出，右环绕进入右输出，也适当降低。"
-msgstr ""
-"Surround left goes to left output, and surround right goes to right output, also reduced "
-"appropriately."
-
-#: ../../source/glossary.rst:356 ad922eeafb5f4902ac7ed3dc9ea6aaf2
-msgid "LFE 是低频效果声道，不一定适合直接混入普通立体声输出，是否加入要看项目需求。"
-msgstr ""
-"LFE is the low-frequency effects channel and may not be suitable for direct mixing into regular "
-"stereo output; whether to include it depends on the project."
-
-#: ../../source/glossary.rst:360 abece1b1bb354caeaec03aeceb9aec87
-msgid "多声道下混没有唯一正确答案。不同平台、设备、耳机虚拟环绕、影院标准和游戏风格可能需要不同矩阵。 对关键内容做下混时，必须用实际目标设备听测。"
-msgstr ""
-"There is no single correct answer for multi-channel downmixing. Different platforms, devices, "
-"virtual surround headphones, cinema standards, and game styles may require different matrices. "
-"For critical content, always listen on the actual target device."
-
-#: ../../source/glossary.rst:366 d697b01b45d54dcf8b078570026d146e
-msgid "Callback"
-msgstr "Callback"
-
-#: ../../source/glossary.rst:368 d90ad980b430479cb95ca8250cd92793
-msgid "Callback 即回调。FMOD 会在特定事件发生时通知用户代码，例如声音结束、通道状态变化或某些底层系统事件。"
-msgstr ""
-"Callback means FMOD notifies user code when a specific event occurs, such as a sound ending, a "
-"channel state change, or a lower-level system event."
-
-#: ../../source/glossary.rst:370 46bbf1ccc7f04457aa99faa2f8faf4ba
-msgid ""
-"在 Godot-FmodPlayer 中，ChannelControl 级别回调会通过 ``callback_received`` 信号转发到 Godot。 每个 "
-"System、ChannelControl 或 DSP 通常只维护一个回调入口，因此注册回调时应根据回调类型区分处理逻辑。"
-msgstr ""
-"In Godot-FmodPlayer, ChannelControl-level callbacks are forwarded to Godot through the "
-"``callback_received`` signal. Each System, ChannelControl, or DSP usually maintains one callback "
-"entry, so callback registration should branch by callback type."
-
-#: ../../source/glossary.rst:376 b4ab9253addd4bf6924fc573cd676e03
-msgid "System"
-msgstr "System"
-
-#: ../../source/glossary.rst:378 e732126c15ae4376b0fd90963250d56d
-msgid "System 是 FMOD Core API 的核心对象，负责初始化音频设备、创建 Sound、播放声音、管理 Channel、更新混音系统、 获取性能数据和处理录音等底层功能。"
-msgstr ""
-"System is the core object of the FMOD Core API. It initializes audio devices, creates Sounds, "
-"plays sounds, manages Channels, updates the mixing system, retrieves performance data, and "
-"handles recording."
-
-#: ../../source/glossary.rst:387 f888c93ad506429cbd6c5825981b9958
-msgid "Bank 与 Event"
-msgstr "Bank and Event"
-
-#: ../../source/glossary.rst:389 97ed37a701114a89aac669878687aac7
-msgid ""
-"Bank 和 Event 常见于 FMOD 的 Studio 工作流。Godot-FmodPlayer 主要面向 **FMOD Core API**， 重点是音频文件播放、通道控制、DSP "
-"效果、混音总线、3D 音频和性能监控。"
-msgstr ""
-"Bank and Event are common in the FMOD Studio workflow. Godot-FmodPlayer mainly targets the **FMOD"
-" Core API**, focusing on audio file playback, channel control, DSP effects, mixing buses, 3D "
-"audio, and performance monitoring."
-
-#: ../../source/glossary.rst:392 db31c219e5ac40e8a75172a25fb769a3
-msgid ""
-"因此，在本插件文档中看到 ``Bank`` 或 ``Event`` 时，通常只是为了帮助理解 FMOD 生态中的相关概念。 如果项目需要完整的 FMOD Studio Event、Bank "
-"构建、参数自动化和音频设计师工作流， 应选择专门的 FMOD Studio 集成方案，而不是把 Godot-FmodPlayer 当作完整 Studio 集成使用。"
-msgstr ""
-"Therefore, when ``Bank`` or ``Event`` appears in this plugin documentation, it is usually only to"
-" help explain related FMOD ecosystem concepts. If a project needs a full FMOD Studio Event "
-"workflow, Bank builds, parameter automation, and audio-designer tooling, choose a dedicated FMOD "
-"Studio integration instead of treating Godot-FmodPlayer as one."
-
-#: ../../source/glossary.rst:399 87a50c04b0e24a5cb995e1f837a2fdb5
-msgid "FSB"
-msgstr "FSB"
-
-#: ../../source/glossary.rst:401 f8dc4d67f8f8447db86aa18dad96f338
-msgid "FSB 是 FMOD Sample Bank 的缩写，是一种打包采样数据的格式。它和 Studio 工作流中的 Bank 不是同一个概念。"
-msgstr ""
-"FSB stands for FMOD Sample Bank. It is a format for packed sample data and is not the same "
-"concept as a Bank in the Studio workflow."
-
-#: ../../source/glossary.rst:403 10c2d89c88604e2b96298fd92420ef18
-msgid ""
-"Godot-FmodPlayer 面向常规音频文件和 FMOD Core API 用法时，通常不需要直接处理 FSB。 如果项目依赖特殊打包格式，应先确认当前目标平台、FMOD Engine "
-"版本和插件导入流程是否支持。"
-msgstr ""
-"For regular audio files and FMOD Core API usage, Godot-FmodPlayer usually does not require direct"
-" FSB handling. If your project depends on a special packaged format, first confirm support for "
-"the target platform, FMOD Engine version, and plugin import flow."
-
-#: ../../source/glossary.rst:409 6f2604829e5f4cdbaa8af22122d19edf
-msgid "Profiler"
-msgstr "Profiler"
-
-#: ../../source/glossary.rst:411 a1757129ef5b47fdad320868bcad2013
-msgid "Profiler 是用于观察音频系统运行状态的工具。它可以帮助定位 CPU 占用、流式读取、通道数量、DSP 开销和混音问题。"
-msgstr ""
-"A Profiler is a tool for observing the runtime state of the audio system. It helps locate CPU "
-"usage, streaming reads, channel count, DSP cost, and mixing issues."
-
-#: ../../source/glossary.rst:413 f3c6bd94ce134ac19c42ba94bb6ad6ce
-msgid ""
-"Godot-FmodPlayer 会把部分 FMOD 性能数据注册到 Godot 的性能监视器中，例如 ``FmodCPUUsage/DSP``、 ``FmodCPUUsage/Stream``"
-" 和 ``FmodFileUsage/StreamBytesRead``。调试卡顿、爆音或加载异常时，建议同时查看 Godot 输出面板和性能监视器。"
-msgstr ""
-"Godot-FmodPlayer registers some FMOD performance data in Godot's performance monitors, such as "
-"``FmodCPUUsage/DSP``, ``FmodCPUUsage/Stream``, and ``FmodFileUsage/StreamBytesRead``. When "
-"debugging stutters, pops, or loading issues, check these monitors first."
-
-#: ../../source/glossary.rst:419 dd3c545969f343878be4d6e9c0cab5c6
-msgid "运行库"
-msgstr "Runtime Library"
-
-#: ../../source/glossary.rst:421 eee9188a6faf4bbd98d17597d523b18f
-msgid "运行库指 FMOD Engine 在目标平台上的二进制文件，例如 Windows 上的 ``fmod.dll``，Android 上的 ``libfmod.so`` 和相关 Java 文件。"
-msgstr ""
-"A runtime library is the FMOD Engine binary for the target platform, such as ``fmod.dll`` on "
-"Windows or ``libfmod.so`` and related Java files on Android."
-
-#: ../../source/glossary.rst:423 4da975b77d7b434ca6f963d1a1da8958
-msgid ""
-"Godot-FmodPlayer 插件本身不分发 FMOD 运行库。你需要根据目标平台从 FMOD 官方渠道获取，并按 :doc:`export` 或 "
-":doc:`getting_started/installation` 的说明放到项目中。发布游戏时还需要遵守 FMOD 的许可和署名要求。"
-msgstr ""
-"Godot-FmodPlayer does not distribute FMOD runtime libraries. Get them from official FMOD channels"
-" for your target platform and place them in the project as described in :doc:`export` or "
-":doc:`getting_started/installation`. When publishing a game, you must also follow FMOD licensing "
-"and attribution requirements."
-
-#: ../../source/glossary.rst:20 8dcf46551f70484b925fe6c834e59489
+#: ../../source/glossary.rst:20 6e4b4da6c7ff4250aa450115c81ebdc9
 msgid ""
 "2D 声音不会参与空间定位。它通常适合 UI 音效、背景音乐、旁白、菜单音效等不需要跟随场景位置变化的声音。 在 Godot-FmodPlayer "
 "中，:ref:`FmodAudioStreamPlayer<class_FmodAudioStreamPlayer>` 默认更接近 2D 播放用法。"
@@ -562,7 +58,7 @@ msgstr ""
 "scene positions. In Godot-FmodPlayer, :ref:`FmodAudioStreamPlayer<class_FmodAudioStreamPlayer>` "
 "is closer to the default 2D playback workflow."
 
-#: ../../source/glossary.rst:23 7de3c41588f14235ad84a1a09dbf85d1
+#: ../../source/glossary.rst:23 5cf42cc7b58e4e32b44fe6c67d5097f1
 msgid ""
 "3D 声音会根据声源和监听器之间的位置关系计算音量、声像、距离衰减、遮挡和多普勒效果。 在 Godot-FmodPlayer "
 "中，:ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>` 会把 Godot 节点的全局位置同步到 FMOD 通道， "
@@ -573,7 +69,7 @@ msgstr ""
 ":ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>` synchronizes the Godot node global "
 "position to the FMOD channel."
 
-#: ../../source/glossary.rst:29 b2415098a6c54748a6864b91b14a263d
+#: ../../source/glossary.rst:29 6e81e5c4bf7f4b1c96539efd16977501
 msgid ""
 ":ref:`FmodChannelControl.set_3d_level()<class_FmodChannelControl_method_set_3d_level>` 可以调整 3D "
 "混合比例。 这在需要让一个声音部分保持空间感、部分保持稳定声像时很有用。"
@@ -582,7 +78,17 @@ msgstr ""
 "the 3D blend amount. This is useful when a sound should keep some spatial feeling while retaining"
 " a stable pan image."
 
-#: ../../source/glossary.rst:40 fd5824f7d1134fa5864056b2edb61de1
+#: ../../source/glossary.rst:35 beb4cf9e8bd2451b9406ef72032f1f46
+msgid "音频资产"
+msgstr "Audio Asset"
+
+#: ../../source/glossary.rst:37 d3a132f50d1c422699e598cd3ef508cd
+msgid "音频资产是项目中可播放的声音数据。它可以是 ``wav``、``ogg``、``mp3``、``flac`` 等独立音频文件， 也可以是运行时已经能够读取的其他 FMOD 支持格式。"
+msgstr ""
+"An audio asset is playable sound data in the project. It may be an independent audio file such as"
+" ``wav``, ``ogg``, ``mp3``, or ``flac``, or another runtime-readable format supported by FMOD."
+
+#: ../../source/glossary.rst:40 be193b0b7ac142bdaace4732048f8d75
 msgid ""
 "在 Godot-FmodPlayer 中，常见做法是把音频文件导入为 :ref:`FmodAudioStream<class_FmodAudioStream>`， 再交给 "
 ":ref:`FmodAudioStreamPlayer<class_FmodAudioStreamPlayer>`、:ref:`FmodAudioStreamPlayer2D<class_FmodAudioStreamPlayer2D>`"
@@ -594,13 +100,27 @@ msgstr ""
 ":ref:`FmodAudioStreamPlayer2D<class_FmodAudioStreamPlayer2D>`, or "
 ":ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>`."
 
-#: ../../source/glossary.rst:52 47c0add3f4ba4402beb018e9e9e5c720
+#: ../../source/glossary.rst:47 69476402380446d98cfe151d4ff7cfe0
+msgid "音频通道"
+msgstr "Audio Channel"
+
+#: ../../source/glossary.rst:49 a7357a7b303646b9ad6a78a083f75f7d
+msgid "音频通道可以指两种不同概念，需要区分："
+msgstr "Audio channel can mean two different things, so the distinction matters:"
+
+#: ../../source/glossary.rst:51 21319a6937154886b71be97bfa89dbe7
+msgid "**声道**：音频信号里的扬声器通道，例如单声道、左声道、右声道、5.1 环绕声中的多个输出通道。"
+msgstr ""
+"**Speaker channel**: A speaker channel in the audio signal, such as mono, left, right, or "
+"multiple output channels in 5.1 surround."
+
+#: ../../source/glossary.rst:52 75f639b39ab946e1a987478f9addb043
 msgid "**FMOD Channel**：FMOD 中的一次声音播放实例，对应 Godot-FmodPlayer 的 :ref:`FmodChannel<class_FmodChannel>`。"
 msgstr ""
 "**FMOD Channel**: One sound playback instance in FMOD, corresponding to "
 ":ref:`FmodChannel<class_FmodChannel>` in Godot-FmodPlayer."
 
-#: ../../source/glossary.rst:54 e381f37d708c4d70a1d50af9b75f24e3
+#: ../../source/glossary.rst:54 92878c3161264ba49931dd7715b71a25
 msgid ""
 "例如，一个立体声音效文件有两个声道；当它被播放一次时，FMOD 会为这次播放创建或分配一个 Channel。 同一个声音同时播放三次，就可能对应三个不同的 "
 ":ref:`FmodChannel<class_FmodChannel>`。"
@@ -609,19 +129,41 @@ msgstr ""
 "creates or assigns one Channel for that playback. If the same sound plays three times at once, it"
 " may correspond to three different :ref:`FmodChannel<class_FmodChannel>` objects."
 
-#: ../../source/glossary.rst:64 d5d24220b55a456a8364829127eae504
-msgid ""
-"Godot-FmodPlayer 会把 Godot 的 `AudioServer`_ 总线结构同步为 "
-":ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`， 并用 :ref:`FmodAudioBus<class_FmodAudioBus>` /"
-" :ref:`FmodChannelGroup<class_FmodChannelGroup>` 管理实际混音。 这样可以用类似 Godot 原生音频总线的方式控制 FMOD 声音，同时仍然使用"
-" FMOD 的 DSP、通道组和性能数据。"
-msgstr ""
-"Godot-FmodPlayer synchronizes Godot's `AudioServer`_ bus structure into "
-":ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>` and uses "
-":ref:`FmodAudioBus<class_FmodAudioBus>` / :ref:`FmodChannelGroup<class_FmodChannelGroup>` to "
-"control FMOD-side mixing."
+#: ../../source/glossary.rst:60 f02c9c58a3cf4d8a8233aaf342364fac
+msgid "Bus"
+msgstr "Bus"
 
-#: ../../source/glossary.rst:76 839a3fd860174e45bbb00059fa558a5b
+#: ../../source/glossary.rst:62 87d50d58233944bab71ec1020f02e0a8
+msgid "Bus 即音频总线，用来把一组声音集中到同一个混音路径上。常见总线包括 ``Music``、``SFX``、``Voice`` 和 ``Ambient``。"
+msgstr ""
+"A Bus is an audio bus used to collect a group of sounds into the same mixing route. Common buses "
+"include ``Music``, ``SFX``, ``Voice``, and ``Ambient``."
+
+#: ../../source/glossary.rst:64 a4714a023f504d0bb1352939978340b6
+msgid ""
+"默认开启 ``audio/fmod/sync_godot_audio_buses``，将 Godot 的 `AudioServer`_ 配置同步到 FMOD。关闭同步并重新加载项目后，可在 "
+"FMOD Audio 面板中编辑独立的 "
+":ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`。:ref:`FmodAudioBus<class_FmodAudioBus>` 和 "
+":ref:`FmodChannelGroup<class_FmodChannelGroup>` 管理实际混音，详见 :ref:`混音系统<mixer>`。"
+msgstr ""
+"``audio/fmod/sync_godot_audio_buses`` is enabled by default and mirrors the Godot `AudioServer`_ "
+"configuration to FMOD. Disable synchronization and reload the project to edit an independent "
+":ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>` in FMOD Audio. "
+":ref:`FmodAudioBus<class_FmodAudioBus>` and :ref:`FmodChannelGroup<class_FmodChannelGroup>` "
+"manage live mixing. See :ref:`Mixing system<mixer>`."
+
+#: ../../source/glossary.rst:69 651794939c0245489942dbb9a358a6d9
+msgid "Channel"
+msgstr "Channel"
+
+#: ../../source/glossary.rst:71 872a12a868094a5da90856287aea4ede
+msgid "Channel 是 FMOD 中一次正在播放或由虚拟语音系统托管的声音实例。它可以控制音量、暂停、音高、循环点、播放位置、 3D 属性、DSP 链和回调。"
+msgstr ""
+"A Channel is one sound instance currently playing in FMOD, or managed by the virtual voice "
+"system. It can control volume, pause, pitch, loop points, playback position, 3D properties, DSP "
+"chains, and callbacks."
+
+#: ../../source/glossary.rst:74 d359335b12284bf9bcd81ff81671de3b
 msgid ""
 "在 Godot-FmodPlayer 中，播放节点内部会维护一个 :ref:`FmodChannel<class_FmodChannel>`。 如果需要更细的控制，可以取得当前播放通道，再调用 "
 ":ref:`FmodChannelControl<class_FmodChannelControl>` 或 :ref:`FmodChannel<class_FmodChannel>` 的方法。"
@@ -631,7 +173,20 @@ msgstr ""
 ":ref:`FmodChannelControl<class_FmodChannelControl>` or :ref:`FmodChannel<class_FmodChannel>` "
 "methods."
 
-#: ../../source/glossary.rst:88 beb6c74ada964cc88b1c53097d8a9ee5
+#: ../../source/glossary.rst:81 6e676b45816e4d809510263f8256bea6
+msgid "ChannelGroup"
+msgstr "ChannelGroup"
+
+#: ../../source/glossary.rst:83 3dcab90ad16745e2999c340c38f57771
+msgid ""
+"ChannelGroup 是多个 Channel 或子 ChannelGroup 的混音容器。它适合做分组控制，例如同时降低所有音乐音量、 暂停一组环境声，或给整个 ``SFX`` "
+"总线添加一个滤波器。"
+msgstr ""
+"A ChannelGroup is a mixing container for multiple Channels or child ChannelGroups. It is useful "
+"for grouped control, such as lowering all music, pausing a group of ambience sounds, or adding a "
+"filter to the whole ``SFX`` bus."
+
+#: ../../source/glossary.rst:86 7398e7971d0640bf840fd748e649824c
 msgid ""
 "在 Godot-FmodPlayer 中，:ref:`FmodChannelGroup<class_FmodChannelGroup>` 通常由总线系统创建和管理。 普通项目优先通过 "
 ":doc:`user_guide/mixer` 中的总线接口操作；只有在需要底层控制时才直接访问 ChannelGroup。"
@@ -640,7 +195,17 @@ msgstr ""
 "managed by the bus system. For regular projects, prefer the bus APIs described in "
 ":doc:`user_guide/mixer`; access ChannelGroup directly only when lower-level control is needed."
 
-#: ../../source/glossary.rst:99 8722426d24974b19adeb1730be15bf15
+#: ../../source/glossary.rst:92 85d36c674c98459bb490f6746d31db58
+msgid "ChannelControl"
+msgstr "ChannelControl"
+
+#: ../../source/glossary.rst:94 5848e1126ca7426d9f4a782b2d96b444
+msgid "ChannelControl 是 Channel 和 ChannelGroup 共享的一组控制能力。它包含音量、静音、暂停、音高、3D 属性、声像矩阵、 DSP 插入、淡变点和回调等接口。"
+msgstr ""
+"ChannelControl is the shared control surface of Channel and ChannelGroup. It includes APIs for "
+"volume, mute, pause, pitch, 3D properties, pan matrix, DSP insertion, fade points, and callbacks."
+
+#: ../../source/glossary.rst:97 0f7f1e5f439c473c94dc830025fc95ba
 msgid ""
 "Godot-FmodPlayer 中的 :ref:`FmodChannel<class_FmodChannel>` 与 "
 ":ref:`FmodChannelGroup<class_FmodChannelGroup>` 都继承自 "
@@ -650,7 +215,17 @@ msgstr ""
 " Godot-FmodPlayer inherit from :ref:`FmodChannelControl<class_FmodChannelControl>`, so many "
 "playback and mixing controls are shared."
 
-#: ../../source/glossary.rst:110 d464d563aa9d47068f49fa78a3cc3629
+#: ../../source/glossary.rst:103 ba69e7cce7334b1b85a3bb9e1f2ac6a7
+msgid "DSP"
+msgstr "DSP"
+
+#: ../../source/glossary.rst:105 531b6bcdda3047c09f5a9ced8b85e879
+msgid "DSP 是 Digital Signal Processing 的缩写，表示数字信号处理单元。混响、均衡器、滤波器、延迟、失真、压缩器、 频谱分析器等都可以作为 DSP 参与音频处理。"
+msgstr ""
+"DSP stands for Digital Signal Processing. Reverb, equalizers, filters, delay, distortion, "
+"compressors, and spectrum analyzers can all participate in audio processing as DSP units."
+
+#: ../../source/glossary.rst:108 ee860bc8e47f4a2db96d58dfe24f9e6d
 msgid ""
 "在 Godot-FmodPlayer 中，:ref:`FmodDSP<class_FmodDSP>` 可以添加到某个 Channel、ChannelGroup 或总线相关的混音路径上。 "
 "如果多个声音需要同一种效果，通常把 DSP 放在对应总线上更容易维护，也比给每个声音单独创建效果更省资源。"
@@ -660,7 +235,19 @@ msgstr ""
 "corresponding bus is usually easier to maintain and cheaper than creating the effect for every "
 "sound."
 
-#: ../../source/glossary.rst:123 6383e8a27ff44dceb55f27b8c8206915
+#: ../../source/glossary.rst:114 54dab6a233654bd7b9487b1f23532dc9
+msgid "DSP 链"
+msgstr "DSP Chain"
+
+#: ../../source/glossary.rst:116 bb14fbac2adc401e91359221a5092152
+msgid "DSP 链是多个 DSP 按顺序连接形成的处理路径。声音进入链后，会依次经过这些处理单元。 不同顺序会产生不同结果，例如先失真再混响，和先混响再失真，听感通常不同。"
+msgstr ""
+"A DSP chain is a processing path formed by connecting multiple DSPs in order. Once sound enters "
+"the chain, it passes through each processing unit sequentially. Different orders produce "
+"different results; distortion before reverb usually sounds different from reverb before "
+"distortion."
+
+#: ../../source/glossary.rst:121 49ee006b2ae4437f86904b68303b4979
 msgid ""
 "在 Godot-FmodPlayer 中，可以通过 "
 ":ref:`FmodChannelControl.add_dsp()<class_FmodChannelControl_method_add_dsp>`、 "
@@ -673,7 +260,17 @@ msgstr ""
 ":ref:`FmodChannelControl.remove_dsp()<class_FmodChannelControl_method_remove_dsp>`, and "
 ":ref:`FmodChannelControl.set_dsp_index()<class_FmodChannelControl_method_set_dsp_index>`."
 
-#: ../../source/glossary.rst:134 6d552fae320043c1aea962b99af65b45
+#: ../../source/glossary.rst:128 26fdc79dd3984b04889b2bcd031784e0
+msgid "DSP Clock"
+msgstr "DSP Clock"
+
+#: ../../source/glossary.rst:130 b38ba1fe64d644cf91534d729bfbb58c
+msgid "DSP Clock 是 FMOD 混音器使用的样本级时间计数。它常用于精确调度播放、延迟启动、淡入淡出或和其他声音对齐。"
+msgstr ""
+"DSP Clock is FMOD mixer time counted at sample precision. It is commonly used for precise "
+"playback scheduling, delayed starts, fades, or aligning sounds."
+
+#: ../../source/glossary.rst:132 252e1f3eeb6440aa9de8bca44a9e26b4
 msgid ""
 "在 Godot-FmodPlayer "
 "中，:ref:`FmodChannelControl.get_dsp_clock()<class_FmodChannelControl_method_get_dsp_clock>`、 "
@@ -685,7 +282,18 @@ msgstr ""
 ":ref:`FmodChannelControl.set_delay()<class_FmodChannelControl_method_set_delay>` expose related "
 "timing controls."
 
-#: ../../source/glossary.rst:145 7aadd514f8b6416289271ee69d435a4b
+#: ../../source/glossary.rst:139 e4862834eeb64e73ba3f6d3d9268cbeb
+msgid "Listener"
+msgstr "Listener"
+
+#: ../../source/glossary.rst:141 693c9368397c4ebe9cc29ca65c051049
+msgid "Listener 即监听器，表示玩家“听见世界”的位置和朝向。3D 声音会根据监听器与声源之间的距离、方向和相对速度计算结果。"
+msgstr ""
+"A Listener represents where the player hears the world from, including position and orientation. "
+"3D sounds are calculated from the distance, direction, and relative velocity between the listener"
+" and the source."
+
+#: ../../source/glossary.rst:143 129adee5d79c4512a4a0a6a742f31e88
 msgid ""
 "在 Godot 场景中，监听器通常跟随玩家、主摄像机或当前激活的 ``AudioListener3D``。 使用 "
 ":ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>` 时，需要确保 FMOD 系统能获得正确的监听器变换， 否则 3D "
@@ -696,7 +304,17 @@ msgstr ""
 "make sure the FMOD system receives the correct listener transform; otherwise 3D sound direction "
 "or distance may be wrong."
 
-#: ../../source/glossary.rst:156 207a9e422dca447f9470949e39730cc9
+#: ../../source/glossary.rst:150 e4a5e703624841a6a146bdfcf7064477
+msgid "Sound"
+msgstr "Sound"
+
+#: ../../source/glossary.rst:152 5c15f01be0cc4eee89ccd6d2d573ac7d
+msgid "Sound 是 FMOD 对音频数据的运行时表示。它通常由文件、内存数据或流式数据创建，然后通过 System 播放为 Channel。"
+msgstr ""
+"Sound is FMOD's runtime representation of audio data. It is usually created from a file, memory "
+"data, or streaming data, and then played by the System as a Channel."
+
+#: ../../source/glossary.rst:154 a714699899084d84ad6c3ab611d02a5b
 msgid ""
 "在 Godot-FmodPlayer 中，:ref:`FmodAudioStream<class_FmodAudioStream>` 会在需要时创建底层 "
 ":ref:`FmodSound<class_FmodSound>`。 这让资源可以先作为 Godot 资源存在，真正播放或查询底层对象时再交给 FMOD 创建声音。"
@@ -705,7 +323,19 @@ msgstr ""
 ":ref:`FmodSound<class_FmodSound>` only when needed. This lets the resource exist as a Godot "
 "resource first, and only hand the sound to FMOD when playback or low-level access is required."
 
-#: ../../source/glossary.rst:167 44e72be8ea284da39e4909211f94d620
+#: ../../source/glossary.rst:160 175090a3a6ed47148dd7bec8bb6f5e13
+msgid "Stream 与 Sample"
+msgstr "Stream and Sample"
+
+#: ../../source/glossary.rst:162 6e77d15e50d54a8998e3d74e3b17c646
+msgid "Stream 表示边读取边解码的播放方式，适合音乐、长旁白、长环境声等体积较大的音频。 Sample 表示把音频数据加载到内存后播放，适合短音效、频繁触发的 UI 声和需要低延迟响应的声音。"
+msgstr ""
+"Stream means audio is read and decoded while playing, which is suitable for large audio such as "
+"music, long narration, and long ambience. Sample means the audio data is loaded into memory "
+"before playback, which is suitable for short sound effects, frequently triggered UI sounds, and "
+"low-latency responses."
+
+#: ../../source/glossary.rst:165 201cb4c1e4e447b9bfe9e2a68653fe18
 msgid ""
 "在 Godot-FmodPlayer 中，可以通过 :ref:`FmodAudioStream<class_FmodAudioStream>` 的创建模式选择更适合的加载方式。 "
 "一般来说，长音频优先使用流式播放，短音效优先使用样本加载。"
@@ -714,7 +344,18 @@ msgstr ""
 ":ref:`FmodAudioStream<class_FmodAudioStream>`. In general, prefer streaming for long audio and "
 "sample loading for short sound effects."
 
-#: ../../source/glossary.rst:178 bdceccb9f8a5427ab0a0c7387bb64868
+#: ../../source/glossary.rst:171 1cba97714c4f4188bf4eebc27e61857f
+msgid "Virtual Channel"
+msgstr "Virtual Channel"
+
+#: ../../source/glossary.rst:173 3a365639054645c8934ada46ddaf7543
+msgid "Virtual Channel 即虚拟通道。当同时播放的声音很多时，FMOD 可以让听不见或优先级较低的声音进入虚拟状态。 虚拟通道仍然保留播放时间和状态，但不一定消耗完整的混音资源。"
+msgstr ""
+"A Virtual Channel is a channel in FMOD's virtual voice system. When many sounds play at the same "
+"time, FMOD may virtualize inaudible or low-priority sounds. A virtual channel keeps playback time"
+" and state, but may not consume full mixing resources."
+
+#: ../../source/glossary.rst:176 9723939b5ab744669f78f8ddfa3696bd
 msgid ""
 "在 Godot-FmodPlayer 中，可以通过 :ref:`FmodChannel.is_virtual()<class_FmodChannel_method_is_virtual>` "
 "查询某个通道是否处于虚拟状态。 这对调试大量环境声、粒子音效或开放世界场景中的声音预算很有帮助。"
@@ -723,7 +364,17 @@ msgstr ""
 "query whether a channel is virtual. This is useful when debugging large ambience sets, particle "
 "sounds, or sound budgets in open-world scenes."
 
-#: ../../source/glossary.rst:188 64d4b489194641e9a4201c8a537e59c4
+#: ../../source/glossary.rst:182 d1e9592c984a4f9bae03969d0dccc0b9
+msgid "Rolloff"
+msgstr "Rolloff"
+
+#: ../../source/glossary.rst:184 4e22972488594ca6b8107f1eec316a46
+msgid "Rolloff 表示 3D 声音随距离变远而衰减的曲线。不同曲线会影响声音从近处到远处的听感变化。"
+msgstr ""
+"Rolloff is the curve describing how a 3D sound attenuates as distance increases. Different curves"
+" change how the sound feels from near to far."
+
+#: ../../source/glossary.rst:186 51f8afa6322b4219b13804c1749dd883
 msgid ""
 "在 Godot-FmodPlayer 中，3D 播放节点和 :ref:`FmodChannelControl<class_FmodChannelControl>` 提供最小距离、最大距离、 "
 "自定义衰减曲线等设置。制作空间音频时，建议先调好 ``min_distance`` 和 ``max_distance``， 再根据项目需要调整更复杂的衰减行为。"
@@ -732,7 +383,17 @@ msgstr ""
 "provide settings such as minimum distance, maximum distance, and custom attenuation curves. For "
 "spatial audio, start by tuning ``min_distance`` and ``max_distance``."
 
-#: ../../source/glossary.rst:200 517f3f8e0aa643cbb70c7ba5ab16aa82
+#: ../../source/glossary.rst:193 ea3dbfe8856244e288e5d7b6ab1a1643
+msgid "Doppler"
+msgstr "Doppler"
+
+#: ../../source/glossary.rst:195 99858612ae8b44b2a0f15ed9fd3ad0fd
+msgid "Doppler 即多普勒效果。当声源和监听器之间存在相对速度时，音高会发生变化。 快速掠过的车辆、飞行物或高速移动的物体可以使用该效果增强速度感。"
+msgstr ""
+"Doppler is the pitch shift caused by relative velocity between a sound source and the listener. "
+"Fast passing vehicles, projectiles, or moving objects can use it to enhance the sense of speed."
+
+#: ../../source/glossary.rst:198 10f10ab519f548bd9016f1f927cd963c
 msgid ""
 "在 Godot-FmodPlayer 中，:ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>` 会同步位置和速度相关信息。 "
 "如果效果过强或不符合游戏风格，可以通过多普勒相关设置降低影响。"
@@ -741,7 +402,17 @@ msgstr ""
 "position and velocity information. If the effect is too strong or does not fit the game style, "
 "reduce the Doppler-related settings."
 
-#: ../../source/glossary.rst:210 9161ad1138f0455f8dcbed7233503b2b
+#: ../../source/glossary.rst:204 482de19cb93a42a7bec023f43017836c
+msgid "Occlusion"
+msgstr "Occlusion"
+
+#: ../../source/glossary.rst:206 869e1f59ed9c47b1ba59ff3df3d8f6f1
+msgid "Occlusion 即遮挡。它描述墙体、地形或其他几何体阻挡声音传播后，音量和高频内容被削弱的效果。"
+msgstr ""
+"Occlusion describes how walls, terrain, or other geometry block sound propagation, reducing "
+"volume and high-frequency content."
+
+#: ../../source/glossary.rst:208 46756c69f682461fbb5aacc18c2237aa
 msgid ""
 "Godot-FmodPlayer 提供 :ref:`FmodGeometryInstance3D<class_FmodGeometryInstance3D>`，可以把场景几何体注册到 FMOD "
 "Geometry 系统。 适合需要门后声音、墙后声音、房间隔音等空间表现的项目。"
@@ -750,7 +421,18 @@ msgstr ""
 " scene geometry with FMOD Geometry. It is suitable for projects that need sounds behind doors, "
 "sounds behind walls, or room isolation effects."
 
-#: ../../source/glossary.rst:221 99717232761044c5bc7a4ab964c08f63
+#: ../../source/glossary.rst:214 c3dbf7be15e24c388f62857c941cf0c1
+msgid "Pan 与 Mix Matrix"
+msgstr "Pan and Mix Matrix"
+
+#: ../../source/glossary.rst:216 0d7d9187d5274dbf84614029e7505cc9
+msgid "Pan 即声像，通常用于控制声音在左右声道或环绕声场中的位置。Mix Matrix 则是更底层的输入到输出声道矩阵， 可以精确控制每个输入声道如何分配到输出声道。"
+msgstr ""
+"Pan usually controls where a sound sits in the left/right channels or surround field. Mix Matrix "
+"is a lower-level input-to-output channel matrix that can precisely control how each input channel"
+" is distributed to output channels."
+
+#: ../../source/glossary.rst:219 6e8cd69bd92c4b2bb175a3109f7ee337
 msgid ""
 "在 Godot-FmodPlayer 中，简单左右声像可以使用 "
 ":ref:`FmodChannelControl.set_pan()<class_FmodChannelControl_method_set_pan>`。 如果需要多声道或特殊路由，可以使用 "
@@ -761,7 +443,42 @@ msgstr ""
 "or special routing, use "
 ":ref:`FmodChannelControl.set_mix_matrix()<class_FmodChannelControl_method_set_mix_matrix>`."
 
-#: ../../source/glossary.rst:247 cfd628e895a145b28e8f802e11c5cc09
+#: ../../source/glossary.rst:225 ae407cee87364338913dcd05393e90a2
+msgid "Mix Matrix"
+msgstr "Mix Matrix"
+
+#: ../../source/glossary.rst:227 598164bcd9894dd89cfa9f453781f0d9
+msgid ""
+"Mix Matrix 即混音矩阵，用来控制 **输入声道** 如何分配到 **输出声道**。 可以把它理解成一张权重表：每一列是一个输入声道，每一行是一个输出声道，表格中的数值表示 "
+"“这个输入声道有多少信号送到这个输出声道”。"
+msgstr ""
+"Mix Matrix controls how **input channels** are distributed to **output channels**. You can think "
+"of it as a weight table: each column is an input channel, each row is an output channel, and each"
+" value says how much of that input channel is sent to that output channel."
+
+#: ../../source/glossary.rst:231 ce853dc15a7b4cb4b2f66d92d2954bbd
+msgid "以一个立体声输入原样送到立体声输出为例："
+msgstr "For example, a stereo input sent unchanged to stereo output:"
+
+#: ../../source/glossary.rst:233 cb35ddd8643e440193645c3a7c7291dd
+msgid "Mix matrix for sending stereo input unchanged to stereo output"
+msgstr "Mix matrix for sending stereo input unchanged to stereo output"
+
+#: ../../source/glossary.rst:238 c605b92ca0ed4479a3fa16a172db4d2d
+msgid "这个矩阵表示左声道只进左扬声器，右声道只进右扬声器。用更直观的形式写就是："
+msgstr ""
+"This matrix means the left channel goes only to the left speaker, and the right channel goes only"
+" to the right speaker. Written more directly:"
+
+#: ../../source/glossary.rst:240 6b3226117bb14925ada2de166b1e0632
+msgid ""
+"Output L = Input L * 1.0 + Input R * 0.0\n"
+"Output R = Input L * 0.0 + Input R * 1.0"
+msgstr ""
+"Output L = Input L * 1.0 + Input R * 0.0\n"
+"Output R = Input L * 0.0 + Input R * 1.0"
+
+#: ../../source/glossary.rst:245 a77470c4db82475db7d8d608584b00e1
 msgid ""
 "在 Godot-FmodPlayer "
 "中，:ref:`FmodChannelControl.set_mix_matrix()<class_FmodChannelControl_method_set_mix_matrix>` 接收一个"
@@ -772,7 +489,29 @@ msgstr ""
 "accepts a ``PackedFloat32Array`` and specifies the output channel count, input channel count, and"
 " input channel stride."
 
-#: ../../source/glossary.rst:263 5472a591b73a4ef3bd4266b8b7e0d6bc
+#: ../../source/glossary.rst:249 fbe7f3f4c2624c9caf34ddfb118e634f
+msgid "下面示例把立体声左右声道对调："
+msgstr "The example below swaps the left and right channels of a stereo sound:"
+
+#: ../../source/glossary.rst:251 575d3ad01c224ba6999bfba4284ec9c9
+msgid ""
+"func swap_stereo(channel: FmodChannel) -> void:\n"
+"    var matrix := PackedFloat32Array([\n"
+"        0.0, 1.0, # Out L = In R\n"
+"        1.0, 0.0, # Out R = In L\n"
+"    ])\n"
+"\n"
+"    channel.set_mix_matrix(matrix, 2, 2)"
+msgstr ""
+"func swap_stereo(channel: FmodChannel) -> void:\n"
+"    var matrix := PackedFloat32Array([\n"
+"        0.0, 1.0, # Out L = In R\n"
+"        1.0, 0.0, # Out R = In L\n"
+"    ])\n"
+"\n"
+"    channel.set_mix_matrix(matrix, 2, 2)"
+
+#: ../../source/glossary.rst:261 9e1f6f75d70d43728cd295c0b1d50df6
 msgid ""
 "如果只是想调整单个播放实例的左右位置，优先使用 "
 ":ref:`FmodChannelControl.set_pan()<class_FmodChannelControl_method_set_pan>`。 Mix Matrix "
@@ -783,7 +522,49 @@ msgstr ""
 "better for multi-channel format conversion, special channel routing, left/right swapping, mono "
 "biasing, and debugging audio assets."
 
-#: ../../source/glossary.rst:295 912f8534f25e463dbc84a4bc6ff438f7
+#: ../../source/glossary.rst:268 570b6b1878a640e185a3d6d167b98020
+msgid "Upmix"
+msgstr "Upmix"
+
+#: ../../source/glossary.rst:270 4a0a9401639b462f8d78919e3c34f5a0
+msgid "Upmix 即上混，是把较少的输入声道分配到更多输出声道。例如把单声道音效送到立体声输出， 或者把立体声音乐送到 5.1 输出。"
+msgstr ""
+"Upmix means distributing fewer input channels to more output channels. For example, sending a "
+"mono sound effect to stereo output, or sending stereo music to 5.1 output."
+
+#: ../../source/glossary.rst:273 bc37eba06d17409b97b3752dfefb136d
+msgid "最常见的单声道到立体声上混，是把同一份单声道信号同时送到左右声道。听感上它会位于正中间。 如果希望这个单声道声音偏左，可以降低右声道电平："
+msgstr ""
+"The most common mono-to-stereo upmix sends the same mono signal to both left and right channels, "
+"which sounds centered. If you want the mono sound to lean left, reduce the right channel level:"
+
+#: ../../source/glossary.rst:276 67b433651c2b4aa7a56f1b4d3fce899b
+msgid "Mix matrix for upmixing mono to left-biased stereo output"
+msgstr "Mix matrix for upmixing mono to left-biased stereo output"
+
+#: ../../source/glossary.rst:281 2e6b240a917f4ea4b99075c49cc6d24e
+msgid "对应代码可以写成："
+msgstr "The corresponding code can be written as:"
+
+#: ../../source/glossary.rst:283 1606913f95c14f6c9bfb942c1ee57f1b
+msgid ""
+"func mono_to_left_biased_stereo(channel: FmodChannel) -> void:\n"
+"    var matrix := PackedFloat32Array([\n"
+"        1.0,  # Out L = Mono * 1.0\n"
+"        0.35, # Out R = Mono * 0.35\n"
+"    ])\n"
+"\n"
+"    channel.set_mix_matrix(matrix, 2, 1)"
+msgstr ""
+"func mono_to_left_biased_stereo(channel: FmodChannel) -> void:\n"
+"    var matrix := PackedFloat32Array([\n"
+"        1.0,  # Out L = Mono * 1.0\n"
+"        0.35, # Out R = Mono * 0.35\n"
+"    ])\n"
+"\n"
+"    channel.set_mix_matrix(matrix, 2, 1)"
+
+#: ../../source/glossary.rst:293 3b8ea6eb9e1448dcb9457bf0d1845cad
 msgid ""
 "在 Godot-FmodPlayer 中，简单左右声像通常直接用 "
 ":ref:`FmodChannelControl.set_pan()<class_FmodChannelControl_method_set_pan>` 更方便。 "
@@ -793,7 +574,146 @@ msgstr ""
 ":ref:`FmodChannelControl.set_pan()<class_FmodChannelControl_method_set_pan>`. Manually set the "
 "mix matrix only when precise multi-channel distribution is needed."
 
-#: ../../source/glossary.rst:381 6464d8693bb24eaaba618b7a956b176d
+#: ../../source/glossary.rst:300 d0a6bac5ad02452a830c54c4d11846b6
+msgid "Downmix"
+msgstr "Downmix"
+
+#: ../../source/glossary.rst:302 7efbe591d4494abebd996b1f04c00eb8
+msgid "Downmix 即下混，是把较多的输入声道折叠到较少输出声道。例如把立体声转为单声道， 或者把 5.1 输出到立体声设备。"
+msgstr ""
+"Downmix means folding more input channels into fewer output channels. For example, converting "
+"stereo to mono, or outputting 5.1 content to a stereo device."
+
+#: ../../source/glossary.rst:305 005d6f03c9b5444d83f891797667ac3a
+msgid "一个常见的立体声到单声道下混矩阵如下："
+msgstr "A common stereo-to-mono downmix matrix is:"
+
+#: ../../source/glossary.rst:307 205485b1d0624869a697bc0b0b110c85
+msgid "Mix matrix for downmixing stereo to mono"
+msgstr "Mix matrix for downmixing stereo to mono"
+
+#: ../../source/glossary.rst:312 88005304803c4214abd0a28bd2d05428
+msgid "这表示左右声道各取一半相加："
+msgstr "This means the left and right channels are each added at half level:"
+
+#: ../../source/glossary.rst:314 89924dcdf6aa4f6db5ad5c3ddc0c0b7e
+msgid "Output Mono = Input L * 0.5 + Input R * 0.5"
+msgstr "Output Mono = Input L * 0.5 + Input R * 0.5"
+
+#: ../../source/glossary.rst:318 ad4efd85d54f471493718087b077a64f
+msgid ""
+"不要简单使用 ``1.0 + 1.0`` 做下混。两个满电平信号直接相加可能让输出超过正常范围， 造成削波或听感上的突然变大。实际项目里可以从 ``0.5``、``0.707`` "
+"或更保守的值开始， 再根据素材响度和目标平台调整。"
+msgstr ""
+"Do not simply use ``1.0 + 1.0`` for downmixing. Adding two full-level signals directly can exceed"
+" the normal range, causing clipping or a sudden loudness increase. In real projects, start with "
+"``0.5``, ``0.707``, or a more conservative value, then adjust based on material loudness and the "
+"target platform."
+
+#: ../../source/glossary.rst:322 1b65f36275e04b539f47b249dccca533
+msgid "代码示例："
+msgstr "Code example:"
+
+#: ../../source/glossary.rst:324 41c46e164a8c44d396c219d938a7d371
+msgid ""
+"func stereo_to_mono(channel: FmodChannel) -> void:\n"
+"    var matrix := PackedFloat32Array([\n"
+"        0.5, 0.5, # Out Mono = In L * 0.5 + In R * 0.5\n"
+"    ])\n"
+"\n"
+"    channel.set_mix_matrix(matrix, 1, 2)"
+msgstr ""
+"func stereo_to_mono(channel: FmodChannel) -> void:\n"
+"    var matrix := PackedFloat32Array([\n"
+"        0.5, 0.5, # Out Mono = In L * 0.5 + In R * 0.5\n"
+"    ])\n"
+"\n"
+"    channel.set_mix_matrix(matrix, 1, 2)"
+
+#: ../../source/glossary.rst:334 85e1939b53124559bb2974f208aeb6ea
+msgid "5.1 到立体声的简化示例"
+msgstr "Simplified 5.1-to-stereo example"
+
+#: ../../source/glossary.rst:336 eb9a7b7fe46b47d7bbd9e1b469ffb9b7
+msgid "5.1 声道通常可以按以下顺序理解："
+msgstr "5.1 channels can usually be understood in this order:"
+
+#: ../../source/glossary.rst:338 ef209435e3a8455d8e4367975332efd1
+msgid "Front Left, Front Right, Center, LFE, Surround Left, Surround Right"
+msgstr "Front Left, Front Right, Center, LFE, Surround Left, Surround Right"
+
+#: ../../source/glossary.rst:342 29a7c9d1d40543949524eaf337bb0033
+msgid "一个简化的 5.1 到立体声下混矩阵可以写成："
+msgstr "A simplified 5.1-to-stereo downmix matrix can be written as:"
+
+#: ../../source/glossary.rst:344 c8b366da239240e2b90b93a3724a2e10
+msgid "Mix matrix for downmixing 5.1 channels to stereo"
+msgstr "Mix matrix for downmixing 5.1 channels to stereo"
+
+#: ../../source/glossary.rst:349 1738cfccbda44ac4a9bde050aa152b1a
+msgid "这里的思路是："
+msgstr "The idea is:"
+
+#: ../../source/glossary.rst:351 499bd99ed02443c79c0a46a7418e2fd0
+msgid "左前和右前分别进入对应的左右输出。"
+msgstr "Front left and front right go to the corresponding left and right outputs."
+
+#: ../../source/glossary.rst:352 0b10d356a16b4eb7865aec11d7663283
+msgid "中置声道同时进入左右输出，并降低到 ``0.707``，避免居中内容过响。"
+msgstr ""
+"The center channel goes to both left and right output, reduced to ``0.707`` to avoid making "
+"centered content too loud."
+
+#: ../../source/glossary.rst:353 3a356e2e29164b708d81b72bf237064c
+msgid "左环绕进入左输出，右环绕进入右输出，也适当降低。"
+msgstr ""
+"Surround left goes to left output, and surround right goes to right output, also reduced "
+"appropriately."
+
+#: ../../source/glossary.rst:354 2f440751f8c44dae9531915593b14de8
+msgid "LFE 是低频效果声道，不一定适合直接混入普通立体声输出，是否加入要看项目需求。"
+msgstr ""
+"LFE is the low-frequency effects channel and may not be suitable for direct mixing into regular "
+"stereo output; whether to include it depends on the project."
+
+#: ../../source/glossary.rst:358 4243f02b94624a059622989620482e2e
+msgid "多声道下混没有唯一正确答案。不同平台、设备、耳机虚拟环绕、影院标准和游戏风格可能需要不同矩阵。 对关键内容做下混时，必须用实际目标设备听测。"
+msgstr ""
+"There is no single correct answer for multi-channel downmixing. Different platforms, devices, "
+"virtual surround headphones, cinema standards, and game styles may require different matrices. "
+"For critical content, always listen on the actual target device."
+
+#: ../../source/glossary.rst:364 fbcddfc5b0534055874619fd0a607ecb
+msgid "Callback"
+msgstr "Callback"
+
+#: ../../source/glossary.rst:366 b19df1b9d91f40c1a86b89a23ba463b9
+msgid "Callback 即回调。FMOD 会在特定事件发生时通知用户代码，例如声音结束、通道状态变化或某些底层系统事件。"
+msgstr ""
+"Callback means FMOD notifies user code when a specific event occurs, such as a sound ending, a "
+"channel state change, or a lower-level system event."
+
+#: ../../source/glossary.rst:368 5443009f0d3a40819d3fb197cff9b4c0
+msgid ""
+"在 Godot-FmodPlayer 中，ChannelControl 级别回调会通过 ``callback_received`` 信号转发到 Godot。 每个 "
+"System、ChannelControl 或 DSP 通常只维护一个回调入口，因此注册回调时应根据回调类型区分处理逻辑。"
+msgstr ""
+"In Godot-FmodPlayer, ChannelControl-level callbacks are forwarded to Godot through the "
+"``callback_received`` signal. Each System, ChannelControl, or DSP usually maintains one callback "
+"entry, so callback registration should branch by callback type."
+
+#: ../../source/glossary.rst:374 daa22d3804dc49ebb3ae65095db1f3b4
+msgid "System"
+msgstr "System"
+
+#: ../../source/glossary.rst:376 277ca8636ae64422bd17dbf0eeec4d4a
+msgid "System 是 FMOD Core API 的核心对象，负责初始化音频设备、创建 Sound、播放声音、管理 Channel、更新混音系统、 获取性能数据和处理录音等底层功能。"
+msgstr ""
+"System is the core object of the FMOD Core API. It initializes audio devices, creates Sounds, "
+"plays sounds, manages Channels, updates the mixing system, retrieves performance data, and "
+"handles recording."
+
+#: ../../source/glossary.rst:379 b4b6ee34d34649a692fa7eb4fc2d5092
 msgid ""
 "在 Godot-FmodPlayer 中，通常不需要手动创建 System。插件会通过 :ref:`FmodServer<class_FmodServer>` 初始化并维护主系统。 "
 "高级用法可以从 :ref:`FmodServer.get_main_system()<class_FmodServer_method_get_main_system>` 获取 "
@@ -803,3 +723,84 @@ msgstr ""
 "maintains the main system through :ref:`FmodServer<class_FmodServer>`. Advanced usage can start "
 "from :ref:`FmodServer.get_main_system()<class_FmodServer_method_get_main_system>` and "
 ":ref:`FmodSystem<class_FmodSystem>`."
+
+#: ../../source/glossary.rst:385 501ce2f0b7294c3eb1e1c8748b143dd0
+msgid "Bank 与 Event"
+msgstr "Bank and Event"
+
+#: ../../source/glossary.rst:387 de38df70307f4b9096e31aa270ed4ea1
+msgid ""
+"Bank 和 Event 常见于 FMOD 的 Studio 工作流。Godot-FmodPlayer 主要面向 **FMOD Core API**， 重点是音频文件播放、通道控制、DSP "
+"效果、混音总线、3D 音频和性能监控。"
+msgstr ""
+"Bank and Event are common in the FMOD Studio workflow. Godot-FmodPlayer mainly targets the **FMOD"
+" Core API**, focusing on audio file playback, channel control, DSP effects, mixing buses, 3D "
+"audio, and performance monitoring."
+
+#: ../../source/glossary.rst:390 382f3dc4402446e4ab4117046c7a389c
+msgid ""
+"因此，在本插件文档中看到 ``Bank`` 或 ``Event`` 时，通常只是为了帮助理解 FMOD 生态中的相关概念。 如果项目需要完整的 FMOD Studio Event、Bank "
+"构建、参数自动化和音频设计师工作流， 应选择专门的 FMOD Studio 集成方案，而不是把 Godot-FmodPlayer 当作完整 Studio 集成使用。"
+msgstr ""
+"Therefore, when ``Bank`` or ``Event`` appears in this plugin documentation, it is usually only to"
+" help explain related FMOD ecosystem concepts. If a project needs a full FMOD Studio Event "
+"workflow, Bank builds, parameter automation, and audio-designer tooling, choose a dedicated FMOD "
+"Studio integration instead of treating Godot-FmodPlayer as one."
+
+#: ../../source/glossary.rst:397 53a6999147604729b1675dfe54fd50e8
+msgid "FSB"
+msgstr "FSB"
+
+#: ../../source/glossary.rst:399 466f4ca52f6346989a53c846b633fec1
+msgid "FSB 是 FMOD Sample Bank 的缩写，是一种打包采样数据的格式。它和 Studio 工作流中的 Bank 不是同一个概念。"
+msgstr ""
+"FSB stands for FMOD Sample Bank. It is a format for packed sample data and is not the same "
+"concept as a Bank in the Studio workflow."
+
+#: ../../source/glossary.rst:401 5e21dd0daf634476aa0f07e082af3a34
+msgid ""
+"Godot-FmodPlayer 面向常规音频文件和 FMOD Core API 用法时，通常不需要直接处理 FSB。 如果项目依赖特殊打包格式，应先确认当前目标平台、FMOD Engine "
+"版本和插件导入流程是否支持。"
+msgstr ""
+"For regular audio files and FMOD Core API usage, Godot-FmodPlayer usually does not require direct"
+" FSB handling. If your project depends on a special packaged format, first confirm support for "
+"the target platform, FMOD Engine version, and plugin import flow."
+
+#: ../../source/glossary.rst:407 a560ee94e5b44512825bc02d2ed823d1
+msgid "Profiler"
+msgstr "Profiler"
+
+#: ../../source/glossary.rst:409 d103576f2d234a0f9fb101591caf63dc
+msgid "Profiler 是用于观察音频系统运行状态的工具。它可以帮助定位 CPU 占用、流式读取、通道数量、DSP 开销和混音问题。"
+msgstr ""
+"A Profiler is a tool for observing the runtime state of the audio system. It helps locate CPU "
+"usage, streaming reads, channel count, DSP cost, and mixing issues."
+
+#: ../../source/glossary.rst:411 147249c84d114b93a6a3c96d86b05f7a
+msgid ""
+"Godot-FmodPlayer 会把部分 FMOD 性能数据注册到 Godot 的性能监视器中，例如 ``FmodCPUUsage/DSP``、 ``FmodCPUUsage/Stream``"
+" 和 ``FmodFileUsage/StreamBytesRead``。调试卡顿、爆音或加载异常时，建议同时查看 Godot 输出面板和性能监视器。"
+msgstr ""
+"Godot-FmodPlayer registers some FMOD performance data in Godot's performance monitors, such as "
+"``FmodCPUUsage/DSP``, ``FmodCPUUsage/Stream``, and ``FmodFileUsage/StreamBytesRead``. When "
+"debugging stutters, pops, or loading issues, check these monitors first."
+
+#: ../../source/glossary.rst:417 93117b29b5734941a6f51330c2ec2a43
+msgid "运行库"
+msgstr "Runtime Library"
+
+#: ../../source/glossary.rst:419 9622dcf2ca2e429f95109f15815a1808
+msgid "运行库指 FMOD Engine 在目标平台上的二进制文件，例如 Windows 上的 ``fmod.dll``，Android 上的 ``libfmod.so`` 和相关 Java 文件。"
+msgstr ""
+"A runtime library is the FMOD Engine binary for the target platform, such as ``fmod.dll`` on "
+"Windows or ``libfmod.so`` and related Java files on Android."
+
+#: ../../source/glossary.rst:421 7dc642f73e474f338f357d2fbb65eb9e
+msgid ""
+"Godot-FmodPlayer 插件本身不分发 FMOD 运行库。你需要根据目标平台从 FMOD 官方渠道获取，并按 :doc:`export` 或 "
+":doc:`getting_started/installation` 的说明放到项目中。发布游戏时还需要遵守 FMOD 的许可和署名要求。"
+msgstr ""
+"Godot-FmodPlayer does not distribute FMOD runtime libraries. Get them from official FMOD channels"
+" for your target platform and place them in the project as described in :doc:`export` or "
+":doc:`getting_started/installation`. When publishing a game, you must also follow FMOD licensing "
+"and attribution requirements."

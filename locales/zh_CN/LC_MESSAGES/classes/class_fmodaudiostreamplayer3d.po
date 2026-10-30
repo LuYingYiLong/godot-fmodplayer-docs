@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Godot FmodPlayer \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"POT-Creation-Date: 2026-10-30 23:43+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:12 608f7493d7de439f9df819bb0b810f67
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:10 3f9e3fabfc8c4af58a276331fd6165cb
 msgid "FmodAudioStreamPlayer3D"
 msgstr "FmodAudioStreamPlayer3D"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:14 3f0a56aad8894e81800ff08239aa1b7a
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:12 285305378f864818b81f8de165c02f29
 msgid ""
 "**Inherits:** :ref:`Node3D<class_Node3D>` **<** :ref:`Node<class_Node>` **<** "
 ":ref:`Object<class_Object>`"
@@ -30,216 +30,231 @@ msgstr ""
 "**继承：** :ref:`Node3D<class_Node3D>` **<** :ref:`Node<class_Node>` **<** "
 ":ref:`Object<class_Object>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:16 1833e3def4df44f3bc6525a25799a804
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:14 b784fe4b17324d2f970263d205b935c4
 msgid "A 3D node for playing FMOD audio streams with full spatial audio support."
 msgstr "用于在 3D 空间中播放音频流的节点"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:21 65e7d290ed3d4c03883bd5a88789076d
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:19 3ad64880d1c24756af5165f04406a829
 msgid "Description"
 msgstr "描述"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:50 e3d7f087b79341e6b19376e726285905
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:21 eec67215415d4f67b8b118abc50290b3
+msgid ""
+"Plays :ref:`FmodAudioStream<class_FmodAudioStream>` in 3D using FMOD positioning, rolloff, "
+"optional Doppler tracking, and an emission cone. Playback controls, pitch, volume, and bus "
+"routing are shared with the other FMOD players."
+msgstr ""
+"使用 FMOD 的空间定位、距离衰减、可选多普勒跟踪和发射锥，在 3D 空间播放  :ref:`FmodAudioStream<class_FmodAudioStream>` \\ "
+"。播放控制、音调、音量和总线路由与其他 FMOD 播放器共用。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:26 349e4b34edaf4e20999caae5eb129b86
 msgid "Properties"
 msgstr "属性"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:56
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:112 46f9ddde775d46589680159326d0125b
-#: da647658fbb846ee953ec40cbad0c253
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:32
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:88 8b195354d4ee463eb119c591bab7afac
+#: ebb4649c1a6f458c94eb1ebf0fde46a1
 msgid ":ref:`FmodAudioStream<class_FmodAudioStream>`"
 msgstr ":ref:`FmodAudioStream<class_FmodAudioStream>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:56 2f8be24e68044c539eb2814c5cb6ec8b
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:32 8b5bc4d078ba42f8a413df3b9d1eacc6
 msgid ":ref:`stream<class_FmodAudioStreamPlayer3D_property_stream>`"
 msgstr ":ref:`stream<class_FmodAudioStreamPlayer3D_property_stream>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:58
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:78
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:90
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:158 0d0f972ac1ca4407b94151320b084292
-#: 9998a883490c45fe96dc3577eead9d6d 9e20f0545b7540bf9f77387c29e0bd24 c539ac85e4db4f0686c0d31b61da4ed2
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:34
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:54
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:66
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:134 0a4127f6e79343c7961b5199193cce5d
+#: 5fea3ae3c3324d028025806c8a46a1dd 9553e7b39f344ea482304014211e7368 98c20b149100462a8fc9ccb98373a0b0
 msgid ":ref:`int<class_int>`"
 msgstr ":ref:`int<class_int>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:58 aa3de1757ef34578946829b802c0edcc
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:34 221830d28bbe4d42b0efb9b6de7e4f66
 msgid ":ref:`attenuation_model<class_FmodAudioStreamPlayer3D_property_attenuation_model>`"
 msgstr ":ref:`attenuation_model<class_FmodAudioStreamPlayer3D_property_attenuation_model>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:58 1e657a34c4754342980c5c62e8fc8cec
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:34 6c4c719a62754ae89ec52577daad08a2
 msgid "``2``"
 msgstr "``2``"
 
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:36
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:38
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:40
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:50
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:58
 #: ../../source/classes/class_fmodaudiostreamplayer3d.rst:60
 #: ../../source/classes/class_fmodaudiostreamplayer3d.rst:62
 #: ../../source/classes/class_fmodaudiostreamplayer3d.rst:64
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:74
 #: ../../source/classes/class_fmodaudiostreamplayer3d.rst:82
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:84
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:86
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:88
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:98
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:102
 #: ../../source/classes/class_fmodaudiostreamplayer3d.rst:106
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:122
 #: ../../source/classes/class_fmodaudiostreamplayer3d.rst:126
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:130
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:142
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:146
 #: ../../source/classes/class_fmodaudiostreamplayer3d.rst:150
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:166
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:170
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:174
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:178 04485f7e83ca46d88e35a3c7d715b5de
-#: 183d9056645c4d60bc913889316243a9 488ec8729c4648338eef0158615b214a 5f6d786addc544b48b8698061e24c481
-#: 632ad086e13044b3976a7adfe8b6c08a 65c73d5e0d1d474f9d174c5650015039 717fcb8ba2b44c03aba24175daf4f517
-#: 835c5585131e42398f94bd2839359f40 83f363827edd41fab7cdfff8e96273a6 8a05b32fe70b48008f714c6d479f1361
-#: 9184bd3038434c0797d715d6a9223f9c 9a8c026febb94a3d8a7b777f3156ca68 cde0e5ba327241dcbc6d429d7b25c7fd
-#: d32de16ac0804dd28f1dd7a3ffca5fc0 e7c7c0e8705241ce8c1739a1a7898456 f801172ceba245529ee93a6da74e3d60
-#: fb368c339f5c4827b69912bd4c61e5c9
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:154 17a65d312c734a71905454804ffee81f
+#: 23611d6fc6d841c2adf62e55fba8d549 3caa006bd95248adbdc5660984bd35c9 400b56b088304e4586bf26b3281d26ba
+#: 6d8b59229b99483fb7face22d2657e05 6f1c8a32783d420589dc2670e50b0bfe 72ef35fcc9174a06a81b85f379d14d31
+#: 88c7147966f2455ba463fb831c064632 9902c28c818a478a9a0cf9736a408b80 9e4a2dd7747947d49086a3be6bd4f4df
+#: a9ff02bda8eb4dd493fd4e9510315367 aa3417296a8141d1bc78cf4a08dc8f97 b908ef042d58489898e5c0abbca328aa
+#: df787a3ebc61442690096a5be077c998 ee84ef3888ad433aba26892b318f852c f525d4ab90cb4001b2c6e7ede593a37b
+#: f54a4c42ea5e416381f150c5fb62c681
 msgid ":ref:`float<class_float>`"
 msgstr ":ref:`float<class_float>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:60 d7646e4f5aae4e909e669c450ca6098d
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:36 7af4ae2c132b42cbbfb6c42dcd9d7bf0
 msgid ":ref:`volume_db<class_FmodAudioStreamPlayer3D_property_volume_db>`"
 msgstr ":ref:`volume_db<class_FmodAudioStreamPlayer3D_property_volume_db>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:60
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:88 630febd7e1f2479db28ea5151155b339
-#: d8b96839a3de4f0fad23c6e3b2909d6a
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:36
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:64 1ea325c7d27d43508606d36b55c6457a
+#: 667e48c2972f476c805240e9d1f4438f
 msgid "``0.0``"
 msgstr "``0.0``"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:62 275fe160734341e3a335087e58e71d1a
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:38 4b4f74b8d4ff4283a26149fe55b2c7f1
 msgid ":ref:`unit_size<class_FmodAudioStreamPlayer3D_property_unit_size>`"
 msgstr ":ref:`unit_size<class_FmodAudioStreamPlayer3D_property_unit_size>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:62
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:64 65f2bcf3075b4db59fa689758f57c4ee
-#: fd0ae23e50cd426ab404731621a35fc5
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:38
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:40 ad576826d5b34debaa240966048fec5d
+#: eba56d13edf74f66a8879aa5b6b1657c
 msgid "``1.0``"
 msgstr "``1.0``"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:64 b59ce49fe77f4fa19e09749c13288057
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:40 34f18b9c870b439bbd8d96b225aef6c1
 msgid ":ref:`pitch_scale<class_FmodAudioStreamPlayer3D_property_pitch_scale>`"
 msgstr ":ref:`pitch_scale<class_FmodAudioStreamPlayer3D_property_pitch_scale>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:66
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:68
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:70
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:72
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:80
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:42
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:44
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:46
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:48
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:56
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:90
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:110
 #: ../../source/classes/class_fmodaudiostreamplayer3d.rst:114
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:134
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:138
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:142
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:146
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:162 01569646a47d48238a1b76649da63c9a
-#: 4d311d226a3b489facc567216c47cbcd 4f5bf9612b9e4d4a9ab72b65e407e95a 6e0bcf8b6a234e9db1ecc8b494d4c723
-#: 7615b088a4de43f48b30c1d8a9142213 834b940fb5b04946b4d8b2e083f1587c 8514be7b8ca347518544135fe3e05086
-#: 90ea2810b8db4d75a10a5ae61627b6ee 94c01bb960f1406e87edb7acc6fc3095 d86202d0c3fd4e2ba0659bbbf040a673
-#: d99dd593bb1143dea07d745b04b36dda
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:118
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:122
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:138 03375bba202043049e9dcff51409effd
+#: 3e34b493292f4280992c7586f20e8fe7 67f7dfe55ec24a8e881eae7f93769036 6cebe6b785244e6d82d162224d9a1075
+#: 96c81ddabf004c0b93bd39ee649ae037 9ace96aa9bec400b9a81b0e9af9dc89d 9d1b57a4b3774fe0a06bdd821417c66a
+#: 9fdf1a85801e47699f4a9d196075ff37 b960855fdd994006b39e718a8b7bb649 e3869597287e4efbaa28391abb24fef7
+#: f38a2575e0c44c659b2e21fd307e3877
 msgid ":ref:`bool<class_bool>`"
 msgstr ":ref:`bool<class_bool>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:66 272f4267b44b4444b75c12051738f10a
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:42 37ca8802c23f43f0b715b229c3cafaae
 msgid ":ref:`playing<class_FmodAudioStreamPlayer3D_property_playing>`"
 msgstr ":ref:`playing<class_FmodAudioStreamPlayer3D_property_playing>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:66
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:68
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:70
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:72
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:80 0585fd3bc5aa43a09afbf24837600cf1
-#: 3c4ea0ab84774250a5e7c07f7cc557c9 51166e84cc164ce2812409e9b92bbd4e 96ad4c702f9a4f39974ccccab2a1064f
-#: fcc07812f15c477ab15da74cf90dac97
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:42
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:44
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:46
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:48
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:56 1f93cfa5cca7497ea05baa710cbf456a
+#: 80e6c46122f44efebd1395758b891763 81c3c8b17946453ab3b84b51fb477dd5 852188f00650495bbc2f71ae19454ac8
+#: ebced790012f4fb5aecb3086df2cf5d2
 msgid "``false``"
 msgstr "``false``"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:68 87dcaaa6bcf241ab91e5f57c30fa0ab4
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:44 36699c9e5a0349a1aaa483f73903b535
 msgid ":ref:`auto_play<class_FmodAudioStreamPlayer3D_property_auto_play>`"
 msgstr ":ref:`auto_play<class_FmodAudioStreamPlayer3D_property_auto_play>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:70 e544ac1d61334800854fbfd9ce50c574
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:46 a21ab71f8a1c4c66beb7c2dc1764546d
 msgid ":ref:`preload_on_set_stream<class_FmodAudioStreamPlayer3D_property_preload_on_set_stream>`"
 msgstr ":ref:`preload_on_set_stream<class_FmodAudioStreamPlayer3D_property_preload_on_set_stream>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:72 82691e2a56e44bc4baca99668cc42258
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:48 4459c5bd9e6640668a701d2a755fed50
 msgid ":ref:`stream_paused<class_FmodAudioStreamPlayer3D_property_stream_paused>`"
 msgstr ":ref:`stream_paused<class_FmodAudioStreamPlayer3D_property_stream_paused>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:74 2122caa4bc764fc0aa179f24011e1505
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:50 66d359191fe94185b3fd6a70945d8c61
 msgid ":ref:`max_distance<class_FmodAudioStreamPlayer3D_property_max_distance>`"
 msgstr ":ref:`max_distance<class_FmodAudioStreamPlayer3D_property_max_distance>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:74 67816ee3be6b4eb2aa8acb27434ff2f3
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:50 9460204006c74a8094397f7e66a66a5a
 msgid "``10.0``"
 msgstr "``10.0``"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:76
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:154 01bea89bec8443038bbef72f8df1ade2
-#: e089cdc1b24a4a2a926178e53070e87f
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:52
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:130 00b852a5e6c24f0dab50bd74f17d37f9
+#: b88e257b01174ea19b6e753a64954d29
 msgid ":ref:`StringName<class_StringName>`"
 msgstr ":ref:`StringName<class_StringName>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:76 117de93782614e738c96432df5cb3917
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:52 acdcf320751244b2a393163ab8a027a0
 msgid ":ref:`bus<class_FmodAudioStreamPlayer3D_property_bus>`"
 msgstr ":ref:`bus<class_FmodAudioStreamPlayer3D_property_bus>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:76 537e0e674b71476c86dc515d5416daef
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:52 da0e5cfb580040d3becdaa9712dd9909
 msgid "``&\"Master\"``"
 msgstr "``&\"Master\"``"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:78 07a2c3d44e2b47c88b7110cbebdeb7ec
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:54 6b482e4b6a0841afa65c9d3ad7097ad5
 msgid ":ref:`area_mask<class_FmodAudioStreamPlayer3D_property_area_mask>`"
 msgstr ":ref:`area_mask<class_FmodAudioStreamPlayer3D_property_area_mask>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:78 f74b7996a842447e8ecf6de29638ee14
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:54 8bc56579f73347628ed1c2d4c80bc4e7
 msgid "``1``"
 msgstr "``1``"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:80 1dcb440e575c48d891f2de3c3ef21a7b
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:56 1db164c59cd046c088f903cb2ce2a7a1
 msgid ":ref:`emission_angle_enabled<class_FmodAudioStreamPlayer3D_property_emission_angle_enabled>`"
 msgstr ":ref:`emission_angle_enabled<class_FmodAudioStreamPlayer3D_property_emission_angle_enabled>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:82 2537c8fb51594ea7a0151de336574846
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:58 af6160613b3740adbdf66b86f4c749a1
 msgid ":ref:`emission_angle<class_FmodAudioStreamPlayer3D_property_emission_angle>`"
 msgstr ":ref:`emission_angle<class_FmodAudioStreamPlayer3D_property_emission_angle>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:82 e83f238f48094ce693f16a3ec679bf3e
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:58 88673a13e8584528a66da496b3db0562
 msgid "``45.0``"
 msgstr "``45.0``"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:84 a6d331975a4f436ead276a78c6bb7b90
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:60 49f879a73acb46d8ac6a309f774aaf02
 msgid ":ref:`emission_angle_filter_attenuation_db<class_FmodAudioStreamPlayer3D_property_emission_angle_filter_attenuation_db>`"
 msgstr ":ref:`emission_angle_filter_attenuation_db<class_FmodAudioStreamPlayer3D_property_emission_angle_filter_attenuation_db>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:84 e62f6e3fbcc447439dbd8d4311795dba
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:60 3ce81637b4134379aa1ceb4ec92085c6
 msgid "``-12.0``"
 msgstr "``-12.0``"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:86 d1b8f05e0b404034be0f0d1e0e26b863
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:62 39f8e27888e54ca595b5a02e0933d66c
 msgid ":ref:`attenuation_filter_cutoff_hz<class_FmodAudioStreamPlayer3D_property_attenuation_filter_cutoff_hz>`"
 msgstr ":ref:`attenuation_filter_cutoff_hz<class_FmodAudioStreamPlayer3D_property_attenuation_filter_cutoff_hz>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:86 ac002cb5fa954301ba5c681440eb15fe
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:62 11926865656f4879a74302dc36b3b4e5
 msgid "``5000.0``"
 msgstr "``5000.0``"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:88 e820133c366745229b9932c8d7a283b8
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:64 ddcca9841e2949eb8410184a57b6df8b
 msgid ":ref:`attenuation_filter_db<class_FmodAudioStreamPlayer3D_property_attenuation_filter_db>`"
 msgstr ":ref:`attenuation_filter_db<class_FmodAudioStreamPlayer3D_property_attenuation_filter_db>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:90 d3229daf123c45318c35abe6594bd54b
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:66 1491a8a9f88d4b719a93b86aafb0d7d0
 msgid ":ref:`doppler_tracking<class_FmodAudioStreamPlayer3D_property_doppler_tracking>`"
 msgstr ":ref:`doppler_tracking<class_FmodAudioStreamPlayer3D_property_doppler_tracking>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:90 6202d468005d432885e6e6ac3a5b7447
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:66 e97b23cce6bb40d69bf8dc9570c6c149
 msgid "``0``"
 msgstr "``0``"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:96 2d29afb4e2a9406b961b6d99f5ecc3dd
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:72 24e00cdadca4489986752dca5a6caec6
 msgid "Methods"
 msgstr "方法"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:102
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:78
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:80
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:84
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:86
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:92
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:96
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:100
 #: ../../source/classes/class_fmodaudiostreamplayer3d.rst:104
 #: ../../source/classes/class_fmodaudiostreamplayer3d.rst:108
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:110
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:112
 #: ../../source/classes/class_fmodaudiostreamplayer3d.rst:116
 #: ../../source/classes/class_fmodaudiostreamplayer3d.rst:120
 #: ../../source/classes/class_fmodaudiostreamplayer3d.rst:124
@@ -250,24 +265,18 @@ msgstr "方法"
 #: ../../source/classes/class_fmodaudiostreamplayer3d.rst:144
 #: ../../source/classes/class_fmodaudiostreamplayer3d.rst:148
 #: ../../source/classes/class_fmodaudiostreamplayer3d.rst:152
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:156
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:160
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:164
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:168
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:172
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:176
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:180 031ba12b4f914b61b4a926013bc64a6e
-#: 23f275c2bccd484dbec36b398471eec7 25e856da3f2b44cd9e70ad59af044ea9 38c98782953445dfac6637d5f53e1239
-#: 38e301586c4642e99aaf9ab5381a8578 3edeebea15dd4093b48ede9bce6f7dc9 452bfe7ae0a94ac1a659d66d73b14915
-#: 4a2006147830427285f3c5a0fde6b57e 4b42cf8de88745b4b7b54dbc93038ba3 56ec4b1ce9d44545beea6b90fbb51d54
-#: 5a6335785c4842db8e0715ebb8ecf277 5ae8f815f26f4628b9a6c21ba2bbef19 64c758390f7b4fc6b96e80d9141f478b
-#: 674270f8b4f948e68e19f16ee520a70a 730d12cbf29a43fe91979db3bd64a632 a19aa5b333e84d3fb04218e5afe44a28
-#: a908424631a34d519c560e21c133a6ac aa9e559d78a14df3a2cfba6c12b3f638 bba83c7dfcb0469f8b74164862dedc1c
-#: ee9b74d9b55c489e8f430ea1663ed4ee f6ba96ad989441eca3a6f2e8c175b1ed
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:156 026e2da608424ab9b7b8951e41d7474e
+#: 063d05056b264c21a39475680546278f 06e23bab61af4ec49714f522a2e7d8bd 2b2efb708c1046d9a49462bcf184ae33
+#: 50bb1175f7384ed4844e4f22d572960e 5478d6ed1f7648aba723881a53e33719 5c3928b847214084884057edf9f0e310
+#: 67d165d08960450e9a17cc94e1f0925b 7433f47237bf4a17a7c6fa9772e99b0c 74c7cc1fd6024635ada9b2e881f0b686
+#: 752ae5e5d03c4ee2a1b6a079edbae5f9 814a73dc90674956812242a6756c59c5 8d825622f5634ce5b8f38a658899f5ab
+#: 9d9f60bc6a4e4d25ba88c4b35bb408ba c3a1a17b2ec044c2b3186023ec6dbee7 d8746864581b4194bd7aea9011b9f354
+#: d99a6e1283884f53b3895359c54d2d12 db0b67c1701843ffb6f1c6943b316890 ec3b569231d2488caecfe222bca7f1da
+#: f035cb22edd448a78599145a2e6d53bf f2acd72685924436a92f36a9b46f3a20
 msgid "|void|"
 msgstr "|void|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:102 d822cf9dcacf4522be551a4cba83f73b
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:78 5204564fd8a24559bb60e9030791ddcf
 msgid ""
 ":ref:`play<class_FmodAudioStreamPlayer3D_method_play>`\\ (\\ from_position\\: "
 ":ref:`float<class_float>` = 0.0\\ )"
@@ -275,7 +284,7 @@ msgstr ""
 ":ref:`play<class_FmodAudioStreamPlayer3D_method_play>`\\ (\\ from_position\\: "
 ":ref:`float<class_float>` = 0.0\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:104 d50014d2897e4133a11748c15fb94b9b
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:80 17675103ec8048348ee6a1c1819a1b54
 msgid ""
 ":ref:`seek<class_FmodAudioStreamPlayer3D_method_seek>`\\ (\\ to_position\\: "
 ":ref:`float<class_float>`\\ )"
@@ -283,7 +292,7 @@ msgstr ""
 ":ref:`seek<class_FmodAudioStreamPlayer3D_method_seek>`\\ (\\ to_position\\: "
 ":ref:`float<class_float>`\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:106 7a834102b7d14a11b148432f90bb6996
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:82 d0012ac58bab4b22b7e4005e0335550b
 msgid ""
 ":ref:`get_playback_position<class_FmodAudioStreamPlayer3D_method_get_playback_position>`\\ (\\ ) "
 "|const|"
@@ -291,11 +300,11 @@ msgstr ""
 ":ref:`get_playback_position<class_FmodAudioStreamPlayer3D_method_get_playback_position>`\\ (\\ ) "
 "|const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:108 c3c3069c262f4f39bc04159ea2d2e1cd
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:84 8c1e80ffd6cb46529623af93d8b6c69c
 msgid ":ref:`stop<class_FmodAudioStreamPlayer3D_method_stop>`\\ (\\ )"
 msgstr ":ref:`stop<class_FmodAudioStreamPlayer3D_method_stop>`\\ (\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:110 22bd668db2504941bdf77c6fcbacaba3
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:86 4a5db200f8df43b4b68551a16ef7c1b1
 msgid ""
 ":ref:`set_stream<class_FmodAudioStreamPlayer3D_method_set_stream>`\\ (\\ stream\\: "
 ":ref:`FmodAudioStream<class_FmodAudioStream>`\\ )"
@@ -303,15 +312,15 @@ msgstr ""
 ":ref:`set_stream<class_FmodAudioStreamPlayer3D_method_set_stream>`\\ (\\ stream\\: "
 ":ref:`FmodAudioStream<class_FmodAudioStream>`\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:112 0fd689f7449f483dac8dec702a330fe4
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:88 3eb989c9361d4d08bcdcc6915b3c2992
 msgid ":ref:`get_stream<class_FmodAudioStreamPlayer3D_method_get_stream>`\\ (\\ ) |const|"
 msgstr ":ref:`get_stream<class_FmodAudioStreamPlayer3D_method_get_stream>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:114 1203e87417d64b97adec7bc04aa8db1b
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:90 e90dc1bcf84e4a628ceccaa6d60a81a3
 msgid ":ref:`preload_stream<class_FmodAudioStreamPlayer3D_method_preload_stream>`\\ (\\ )"
 msgstr ":ref:`preload_stream<class_FmodAudioStreamPlayer3D_method_preload_stream>`\\ (\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:116 8c3d87ccc1434cc988c05ae6620a30a9
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:92 a9225ee5232149519f0515b7c3a3469e
 msgid ""
 ":ref:`set_attenuation_model<class_FmodAudioStreamPlayer3D_method_set_attenuation_model>`\\ (\\ "
 "model\\: :ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>`\\ )"
@@ -319,11 +328,11 @@ msgstr ""
 ":ref:`set_attenuation_model<class_FmodAudioStreamPlayer3D_method_set_attenuation_model>`\\ (\\ "
 "model\\: :ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>`\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:118 6b939e62b6c7465482bc9298265c08c2
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:94 aa668376f20f474cb7c9e71a83a24a27
 msgid ":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>`"
 msgstr ":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:118 1a79f6a9312e497db98d2376ed451ee0
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:94 d44b77c379384280a027325dcce577ba
 msgid ""
 ":ref:`get_attenuation_model<class_FmodAudioStreamPlayer3D_method_get_attenuation_model>`\\ (\\ ) "
 "|const|"
@@ -331,7 +340,7 @@ msgstr ""
 ":ref:`get_attenuation_model<class_FmodAudioStreamPlayer3D_method_get_attenuation_model>`\\ (\\ ) "
 "|const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:120 9a58b5c40f894deab3f5c9c9b9e6e8b3
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:96 dd5c98c9e6c141bda5f6a97de1c89505
 msgid ""
 ":ref:`set_volume_db<class_FmodAudioStreamPlayer3D_method_set_volume_db>`\\ (\\ volume_db\\: "
 ":ref:`float<class_float>`\\ )"
@@ -339,11 +348,11 @@ msgstr ""
 ":ref:`set_volume_db<class_FmodAudioStreamPlayer3D_method_set_volume_db>`\\ (\\ volume_db\\: "
 ":ref:`float<class_float>`\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:122 5914a0cba5b5480c87f324696d8ccad0
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:98 77e2304c534745559ea84ec3a09e2900
 msgid ":ref:`get_volume_db<class_FmodAudioStreamPlayer3D_method_get_volume_db>`\\ (\\ ) |const|"
 msgstr ":ref:`get_volume_db<class_FmodAudioStreamPlayer3D_method_get_volume_db>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:124 e63755db980f4de9ab97caf7dbb788b0
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:100 51de8e022b7444918ef1fbb736d7d89c
 msgid ""
 ":ref:`set_unit_size<class_FmodAudioStreamPlayer3D_method_set_unit_size>`\\ (\\ size\\: "
 ":ref:`float<class_float>`\\ )"
@@ -351,11 +360,11 @@ msgstr ""
 ":ref:`set_unit_size<class_FmodAudioStreamPlayer3D_method_set_unit_size>`\\ (\\ size\\: "
 ":ref:`float<class_float>`\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:126 a0bd01dcd72d4ad7ae8994bf5eac14c0
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:102 39d6d8f4c91c4a008bfe4f97be045b1f
 msgid ":ref:`get_unit_size<class_FmodAudioStreamPlayer3D_method_get_unit_size>`\\ (\\ ) |const|"
 msgstr ":ref:`get_unit_size<class_FmodAudioStreamPlayer3D_method_get_unit_size>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:128 6ce1ae44a28a4a35a69a17a5c7d79e4a
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:104 a2181d90488447b59f5ac71eedeb6020
 msgid ""
 ":ref:`set_pitch_scale<class_FmodAudioStreamPlayer3D_method_set_pitch_scale>`\\ (\\ pitch_scale\\:"
 " :ref:`float<class_float>`\\ )"
@@ -363,11 +372,11 @@ msgstr ""
 ":ref:`set_pitch_scale<class_FmodAudioStreamPlayer3D_method_set_pitch_scale>`\\ (\\ pitch_scale\\:"
 " :ref:`float<class_float>`\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:130 e176e805de9142e4834dda12665c9973
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:106 1219c19274b44b30bfaabd5f4f35a7e5
 msgid ":ref:`get_pitch_scale<class_FmodAudioStreamPlayer3D_method_get_pitch_scale>`\\ (\\ ) |const|"
 msgstr ":ref:`get_pitch_scale<class_FmodAudioStreamPlayer3D_method_get_pitch_scale>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:132 71a48a14cf894a58a5d512c8e652b7ce
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:108 e657225a8c90495584c00fadc836204d
 msgid ""
 ":ref:`set_playing<class_FmodAudioStreamPlayer3D_method_set_playing>`\\ (\\ playing\\: "
 ":ref:`bool<class_bool>`\\ )"
@@ -375,11 +384,11 @@ msgstr ""
 ":ref:`set_playing<class_FmodAudioStreamPlayer3D_method_set_playing>`\\ (\\ playing\\: "
 ":ref:`bool<class_bool>`\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:134 42513464b125445ea8a4e7264c2ed68f
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:110 3ac49559871147a79e7bbfc59015f865
 msgid ":ref:`is_playing<class_FmodAudioStreamPlayer3D_method_is_playing>`\\ (\\ ) |const|"
 msgstr ":ref:`is_playing<class_FmodAudioStreamPlayer3D_method_is_playing>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:136 a740b809face4afaaa5bae12239a3d5a
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:112 fd99cbd7e31643678790fc0fe6399aad
 msgid ""
 ":ref:`set_auto_play<class_FmodAudioStreamPlayer3D_method_set_auto_play>`\\ (\\ enable\\: "
 ":ref:`bool<class_bool>`\\ )"
@@ -387,7 +396,7 @@ msgstr ""
 ":ref:`set_auto_play<class_FmodAudioStreamPlayer3D_method_set_auto_play>`\\ (\\ enable\\: "
 ":ref:`bool<class_bool>`\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:138 02b686596b0f42da84053cede61b9f6e
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:114 1bdb185690614953bf3767ef8a272a89
 msgid ""
 ":ref:`is_autoplay_enabled<class_FmodAudioStreamPlayer3D_method_is_autoplay_enabled>`\\ (\\ ) "
 "|const|"
@@ -395,7 +404,7 @@ msgstr ""
 ":ref:`is_autoplay_enabled<class_FmodAudioStreamPlayer3D_method_is_autoplay_enabled>`\\ (\\ ) "
 "|const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:140 751f3e3f5efc41df8d629c3604068cee
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:116 039516bc875c4957bb15fd977c102f27
 msgid ""
 ":ref:`set_preload_on_set_stream<class_FmodAudioStreamPlayer3D_method_set_preload_on_set_stream>`\\"
 " (\\ enable\\: :ref:`bool<class_bool>`\\ )"
@@ -403,7 +412,7 @@ msgstr ""
 ":ref:`set_preload_on_set_stream<class_FmodAudioStreamPlayer3D_method_set_preload_on_set_stream>`\\"
 " (\\ enable\\: :ref:`bool<class_bool>`\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:142 c1013d82f3af42b69de37453723ce3f8
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:118 a57bbfea1aa54f86a64b935491b8f882
 msgid ""
 ":ref:`is_preload_on_set_stream_enabled<class_FmodAudioStreamPlayer3D_method_is_preload_on_set_stream_enabled>`\\"
 " (\\ ) |const|"
@@ -411,7 +420,7 @@ msgstr ""
 ":ref:`is_preload_on_set_stream_enabled<class_FmodAudioStreamPlayer3D_method_is_preload_on_set_stream_enabled>`\\"
 " (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:144 31437ffcbc5a45668517d2d51fa985d6
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:120 0898083e82084d8e925c5c88b24cd6ad
 msgid ""
 ":ref:`set_stream_paused<class_FmodAudioStreamPlayer3D_method_set_stream_paused>`\\ (\\ paused\\: "
 ":ref:`bool<class_bool>`\\ )"
@@ -419,11 +428,11 @@ msgstr ""
 ":ref:`set_stream_paused<class_FmodAudioStreamPlayer3D_method_set_stream_paused>`\\ (\\ paused\\: "
 ":ref:`bool<class_bool>`\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:146 c210d5f41d3e41928d2667c48757fd79
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:122 aa773fdf3b8143678eb4c6bb14bd96bd
 msgid ":ref:`get_stream_paused<class_FmodAudioStreamPlayer3D_method_get_stream_paused>`\\ (\\ ) |const|"
 msgstr ":ref:`get_stream_paused<class_FmodAudioStreamPlayer3D_method_get_stream_paused>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:148 cec8af88465f48a19a2760b4af187a32
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:124 886928e58d60460ab7644f301bcf2c99
 msgid ""
 ":ref:`set_max_distance<class_FmodAudioStreamPlayer3D_method_set_max_distance>`\\ (\\ distance\\: "
 ":ref:`float<class_float>`\\ )"
@@ -431,11 +440,11 @@ msgstr ""
 ":ref:`set_max_distance<class_FmodAudioStreamPlayer3D_method_set_max_distance>`\\ (\\ distance\\: "
 ":ref:`float<class_float>`\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:150 f4d1584bf09d4eb7a7b1901a1755d07f
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:126 8a458fb0169147a796c0cd8cbe49043b
 msgid ":ref:`get_max_distance<class_FmodAudioStreamPlayer3D_method_get_max_distance>`\\ (\\ ) |const|"
 msgstr ":ref:`get_max_distance<class_FmodAudioStreamPlayer3D_method_get_max_distance>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:152 a573ab55de804b9587702451853505c0
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:128 a2c817b43fe7447ea961b2c7e8591f31
 msgid ""
 ":ref:`set_bus<class_FmodAudioStreamPlayer3D_method_set_bus>`\\ (\\ bus\\: "
 ":ref:`StringName<class_StringName>`\\ )"
@@ -443,11 +452,11 @@ msgstr ""
 ":ref:`set_bus<class_FmodAudioStreamPlayer3D_method_set_bus>`\\ (\\ bus\\: "
 ":ref:`StringName<class_StringName>`\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:154 f61e95bc75f64b19ba40c5f012853f31
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:130 d5a40ab8e9c449c8ab25adc468cb509f
 msgid ":ref:`get_bus<class_FmodAudioStreamPlayer3D_method_get_bus>`\\ (\\ ) |const|"
 msgstr ":ref:`get_bus<class_FmodAudioStreamPlayer3D_method_get_bus>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:156 21728ccca3ba4c7cb2a2a9ecec5fcdfa
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:132 77ce40010aed40b2b3db25d0764bbcdd
 msgid ""
 ":ref:`set_area_mask<class_FmodAudioStreamPlayer3D_method_set_area_mask>`\\ (\\ mask\\: "
 ":ref:`int<class_int>`\\ )"
@@ -455,11 +464,11 @@ msgstr ""
 ":ref:`set_area_mask<class_FmodAudioStreamPlayer3D_method_set_area_mask>`\\ (\\ mask\\: "
 ":ref:`int<class_int>`\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:158 031d2040a1c241b1911fd65a38f1352f
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:134 942d4d92c25f4b52b6c9b00fbcd7bf22
 msgid ":ref:`get_area_mask<class_FmodAudioStreamPlayer3D_method_get_area_mask>`\\ (\\ ) |const|"
 msgstr ":ref:`get_area_mask<class_FmodAudioStreamPlayer3D_method_get_area_mask>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:160 0a7c1f1632374bab8fa7d57a45548fc6
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:136 fe5f7205a7ea4097be740cc6ead1c88e
 msgid ""
 ":ref:`set_emission_angle_enabled<class_FmodAudioStreamPlayer3D_method_set_emission_angle_enabled>`\\"
 " (\\ enabled\\: :ref:`bool<class_bool>`\\ )"
@@ -467,7 +476,7 @@ msgstr ""
 ":ref:`set_emission_angle_enabled<class_FmodAudioStreamPlayer3D_method_set_emission_angle_enabled>`\\"
 " (\\ enabled\\: :ref:`bool<class_bool>`\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:162 7c0e989015604302aeb7cd379510bdd4
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:138 5fb7ce8e64e1479dba4a1febe7d048a8
 msgid ""
 ":ref:`is_emission_angle_enabled<class_FmodAudioStreamPlayer3D_method_is_emission_angle_enabled>`\\"
 " (\\ ) |const|"
@@ -475,7 +484,7 @@ msgstr ""
 ":ref:`is_emission_angle_enabled<class_FmodAudioStreamPlayer3D_method_is_emission_angle_enabled>`\\"
 " (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:164 5b943ed1bb334773a746171ef1d75b53
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:140 523b9cafdc854e6498fc06e8a0afcff8
 msgid ""
 ":ref:`set_emission_angle<class_FmodAudioStreamPlayer3D_method_set_emission_angle>`\\ (\\ angle\\:"
 " :ref:`float<class_float>`\\ )"
@@ -483,11 +492,11 @@ msgstr ""
 ":ref:`set_emission_angle<class_FmodAudioStreamPlayer3D_method_set_emission_angle>`\\ (\\ angle\\:"
 " :ref:`float<class_float>`\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:166 e6db6b9936314897812467c4ba94c696
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:142 f91f0486163444d69058ffe75f00db65
 msgid ":ref:`get_emission_angle<class_FmodAudioStreamPlayer3D_method_get_emission_angle>`\\ (\\ ) |const|"
 msgstr ":ref:`get_emission_angle<class_FmodAudioStreamPlayer3D_method_get_emission_angle>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:168 9b36d2d921854b99a47fa56a33ea3217
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:144 e90175eec3b64c269d6ee6625d4f35ca
 msgid ""
 ":ref:`set_emission_angle_filter_attenuation_db<class_FmodAudioStreamPlayer3D_method_set_emission_angle_filter_attenuation_db>`\\"
 " (\\ db\\: :ref:`float<class_float>`\\ )"
@@ -495,7 +504,7 @@ msgstr ""
 ":ref:`set_emission_angle_filter_attenuation_db<class_FmodAudioStreamPlayer3D_method_set_emission_angle_filter_attenuation_db>`\\"
 " (\\ db\\: :ref:`float<class_float>`\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:170 d6160061d5a24770813ba4bf632f62da
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:146 a2bdca573fe946a097c39537598c243a
 msgid ""
 ":ref:`get_emission_angle_filter_attenuation_db<class_FmodAudioStreamPlayer3D_method_get_emission_angle_filter_attenuation_db>`\\"
 " (\\ ) |const|"
@@ -503,7 +512,7 @@ msgstr ""
 ":ref:`get_emission_angle_filter_attenuation_db<class_FmodAudioStreamPlayer3D_method_get_emission_angle_filter_attenuation_db>`\\"
 " (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:172 7bed5fe7c4ba4d87971739a51f0fef88
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:148 a044d706ffda4393b2319bed82e3f4b0
 msgid ""
 ":ref:`set_attenuation_filter_cutoff_hz<class_FmodAudioStreamPlayer3D_method_set_attenuation_filter_cutoff_hz>`\\"
 " (\\ freq\\: :ref:`float<class_float>`\\ )"
@@ -511,7 +520,7 @@ msgstr ""
 ":ref:`set_attenuation_filter_cutoff_hz<class_FmodAudioStreamPlayer3D_method_set_attenuation_filter_cutoff_hz>`\\"
 " (\\ freq\\: :ref:`float<class_float>`\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:174 f01b695993a04227b0ad2df80b9d9fe2
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:150 15eb7a5c972f4006815134a084621002
 msgid ""
 ":ref:`get_attenuation_filter_cutoff_hz<class_FmodAudioStreamPlayer3D_method_get_attenuation_filter_cutoff_hz>`\\"
 " (\\ ) |const|"
@@ -519,7 +528,7 @@ msgstr ""
 ":ref:`get_attenuation_filter_cutoff_hz<class_FmodAudioStreamPlayer3D_method_get_attenuation_filter_cutoff_hz>`\\"
 " (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:176 cc293954a32846068076bbefc6c2fade
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:152 81edcacae21d4d2d97286fb7ab0c55bd
 msgid ""
 ":ref:`set_attenuation_filter_db<class_FmodAudioStreamPlayer3D_method_set_attenuation_filter_db>`\\"
 " (\\ db\\: :ref:`float<class_float>`\\ )"
@@ -527,7 +536,7 @@ msgstr ""
 ":ref:`set_attenuation_filter_db<class_FmodAudioStreamPlayer3D_method_set_attenuation_filter_db>`\\"
 " (\\ db\\: :ref:`float<class_float>`\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:178 1b6c183b03d44b5b9938cc8e3486aa0e
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:154 a8c9c891b3124fc0824a4f752f0c8683
 msgid ""
 ":ref:`get_attenuation_filter_db<class_FmodAudioStreamPlayer3D_method_get_attenuation_filter_db>`\\"
 " (\\ ) |const|"
@@ -535,7 +544,7 @@ msgstr ""
 ":ref:`get_attenuation_filter_db<class_FmodAudioStreamPlayer3D_method_get_attenuation_filter_db>`\\"
 " (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:180 02a503d984594d75a482e8be50e4fede
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:156 96381c9a8c3b44e28edafa48a2c94904
 msgid ""
 ":ref:`set_doppler_tracking<class_FmodAudioStreamPlayer3D_method_set_doppler_tracking>`\\ (\\ "
 "tracking\\: :ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>`\\ )"
@@ -543,11 +552,11 @@ msgstr ""
 ":ref:`set_doppler_tracking<class_FmodAudioStreamPlayer3D_method_set_doppler_tracking>`\\ (\\ "
 "tracking\\: :ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>`\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:182 1f96ffc933974ac58bec63a57be0e054
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:158 0145176871db48e9abe02901ba187193
 msgid ":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>`"
 msgstr ":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>`"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:182 a81861fb680b4c3c9f490e9d8a4a10ac
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:158 1a2bce33c03b424abcff193f7724ea5e
 msgid ""
 ":ref:`get_doppler_tracking<class_FmodAudioStreamPlayer3D_method_get_doppler_tracking>`\\ (\\ ) "
 "|const|"
@@ -555,664 +564,15 @@ msgstr ""
 ":ref:`get_doppler_tracking<class_FmodAudioStreamPlayer3D_method_get_doppler_tracking>`\\ (\\ ) "
 "|const|"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:192 87fc8f286bc747559996fa1b9efb69bf
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:168 d51342550b6d4fdab48f18230119f14e
 msgid "Signals"
 msgstr "信号"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:198 5ebb9230cc5046da826690f448897855
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:174 b438f146a14d4d23824158ffc1a03a18
 msgid "**finished**\\ (\\ )"
 msgstr "**finished**\\ (\\ )"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:209 dd70b5fee524403497bb582eb94a2214
-msgid "Enumerations"
-msgstr "枚举"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:217 2ef15a262e9e4d2b8427beda88b120b8
-msgid "enum **AttenuationModel**:"
-msgstr "enum **AttenuationModel**:"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:223 f7bc7006469243d6b4d2cb5d5db26efe
-msgid ""
-":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` "
-"**ATTENUATION_INVERSE_DISTANCE** = ``0``"
-msgstr ""
-":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` "
-"**ATTENUATION_INVERSE_DISTANCE** = ``0``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:225 66d04bcad99e47528a12a7153e28746f
-msgid "Inverse distance attenuation model. Volume falls off as 1/distance."
-msgstr "反距离衰减"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:227 2803ee40c5de4924b8d068b34f764461
-msgid "This is a realistic model for point sources in free field."
-msgstr "反距离衰减"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:233 dc28154b689a4bfa8156ed455c7d809f
-msgid ""
-":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` "
-"**ATTENUATION_INVERSE_SQUARE_DISTANCE** = ``1``"
-msgstr ""
-":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` "
-"**ATTENUATION_INVERSE_SQUARE_DISTANCE** = ``1``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:243 a3c1d17a972941c1b5aeb9a5a6f9f221
-msgid ""
-":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` "
-"**ATTENUATION_LOGARITHMIC** = ``2``"
-msgstr ""
-":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` "
-"**ATTENUATION_LOGARITHMIC** = ``2``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:253 44b0f8aa30804e41ae2a2098bebbe3d6
-msgid ""
-":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` **ATTENUATION_DISABLED** ="
-" ``3``"
-msgstr ""
-":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` **ATTENUATION_DISABLED** ="
-" ``3``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:269 02c21cd8027d43b9b5252b103da3d942
-msgid "enum **DopplerTracking**:"
-msgstr "enum **DopplerTracking**:"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:275 af1adc60dc4d4e1d94e6ed6d9975d1fe
-msgid ""
-":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` "
-"**DOPPLER_TRACKING_DISABLED** = ``0``"
-msgstr ""
-":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` "
-"**DOPPLER_TRACKING_DISABLED** = ``0``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:277 3054808b2ea14fcd8cf8243c787d8c81
-msgid "Doppler effect is disabled. No pitch changes based on velocity."
-msgstr "禁用多普勒追踪"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:283 9e1507b1c3314812bea42124c0923cc4
-msgid ""
-":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` "
-"**DOPPLER_TRACKING_IDLE_STEP** = ``1``"
-msgstr ""
-":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` "
-"**DOPPLER_TRACKING_IDLE_STEP** = ``1``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:285 6d6219aa8f6743f5bc6072f023c3a61c
-msgid "Doppler effect is calculated during the idle/process step."
-msgstr "在普通处理帧中计算速度"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:287 36b11900074d4430b4a11ec32ed3c477
-msgid "Suitable for visual-only movement tracking."
-msgstr "在普通处理帧中计算速度"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:293 58d2503d685b4e8c837ba25e0d49e8fd
-msgid ""
-":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` "
-"**DOPPLER_TRACKING_PHYSICS_STEP** = ``2``"
-msgstr ""
-":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` "
-"**DOPPLER_TRACKING_PHYSICS_STEP** = ``2``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:295 b8f92f559c484fc981de602665b66ba3
-msgid "Doppler effect is calculated during the physics step."
-msgstr "在物理处理帧中计算速度"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:297 ac58da6ba5194138907d018f4e2557c4
-msgid "Recommended for physics-based movement for accurate results."
-msgstr "在物理处理帧中计算速度"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:306 48091137891a4bb4967081b1c15879d4
-msgid "Property Descriptions"
-msgstr "属性说明"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:312 2c9bcf57a64f42d2ad961a95e53077b3
-msgid ":ref:`FmodAudioStream<class_FmodAudioStream>` **stream**"
-msgstr ":ref:`FmodAudioStream<class_FmodAudioStream>` **stream**"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:316
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:687 1cbd4f71159e4bd8a8f0054643a986c9
-#: 39bf17ce6d4543b496ed15df3c5454ef
-msgid "|void| **set_stream**\\ (\\ stream\\: :ref:`FmodAudioStream<class_FmodAudioStream>`\\ )"
-msgstr "|void| **set_stream**\\ (\\ stream\\: :ref:`FmodAudioStream<class_FmodAudioStream>`\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:317
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:703 d7428546ce52409e84867ce4d8cba84c
-#: ef22c270bb1d4e568bd90e487c02a8eb
-msgid ":ref:`FmodAudioStream<class_FmodAudioStream>` **get_stream**\\ (\\ ) |const|"
-msgstr ":ref:`FmodAudioStream<class_FmodAudioStream>` **get_stream**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:319 d5017b7d36b44c51b1a0c60049589c65
-msgid "The :ref:`FmodAudioStream<class_FmodAudioStream>` resource to play."
-msgstr "要播放的音频流资源 （参见   :ref:`FmodAudioStream<class_FmodAudioStream>`  ）"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:329 aef5f81fccea4e39af7cdbddd91d97bd
-msgid ":ref:`int<class_int>` **attenuation_model** = ``2``"
-msgstr ":ref:`int<class_int>` **attenuation_model** = ``2``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:333
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:735 b97ef8b7567e467486fd6204ff1695fc
-#: d0bdecb6d2584d0eb2651a2f3b3019d1
-msgid ""
-"|void| **set_attenuation_model**\\ (\\ model\\: "
-":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>`\\ )"
-msgstr ""
-"|void| **set_attenuation_model**\\ (\\ model\\: "
-":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>`\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:334
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:751 af6923899386456a8691bfb42ca11bc9
-#: f3149d5b206a4de299bd387d7f035a3e
-msgid ""
-":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` "
-"**get_attenuation_model**\\ (\\ ) |const|"
-msgstr ""
-":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` "
-"**get_attenuation_model**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:336 e756a7e8fd2340e6a2030f9c62b72c99
-msgid ""
-"Distance attenuation model. See "
-":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>`."
-msgstr "3D 距离衰减模型 （参见   :ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>`  ）"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:346 de4ef540b87f4cbab7eb813d17f3b9fc
-msgid ":ref:`float<class_float>` **volume_db** = ``0.0``"
-msgstr ":ref:`float<class_float>` **volume_db** = ``0.0``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:350
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:767 1f8ef7ec8cca4b2992a1cbfd81df0863
-#: a92ddfd59b494d14a33b5a667c1fa3e0
-msgid "|void| **set_volume_db**\\ (\\ volume_db\\: :ref:`float<class_float>`\\ )"
-msgstr "|void| **set_volume_db**\\ (\\ volume_db\\: :ref:`float<class_float>`\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:351
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:783 297027c0dec74059bf28b8ac75d28b57
-#: b24d2a4715a24cc79339d1a8a3d20e48
-msgid ":ref:`float<class_float>` **get_volume_db**\\ (\\ ) |const|"
-msgstr ":ref:`float<class_float>` **get_volume_db**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:353 1ad5a582cccb423aa8d941f8e7bc9be6
-msgid "Volume in decibels. ``0.0`` is unity gain, negative values attenuate."
-msgstr "基础音量，单位为分贝"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:363 efa3920f13084b24bfde3b08b09ff831
-msgid ":ref:`float<class_float>` **unit_size** = ``1.0``"
-msgstr ":ref:`float<class_float>` **unit_size** = ``1.0``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:367
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:799 4655c3e89c5641da8c4fc1e14f09a1b6
-#: 47f3fde703d8400c8280b093bf067a37
-msgid "|void| **set_unit_size**\\ (\\ size\\: :ref:`float<class_float>`\\ )"
-msgstr "|void| **set_unit_size**\\ (\\ size\\: :ref:`float<class_float>`\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:368
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:815 6387e262dd08478492ae3435b31901bc
-#: c1009c22e68840998c42e515037b0bcc
-msgid ":ref:`float<class_float>` **get_unit_size**\\ (\\ ) |const|"
-msgstr ":ref:`float<class_float>` **get_unit_size**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:380 bbeeb2db5a814bc395966e6a70a1334b
-msgid ":ref:`float<class_float>` **pitch_scale** = ``1.0``"
-msgstr ":ref:`float<class_float>` **pitch_scale** = ``1.0``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:384
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:831 0b2f552b34f54e1ebba865d19fc62b50
-#: 8fe84072161141308e908603f0553a22
-msgid "|void| **set_pitch_scale**\\ (\\ pitch_scale\\: :ref:`float<class_float>`\\ )"
-msgstr "|void| **set_pitch_scale**\\ (\\ pitch_scale\\: :ref:`float<class_float>`\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:385
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:847 2778acb08bc14948b012ada2089e0188
-#: a1423aeee9c240f78a1417009158284d
-msgid ":ref:`float<class_float>` **get_pitch_scale**\\ (\\ ) |const|"
-msgstr ":ref:`float<class_float>` **get_pitch_scale**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:387 9f34df7a365b401ebabe898e82e816e0
-msgid "Pitch scale of the audio. ``1.0`` is the default pitch."
-msgstr "播放速度和音高缩放"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:397 70bf4784832c41b988d18912fac606d7
-msgid ":ref:`bool<class_bool>` **playing** = ``false``"
-msgstr ":ref:`bool<class_bool>` **playing** = ``false``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:401
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:863 7944b24febaf4573ac2234d25993d97d
-#: b3b4bc91c6a74d8394d32ca9b8be9ee1
-msgid "|void| **set_playing**\\ (\\ playing\\: :ref:`bool<class_bool>`\\ )"
-msgstr "|void| **set_playing**\\ (\\ playing\\: :ref:`bool<class_bool>`\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:402
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:879 031070e46f044107bce3d5517347aba4
-#: 2a654fd9fec54a53a0fc5f04fe161f2a
-msgid ":ref:`bool<class_bool>` **is_playing**\\ (\\ ) |const|"
-msgstr ":ref:`bool<class_bool>` **is_playing**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:404 4393ee10de2248a0b98eee5da93f70e6
-msgid "Current playback state. Can be set to start/stop playback."
-msgstr "设置为    ``true``    开始播放，设置为    ``false``    停止播放"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:414 f99fd5c7c93543cf91960bce54494ade
-msgid ":ref:`bool<class_bool>` **auto_play** = ``false``"
-msgstr ":ref:`bool<class_bool>` **auto_play** = ``false``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:418
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:895 17ddff336e314f74bc798894649b3f70
-#: 89809bb96eb84af5abbe2d4391177d52
-msgid "|void| **set_auto_play**\\ (\\ enable\\: :ref:`bool<class_bool>`\\ )"
-msgstr "|void| **set_auto_play**\\ (\\ enable\\: :ref:`bool<class_bool>`\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:419
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:909 494b3cc16be84adfa95bc79c0c44439a
-#: e774b80823354c1fbf93f4324229feff
-msgid ":ref:`bool<class_bool>` **is_autoplay_enabled**\\ (\\ ) |const|"
-msgstr ":ref:`bool<class_bool>` **is_autoplay_enabled**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:431 9b5f0959278e45b098a91422af502139
-msgid ":ref:`bool<class_bool>` **preload_on_set_stream** = ``false``"
-msgstr ":ref:`bool<class_bool>` **preload_on_set_stream** = ``false``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:435
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:925 0c832d0ebf654f418d6ab1aacb95161b
-#: a05caeeff0844fcc8fde7e3cfcd47263
-msgid "|void| **set_preload_on_set_stream**\\ (\\ enable\\: :ref:`bool<class_bool>`\\ )"
-msgstr "|void| **set_preload_on_set_stream**\\ (\\ enable\\: :ref:`bool<class_bool>`\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:436
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:939 0f75edde20244b26949d0f4216c6842a
-#: d20d680919cc4aadbde97a0b702f3c57
-msgid ":ref:`bool<class_bool>` **is_preload_on_set_stream_enabled**\\ (\\ ) |const|"
-msgstr ":ref:`bool<class_bool>` **is_preload_on_set_stream_enabled**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:438 9ed899db94594aa4acd36461304f3ec5
-msgid ""
-"If ``true``, assigning a stream creates its internal :ref:`FmodSound<class_FmodSound>` "
-"immediately instead of waiting for the first playback."
-msgstr "设置    ``stream``    时是否立即预加载内部    :ref:`FmodSound<class_FmodSound>`"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:448 fc158bd45474421a8bfb1a1c21e4e8e8
-msgid ":ref:`bool<class_bool>` **stream_paused** = ``false``"
-msgstr ":ref:`bool<class_bool>` **stream_paused** = ``false``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:452
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:953 21574941f3184e18af3408e2d486f396
-#: fdb8132e59354cb6a3f139b9af7f1b41
-msgid "|void| **set_stream_paused**\\ (\\ paused\\: :ref:`bool<class_bool>`\\ )"
-msgstr "|void| **set_stream_paused**\\ (\\ paused\\: :ref:`bool<class_bool>`\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:453
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:967 3f6fb4d5b38d48fcab89f9ea7a5af2c5
-#: a0e31208e0924e98b852416aedc96c19
-msgid ":ref:`bool<class_bool>` **get_stream_paused**\\ (\\ ) |const|"
-msgstr ":ref:`bool<class_bool>` **get_stream_paused**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:455 1385f35e7c584f9e87d325b96b33f1d8
-msgid "If ``true``, playback is paused."
-msgstr "是否暂停当前播放流"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:465 750caecbfa924055bc0dc35df822cfa3
-msgid ":ref:`float<class_float>` **max_distance** = ``10.0``"
-msgstr ":ref:`float<class_float>` **max_distance** = ``10.0``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:469
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:981 a04fc67cbad74d33a963f9c073a70c66
-#: b8fae387ca0e413497d2d5dd5e83cf0b
-msgid "|void| **set_max_distance**\\ (\\ distance\\: :ref:`float<class_float>`\\ )"
-msgstr "|void| **set_max_distance**\\ (\\ distance\\: :ref:`float<class_float>`\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:470
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:997 095ed431a4854be0a4a0b6024e7b1e14
-#: 5c957418723943f29ad8257109a62236
-msgid ":ref:`float<class_float>` **get_max_distance**\\ (\\ ) |const|"
-msgstr ":ref:`float<class_float>` **get_max_distance**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:482 743649634b2046739a6265975be6fb09
-msgid ":ref:`StringName<class_StringName>` **bus** = ``&\"Master\"``"
-msgstr ":ref:`StringName<class_StringName>` **bus** = ``&\"Master\"``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:486
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1013 af3a337ea1674f89a3627ab5e7a59f0c
-#: bb0303b6b5754965b403d7197b802d1e
-msgid "|void| **set_bus**\\ (\\ bus\\: :ref:`StringName<class_StringName>`\\ )"
-msgstr "|void| **set_bus**\\ (\\ bus\\: :ref:`StringName<class_StringName>`\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:487
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1029 0dab32951f8b492dbb07e1161e2b08a2
-#: 786694bf00bf42258b1b98067e857470
-msgid ":ref:`StringName<class_StringName>` **get_bus**\\ (\\ ) |const|"
-msgstr ":ref:`StringName<class_StringName>` **get_bus**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:489 e78f99a17eb043ceb7d6b4b09e7ed641
-msgid "The name of the audio bus to route output to."
-msgstr "输出到的音频总线名称"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:499 6d9e7bc8981d4418a2625431e570dde5
-msgid ":ref:`int<class_int>` **area_mask** = ``1``"
-msgstr ":ref:`int<class_int>` **area_mask** = ``1``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:503
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1045 4e6e2e41e1184abe9ddeb6a00910217d
-#: 70f670bae8904cc79c61a1fd8f53651d
-msgid "|void| **set_area_mask**\\ (\\ mask\\: :ref:`int<class_int>`\\ )"
-msgstr "|void| **set_area_mask**\\ (\\ mask\\: :ref:`int<class_int>`\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:504
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1061 577a0edb1be24c15bda34498f098fe01
-#: fb76ce5dffc54baf8153a6df960d8e8f
-msgid ":ref:`int<class_int>` **get_area_mask**\\ (\\ ) |const|"
-msgstr ":ref:`int<class_int>` **get_area_mask**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:516 dd1dbbae3c7f4a6d88b31a8108acdefb
-msgid ":ref:`bool<class_bool>` **emission_angle_enabled** = ``false``"
-msgstr ":ref:`bool<class_bool>` **emission_angle_enabled** = ``false``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:520
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1077 0711c6941f164176bc40a6cec32a292b
-#: 784598c5c0bf4400becd962fa8b0519d
-msgid "|void| **set_emission_angle_enabled**\\ (\\ enabled\\: :ref:`bool<class_bool>`\\ )"
-msgstr "|void| **set_emission_angle_enabled**\\ (\\ enabled\\: :ref:`bool<class_bool>`\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:521
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1093 a9c056d993284d57a7d4163adea69659
-#: d817eb6ccbd542a18959e6d001614158
-msgid ":ref:`bool<class_bool>` **is_emission_angle_enabled**\\ (\\ ) |const|"
-msgstr ":ref:`bool<class_bool>` **is_emission_angle_enabled**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:523 32e8b1aad302465a858bdf4c72eb4e05
-msgid "If ``true``, enables directional emission cone."
-msgstr "是否启用方向性发射锥"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:533 bdc65fd78be54cb3b7c7b1f07dec4fdc
-msgid ":ref:`float<class_float>` **emission_angle** = ``45.0``"
-msgstr ":ref:`float<class_float>` **emission_angle** = ``45.0``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:537
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1109 db6ec9a2c26e44218d435605b42325d4
-#: dea68a8d30be4bb89a9c8e70bd12e691
-msgid "|void| **set_emission_angle**\\ (\\ angle\\: :ref:`float<class_float>`\\ )"
-msgstr "|void| **set_emission_angle**\\ (\\ angle\\: :ref:`float<class_float>`\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:538
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1125 29bbbd4e4d05419fa65ec033212cc8c2
-#: a2fb13ee5d43498688d38d1749b92f00
-msgid ":ref:`float<class_float>` **get_emission_angle**\\ (\\ ) |const|"
-msgstr ":ref:`float<class_float>` **get_emission_angle**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:550 314ecfc2198d41f09f771c9fed2c874f
-msgid ":ref:`float<class_float>` **emission_angle_filter_attenuation_db** = ``-12.0``"
-msgstr ":ref:`float<class_float>` **emission_angle_filter_attenuation_db** = ``-12.0``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:554
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1143 4a31f697be3147a4a82aadb86eb837cf
-#: d16c2465856c4893883a88ac010e45a2
-msgid "|void| **set_emission_angle_filter_attenuation_db**\\ (\\ db\\: :ref:`float<class_float>`\\ )"
-msgstr "|void| **set_emission_angle_filter_attenuation_db**\\ (\\ db\\: :ref:`float<class_float>`\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:555
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1159 c0549d710b744045ba39316f80e70e9c
-#: c5bb71fdcfd242caa05cbaa4aeb061da
-msgid ":ref:`float<class_float>` **get_emission_angle_filter_attenuation_db**\\ (\\ ) |const|"
-msgstr ":ref:`float<class_float>` **get_emission_angle_filter_attenuation_db**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:567 35796139ff324e00a5036ca93efa0bca
-msgid ":ref:`float<class_float>` **attenuation_filter_cutoff_hz** = ``5000.0``"
-msgstr ":ref:`float<class_float>` **attenuation_filter_cutoff_hz** = ``5000.0``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:571
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1175 049036eae9124031a0265fef2b191202
-#: 2a2fb80e089b46839ba9cd50701e0d5d
-msgid "|void| **set_attenuation_filter_cutoff_hz**\\ (\\ freq\\: :ref:`float<class_float>`\\ )"
-msgstr "|void| **set_attenuation_filter_cutoff_hz**\\ (\\ freq\\: :ref:`float<class_float>`\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:572
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1191 06ed24d9e3754e4494190132dc3389cb
-#: 7f8a4918b9cf4b5c9e930334448e900e
-msgid ":ref:`float<class_float>` **get_attenuation_filter_cutoff_hz**\\ (\\ ) |const|"
-msgstr ":ref:`float<class_float>` **get_attenuation_filter_cutoff_hz**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:584 26ee4493fb314be5b468190afec5bc7b
-msgid ":ref:`float<class_float>` **attenuation_filter_db** = ``0.0``"
-msgstr ":ref:`float<class_float>` **attenuation_filter_db** = ``0.0``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:588
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1209 0814d56f5db54586804a926a4f75f450
-#: 54d5d821edb2403a8c2dea0916340451
-msgid "|void| **set_attenuation_filter_db**\\ (\\ db\\: :ref:`float<class_float>`\\ )"
-msgstr "|void| **set_attenuation_filter_db**\\ (\\ db\\: :ref:`float<class_float>`\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:589
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1225 363a5a30c96d4cfaa900a2347a5a5fef
-#: 6c246eecd22141588c21f814e640ef79
-msgid ":ref:`float<class_float>` **get_attenuation_filter_db**\\ (\\ ) |const|"
-msgstr ":ref:`float<class_float>` **get_attenuation_filter_db**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:601 6dedea78f1394baba81dbb5eb008773f
-msgid ":ref:`int<class_int>` **doppler_tracking** = ``0``"
-msgstr ":ref:`int<class_int>` **doppler_tracking** = ``0``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:605
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1241 3e74fe681a2e4b38a4286daae4e80e06
-#: 6524790d187149babf876a33fd5d5d06
-msgid ""
-"|void| **set_doppler_tracking**\\ (\\ tracking\\: "
-":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>`\\ )"
-msgstr ""
-"|void| **set_doppler_tracking**\\ (\\ tracking\\: "
-":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>`\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:606
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1257 121e4b87b506454faa7033c4121cf359
-#: 5b0f86aa6ac0465e838105ffdb9e0d0c
-msgid ""
-":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` **get_doppler_tracking**\\ "
-"(\\ ) |const|"
-msgstr ""
-":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` **get_doppler_tracking**\\ "
-"(\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:608 17a2c97096da4be184ac3457b8edc476
-msgid ""
-"Doppler effect tracking mode. See "
-":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>`."
-msgstr "多普勒速度追踪模式 （参见   :ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>`  ）"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:617 fe3b4d0fdb0743e590f80a3d62edcb42
-msgid "Method Descriptions"
-msgstr "方法说明"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:625 2a7852ad60b14fd98ad09235db188163
-msgid "|void| **play**\\ (\\ from_position\\: :ref:`float<class_float>` = 0.0\\ )"
-msgstr "|void| **play**\\ (\\ from_position\\: :ref:`float<class_float>` = 0.0\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:641 ab914e28d7324add88a373dc8b36713c
-msgid "|void| **seek**\\ (\\ to_position\\: :ref:`float<class_float>`\\ )"
-msgstr "|void| **seek**\\ (\\ to_position\\: :ref:`float<class_float>`\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:643 e3dd2e97a58f4ce68b2db79e143dfd34
-msgid "Seeks to the specified position in seconds during playback."
-msgstr "跳转到指定播放位置，单位为秒"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:645 8dea4feb4da54eb79a4032b218509857
-msgid "This can be called while playing or paused."
-msgstr "播放或暂停时均可调用。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:657 db565b52989b4b41a97d045a1d9b9ccc
-msgid ":ref:`float<class_float>` **get_playback_position**\\ (\\ ) |const|"
-msgstr ":ref:`float<class_float>` **get_playback_position**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:673 e0a04390f8ae4988b0e986071a17ecb9
-msgid "|void| **stop**\\ (\\ )"
-msgstr "|void| **stop**\\ (\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:675 d7d335e8312c4cb1954723f2cfafdd2e
-msgid "Stops playback and resets the position to the beginning."
-msgstr "停止播放并清除暂停状态"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:705 d7d4d78f5e5348b09e3cccfb298d009f
-msgid "Returns the :ref:`FmodAudioStream<class_FmodAudioStream>` currently assigned to this player."
-msgstr "返回当前设置的音频流 （参见   :ref:`FmodAudioStream<class_FmodAudioStream>`  ）"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:707 8ad0ed7da63e4f8fa97839917c3e8c23
-msgid "Returns ``null`` if no stream is set."
-msgstr "未设置音频流时返回    ``null``   。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:719 3d2418d920ab4a038c8addd7f5cf4f46
-msgid ":ref:`bool<class_bool>` **preload_stream**\\ (\\ )"
-msgstr ":ref:`bool<class_bool>` **preload_stream**\\ (\\ )"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:737 e2ec77e9898848c5921358e89bced567
-msgid "Sets the attenuation model for distance-based volume falloff."
-msgstr "设置距离衰减模型"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:683 f8734182c78841078e36fba75e72162b
-msgid ""
-"See :ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` for available "
-"options."
-msgstr "可用选项见  :ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` 。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:753 56606e671c84413a81b3d1bb34c6422f
-msgid "Returns the current attenuation model."
-msgstr "返回当前距离衰减模型"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:755 dad89a62cc7f4e7898c3b67890295fc2
-msgid "See :ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` for possible values."
-msgstr "可用值见    :ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>`   。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:769 eee6fc9efbec43178e175da0c6e1e2cc
-msgid "Sets the volume in decibels."
-msgstr "设置基础音量，单位为分贝"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:771 534e3a3de8944423a1b947462b6664fb
-msgid "\\ ``0.0`` is unity gain. Negative values attenuate, positive values amplify (if supported)."
-msgstr "``0.0``    为单位增益；负值衰减，正值放大（若支持）。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:785 7fff425831f542898a32bb193136eee8
-msgid "Returns the current volume in decibels."
-msgstr "返回基础音量，单位为分贝"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:787 841fcc094a77486d98aa035cff9f85df
-msgid "The default value is ``0.0`` dB (unity gain)."
-msgstr "默认值为    ``0.0``    dB，即单位增益。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:833 2c19ef05c8d7412687749ef3b887eddb
-msgid "Sets the pitch scale of the audio playback."
-msgstr "设置播放速度和音高缩放"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:835 0d979125bc0a463381e25a9ba05f346a
-msgid "\\ ``1.0`` is normal pitch. Higher values increase pitch and playback speed."
-msgstr "``1.0``    为正常音高。较大的值会提高音高和播放速度。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:849 ab71b0322eb04669934030d8d87dc81c
-msgid "Returns the current pitch scale of the audio playback."
-msgstr "返回当前播放速度和音高缩放"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:851 14d2e07750374a688a71b42df8e5afee
-msgid "\\ ``1.0`` is the default pitch, ``0.5`` is one octave lower, ``2.0`` is one octave higher."
-msgstr "``1.0``    为默认音高，   ``0.5``    降低一个八度，   ``2.0``    升高一个八度。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:789 cedf500fc9574da4a5bab48b96541a21
-msgid "Controls playback state. Setting to ``true`` starts playback from the beginning."
-msgstr "控制播放状态。设置为  ``true``  会从头开始播放。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:867 457a6ee65ef5431f95085f5d667d80a4
-msgid "Setting to ``false`` stops playback."
-msgstr "设为    ``false``    会停止播放。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:927 466dd830161d47c7958f228675ec02ca
-msgid ""
-"If enabled, assigning :ref:`stream<class_FmodAudioStreamPlayer3D_property_stream>` immediately "
-"preloads it."
-msgstr "设置是否在赋值    :ref:`stream<class_FmodAudioStreamPlayer3D_property_stream>`    时立即预加载。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:941 7b231670a0844cdba5d1447756d6df10
-msgid "Returns ``true`` if streams are preloaded as soon as they are assigned."
-msgstr "如果启用了赋值时预加载，则返回    ``true``   。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:955 d20368d4d6d046d392e4271a8ec07aff
-msgid "Pauses or resumes playback without changing position."
-msgstr "暂停或恢复当前播放流"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:969 53cd2ecff5234c0ea31cbb1c67440a7e
-msgid "Returns ``true`` if the stream playback is currently paused."
-msgstr "返回当前播放流的暂停状态"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1031 cb8c71b9a8bd4294821d12bdd0595236
-msgid "Returns the name of the audio bus this player outputs to."
-msgstr "返回当前输出总线名称"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:931 71a8e25639d546999b013fd47ef50fb5
-msgid "The default value is ``&\"Master\"``."
-msgstr "默认值为  ``&\"Master\"`` 。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1079 de336b11a46f4139a26812ca22b4497c
-msgid "Enables or disables the directional emission cone."
-msgstr "启用或禁用方向性发射锥"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1081 d924b3f08c6b4c1ab0bac563e0d89c0e
-msgid "When enabled, sound is projected in a cone rather than omnidirectionally."
-msgstr "启用后，声音通过锥形区域向外传播。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1095 3eb2c4fcad3c41a2a7567fa53cdae1dd
-msgid "Returns ``true`` if the emission angle cone is enabled."
-msgstr "如果启用了方向性发射锥，则返回    ``true``"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1097 239ee7444a994b1dbd19a9c8fe64855a
-msgid "When enabled, sound is directional within the configured cone."
-msgstr "启用后，声音仅在配置的发声锥内具有完整指向性。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:997 5b9d625ae1004665a3cb2bca86048c74
-msgid "Sound is at full volume within this cone and attenuated outside."
-msgstr "声音在该发声锥内保持完整音量，在锥外衰减。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1127 00ca8521c6d440d7a06ce1145b1d3338
-msgid "Returns the inner emission angle in degrees."
-msgstr "返回发射内锥角，单位为度"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1129 b242035282754c929c1cc26d30b25ce7
-msgid "Sound is at full volume within this cone."
-msgstr "发声锥内的声音保持完整音量。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1131 41f4aa5ab1a74a6d97c926da3123320f
-msgid "The default value is ``45.0`` degrees."
-msgstr "默认值为    ``45.0``    度。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1027 e6d756a55345483da87bf0babb159a40
-msgid "More negative values create a sharper directional effect."
-msgstr "值越负，方向性效果越明显。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1161 7cd6b7b586274724b1ee46492975db1d
-msgid "Returns the attenuation outside the emission cone in dB."
-msgstr "返回发射锥外的音量衰减，单位为分贝"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1163 67b8bc21e2814f63bd63f5fee9241f02
-msgid "The default value is ``-12.0`` dB."
-msgstr "默认值为    ``-12.0``    dB。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1243 44ed9369a3b04265941cce7dd93417e8
-msgid "Sets the doppler tracking mode for velocity-based pitch changes."
-msgstr "设置多普勒速度追踪模式"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1103 8a6d561afa374c24bd3f029042b2cba8
-msgid ""
-"See :ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` for available "
-"options."
-msgstr "可用选项见  :ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` 。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1259 fe0a90a9bd4b48ff8938b28bd46342d9
-msgid "Returns the current doppler tracking mode."
-msgstr "返回当前多普勒速度追踪模式"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1261 f0f9beee57eb4e5c86bd322e374bc43f
-msgid "See :ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` for possible values."
-msgstr "可用值见    :ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>`   。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:21 76c0fc1eddb74787b7f1ac89c58c56e8
-msgid ""
-"Plays :ref:`FmodAudioStream<class_FmodAudioStream>` in 3D using FMOD positioning, rolloff, "
-"optional Doppler tracking, and an emission cone. Playback controls, pitch, volume, and bus "
-"routing are shared with the other FMOD players."
-msgstr ""
-"使用 FMOD 的空间定位、距离衰减、可选多普勒跟踪和发射锥，在 3D 空间播放  :ref:`FmodAudioStream<class_FmodAudioStream>` \\ "
-"。播放控制、音调、音量和总线路由与其他 FMOD 播放器共用。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:176 ae347e0ab91d44738bb52526a759f91b
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:176 c411ee1ac34347738e2e2343127b7a8b
 msgid ""
 "Emitted when the playback channel ends. Calling "
 ":ref:`stop()<class_FmodAudioStreamPlayer3D_method_stop>` or replacing "
@@ -1221,7 +581,39 @@ msgstr ""
 "播放通道结束时发出。调用  :ref:`stop()<class_FmodAudioStreamPlayer3D_method_stop>`  或替换  "
 ":ref:`stream<class_FmodAudioStreamPlayer3D_property_stream>`  不会发出此信号。"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:209 1d4855768c27476db81623ab256be3a7
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:185 c91d8ef102454fa5b029b884a9c4c365
+msgid "Enumerations"
+msgstr "枚举"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:191 44f20c3052de4ea5b94f89c1637af7db
+msgid "enum **AttenuationModel**:"
+msgstr "enum **AttenuationModel**:"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:197 1ca6fb96414244b8a0f35015c175271a
+msgid ""
+":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` "
+"**ATTENUATION_INVERSE_DISTANCE** = ``0``"
+msgstr ""
+":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` "
+"**ATTENUATION_INVERSE_DISTANCE** = ``0``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:199 cf09917d88c94a30a918fca91d7db492
+msgid "Inverse distance attenuation model. Volume falls off as 1/distance."
+msgstr "反距离衰减"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:201 91e0a5ef67c349ddb1b235e3e5188668
+msgid "This is a realistic model for point sources in free field."
+msgstr "反距离衰减"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:207 63c5781631194a03bde0cdd920a971fb
+msgid ""
+":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` "
+"**ATTENUATION_INVERSE_SQUARE_DISTANCE** = ``1``"
+msgstr ""
+":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` "
+"**ATTENUATION_INVERSE_SQUARE_DISTANCE** = ``1``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:209 cd5cf19d01d94d4bb22074c09e695429
 msgid ""
 "Uses FMOD inverse-tapered rolloff "
 "(:ref:`FmodSystem.FMOD_MODE_3D_INVERSETAPEREDROLLOFF<class_FmodSystem_constant_FMOD_MODE_3D_INVERSETAPEREDROLLOFF>`)."
@@ -1231,7 +623,15 @@ msgstr ""
 ":ref:`FmodSystem.FMOD_MODE_3D_INVERSETAPEREDROLLOFF<class_FmodSystem_constant_FMOD_MODE_3D_INVERSETAPEREDROLLOFF>`"
 " \\ ），并非纯粹的反平方音量曲线。"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:217 9fcf837b247c402692d3bcd080952705
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:215 5b3e8a7abe104de0a2a308c066295719
+msgid ""
+":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` "
+"**ATTENUATION_LOGARITHMIC** = ``2``"
+msgstr ""
+":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` "
+"**ATTENUATION_LOGARITHMIC** = ``2``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:217 eb4788d7a9224f87ba9e961fbac75ab5
 msgid ""
 "Uses FMOD linear rolloff between "
 ":ref:`unit_size<class_FmodAudioStreamPlayer3D_property_unit_size>` and "
@@ -1242,170 +642,471 @@ msgstr ""
 ":ref:`max_distance<class_FmodAudioStreamPlayer3D_property_max_distance>`  乘以  "
 ":ref:`unit_size<class_FmodAudioStreamPlayer3D_property_unit_size>`  的距离之间，使用 FMOD 线性衰减。"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:336 d8c933882c134553bb28fe7bc96382cc
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:223 044e8072c7e64ae38ecdca70ae982cb5
 msgid ""
-"Minimum rolloff distance in scene units. Also scales "
-":ref:`max_distance<class_FmodAudioStreamPlayer3D_property_max_distance>` when configuring "
-"FMOD."
+":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` **ATTENUATION_DISABLED** ="
+" ``3``"
 msgstr ""
-"以场景单位表示的最小衰减距离。配置 FMOD 时也用于缩放  "
-":ref:`max_distance<class_FmodAudioStreamPlayer3D_property_max_distance>` \\ 。"
+":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` **ATTENUATION_DISABLED** ="
+" ``3``"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:387 6681277fc9f6438a923d31223ff179ab
-msgid "If ``true``, defers playback until the node is ready, outside the editor."
-msgstr "为  ``true``  时，在节点就绪后延迟开始播放，在编辑器中不生效。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:438 21b136f5c5c8445fa14b837403a9bca8
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:225 74b42515824544208220b0ed90ef63ce
 msgid ""
-"Maximum rolloff distance multiplier. The distance passed to FMOD is this value multiplied by "
-":ref:`unit_size<class_FmodAudioStreamPlayer3D_property_unit_size>`; it is not a universal "
-"hard cutoff."
-msgstr ""
-"最大衰减距离倍率。传递给 FMOD 的距离为此值乘以  "
-":ref:`unit_size<class_FmodAudioStreamPlayer3D_property_unit_size>` \\ ，并非所有衰减模型都将其作为硬截断距离。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:474 ae50a46c33b24433b92ef6a9f961906a
-msgid "Stored area mask. Area-based audio filtering is not implemented."
-msgstr "保存的区域掩码。尚未实现基于区域的音频过滤。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:542
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1053
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1065 48de7e87c39a4f32b65182403b00d6d1
-#: 6c336e2be165466093d16feee586c06c 770d96f31f1a44f3a0eab6ab873c98c5
-msgid ""
-"Center frequency passed to FMOD's custom distance filter, in Hz. Clamped to ``10.0`` through "
-"``22050.0``."
-msgstr "传递给 FMOD 自定义距离滤波器的中心频率，单位为 Hz，限制在  ``10.0``  到  ``22050.0``  之间。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:593 c95333571d0c40319b3aa58e6302ffe8
-msgid "Starts or restarts playback at ``from_position``, in seconds. Use a nonnegative position."
-msgstr "从  ``from_position``  指定的位置开始或重新播放，单位为秒。位置应为非负数。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:619 03fee261659948799c97e267aa0d77f0
-msgid ""
-"Returns the playback position in seconds, including while paused. Returns ``0.0`` if there is"
-" no valid playback channel."
-msgstr "返回播放位置，单位为秒，暂停时仍可查询。没有有效播放通道时返回  ``0.0`` \\ 。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:643 e1119fd131d246da947ec4f3d481552b
-msgid ""
-"Stops the current playback and assigns ``stream``. Playback must be started again with "
-":ref:`play()<class_FmodAudioStreamPlayer3D_method_play>`."
-msgstr ""
-"停止当前播放并设置  ``stream`` \\ ，之后需调用  :ref:`play()<class_FmodAudioStreamPlayer3D_method_play>`  "
-"开始播放。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:669 608b67b5182948a1945dfe743f51fe47
-msgid ""
-"Preloads the assigned stream by creating its internal :ref:`FmodSound<class_FmodSound>`. "
-"Returns ``false`` if no stream is assigned or sound creation fails."
-msgstr "通过创建内部  :ref:`FmodSound<class_FmodSound>`  预加载音频流。未设置音频流或声音创建失败时返回  ``false`` \\ 。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:737 bfe8f6dbb4724bd8883c758fac3543e9
-msgid ""
-"Sets the minimum rolloff distance in scene units, clamped to at least ``0.001``. Also scales "
-":ref:`max_distance<class_FmodAudioStreamPlayer3D_property_max_distance>` when configuring "
-"FMOD."
-msgstr ""
-"设置以场景单位表示的最小衰减距离，最小为  ``0.001`` \\ 。配置 FMOD 时也用于缩放  "
-":ref:`max_distance<class_FmodAudioStreamPlayer3D_property_max_distance>` \\ 。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:749 6bf04e39ec3f43a8bb61e51c5d1e4bd1
-msgid "Returns the minimum rolloff distance in scene units."
-msgstr "返回以场景单位表示的最小衰减距离。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:803 403ca5327e3d4c55ad0684df7a0b5871
-msgid "Returns ``true`` while a playback channel is active, including while paused."
-msgstr "播放通道处于活动状态时返回  ``true`` \\ ，暂停时也返回  ``true`` \\ 。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:815 b7410f552b1e409099dafee7fb7421eb
-msgid ""
-"Sets :ref:`auto_play<class_FmodAudioStreamPlayer3D_property_auto_play>`. Automatic playback "
-"is deferred until the node is ready and is disabled in the editor."
-msgstr ""
-"设置  :ref:`auto_play<class_FmodAudioStreamPlayer3D_property_auto_play>` \\ "
-"。自动播放会延迟到节点就绪后执行，在编辑器中不生效。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:827 9954f17cd2a44b17acb4518f7dbf7ab0
-msgid "Returns whether :ref:`auto_play<class_FmodAudioStreamPlayer3D_property_auto_play>` is enabled."
-msgstr "返回是否启用了  :ref:`auto_play<class_FmodAudioStreamPlayer3D_property_auto_play>` \\ 。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:887 d739c16305694ce79d32d06ec8f4f5ed
-msgid ""
-"Sets the maximum rolloff distance multiplier, clamped to at least ``0.01``. FMOD receives "
-"``distance`` multiplied by "
-":ref:`unit_size<class_FmodAudioStreamPlayer3D_property_unit_size>`. The attenuation model "
-"determines behavior beyond that distance."
-msgstr ""
-"设置最大衰减距离倍率，最小为  ``0.01`` \\ 。传递给 FMOD 的距离为  ``distance``  乘以  "
-":ref:`unit_size<class_FmodAudioStreamPlayer3D_property_unit_size>` \\ 。超出此距离后的行为由衰减模型决定。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:901 312287353d9d46fcbf4fc8d59f5f2ce5
-msgid ""
-"Returns the maximum rolloff distance multiplier. Multiply it by "
-":ref:`unit_size<class_FmodAudioStreamPlayer3D_property_unit_size>` to obtain the distance "
-"passed to FMOD."
-msgstr ""
-"返回最大衰减距离倍率。将其乘以  :ref:`unit_size<class_FmodAudioStreamPlayer3D_property_unit_size>`  可得到传递给 "
-"FMOD 的距离。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:915 206efb8e52744ad89a8956dc0706ee9d
-msgid ""
-"Selects the bus used when the next playback channel is created. Changing this value does not "
-"reroute an existing channel."
-msgstr "设置下次创建播放通道时使用的总线。修改此值不会改变现有通道的路由。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:917 a7968ec4165947348586cc88793696aa
-msgid ""
-"If the bus is not found in :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`, playback uses"
-" the master channel group."
-msgstr "在  :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`  中找不到该总线时，播放使用主通道组。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:943 9da2815a6af84d0987a37858a6f23714
-msgid "Stores ``mask``. Area-based audio filtering is not implemented by this player."
-msgstr "保存  ``mask`` \\ 。此播放器尚未实现基于区域的音频过滤。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:955 b236f4fe8def4e718efc7b87bc4846ec
-msgid "Returns the stored area mask. It currently has no effect on playback."
-msgstr "返回保存的区域掩码，此值目前不影响播放。"
-
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:225 7a32b9f806284d8c85a158793d831280
-msgid ""
-"Uses a flat custom rolloff curve with unity gain at every distance. Preserves 3D panning, "
-"Doppler and emission-cone settings. "
-":ref:`unit_size<class_FmodAudioStreamPlayer3D_property_unit_size>` and "
-":ref:`max_distance<class_FmodAudioStreamPlayer3D_property_max_distance>` do not affect "
+"Uses a flat custom rolloff curve with unity gain at every distance. Preserves 3D panning, Doppler"
+" and emission-cone settings. :ref:`unit_size<class_FmodAudioStreamPlayer3D_property_unit_size>` "
+"and :ref:`max_distance<class_FmodAudioStreamPlayer3D_property_max_distance>` do not affect "
 "distance gain in this mode."
 msgstr ""
 "使用平坦的自定义衰减曲线，使所有距离处的增益均为 1。保留 3D 声像、多普勒和发声锥设置。此模式下，\\  "
 ":ref:`unit_size<class_FmodAudioStreamPlayer3D_property_unit_size>`  和  "
 ":ref:`max_distance<class_FmodAudioStreamPlayer3D_property_max_distance>`  不影响距离增益。"
 
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:235 df858d3bcffe4249b8e7ebaffb770d37
+msgid "enum **DopplerTracking**:"
+msgstr "enum **DopplerTracking**:"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:241 68330ac984444b60b02b41395bc2f0a7
+msgid ""
+":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` "
+"**DOPPLER_TRACKING_DISABLED** = ``0``"
+msgstr ""
+":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` "
+"**DOPPLER_TRACKING_DISABLED** = ``0``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:243 0fd610f17855420db7661ed26a8ef97e
+msgid "Doppler effect is disabled. No pitch changes based on velocity."
+msgstr "禁用多普勒追踪"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:249 1264f51bb7264f31b43c33fc6721fc0c
+msgid ""
+":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` "
+"**DOPPLER_TRACKING_IDLE_STEP** = ``1``"
+msgstr ""
+":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` "
+"**DOPPLER_TRACKING_IDLE_STEP** = ``1``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:251 65bdeeca16274437bf8716f72ad9a104
+msgid "Doppler effect is calculated during the idle/process step."
+msgstr "在普通处理帧中计算速度"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:253 f41fec48646f489eabc297e18b1ae544
+msgid "Suitable for visual-only movement tracking."
+msgstr "在普通处理帧中计算速度"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:259 b2271d1b81e04a1c84e449de7422f0fe
+msgid ""
+":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` "
+"**DOPPLER_TRACKING_PHYSICS_STEP** = ``2``"
+msgstr ""
+":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` "
+"**DOPPLER_TRACKING_PHYSICS_STEP** = ``2``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:261 91f56316e2894ecbaf87b90fd8cb7cef
+msgid "Doppler effect is calculated during the physics step."
+msgstr "在物理处理帧中计算速度"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:263 8e4498f9cf2a48658b974464a9781576
+msgid "Recommended for physics-based movement for accurate results."
+msgstr "在物理处理帧中计算速度"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:272 86a0e12b6a4a4549ab1293e16cf9d4ae
+msgid "Property Descriptions"
+msgstr "属性说明"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:278 53e69a4b6ce7417294d40c3f5102480c
+msgid ":ref:`FmodAudioStream<class_FmodAudioStream>` **stream**"
+msgstr ":ref:`FmodAudioStream<class_FmodAudioStream>` **stream**"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:282
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:643 3f1a75d6c5d1411ab48a98822ee4acd4
+#: 4e0e2edc70f649d3b0a3bf3621ba27c7
+msgid "|void| **set_stream**\\ (\\ stream\\: :ref:`FmodAudioStream<class_FmodAudioStream>`\\ )"
+msgstr "|void| **set_stream**\\ (\\ stream\\: :ref:`FmodAudioStream<class_FmodAudioStream>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:283
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:655 1011f62a1a38459ebf8f71b17da0c599
+#: d9d2b5cc7a3f43ccbb68d31913f5a339
+msgid ":ref:`FmodAudioStream<class_FmodAudioStream>` **get_stream**\\ (\\ ) |const|"
+msgstr ":ref:`FmodAudioStream<class_FmodAudioStream>` **get_stream**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:285 85ae044f52b148a4951a969b1cd0955e
+msgid ""
+"The :ref:`FmodAudioStream<class_FmodAudioStream>` resource to play. In the editor, its resource "
+"picker displays a waveform preview. Expanding the resource exposes the inspector audition panel, "
+"which shares the same waveform cache. Assigning another stream stops current playback."
+msgstr ""
+"要播放的 :ref:`FmodAudioStream<class_FmodAudioStream>` "
+"资源。编辑器的资源选择器显示波形预览，展开资源可使用检查器试听面板，两者共享波形缓存。赋值另一个音频流会停止当前播放。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:295 42ff0826ad234c63add4dd4b93aaa900
+msgid ":ref:`int<class_int>` **attenuation_model** = ``2``"
+msgstr ":ref:`int<class_int>` **attenuation_model** = ``2``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:299
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:681 a18bdd973d644bc2814b4c984e96c368
+#: d91db4ceae07452a87c695a61f9bc69e
+msgid ""
+"|void| **set_attenuation_model**\\ (\\ model\\: "
+":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>`\\ )"
+msgstr ""
+"|void| **set_attenuation_model**\\ (\\ model\\: "
+":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:300
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:695 751ecf0c48a04b61ac3d4345fd967f0e
+#: d53300de74684d26a9a005a0cff3b935
+msgid ""
+":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` "
+"**get_attenuation_model**\\ (\\ ) |const|"
+msgstr ""
+":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` "
+"**get_attenuation_model**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:302 fc10b7043a0a4fa187a26f6e0f207fc4
+msgid ""
+"Distance attenuation model. See "
+":ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>`."
+msgstr "3D 距离衰减模型 （参见   :ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>`  ）"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:312 2b21fc5c8a4e4fbdaf94ad9565c35d01
+msgid ":ref:`float<class_float>` **volume_db** = ``0.0``"
+msgstr ":ref:`float<class_float>` **volume_db** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:316
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:709 47323b5ef749498d9b1863808a7ec63d
+#: 5a69cb108e5b46359fbdd671517e921f
+msgid "|void| **set_volume_db**\\ (\\ volume_db\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_volume_db**\\ (\\ volume_db\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:317
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:723 7dd3e9411bbc44739381e9b491eccc7c
+#: f47c6e316d814331a989c641a744fb2b
+msgid ":ref:`float<class_float>` **get_volume_db**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_volume_db**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:319 2f718dde42744cb2baa56a58680b9737
+msgid "Volume in decibels. ``0.0`` is unity gain, negative values attenuate."
+msgstr "基础音量，单位为分贝"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:329 1063c8a3d81145a3b4c476987c90fb89
+msgid ":ref:`float<class_float>` **unit_size** = ``1.0``"
+msgstr ":ref:`float<class_float>` **unit_size** = ``1.0``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:333
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:737 30d0766d5c454019908d47de839fd506
+#: ea704f6bda144a23be5299968c33e214
+msgid "|void| **set_unit_size**\\ (\\ size\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_unit_size**\\ (\\ size\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:334
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:749 85b6419f7d8b40448b712c7c6d609af9
+#: bc2c1c6de1af465bb4c1706c8533203b
+msgid ":ref:`float<class_float>` **get_unit_size**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_unit_size**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:336 086f55f47a93493ba17b2fe718f3ffce
+msgid ""
+"Minimum rolloff distance in scene units. Also scales "
+":ref:`max_distance<class_FmodAudioStreamPlayer3D_property_max_distance>` when configuring FMOD."
+msgstr ""
+"以场景单位表示的最小衰减距离。配置 FMOD 时也用于缩放  "
+":ref:`max_distance<class_FmodAudioStreamPlayer3D_property_max_distance>` \\ 。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:346 35bfc44289ff49c1bf54f5f2dccdecc8
+msgid ":ref:`float<class_float>` **pitch_scale** = ``1.0``"
+msgstr ":ref:`float<class_float>` **pitch_scale** = ``1.0``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:350
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:761 696e8a71ac5b44e48493afef1a6b4804
+#: d72e9e7a7f0c494e9182e7e5800d09e4
+msgid "|void| **set_pitch_scale**\\ (\\ pitch_scale\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_pitch_scale**\\ (\\ pitch_scale\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:351
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:775 1cc7f8ffba714fe6b533bb304683575f
+#: beaef83e25a7492c978d1755e0a5c8c3
+msgid ":ref:`float<class_float>` **get_pitch_scale**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_pitch_scale**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:353 2b2b36d611ae4366ae9914ccab420ab7
+msgid "Pitch scale of the audio. ``1.0`` is the default pitch."
+msgstr "播放速度和音高缩放"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:363 0e11d678f4c641888d6a6e45cee8f890
+msgid ":ref:`bool<class_bool>` **playing** = ``false``"
+msgstr ":ref:`bool<class_bool>` **playing** = ``false``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:367
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:789 476c3644829f46dab3bec8f0bb7512e8
+#: 89d459985f3a4f879606d1a485734102
+msgid "|void| **set_playing**\\ (\\ playing\\: :ref:`bool<class_bool>`\\ )"
+msgstr "|void| **set_playing**\\ (\\ playing\\: :ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:368
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:803 8e28a93683444c7c8cff2403fcce7657
+#: eebb9cd2defc4e99a46b1e3c88afe0b7
+msgid ":ref:`bool<class_bool>` **is_playing**\\ (\\ ) |const|"
+msgstr ":ref:`bool<class_bool>` **is_playing**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:370 58730e82166548578814aac08d11ebff
+msgid "Current playback state. Can be set to start/stop playback."
+msgstr "设置为    ``true``    开始播放，设置为    ``false``    停止播放"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:380 33f73cc9e4a141c3a071b978cbd5baca
+msgid ":ref:`bool<class_bool>` **auto_play** = ``false``"
+msgstr ":ref:`bool<class_bool>` **auto_play** = ``false``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:384
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:815 62bce8e8cf994239a6a8240e45c5950b
+#: 85211905a88448fcb02bd0939ddde65a
+msgid "|void| **set_auto_play**\\ (\\ enable\\: :ref:`bool<class_bool>`\\ )"
+msgstr "|void| **set_auto_play**\\ (\\ enable\\: :ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:385
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:827 2cac6c38a853478280aa2c716951b97e
+#: 6e861b08257d4972b92bf3cd818f13ce
+msgid ":ref:`bool<class_bool>` **is_autoplay_enabled**\\ (\\ ) |const|"
+msgstr ":ref:`bool<class_bool>` **is_autoplay_enabled**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:387 06e43e0daa494997bd043ac91c43832b
+msgid "If ``true``, defers playback until the node is ready, outside the editor."
+msgstr "为  ``true``  时，在节点就绪后延迟开始播放，在编辑器中不生效。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:397 ec7be81a27804f3795fda82b71be7e0c
+msgid ":ref:`bool<class_bool>` **preload_on_set_stream** = ``false``"
+msgstr ":ref:`bool<class_bool>` **preload_on_set_stream** = ``false``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:401
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:839 016ff9d66764462a9dae0d82d41bd63a
+#: 0a56c0989dc44d91ba5e0c6b9be53c8a
+msgid "|void| **set_preload_on_set_stream**\\ (\\ enable\\: :ref:`bool<class_bool>`\\ )"
+msgstr "|void| **set_preload_on_set_stream**\\ (\\ enable\\: :ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:402
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:851 76329995607049c7a5045b0f23b0c97e
+#: aebabfd26c9041549f64b7051d13739e
+msgid ":ref:`bool<class_bool>` **is_preload_on_set_stream_enabled**\\ (\\ ) |const|"
+msgstr ":ref:`bool<class_bool>` **is_preload_on_set_stream_enabled**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:404 4bf7de781c8a4960a020e20f7a1fd348
+msgid ""
+"If ``true``, assigning a stream creates its internal :ref:`FmodSound<class_FmodSound>` "
+"immediately instead of waiting for the first playback."
+msgstr "设置    ``stream``    时是否立即预加载内部    :ref:`FmodSound<class_FmodSound>`"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:414 efb2240b0867454ebbed655ade6ca300
+msgid ":ref:`bool<class_bool>` **stream_paused** = ``false``"
+msgstr ":ref:`bool<class_bool>` **stream_paused** = ``false``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:418
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:863 b1ed1959549f4383b276a87b45cf4415
+#: c9ed5f6730644521923b79cb1932e828
+msgid "|void| **set_stream_paused**\\ (\\ paused\\: :ref:`bool<class_bool>`\\ )"
+msgstr "|void| **set_stream_paused**\\ (\\ paused\\: :ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:419
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:875 1c5cbf690a2a42ab91e587aff3b4b9ad
+#: ef54a1bef39e459682a8f0bb01170b6c
+msgid ":ref:`bool<class_bool>` **get_stream_paused**\\ (\\ ) |const|"
+msgstr ":ref:`bool<class_bool>` **get_stream_paused**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:421 3b0160a5b3484dda92984de8c1660cd6
+msgid "If ``true``, playback is paused."
+msgstr "是否暂停当前播放流"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:431 6cde420d652f4ddb801539f4ff9a7159
+msgid ":ref:`float<class_float>` **max_distance** = ``10.0``"
+msgstr ":ref:`float<class_float>` **max_distance** = ``10.0``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:435
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:887 b32792221eaa415ea19cabd2c4379d42
+#: e4d6e4d3030f4c2d940710bc9bb0e050
+msgid "|void| **set_max_distance**\\ (\\ distance\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_max_distance**\\ (\\ distance\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:436
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:901 28af8a623be44b1ebcd3c4afaed3d9d1
+#: 7b3a006ffa0746fe80d248a66881859a
+msgid ":ref:`float<class_float>` **get_max_distance**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_max_distance**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:438 3646d468966f444d825b2646c21f2b64
+msgid ""
+"Maximum rolloff distance multiplier. The distance passed to FMOD is this value multiplied by "
+":ref:`unit_size<class_FmodAudioStreamPlayer3D_property_unit_size>`; it is not a universal hard "
+"cutoff."
+msgstr ""
+"最大衰减距离倍率。传递给 FMOD 的距离为此值乘以  :ref:`unit_size<class_FmodAudioStreamPlayer3D_property_unit_size>` \\"
+" ，并非所有衰减模型都将其作为硬截断距离。"
+
 #: ../../source/classes/class_fmodaudiostreamplayer3d.rst:440
 #: ../../source/classes/class_fmodaudiostreamplayer3d.rst:891
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:905 8030786684df4e13bbc1cba4a52783f0
-#: cb9187311eb342f397843d2e38060e77 d898fdfb1fed4ddd8aa154113e8dd808
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:905 5452aacc1a5e4c8faa58a7ca627db437
+#: 9b1daa553ea34c04ba135ace9e751bdb e64373022096463eb134e257e424825b
 msgid ""
-"In :ref:`ATTENUATION_DISABLED<class_FmodAudioStreamPlayer3D_constant_ATTENUATION_DISABLED>` "
-"mode, a flat custom rolloff curve keeps distance gain at unity regardless of this setting."
+"In :ref:`ATTENUATION_DISABLED<class_FmodAudioStreamPlayer3D_constant_ATTENUATION_DISABLED>` mode,"
+" a flat custom rolloff curve keeps distance gain at unity regardless of this setting."
 msgstr ""
 "在  :ref:`ATTENUATION_DISABLED<class_FmodAudioStreamPlayer3D_constant_ATTENUATION_DISABLED>`  "
 "模式下，平坦的自定义衰减曲线使距离增益始终为 1，不受此设置影响。"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:508 5310d9f82e23451a91ecdbc7fbfbd604
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:450 feda153721e1489fa238057849eb9b9a
+msgid ":ref:`StringName<class_StringName>` **bus** = ``&\"Master\"``"
+msgstr ":ref:`StringName<class_StringName>` **bus** = ``&\"Master\"``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:454
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:915 130fdbdeabfb441281094950af82287e
+#: 3982da632cae420ba4a975ae8dd39fb8
+msgid "|void| **set_bus**\\ (\\ bus\\: :ref:`StringName<class_StringName>`\\ )"
+msgstr "|void| **set_bus**\\ (\\ bus\\: :ref:`StringName<class_StringName>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:455
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:929 1a6a304f937d4af6bf1b4957c0dbc4f5
+#: de0732efb60a42efa081dcf8fe21a809
+msgid ":ref:`StringName<class_StringName>` **get_bus**\\ (\\ ) |const|"
+msgstr ":ref:`StringName<class_StringName>` **get_bus**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:457 25a7a162de6546c1a51d4bc0aadf2abb
 msgid ""
-"Inner emission angle in degrees, clamped to ``0.0`` through ``90.0``. The inspector and saved"
-" scenes use degrees without conversion."
+"Destination bus name from "
+":ref:`FmodServer.get_bus_names()<class_FmodServer_method_get_bus_names>`. Godot provides the list"
+" when bus synchronization is enabled; independent mode uses "
+":ref:`FmodServer.get_audio_bus_layout()<class_FmodServer_method_get_audio_bus_layout>`. An "
+"unknown or renamed destination falls back to ``Master`` when playback starts. Changing the name "
+"does not reroute an existing channel."
+msgstr ""
+"目标总线名称，选项来自 :ref:`FmodServer.get_bus_names()<class_FmodServer_method_get_bus_names>`。开启总线同步时由 "
+"Godot 提供列表，独立模式使用 "
+":ref:`FmodServer.get_audio_bus_layout()<class_FmodServer_method_get_audio_bus_layout>`。目标未知或被重命名时，下次播放回退到"
+" ``Master``。修改名称不会重新路由已有的播放通道。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:467 75eaa76116654a7db62372647cd3a29e
+msgid ":ref:`int<class_int>` **area_mask** = ``1``"
+msgstr ":ref:`int<class_int>` **area_mask** = ``1``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:471
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:943 0937776b5741466eaa9e2251ba6adc87
+#: d8cb08e97fb54148adabe377eb6b7536
+msgid "|void| **set_area_mask**\\ (\\ mask\\: :ref:`int<class_int>`\\ )"
+msgstr "|void| **set_area_mask**\\ (\\ mask\\: :ref:`int<class_int>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:472
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:955 204ecf945c314714abd47189a6d32aa8
+#: 4d1904fd6b7240a1861c6144972f1d4b
+msgid ":ref:`int<class_int>` **get_area_mask**\\ (\\ ) |const|"
+msgstr ":ref:`int<class_int>` **get_area_mask**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:474 b90dfc372a9e4593b5315491d651778a
+msgid "Stored area mask. Area-based audio filtering is not implemented."
+msgstr "保存的区域掩码。尚未实现基于区域的音频过滤。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:484 e28c8f3e874e44a7ada929f019a26db4
+msgid ":ref:`bool<class_bool>` **emission_angle_enabled** = ``false``"
+msgstr ":ref:`bool<class_bool>` **emission_angle_enabled** = ``false``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:488
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:967 3b16f3c3644c4bd7ae04ccca53f0b21c
+#: d8bb8d5096c1470490ec789cf2b02bc4
+msgid "|void| **set_emission_angle_enabled**\\ (\\ enabled\\: :ref:`bool<class_bool>`\\ )"
+msgstr "|void| **set_emission_angle_enabled**\\ (\\ enabled\\: :ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:489
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:981 733839de100d47d9b50dcff3508895d1
+#: 7b131345fdc94a91a5a87bc3b84385e9
+msgid ":ref:`bool<class_bool>` **is_emission_angle_enabled**\\ (\\ ) |const|"
+msgstr ":ref:`bool<class_bool>` **is_emission_angle_enabled**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:491 25760f6a94e842fa99e526cf17e83bd0
+msgid "If ``true``, enables directional emission cone."
+msgstr "是否启用方向性发射锥"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:501 7a674aebbb114c3db3e2cf88541320e4
+msgid ":ref:`float<class_float>` **emission_angle** = ``45.0``"
+msgstr ":ref:`float<class_float>` **emission_angle** = ``45.0``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:505
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:995 d38cce31bd2c4b1bae787f6b296c4997
+#: e116a3953e6b40b9929802cbd33bfbb6
+msgid "|void| **set_emission_angle**\\ (\\ angle\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_emission_angle**\\ (\\ angle\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:506
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1009 8574f5197f12401cb02d3f9bd31a4be1
+#: a26a54ba2e744d57b753f165ba5caeba
+msgid ":ref:`float<class_float>` **get_emission_angle**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_emission_angle**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:508 5076571f417e421fbf17e828aa39e21c
+msgid ""
+"Inner emission angle in degrees, clamped to ``0.0`` through ``90.0``. The inspector and saved "
+"scenes use degrees without conversion."
 msgstr "发声内锥角，单位为度，限制在  ``0.0``  到  ``90.0``  之间。检查器和保存的场景直接使用度数，无需转换。"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:525 49a167763484460a86a6eca93dc33af0
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:518 41b64bdcac80456fa22bbded047240b1
+msgid ":ref:`float<class_float>` **emission_angle_filter_attenuation_db** = ``-12.0``"
+msgstr ":ref:`float<class_float>` **emission_angle_filter_attenuation_db** = ``-12.0``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:522
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1025 03489ca3acde4f3a838f925453f0f9b6
+#: f0ee762b27f745638baceb79a423727d
+msgid "|void| **set_emission_angle_filter_attenuation_db**\\ (\\ db\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_emission_angle_filter_attenuation_db**\\ (\\ db\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:523
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1039 36d28a4280ad4318ac09fe6f17632154
+#: 463b730923e1470d97f5323278964005
+msgid ":ref:`float<class_float>` **get_emission_angle_filter_attenuation_db**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_emission_angle_filter_attenuation_db**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:525 bc7c27faf78e4672b6c8fa33d79a3102
 msgid "Attenuation outside the emission cone in dB, clamped to ``-80.0`` through ``0.0``."
 msgstr "发声锥外的衰减量，单位为 dB，限制在  ``-80.0``  到  ``0.0``  之间。"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:559 f24a18396de64128bf7c8a4765adf26b
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:535 6e21b519c850418abbafe0c4e26addbd
+msgid ":ref:`float<class_float>` **attenuation_filter_cutoff_hz** = ``5000.0``"
+msgstr ":ref:`float<class_float>` **attenuation_filter_cutoff_hz** = ``5000.0``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:539
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1053 6400188f33b34a30b45716f68d442380
+#: ba8506dc0caa47b0ace03fd96049413d
+msgid "|void| **set_attenuation_filter_cutoff_hz**\\ (\\ freq\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_attenuation_filter_cutoff_hz**\\ (\\ freq\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:540
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1065 370228912f9f4476a1111b0f23b9aaea
+#: f94d96c564474737b1c7b7d7fbfd2d83
+msgid ":ref:`float<class_float>` **get_attenuation_filter_cutoff_hz**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_attenuation_filter_cutoff_hz**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:542
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1055
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1067 9f39aef8113f463c9381794ed2232224
+#: a1a62f693de44fd58b0a5cc727efe8f3 ebecf736a79644a0b8f21ce369a1d22c
 msgid ""
-"Distance-filter level in dB, clamped to ``-80.0`` through ``0.0``. ``0.0`` bypasses "
-"filtering; more negative values increase filtering around "
+"Center frequency passed to FMOD's custom distance filter, in Hz. Clamped to ``10.0`` through "
+"``22050.0``."
+msgstr "传递给 FMOD 自定义距离滤波器的中心频率，单位为 Hz，限制在  ``10.0``  到  ``22050.0``  之间。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:552 ce4420d011464c53a6d008b795048860
+msgid ":ref:`float<class_float>` **attenuation_filter_db** = ``0.0``"
+msgstr ":ref:`float<class_float>` **attenuation_filter_db** = ``0.0``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:556
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1077 0e87ead03b8647558c1f49534c0787fa
+#: 9730caf232c54c17a1644dc4d0c4d442
+msgid "|void| **set_attenuation_filter_db**\\ (\\ db\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_attenuation_filter_db**\\ (\\ db\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:557
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1089 bd2274f893c74a4587438e9e817a0b93
+#: d7d91daa85e8471e9949bd3d98f4a3c1
+msgid ":ref:`float<class_float>` **get_attenuation_filter_db**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_attenuation_filter_db**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:559 07a6c45ec0194d44b55c6855564e248d
+msgid ""
+"Distance-filter level in dB, clamped to ``-80.0`` through ``0.0``. ``0.0`` bypasses filtering; "
+"more negative values increase filtering around "
 ":ref:`attenuation_filter_cutoff_hz<class_FmodAudioStreamPlayer3D_property_attenuation_filter_cutoff_hz>`."
 " This controls filter strength, not a uniform volume reduction."
 msgstr ""
@@ -1413,7 +1114,7 @@ msgstr ""
 ":ref:`attenuation_filter_cutoff_hz<class_FmodAudioStreamPlayer3D_property_attenuation_filter_cutoff_hz>`"
 "  附近的滤波越强。此属性控制滤波强度，并非整体音量衰减。"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:561 398df7077038406eae012e2b2c977ff1
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:561 b8d4db87aaf84391a8c0df15e956d56d
 msgid ""
 "The player converts dB to the native filter amount as ``1 - pow(10, db / 20)``. Requires "
 "``audio/fmod/init_flags/channel_distance_filter`` to be enabled before the FMOD system is "
@@ -1422,32 +1123,332 @@ msgstr ""
 "播放器使用  ``1 - pow(10, db / 20)``  将 dB 转换为原生滤波量。需要在 FMOD 系统初始化前启用  "
 "``audio/fmod/init_flags/channel_distance_filter`` \\ ，修改此设置后请重启项目。"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:997 f029baf12aa84cf39f10af97a5b2fbf9
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:571 f1489a53dc0c408e9552db1e7ac70205
+msgid ":ref:`int<class_int>` **doppler_tracking** = ``0``"
+msgstr ":ref:`int<class_int>` **doppler_tracking** = ``0``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:575
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1101 56b73039993e46a7a11eaf8fe933605d
+#: f9a200d3044a4f64a5193edfef118cdc
 msgid ""
-"Sets the inner emission angle in degrees, clamped to ``0.0`` through ``90.0``. The inspector "
-"and saved scenes use degrees without conversion."
+"|void| **set_doppler_tracking**\\ (\\ tracking\\: "
+":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>`\\ )"
+msgstr ""
+"|void| **set_doppler_tracking**\\ (\\ tracking\\: "
+":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:576
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1115 2fc78f50b51b431b8338f5f65ced03cb
+#: 5aa1eb7f781043bcb57d0912d632e0d3
+msgid ""
+":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` **get_doppler_tracking**\\ "
+"(\\ ) |const|"
+msgstr ""
+":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` **get_doppler_tracking**\\ "
+"(\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:578 ef4791c074ee4f9e9bd8241ac7406bf5
+msgid ""
+"Doppler effect tracking mode. See "
+":ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>`."
+msgstr "多普勒速度追踪模式 （参见   :ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>`  ）"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:587 f24f32b1f9ad4a70a9751af2abeee05a
+msgid "Method Descriptions"
+msgstr "方法说明"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:593 fe67d05108e045ccab960be122bbd2fc
+msgid "|void| **play**\\ (\\ from_position\\: :ref:`float<class_float>` = 0.0\\ )"
+msgstr "|void| **play**\\ (\\ from_position\\: :ref:`float<class_float>` = 0.0\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:595 e1618b3a808c4dfda2376c5d950840d2
+msgid "Starts or restarts playback at ``from_position``, in seconds. Use a nonnegative position."
+msgstr "从  ``from_position``  指定的位置开始或重新播放，单位为秒。位置应为非负数。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:605 41a872d7632a4794a393e94e0bc00dac
+msgid "|void| **seek**\\ (\\ to_position\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **seek**\\ (\\ to_position\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:607 a987d2f3a14e450dadf273321d6d22e3
+msgid "Seeks to the specified position in seconds during playback."
+msgstr "跳转到指定播放位置，单位为秒"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:609 94a4a6bf63bd4b0694163a4043c822d5
+msgid "This can be called while playing or paused."
+msgstr "播放或暂停时均可调用。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:619 674ff29e006248e19b2a68c2cc545197
+msgid ":ref:`float<class_float>` **get_playback_position**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_playback_position**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:621 f2b245585bcf47108aceb24902e94310
+msgid ""
+"Returns the playback position in seconds, including while paused. Returns ``0.0`` if there is no "
+"valid playback channel."
+msgstr "返回播放位置，单位为秒，暂停时仍可查询。没有有效播放通道时返回  ``0.0`` \\ 。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:631 968057369088438891327fec18660cf3
+msgid "|void| **stop**\\ (\\ )"
+msgstr "|void| **stop**\\ (\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:633 119f7b14921a4d019b4591eee278cf3e
+msgid "Stops playback and resets the position to the beginning."
+msgstr "停止播放并清除暂停状态"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:645 09151277225540c9b25274b1f1f17588
+msgid ""
+"Stops the current playback and assigns ``stream``. Playback must be started again with "
+":ref:`play()<class_FmodAudioStreamPlayer3D_method_play>`."
+msgstr "停止当前播放并设置  ``stream`` \\ ，之后需调用  :ref:`play()<class_FmodAudioStreamPlayer3D_method_play>`  开始播放。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:657 3db61860a30f4da69ec056dae6314bc6
+msgid "Returns the :ref:`FmodAudioStream<class_FmodAudioStream>` currently assigned to this player."
+msgstr "返回当前设置的音频流 （参见   :ref:`FmodAudioStream<class_FmodAudioStream>`  ）"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:659 59ee9f17a67a490c8881d7875d1040ab
+msgid "Returns ``null`` if no stream is set."
+msgstr "未设置音频流时返回    ``null``   。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:669 7cecf3ca91904aca8330724106f21132
+msgid ":ref:`bool<class_bool>` **preload_stream**\\ (\\ )"
+msgstr ":ref:`bool<class_bool>` **preload_stream**\\ (\\ )"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:671 0af1aeaac28045819b741727287fbd9a
+msgid ""
+"Preloads the assigned stream by creating its internal :ref:`FmodSound<class_FmodSound>`. Returns "
+"``false`` if no stream is assigned or sound creation fails."
+msgstr "通过创建内部  :ref:`FmodSound<class_FmodSound>`  预加载音频流。未设置音频流或声音创建失败时返回  ``false`` \\ 。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:683 adf06a3b07bd4143854b030b90bdbcb0
+msgid "Sets the attenuation model for distance-based volume falloff."
+msgstr "设置距离衰减模型"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:685 fdf5f699d1104a659a28e53d9e6083af
+msgid "See :ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` for available options."
+msgstr "可用选项见  :ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` 。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:697 aeae86eb39f24626ad723c32c331882b
+msgid "Returns the current attenuation model."
+msgstr "返回当前距离衰减模型"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:699 a09c580c6e04418fa01a641b559b0ea4
+msgid "See :ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>` for possible values."
+msgstr "可用值见    :ref:`AttenuationModel<enum_FmodAudioStreamPlayer3D_AttenuationModel>`   。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:711 24a5aadb12bf4bd89122ff78ea8ef18d
+msgid "Sets the volume in decibels."
+msgstr "设置基础音量，单位为分贝"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:713 b9ce6ba0ec3d4f7fa2e1517056d7f92e
+msgid "\\ ``0.0`` is unity gain. Negative values attenuate, positive values amplify (if supported)."
+msgstr "``0.0``    为单位增益；负值衰减，正值放大（若支持）。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:725 6721a5ec52f440e88922e99a23749c98
+msgid "Returns the current volume in decibels."
+msgstr "返回基础音量，单位为分贝"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:727 eb530d87d8fa49a0bbbd05895ed3d9e4
+msgid "The default value is ``0.0`` dB (unity gain)."
+msgstr "默认值为    ``0.0``    dB，即单位增益。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:739 c9e02dc3cda54421a7a72244a819da28
+msgid ""
+"Sets the minimum rolloff distance in scene units, clamped to at least ``0.001``. Also scales "
+":ref:`max_distance<class_FmodAudioStreamPlayer3D_property_max_distance>` when configuring FMOD."
+msgstr ""
+"设置以场景单位表示的最小衰减距离，最小为  ``0.001`` \\ 。配置 FMOD 时也用于缩放  "
+":ref:`max_distance<class_FmodAudioStreamPlayer3D_property_max_distance>` \\ 。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:751 03ad8dcdf719499a8192d3a55d6cff9c
+msgid "Returns the minimum rolloff distance in scene units."
+msgstr "返回以场景单位表示的最小衰减距离。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:763 394cac813cb0427a879c0da8a8a8148d
+msgid "Sets the pitch scale of the audio playback."
+msgstr "设置播放速度和音高缩放"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:765 6605ab051bdc49548c0b4b5247f1943e
+msgid "\\ ``1.0`` is normal pitch. Higher values increase pitch and playback speed."
+msgstr "``1.0``    为正常音高。较大的值会提高音高和播放速度。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:777 e9b5819fb5224b1a909bcb72fb92597a
+msgid "Returns the current pitch scale of the audio playback."
+msgstr "返回当前播放速度和音高缩放"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:779 ac96e4583d034d229f9d01ccc6e1ed94
+msgid "\\ ``1.0`` is the default pitch, ``0.5`` is one octave lower, ``2.0`` is one octave higher."
+msgstr "``1.0``    为默认音高，   ``0.5``    降低一个八度，   ``2.0``    升高一个八度。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:791 f9092a9536734cf2889180fa4da40016
+msgid "Controls playback state. Setting to ``true`` starts playback from the beginning."
+msgstr "控制播放状态。设置为  ``true``  会从头开始播放。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:793 36c279d9c4a741f9a17c2520e4565030
+msgid "Setting to ``false`` stops playback."
+msgstr "设为    ``false``    会停止播放。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:805 a47237faf179424f8617b2beb1c9ef6a
+msgid "Returns ``true`` while a playback channel is active, including while paused."
+msgstr "播放通道处于活动状态时返回  ``true`` \\ ，暂停时也返回  ``true`` \\ 。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:817 24c5147817644b84aadce31c9cbc707b
+msgid ""
+"Sets :ref:`auto_play<class_FmodAudioStreamPlayer3D_property_auto_play>`. Automatic playback is "
+"deferred until the node is ready and is disabled in the editor."
+msgstr ""
+"设置  :ref:`auto_play<class_FmodAudioStreamPlayer3D_property_auto_play>` \\ "
+"。自动播放会延迟到节点就绪后执行，在编辑器中不生效。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:829 56d6fcc6976b4acaa998a3a673ed0b5b
+msgid "Returns whether :ref:`auto_play<class_FmodAudioStreamPlayer3D_property_auto_play>` is enabled."
+msgstr "返回是否启用了  :ref:`auto_play<class_FmodAudioStreamPlayer3D_property_auto_play>` \\ 。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:841 4d786e2b1f3f43718a84de10b3bcd163
+msgid ""
+"If enabled, assigning :ref:`stream<class_FmodAudioStreamPlayer3D_property_stream>` immediately "
+"preloads it."
+msgstr "设置是否在赋值    :ref:`stream<class_FmodAudioStreamPlayer3D_property_stream>`    时立即预加载。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:853 ef44219d660e4792a70be56c24ff401b
+msgid "Returns ``true`` if streams are preloaded as soon as they are assigned."
+msgstr "如果启用了赋值时预加载，则返回    ``true``   。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:865 e48fb10d1cca4bbabbd74631b60f514c
+msgid "Pauses or resumes playback without changing position."
+msgstr "暂停或恢复当前播放流"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:877 45cba958af5f4c20ab511c13775fcaa2
+msgid "Returns ``true`` if the stream playback is currently paused."
+msgstr "返回当前播放流的暂停状态"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:889 0fb210e11f7f4520bffc73c1ec084b3d
+msgid ""
+"Sets the maximum rolloff distance multiplier, clamped to at least ``0.01``. FMOD receives "
+"``distance`` multiplied by :ref:`unit_size<class_FmodAudioStreamPlayer3D_property_unit_size>`. "
+"The attenuation model determines behavior beyond that distance."
+msgstr ""
+"设置最大衰减距离倍率，最小为  ``0.01`` \\ 。传递给 FMOD 的距离为  ``distance``  乘以  "
+":ref:`unit_size<class_FmodAudioStreamPlayer3D_property_unit_size>` \\ 。超出此距离后的行为由衰减模型决定。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:903 15754fdf79624f9087bc193dde4d6a1b
+msgid ""
+"Returns the maximum rolloff distance multiplier. Multiply it by "
+":ref:`unit_size<class_FmodAudioStreamPlayer3D_property_unit_size>` to obtain the distance passed "
+"to FMOD."
+msgstr ""
+"返回最大衰减距离倍率。将其乘以  :ref:`unit_size<class_FmodAudioStreamPlayer3D_property_unit_size>`  可得到传递给 FMOD "
+"的距离。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:917 54b27a696c414402bee68d58491b3f0a
+msgid ""
+"Selects the bus used when the next playback channel is created. Changing this value does not "
+"reroute an existing channel."
+msgstr "设置下次创建播放通道时使用的总线。修改此值不会改变现有通道的路由。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:919 ccbf55c8c3f140e1a36d60a04589b63b
+msgid ""
+"If the bus is not found in :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`, playback uses the"
+" master channel group."
+msgstr "在  :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`  中找不到该总线时，播放使用主通道组。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:931 19e3824915724919bcb7b97c38c375e3
+msgid "Returns the name of the audio bus this player outputs to."
+msgstr "返回当前输出总线名称"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:933 793c15e00d634d0d9f82e1a5226b2d9e
+msgid "The default value is ``&\"Master\"``."
+msgstr "默认值为  ``&\"Master\"`` 。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:945 20656f317ffb4398aef61fd742e65bf8
+msgid "Stores ``mask``. Area-based audio filtering is not implemented by this player."
+msgstr "保存  ``mask`` \\ 。此播放器尚未实现基于区域的音频过滤。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:957 58fc7e907cbf40f18c463e24231f55bc
+msgid "Returns the stored area mask. It currently has no effect on playback."
+msgstr "返回保存的区域掩码，此值目前不影响播放。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:969 350f38dd6ee7413da5348e6960f719db
+msgid "Enables or disables the directional emission cone."
+msgstr "启用或禁用方向性发射锥"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:971 757ef145aded4190b81816625c0d0875
+msgid "When enabled, sound is projected in a cone rather than omnidirectionally."
+msgstr "启用后，声音通过锥形区域向外传播。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:983 e94f8c9dc72d4d6a9a8b85793901b6b1
+msgid "Returns ``true`` if the emission angle cone is enabled."
+msgstr "如果启用了方向性发射锥，则返回    ``true``"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:985 fc0e567b36da4852b90e3f8f589e7462
+msgid "When enabled, sound is directional within the configured cone."
+msgstr "启用后，声音仅在配置的发声锥内具有完整指向性。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:997 684edf3ad98d4e9b851abb451a52fdf9
+msgid ""
+"Sets the inner emission angle in degrees, clamped to ``0.0`` through ``90.0``. The inspector and "
+"saved scenes use degrees without conversion."
 msgstr "设置发声内锥角，单位为度，限制在  ``0.0``  到  ``90.0``  之间。检查器和保存的场景直接使用度数，无需转换。"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1027 c85d2c6c70854e62a4704b744cde1064
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:999 b07617c110a340f8abdf743ab6495c8d
+msgid "Sound is at full volume within this cone and attenuated outside."
+msgstr "声音在该发声锥内保持完整音量，在锥外衰减。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1011 4dc1614e1ad84034b0487c7fb17ac81c
+msgid "Returns the inner emission angle in degrees."
+msgstr "返回发射内锥角，单位为度"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1013 63d16d788dd446d4b7f3e7c430cd9e2c
+msgid "Sound is at full volume within this cone."
+msgstr "发声锥内的声音保持完整音量。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1015 e5125d8117764699a431beeac546e591
+msgid "The default value is ``45.0`` degrees."
+msgstr "默认值为    ``45.0``    度。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1027 5a688cf6fd68450bbadfa29dfb6b71d0
 msgid "Sets the attenuation outside the emission cone in dB, clamped to ``-80.0`` through ``0.0``."
 msgstr "设置发声锥外的衰减量，单位为 dB，限制在  ``-80.0``  到  ``0.0``  之间。"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1079 8aad98cffa88452295e6aff18ca426c7
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1029 5f8135eced0649ad8899406649ac1771
+msgid "More negative values create a sharper directional effect."
+msgstr "值越负，方向性效果越明显。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1041 f728ae523d10476193be35c4b57ab663
+msgid "Returns the attenuation outside the emission cone in dB."
+msgstr "返回发射锥外的音量衰减，单位为分贝"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1043 25718fe91c584db1abffe846da93ca03
+msgid "The default value is ``-12.0`` dB."
+msgstr "默认值为    ``-12.0``    dB。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1079 69ffc3c09b994f5fb1bbde50f310f9bb
 msgid ""
-"Sets "
-":ref:`attenuation_filter_db<class_FmodAudioStreamPlayer3D_property_attenuation_filter_db>`. "
+"Sets :ref:`attenuation_filter_db<class_FmodAudioStreamPlayer3D_property_attenuation_filter_db>`. "
 "Updates the native filter immediately during playback."
 msgstr ""
-"设置  "
-":ref:`attenuation_filter_db<class_FmodAudioStreamPlayer3D_property_attenuation_filter_db>` \\"
+"设置  :ref:`attenuation_filter_db<class_FmodAudioStreamPlayer3D_property_attenuation_filter_db>` \\"
 " 。播放期间会立即更新原生滤波器。"
 
-#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1091 82a0ab4e2a134968be3cbb217a542872
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1091 4e739b21dd0b47b69b654152f605c3be
 msgid ""
 "Returns "
-":ref:`attenuation_filter_db<class_FmodAudioStreamPlayer3D_property_attenuation_filter_db>` in"
-" dB."
+":ref:`attenuation_filter_db<class_FmodAudioStreamPlayer3D_property_attenuation_filter_db>` in dB."
 msgstr ""
-"返回  "
-":ref:`attenuation_filter_db<class_FmodAudioStreamPlayer3D_property_attenuation_filter_db>` \\"
+"返回  :ref:`attenuation_filter_db<class_FmodAudioStreamPlayer3D_property_attenuation_filter_db>` \\"
 " ，单位为 dB。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1103 db16cf8a62c24b91854c03ab46dd7dc5
+msgid "Sets the doppler tracking mode for velocity-based pitch changes."
+msgstr "设置多普勒速度追踪模式"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1105 ff49ffbd6a1d46048c1a88d6256f196d
+msgid "See :ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` for available options."
+msgstr "可用选项见  :ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` 。"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1117 fb87e3db83e14c7189bd0d7f8a446bc4
+msgid "Returns the current doppler tracking mode."
+msgstr "返回当前多普勒速度追踪模式"
+
+#: ../../source/classes/class_fmodaudiostreamplayer3d.rst:1119 1b462efb5a7e42f4b9ade4c1235aafdb
+msgid "See :ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>` for possible values."
+msgstr "可用值见    :ref:`DopplerTracking<enum_FmodAudioStreamPlayer3D_DopplerTracking>`   。"

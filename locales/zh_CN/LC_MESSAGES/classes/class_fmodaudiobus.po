@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Godot FmodPlayer \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"POT-Creation-Date: 2026-10-30 23:43+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -18,118 +18,118 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: ../../source/classes/class_fmodaudiobus.rst:12 7cd8540db95c4973bcd01e4bf3982887
+#: ../../source/classes/class_fmodaudiobus.rst:10 7b025525546344128c09328284de4297
 msgid "FmodAudioBus"
 msgstr "FmodAudioBus"
 
-#: ../../source/classes/class_fmodaudiobus.rst:14 4b49f4c0d64a4f6a928d000a7e0f47ca
+#: ../../source/classes/class_fmodaudiobus.rst:12 7e153af5151e4d69919b5399d1760c64
 msgid "**Inherits:** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
 msgstr "**继承：** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`"
 
-#: ../../source/classes/class_fmodaudiobus.rst:16 9d8f771ebeac48be959f89e16da4689f
+#: ../../source/classes/class_fmodaudiobus.rst:14 8aaac6599962452cb249500f1ec5e50b
 msgid "Represents an audio bus for mixing with effects support."
 msgstr "表示一个用于混音的音频总线，支持效果处理"
 
-#: ../../source/classes/class_fmodaudiobus.rst:21 fe4caf88b28c4c0291ac8416517513fa
+#: ../../source/classes/class_fmodaudiobus.rst:19 6480a979de26431392dae1fb61773568
 msgid "Description"
 msgstr "描述"
 
-#: ../../source/classes/class_fmodaudiobus.rst:23 440992ce9b1748e78328a2b45b8a3cbe
+#: ../../source/classes/class_fmodaudiobus.rst:21 e8a290c1c64148a49220fdbb4c182ba9
 msgid ""
-"FmodAudioBus represents an audio mixing bus in the FMOD audio system. Each bus has its own "
-"channel group for routing audio, and can have multiple audio effects applied to it."
+"Runtime mixing bus backed by an FMOD channel group. :ref:`FmodServer<class_FmodServer>` owns "
+"buses for the active :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`; obtain them with "
+":ref:`FmodServer.get_audio_bus()<class_FmodServer_method_get_audio_bus>` or "
+":ref:`FmodServer.get_audio_bus_by_id()<class_FmodServer_method_get_audio_bus_by_id>`. The server "
+"manages their lifetime."
 msgstr ""
-"**FmodAudioBus**    表示 FMOD 音频系统中的音频混音总线。每个总线都有自己的    ``FmodChannelGroup``    用于音频路由，并且可以应用多个    "
-"``FmodAudioEffect``"
+"由 FMOD 通道组支持的运行时混音总线。:ref:`FmodServer<class_FmodServer>` 管理当前 "
+":ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>` 的总线，通过 "
+":ref:`FmodServer.get_audio_bus()<class_FmodServer_method_get_audio_bus>` 或 "
+":ref:`FmodServer.get_audio_bus_by_id()<class_FmodServer_method_get_audio_bus_by_id>` "
+"获取，生命周期由服务器管理。"
 
-#: ../../source/classes/class_fmodaudiobus.rst:25 a66ddb60e47c4513a916a524c5d1207a
+#: ../../source/classes/class_fmodaudiobus.rst:23 e846b09b408945678c37fb80bbecd84d
 msgid ""
-"Buses are organized in a hierarchy managed by "
-":ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`. The master bus is the root of this "
-"hierarchy, with all other buses ultimately routing through it."
-msgstr "总线由    :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`    管理的层级结构组织。主总线是该层级的根，所有其他总线最终通过它进行路由"
+"Use :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>` to author routing, mixing state, and "
+"effect slots. Direct changes to this runtime object do not modify or save the layout. Managed "
+"effect instances are per slot; "
+":ref:`FmodServer.get_bus_effect_instance()<class_FmodServer_method_get_bus_effect_instance>` "
+"provides access by stable IDs."
+msgstr ""
+"使用 :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>` "
+"编辑路由、混音状态和效果器槽位。直接修改运行时对象不会修改或保存布局。每个受管槽位都有独立运行实例，可通过 "
+":ref:`FmodServer.get_bus_effect_instance()<class_FmodServer_method_get_bus_effect_instance>` 按稳定 "
+"ID 获取。"
 
-#: ../../source/classes/class_fmodaudiobus.rst:27 4c30c1f9fa254b19aa0fa497a0d025d0
-msgid "Use buses to:"
-msgstr "使用总线可以："
+#: ../../source/classes/class_fmodaudiobus.rst:25 087167f2cf0d4928b07e49dfb75559b8
+msgid ""
+"Standalone buses created with :ref:`init_bus()<class_FmodAudioBus_method_init_bus>` remain "
+"available for low-level routing. Their lifetime and effects are managed by the caller."
+msgstr ""
+"通过 :ref:`FmodAudioBus.init_bus()<class_FmodAudioBus_method_init_bus>` "
+"创建的独立总线可用于低层路由，其生命周期和效果器由调用方管理。"
 
-#: ../../source/classes/class_fmodaudiobus.rst:29 ea3d10ece7274100b24c2c9d615eb8a4
-msgid "Organize audio into logical categories (Music, SFX, Dialogue, etc.)"
-msgstr "将音频组织为音乐、音效、对话等逻辑分类"
-
-#: ../../source/classes/class_fmodaudiobus.rst:31 f4e3f6dd37b04fc7939cdd9cfac0cbb3
-msgid "Apply effects to groups of sounds"
-msgstr "为一组声音应用效果器"
-
-#: ../../source/classes/class_fmodaudiobus.rst:33 dcda35e7b8724c49986c8ac11cb46fe0
-msgid "Control volume and routing for entire audio categories"
-msgstr "控制整个音频分类的音量和路由"
-
-#: ../../source/classes/class_fmodaudiobus.rst:35 419df8d90422405f9ca956b2fdc5187b
-msgid "Implement solo/mute functionality for mixing"
-msgstr "实现混音中的独奏和静音"
-
-#: ../../source/classes/class_fmodaudiobus.rst:40 e27639d985da4a7aa5649a299b98ed5e
+#: ../../source/classes/class_fmodaudiobus.rst:30 ef3bdf6cda3d4bed92aaa17f7e7cab2f
 msgid "Properties"
 msgstr "属性"
 
-#: ../../source/classes/class_fmodaudiobus.rst:46 ../../source/classes/class_fmodaudiobus.rst:86
-#: 162eacb1984944c7887655bcaf028fcf 21bc83c8dbd24855bf18bade40e4316d
+#: ../../source/classes/class_fmodaudiobus.rst:36 ../../source/classes/class_fmodaudiobus.rst:76
+#: fb203f01b05a4c1ab6d900916b1e76a0 febb12f07b734fd8a4a4055ab1a2aba7
 msgid ":ref:`float<class_float>`"
 msgstr ":ref:`float<class_float>`"
 
-#: ../../source/classes/class_fmodaudiobus.rst:46 2103a9faa7de4758a6c23fef96e11af5
+#: ../../source/classes/class_fmodaudiobus.rst:36 ce06fe3116bb4b41bb46a4e9bd923c22
 msgid ":ref:`volume<class_FmodAudioBus_property_volume>`"
 msgstr ":ref:`volume<class_FmodAudioBus_property_volume>`"
 
-#: ../../source/classes/class_fmodaudiobus.rst:46 f59c168d365e44e199a98dd352729599
+#: ../../source/classes/class_fmodaudiobus.rst:36 6a4ef8a8f53b41e9b0bbc4c2fdc573f2
 msgid "``0.0``"
 msgstr "``0.0``"
 
-#: ../../source/classes/class_fmodaudiobus.rst:48 ../../source/classes/class_fmodaudiobus.rst:50
-#: ../../source/classes/class_fmodaudiobus.rst:52 ../../source/classes/class_fmodaudiobus.rst:90
-#: ../../source/classes/class_fmodaudiobus.rst:96 ../../source/classes/class_fmodaudiobus.rst:100
-#: 06ca69670c4c4055872a8b55fec42972 3d92ef801e884e17a1f594d9e1e9e5e2 55193442e42e4ba9840dceaf764e4429
-#: 963a44ad3eef4a048264da56e3977020 c95d715f025c47ce8672895ed44de7a6 dbbdf63bf1a548e5a33c7fc402a57bd8
+#: ../../source/classes/class_fmodaudiobus.rst:38 ../../source/classes/class_fmodaudiobus.rst:40
+#: ../../source/classes/class_fmodaudiobus.rst:42 ../../source/classes/class_fmodaudiobus.rst:80
+#: ../../source/classes/class_fmodaudiobus.rst:86 ../../source/classes/class_fmodaudiobus.rst:90
+#: 49e32890cc674a30ac9c69fb9ad64a72 556f1e361ee84361bce9d05da1af37ed 55d33bca6e144927af71efc1785ed7bb
+#: 5e252ba9e034465ab203d9fd218344ab 6fdb851c328a4046b9ad10b77360c4f7 89a74eada6bf41b38d616c1970f1a528
 msgid ":ref:`bool<class_bool>`"
 msgstr ":ref:`bool<class_bool>`"
 
-#: ../../source/classes/class_fmodaudiobus.rst:48 ca8d0deacf7940db8780351bf580cf26
+#: ../../source/classes/class_fmodaudiobus.rst:38 383466fefdcc4cf08a80a146033ab8c4
 msgid ":ref:`solo<class_FmodAudioBus_property_solo>`"
 msgstr ":ref:`solo<class_FmodAudioBus_property_solo>`"
 
-#: ../../source/classes/class_fmodaudiobus.rst:48 ../../source/classes/class_fmodaudiobus.rst:50
-#: ../../source/classes/class_fmodaudiobus.rst:52 2e578b1eee854a3e842e002625838c14
-#: cb5f9dc999d54e90a9defb2060659ae9 ce4146b8502c453381641fa824374886
+#: ../../source/classes/class_fmodaudiobus.rst:38 ../../source/classes/class_fmodaudiobus.rst:40
+#: ../../source/classes/class_fmodaudiobus.rst:42 a31d813d6b0d469b83ce9f84154f44c9
+#: bc9acf77b6b0454c87cfe4e9f0ecc78a fc8417e9177647a19701b477bd536367
 msgid "``false``"
 msgstr "``false``"
 
-#: ../../source/classes/class_fmodaudiobus.rst:50 3defeb8c984a4d738c94db81d374987e
+#: ../../source/classes/class_fmodaudiobus.rst:40 d07feb07ac5446be99ab007ddcae615f
 msgid ":ref:`mute<class_FmodAudioBus_property_mute>`"
 msgstr ":ref:`mute<class_FmodAudioBus_property_mute>`"
 
-#: ../../source/classes/class_fmodaudiobus.rst:52 cb6b221a5d2b40cbbc3ca96155ea33e3
+#: ../../source/classes/class_fmodaudiobus.rst:42 53c1abe17fb4428db2fb5f3c4bd2a1d1
 msgid ":ref:`bypass<class_FmodAudioBus_property_bypass>`"
 msgstr ":ref:`bypass<class_FmodAudioBus_property_bypass>`"
 
-#: ../../source/classes/class_fmodaudiobus.rst:58 af0e5d84f77f40db9d400e901af21cc3
+#: ../../source/classes/class_fmodaudiobus.rst:48 b3420c6f694549b6aba1c9714807a8a7
 msgid "Methods"
 msgstr "方法"
 
+#: ../../source/classes/class_fmodaudiobus.rst:54 ../../source/classes/class_fmodaudiobus.rst:56
 #: ../../source/classes/class_fmodaudiobus.rst:64 ../../source/classes/class_fmodaudiobus.rst:66
-#: ../../source/classes/class_fmodaudiobus.rst:74 ../../source/classes/class_fmodaudiobus.rst:76
-#: ../../source/classes/class_fmodaudiobus.rst:78 ../../source/classes/class_fmodaudiobus.rst:84
-#: ../../source/classes/class_fmodaudiobus.rst:88 ../../source/classes/class_fmodaudiobus.rst:92
-#: ../../source/classes/class_fmodaudiobus.rst:94 ../../source/classes/class_fmodaudiobus.rst:98
-#: ../../source/classes/class_fmodaudiobus.rst:102 05aae2d57f114384b4740738e5793413
-#: 0a8200c6a7d742cabcbbc402eafa4e24 1aed2c71320e4753ba70814612c9dd2f 292658a92d5e4185a46925eaceff8ced
-#: 421f348fde6c4ea6bb01dd53de0aa22e 7a3fb5f70afa4437a2934290a64a975e 9e10ef563d594967acceb70d3f34230f
-#: a2ba40bc8f154049b452f181ca37a55e bbeb1dd3ee1041e5b8b01c6676bb0d00 d2f632aeac9b4ae89397e77755d2be64
-#: ddd4cdbf27ed4a2ea4bf9a980709c723
+#: ../../source/classes/class_fmodaudiobus.rst:68 ../../source/classes/class_fmodaudiobus.rst:74
+#: ../../source/classes/class_fmodaudiobus.rst:78 ../../source/classes/class_fmodaudiobus.rst:82
+#: ../../source/classes/class_fmodaudiobus.rst:84 ../../source/classes/class_fmodaudiobus.rst:88
+#: ../../source/classes/class_fmodaudiobus.rst:92 34a4602a7b0c4f3aab2b7d15893d6a9c
+#: 58538f9d5b8c4bb7875172d9d8d5f94a 5f73642651334214a646c16c2e00a9b9 8b4665a91f024f188b34b5dd3affddf2
+#: 8c8c25ad317b4471ae3cc48ededc62f2 96d79670648a4872a1b9c9f55cb064e6 a16a90dfa7234776b5153b438bb20577
+#: cd4b269ec43347989dc25b6c7a9a3d1e ceb8eda83a794ea89cad3cbfb4fc08a5 d214538c29e0499b8429a973d42f0a88
+#: d768d15a98b646e29454114ca6adbd81
 msgid "|void|"
 msgstr "|void|"
 
-#: ../../source/classes/class_fmodaudiobus.rst:64 5c751d7541894b10ba0e1e6149be9439
+#: ../../source/classes/class_fmodaudiobus.rst:54 4ecf86c405ee45ca9c3333469d4fbad8
 msgid ""
 ":ref:`init_bus<class_FmodAudioBus_method_init_bus>`\\ (\\ name\\: :ref:`String<class_String>`, "
 "parent\\: :ref:`FmodChannelGroup<class_FmodChannelGroup>` = null\\ )"
@@ -137,7 +137,7 @@ msgstr ""
 ":ref:`init_bus<class_FmodAudioBus_method_init_bus>`\\ (\\ name\\: :ref:`String<class_String>`, "
 "parent\\: :ref:`FmodChannelGroup<class_FmodChannelGroup>` = null\\ )"
 
-#: ../../source/classes/class_fmodaudiobus.rst:66 d7b8d8ed195143d68bf6218306feb7d0
+#: ../../source/classes/class_fmodaudiobus.rst:56 60ea6cac0e114d8387a1e55da1e96f77
 msgid ""
 ":ref:`set_parent<class_FmodAudioBus_method_set_parent>`\\ (\\ parent\\: "
 ":ref:`FmodChannelGroup<class_FmodChannelGroup>`\\ )"
@@ -145,32 +145,32 @@ msgstr ""
 ":ref:`set_parent<class_FmodAudioBus_method_set_parent>`\\ (\\ parent\\: "
 ":ref:`FmodChannelGroup<class_FmodChannelGroup>`\\ )"
 
-#: ../../source/classes/class_fmodaudiobus.rst:68 ../../source/classes/class_fmodaudiobus.rst:70
-#: 8824a02111fe4bcfb91ce4731b70f1f3 cad90dd9a81141e3b70db2b96604858f
+#: ../../source/classes/class_fmodaudiobus.rst:58 ../../source/classes/class_fmodaudiobus.rst:60
+#: 6a4440860ada4435a7c8df943c3a4c83 a74d40a9603c4921933e7206aed5f2c3
 msgid ":ref:`FmodChannelGroup<class_FmodChannelGroup>`"
 msgstr ":ref:`FmodChannelGroup<class_FmodChannelGroup>`"
 
-#: ../../source/classes/class_fmodaudiobus.rst:68 aa629c2d711d45faad1c94a7626352f4
+#: ../../source/classes/class_fmodaudiobus.rst:58 ff21cdcaed7248408e4798dbc94fd27e
 msgid ":ref:`get_bus<class_FmodAudioBus_method_get_bus>`\\ (\\ ) |const|"
 msgstr ":ref:`get_bus<class_FmodAudioBus_method_get_bus>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiobus.rst:70 3eb895558d3f45b4a659091eeb10857b
+#: ../../source/classes/class_fmodaudiobus.rst:60 cde5b2eccdb44624898939e1a7512279
 msgid ":ref:`get_parent<class_FmodAudioBus_method_get_parent>`\\ (\\ ) |const|"
 msgstr ":ref:`get_parent<class_FmodAudioBus_method_get_parent>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiobus.rst:72 dfad77a1d02b4a0f8233244ca724dfae
+#: ../../source/classes/class_fmodaudiobus.rst:62 9304a1d596f44a7799d698afa93c7abc
 msgid ":ref:`String<class_String>`"
 msgstr ":ref:`String<class_String>`"
 
-#: ../../source/classes/class_fmodaudiobus.rst:72 e8298d91b213426eb2aa71b769210bbd
+#: ../../source/classes/class_fmodaudiobus.rst:62 ee00775f02ba4c53b60c15246d125182
 msgid ":ref:`get_bus_name<class_FmodAudioBus_method_get_bus_name>`\\ (\\ ) |const|"
 msgstr ":ref:`get_bus_name<class_FmodAudioBus_method_get_bus_name>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiobus.rst:74 3a7c8b6b96ad4750bb8be2ac532f4343
+#: ../../source/classes/class_fmodaudiobus.rst:64 778beb373770448a860cdd48cc847b04
 msgid ":ref:`release<class_FmodAudioBus_method_release>`\\ (\\ )"
 msgstr ":ref:`release<class_FmodAudioBus_method_release>`\\ (\\ )"
 
-#: ../../source/classes/class_fmodaudiobus.rst:76 87cd90d9a3794b6894d73573f08a81cf
+#: ../../source/classes/class_fmodaudiobus.rst:66 f1029d6060f645108bb447aac3f2dc6a
 msgid ""
 ":ref:`add_effect<class_FmodAudioBus_method_add_effect>`\\ (\\ effect\\: "
 ":ref:`FmodAudioEffect<class_FmodAudioEffect>`, index\\: :ref:`int<class_int>` = 0\\ )"
@@ -178,7 +178,7 @@ msgstr ""
 ":ref:`add_effect<class_FmodAudioBus_method_add_effect>`\\ (\\ effect\\: "
 ":ref:`FmodAudioEffect<class_FmodAudioEffect>`, index\\: :ref:`int<class_int>` = 0\\ )"
 
-#: ../../source/classes/class_fmodaudiobus.rst:78 e58f10cc67fc44fe8a4645f6038f1b39
+#: ../../source/classes/class_fmodaudiobus.rst:68 69c8dd80ac6f480a8cc7f6437e4dbae7
 msgid ""
 ":ref:`remove_effect<class_FmodAudioBus_method_remove_effect>`\\ (\\ index\\: "
 ":ref:`int<class_int>`\\ )"
@@ -186,19 +186,19 @@ msgstr ""
 ":ref:`remove_effect<class_FmodAudioBus_method_remove_effect>`\\ (\\ index\\: "
 ":ref:`int<class_int>`\\ )"
 
-#: ../../source/classes/class_fmodaudiobus.rst:80 cca9d399e975453e989b66ebbbeb66c5
+#: ../../source/classes/class_fmodaudiobus.rst:70 ef20369390ac42ceb021ccdfa3a8c46e
 msgid ":ref:`int<class_int>`"
 msgstr ":ref:`int<class_int>`"
 
-#: ../../source/classes/class_fmodaudiobus.rst:80 4568fc293b2e432eb24f39c0103b59fa
+#: ../../source/classes/class_fmodaudiobus.rst:70 09bda6f8bc304e00ae2696177a6b41fe
 msgid ":ref:`get_effect_count<class_FmodAudioBus_method_get_effect_count>`\\ (\\ ) |const|"
 msgstr ":ref:`get_effect_count<class_FmodAudioBus_method_get_effect_count>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiobus.rst:82 7580a5721f054effb1f2decdc81dcedd
+#: ../../source/classes/class_fmodaudiobus.rst:72 1634e9a372d946f2b537f56169acdcfb
 msgid ":ref:`FmodAudioEffect<class_FmodAudioEffect>`"
 msgstr ":ref:`FmodAudioEffect<class_FmodAudioEffect>`"
 
-#: ../../source/classes/class_fmodaudiobus.rst:82 9a44352b3c3c4216ae10a8499ed25903
+#: ../../source/classes/class_fmodaudiobus.rst:72 258d72cf85124340a0aa20d288ac5f29
 msgid ""
 ":ref:`get_effect<class_FmodAudioBus_method_get_effect>`\\ (\\ index\\: :ref:`int<class_int>`\\ ) "
 "|const|"
@@ -206,7 +206,7 @@ msgstr ""
 ":ref:`get_effect<class_FmodAudioBus_method_get_effect>`\\ (\\ index\\: :ref:`int<class_int>`\\ ) "
 "|const|"
 
-#: ../../source/classes/class_fmodaudiobus.rst:84 8b578bd985344571a76d99d4f02ea8a6
+#: ../../source/classes/class_fmodaudiobus.rst:74 eabd48b84fa944aebd8537c09aae075c
 msgid ""
 ":ref:`set_volume_db<class_FmodAudioBus_method_set_volume_db>`\\ (\\ volume_db\\: "
 ":ref:`float<class_float>`\\ )"
@@ -214,31 +214,31 @@ msgstr ""
 ":ref:`set_volume_db<class_FmodAudioBus_method_set_volume_db>`\\ (\\ volume_db\\: "
 ":ref:`float<class_float>`\\ )"
 
-#: ../../source/classes/class_fmodaudiobus.rst:86 ee7be1c48f23404f95fbe9af03adc2e9
+#: ../../source/classes/class_fmodaudiobus.rst:76 649fa6f10bd34dfeadae5f9971474322
 msgid ":ref:`get_volume_db<class_FmodAudioBus_method_get_volume_db>`\\ (\\ ) |const|"
 msgstr ":ref:`get_volume_db<class_FmodAudioBus_method_get_volume_db>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiobus.rst:88 0af93fe11e97461eb6a9604575a2d1bd
+#: ../../source/classes/class_fmodaudiobus.rst:78 a0dfe0dc1f884f0e9dda5666aa7a119e
 msgid ":ref:`set_mute<class_FmodAudioBus_method_set_mute>`\\ (\\ mute\\: :ref:`bool<class_bool>`\\ )"
 msgstr ":ref:`set_mute<class_FmodAudioBus_method_set_mute>`\\ (\\ mute\\: :ref:`bool<class_bool>`\\ )"
 
-#: ../../source/classes/class_fmodaudiobus.rst:90 26e9c52636a246c1a771db2f8e633292
+#: ../../source/classes/class_fmodaudiobus.rst:80 25c99973c0954ff5bffe25650791849a
 msgid ":ref:`is_mute<class_FmodAudioBus_method_is_mute>`\\ (\\ ) |const|"
 msgstr ":ref:`is_mute<class_FmodAudioBus_method_is_mute>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiobus.rst:92 1fab71320b454043b9d93df2900b880a
+#: ../../source/classes/class_fmodaudiobus.rst:82 72022f796196404f8409ff12b0bab008
 msgid ":ref:`apply_mute<class_FmodAudioBus_method_apply_mute>`\\ (\\ mute\\: :ref:`bool<class_bool>`\\ )"
 msgstr ":ref:`apply_mute<class_FmodAudioBus_method_apply_mute>`\\ (\\ mute\\: :ref:`bool<class_bool>`\\ )"
 
-#: ../../source/classes/class_fmodaudiobus.rst:94 e69b7b505cf1479db2a49968987d8d82
+#: ../../source/classes/class_fmodaudiobus.rst:84 9c95f919de524edfa91ce8c54c73a5ea
 msgid ":ref:`set_solo<class_FmodAudioBus_method_set_solo>`\\ (\\ solo\\: :ref:`bool<class_bool>`\\ )"
 msgstr ":ref:`set_solo<class_FmodAudioBus_method_set_solo>`\\ (\\ solo\\: :ref:`bool<class_bool>`\\ )"
 
-#: ../../source/classes/class_fmodaudiobus.rst:96 1b765eabbbf24a87a4695982175a5bb0
+#: ../../source/classes/class_fmodaudiobus.rst:86 638e9bfe7f68491784af74d97932d83e
 msgid ":ref:`is_solo<class_FmodAudioBus_method_is_solo>`\\ (\\ ) |const|"
 msgstr ":ref:`is_solo<class_FmodAudioBus_method_is_solo>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiobus.rst:98 9c2d041fccaf497baab20d714ab7ed6e
+#: ../../source/classes/class_fmodaudiobus.rst:88 22a1c872ee134868888c811d9893b8ca
 msgid ""
 ":ref:`set_bypass<class_FmodAudioBus_method_set_bypass>`\\ (\\ bypass\\: :ref:`bool<class_bool>`\\"
 " )"
@@ -246,81 +246,113 @@ msgstr ""
 ":ref:`set_bypass<class_FmodAudioBus_method_set_bypass>`\\ (\\ bypass\\: :ref:`bool<class_bool>`\\"
 " )"
 
-#: ../../source/classes/class_fmodaudiobus.rst:100 4ba711d8655746068eabc1928a66933d
+#: ../../source/classes/class_fmodaudiobus.rst:90 4ac4003d2fab48ae92a098aa7e14a341
 msgid ":ref:`is_bypass<class_FmodAudioBus_method_is_bypass>`\\ (\\ ) |const|"
 msgstr ":ref:`is_bypass<class_FmodAudioBus_method_is_bypass>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiobus.rst:102 750afd08d8f240ffa654a4673b6ea269
+#: ../../source/classes/class_fmodaudiobus.rst:92 878f71d2addb4047af34b9c2887186b2
 msgid ":ref:`sync_bypass<class_FmodAudioBus_method_sync_bypass>`\\ (\\ )"
 msgstr ":ref:`sync_bypass<class_FmodAudioBus_method_sync_bypass>`\\ (\\ )"
 
-#: ../../source/classes/class_fmodaudiobus.rst:112 2e9fba5d425745a9a58cbf566289685e
+#: ../../source/classes/class_fmodaudiobus.rst:102 7f1735cc32a64f0a84a779991e04e323
 msgid "Property Descriptions"
 msgstr "属性说明"
 
-#: ../../source/classes/class_fmodaudiobus.rst:118 f567c09543ad42bb82f480965f51fb9d
+#: ../../source/classes/class_fmodaudiobus.rst:108 85c27d4d9b8f47f1b0ee2a7b420649a5
 msgid ":ref:`float<class_float>` **volume** = ``0.0``"
 msgstr ":ref:`float<class_float>` **volume** = ``0.0``"
 
-#: ../../source/classes/class_fmodaudiobus.rst:130 ab15bbd726f141c4b08a2c9241cfaabe
+#: ../../source/classes/class_fmodaudiobus.rst:112 ../../source/classes/class_fmodaudiobus.rst:309
+#: 48fd283cff4948cc857fc1d701379239 b8c2c597634f47aa933e0c90a4945e1d
+msgid "|void| **set_volume_db**\\ (\\ volume_db\\: :ref:`float<class_float>`\\ )"
+msgstr "|void| **set_volume_db**\\ (\\ volume_db\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobus.rst:113 ../../source/classes/class_fmodaudiobus.rst:323
+#: 5b708fd92ce04771bdeda21942f5619b 90ccdf5dc5e74fc8b6185a47e723ccd6
+msgid ":ref:`float<class_float>` **get_volume_db**\\ (\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_volume_db**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobus.rst:115 c6c0255513ea4e3fb216c9dc740f074a
+msgid "Bus volume in decibels. A value of ``0.0`` is unity gain."
+msgstr "总线音量，单位为分贝。\\  ``0.0``  表示单位增益。"
+
+#: ../../source/classes/class_fmodaudiobus.rst:125 ef6534a0232a4c258aa10e3c1e01f1c1
 msgid ":ref:`bool<class_bool>` **solo** = ``false``"
 msgstr ":ref:`bool<class_bool>` **solo** = ``false``"
 
-#: ../../source/classes/class_fmodaudiobus.rst:134 ../../source/classes/class_fmodaudiobus.rst:410
-#: 4572f2f92d9d45f8872b17ed8575db43 9470331b05b14881977be953fadef02d
+#: ../../source/classes/class_fmodaudiobus.rst:129 ../../source/classes/class_fmodaudiobus.rst:371
+#: 890bbd8adc33416d8e411b771aa46cc5 a0e99b103d63472a994000ce50442787
 msgid "|void| **set_solo**\\ (\\ solo\\: :ref:`bool<class_bool>`\\ )"
 msgstr "|void| **set_solo**\\ (\\ solo\\: :ref:`bool<class_bool>`\\ )"
 
-#: ../../source/classes/class_fmodaudiobus.rst:135 ../../source/classes/class_fmodaudiobus.rst:426
-#: 0ce0f6bdcd6a4ebba332bc4417eb8f68 14bcbce0ef4e4e00a43d44d4b54ea006
+#: ../../source/classes/class_fmodaudiobus.rst:130 ../../source/classes/class_fmodaudiobus.rst:383
+#: 11d209df99a641f9a89175ea002a44c9 820fa87bca404b87a5ca88ef40fac38e
 msgid ":ref:`bool<class_bool>` **is_solo**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **is_solo**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiobus.rst:137 690aac052ce549368028dfd5c41f088b
-msgid "Controls solo."
-msgstr "是否启用独奏状态"
+#: ../../source/classes/class_fmodaudiobus.rst:132 baa2d913a3e34d68a41a98aa940abda8
+msgid ""
+"Stored solo flag. Use "
+":ref:`FmodAudioBusLayout.set_bus_solo()<class_FmodAudioBusLayout_method_set_bus_solo>` to update "
+"audibility across the active layout."
+msgstr ""
+"保存的 Solo 标记。通过 "
+":ref:`FmodAudioBusLayout.set_bus_solo()<class_FmodAudioBusLayout_method_set_bus_solo>` "
+"更新整个当前布局的可听状态。"
 
-#: ../../source/classes/class_fmodaudiobus.rst:147 2b173ce752c745bfb924a815cb67d525
+#: ../../source/classes/class_fmodaudiobus.rst:142 43b1bb5979e64635a85254368f3e9db3
 msgid ":ref:`bool<class_bool>` **mute** = ``false``"
 msgstr ":ref:`bool<class_bool>` **mute** = ``false``"
 
-#: ../../source/classes/class_fmodaudiobus.rst:151 ../../source/classes/class_fmodaudiobus.rst:366
-#: 3a86c87ae9574f3bad548c0f92aebee9 6455ca77e2514ba2a002e0c87ff15eae
+#: ../../source/classes/class_fmodaudiobus.rst:146 ../../source/classes/class_fmodaudiobus.rst:335
+#: 3f68ad8318b1400698881b4fc464026a a3028ec1653f4ff38fb72f298b66c407
 msgid "|void| **set_mute**\\ (\\ mute\\: :ref:`bool<class_bool>`\\ )"
 msgstr "|void| **set_mute**\\ (\\ mute\\: :ref:`bool<class_bool>`\\ )"
 
-#: ../../source/classes/class_fmodaudiobus.rst:152 ../../source/classes/class_fmodaudiobus.rst:382
-#: a6a640d2d0ac4c05aec75e39a7e830f7 cb4ec785d667483ca40994c7238a297d
+#: ../../source/classes/class_fmodaudiobus.rst:147 ../../source/classes/class_fmodaudiobus.rst:347
+#: 0b80e51e39934b2fa5e2d8316a974bd2 8bceed21c15145189f57d5caa6808309
 msgid ":ref:`bool<class_bool>` **is_mute**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **is_mute**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiobus.rst:154 47296c24b44f464a97ad9423787cd5ba
-msgid "Controls mute."
-msgstr "用户设置的静音状态"
+#: ../../source/classes/class_fmodaudiobus.rst:149 5eac9816bf7944e5a9468e50be4792c0
+msgid ""
+"Stored user mute flag. :ref:`apply_mute()<class_FmodAudioBus_method_apply_mute>` applies it to "
+"the channel group. For the active layout, use "
+":ref:`FmodAudioBusLayout.set_bus_mute()<class_FmodAudioBusLayout_method_set_bus_mute>`."
+msgstr ""
+"保存的用户静音标记。:ref:`FmodAudioBus.apply_mute()<class_FmodAudioBus_method_apply_mute>` "
+"将其应用到通道组。对于当前布局，使用 "
+":ref:`FmodAudioBusLayout.set_bus_mute()<class_FmodAudioBusLayout_method_set_bus_mute>`。"
 
-#: ../../source/classes/class_fmodaudiobus.rst:164 a074a55771bf47cdbd5804f5d14e003c
+#: ../../source/classes/class_fmodaudiobus.rst:159 d5868d26f01e4f6c925a0de12722de0f
 msgid ":ref:`bool<class_bool>` **bypass** = ``false``"
 msgstr ":ref:`bool<class_bool>` **bypass** = ``false``"
 
-#: ../../source/classes/class_fmodaudiobus.rst:168 ../../source/classes/class_fmodaudiobus.rst:442
-#: 3251790cc1624d628a57b7a16d565686 b3762658dd1d4ffca8cfe7240ffba459
+#: ../../source/classes/class_fmodaudiobus.rst:163 ../../source/classes/class_fmodaudiobus.rst:395
+#: 57f9053693874208bdd716d719d2d05c 86b5894716f741888fefeb8efa158108
 msgid "|void| **set_bypass**\\ (\\ bypass\\: :ref:`bool<class_bool>`\\ )"
 msgstr "|void| **set_bypass**\\ (\\ bypass\\: :ref:`bool<class_bool>`\\ )"
 
-#: ../../source/classes/class_fmodaudiobus.rst:169 ../../source/classes/class_fmodaudiobus.rst:458
-#: b4d3a029ce014e0a99251cb41104db1a cefce5b32c304251a388507263dc6673
+#: ../../source/classes/class_fmodaudiobus.rst:164 ../../source/classes/class_fmodaudiobus.rst:407
+#: 5df8c3bb515745c8a6d07ac8f4d53812 8a808e912a43480ab7d6593b750861ff
 msgid ":ref:`bool<class_bool>` **is_bypass**\\ (\\ ) |const|"
 msgstr ":ref:`bool<class_bool>` **is_bypass**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiobus.rst:171 745281f01e084f4aa0208d2dd0b89de1
-msgid "Controls bypass."
-msgstr "是否绕过总线上的效果链"
+#: ../../source/classes/class_fmodaudiobus.rst:166 255ead1e8d4748fda9f244d25145b76e
+msgid ""
+"Stored bypass flag. :ref:`sync_bypass()<class_FmodAudioBus_method_sync_bypass>` applies it to the"
+" stored effect instances. For the active layout, use "
+":ref:`FmodAudioBusLayout.set_bus_bypass()<class_FmodAudioBusLayout_method_set_bus_bypass>`."
+msgstr ""
+"保存的旁路标记。:ref:`FmodAudioBus.sync_bypass()<class_FmodAudioBus_method_sync_bypass>` "
+"将其应用到效果器实例。对于当前布局，使用 "
+":ref:`FmodAudioBusLayout.set_bus_bypass()<class_FmodAudioBusLayout_method_set_bus_bypass>`。"
 
-#: ../../source/classes/class_fmodaudiobus.rst:180 f04de66722fb4419bbb260cbfe0a7f53
+#: ../../source/classes/class_fmodaudiobus.rst:175 3e739ba8424c469f977d7f122d04df6a
 msgid "Method Descriptions"
 msgstr "方法说明"
 
-#: ../../source/classes/class_fmodaudiobus.rst:188 c47e57518c684d2ba1478e1636bcdeb9
+#: ../../source/classes/class_fmodaudiobus.rst:181 f8f30e381ae9415c9ebc171e542a513b
 msgid ""
 "|void| **init_bus**\\ (\\ name\\: :ref:`String<class_String>`, parent\\: "
 ":ref:`FmodChannelGroup<class_FmodChannelGroup>` = null\\ )"
@@ -328,51 +360,73 @@ msgstr ""
 "|void| **init_bus**\\ (\\ name\\: :ref:`String<class_String>`, parent\\: "
 ":ref:`FmodChannelGroup<class_FmodChannelGroup>` = null\\ )"
 
-#: ../../source/classes/class_fmodaudiobus.rst:190 443005c9065e4cc4a0fc2b4677f2a1a7
+#: ../../source/classes/class_fmodaudiobus.rst:183 e3e380b9121345bba80f5594661717be
 msgid "Initializes this bus with the specified ``name`` and optional ``parent`` channel group."
 msgstr "使用指定名称和可选父通道组初始化总线"
 
-#: ../../source/classes/class_fmodaudiobus.rst:192 f8492e561e394c088ea6dadc91d82fec
+#: ../../source/classes/class_fmodaudiobus.rst:185 1fa45d0580834fab9f53719516c5a0be
 msgid "This creates the internal FMOD channel group for audio routing."
 msgstr "如果名称为    ``\"Master\"``   ，会直接使用 FMOD 主通道组作为总线；否则会创建新的    ``FmodChannelGroup``    并连接到父通道组"
 
-#: ../../source/classes/class_fmodaudiobus.rst:204 1d9d9c47d1244b029980d4aa35a32374
+#: ../../source/classes/class_fmodaudiobus.rst:195 9bbc2c2c97bc417f826254e998d5fd0a
 msgid "|void| **set_parent**\\ (\\ parent\\: :ref:`FmodChannelGroup<class_FmodChannelGroup>`\\ )"
 msgstr "|void| **set_parent**\\ (\\ parent\\: :ref:`FmodChannelGroup<class_FmodChannelGroup>`\\ )"
 
-#: ../../source/classes/class_fmodaudiobus.rst:206 65067e22254442e6873df08bcad0c72e
+#: ../../source/classes/class_fmodaudiobus.rst:197 2db57990f5d242868de4fec205c982c6
 msgid "Sets the parent channel group that this bus outputs to."
 msgstr "设置此总线输出到的父通道组"
 
-#: ../../source/classes/class_fmodaudiobus.rst:218 cc06992bd44045ff9538a13bf0b65d27
+#: ../../source/classes/class_fmodaudiobus.rst:207 a732319252ba4353af7202e652e635d9
 msgid ":ref:`FmodChannelGroup<class_FmodChannelGroup>` **get_bus**\\ (\\ ) |const|"
 msgstr ":ref:`FmodChannelGroup<class_FmodChannelGroup>` **get_bus**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiobus.rst:220 76b43e64295e412c939cf4c0848abd43
+#: ../../source/classes/class_fmodaudiobus.rst:209 ecc31cfad723441e96ee5172d9cb3ef8
 msgid "Returns the :ref:`FmodChannelGroup<class_FmodChannelGroup>` used by this bus for audio routing."
 msgstr "返回此总线用于音频路由的    :ref:`FmodChannelGroup<class_FmodChannelGroup>`"
 
-#: ../../source/classes/class_fmodaudiobus.rst:222 1b192cf693e440009afaaf6b40235514
+#: ../../source/classes/class_fmodaudiobus.rst:211 df1faa3cc8f94bf1b7a81b9b8d845fd3
 msgid "Returns ``null`` if the bus has not been initialized."
 msgstr "如果总线尚未初始化，则返回    ``null``"
 
-#: ../../source/classes/class_fmodaudiobus.rst:234 449c1bfdd69b4f4299156ea9538ba64a
+#: ../../source/classes/class_fmodaudiobus.rst:221 4c79beba57f44f54894afb2cfbf40d9d
 msgid ":ref:`FmodChannelGroup<class_FmodChannelGroup>` **get_parent**\\ (\\ ) |const|"
 msgstr ":ref:`FmodChannelGroup<class_FmodChannelGroup>` **get_parent**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiobus.rst:250 14bd2496e7914cc5b4916152aa879c69
+#: ../../source/classes/class_fmodaudiobus.rst:223 d5c1b2820d144bbdacb3c66f6ad17b54
+msgid ""
+"Returns the parent stored by :ref:`init_bus()<class_FmodAudioBus_method_init_bus>` or "
+":ref:`set_parent()<class_FmodAudioBus_method_set_parent>`. To inspect routing changed directly "
+"through the channel group, use "
+":ref:`FmodChannelGroup.get_parent_group()<class_FmodChannelGroup_method_get_parent_group>` on "
+":ref:`get_bus()<class_FmodAudioBus_method_get_bus>`."
+msgstr ""
+"返回 :ref:`FmodAudioBus.init_bus()<class_FmodAudioBus_method_init_bus>` 或 "
+":ref:`FmodAudioBus.set_parent()<class_FmodAudioBus_method_set_parent>` 保存的父通道组。检查直接通过通道组修改的路由时，对 "
+":ref:`FmodAudioBus.get_bus()<class_FmodAudioBus_method_get_bus>` 返回的对象调用 "
+":ref:`FmodChannelGroup.get_parent_group()<class_FmodChannelGroup_method_get_parent_group>`。"
+
+#: ../../source/classes/class_fmodaudiobus.rst:233 a73c87113a11456db9d0d61bbf3367b9
 msgid ":ref:`String<class_String>` **get_bus_name**\\ (\\ ) |const|"
 msgstr ":ref:`String<class_String>` **get_bus_name**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiobus.rst:252 adc0df0c490f4163b4ef753a10104756
+#: ../../source/classes/class_fmodaudiobus.rst:235 6bad064e73e443e0b4590aaad720139c
 msgid "Returns the name of this audio bus."
 msgstr "返回此音频总线的名称"
 
-#: ../../source/classes/class_fmodaudiobus.rst:262 9700a8135bf042f19c14560d7e77559d
+#: ../../source/classes/class_fmodaudiobus.rst:245 716da96fa1594e11b5357e4395aef917
 msgid "|void| **release**\\ (\\ )"
 msgstr "|void| **release**\\ (\\ )"
 
-#: ../../source/classes/class_fmodaudiobus.rst:276 1db032d88d60444fbc744a9004971e86
+#: ../../source/classes/class_fmodaudiobus.rst:247 2b8c06fbb94a4022afb5b9989eb73b93
+msgid ""
+"Removes this bus's effects and clears its channel-group references. Releases the native channel "
+"group for buses other than ``Master``. Call this only for standalone buses whose lifetime you "
+"manage; the server releases buses obtained through :ref:`FmodServer<class_FmodServer>`."
+msgstr ""
+"移除总线效果器并清空通道组引用。对于 ``Master`` 以外的总线，还会释放原生通道组。仅对自行管理生命周期的独立总线调用此方法；通过 "
+":ref:`FmodServer<class_FmodServer>` 获取的总线由服务器释放。"
+
+#: ../../source/classes/class_fmodaudiobus.rst:257 89ef1b70f1944dc4a5bc94017d115b3c
 msgid ""
 "|void| **add_effect**\\ (\\ effect\\: :ref:`FmodAudioEffect<class_FmodAudioEffect>`, index\\: "
 ":ref:`int<class_int>` = 0\\ )"
@@ -380,23 +434,42 @@ msgstr ""
 "|void| **add_effect**\\ (\\ effect\\: :ref:`FmodAudioEffect<class_FmodAudioEffect>`, index\\: "
 ":ref:`int<class_int>` = 0\\ )"
 
-#: ../../source/classes/class_fmodaudiobus.rst:294 5067b30edbaa4192b8eaf58401b6a03e
+#: ../../source/classes/class_fmodaudiobus.rst:259 07906824468b4806a01ce1a672ea9744
+msgid "Inserts ``effect`` into the stored effect list at ``index`` and applies it to this bus."
+msgstr "将  ``effect``  插入保存的效果器列表中  ``index``  指定的位置，并应用到此总线。"
+
+#: ../../source/classes/class_fmodaudiobus.rst:261 4c18fc81499840ea952949c3b8b9bf0c
+msgid ""
+"The list index is clamped between ``0`` and "
+":ref:`get_effect_count()<class_FmodAudioBus_method_get_effect_count>`. It does not specify the "
+"FMOD DSP insertion position."
+msgstr ""
+"列表索引会限制在  ``0``  到  :ref:`get_effect_count()<class_FmodAudioBus_method_get_effect_count>`  "
+"之间，不用于指定 FMOD DSP 的插入位置。"
+
+#: ../../source/classes/class_fmodaudiobus.rst:271 2a9ab08cae7f4890b5b174255eeeb267
 msgid "|void| **remove_effect**\\ (\\ index\\: :ref:`int<class_int>`\\ )"
 msgstr "|void| **remove_effect**\\ (\\ index\\: :ref:`int<class_int>`\\ )"
 
-#: ../../source/classes/class_fmodaudiobus.rst:296 00bf141a05994072ae1c59f03d879836
+#: ../../source/classes/class_fmodaudiobus.rst:273 1a2a77f59aee4e09a7572766badb27f0
 msgid "Removes the audio effect at the specified ``index`` from this bus."
 msgstr "从此总线中移除指定索引处的音频效果"
 
-#: ../../source/classes/class_fmodaudiobus.rst:306 d298eef1ea7245fdac00ad13027dc041
+#: ../../source/classes/class_fmodaudiobus.rst:283 b60a5bd0b53847cdb230982f1950455a
 msgid ":ref:`int<class_int>` **get_effect_count**\\ (\\ ) |const|"
 msgstr ":ref:`int<class_int>` **get_effect_count**\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiobus.rst:308 e642fdb5f0df46829366775aa6a03ea0
-msgid "Returns effect count."
-msgstr "返回效果器数量。"
+#: ../../source/classes/class_fmodaudiobus.rst:285 77fae5c8bd264f35afe654552f21ece9
+msgid ""
+"Returns the number of effect instances stored on this runtime bus. Use "
+":ref:`FmodAudioBusLayout.get_bus_effect_ids()<class_FmodAudioBusLayout_method_get_bus_effect_ids>`"
+" for stable slot IDs."
+msgstr ""
+"返回运行时总线保存的效果器实例数。稳定槽位 ID 通过 "
+":ref:`FmodAudioBusLayout.get_bus_effect_ids()<class_FmodAudioBusLayout_method_get_bus_effect_ids>`"
+" 获取。"
 
-#: ../../source/classes/class_fmodaudiobus.rst:320 25fee50a817a4eabbad7a751b2adfdeb
+#: ../../source/classes/class_fmodaudiobus.rst:295 f1a12667b94b44ec8e6d60fbefacf22c
 msgid ""
 ":ref:`FmodAudioEffect<class_FmodAudioEffect>` **get_effect**\\ (\\ index\\: "
 ":ref:`int<class_int>`\\ ) |const|"
@@ -404,132 +477,104 @@ msgstr ""
 ":ref:`FmodAudioEffect<class_FmodAudioEffect>` **get_effect**\\ (\\ index\\: "
 ":ref:`int<class_int>`\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiobus.rst:322 a2410ca265cd4e60bf98aa196cf6a0d9
+#: ../../source/classes/class_fmodaudiobus.rst:297 d43d5c9b8f764d3e9e8f877c62c1aa4a
 msgid ""
 "Returns the :ref:`FmodAudioEffect<class_FmodAudioEffect>` at the specified ``index`` in the "
 "effect chain."
 msgstr "返回效果链中指定索引处的    :ref:`FmodAudioEffect<class_FmodAudioEffect>`"
 
-#: ../../source/classes/class_fmodaudiobus.rst:324 5ade415119b24776ba14c15a005255c1
+#: ../../source/classes/class_fmodaudiobus.rst:299 8657b9d6a33c4ddba26bb6a4450fc43d
 msgid "Returns ``null`` if the index is out of bounds."
 msgstr "索引越界时返回    ``null``   。"
 
-#: ../../source/classes/class_fmodaudiobus.rst:336 47ce67f60e684564b450399d664a68ea
-msgid "|void| **set_volume_db**\\ (\\ volume_db\\: :ref:`float<class_float>`\\ )"
-msgstr "|void| **set_volume_db**\\ (\\ volume_db\\: :ref:`float<class_float>`\\ )"
-
-#: ../../source/classes/class_fmodaudiobus.rst:338 5b6fcb85768d4a109922297b93bdb16d
+#: ../../source/classes/class_fmodaudiobus.rst:311 590b3d869550445daf4d6944de5b98ef
 msgid "Sets the volume of this bus in decibels."
 msgstr "设置总线音量，单位为分贝"
 
-#: ../../source/classes/class_fmodaudiobus.rst:340 bc2bd1ac613c4e249da2d8b29ff4517f
+#: ../../source/classes/class_fmodaudiobus.rst:313 481d8811a2c240b3a1210881f5b28800
 msgid "The default value is ``0.0`` dB (unity gain)."
 msgstr "默认值为    ``0.0``    dB，即单位增益。"
 
-#: ../../source/classes/class_fmodaudiobus.rst:352 0dd9dbec4c1c4a979ce54549c7f327ca
-msgid ":ref:`float<class_float>` **get_volume_db**\\ (\\ ) |const|"
-msgstr ":ref:`float<class_float>` **get_volume_db**\\ (\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiobus.rst:354 2ae15683e93d48da9dd58bb3b789978d
+#: ../../source/classes/class_fmodaudiobus.rst:325 a9d1536a63a44ccfa5c7ab3ed51ab40c
 msgid "Returns the volume of this bus in decibels."
 msgstr "返回总线音量，单位为分贝"
 
-#: ../../source/classes/class_fmodaudiobus.rst:396 41471774b8714ab2be15971c34b6175e
-msgid "|void| **apply_mute**\\ (\\ mute\\: :ref:`bool<class_bool>`\\ )"
-msgstr "|void| **apply_mute**\\ (\\ mute\\: :ref:`bool<class_bool>`\\ )"
-
-#: ../../source/classes/class_fmodaudiobus.rst:474 12c58bf733e7499db1a37fc798fb8c25
-msgid "|void| **sync_bypass**\\ (\\ )"
-msgstr "|void| **sync_bypass**\\ (\\ )"
-
-#: ../../source/classes/class_fmodaudiobus.rst:123 292b8dfcf15e407e9984a431f9fc16c6
-msgid "Bus volume in decibels. A value of ``0.0`` is unity gain."
-msgstr "总线音量，单位为分贝。\\  ``0.0``  表示单位增益。"
-
-#: ../../source/classes/class_fmodaudiobus.rst:231 e93f9e740fdd486e8149d3131d55904e
-msgid ""
-"Returns the explicitly stored parent channel group. This cache may differ from native routing"
-" after a layout synchronization. Query the channel group's "
-":ref:`FmodChannelGroup.get_parent_group()<class_FmodChannelGroup_method_get_parent_group>` "
-"for its current native parent."
-msgstr ""
-"返回显式保存的父通道组。布局同步后，该缓存可能与原生路由不同。可通过通道组的  "
-":ref:`FmodChannelGroup.get_parent_group()<class_FmodChannelGroup_method_get_parent_group>`  "
-"查询当前原生父级。"
-
-#: ../../source/classes/class_fmodaudiobus.rst:255 0fb57d285db243ee92891b9da5d28f92
-msgid ""
-"Removes this bus's effects and clears its channel-group references. Releases the native "
-"channel group for buses other than ``Master``."
-msgstr "移除此总线的效果器并清除通道组引用。总线名称不是  ``Master``  时，还会释放原生通道组。"
-
-#: ../../source/classes/class_fmodaudiobus.rst:267 de3d0197742e4d1cbaf1721f41be0248
-msgid "Inserts ``effect`` into the stored effect list at ``index`` and applies it to this bus."
-msgstr "将  ``effect``  插入保存的效果器列表中  ``index``  指定的位置，并应用到此总线。"
-
-#: ../../source/classes/class_fmodaudiobus.rst:269 5f5cc66cebe34d789ff4d0dd74313259
-msgid ""
-"The list index is clamped between ``0`` and "
-":ref:`get_effect_count()<class_FmodAudioBus_method_get_effect_count>`. It does not specify "
-"the FMOD DSP insertion position."
-msgstr ""
-"列表索引会限制在  ``0``  到  :ref:`get_effect_count()<class_FmodAudioBus_method_get_effect_count>`  "
-"之间，不用于指定 FMOD DSP 的插入位置。"
-
-#: ../../source/classes/class_fmodaudiobus.rst:345 f3e69c56a0c0400c8e697e22bf856eb9
+#: ../../source/classes/class_fmodaudiobus.rst:337 fdb1ff46662a48c8b22183fb69811824
 msgid ""
 "Stores the user mute flag. Call :ref:`apply_mute()<class_FmodAudioBus_method_apply_mute>` to "
 "apply it, or use "
-":ref:`FmodAudioBusLayout.set_bus_mute()<class_FmodAudioBusLayout_method_set_bus_mute>` to "
-"update muting across the layout."
+":ref:`FmodAudioBusLayout.set_bus_mute()<class_FmodAudioBusLayout_method_set_bus_mute>` to update "
+"muting across the layout."
 msgstr ""
 "保存用户静音标志。调用  :ref:`apply_mute()<class_FmodAudioBus_method_apply_mute>`  应用，或使用  "
 ":ref:`FmodAudioBusLayout.set_bus_mute()<class_FmodAudioBusLayout_method_set_bus_mute>`  "
 "更新布局中的静音状态。"
 
-#: ../../source/classes/class_fmodaudiobus.rst:357 fb364f7527b04d4383d1df55beb61c44
+#: ../../source/classes/class_fmodaudiobus.rst:349 aa5a308e665f4397aea3d49876868da3
 msgid "Returns the stored user mute flag. A bus can also be muted by another bus's solo state."
 msgstr "返回保存的用户静音标志。其他总线的独奏状态也可能使此总线静音。"
 
-#: ../../source/classes/class_fmodaudiobus.rst:369 91cd9161b73e47ae939bdc8fc63cea40
+#: ../../source/classes/class_fmodaudiobus.rst:359 86a97e52fdd0445596f0d93f5e6fff0d
+msgid "|void| **apply_mute**\\ (\\ mute\\: :ref:`bool<class_bool>`\\ )"
+msgstr "|void| **apply_mute**\\ (\\ mute\\: :ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobus.rst:361 0d6dc56ae1874483a56b4dd7d60be19c
 msgid ""
-"Applies the stored mute flag and solo state to the channel group. The ``mute`` argument means"
-" that any bus in the layout is soloed; this bus is muted when that argument is ``true`` and "
-"its own solo flag is ``false``."
+"Applies the stored mute flag and solo state to the channel group. The ``mute`` argument means "
+"that any bus in the layout is soloed; this bus is muted when that argument is ``true`` and its "
+"own solo flag is ``false``."
 msgstr "将保存的静音标志和独奏状态应用到通道组。\\  ``mute``  参数表示布局中存在独奏总线；此参数为  ``true``  且当前总线未独奏时，当前总线会被静音。"
 
-#: ../../source/classes/class_fmodaudiobus.rst:381 6412ec7551b74a9290db6f7864ff2c13
+#: ../../source/classes/class_fmodaudiobus.rst:373 ab19e1d4bde745d594137f2e8ad76ff5
 msgid ""
 "Stores the solo flag. Use "
-":ref:`FmodAudioBusLayout.set_bus_solo()<class_FmodAudioBusLayout_method_set_bus_solo>` to "
-"also recompute muting across the layout."
+":ref:`FmodAudioBusLayout.set_bus_solo()<class_FmodAudioBusLayout_method_set_bus_solo>` to also "
+"recompute muting across the layout."
 msgstr ""
-"保存独奏标志。使用  "
-":ref:`FmodAudioBusLayout.set_bus_solo()<class_FmodAudioBusLayout_method_set_bus_solo>`  "
-"可同时重新计算布局中的静音状态。"
+"保存独奏标志。使用  :ref:`FmodAudioBusLayout.set_bus_solo()<class_FmodAudioBusLayout_method_set_bus_solo>`"
+"  可同时重新计算布局中的静音状态。"
 
-#: ../../source/classes/class_fmodaudiobus.rst:405 56bac9aab001408b9f61b57e2af7b702
-msgid ""
-"Stores the bypass flag. Call :ref:`sync_bypass()<class_FmodAudioBus_method_sync_bypass>` to "
-"apply it to the channel group's DSPs."
-msgstr "保存旁路标志。调用  :ref:`sync_bypass()<class_FmodAudioBus_method_sync_bypass>`  将其应用到通道组的 DSP。"
-
-#: ../../source/classes/class_fmodaudiobus.rst:417 1a5a93a83a1c40f09aef70027bfac521
-msgid ""
-"Returns the stored bypass flag. :ref:`sync_bypass()<class_FmodAudioBus_method_sync_bypass>` "
-"applies this flag to the channel group's DSPs."
-msgstr "返回保存的旁路标志。\\  :ref:`sync_bypass()<class_FmodAudioBus_method_sync_bypass>`  会将该标志应用到通道组的 DSP。"
-
-#: ../../source/classes/class_fmodaudiobus.rst:429 2cb87c206e544c079618cf7bdf77ba57
-msgid "Applies the stored bypass flag to every DSP currently in this bus's channel group."
-msgstr "将保存的旁路标志应用到此总线通道组中的每个 DSP。"
-
-#: ../../source/classes/class_fmodaudiobus.rst:393 0cfb9e09e131494a8754237ad69417bb
+#: ../../source/classes/class_fmodaudiobus.rst:385 17545a2b5a06459395561c2c811c2d75
 msgid ""
 "Returns the stored solo flag, independently of the user mute flag. Use "
-":ref:`FmodAudioBusLayout.set_bus_solo()<class_FmodAudioBusLayout_method_set_bus_solo>` to "
-"apply solo muting across the layout."
+":ref:`FmodAudioBusLayout.set_bus_solo()<class_FmodAudioBusLayout_method_set_bus_solo>` to apply "
+"solo muting across the layout."
 msgstr ""
 "返回保存的独奏标志，不受用户静音标志影响。可通过  "
 ":ref:`FmodAudioBusLayout.set_bus_solo()<class_FmodAudioBusLayout_method_set_bus_solo>`  "
 "将独奏静音状态应用到整个布局。"
+
+#: ../../source/classes/class_fmodaudiobus.rst:397 412a1f78220c4eb1a09b170777e8387d
+msgid ""
+"Stores the runtime bypass flag. Call :ref:`sync_bypass()<class_FmodAudioBus_method_sync_bypass>` "
+"to apply it to this bus's effect instances. For layout-managed slots, use "
+":ref:`FmodAudioBusLayout.set_bus_bypass()<class_FmodAudioBusLayout_method_set_bus_bypass>` so "
+"slot enable flags are also respected."
+msgstr ""
+"保存运行时旁路标记，调用 :ref:`FmodAudioBus.sync_bypass()<class_FmodAudioBus_method_sync_bypass>` "
+"后应用到总线效果器实例。对于布局管理的槽位，使用 "
+":ref:`FmodAudioBusLayout.set_bus_bypass()<class_FmodAudioBusLayout_method_set_bus_bypass>`，以同时遵循槽位启用状态。"
+
+#: ../../source/classes/class_fmodaudiobus.rst:409 9ba70e5ef2d54c9e93343e0acff32c1b
+msgid ""
+"Returns the stored runtime bypass flag. "
+":ref:`sync_bypass()<class_FmodAudioBus_method_sync_bypass>` applies it to this bus's effect "
+"instances."
+msgstr ""
+"返回保存的运行时旁路标记。:ref:`FmodAudioBus.sync_bypass()<class_FmodAudioBus_method_sync_bypass>` "
+"将其应用到总线效果器实例。"
+
+#: ../../source/classes/class_fmodaudiobus.rst:419 4aa2da98c2824e81884c8d5e10d3d854
+msgid "|void| **sync_bypass**\\ (\\ )"
+msgstr "|void| **sync_bypass**\\ (\\ )"
+
+#: ../../source/classes/class_fmodaudiobus.rst:421 90655c352665482d8d50415eeadca18d
+msgid ""
+"Applies the stored bypass flag to the DSP chains of this bus's stored effect instances. The "
+"channel-group fader and DSPs added separately through low-level APIs are unchanged. Use "
+":ref:`FmodAudioBusLayout.set_bus_bypass()<class_FmodAudioBusLayout_method_set_bus_bypass>` to "
+"combine bus bypass with each managed slot's enabled state."
+msgstr ""
+"将保存的旁路标记应用到总线所保存效果器实例的 DSP 链。通道组音量推子及通过低层 API 单独添加的 DSP 保持原状。通过 "
+":ref:`FmodAudioBusLayout.set_bus_bypass()<class_FmodAudioBusLayout_method_set_bus_bypass>` "
+"同时处理总线旁路与受管槽位的启用状态。"

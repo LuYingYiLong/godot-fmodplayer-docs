@@ -61,9 +61,7 @@ Bus
 
 Bus 即音频总线，用来把一组声音集中到同一个混音路径上。常见总线包括 ``Music``、``SFX``、``Voice`` 和 ``Ambient``。
 
-Godot-FmodPlayer 会把 Godot 的 `AudioServer`_ 总线结构同步为 :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`，
-并用 :ref:`FmodAudioBus<class_FmodAudioBus>` / :ref:`FmodChannelGroup<class_FmodChannelGroup>` 管理实际混音。
-这样可以用类似 Godot 原生音频总线的方式控制 FMOD 声音，同时仍然使用 FMOD 的 DSP、通道组和性能数据。
+默认开启 ``audio/fmod/sync_godot_audio_buses``，将 Godot 的 `AudioServer`_ 配置同步到 FMOD。关闭同步并重新加载项目后，可在 FMOD Audio 面板中编辑独立的 :ref:`FmodAudioBusLayout<class_FmodAudioBusLayout>`。:ref:`FmodAudioBus<class_FmodAudioBus>` 和 :ref:`FmodChannelGroup<class_FmodChannelGroup>` 管理实际混音，详见 :ref:`混音系统<mixer>`。
 
 .. _glossary-channel:
 

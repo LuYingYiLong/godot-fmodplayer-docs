@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Godot FmodPlayer \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-26 13:51+0800\n"
+"POT-Creation-Date: 2026-10-30 23:43+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:12 b7044a6c64814b9ea3257f9e4d11c26b
+#: ../../source/classes/class_fmodaudiobuslayout.rst:10 0389747322774b6fa8f23675a809356c
 msgid "FmodAudioBusLayout"
 msgstr "FmodAudioBusLayout"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:14 4df1f7f6b2544053b9518f22622b28ed
+#: ../../source/classes/class_fmodaudiobuslayout.rst:12 5b3808c8e1d74bd8b7eb569ac845a81f
 msgid ""
 "**Inherits:** :ref:`Resource<class_Resource>` **<** :ref:`RefCounted<class_RefCounted>` **<** "
 ":ref:`Object<class_Object>`"
@@ -30,436 +30,793 @@ msgstr ""
 "**继承：** :ref:`Resource<class_Resource>` **<** :ref:`RefCounted<class_RefCounted>` **<** "
 ":ref:`Object<class_Object>`"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:16 35f1719536d0468d8ed890d532df8d39
-msgid "Manages the layout and hierarchy of audio buses."
-msgstr "管理音频总线的布局和层级"
+#: ../../source/classes/class_fmodaudiobuslayout.rst:14 5be032dfd1514ff5b76c8fd23c7d993f
+msgid "Serializable configuration for FMOD audio buses and effect slots."
+msgstr "FMOD 音频总线与效果器槽位的可序列化配置。"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:21 6a0ae933753442eb92b1c5dabab1914f
+#: ../../source/classes/class_fmodaudiobuslayout.rst:19 0178e9e320724388bc43be4a273223de
 msgid "Description"
 msgstr "描述"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:40 2443df9626304b1da2be40dd740cc572
+#: ../../source/classes/class_fmodaudiobuslayout.rst:21 38e6628a24334edea625e7c618f3ec52
+msgid ""
+"Stores bus configuration in display order. Bus and effect-slot IDs are stable identifiers, "
+"separate from array indices. ``Master`` has ID ``0`` and remains first. Sends can target any bus "
+"without creating a cycle; moving a bus changes only its display order."
+msgstr "按显示顺序保存总线配置。总线和效果器槽位使用稳定 ID，与数组索引分别管理。``Master`` 的 ID 为 ``0``，始终位于首项。发送可指向任意无环目标；移动总线只改变显示顺序。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:23 8d729bb85e734b00bd5ecb18aac6a78e
+msgid ""
+"Load and save layouts with :ref:`ResourceLoader<class_ResourceLoader>` and "
+":ref:`ResourceSaver<class_ResourceSaver>`. The resource stores a format version and dynamic "
+"properties such as ``bus/0/name`` and ``bus/0/effect/0/effect``. Channel groups, DSP instances, "
+"metering data, and capture buffers belong to the runtime managed by "
+":ref:`FmodServer<class_FmodServer>`."
+msgstr ""
+"通过 :ref:`ResourceLoader<class_ResourceLoader>` 和 :ref:`ResourceSaver<class_ResourceSaver>` "
+"加载、保存布局。资源保存格式版本及 ``bus/0/name``、``bus/0/effect/0/effect`` 等动态属性。通道组、DSP 实例、电平数据及 Capture 缓冲由 "
+":ref:`FmodServer<class_FmodServer>` 管理的运行时持有。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:25 2459cac9769a4a689dae2fdb4e256821
+msgid ""
+"By default, ``audio/fmod/sync_godot_audio_buses`` is ``true``: Godot's "
+":ref:`AudioServer<class_AudioServer>` supplies the bus configuration. To author an independent "
+"layout, disable this setting and reload the project. ``audio/fmod/default_bus_layout`` defaults "
+"to ``res://default_fmod_bus_layout.tres``. A missing or invalid default falls back to an in-"
+"memory Master; load failures are reported."
+msgstr ""
+"``audio/fmod/sync_godot_audio_buses`` 默认为 ``true``，由 Godot 的 "
+":ref:`AudioServer<class_AudioServer>` "
+"提供总线配置。关闭此设置并重新加载项目后，可编辑独立布局。``audio/fmod/default_bus_layout`` 默认为 "
+"``res://default_fmod_bus_layout.tres``。默认布局缺失或无效时，回退到内存中的 Master，并报告加载错误。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:27 6cb7695c7d4a45f9bd217d9816b4d2b8
+msgid ""
+"The **FMOD Audio** editor Dock edits the active layout and saves configuration changes after a "
+"``0.8``-second delay. Loading another layout does not change the project default; use **FMOD > "
+"Set as Default** for that. The saved default reference uses a resource UID, and the export plugin"
+" includes the default layout and its dependencies."
+msgstr ""
+"**FMOD Audio** 编辑器面板编辑当前布局，配置修改在 ``0.8`` 秒后合并保存。加载其他布局会保留项目默认值；通过 **FMOD > Set as Default** "
+"将当前布局设为默认。保存的默认引用使用资源 UID，导出插件会包含默认布局及其依赖。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:29 ddf30d5297c64ebf99492f5a8d31e0dc
+msgid ""
+"In independent mode, the Dock displays levels for audio played inside the editor. It uses the "
+"native Audio panel's color settings, holds peaks for ``1.5`` seconds, and stops polling while "
+"hidden. Levels from a separate running game process are not displayed. In synchronization mode, "
+"the Dock shows a hint and an entry to open Godot's Audio panel; the FMOD bus controls and meters "
+"are hidden."
+msgstr ""
+"独立模式下，面板显示编辑器内播放音频的电平，沿用原生 Audio 面板的颜色设置，保持峰值 ``1.5`` 秒，隐藏时停止轮询。独立游戏进程的电平暂未接入。同步模式下，面板显示提示和打开 "
+"Godot Audio 面板的入口，并隐藏 FMOD 总线控件及电平表。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:31 822aeff00955499a938052d5e11d19fb
+msgid ""
+"Edit the layout returned by "
+":ref:`FmodServer.get_audio_bus_layout()<class_FmodServer_method_get_audio_bus_layout>` to update "
+"its bound runtime on the next server update. Call "
+":ref:`FmodServer.flush_bus_updates()<class_FmodServer_method_flush_bus_updates>` when immediate "
+"access to a new bus or slot is needed. Each slot has its own runtime effect; obtain it with "
+":ref:`FmodServer.get_bus_effect_instance()<class_FmodServer_method_get_bus_effect_instance>`. "
+"Direct runtime edits do not modify the configuration resource."
+msgstr ""
+"修改 :ref:`FmodServer.get_audio_bus_layout()<class_FmodServer_method_get_audio_bus_layout>` "
+"返回的布局，会在下一次服务器更新时应用到绑定的运行实例。需要立即访问新总线或槽位时，调用 "
+":ref:`FmodServer.flush_bus_updates()<class_FmodServer_method_flush_bus_updates>`。每个槽位都有独立效果器实例，通过"
+" :ref:`FmodServer.get_bus_effect_instance()<class_FmodServer_method_get_bus_effect_instance>` "
+"获取。直接修改运行时对象不会改变配置资源。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:35 cd4dde62cd5245cfbb19f1e1887d2f4d
+msgid ""
+"# Independent mode: Godot bus synchronization must be disabled\n"
+"var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()\n"
+"var music_id: int = layout.find_bus_id(&\"Music\")\n"
+"if music_id == -1:\n"
+"    music_id = layout.add_bus(&\"Music\")\n"
+"layout.set_bus_volume_db(music_id, -6.0)\n"
+"var slot_id: int = layout.add_bus_effect(music_id, FmodAudioEffectCapture.new())\n"
+"FmodServer.flush_bus_updates()\n"
+"var capture: FmodAudioEffectCapture = FmodServer.get_bus_effect_instance(music_id, slot_id) as "
+"FmodAudioEffectCapture"
+msgstr ""
+"# Independent mode: Godot bus synchronization must be disabled\n"
+"var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()\n"
+"var music_id: int = layout.find_bus_id(&\"Music\")\n"
+"if music_id == -1:\n"
+"    music_id = layout.add_bus(&\"Music\")\n"
+"layout.set_bus_volume_db(music_id, -6.0)\n"
+"var slot_id: int = layout.add_bus_effect(music_id, FmodAudioEffectCapture.new())\n"
+"FmodServer.flush_bus_updates()\n"
+"var capture: FmodAudioEffectCapture = FmodServer.get_bus_effect_instance(music_id, slot_id) as "
+"FmodAudioEffectCapture"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:48 10ec3f8504a44527835064a7582cb5be
 msgid "Methods"
 msgstr "方法"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:46
-#: ../../source/classes/class_fmodaudiobuslayout.rst:52
 #: ../../source/classes/class_fmodaudiobuslayout.rst:54
 #: ../../source/classes/class_fmodaudiobuslayout.rst:58
 #: ../../source/classes/class_fmodaudiobuslayout.rst:62
-#: ../../source/classes/class_fmodaudiobuslayout.rst:66
-#: ../../source/classes/class_fmodaudiobuslayout.rst:70
-#: ../../source/classes/class_fmodaudiobuslayout.rst:72
-#: ../../source/classes/class_fmodaudiobuslayout.rst:78 1e8b4076486b4d82ad58f70946703f90
-#: 2172fe3cbbf7433bac5e7a6425ed427e 340688c3b72f45a689eb1e9c6affb864 4c9e5cc1d04b43018af3c7bc9ff0bd51
-#: 79149b99022e4dd496c59894476e4407 957eb6d96c0d406588bca29db2b043d4 ab97e78533f842aaa9bc399acead083c
-#: bd3744779431481ba80d073ce4f2a293 f39916a7496d42e28566d22c9aae2e35
-msgid "|void|"
-msgstr "|void|"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:46 c4f257610d3a425f8172a6bdb7613d31
-msgid ""
-":ref:`create_audio_bus<class_FmodAudioBusLayout_method_create_audio_bus>`\\ (\\ name\\: "
-":ref:`String<class_String>`, parent\\: :ref:`FmodAudioBus<class_FmodAudioBus>` = null\\ )"
-msgstr ""
-":ref:`create_audio_bus<class_FmodAudioBusLayout_method_create_audio_bus>`\\ (\\ name\\: "
-":ref:`String<class_String>`, parent\\: :ref:`FmodAudioBus<class_FmodAudioBus>` = null\\ )"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:48 3fc70c80428845ee9b4574bd3ccb47fc
-msgid ":ref:`FmodAudioBus<class_FmodAudioBus>`"
-msgstr ":ref:`FmodAudioBus<class_FmodAudioBus>`"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:48 83c1e96f38b443259a7077a0100d07f6
-msgid ""
-":ref:`get_audio_bus<class_FmodAudioBusLayout_method_get_audio_bus>`\\ (\\ name\\: "
-":ref:`String<class_String>`\\ ) |const|"
-msgstr ""
-":ref:`get_audio_bus<class_FmodAudioBusLayout_method_get_audio_bus>`\\ (\\ name\\: "
-":ref:`String<class_String>`\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:50
-#: ../../source/classes/class_fmodaudiobuslayout.rst:60
-#: ../../source/classes/class_fmodaudiobuslayout.rst:64
-#: ../../source/classes/class_fmodaudiobuslayout.rst:68
-#: ../../source/classes/class_fmodaudiobuslayout.rst:80 1c2a3b1dfa7f40b09bb230f13b2be2da
-#: bf8f4f0aa3a04a04a48f67da4796b98b c04a0eb7c57f477e9e697bc61f505f4e caa5bd345852472a875a6a1b6b6b2c16
-#: ea8781d4107c488aadf99600da4c3cbc
-msgid ":ref:`bool<class_bool>`"
-msgstr ":ref:`bool<class_bool>`"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:50 b8a9ad4804f94763a950d95c02892a9e
-msgid ""
-":ref:`has_audio_bus<class_FmodAudioBusLayout_method_has_audio_bus>`\\ (\\ name\\: "
-":ref:`String<class_String>`\\ ) |const|"
-msgstr ""
-":ref:`has_audio_bus<class_FmodAudioBusLayout_method_has_audio_bus>`\\ (\\ name\\: "
-":ref:`String<class_String>`\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:52 8d91964e5cf545589ff9f7f30e6dc8c3
-msgid ""
-":ref:`remove_audio_bus<class_FmodAudioBusLayout_method_remove_audio_bus>`\\ (\\ name\\: "
-":ref:`String<class_String>`\\ )"
-msgstr ""
-":ref:`remove_audio_bus<class_FmodAudioBusLayout_method_remove_audio_bus>`\\ (\\ name\\: "
-":ref:`String<class_String>`\\ )"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:54 3877d5ff007f4614983c864a8bdaf542
-msgid ""
-":ref:`set_bus_volume<class_FmodAudioBusLayout_method_set_bus_volume>`\\ (\\ name\\: "
-":ref:`String<class_String>`, volume_db\\: :ref:`float<class_float>`\\ )"
-msgstr ""
-":ref:`set_bus_volume<class_FmodAudioBusLayout_method_set_bus_volume>`\\ (\\ name\\: "
-":ref:`String<class_String>`, volume_db\\: :ref:`float<class_float>`\\ )"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:56 ae85fd1e946542d1849770ac286b83c3
-msgid ":ref:`float<class_float>`"
-msgstr ":ref:`float<class_float>`"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:56 6638012a66dd4d71a9c3ed0ed477be0e
-msgid ""
-":ref:`get_bus_volume<class_FmodAudioBusLayout_method_get_bus_volume>`\\ (\\ name\\: "
-":ref:`String<class_String>`\\ ) |const|"
-msgstr ""
-":ref:`get_bus_volume<class_FmodAudioBusLayout_method_get_bus_volume>`\\ (\\ name\\: "
-":ref:`String<class_String>`\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:58 25620ff1c9bd4195ba732548a0d72a99
-msgid ""
-":ref:`set_bus_solo<class_FmodAudioBusLayout_method_set_bus_solo>`\\ (\\ name\\: "
-":ref:`String<class_String>`, mute\\: :ref:`bool<class_bool>`\\ )"
-msgstr ""
-":ref:`set_bus_solo<class_FmodAudioBusLayout_method_set_bus_solo>`\\ (\\ name\\: "
-":ref:`String<class_String>`, mute\\: :ref:`bool<class_bool>`\\ )"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:60 e65c690367644395ad4f1182469f82bc
-msgid ""
-":ref:`bus_is_solo<class_FmodAudioBusLayout_method_bus_is_solo>`\\ (\\ name\\: "
-":ref:`String<class_String>`\\ ) |const|"
-msgstr ""
-":ref:`bus_is_solo<class_FmodAudioBusLayout_method_bus_is_solo>`\\ (\\ name\\: "
-":ref:`String<class_String>`\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:62 da4d4b0a8934487ab973630534544cbd
-msgid ""
-":ref:`set_bus_mute<class_FmodAudioBusLayout_method_set_bus_mute>`\\ (\\ name\\: "
-":ref:`String<class_String>`, mute\\: :ref:`bool<class_bool>`\\ )"
-msgstr ""
-":ref:`set_bus_mute<class_FmodAudioBusLayout_method_set_bus_mute>`\\ (\\ name\\: "
-":ref:`String<class_String>`, mute\\: :ref:`bool<class_bool>`\\ )"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:64 10c39e5cb3784287a9cf400ff1675b70
-msgid ""
-":ref:`bus_is_mute<class_FmodAudioBusLayout_method_bus_is_mute>`\\ (\\ name\\: "
-":ref:`String<class_String>`\\ ) |const|"
-msgstr ""
-":ref:`bus_is_mute<class_FmodAudioBusLayout_method_bus_is_mute>`\\ (\\ name\\: "
-":ref:`String<class_String>`\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:66 e8c4fc160834479f96a792c24fb6666e
-msgid ""
-":ref:`set_bus_bypass<class_FmodAudioBusLayout_method_set_bus_bypass>`\\ (\\ name\\: "
-":ref:`String<class_String>`, mute\\: :ref:`bool<class_bool>`\\ )"
-msgstr ""
-":ref:`set_bus_bypass<class_FmodAudioBusLayout_method_set_bus_bypass>`\\ (\\ name\\: "
-":ref:`String<class_String>`, mute\\: :ref:`bool<class_bool>`\\ )"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:68 6edecdad5a5440798b2f82d2a07db7b6
-msgid ""
-":ref:`bus_is_bypass<class_FmodAudioBusLayout_method_bus_is_bypass>`\\ (\\ name\\: "
-":ref:`String<class_String>`\\ ) |const|"
-msgstr ""
-":ref:`bus_is_bypass<class_FmodAudioBusLayout_method_bus_is_bypass>`\\ (\\ name\\: "
-":ref:`String<class_String>`\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:70 fdb25fb2df7749a2a5273e67c06f60ad
-msgid ""
-":ref:`add_bus_effect<class_FmodAudioBusLayout_method_add_bus_effect>`\\ (\\ bus_name\\: "
-":ref:`String<class_String>`, effect\\: :ref:`FmodAudioEffect<class_FmodAudioEffect>`, index\\: "
-":ref:`int<class_int>` = 0\\ )"
-msgstr ""
-":ref:`add_bus_effect<class_FmodAudioBusLayout_method_add_bus_effect>`\\ (\\ bus_name\\: "
-":ref:`String<class_String>`, effect\\: :ref:`FmodAudioEffect<class_FmodAudioEffect>`, index\\: "
-":ref:`int<class_int>` = 0\\ )"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:72 7e8f4ce2e8f244ef9bf90744e7b39a4f
-msgid ""
-":ref:`remove_bus_effect<class_FmodAudioBusLayout_method_remove_bus_effect>`\\ (\\ bus_name\\: "
-":ref:`String<class_String>`, index\\: :ref:`int<class_int>`\\ )"
-msgstr ""
-":ref:`remove_bus_effect<class_FmodAudioBusLayout_method_remove_bus_effect>`\\ (\\ bus_name\\: "
-":ref:`String<class_String>`, index\\: :ref:`int<class_int>`\\ )"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:74 603090ffe73c426490c6699e57aaeead
+#: ../../source/classes/class_fmodaudiobuslayout.rst:74
+#: ../../source/classes/class_fmodaudiobuslayout.rst:92 15c9bf7a7bf04b3daf1265c4b12a7c28
+#: 35ab7ca008594ef184d797e1283ce450 3661ebab5385443eb9499146136f987a 8e1fb32b33c84861aa496203196cf2ef
+#: c7ab4083c1034ca38b31f453fb7f573e
 msgid ":ref:`int<class_int>`"
 msgstr ":ref:`int<class_int>`"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:74 f930688fd2b3407686fd0b6535ae1dc0
-msgid ""
-":ref:`get_bus_effect_count<class_FmodAudioBusLayout_method_get_bus_effect_count>`\\ (\\ "
-"bus_name\\: :ref:`String<class_String>`\\ ) |const|"
-msgstr ""
-":ref:`get_bus_effect_count<class_FmodAudioBusLayout_method_get_bus_effect_count>`\\ (\\ "
-"bus_name\\: :ref:`String<class_String>`\\ ) |const|"
+#: ../../source/classes/class_fmodaudiobuslayout.rst:54 ace048bde27c48e6920f1a69ee7712a6
+msgid ":ref:`get_bus_count<class_FmodAudioBusLayout_method_get_bus_count>`\\ (\\ ) |const|"
+msgstr ":ref:`get_bus_count<class_FmodAudioBusLayout_method_get_bus_count>`\\ (\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:76 7f4e375bb4b3461aa846a2d6c611f998
+#: ../../source/classes/class_fmodaudiobuslayout.rst:56
+#: ../../source/classes/class_fmodaudiobuslayout.rst:104 90c3b1470e1441d0bc0087849e05dc15
+#: f49cebb5e08e4043ac0168694a3f8ece
+msgid ":ref:`PackedInt64Array<class_PackedInt64Array>`"
+msgstr ":ref:`PackedInt64Array<class_PackedInt64Array>`"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:56 c65cdfde013a4754b944ce7d87ca8c27
+msgid ":ref:`get_bus_ids<class_FmodAudioBusLayout_method_get_bus_ids>`\\ (\\ ) |const|"
+msgstr ":ref:`get_bus_ids<class_FmodAudioBusLayout_method_get_bus_ids>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:58 69376ec4ab44415cae63681302a474c5
+msgid ""
+":ref:`find_bus_id<class_FmodAudioBusLayout_method_find_bus_id>`\\ (\\ name\\: "
+":ref:`StringName<class_StringName>`\\ ) |const|"
+msgstr ""
+":ref:`find_bus_id<class_FmodAudioBusLayout_method_find_bus_id>`\\ (\\ name\\: "
+":ref:`StringName<class_StringName>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:60 0918e4d992714f4ba131bc9dca331f32
+msgid ":ref:`StringName<class_StringName>`"
+msgstr ":ref:`StringName<class_StringName>`"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:60 6bb1fdf4e58542f3bf7a9865077df56f
+msgid ""
+":ref:`get_bus_name<class_FmodAudioBusLayout_method_get_bus_name>`\\ (\\ id\\: "
+":ref:`int<class_int>`\\ ) |const|"
+msgstr ""
+":ref:`get_bus_name<class_FmodAudioBusLayout_method_get_bus_name>`\\ (\\ id\\: "
+":ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:62 ec61eb3cadc64f778185795190366a1d
+msgid ""
+":ref:`add_bus<class_FmodAudioBusLayout_method_add_bus>`\\ (\\ name\\: "
+":ref:`StringName<class_StringName>`, send_id\\: :ref:`int<class_int>` = 0\\ )"
+msgstr ""
+":ref:`add_bus<class_FmodAudioBusLayout_method_add_bus>`\\ (\\ name\\: "
+":ref:`StringName<class_StringName>`, send_id\\: :ref:`int<class_int>` = 0\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:64
+#: ../../source/classes/class_fmodaudiobuslayout.rst:66
+#: ../../source/classes/class_fmodaudiobuslayout.rst:68
+#: ../../source/classes/class_fmodaudiobuslayout.rst:72
+#: ../../source/classes/class_fmodaudiobuslayout.rst:94
+#: ../../source/classes/class_fmodaudiobuslayout.rst:96
+#: ../../source/classes/class_fmodaudiobuslayout.rst:106
+#: ../../source/classes/class_fmodaudiobuslayout.rst:110 12d2f4354b394ef98e51b4dbce8d3281
+#: 6cceda4ae6ee468495eb0ecb3852108f 814388ae758447678defb2dcbf0cb95f ac2984aa89b3448b83fe31ee18c61c12
+#: b7faeb3c0f6e4c0b872b7d7a7b5ecee4 c77c716fa143449aa1a89cfe375f990d dd8c3e9579984ff8852ce4627a504379
+#: f8bee53dfd414585b382e5e7002ba8a3
+msgid ":ref:`Error<enum_@GlobalScope_Error>`"
+msgstr ":ref:`Error<enum_@GlobalScope_Error>`"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:64 78bd0aad53574c658e4590470c6e95cc
+msgid ""
+":ref:`remove_bus<class_FmodAudioBusLayout_method_remove_bus>`\\ (\\ id\\: :ref:`int<class_int>`\\"
+" )"
+msgstr ""
+":ref:`remove_bus<class_FmodAudioBusLayout_method_remove_bus>`\\ (\\ id\\: :ref:`int<class_int>`\\"
+" )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:66 1d044b4bb5c148a7b6608d0b8ce392c3
+msgid ""
+":ref:`move_bus<class_FmodAudioBusLayout_method_move_bus>`\\ (\\ id\\: :ref:`int<class_int>`, "
+"index\\: :ref:`int<class_int>`\\ )"
+msgstr ""
+":ref:`move_bus<class_FmodAudioBusLayout_method_move_bus>`\\ (\\ id\\: :ref:`int<class_int>`, "
+"index\\: :ref:`int<class_int>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:68 f7c29011cde9403c8c1f49d4afa0cc75
+msgid ""
+":ref:`rename_bus<class_FmodAudioBusLayout_method_rename_bus>`\\ (\\ id\\: :ref:`int<class_int>`, "
+"name\\: :ref:`StringName<class_StringName>`\\ )"
+msgstr ""
+":ref:`rename_bus<class_FmodAudioBusLayout_method_rename_bus>`\\ (\\ id\\: :ref:`int<class_int>`, "
+"name\\: :ref:`StringName<class_StringName>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:70
+#: ../../source/classes/class_fmodaudiobuslayout.rst:82
+#: ../../source/classes/class_fmodaudiobuslayout.rst:86
+#: ../../source/classes/class_fmodaudiobuslayout.rst:90
+#: ../../source/classes/class_fmodaudiobuslayout.rst:100 22e72ec42af749f59c714b312a047d5b
+#: 2638a47c0f3345639f40eccac50402e4 360002c30e2c42c3b18a664ea8f60faf 3a89dfe0c9ab4edcbf2cdd8157a3c3c1
+#: 48fbbb9d750e41f0964b3b74a94d5b6d
+msgid ":ref:`bool<class_bool>`"
+msgstr ":ref:`bool<class_bool>`"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:70 eedda2121b054ca188089a9a4f6f1adf
+msgid ""
+":ref:`can_send_to<class_FmodAudioBusLayout_method_can_send_to>`\\ (\\ id\\: "
+":ref:`int<class_int>`, target\\: :ref:`int<class_int>`\\ ) |const|"
+msgstr ""
+":ref:`can_send_to<class_FmodAudioBusLayout_method_can_send_to>`\\ (\\ id\\: "
+":ref:`int<class_int>`, target\\: :ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:72 b97c8f0a59254da6bab047c3e7f9772f
+msgid ""
+":ref:`set_bus_send<class_FmodAudioBusLayout_method_set_bus_send>`\\ (\\ id\\: "
+":ref:`int<class_int>`, target\\: :ref:`int<class_int>`\\ )"
+msgstr ""
+":ref:`set_bus_send<class_FmodAudioBusLayout_method_set_bus_send>`\\ (\\ id\\: "
+":ref:`int<class_int>`, target\\: :ref:`int<class_int>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:74 a092ae1ab34348bcb485ce14505d3807
+msgid ""
+":ref:`get_bus_send<class_FmodAudioBusLayout_method_get_bus_send>`\\ (\\ id\\: "
+":ref:`int<class_int>`\\ ) |const|"
+msgstr ""
+":ref:`get_bus_send<class_FmodAudioBusLayout_method_get_bus_send>`\\ (\\ id\\: "
+":ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:76
+#: ../../source/classes/class_fmodaudiobuslayout.rst:80
+#: ../../source/classes/class_fmodaudiobuslayout.rst:84
+#: ../../source/classes/class_fmodaudiobuslayout.rst:88
+#: ../../source/classes/class_fmodaudiobuslayout.rst:98 1b8cc0c8c25940efaf24d67c3a887795
+#: 2b7f759fe3454e92a3a32ce58f3f20bd b2c85e8917ed4a399701d48cc63025de d9902d0ae29f4ba084e84976e8821cb4
+#: e52bbf2772224d7387cf0ac80a195fbc
+msgid "|void|"
+msgstr "|void|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:76 65d97dbc956a4dd081c29c6937135221
+msgid ""
+":ref:`set_bus_volume_db<class_FmodAudioBusLayout_method_set_bus_volume_db>`\\ (\\ id\\: "
+":ref:`int<class_int>`, volume_db\\: :ref:`float<class_float>`\\ )"
+msgstr ""
+":ref:`set_bus_volume_db<class_FmodAudioBusLayout_method_set_bus_volume_db>`\\ (\\ id\\: "
+":ref:`int<class_int>`, volume_db\\: :ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:78 f84c04ad0c8e40dbaf22a50d11701a77
+msgid ":ref:`float<class_float>`"
+msgstr ":ref:`float<class_float>`"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:78 c667895a706c4150b4617ea9f9decca0
+msgid ""
+":ref:`get_bus_volume_db<class_FmodAudioBusLayout_method_get_bus_volume_db>`\\ (\\ id\\: "
+":ref:`int<class_int>`\\ ) |const|"
+msgstr ""
+":ref:`get_bus_volume_db<class_FmodAudioBusLayout_method_get_bus_volume_db>`\\ (\\ id\\: "
+":ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:80 8b439c7603604c86ac0e9bbb74b25745
+msgid ""
+":ref:`set_bus_mute<class_FmodAudioBusLayout_method_set_bus_mute>`\\ (\\ id\\: "
+":ref:`int<class_int>`, mute\\: :ref:`bool<class_bool>`\\ )"
+msgstr ""
+":ref:`set_bus_mute<class_FmodAudioBusLayout_method_set_bus_mute>`\\ (\\ id\\: "
+":ref:`int<class_int>`, mute\\: :ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:82 4b19746fda3248eca18b79d7e1af6299
+msgid ""
+":ref:`is_bus_mute<class_FmodAudioBusLayout_method_is_bus_mute>`\\ (\\ id\\: "
+":ref:`int<class_int>`\\ ) |const|"
+msgstr ""
+":ref:`is_bus_mute<class_FmodAudioBusLayout_method_is_bus_mute>`\\ (\\ id\\: "
+":ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:84 ab08bbddb2324b99a10f599cf3f259d7
+msgid ""
+":ref:`set_bus_solo<class_FmodAudioBusLayout_method_set_bus_solo>`\\ (\\ id\\: "
+":ref:`int<class_int>`, solo\\: :ref:`bool<class_bool>`\\ )"
+msgstr ""
+":ref:`set_bus_solo<class_FmodAudioBusLayout_method_set_bus_solo>`\\ (\\ id\\: "
+":ref:`int<class_int>`, solo\\: :ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:86 97cbb0da0de54c60acb2096087107254
+msgid ""
+":ref:`is_bus_solo<class_FmodAudioBusLayout_method_is_bus_solo>`\\ (\\ id\\: "
+":ref:`int<class_int>`\\ ) |const|"
+msgstr ""
+":ref:`is_bus_solo<class_FmodAudioBusLayout_method_is_bus_solo>`\\ (\\ id\\: "
+":ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:88 05bf916da5694c22bbda052b48e453e1
+msgid ""
+":ref:`set_bus_bypass<class_FmodAudioBusLayout_method_set_bus_bypass>`\\ (\\ id\\: "
+":ref:`int<class_int>`, bypass\\: :ref:`bool<class_bool>`\\ )"
+msgstr ""
+":ref:`set_bus_bypass<class_FmodAudioBusLayout_method_set_bus_bypass>`\\ (\\ id\\: "
+":ref:`int<class_int>`, bypass\\: :ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:90 606a06195bcf4f91a06ad23842884616
+msgid ""
+":ref:`is_bus_bypass<class_FmodAudioBusLayout_method_is_bus_bypass>`\\ (\\ id\\: "
+":ref:`int<class_int>`\\ ) |const|"
+msgstr ""
+":ref:`is_bus_bypass<class_FmodAudioBusLayout_method_is_bus_bypass>`\\ (\\ id\\: "
+":ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:92 cfc4b376517d49109b8696c66edfd90d
+msgid ""
+":ref:`add_bus_effect<class_FmodAudioBusLayout_method_add_bus_effect>`\\ (\\ bus_id\\: "
+":ref:`int<class_int>`, effect\\: :ref:`FmodAudioEffect<class_FmodAudioEffect>`, index\\: "
+":ref:`int<class_int>` = -1\\ )"
+msgstr ""
+":ref:`add_bus_effect<class_FmodAudioBusLayout_method_add_bus_effect>`\\ (\\ bus_id\\: "
+":ref:`int<class_int>`, effect\\: :ref:`FmodAudioEffect<class_FmodAudioEffect>`, index\\: "
+":ref:`int<class_int>` = -1\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:94 eaf25c9492fd478e8c4b40ffb278f13d
+msgid ""
+":ref:`remove_bus_effect<class_FmodAudioBusLayout_method_remove_bus_effect>`\\ (\\ bus_id\\: "
+":ref:`int<class_int>`, slot_id\\: :ref:`int<class_int>`\\ )"
+msgstr ""
+":ref:`remove_bus_effect<class_FmodAudioBusLayout_method_remove_bus_effect>`\\ (\\ bus_id\\: "
+":ref:`int<class_int>`, slot_id\\: :ref:`int<class_int>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:96 3374e87f73504231ab199c0f4638b1cf
+msgid ""
+":ref:`move_bus_effect<class_FmodAudioBusLayout_method_move_bus_effect>`\\ (\\ bus_id\\: "
+":ref:`int<class_int>`, slot_id\\: :ref:`int<class_int>`, target_bus\\: :ref:`int<class_int>`, "
+"index\\: :ref:`int<class_int>`\\ )"
+msgstr ""
+":ref:`move_bus_effect<class_FmodAudioBusLayout_method_move_bus_effect>`\\ (\\ bus_id\\: "
+":ref:`int<class_int>`, slot_id\\: :ref:`int<class_int>`, target_bus\\: :ref:`int<class_int>`, "
+"index\\: :ref:`int<class_int>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:98 6a3d231e2fae4a1896fcdf8acee871d2
+msgid ""
+":ref:`set_bus_effect_enabled<class_FmodAudioBusLayout_method_set_bus_effect_enabled>`\\ (\\ "
+"bus_id\\: :ref:`int<class_int>`, slot_id\\: :ref:`int<class_int>`, enabled\\: "
+":ref:`bool<class_bool>`\\ )"
+msgstr ""
+":ref:`set_bus_effect_enabled<class_FmodAudioBusLayout_method_set_bus_effect_enabled>`\\ (\\ "
+"bus_id\\: :ref:`int<class_int>`, slot_id\\: :ref:`int<class_int>`, enabled\\: "
+":ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:100 d80b0234625747ee82caaf9d1312c445
+msgid ""
+":ref:`is_bus_effect_enabled<class_FmodAudioBusLayout_method_is_bus_effect_enabled>`\\ (\\ "
+"bus_id\\: :ref:`int<class_int>`, slot_id\\: :ref:`int<class_int>`\\ ) |const|"
+msgstr ""
+":ref:`is_bus_effect_enabled<class_FmodAudioBusLayout_method_is_bus_effect_enabled>`\\ (\\ "
+"bus_id\\: :ref:`int<class_int>`, slot_id\\: :ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:102 38ed1cccc07d4bc096f228e2c45a1723
 msgid ":ref:`FmodAudioEffect<class_FmodAudioEffect>`"
 msgstr ":ref:`FmodAudioEffect<class_FmodAudioEffect>`"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:76 11e6812169f64dc8be2ff64ffc85b9c6
+#: ../../source/classes/class_fmodaudiobuslayout.rst:102 cdeb0dcd68fd4fcf978b28f3375d853b
 msgid ""
-":ref:`get_bus_effect<class_FmodAudioBusLayout_method_get_bus_effect>`\\ (\\ bus_name\\: "
-":ref:`String<class_String>`, index\\: :ref:`int<class_int>`\\ ) |const|"
+":ref:`get_bus_effect<class_FmodAudioBusLayout_method_get_bus_effect>`\\ (\\ bus_id\\: "
+":ref:`int<class_int>`, slot_id\\: :ref:`int<class_int>`\\ ) |const|"
 msgstr ""
-":ref:`get_bus_effect<class_FmodAudioBusLayout_method_get_bus_effect>`\\ (\\ bus_name\\: "
-":ref:`String<class_String>`, index\\: :ref:`int<class_int>`\\ ) |const|"
+":ref:`get_bus_effect<class_FmodAudioBusLayout_method_get_bus_effect>`\\ (\\ bus_id\\: "
+":ref:`int<class_int>`, slot_id\\: :ref:`int<class_int>`\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:78 38132afbe6234c2ebece491b3571d972
-msgid ":ref:`sync_from_audio_server<class_FmodAudioBusLayout_method_sync_from_audio_server>`\\ (\\ )"
-msgstr ":ref:`sync_from_audio_server<class_FmodAudioBusLayout_method_sync_from_audio_server>`\\ (\\ )"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:80 49815dee6f4242559d36b41f746105e8
+#: ../../source/classes/class_fmodaudiobuslayout.rst:104 29ddfd85f49f49229fba1bfb4a9108f4
 msgid ""
-":ref:`sync_from_audio_server_if_changed<class_FmodAudioBusLayout_method_sync_from_audio_server_if_changed>`\\"
-" (\\ )"
+":ref:`get_bus_effect_ids<class_FmodAudioBusLayout_method_get_bus_effect_ids>`\\ (\\ bus_id\\: "
+":ref:`int<class_int>`\\ ) |const|"
 msgstr ""
-":ref:`sync_from_audio_server_if_changed<class_FmodAudioBusLayout_method_sync_from_audio_server_if_changed>`\\"
-" (\\ )"
+":ref:`get_bus_effect_ids<class_FmodAudioBusLayout_method_get_bus_effect_ids>`\\ (\\ bus_id\\: "
+":ref:`int<class_int>`\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:90 bc779418b3b64e6c992fc5694d7ae474
+#: ../../source/classes/class_fmodaudiobuslayout.rst:106 8ce7425dc0594fdcae7814c6a91698b3
+msgid ""
+":ref:`set_state<class_FmodAudioBusLayout_method_set_state>`\\ (\\ state\\: "
+":ref:`Array<class_Array>`\\ )"
+msgstr ""
+":ref:`set_state<class_FmodAudioBusLayout_method_set_state>`\\ (\\ state\\: "
+":ref:`Array<class_Array>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:108 87ce320c5a2344408cbd339aea713a38
+msgid ":ref:`Array<class_Array>`"
+msgstr ":ref:`Array<class_Array>`"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:108 3114ae319eb6436282a62b6dba5a382f
+msgid ":ref:`get_state<class_FmodAudioBusLayout_method_get_state>`\\ (\\ ) |const|"
+msgstr ":ref:`get_state<class_FmodAudioBusLayout_method_get_state>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:110 00ce5ec7530e47cd910de11a615d5d40
+msgid ":ref:`validate<class_FmodAudioBusLayout_method_validate>`\\ (\\ ) |const|"
+msgstr ":ref:`validate<class_FmodAudioBusLayout_method_validate>`\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:120 198a3473350f47269f4ab6c31b740768
 msgid "Method Descriptions"
 msgstr "方法说明"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:98 2dede2a6d30d4dd68e49bd72deab801b
+#: ../../source/classes/class_fmodaudiobuslayout.rst:126 07418653f75d4abf8689830c4122d92e
+msgid ":ref:`int<class_int>` **get_bus_count**\\ (\\ ) |const|"
+msgstr ":ref:`int<class_int>` **get_bus_count**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:128 65e0a74eb13c4772a0760c4d6b648b86
+msgid "Returns the number of configured buses, including Master."
+msgstr "返回配置中的总线数量，包含 Master。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:138 9ee7497aa9eb4269a4f8bd89ecdf2ca2
+msgid ":ref:`PackedInt64Array<class_PackedInt64Array>` **get_bus_ids**\\ (\\ ) |const|"
+msgstr ":ref:`PackedInt64Array<class_PackedInt64Array>` **get_bus_ids**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:140 ba7719223c3540e4aaa8b5523653a913
 msgid ""
-"|void| **create_audio_bus**\\ (\\ name\\: :ref:`String<class_String>`, parent\\: "
-":ref:`FmodAudioBus<class_FmodAudioBus>` = null\\ )"
-msgstr ""
-"|void| **create_audio_bus**\\ (\\ name\\: :ref:`String<class_String>`, parent\\: "
-":ref:`FmodAudioBus<class_FmodAudioBus>` = null\\ )"
+"Returns stable bus IDs in display order. Master is always the first item with ID ``0``. IDs are "
+"not array indices."
+msgstr "按显示顺序返回稳定总线 ID。Master 始终为首项，ID 为 ``0``。ID 与数组索引不同。"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:114 480b4db4bac64c4f83fe0d04038fd24d
+#: ../../source/classes/class_fmodaudiobuslayout.rst:150 0f0bf5bd42eb445a88c3d0bae3334e27
 msgid ""
-":ref:`FmodAudioBus<class_FmodAudioBus>` **get_audio_bus**\\ (\\ name\\: "
-":ref:`String<class_String>`\\ ) |const|"
-msgstr ""
-":ref:`FmodAudioBus<class_FmodAudioBus>` **get_audio_bus**\\ (\\ name\\: "
-":ref:`String<class_String>`\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:116 4e767f2ae0fd43cfa0debb813ead1c3d
-msgid "Returns the :ref:`FmodAudioBus<class_FmodAudioBus>` with the specified ``name``."
-msgstr "返回具有指定名称的    :ref:`FmodAudioBus<class_FmodAudioBus>`"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:100 3684d782d37e447884fd5dc7761e7b59
-msgid "Returns ``null`` if no bus with that name exists."
-msgstr "不存在该名称的总线时返回  ``null`` 。"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:130 cb4f56b74eb442b8a27cabe8eb5a1ef1
-msgid ":ref:`bool<class_bool>` **has_audio_bus**\\ (\\ name\\: :ref:`String<class_String>`\\ ) |const|"
-msgstr ":ref:`bool<class_bool>` **has_audio_bus**\\ (\\ name\\: :ref:`String<class_String>`\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:132 0883f6c70c39403c95fc9fa8b2427da1
-msgid "Returns ``true`` if a bus with the specified ``name`` exists in the layout."
-msgstr "如果布局中存在具有指定名称的总线，则返回    ``true``"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:144 3cc3e259a4fd424ca25b829da980729d
-msgid "|void| **remove_audio_bus**\\ (\\ name\\: :ref:`String<class_String>`\\ )"
-msgstr "|void| **remove_audio_bus**\\ (\\ name\\: :ref:`String<class_String>`\\ )"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:146 f67c65d0961744f294af5d9818259506
-msgid "Removes the audio bus with the specified ``name`` from the layout."
-msgstr "从布局中移除指定名称的音频总线"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:148 457c5cb2765f4af1b7252ad2a1068d37
-msgid "\\ **Note:** The master bus cannot be removed."
-msgstr "**注意：**    主总线不能移除。"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:160 1bcca44c35634f868ed3797b4d79eaed
-msgid ""
-"|void| **set_bus_volume**\\ (\\ name\\: :ref:`String<class_String>`, volume_db\\: "
-":ref:`float<class_float>`\\ )"
-msgstr ""
-"|void| **set_bus_volume**\\ (\\ name\\: :ref:`String<class_String>`, volume_db\\: "
-":ref:`float<class_float>`\\ )"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:162 241f1a4fdfb04787b9aa20da38e4576c
-msgid "Sets the volume of the specified bus in decibels."
-msgstr "设置指定总线的音量，单位为分贝"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:174 17f297f929a04f76941dc7240da789f3
-msgid ":ref:`float<class_float>` **get_bus_volume**\\ (\\ name\\: :ref:`String<class_String>`\\ ) |const|"
-msgstr ":ref:`float<class_float>` **get_bus_volume**\\ (\\ name\\: :ref:`String<class_String>`\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:176 5a5cab30007745728c3b23c20753c807
-msgid "Returns the volume of the specified bus in decibels."
-msgstr "返回指定总线的音量，单位为分贝"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:188 f21faae83a8547b7a4ca0899d1f552bb
-msgid ""
-"|void| **set_bus_solo**\\ (\\ name\\: :ref:`String<class_String>`, mute\\: "
-":ref:`bool<class_bool>`\\ )"
-msgstr ""
-"|void| **set_bus_solo**\\ (\\ name\\: :ref:`String<class_String>`, mute\\: "
-":ref:`bool<class_bool>`\\ )"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:190 fe026f71f51f43feac7b4d00d3119d1f
-msgid "Sets the solo state of the specified bus."
-msgstr "设置指定总线的独奏状态，并更新所有总线的最终静音状态"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:202 7437f59d3efb4408a18710c5d164f8b7
-msgid ":ref:`bool<class_bool>` **bus_is_solo**\\ (\\ name\\: :ref:`String<class_String>`\\ ) |const|"
-msgstr ":ref:`bool<class_bool>` **bus_is_solo**\\ (\\ name\\: :ref:`String<class_String>`\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:204 4fec906cb1af492abcec2d8f97de0fe5
-msgid "Returns ``true`` if the specified bus is in solo mode."
-msgstr "如果指定总线处于独奏状态，则返回    ``true``"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:216 f58f31806c9b47f692e565521319b3b3
-msgid ""
-"|void| **set_bus_mute**\\ (\\ name\\: :ref:`String<class_String>`, mute\\: "
-":ref:`bool<class_bool>`\\ )"
-msgstr ""
-"|void| **set_bus_mute**\\ (\\ name\\: :ref:`String<class_String>`, mute\\: "
-":ref:`bool<class_bool>`\\ )"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:218 e42a1661af754da28da19c847e012040
-msgid "Sets the mute state of the specified bus."
-msgstr "设置指定总线的用户静音状态，并更新所有总线的最终静音状态"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:230 32f2d0af2fa347d2aa6537a2abdf131d
-msgid ":ref:`bool<class_bool>` **bus_is_mute**\\ (\\ name\\: :ref:`String<class_String>`\\ ) |const|"
-msgstr ":ref:`bool<class_bool>` **bus_is_mute**\\ (\\ name\\: :ref:`String<class_String>`\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:244 efaf20a4192b47afa24c68a69b846e8a
-msgid ""
-"|void| **set_bus_bypass**\\ (\\ name\\: :ref:`String<class_String>`, mute\\: "
-":ref:`bool<class_bool>`\\ )"
-msgstr ""
-"|void| **set_bus_bypass**\\ (\\ name\\: :ref:`String<class_String>`, mute\\: "
-":ref:`bool<class_bool>`\\ )"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:246 bb9a6e80b4214b69a497b4ba2537b4ba
-msgid "Enables or disables effects bypass for the specified bus."
-msgstr "设置指定总线的效果旁路状态，并立即同步到总线上的 DSP"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:258 b24826e5aba3495e9d613bf942ab256d
-msgid ":ref:`bool<class_bool>` **bus_is_bypass**\\ (\\ name\\: :ref:`String<class_String>`\\ ) |const|"
-msgstr ":ref:`bool<class_bool>` **bus_is_bypass**\\ (\\ name\\: :ref:`String<class_String>`\\ ) |const|"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:260 e89d8224a3cf4653a3deb69a1abcfdb1
-msgid "Returns ``true`` if effects bypass is enabled for the specified bus."
-msgstr "如果指定总线启用了效果旁路，则返回    ``true``"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:272 c19971bf4b484d2d95f51d09c5ab8cc6
-msgid ""
-"|void| **add_bus_effect**\\ (\\ bus_name\\: :ref:`String<class_String>`, effect\\: "
-":ref:`FmodAudioEffect<class_FmodAudioEffect>`, index\\: :ref:`int<class_int>` = 0\\ )"
-msgstr ""
-"|void| **add_bus_effect**\\ (\\ bus_name\\: :ref:`String<class_String>`, effect\\: "
-":ref:`FmodAudioEffect<class_FmodAudioEffect>`, index\\: :ref:`int<class_int>` = 0\\ )"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:274 77771dcdf350409a9249ab5a2a041c0c
-msgid ""
-"Adds an :ref:`FmodAudioEffect<class_FmodAudioEffect>` to the specified bus at the given ``index``"
-" in the effect chain."
-msgstr "向指定总线添加    :ref:`FmodAudioEffect<class_FmodAudioEffect>`"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:286 bc6f3273beea4200836cf34055c85c2b
-msgid ""
-"|void| **remove_bus_effect**\\ (\\ bus_name\\: :ref:`String<class_String>`, index\\: "
-":ref:`int<class_int>`\\ )"
-msgstr ""
-"|void| **remove_bus_effect**\\ (\\ bus_name\\: :ref:`String<class_String>`, index\\: "
-":ref:`int<class_int>`\\ )"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:288 775703cdec4b4f9b8557a2f34f7c4d31
-msgid "Removes the effect at the specified ``index`` from the named bus."
-msgstr "从指定总线中移除指定索引处的音频效果"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:298 726ae28e46464662a9cf7b539e71adcd
-msgid ""
-":ref:`int<class_int>` **get_bus_effect_count**\\ (\\ bus_name\\: :ref:`String<class_String>`\\ ) "
+":ref:`int<class_int>` **find_bus_id**\\ (\\ name\\: :ref:`StringName<class_StringName>`\\ ) "
 "|const|"
 msgstr ""
-":ref:`int<class_int>` **get_bus_effect_count**\\ (\\ bus_name\\: :ref:`String<class_String>`\\ ) "
+":ref:`int<class_int>` **find_bus_id**\\ (\\ name\\: :ref:`StringName<class_StringName>`\\ ) "
 "|const|"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:300 601fa5e524724b8596d5df45c21be7a8
-msgid "Returns bus effect count."
-msgstr "返回总线上的效果器数量。"
+#: ../../source/classes/class_fmodaudiobuslayout.rst:152 296a9fffb1f54119b04bc42541c3486b
+msgid "Returns the ID of the bus named ``name``, or ``-1`` when it does not exist."
+msgstr "返回名为 ``name`` 的总线 ID，不存在时返回 ``-1``。"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:312 e7457494f38d4405a40759d995e57bd4
+#: ../../source/classes/class_fmodaudiobuslayout.rst:162 c5232a7ef95b400f98b60c90fd3561e5
+msgid ":ref:`StringName<class_StringName>` **get_bus_name**\\ (\\ id\\: :ref:`int<class_int>`\\ ) |const|"
+msgstr ":ref:`StringName<class_StringName>` **get_bus_name**\\ (\\ id\\: :ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:164 c4fe68ded07f4091a1dd3eca10da4457
+msgid "Returns the name of bus ``id``, or an empty :ref:`StringName<class_StringName>` for an unknown ID."
+msgstr "返回总线 ``id`` 的名称；未知 ID 返回空 :ref:`StringName<class_StringName>`。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:174 f09156f602fd477fbd886d5c139cb226
 msgid ""
-":ref:`FmodAudioEffect<class_FmodAudioEffect>` **get_bus_effect**\\ (\\ bus_name\\: "
-":ref:`String<class_String>`, index\\: :ref:`int<class_int>`\\ ) |const|"
+":ref:`int<class_int>` **add_bus**\\ (\\ name\\: :ref:`StringName<class_StringName>`, send_id\\: "
+":ref:`int<class_int>` = 0\\ )"
 msgstr ""
-":ref:`FmodAudioEffect<class_FmodAudioEffect>` **get_bus_effect**\\ (\\ bus_name\\: "
-":ref:`String<class_String>`, index\\: :ref:`int<class_int>`\\ ) |const|"
+":ref:`int<class_int>` **add_bus**\\ (\\ name\\: :ref:`StringName<class_StringName>`, send_id\\: "
+":ref:`int<class_int>` = 0\\ )"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:314 2dfee9b88e84485ab232ec4b18cc02f6
+#: ../../source/classes/class_fmodaudiobuslayout.rst:176 2752d16f10024918baf0a36d02644835
 msgid ""
-"Returns the :ref:`FmodAudioEffect<class_FmodAudioEffect>` at the specified ``index`` on the named"
-" bus."
-msgstr "返回指定总线上的指定索引处的    :ref:`FmodAudioEffect<class_FmodAudioEffect>`"
+"Adds a bus named ``name`` and routes it to ``send_id``. Returns its stable ID, or ``-1`` if the "
+"name is blank, contains a comma, is already used, the target does not exist, or the layout has "
+"reached its limit of 4096 buses."
+msgstr "添加名为 ``name`` 的总线并发送到 ``send_id``，返回稳定 ID。名称为空白、包含逗号、重复，目标不存在，或已达到 4096 条总线的上限时，返回 ``-1``。"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:316 82e54c574a3a48fab9cc5d744118cc57
-msgid "Returns ``null`` if the bus or effect doesn't exist."
-msgstr "如果总线或效果不存在，则返回    ``null``"
+#: ../../source/classes/class_fmodaudiobuslayout.rst:186 393c8a2824f54789a9b5dbc14f67e877
+msgid ":ref:`Error<enum_@GlobalScope_Error>` **remove_bus**\\ (\\ id\\: :ref:`int<class_int>`\\ )"
+msgstr ":ref:`Error<enum_@GlobalScope_Error>` **remove_bus**\\ (\\ id\\: :ref:`int<class_int>`\\ )"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:328 d0356906619244038d4b41ad5ae7c1b6
-msgid "|void| **sync_from_audio_server**\\ (\\ )"
-msgstr "|void| **sync_from_audio_server**\\ (\\ )"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:344 a45451a51c7a4f0b926e60aaf0c0278c
-msgid ":ref:`bool<class_bool>` **sync_from_audio_server_if_changed**\\ (\\ )"
-msgstr ":ref:`bool<class_bool>` **sync_from_audio_server_if_changed**\\ (\\ )"
-
-#: ../../source/classes/class_fmodaudiobuslayout.rst:21 91f14f9896ac40279a88b284adb2d01d
+#: ../../source/classes/class_fmodaudiobuslayout.rst:188 196e71ba864644fa827a1e53b30cf34f
 msgid ""
-"Stores :ref:`FmodAudioBus<class_FmodAudioBus>` instances and their routing, mixing state, and"
-" effects. The layout managed by :ref:`FmodServer<class_FmodServer>` is synchronized from "
-":ref:`AudioServer<class_AudioServer>`; an independently created layout requires explicit "
-"synchronization."
+"Removes bus ``id`` and its effect slots. Buses sending to it are redirected to its previous send "
+"target. Bound runtime channels are redirected on the next update. Master cannot be removed. "
+"Returns :ref:`@GlobalScope.OK<class_@GlobalScope_constant_OK>` on success or "
+":ref:`@GlobalScope.ERR_INVALID_PARAMETER<class_@GlobalScope_constant_ERR_INVALID_PARAMETER>`."
 msgstr ""
-"保存  :ref:`FmodAudioBus<class_FmodAudioBus>`  实例及其路由、混音状态和效果器。\\  "
-":ref:`FmodServer<class_FmodServer>`  管理的布局会从  :ref:`AudioServer<class_AudioServer>`  "
-"同步；独立创建的布局需要显式同步。"
+"移除总线 ``id`` 及其效果器槽位。发送到该总线的其他总线会转接到其原发送目标，绑定的运行通道在下一次更新时转接。Master 不能删除。成功返回 "
+":ref:`OK<class_@GlobalScope_constant_OK>`，无效参数返回 "
+":ref:`ERR_INVALID_PARAMETER<class_@GlobalScope_constant_ERR_INVALID_PARAMETER>`。"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:86 c4098b874719471689f11fc7ff0df91e
+#: ../../source/classes/class_fmodaudiobuslayout.rst:198 64caa9d8d4144dbaa33e5588d95af943
 msgid ""
-"\\ :ref:`sync_from_audio_server()<class_FmodAudioBusLayout_method_sync_from_audio_server>` "
-"creates the master bus when needed."
+":ref:`Error<enum_@GlobalScope_Error>` **move_bus**\\ (\\ id\\: :ref:`int<class_int>`, index\\: "
+":ref:`int<class_int>`\\ )"
 msgstr ""
-":ref:`sync_from_audio_server()<class_FmodAudioBusLayout_method_sync_from_audio_server>`  "
-"会在需要时创建主总线。"
+":ref:`Error<enum_@GlobalScope_Error>` **move_bus**\\ (\\ id\\: :ref:`int<class_int>`, index\\: "
+":ref:`int<class_int>`\\ )"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:198 3457959362224196bc0f0086efd51382
+#: ../../source/classes/class_fmodaudiobuslayout.rst:200 4cbafb968ca049299d57e2cad38ca4ef
 msgid ""
-"Returns the bus's stored user mute flag. It does not include muting caused by another bus's "
-"solo state."
-msgstr "返回总线保存的用户静音标志，不包含其他总线独奏造成的静音。"
+"Moves bus ``id`` to the final display ``index``, from ``1`` to "
+":ref:`get_bus_count()<class_FmodAudioBusLayout_method_get_bus_count>` minus one. Routing and IDs "
+"are preserved. Master cannot be moved. Returns "
+":ref:`@GlobalScope.OK<class_@GlobalScope_constant_OK>` on success or "
+":ref:`@GlobalScope.ERR_INVALID_PARAMETER<class_@GlobalScope_constant_ERR_INVALID_PARAMETER>`."
+msgstr ""
+"将总线 ``id`` 移到最终显示位置 ``index``，范围为 ``1`` 到 "
+":ref:`FmodAudioBusLayout.get_bus_count()<class_FmodAudioBusLayout_method_get_bus_count>` 减一。保留路由与"
+" ID，Master 不能移动。成功返回 :ref:`OK<class_@GlobalScope_constant_OK>`，无效参数返回 "
+":ref:`ERR_INVALID_PARAMETER<class_@GlobalScope_constant_ERR_INVALID_PARAMETER>`。"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:284 eb0ef61290ec4e6ea7c79aa2519956e8
+#: ../../source/classes/class_fmodaudiobuslayout.rst:210 d0081e74468848ac9b44a14db411150e
 msgid ""
-"Synchronizes bus names, routing, volume, mute, solo, and supported enabled effects from "
-":ref:`AudioServer<class_AudioServer>`. Unsupported effect types are skipped."
-msgstr "从  :ref:`AudioServer<class_AudioServer>`  同步总线名称、路由、音量、静音、独奏以及受支持且已启用的效果器。不支持的效果器类型会被跳过。"
+":ref:`Error<enum_@GlobalScope_Error>` **rename_bus**\\ (\\ id\\: :ref:`int<class_int>`, name\\: "
+":ref:`StringName<class_StringName>`\\ )"
+msgstr ""
+":ref:`Error<enum_@GlobalScope_Error>` **rename_bus**\\ (\\ id\\: :ref:`int<class_int>`, name\\: "
+":ref:`StringName<class_StringName>`\\ )"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:286 f9015ebf30684669af63a8e34b4cb826
+#: ../../source/classes/class_fmodaudiobuslayout.rst:212 8e03de6c7a3747c4bbf40cd328b90e6f
 msgid ""
-"The layout managed by :ref:`FmodServer<class_FmodServer>` is synchronized automatically. "
-"Independently created layouts must be synchronized explicitly."
-msgstr ":ref:`FmodServer<class_FmodServer>`  管理的布局会自动同步。独立创建的布局需显式调用同步。"
+"Renames bus ``id`` while preserving its ID, routing, and runtime instances. The name must be "
+"unique, nonblank, and contain no comma. Master cannot be renamed. Player nodes store bus names; "
+"update their ``bus`` properties when renaming a bus. Returns "
+":ref:`@GlobalScope.OK<class_@GlobalScope_constant_OK>` on success or "
+":ref:`@GlobalScope.ERR_INVALID_PARAMETER<class_@GlobalScope_constant_ERR_INVALID_PARAMETER>`."
+msgstr ""
+"重命名总线 ``id``，保留 ID、路由和运行实例。名称必须唯一、非空白且不含逗号，Master 不能重命名。播放器节点保存总线名称，重命名后需同步修改其 ``bus`` 属性。成功返回 "
+":ref:`OK<class_@GlobalScope_constant_OK>`，无效参数返回 "
+":ref:`ERR_INVALID_PARAMETER<class_@GlobalScope_constant_ERR_INVALID_PARAMETER>`。"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:298 488cab2e0dec4c8d9fa40e3986f16b98
+#: ../../source/classes/class_fmodaudiobuslayout.rst:222 066047d412314cce8469911fb29c0c72
 msgid ""
-"Checks for changes and updates the layout or bus state when needed. Returns ``true`` when an "
-"update was triggered. Bus and effect-slot checks are spread across calls, so a single call "
-"may not detect every change."
-msgstr "检查变化，并在需要时更新布局或总线状态。触发更新时返回  ``true`` \\ 。总线和效果器槽位的检查分散到多次调用中，单次调用可能无法发现所有变化。"
+":ref:`bool<class_bool>` **can_send_to**\\ (\\ id\\: :ref:`int<class_int>`, target\\: "
+":ref:`int<class_int>`\\ ) |const|"
+msgstr ""
+":ref:`bool<class_bool>` **can_send_to**\\ (\\ id\\: :ref:`int<class_int>`, target\\: "
+":ref:`int<class_int>`\\ ) |const|"
 
-#: ../../source/classes/class_fmodaudiobuslayout.rst:84 743d2cff53914664ab7ba8b712fcf7e6
+#: ../../source/classes/class_fmodaudiobuslayout.rst:224 a2e23c41c5d048b298ba1e3b57cb8e30
 msgid ""
-"Creates a bus with ``name`` and routes it to ``parent``'s channel group. An omitted parent "
-"routes to the master group. A parent without an initialized channel group is rejected without"
-" adding a bus."
-msgstr "创建名为  ``name``  的总线，并路由到  ``parent``  的通道组。未指定父级时路由到主通道组。父级没有有效通道组时拒绝创建，不会添加总线。"
+"Returns whether bus ``id`` can send to ``target``. Both buses must exist. Master sends to the "
+"output device; self-sends and cycles are rejected. Display order does not restrict sends."
+msgstr "返回总线 ``id`` 能否发送到 ``target``。两条总线都必须存在。Master 直接输出到设备；拒绝发送给自身或形成环路的连接。显示顺序不限制发送目标。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:234 48f013fa6662435fbdc07e8a9841b0cc
+msgid ""
+":ref:`Error<enum_@GlobalScope_Error>` **set_bus_send**\\ (\\ id\\: :ref:`int<class_int>`, "
+"target\\: :ref:`int<class_int>`\\ )"
+msgstr ""
+":ref:`Error<enum_@GlobalScope_Error>` **set_bus_send**\\ (\\ id\\: :ref:`int<class_int>`, "
+"target\\: :ref:`int<class_int>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:236 6bd639a835d547d7bb6e225898743502
+msgid ""
+"Routes bus ``id`` to ``target``. Returns :ref:`@GlobalScope.OK<class_@GlobalScope_constant_OK>` "
+"on success or "
+":ref:`@GlobalScope.ERR_INVALID_PARAMETER<class_@GlobalScope_constant_ERR_INVALID_PARAMETER>` when"
+" :ref:`can_send_to()<class_FmodAudioBusLayout_method_can_send_to>` rejects the route."
+msgstr ""
+"将总线 ``id`` 发送到 ``target``。成功返回 "
+":ref:`OK<class_@GlobalScope_constant_OK>`；:ref:`FmodAudioBusLayout.can_send_to()<class_FmodAudioBusLayout_method_can_send_to>`"
+" 拒绝该路由时返回 :ref:`ERR_INVALID_PARAMETER<class_@GlobalScope_constant_ERR_INVALID_PARAMETER>`。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:246 801255cdb6e34c4786ceeb148f27c340
+msgid ":ref:`int<class_int>` **get_bus_send**\\ (\\ id\\: :ref:`int<class_int>`\\ ) |const|"
+msgstr ":ref:`int<class_int>` **get_bus_send**\\ (\\ id\\: :ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:248 780a0963df6645e49044c7bd963ddcd8
+msgid "Returns the send target ID of bus ``id``, or ``-1`` for an unknown ID. Master returns ``0``."
+msgstr "返回总线 ``id`` 的发送目标 ID；未知 ID 返回 ``-1``，Master 返回 ``0``。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:258 5fea6febc8454a719780e3ef6f0ff7af
+msgid ""
+"|void| **set_bus_volume_db**\\ (\\ id\\: :ref:`int<class_int>`, volume_db\\: "
+":ref:`float<class_float>`\\ )"
+msgstr ""
+"|void| **set_bus_volume_db**\\ (\\ id\\: :ref:`int<class_int>`, volume_db\\: "
+":ref:`float<class_float>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:260 2580ee5c84364b89818cd00ff65de83f
+msgid ""
+"Sets the configured volume of bus ``id`` in decibels. Non-finite values and unknown IDs are "
+"ignored."
+msgstr "以分贝设置总线 ``id`` 的配置音量，忽略非有限值和未知 ID。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:270 09f0253fe88b43ceb28fc830726b3c05
+msgid ":ref:`float<class_float>` **get_bus_volume_db**\\ (\\ id\\: :ref:`int<class_int>`\\ ) |const|"
+msgstr ":ref:`float<class_float>` **get_bus_volume_db**\\ (\\ id\\: :ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:272 e6ddd959faef4a95965d380403860735
+msgid "Returns the configured volume of bus ``id`` in decibels, or ``0.0`` for an unknown ID."
+msgstr "返回总线 ``id`` 的配置音量，单位为分贝；未知 ID 返回 ``0.0``。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:282 072ab95d16674644a92073800611a514
+msgid "|void| **set_bus_mute**\\ (\\ id\\: :ref:`int<class_int>`, mute\\: :ref:`bool<class_bool>`\\ )"
+msgstr "|void| **set_bus_mute**\\ (\\ id\\: :ref:`int<class_int>`, mute\\: :ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:284 47360c2b02df44498921da26e28dfa82
+msgid ""
+"Sets the configured mute flag of bus ``id``. When any bus is soloed, the solo routing path takes "
+"precedence over configured mute flags."
+msgstr "设置总线 ``id`` 的配置静音标记。有总线处于 Solo 状态时，Solo 路径的可听状态优先于配置静音标记。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:294 df4c62f55dd74f6cb550cddce55f3d98
+msgid ":ref:`bool<class_bool>` **is_bus_mute**\\ (\\ id\\: :ref:`int<class_int>`\\ ) |const|"
+msgstr ":ref:`bool<class_bool>` **is_bus_mute**\\ (\\ id\\: :ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:296 6f9d98154f3546ed8b221fa9c22f421f
+msgid ""
+"Returns the configured mute flag of bus ``id``. This excludes muting caused by Solo. Returns "
+"``false`` for an unknown ID."
+msgstr "返回总线 ``id`` 的配置静音标记，不包含 Solo 引起的静音；未知 ID 返回 ``false``。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:306 5aa3dd224885491dba222568e6a4f5bf
+msgid "|void| **set_bus_solo**\\ (\\ id\\: :ref:`int<class_int>`, solo\\: :ref:`bool<class_bool>`\\ )"
+msgstr "|void| **set_bus_solo**\\ (\\ id\\: :ref:`int<class_int>`, solo\\: :ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:308 b363564df28345fa9f0a4498e9023ca9
+msgid ""
+"Sets the configured solo flag of bus ``id``. Bound runtimes keep each soloed bus and its path to "
+"Master audible, and mute unrelated buses."
+msgstr "设置总线 ``id`` 的配置 Solo 标记。绑定的运行时保留 Solo 总线及其到 Master 的路径可听，并静音其他总线。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:318 974d2e94dd0e454b8165fb773160f6fc
+msgid ":ref:`bool<class_bool>` **is_bus_solo**\\ (\\ id\\: :ref:`int<class_int>`\\ ) |const|"
+msgstr ":ref:`bool<class_bool>` **is_bus_solo**\\ (\\ id\\: :ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:320 e6ade022f5e345ae9dcc17ff850b1443
+msgid "Returns the configured solo flag of bus ``id``, or ``false`` for an unknown ID."
+msgstr "返回总线 ``id`` 的配置 Solo 标记；未知 ID 返回 ``false``。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:330 42c95e7ae55c446cabd06a0edf355540
+msgid "|void| **set_bus_bypass**\\ (\\ id\\: :ref:`int<class_int>`, bypass\\: :ref:`bool<class_bool>`\\ )"
+msgstr "|void| **set_bus_bypass**\\ (\\ id\\: :ref:`int<class_int>`, bypass\\: :ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:332 6d65b60938b448dba9c3982362ce4d01
+msgid ""
+"Sets bypass for the managed effect slots on bus ``id``. Slot configuration and DSP state are "
+"retained. This does not bypass the bus fader or unrelated DSPs added through low-level APIs."
+msgstr "设置总线 ``id`` 受管效果器槽位的旁路状态，保留槽位配置和 DSP 状态。总线音量推子及通过低层 API 单独添加的 DSP 保持原状。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:342 1ec6dc7bd39141feaa0bc7149d6fccde
+msgid ":ref:`bool<class_bool>` **is_bus_bypass**\\ (\\ id\\: :ref:`int<class_int>`\\ ) |const|"
+msgstr ":ref:`bool<class_bool>` **is_bus_bypass**\\ (\\ id\\: :ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:344 43e8b2f7c20c41b38060bfba6973e212
+msgid "Returns the configured bypass flag of bus ``id``, or ``false`` for an unknown ID."
+msgstr "返回总线 ``id`` 的配置旁路标记；未知 ID 返回 ``false``。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:354 137ff5aec20b4802870202dc11e64c17
+msgid ""
+":ref:`int<class_int>` **add_bus_effect**\\ (\\ bus_id\\: :ref:`int<class_int>`, effect\\: "
+":ref:`FmodAudioEffect<class_FmodAudioEffect>`, index\\: :ref:`int<class_int>` = -1\\ )"
+msgstr ""
+":ref:`int<class_int>` **add_bus_effect**\\ (\\ bus_id\\: :ref:`int<class_int>`, effect\\: "
+":ref:`FmodAudioEffect<class_FmodAudioEffect>`, index\\: :ref:`int<class_int>` = -1\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:356 53ff7dac4ff1408db07c3e2de2a02f6a
+msgid ""
+"Inserts ``effect`` into bus ``bus_id`` before ``index``. A negative index appends it. Returns a "
+"stable slot ID, or ``-1`` for an invalid bus, null effect, out-of-range index, or a bus with 512 "
+"slots. Multiple slots may share a configuration resource; each bound slot receives its own "
+"runtime instance. Read live Capture, SpectrumAnalyzer, or Record data through "
+":ref:`FmodServer.get_bus_effect_instance()<class_FmodServer_method_get_bus_effect_instance>`."
+msgstr ""
+"将 ``effect`` 插入总线 ``bus_id`` 的 ``index`` 之前，负索引表示追加。返回稳定槽位 ID。总线无效、效果为空、索引越界或总线已有 512 个槽位时，返回 "
+"``-1``。多个槽位可共享配置资源，各自拥有独立运行实例。通过 "
+":ref:`FmodServer.get_bus_effect_instance()<class_FmodServer_method_get_bus_effect_instance>` 读取 "
+"Capture、SpectrumAnalyzer 或 Record 的实时数据。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:366 809c816d3e714ea8a74fdc53e6010a10
+msgid ""
+":ref:`Error<enum_@GlobalScope_Error>` **remove_bus_effect**\\ (\\ bus_id\\: "
+":ref:`int<class_int>`, slot_id\\: :ref:`int<class_int>`\\ )"
+msgstr ""
+":ref:`Error<enum_@GlobalScope_Error>` **remove_bus_effect**\\ (\\ bus_id\\: "
+":ref:`int<class_int>`, slot_id\\: :ref:`int<class_int>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:368 16c8a7d351934d4b84e7c0a24df4e555
+msgid ""
+"Removes slot ``slot_id`` from bus ``bus_id``. Returns "
+":ref:`@GlobalScope.OK<class_@GlobalScope_constant_OK>` on success or "
+":ref:`@GlobalScope.ERR_INVALID_PARAMETER<class_@GlobalScope_constant_ERR_INVALID_PARAMETER>`."
+msgstr ""
+"移除总线 ``bus_id`` 的槽位 ``slot_id``。成功返回 :ref:`OK<class_@GlobalScope_constant_OK>`，无效参数返回 "
+":ref:`ERR_INVALID_PARAMETER<class_@GlobalScope_constant_ERR_INVALID_PARAMETER>`。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:378 28741cb86673443c89e2d3bc0caf5797
+msgid ""
+":ref:`Error<enum_@GlobalScope_Error>` **move_bus_effect**\\ (\\ bus_id\\: :ref:`int<class_int>`, "
+"slot_id\\: :ref:`int<class_int>`, target_bus\\: :ref:`int<class_int>`, index\\: "
+":ref:`int<class_int>`\\ )"
+msgstr ""
+":ref:`Error<enum_@GlobalScope_Error>` **move_bus_effect**\\ (\\ bus_id\\: :ref:`int<class_int>`, "
+"slot_id\\: :ref:`int<class_int>`, target_bus\\: :ref:`int<class_int>`, index\\: "
+":ref:`int<class_int>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:380 425030e25e834ff581deec618f139050
+msgid ""
+"Moves slot ``slot_id`` from ``bus_id`` to ``target_bus``, inserting it before ``index`` in the "
+"target list before removal. The index may equal the target slot count to append. The stable slot "
+"ID and bound DSP state are preserved. Returns "
+":ref:`@GlobalScope.OK<class_@GlobalScope_constant_OK>` on success or "
+":ref:`@GlobalScope.ERR_INVALID_PARAMETER<class_@GlobalScope_constant_ERR_INVALID_PARAMETER>`."
+msgstr ""
+"将槽位 ``slot_id`` 从 ``bus_id`` 移至 ``target_bus``，插入删除前目标列表的 ``index`` 之前。索引等于目标槽位数时表示追加。保留稳定槽位 ID "
+"和绑定的 DSP 状态。成功返回 :ref:`OK<class_@GlobalScope_constant_OK>`，无效参数返回 "
+":ref:`ERR_INVALID_PARAMETER<class_@GlobalScope_constant_ERR_INVALID_PARAMETER>`。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:390 25b58cc0a95347af9ff5075984672c38
+msgid ""
+"|void| **set_bus_effect_enabled**\\ (\\ bus_id\\: :ref:`int<class_int>`, slot_id\\: "
+":ref:`int<class_int>`, enabled\\: :ref:`bool<class_bool>`\\ )"
+msgstr ""
+"|void| **set_bus_effect_enabled**\\ (\\ bus_id\\: :ref:`int<class_int>`, slot_id\\: "
+":ref:`int<class_int>`, enabled\\: :ref:`bool<class_bool>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:392 8acbb77eaab54ed7b4c7725743376f64
+msgid ""
+"Sets whether slot ``slot_id`` on bus ``bus_id`` is enabled. Disabled slots retain their runtime "
+"instances in bypass. The bus bypass flag also bypasses enabled slots. Unknown IDs are ignored."
+msgstr "设置总线 ``bus_id`` 的槽位 ``slot_id`` 是否启用。禁用时保留运行实例并旁路；总线旁路也会使该实例旁路。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:402 d0677258545549e6ac4c758b6d4a7a4f
+msgid ""
+":ref:`bool<class_bool>` **is_bus_effect_enabled**\\ (\\ bus_id\\: :ref:`int<class_int>`, "
+"slot_id\\: :ref:`int<class_int>`\\ ) |const|"
+msgstr ""
+":ref:`bool<class_bool>` **is_bus_effect_enabled**\\ (\\ bus_id\\: :ref:`int<class_int>`, "
+"slot_id\\: :ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:404 288968100bc64985b1ed1539a9b4bc84
+msgid ""
+"Returns the configured enabled flag of slot ``slot_id`` on bus ``bus_id``, or ``false`` for "
+"unknown IDs."
+msgstr "返回总线 ``bus_id`` 的槽位 ``slot_id`` 的配置启用状态；未知 ID 返回 ``false``。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:414 dce4477ac3544a7e94f0b1ed8fb0a8b9
+msgid ""
+":ref:`FmodAudioEffect<class_FmodAudioEffect>` **get_bus_effect**\\ (\\ bus_id\\: "
+":ref:`int<class_int>`, slot_id\\: :ref:`int<class_int>`\\ ) |const|"
+msgstr ""
+":ref:`FmodAudioEffect<class_FmodAudioEffect>` **get_bus_effect**\\ (\\ bus_id\\: "
+":ref:`int<class_int>`, slot_id\\: :ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:416 6da1dc40123b463693784848866af83f
+msgid ""
+"Returns the configuration resource for slot ``slot_id`` on bus ``bus_id``, or ``null``. Use "
+":ref:`FmodServer.get_bus_effect_instance()<class_FmodServer_method_get_bus_effect_instance>` to "
+"access live Capture, SpectrumAnalyzer, or Record data."
+msgstr ""
+"返回总线 ``bus_id`` 的槽位 ``slot_id`` 的配置资源，不存在时返回 ``null``。实时音频数据通过 "
+":ref:`FmodServer.get_bus_effect_instance()<class_FmodServer_method_get_bus_effect_instance>` 读取。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:426 f634a84feb2d40c9b2f429ba656e10e0
+msgid ""
+":ref:`PackedInt64Array<class_PackedInt64Array>` **get_bus_effect_ids**\\ (\\ bus_id\\: "
+":ref:`int<class_int>`\\ ) |const|"
+msgstr ""
+":ref:`PackedInt64Array<class_PackedInt64Array>` **get_bus_effect_ids**\\ (\\ bus_id\\: "
+":ref:`int<class_int>`\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:428 d544b11d14d94e2caa8a5900c46f120e
+msgid ""
+"Returns stable slot IDs for bus ``bus_id`` in processing order, or an empty array for an unknown "
+"bus."
+msgstr "按处理顺序返回总线 ``bus_id`` 的稳定槽位 ID；未知总线返回空数组。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:438 bb1199dd66944b7ba03a5c2781ca7837
+msgid ":ref:`Error<enum_@GlobalScope_Error>` **set_state**\\ (\\ state\\: :ref:`Array<class_Array>`\\ )"
+msgstr ":ref:`Error<enum_@GlobalScope_Error>` **set_state**\\ (\\ state\\: :ref:`Array<class_Array>`\\ )"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:440 e48d6126613547b0b1caca753b0fd4e8
+msgid ""
+"Atomically replaces the bus configuration with ``state``, using the format returned by "
+":ref:`get_state()<class_FmodAudioBusLayout_method_get_state>`. Returns "
+":ref:`@GlobalScope.OK<class_@GlobalScope_constant_OK>` on success or "
+":ref:`@GlobalScope.ERR_INVALID_DATA<class_@GlobalScope_constant_ERR_INVALID_DATA>`, preserving "
+"the previous configuration when validation fails. The layout accepts up to 4096 buses and 512 "
+"slots per bus."
+msgstr ""
+"使用 :ref:`FmodAudioBusLayout.get_state()<class_FmodAudioBusLayout_method_get_state>` 的格式，以 "
+"``state`` 原子替换总线配置。成功返回 :ref:`OK<class_@GlobalScope_constant_OK>`；验证失败时返回 "
+":ref:`ERR_INVALID_DATA<class_@GlobalScope_constant_ERR_INVALID_DATA>`，并保留原配置。布局最多接受 4096 条总线，每条最多"
+" 512 个槽位。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:450 173746856f244055aa7f44a746573841
+msgid ":ref:`Array<class_Array>` **get_state**\\ (\\ ) |const|"
+msgstr ":ref:`Array<class_Array>` **get_state**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:452 402785885dcf40fab4ad11c55c3aa169
+msgid ""
+"Returns an ordered array of bus dictionaries containing ``id``, ``name``, ``send_id``, "
+"``volume_db``, ``solo``, ``mute``, ``bypass_fx``, and ``effects``. Each effect dictionary "
+"contains ``id``, ``effect``, and ``enabled``. Effect resources are shared references. Use with "
+":ref:`set_state()<class_FmodAudioBusLayout_method_set_state>` for structural undo and redo."
+msgstr ""
+"返回按顺序排列的总线字典数组，包含 ``id``、``name``、``send_id``、``volume_db``、``solo``、``mute``、``bypass_fx`` 和 "
+"``effects``。每个效果器字典包含 ``id``、``effect`` 和 ``enabled``，效果资源保留共享引用。配合 "
+":ref:`FmodAudioBusLayout.set_state()<class_FmodAudioBusLayout_method_set_state>` 用于结构修改的撤销重做。"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:462 0dae3d0427e844fbb98ef4af9b996386
+msgid ":ref:`Error<enum_@GlobalScope_Error>` **validate**\\ (\\ ) |const|"
+msgstr ":ref:`Error<enum_@GlobalScope_Error>` **validate**\\ (\\ ) |const|"
+
+#: ../../source/classes/class_fmodaudiobuslayout.rst:464 a181d2d05c7a48059a46daab8f5324aa
+msgid ""
+"Returns :ref:`@GlobalScope.OK<class_@GlobalScope_constant_OK>` for a supported format version, a "
+"valid Master, unique names and IDs, non-null effect resources, finite volumes, and acyclic "
+"routes. Otherwise returns "
+":ref:`@GlobalScope.ERR_INVALID_DATA<class_@GlobalScope_constant_ERR_INVALID_DATA>`."
+msgstr ""
+"格式版本受支持、Master 有效、名称与 ID 唯一、效果资源非空、音量为有限值且路由无环时，返回 :ref:`OK<class_@GlobalScope_constant_OK>`；否则返回"
+" :ref:`ERR_INVALID_DATA<class_@GlobalScope_constant_ERR_INVALID_DATA>`。"

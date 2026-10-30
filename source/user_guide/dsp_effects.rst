@@ -63,18 +63,23 @@ DSP 效果器
 给总线添加效果
 --------------
 
+以下布局编辑示例使用独立模式：关闭 ``audio/fmod/sync_godot_audio_buses`` 并重新加载项目，先在 FMOD Audio 面板创建示例需要的总线。
+
+槽位保存效果配置，每个槽位都有独立运行实例。用 :ref:`FmodServer.get_bus_effect_instance()<class_FmodServer_method_get_bus_effect_instance>` 读取 Capture、SpectrumAnalyzer 和 Record 的实时数据。添加槽位后调用 ``flush_bus_updates()``，即可在同一帧取得实例。
+
 下面示例给 ``Music`` 总线加一个低通滤波器。它会让音乐听起来更闷，适合暂停菜单、角色潜水、隔墙听声等场景。
 
 .. code-block:: gdscript
 
-    func add_pause_filter():
-        var layout := FmodServer.get_audio_bus_layout()
 
-        var filter := FmodAudioEffectFilter.new()
+    func add_pause_filter() -> void:
+        var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()
+
+        var filter: FmodAudioEffectFilter = FmodAudioEffectFilter.new()
         filter.cutoff_hz = 1200.0
         filter.resonance = 0.2
 
-        layout.add_bus_effect("Music", filter)
+        layout.add_bus_effect(layout.find_bus_id(&"Music"), filter)
 
 效果加到总线后，经过这条 :ref:`Bus<glossary-bus>` 的声音都会受影响。
 
@@ -85,9 +90,10 @@ DSP 效果器
 
 .. code-block:: gdscript
 
-    func set_music_effects_enabled(enabled: bool):
-        var layout := FmodServer.get_audio_bus_layout()
-        layout.set_bus_bypass("Music", not enabled)
+
+    func set_music_effects_enabled(enabled: bool) -> void:
+        var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()
+        layout.set_bus_bypass(layout.find_bus_id(&"Music"), not enabled)
 
 旁路的意思是：信号仍然通过，但跳过这条总线上的效果处理。
 
@@ -99,52 +105,62 @@ DSP 效果器
 
 .. code-block:: gdscript
 
-    var pause_filter := FmodAudioEffectFilter.new()
+    var pause_filter: FmodAudioEffectFilter = FmodAudioEffectFilter.new()
 
-    func _ready():
+
+    func _ready() -> void:
+        var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()
         pause_filter.cutoff_hz = 1000.0
         pause_filter.resonance = 0.1
-        FmodServer.get_audio_bus_layout().add_bus_effect("Music", pause_filter)
-        FmodServer.get_audio_bus_layout().set_bus_bypass("Music", true)
+        layout.add_bus_effect(layout.find_bus_id(&"Music"), pause_filter)
+        layout.set_bus_bypass(layout.find_bus_id(&"Music"), true)
 
-    func set_paused_audio(paused: bool):
-        FmodServer.get_audio_bus_layout().set_bus_bypass("Music", not paused)
+
+    func set_paused_audio(paused: bool) -> void:
+        var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()
+        layout.set_bus_bypass(layout.find_bus_id(&"Music"), not paused)
 
 房间混响：给环境声加空间感
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: gdscript
 
-    func setup_room_reverb():
-        var reverb := FmodAudioEffectReverb.new()
+
+    func setup_room_reverb() -> void:
+        var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()
+        var reverb: FmodAudioEffectReverb = FmodAudioEffectReverb.new()
         reverb.room_size = 0.7
         reverb.damping = 0.45
         reverb.wet = 0.35
         reverb.dry = 1.0
 
-        FmodServer.get_audio_bus_layout().add_bus_effect("Ambient", reverb)
+        layout.add_bus_effect(layout.find_bus_id(&"Ambient"), reverb)
 
 均衡器：削弱刺耳频段
 ~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: gdscript
 
-    func soften_sfx():
-        var eq := FmodAudioEffectEQ10.new()
 
-        # 降低较高频段，让音效不那么刺耳。
+    func soften_sfx() -> void:
+        var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()
+        var eq: FmodAudioEffectEQ10 = FmodAudioEffectEQ10.new()
+
+        # 降低较高频段，让音效不那么刺耳
         eq.set_band_gain_db(7, -3.0)
         eq.set_band_gain_db(8, -4.0)
 
-        FmodServer.get_audio_bus_layout().add_bus_effect("SFX", eq)
+        layout.add_bus_effect(layout.find_bus_id(&"SFX"), eq)
 
 延迟：给特殊音效加回声
 ~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: gdscript
 
-    func add_echo_to_voice_bus():
-        var delay := FmodAudioEffectDelay.new()
+
+    func add_echo_to_voice_bus() -> void:
+        var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()
+        var delay: FmodAudioEffectDelay = FmodAudioEffectDelay.new()
         delay.tap1_delay_ms = 180.0
         delay.tap1_level_db = -8.0
         delay.tap2_active = false
@@ -152,7 +168,7 @@ DSP 效果器
         delay.feedback_delay_ms = 260.0
         delay.feedback_level_db = -12.0
 
-        FmodServer.get_audio_bus_layout().add_bus_effect("Voice", delay)
+        layout.add_bus_effect(layout.find_bus_id(&"Voice"), delay)
 
 频谱分析：读取音乐能量
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -161,21 +177,27 @@ DSP 效果器
 
 .. code-block:: gdscript
 
-    var analyzer := FmodAudioEffectSpectrumAnalyzer.new()
+    var analyzer: FmodAudioEffectSpectrumAnalyzer
 
-    func _ready():
-        analyzer.fft_size = FmodAudioEffectSpectrumAnalyzer.FFT_SIZE_2048
-        FmodServer.get_audio_bus_layout().add_bus_effect("Music", analyzer)
 
-    func _process(_delta):
-        analyzer.update_spectrum()
+    func _ready() -> void:
+        var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()
+        var music_id: int = layout.find_bus_id(&"Music")
+        var settings: FmodAudioEffectSpectrumAnalyzer = FmodAudioEffectSpectrumAnalyzer.new()
+        settings.fft_size = FmodAudioEffectSpectrumAnalyzer.FFT_SIZE_2048
+        var slot_id: int = layout.add_bus_effect(music_id, settings)
+        FmodServer.flush_bus_updates()
+        analyzer = FmodServer.get_bus_effect_instance(music_id, slot_id) as FmodAudioEffectSpectrumAnalyzer
 
-        var bass := analyzer.get_magnitude_for_frequency_range(
+
+    func _process(_delta: float) -> void:
+        if analyzer == null:
+            return
+        var bass: Vector2 = analyzer.get_magnitude_for_frequency_range(
             20.0,
             250.0,
-            FmodAudioEffectSpectrumAnalyzer.MAGNITUDE_AVERAGE
+            FmodAudioEffectSpectrumAnalyzer.MAGNITUDE_AVERAGE,
         )
-
         print("bass energy: ", bass.length())
 
 录音：录下某条总线
@@ -185,16 +207,26 @@ DSP 效果器
 
 .. code-block:: gdscript
 
-    var recorder := FmodAudioEffectRecord.new()
+    var recorder: FmodAudioEffectRecord
 
-    func _ready():
-        recorder.format = FmodAudioEffectRecord.FORMAT_16_BITS
-        FmodServer.get_audio_bus_layout().add_bus_effect("Master", recorder)
 
-    func start_recording():
-        recorder.recording_active = true
+    func _ready() -> void:
+        var layout: FmodAudioBusLayout = FmodServer.get_audio_bus_layout()
+        var settings: FmodAudioEffectRecord = FmodAudioEffectRecord.new()
+        settings.format = FmodAudioEffectRecord.FORMAT_16_BITS
+        var slot_id: int = layout.add_bus_effect(0, settings)
+        FmodServer.flush_bus_updates()
+        recorder = FmodServer.get_bus_effect_instance(0, slot_id) as FmodAudioEffectRecord
+
+
+    func start_recording() -> void:
+        if recorder != null:
+            recorder.recording_active = true
+
 
     func stop_recording() -> AudioStreamWAV:
+        if recorder == null:
+            return null
         recorder.recording_active = false
         return recorder.get_recording()
 
@@ -227,10 +259,11 @@ DSP 效果器
 
 .. code-block:: gdscript
 
-    func add_low_level_reverb():
-        var system := FmodServer.main_system
-        var reverb := system.create_dsp_by_type(FmodDSP.DSP_TYPE_SFXREVERB)
-        var master := system.get_master_channel_group()
+
+    func add_low_level_reverb() -> void:
+        var system: FmodSystem = FmodServer.get_main_system()
+        var reverb: FmodDSP = system.create_dsp_by_type(FmodDSP.DSP_TYPE_SFXREVERB)
+        var master: FmodChannelGroup = system.get_master_channel_group()
 
         master.add_dsp(0, reverb)
 

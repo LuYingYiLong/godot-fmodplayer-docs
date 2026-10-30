@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Godot FmodPlayer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-26 23:57+0800\n"
+"POT-Creation-Date: 2026-10-30 23:58+0800\n"
 "PO-Revision-Date: 2026-04-27 00:00+0800\n"
 "Last-Translator: Codex <codex@example.invalid>\n"
 "Language: en\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: ../../source/user_guide/playback.rst:2 602eaa820bc645d68b31857b2815014a
+#: ../../source/user_guide/playback.rst:4 e381637c162740aba863f97e75e8af6c
 msgid "播放控制"
 msgstr "Playback Control"
 
-#: ../../source/user_guide/playback.rst:4 32463cae74b14ce386bffd144ea5e2df
+#: ../../source/user_guide/playback.rst:6 64f9da41733b4bf584c02b681eb663a4
 msgid "本章讲“怎样把声音播出来，以及播出来以后怎样控制它”。"
 msgstr "This chapter explains how to play sounds and how to control them after they start playing."
 
-#: ../../source/user_guide/playback.rst:6 f83bac3ac6f54cec903758a994bc8c3d
+#: ../../source/user_guide/playback.rst:8 511491d054774e05928b14fca7b30792
 msgid ""
 "刚开始使用时，优先用播放节点。只有当你需要更细的控制，例如一次性创建 :ref:`Sound<glossary-sound>`、拿到 :ref:`Channel<glossary-"
 "channel>`、手动设置循环点或 3D 属性时，再使用代码播放。"
@@ -34,61 +34,73 @@ msgstr ""
 "finer control, such as creating a :ref:`Sound<glossary-sound>` yourself, getting a :ref:`Channel"
 "<glossary-channel>`, or manually setting loop points or 3D properties."
 
-#: ../../source/user_guide/playback.rst:9 fc0d2ad604674b2888f4a09407d8f542
+#: ../../source/user_guide/playback.rst:11 507db87102f94561abb7a471f584bbb7
 msgid "先选哪种播放方式"
 msgstr "Choose a Playback Method First"
 
-#: ../../source/user_guide/playback.rst:14 7005af06c72c4ba7a10c8655ac59a32b
+#: ../../source/user_guide/playback.rst:16 3872f00592b3429f97598749c0e44fec
 msgid "需求"
 msgstr "Need"
 
-#: ../../source/user_guide/playback.rst:15 dca5cb6c02e54227ae4ced26e843a920
+#: ../../source/user_guide/playback.rst:17 10243c10dca143f7ba4e0ae7a9a1cc7a
 msgid "推荐方式"
 msgstr "Recommended approach"
 
-#: ../../source/user_guide/playback.rst:16 c948ebf57dd648f7b423cc67cab199ab
+#: ../../source/user_guide/playback.rst:18 2978394a816f4239b7955b780ee38910
 msgid "背景音乐、长音频、场景里的固定播放器"
 msgstr "Background music, long audio, or a fixed player in a scene"
 
-#: ../../source/user_guide/playback.rst:18 675e74040c184ee3bc1b65c48d23b9c8
+#: ../../source/user_guide/playback.rst:19 1d85a749c417440abefbd8975f6a3643
+msgid ":ref:`FmodAudioStreamPlayer<class_FmodAudioStreamPlayer>`"
+msgstr ":ref:`FmodAudioStreamPlayer<class_FmodAudioStreamPlayer>`"
+
+#: ../../source/user_guide/playback.rst:20 fb8bb5a61445430890f9593c4562a3f7
 msgid "2D 场景里的音效"
 msgstr "Sound effects in a 2D scene"
 
-#: ../../source/user_guide/playback.rst:20 7df8fa8f7b44431b8fb138b710c88b14
+#: ../../source/user_guide/playback.rst:21 94771b599bb74f0fb6134721ec939f2d
+msgid ":ref:`FmodAudioStreamPlayer2D<class_FmodAudioStreamPlayer2D>`"
+msgstr ":ref:`FmodAudioStreamPlayer2D<class_FmodAudioStreamPlayer2D>`"
+
+#: ../../source/user_guide/playback.rst:22 b1c7b9c213904573a41483e0101219be
 msgid "3D 世界里的声源"
 msgstr "Sound sources in a 3D world"
 
-#: ../../source/user_guide/playback.rst:22 8a4c9b697cea464a98f1efbe796d1565
+#: ../../source/user_guide/playback.rst:23 014a1e5e9cad419c907715871a2a5629
+msgid ":ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>`"
+msgstr ":ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>`"
+
+#: ../../source/user_guide/playback.rst:24 e8c1cf459c2b447897777ea6cd7473b1
 msgid "同一个短音效频繁触发"
 msgstr "The same short sound effect is triggered frequently"
 
-#: ../../source/user_guide/playback.rst:23 b03a879d5ffd45d280fac3b38040a6d6
+#: ../../source/user_guide/playback.rst:25 79e041e96d104117917378eabc434318
 msgid "预加载 :ref:`音频资产<glossary-audio-asset>`，或复用 :ref:`Sound<glossary-sound>`"
 msgstr "Preload the :ref:`Audio Asset<glossary-audio-asset>` or reuse a :ref:`Sound<glossary-sound>`"
 
-#: ../../source/user_guide/playback.rst:24 7caff748a6f74706bfad46b48949777c
+#: ../../source/user_guide/playback.rst:26 dc93800891d34007b29192b6836ffa36
 msgid "播放后还要精细控制"
 msgstr "Fine-grained control is needed after playback starts"
 
-#: ../../source/user_guide/playback.rst:25 008bc67ab6bf48258d8cf71b3efb28c4
+#: ../../source/user_guide/playback.rst:27 3d998d8905474627ba02afac0c9a1683
 msgid "取得 :ref:`Channel<glossary-channel>`"
 msgstr "Get the :ref:`Channel<glossary-channel>`"
 
-#: ../../source/user_guide/playback.rst:27 77df3098a2dd4781925adedfdef2c45c
+#: ../../source/user_guide/playback.rst:29 b49e0c4c8e964d3d8bd17fbc94ee98c3
 msgid "如果你不确定，先用节点。节点能处理大多数播放、停止、音量、音高和总线路由需求。"
 msgstr ""
 "If you are not sure, start with nodes. Nodes cover most needs for playback, stopping, volume, "
 "pitch, and bus routing."
 
-#: ../../source/user_guide/playback.rst:30 a9c7bfa135034f2ab353fface8971e71
+#: ../../source/user_guide/playback.rst:32 d4edb636d61d494cbb1a128f4ab91b83
 msgid "用节点播放"
 msgstr "Play with Nodes"
 
-#: ../../source/user_guide/playback.rst:32 ac2b4dac6eea406ab9d2184f01f8efdb
+#: ../../source/user_guide/playback.rst:34 aff18fc465914ef4ba10f4b3defb5e96
 msgid "最常见的写法是给节点设置 ``stream``，然后调用 ``play()``。"
 msgstr "The most common approach is to set the node's ``stream`` and then call ``play()``."
 
-#: ../../source/user_guide/playback.rst:34 bcafd4460b734f3ba720bf0703617c61
+#: ../../source/user_guide/playback.rst:36 a6226cea0f874915a1a02b11d5b17e21
 msgid ""
 "extends Node\n"
 "\n"
@@ -124,7 +136,7 @@ msgstr ""
 "func stop_music():\n"
 "    music.stop()"
 
-#: ../../source/user_guide/playback.rst:53 63753e70a36a4d2fa2005c1d9a15b7a1
+#: ../../source/user_guide/playback.rst:55 8cb7d92ee54c4661a3881e3e4789a858
 msgid ""
 "这里的 ``stream`` 是 Godot-FmodPlayer 的音频资源。底层真正交给 FMOD 播放时，会创建 :ref:`Sound<glossary-"
 "sound>`，播放出来的一次声音会对应一个 :ref:`Channel<glossary-channel>`。"
@@ -133,95 +145,101 @@ msgstr ""
 ":ref:`Sound<glossary-sound>` is created under the hood, and each playback instance corresponds to"
 " a :ref:`Channel<glossary-channel>`."
 
-#: ../../source/user_guide/playback.rst:56 e4f8007c75ce4c87bf109ac89d57c07f
+#: ../../source/user_guide/playback.rst:58 f248f23e0d054c2aa6e34c2ddd05d0da
 msgid "常用节点属性"
 msgstr "Common Node Properties"
 
-#: ../../source/user_guide/playback.rst:61 d27871638c5640b58b807a3720ae5c7c
+#: ../../source/user_guide/playback.rst:63 51b013e1db9d487eacfa8326c7be073d
 msgid "属性"
 msgstr "Properties"
 
-#: ../../source/user_guide/playback.rst:62 a2a00b0d6e5a42768bdeb5c8a0576963
+#: ../../source/user_guide/playback.rst:64 a69148078c8b4717be6b5b1c57fb2000
 msgid "用途"
 msgstr "Purpose"
 
-#: ../../source/user_guide/playback.rst:63 14af65cc10b24fe1b9ae178b2db4544b
+#: ../../source/user_guide/playback.rst:65 8ba3efd5dc874e5ab05ab281965f7891
 msgid "``stream``"
 msgstr "``stream``"
 
-#: ../../source/user_guide/playback.rst:64 3188751368f544589e1d8ad71cbe0d17
+#: ../../source/user_guide/playback.rst:66 47cd28f8d71b43608eaaec9ef0f5748d
 msgid "要播放的音频资源"
 msgstr "The audio resource to play."
 
-#: ../../source/user_guide/playback.rst:65 5f9b41a3cc854de4a6524e8514047eda
+#: ../../source/user_guide/playback.rst:67 81ce97a66631494b9f1c5ac6ddf8f77a
 msgid "``volume_db``"
 msgstr "``volume_db``"
 
-#: ../../source/user_guide/playback.rst:66 1923e18b9f73467fac73ff30856973c7
+#: ../../source/user_guide/playback.rst:68 98dfaa17f2834b62869648dc316dfb35
 msgid "音量，单位为分贝；``0.0`` 是原始音量"
 msgstr "Volume in decibels; ``0.0`` is the original volume."
 
-#: ../../source/user_guide/playback.rst:67 068fc59258b847889bb2090156de235f
+#: ../../source/user_guide/playback.rst:69 ab08734667fe403ab9ae7c17a3a9a6ab
 msgid "``pitch``"
 msgstr "``pitch``"
 
-#: ../../source/user_guide/playback.rst:68 827677673ca94eec9b87f40de370d858
+#: ../../source/user_guide/playback.rst:70 882a94846d9447ae95b2193598ecd769
 msgid "音高和速度倍率；``1.0`` 是正常"
 msgstr "Pitch and speed multiplier; ``1.0`` is normal."
 
-#: ../../source/user_guide/playback.rst:69 151c048ab0594665b5ccf9ef3af697cc
+#: ../../source/user_guide/playback.rst:71 a8abc5d763b0408ebfe7e02257335f18
 msgid "``autoplay``"
 msgstr "``autoplay``"
 
-#: ../../source/user_guide/playback.rst:70 d937cef23f9145cd95e03e54b8a08c35
+#: ../../source/user_guide/playback.rst:72 10f28257aa284d53a9316433b6b51e54
 msgid "场景开始时自动播放"
 msgstr "Automatically play when the scene starts."
 
-#: ../../source/user_guide/playback.rst:71 a0b7aa35feff45f3ad55fb203cd91520
+#: ../../source/user_guide/playback.rst:73 21a9490b96ac4581b22681ec3fd800c4
 msgid "``bus``"
 msgstr "``bus``"
 
-#: ../../source/user_guide/playback.rst:72 8a832e37177048ee9acbd63b9ecc2309
+#: ../../source/user_guide/playback.rst:74 420ca5ec74424df39cb35c4e384bf76a
 msgid "输出到哪个 :ref:`Bus<glossary-bus>`"
 msgstr "Which :ref:`Bus<glossary-bus>` to output to."
 
-#: ../../source/user_guide/playback.rst:73 98d22013d4a34ec0b0efa9c11b56c158
+#: ../../source/user_guide/playback.rst:75 bcb38169a65a42c6a4a802963aca0635
 msgid "``playing``"
 msgstr "``playing``"
 
-#: ../../source/user_guide/playback.rst:74 ac59c497cf88445c86d74f7094e5435e
+#: ../../source/user_guide/playback.rst:76 a8514c8a6c484547a338f6681b274fd6
 msgid "当前是否正在播放"
 msgstr "Whether it is currently playing."
 
-#: ../../source/user_guide/playback.rst:77 fe2f1d69b2154eb6b50c00eb7c35d720
+#: ../../source/user_guide/playback.rst:79 f92e7f3a0adc48c999c0d5a69c12070a
 msgid "淡入淡出"
 msgstr "Fade In and Fade Out"
 
-#: ../../source/user_guide/playback.rst:79 4696469d3f5c424c847fe09f2cdaab52
+#: ../../source/user_guide/playback.rst:81 4f08727b1d004896873e618f466ecc18
 msgid "节点是 Godot 节点，可以直接用 Tween："
 msgstr "Because playback nodes are Godot nodes, you can use Tween directly:"
 
-#: ../../source/user_guide/playback.rst:81 f9c66a4858974ec68dc1c53ff53773ca
+#: ../../source/user_guide/playback.rst:83 29e48ea3a21b468199978ebe9c4e455c
 msgid ""
-"func fade_music(target_db: float, duration: float):\n"
-"    var tween := create_tween()\n"
+"@onready var music: FmodAudioStreamPlayer = $FmodAudioStreamPlayer\n"
+"\n"
+"\n"
+"func fade_music(target_db: float, duration: float) -> void:\n"
+"    var tween: Tween = create_tween()\n"
 "    tween.tween_property(music, \"volume_db\", target_db, duration)"
 msgstr ""
-"func fade_music(target_db: float, duration: float):\n"
-"    var tween := create_tween()\n"
+"@onready var music: FmodAudioStreamPlayer = $FmodAudioStreamPlayer\n"
+"\n"
+"\n"
+"func fade_music(target_db: float, duration: float) -> void:\n"
+"    var tween: Tween = create_tween()\n"
 "    tween.tween_property(music, \"volume_db\", target_db, duration)"
 
-#: ../../source/user_guide/playback.rst:88 9fad8661b8b74b1ab7258d8a0bd8f636
+#: ../../source/user_guide/playback.rst:93 011822445d6042e8bb7809842632e4ed
 msgid "播放一次短音效"
 msgstr "Play a Short Sound Effect Once"
 
-#: ../../source/user_guide/playback.rst:90 b5304353901c46d8a0ca993eb83e3de5
+#: ../../source/user_guide/playback.rst:95 6008b210ebca4195b9de0820eb3a7ab1
 msgid "如果只是“按按钮、开枪、拾取物品”这种一次性短音效，可以放一个播放器节点，然后反复调用 ``play()``："
 msgstr ""
 "For one-shot sound effects such as pressing a button, firing a weapon, or picking up an item, you"
 " can place a player node and call ``play()`` repeatedly:"
 
-#: ../../source/user_guide/playback.rst:92 3d80bc4990fb4a469a672f3543a2e38c
+#: ../../source/user_guide/playback.rst:97 3455e1da1b7d48aea2e34e838e5e24d1
 msgid ""
 "extends Node\n"
 "\n"
@@ -249,40 +267,42 @@ msgstr ""
 "func play_hit():\n"
 "    hit.play()"
 
-#: ../../source/user_guide/playback.rst:107 7cc5dcf3447043e7922fa7b10a49372f
+#: ../../source/user_guide/playback.rst:112 0e8831e23b484d1a916352bfdd6251af
 msgid "如果同一个声音可能重叠播放很多次，例如一秒内触发多发子弹，建议考虑代码播放或对象池，避免一个节点来不及处理所有重叠声音。"
 msgstr ""
 "If the same sound may overlap many times, such as several bullets fired in one second, consider "
 "code-driven playback or an object pool so one node does not have to handle every overlapping "
 "instance."
 
-#: ../../source/user_guide/playback.rst:110 c9cfb61de3d54f90b077e4e26f302e0c
+#: ../../source/user_guide/playback.rst:115 c0bb1800a2bb45cabee75b5f466fda6b
 msgid "用代码播放"
 msgstr "Play from Code"
 
-#: ../../source/user_guide/playback.rst:112 ce41a19541934e5c835c532591f4abcf
+#: ../../source/user_guide/playback.rst:117 497e5d670fa84eb29f3e0aa47b2637e9
 msgid "代码播放会更接近 FMOD 的工作方式："
 msgstr "Code-driven playback is closer to how FMOD works:"
 
-#: ../../source/user_guide/playback.rst:114 f0e3885294474e268e63468a65327875
+#: ../../source/user_guide/playback.rst:119 a63fd9662bfa4e4e962a2806e3bb5ae6
 msgid "用 :ref:`System<glossary-system>` 创建 :ref:`Sound<glossary-sound>`。"
 msgstr "Create a :ref:`Sound<glossary-sound>` with the :ref:`System<glossary-system>`."
 
-#: ../../source/user_guide/playback.rst:115 e7c2ce963af842969d636accead821f4
+#: ../../source/user_guide/playback.rst:120 838b320c6a384bad9eae1194e7f169fd
 msgid "选择输出到哪个 :ref:`Bus<glossary-bus>` / :ref:`ChannelGroup<glossary-channelgroup>`。"
 msgstr "Choose which :ref:`Bus<glossary-bus>` / :ref:`ChannelGroup<glossary-channelgroup>` to output to."
 
-#: ../../source/user_guide/playback.rst:116 289c8ee50c9f426fb9662c6d9bde93b0
+#: ../../source/user_guide/playback.rst:121 5a1d6bdbd62d4db18bc0c485064aa4eb
 msgid "调用 ``play_sound()``，得到这次播放的 :ref:`Channel<glossary-channel>`。"
 msgstr "Call ``play_sound()`` to get the :ref:`Channel<glossary-channel>` for this playback instance."
 
-#: ../../source/user_guide/playback.rst:118 8c00aa7fbc6e45e8b92137a1e79f4f5a
+#: ../../source/user_guide/playback.rst:123 2494d3bf5c2547558d03ccffe5db2af5
 msgid ""
 "func play_sound(path: String, bus_name: String = \"SFX\") -> FmodChannel:\n"
 "    var system := FmodServer.get_main_system()\n"
 "\n"
 "    var sound := system.create_sound_from_file(path)\n"
-"    var bus := system.get_channel_group_by_name(bus_name)\n"
+"    var runtime_bus: FmodAudioBus = FmodServer.get_audio_bus(StringName(bus_name))\n"
+"    var bus: FmodChannelGroup = runtime_bus.get_bus() if runtime_bus != null else "
+"FmodServer.get_master_channel_group()\n"
 "    var channel := system.play_sound(sound, bus, false)\n"
 "\n"
 "    return channel"
@@ -291,33 +311,37 @@ msgstr ""
 "    var system := FmodServer.get_main_system()\n"
 "\n"
 "    var sound := system.create_sound_from_file(path)\n"
-"    var bus := system.get_channel_group_by_name(bus_name)\n"
+"    var runtime_bus: FmodAudioBus = FmodServer.get_audio_bus(StringName(bus_name))\n"
+"    var bus: FmodChannelGroup = runtime_bus.get_bus() if runtime_bus != null else "
+"FmodServer.get_master_channel_group()\n"
 "    var channel := system.play_sound(sound, bus, false)\n"
 "\n"
 "    return channel"
 
-#: ../../source/user_guide/playback.rst:129 0fcada036a134bdd85afd93e77096b97
+#: ../../source/user_guide/playback.rst:135 188f3b430ef74707bd629a84f280c54b
 msgid "返回的 ``channel`` 只代表“这一次播放”。同一个 ``sound`` 播放三次，就会有三个不同的 :ref:`Channel<glossary-channel>`。"
 msgstr ""
 "The returned ``channel`` represents only this one playback instance. If the same ``sound`` is "
 "played three times, there will be three different :ref:`Channel<glossary-channel>` objects."
 
-#: ../../source/user_guide/playback.rst:132 55ec9c32191c4c90b1f0c51ce25d3ee1
+#: ../../source/user_guide/playback.rst:138 9c0a1d9f756045418eff3b0178c0785e
 msgid "先暂停再配置"
 msgstr "Create Paused, Then Configure"
 
-#: ../../source/user_guide/playback.rst:134 f053fe778d13463089695310399c756b
+#: ../../source/user_guide/playback.rst:140 f9fc6d1f1fcd403f8b20904b346ff7d4
 msgid "有时你希望声音开始前先设置音量、音高或 3D 位置。可以让它以暂停状态创建，配置完成后再恢复："
 msgstr ""
 "Sometimes you need to set volume, pitch, or 3D position before the sound starts. Create it "
 "paused, configure it, and then resume playback:"
 
-#: ../../source/user_guide/playback.rst:136 cb5536fbb99d48bb92441d33a1dcea04
+#: ../../source/user_guide/playback.rst:142 a81a7c71a5fe4d29ae81cb27e5097e6c
 msgid ""
 "func play_configured(path: String) -> FmodChannel:\n"
 "    var system := FmodServer.get_main_system()\n"
 "    var sound := system.create_sound_from_file(path)\n"
-"    var sfx_bus := system.get_channel_group_by_name(\"SFX\")\n"
+"    var runtime_bus: FmodAudioBus = FmodServer.get_audio_bus(&\"SFX\")\n"
+"    var sfx_bus: FmodChannelGroup = runtime_bus.get_bus() if runtime_bus != null else "
+"FmodServer.get_master_channel_group()\n"
 "\n"
 "    var channel := system.play_sound(sound, sfx_bus, true)\n"
 "    channel.volume_db = -6.0\n"
@@ -329,7 +353,9 @@ msgstr ""
 "func play_configured(path: String) -> FmodChannel:\n"
 "    var system := FmodServer.get_main_system()\n"
 "    var sound := system.create_sound_from_file(path)\n"
-"    var sfx_bus := system.get_channel_group_by_name(\"SFX\")\n"
+"    var runtime_bus: FmodAudioBus = FmodServer.get_audio_bus(&\"SFX\")\n"
+"    var sfx_bus: FmodChannelGroup = runtime_bus.get_bus() if runtime_bus != null else "
+"FmodServer.get_master_channel_group()\n"
 "\n"
 "    var channel := system.play_sound(sound, sfx_bus, true)\n"
 "    channel.volume_db = -6.0\n"
@@ -338,21 +364,21 @@ msgstr ""
 "\n"
 "    return channel"
 
-#: ../../source/user_guide/playback.rst:151 726cc11380f94390bf8153793e3c4186
+#: ../../source/user_guide/playback.rst:158 5cdafa0bdefa40c4a9725a4fc1c5aa15
 msgid "控制一次播放"
 msgstr "Control One Playback Instance"
 
-#: ../../source/user_guide/playback.rst:153 22ca7ce993794124a19a7f3ce5583390
+#: ../../source/user_guide/playback.rst:160 c0a5e2081eb44a9bbc1c65fab3c0f108
 msgid ":ref:`Channel<glossary-channel>` 是“一次正在播放的声音”。它可以暂停、停止、调音量、调音高、跳转位置，也可以设置 3D 属性。"
 msgstr ""
 "A :ref:`Channel<glossary-channel>` is one currently playing sound. It can be paused, stopped, "
 "have its volume and pitch adjusted, seek to a position, and receive 3D properties."
 
-#: ../../source/user_guide/playback.rst:156 7b9318a72dae4afba6c3cf7fb9bd1e51
+#: ../../source/user_guide/playback.rst:163 04d63f7a75154501af660de9ec36677c
 msgid "暂停、恢复和停止"
 msgstr "Pause, Resume, and Stop"
 
-#: ../../source/user_guide/playback.rst:158 3c3a80521a3b4998a0019d357309b1a3
+#: ../../source/user_guide/playback.rst:165 d41e7e16a1204159ad2ff29e527bf6d0
 msgid ""
 "func pause_channel(channel: FmodChannel, paused: bool):\n"
 "    if channel != null:\n"
@@ -376,59 +402,55 @@ msgstr ""
 "func is_still_playing(channel: FmodChannel) -> bool:\n"
 "    return channel != null and channel.is_playing()"
 
-#: ../../source/user_guide/playback.rst:172 b31ea045e4094fc49c3c1bc8233c1990
+#: ../../source/user_guide/playback.rst:179 104a7ca4ed3744bd95f489ad23a8737f
 msgid "音量、音高和声像"
 msgstr "Volume, Pitch, and Pan"
 
-#: ../../source/user_guide/playback.rst:174 9734f45407c441229a2b60ec11babb8f
+#: ../../source/user_guide/playback.rst:181 5bde1871c7b34e2b9a9718d093188aa1
 msgid ""
-"func adjust_channel(channel: FmodChannel):\n"
-"    channel.volume_db = -10.0\n"
-"    channel.pitch = 1.0\n"
-"\n"
-"    # -1.0 在左边，0.0 在中间，1.0 在右边。\n"
-"    channel.set_pan(0.25)"
+"func adjust_channel(channel: FmodChannel): channel.volume_db = -10.0 channel.pitch = 1.0 # -1.0 "
+"in left , 0.0 in , 1.0 in right . channel.set_pan(0.25)"
 msgstr ""
 "func adjust_channel(channel: FmodChannel): channel.volume_db = -10.0 channel.pitch = 1.0 # -1.0 "
 "in left , 0.0 in , 1.0 in right . channel.set_pan(0.25)"
 
-#: ../../source/user_guide/playback.rst:183 5cb19d7a655d4786bbce3801850ef0a2
+#: ../../source/user_guide/playback.rst:190 5a9615e0589a4bb780f8996fd19cc5ad
 msgid "``pitch`` 会同时影响音高和播放速度。``0.5`` 听起来更低也更慢，``2.0`` 听起来更高也更快。"
 msgstr ""
 "``pitch`` affects both pitch and playback speed. ``0.5`` sounds lower and slower, while ``2.0`` "
 "sounds higher and faster."
 
-#: ../../source/user_guide/playback.rst:186 bafd448f10fc484b815060708e9bbbea
+#: ../../source/user_guide/playback.rst:193 a9c04531f5b1451f83f8ba2d44c57c13
 msgid "播放位置"
 msgstr "Playback Position"
 
-#: ../../source/user_guide/playback.rst:188 ea949233d8e743428b8d8a0c6762d295
+#: ../../source/user_guide/playback.rst:195 cd3ed2a851234e4692c7f7f647b6d24e
 msgid "位置通常用毫秒控制。适合音乐跳转、从某个时间点继续播放，或做简单的预览工具。"
 msgstr ""
 "Position is usually controlled in milliseconds. This is useful for music seeking, resuming from a"
 " specific time, or building a simple preview tool."
 
-#: ../../source/user_guide/playback.rst:190 9bf653f87d614175bd55a574bb793a8a
+#: ../../source/user_guide/playback.rst:197 468f2cc54d374593a958bd9770347774
 msgid ""
 "func jump_to_30_seconds(channel: FmodChannel):\n"
-"    channel.set_position(30000, FmodChannel.TIMEUNIT_MS)\n"
+"    channel.set_position(30000, FmodSystem.FMOD_TIME_UNIT_MS)\n"
 "\n"
 "func print_position(channel: FmodChannel):\n"
-"    var position_ms := channel.get_position(FmodChannel.TIMEUNIT_MS)\n"
+"    var position_ms := channel.get_position(FmodSystem.FMOD_TIME_UNIT_MS)\n"
 "    print(\"position: \", position_ms, \" ms\")"
 msgstr ""
 "func jump_to_30_seconds(channel: FmodChannel):\n"
-"    channel.set_position(30000, FmodChannel.TIMEUNIT_MS)\n"
+"    channel.set_position(30000, FmodSystem.FMOD_TIME_UNIT_MS)\n"
 "\n"
 "func print_position(channel: FmodChannel):\n"
-"    var position_ms := channel.get_position(FmodChannel.TIMEUNIT_MS)\n"
+"    var position_ms := channel.get_position(FmodSystem.FMOD_TIME_UNIT_MS)\n"
 "    print(\"position: \", position_ms, \" ms\")"
 
-#: ../../source/user_guide/playback.rst:200 f1aa1b198b1e424994d983918f32aaf2
+#: ../../source/user_guide/playback.rst:207 965dcea27e4641f390b81d9085919ce8
 msgid "循环"
 msgstr "Looping"
 
-#: ../../source/user_guide/playback.rst:202 3169e6953b8d418090115bbb3f32ea38
+#: ../../source/user_guide/playback.rst:209 7cb16d00014643589a1166d31031efe2
 msgid ""
 "func loop_forever(channel: FmodChannel):\n"
 "    channel.loop_count = -1\n"
@@ -448,7 +470,7 @@ msgstr ""
 "func disable_loop(channel: FmodChannel):\n"
 "    channel.loop_count = 0"
 
-#: ../../source/user_guide/playback.rst:213 b67516a34ce44496b46a007891be7db2
+#: ../../source/user_guide/playback.rst:220 e1d301ede81a4ca49d26e2be6babc941
 msgid ""
 "循环是否生效还和创建声音时使用的播放模式有关。常规节点播放通常更适合简单循环；需要精确控制循环点时，再直接控制 :ref:`Channel<glossary-channel>` 和 "
 ":ref:`Sound<glossary-sound>`。"
@@ -457,22 +479,29 @@ msgstr ""
 "node playback is usually better for simple loops; control :ref:`Channel<glossary-channel>` and "
 ":ref:`Sound<glossary-sound>` directly only when you need precise loop points."
 
-#: ../../source/user_guide/playback.rst:216 10cd55d7318046ea992156049fa5dd3a
+#: ../../source/user_guide/playback.rst:223 afb20d90dc1e419e9daad70317e5ec53
 msgid "2D 与 3D 播放"
 msgstr "2D and 3D Playback"
 
-#: ../../source/user_guide/playback.rst:218 a5a2d92182bf4821a0295f95feb21bd3
+#: ../../source/user_guide/playback.rst:225 9989be47999f44cb98df999ecf9e71b9
 msgid "2D 声音不跟随世界位置变化，适合 UI、音乐、旁白。3D 声音会根据 :ref:`Listener<glossary-listener>` 和声源的位置计算距离、方向和衰减。"
 msgstr ""
 "2D sounds do not follow world positions, so they are suitable for UI, music, and narration. 3D "
 "sounds calculate distance, direction, and attenuation from the :ref:`Listener<glossary-listener>`"
 " and the sound source position."
 
-#: ../../source/user_guide/playback.rst:221 9691ec88fb3a4f3b8edde27bf8ffc53f
+#: ../../source/user_guide/playback.rst:228 5588f574dcde47c9bafa1ba6a0b04874
 msgid "优先使用 3D 播放节点"
 msgstr "Prefer the 3D Playback Node"
 
-#: ../../source/user_guide/playback.rst:225 1219cb016ccb4b2b9bf0672c72a67246
+#: ../../source/user_guide/playback.rst:230 a41d48e9ac794798b3d7a7431ea59446
+msgid "在 3D 场景里，最简单的方式是使用 :ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>`。它会把节点位置同步给 FMOD。"
+msgstr ""
+"In a 3D scene, the simplest approach is to use "
+":ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>`. It synchronizes the node position "
+"to FMOD."
+
+#: ../../source/user_guide/playback.rst:232 3cbf3197af8e4b2b877b6155cf88da0c
 msgid ""
 "extends Node3D\n"
 "\n"
@@ -490,26 +519,28 @@ msgstr ""
 "    emitter.bus = \"SFX\"\n"
 "    emitter.play()"
 
-#: ../../source/user_guide/playback.rst:235 a7f057aa112242f881b441a3cf8f96c7
+#: ../../source/user_guide/playback.rst:242 fbcafdd07355423cb89cb725a183cf18
 msgid "如果声音应该跟随敌人、车辆、门、机关或环境物件，就把播放器作为这些节点的子节点。"
 msgstr ""
 "If a sound should follow an enemy, vehicle, door, mechanism, or environment object, make the "
 "player a child of that node."
 
-#: ../../source/user_guide/playback.rst:238 2b04426a98f443a6b18b35b579850b39
+#: ../../source/user_guide/playback.rst:245 fbf0739556634ff5aa37c51158e0e989
 msgid "代码方式设置 3D 位置"
 msgstr "Set 3D Position from Code"
 
-#: ../../source/user_guide/playback.rst:240 914fbd00416349f5927c017a9b37b143
+#: ../../source/user_guide/playback.rst:247 01957782ee4b48b98c0537915cd8fef6
 msgid "只有在你直接代码播放时，才需要手动设置 3D 属性："
 msgstr "You only need to set 3D properties manually when playing directly from code:"
 
-#: ../../source/user_guide/playback.rst:242 fd25db653d6f448d8d141d1323bb6b6a
+#: ../../source/user_guide/playback.rst:249 a2033b3cf10648579f2ce7cfd0050d8c
 msgid ""
 "func play_3d_sound(path: String, position: Vector3):\n"
 "    var system := FmodServer.get_main_system()\n"
-"    var sound := system.create_sound_from_file(path, FmodSystem.MODE_3D)\n"
-"    var bus := system.get_channel_group_by_name(\"SFX\")\n"
+"    var sound := system.create_sound_from_file(path, FmodSystem.FMOD_MODE_3D)\n"
+"    var runtime_bus: FmodAudioBus = FmodServer.get_audio_bus(&\"SFX\")\n"
+"    var bus: FmodChannelGroup = runtime_bus.get_bus() if runtime_bus != null else "
+"FmodServer.get_master_channel_group()\n"
 "\n"
 "    var channel := system.play_sound(sound, bus, true)\n"
 "    channel.set_3d_attributes(position, Vector3.ZERO)\n"
@@ -520,8 +551,10 @@ msgid ""
 msgstr ""
 "func play_3d_sound(path: String, position: Vector3):\n"
 "    var system := FmodServer.get_main_system()\n"
-"    var sound := system.create_sound_from_file(path, FmodSystem.MODE_3D)\n"
-"    var bus := system.get_channel_group_by_name(\"SFX\")\n"
+"    var sound := system.create_sound_from_file(path, FmodSystem.FMOD_MODE_3D)\n"
+"    var runtime_bus: FmodAudioBus = FmodServer.get_audio_bus(&\"SFX\")\n"
+"    var bus: FmodChannelGroup = runtime_bus.get_bus() if runtime_bus != null else "
+"FmodServer.get_master_channel_group()\n"
 "\n"
 "    var channel := system.play_sound(sound, bus, true)\n"
 "    channel.set_3d_attributes(position, Vector3.ZERO)\n"
@@ -530,23 +563,23 @@ msgstr ""
 "\n"
 "    return channel"
 
-#: ../../source/user_guide/playback.rst:256 faf71acb4cdc4a92bad2c7ecb493d515
-msgid "这里的 ``MODE_3D`` 很重要。没有用 3D 模式创建的声音，即使设置了位置，也不会按 3D 声源来计算。"
+#: ../../source/user_guide/playback.rst:264 44d881fb34ef40a89a383f17c811357d
+msgid "这里的 ``FMOD_MODE_3D`` 很重要。没有用 3D 模式创建的声音，即使设置了位置，也不会按 3D 声源来计算。"
 msgstr ""
-"``MODE_3D`` is important here. If a sound was not created in 3D mode, setting a position will not"
-" make it behave as a 3D sound source."
+"``FMOD_MODE_3D`` is important here. If a sound was not created in 3D mode, setting a position "
+"will not make it behave as a 3D sound source."
 
-#: ../../source/user_guide/playback.rst:259 8e1dc8844f5d43fe85c08d54a5f325db
+#: ../../source/user_guide/playback.rst:267 45abb4e4e0034f7a98a7979dd59ad24b
 msgid "监听器"
 msgstr "Listener"
 
-#: ../../source/user_guide/playback.rst:261 cadfb8ae5afc46089885c51acba97e11
+#: ../../source/user_guide/playback.rst:269 61e5f7301ea54285bd9e54305199b2c9
 msgid ":ref:`Listener<glossary-listener>` 表示玩家“从哪里听”。通常它跟随玩家角色或主摄像机。"
 msgstr ""
 "The :ref:`Listener<glossary-listener>` represents where the player hears from. It usually follows"
 " the player character or the main camera."
 
-#: ../../source/user_guide/playback.rst:263 0a10a103a95a46d4b6d40123d11e4582
+#: ../../source/user_guide/playback.rst:271 1c97af6742c749348ed232cee459c673
 msgid ""
 "extends CharacterBody3D\n"
 "\n"
@@ -572,49 +605,49 @@ msgstr ""
 "        global_transform.basis.y\n"
 "    )"
 
-#: ../../source/user_guide/playback.rst:277 a67532e93a204efb9d11b39dee189dc2
+#: ../../source/user_guide/playback.rst:285 09b63d45610847088a8e34be53c4a72b
 msgid "如果 3D 声音听起来方向不对、距离不对，先检查监听器位置和朝向。"
 msgstr ""
 "If a 3D sound has the wrong direction or distance, check the listener position and orientation "
 "first."
 
-#: ../../source/user_guide/playback.rst:280 a5cbcaff429e4915978890deec1d6d85
+#: ../../source/user_guide/playback.rst:288 0f151d0c2ccc4b6a9bea43c12e489589
 msgid "常见问题"
 msgstr "FAQ"
 
-#: ../../source/user_guide/playback.rst:283 2ee6f188d8444297b3f24190404ffa37
+#: ../../source/user_guide/playback.rst:291 6a62fa1e11e54eaaa6bd9b772abb7540
 msgid "声音没有播放"
 msgstr "The Sound Does Not Play"
 
-#: ../../source/user_guide/playback.rst:285 6e1d38d6660044a19044e1827efe9bd7
+#: ../../source/user_guide/playback.rst:293 72d6f823b762457fac6c425be45c7db3
 msgid "按顺序检查："
 msgstr "Check these in order:"
 
-#: ../../source/user_guide/playback.rst:287 ac741a25118044c582901e71f276e282
+#: ../../source/user_guide/playback.rst:295 93159e8bdf3643a3bba10dea25bbcdca
 msgid "音频路径是否正确。"
 msgstr "Whether the audio path is correct."
 
-#: ../../source/user_guide/playback.rst:288 1e9fd24e44704cd699d9fff26c649886
+#: ../../source/user_guide/playback.rst:296 788ac540d0f4419e88c4de4627568f0e
 msgid "播放节点是否有 ``stream``。"
 msgstr "Whether the playback node has a ``stream``."
 
-#: ../../source/user_guide/playback.rst:289 1406ce9d9a99413b9b2fd8867172ebbb
+#: ../../source/user_guide/playback.rst:297 ae423753e4174483af2eaafb6ec1fcc0
 msgid "目标 :ref:`Bus<glossary-bus>` 是否存在，是否被静音。"
 msgstr "Whether the target :ref:`Bus<glossary-bus>` exists and is not muted."
 
-#: ../../source/user_guide/playback.rst:290 633aceba56794042a6b8eb5aed0ca661
+#: ../../source/user_guide/playback.rst:298 aabeb6dd123045168626eb875994e353
 msgid "音量是否太低。"
 msgstr "Whether the volume is too low."
 
-#: ../../source/user_guide/playback.rst:291 86123610efbe4a699ebbc68679d8d2c4
+#: ../../source/user_guide/playback.rst:299 97f3d3ef9ea3441fb5c7c84e8dc4f8c0
 msgid "3D 声音是否离 :ref:`Listener<glossary-listener>` 太远。"
 msgstr "Whether the 3D sound is too far away from the :ref:`Listener<glossary-listener>`."
 
-#: ../../source/user_guide/playback.rst:294 67172531a639408aa3992a7dfde19f58
+#: ../../source/user_guide/playback.rst:302 f3103466556640f4a30196746e91b4ff
 msgid "声音只能播放一次"
 msgstr "The Sound Only Plays Once"
 
-#: ../../source/user_guide/playback.rst:296 35a0dfa0134c484a8b1b77972ca65930
+#: ../../source/user_guide/playback.rst:304 5c4a28c0c2634c67922dc1a81c1ae51a
 msgid ""
 "如果同一个节点还在播放，再调用 ``play()`` 可能会重启这一次播放，而不是创建新的重叠声音。需要重叠播放时，可以创建多个播放器、使用对象池，或直接用 ``play_sound()`` "
 "获取多个 :ref:`Channel<glossary-channel>`。"
@@ -624,17 +657,17 @@ msgstr ""
 "object pool, or call ``play_sound()`` directly to obtain multiple :ref:`Channel<glossary-"
 "channel>` objects."
 
-#: ../../source/user_guide/playback.rst:299 13a0ef9844664ddda6e3dd8767bd90a6
+#: ../../source/user_guide/playback.rst:307 6b7c8a96a0664bfa9444a1c35bcfb870
 msgid "大量声音时卡顿"
 msgstr "Stutter When Playing Many Sounds"
 
-#: ../../source/user_guide/playback.rst:301 f3a73eaed94c4789a7ba23fc4fef8113
+#: ../../source/user_guide/playback.rst:309 d5d074a4e13d47c7bc2a46bbcadae899
 msgid "短音效可以优先用 Sample 方式或预加载；长音乐优先用 Stream 方式。两者的区别见 :ref:`Stream 与 Sample<glossary-stream-sample>`。"
 msgstr ""
 "For short sound effects, prefer Sample mode or preloading. For long music, prefer Stream mode. "
 "See :ref:`Stream and Sample<glossary-stream-sample>` for the difference."
 
-#: ../../source/user_guide/playback.rst:303 57724b400158490b92ddd8e9b7456137
+#: ../../source/user_guide/playback.rst:311 ff995f28f988476b93f048cfd39c89e2
 msgid ""
 "同时播放很多声音时，也可以关注 :ref:`Virtual Channel<glossary-virtual-channel>`。FMOD "
 "可能会让听不见或优先级低的声音进入虚拟状态，以减少混音开销。"
@@ -642,47 +675,28 @@ msgstr ""
 "When many sounds play at once, also pay attention to :ref:`Virtual Channel<glossary-virtual-"
 "channel>`. FMOD may virtualize inaudible or low-priority sounds to reduce mixing cost."
 
-#: ../../source/user_guide/playback.rst:306 fb78194477c14f6d8ffca51d7217698c
+#: ../../source/user_guide/playback.rst:314 c600a1ec61cf466a97996e2c92af62cb
 msgid "建议"
 msgstr "Recommendations"
 
-#: ../../source/user_guide/playback.rst:308 d9b98ae44d324132babf1f0a835f5663
+#: ../../source/user_guide/playback.rst:316 2a1a5052aa2144edb125e4a9736e8b67
 msgid "入门先用播放节点，不要一开始就直接操作底层对象。"
 msgstr "Start with playback nodes. Do not operate on lower-level objects right away."
 
-#: ../../source/user_guide/playback.rst:309 30d5a3e4666e42f09863d3d3ca238a53
+#: ../../source/user_guide/playback.rst:317 ec1221a6624d480bb0f74e0a030ba54f
 msgid "需要控制“这一次播放”时，再拿 :ref:`Channel<glossary-channel>`。"
 msgstr "Get a :ref:`Channel<glossary-channel>` when you need to control this specific playback instance."
 
-#: ../../source/user_guide/playback.rst:310 5685e04ecccb44a1a234e8cfde7bd6be
+#: ../../source/user_guide/playback.rst:318 51eb29c0ebd94e32aeba20f04ebf7592
 msgid "长音乐走 ``Music`` 总线，短音效走 ``SFX`` 总线。"
 msgstr "Route long music to the ``Music`` bus and short sound effects to the ``SFX`` bus."
 
-#: ../../source/user_guide/playback.rst:312 a1fa7c6c702f4e0a972caa41335dc972
+#: ../../source/user_guide/playback.rst:319 6673560cb0194a17b34ba262223bc482
+msgid "3D 声音优先用 :ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>`。"
+msgstr "Prefer :ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>` for 3D sounds."
+
+#: ../../source/user_guide/playback.rst:320 a6bbe11017a74b8fae9ef5ea1205c65a
 msgid "代码播放时，如果要先配置参数，就用暂停状态创建，再恢复播放。"
 msgstr ""
 "When playing from code, create the sound paused if you need to configure parameters first, then "
 "resume playback."
-
-#: ../../source/user_guide/playback.rst:17 9e12f7370cf24947a0c431233fdd9e8f
-msgid ":ref:`FmodAudioStreamPlayer<class_FmodAudioStreamPlayer>`"
-msgstr ":ref:`FmodAudioStreamPlayer<class_FmodAudioStreamPlayer>`"
-
-#: ../../source/user_guide/playback.rst:19 8e260d0d2a7647f093104502508876eb
-msgid ":ref:`FmodAudioStreamPlayer2D<class_FmodAudioStreamPlayer2D>`"
-msgstr ":ref:`FmodAudioStreamPlayer2D<class_FmodAudioStreamPlayer2D>`"
-
-#: ../../source/user_guide/playback.rst:21 a5c92536f8b24a5c80ea074f8597f512
-msgid ":ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>`"
-msgstr ":ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>`"
-
-#: ../../source/user_guide/playback.rst:223 ef86aa60a3a34be29392751599d14302
-msgid "在 3D 场景里，最简单的方式是使用 :ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>`。它会把节点位置同步给 FMOD。"
-msgstr ""
-"In a 3D scene, the simplest approach is to use "
-":ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>`. It synchronizes the node position "
-"to FMOD."
-
-#: ../../source/user_guide/playback.rst:311 298575bf8de14ec4afdc0dc3beccc693
-msgid "3D 声音优先用 :ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>`。"
-msgstr "Prefer :ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>` for 3D sounds."
