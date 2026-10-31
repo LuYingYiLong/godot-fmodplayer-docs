@@ -12,13 +12,15 @@
 - 支持 C++17 的编译器：Windows 使用 MSVC，Linux 使用 GCC 或 Clang；Android 使用 NDK 工具链。
 - 目标平台的 FMOD Core SDK 2.04；头文件、链接库和运行库使用同一 SDK 发布版本。
 
+只修改网站内容时，使用文档仓库的 Python 3.12 或更新版本环境即可，无需插件编译器和 FMOD SDK。
+
 .. code-block:: sh
 
     git clone --recurse-submodules https://github.com/LuYingYiLong/Godot-FmodPlayer.git
     cd Godot-FmodPlayer
     python -m pip install scons
 
-已有工作副本可运行 ``git submodule update --init --recursive``，恢复项目固定的 godot-cpp 提交。项目的 ``SConstruct`` 默认使用 ``api_version=4.7``，通常无需自行导出 API JSON。
+已有工作副本可运行 ``git submodule update --init --recursive``，恢复项目固定的 godot-cpp 提交。godot-cpp 10.x 的版本号与 Godot 独立；项目 ``SConstruct`` 默认使用 ``api_version=4.7``，扩展配置的最低 Godot 运行版本仍为 4.7.2。通常无需自行导出 API JSON，也不再依赖旧的 ``api/godot_4_7_2.json``。
 
 Windows 可使用 Visual Studio 的“使用 C++ 的桌面开发”工作负载，并安装 Windows SDK。可打开仓库中的 ``Godot-FmodPlayer.slnx``，或使用其他编辑器后从命令行构建。
 

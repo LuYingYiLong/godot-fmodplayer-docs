@@ -6,9 +6,11 @@
 环境要求
 ------------
 
-- Godot 4.7.2 或更高版本；当前扩展使用 4.7.2 的公开 API。
+- Godot 4.7.2 或更新版本；这是当前扩展配置要求的最低运行版本。
 - 与扩展版本、操作系统和架构匹配的 FMOD Core SDK 2.04 运行库。
 - 使用发布包中包含的平台二进制；自行构建时参见 :doc:`../contributing/development`。
+
+完整平台状态见 :ref:`platform-support`。macOS / iOS 仍为实验性支持，需自行配置 SDK、链接项和扩展库条目。
 
 复制插件
 ------------
@@ -22,6 +24,7 @@
     └── addons/
         └── fmod_player/
             ├── plugin.cfg
+            ├── fmod_check.gd
             ├── fmod_player_main.gd
             ├── translations/
             └── bin/
@@ -43,7 +46,7 @@
    * - Linux x86_64
      - Debug 使用 ``libfmodL.so.15``，Release 使用 ``libfmod.so.15``
    * - Android arm64
-     - ``libfmod.so`` 和 ``fmod.jar``，配置步骤见 :doc:`../export`
+     - Debug 使用 ``libfmodL.so``，Release 使用 ``libfmod.so``，另需 ``fmod.jar``；配置见 :doc:`../export`
 
 Linux 的版本化共享库和符号链接需一起保留，或将链接目标复制为上表中的文件名。
 

@@ -6,6 +6,13 @@
 安装与运行库
 ----------------
 
+.. _faq-version-requirements:
+
+版本要求与构建目标
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+当前插件要求 Godot 4.7.2 或更新版本及匹配的 FMOD Core SDK 2.04。``api_version=4.7`` 选择用于生成绑定的 Godot API；``fmod_player.gdextension`` 中的 ``compatibility_minimum=4.7.2`` 声明最低运行版本，两者用途不同。构建配置见 :doc:`../contributing/development`。
+
 .. _faq-module-no-found:
 
 加载时提示找不到模块
@@ -101,6 +108,23 @@ FMOD Audio 当前显示编辑器内试听电平。F5/F6 启动的独立游戏进
 ~~~~~~~~~~~~~~~~~~~~~~
 
 保留完整日志、Godot/FMOD/插件版本、平台架构及最小复现场景，说明是否仅在导出版本出现。可在 `GitHub Issues <https://github.com/LuYingYiLong/Godot-FmodPlayer/issues>`_ 提交；日志中附上首次错误及复现步骤。
+
+源码构建与测试
+----------------------
+
+.. _faq-build-configuration:
+
+找不到旧 API 文件或 NDK
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+普通构建使用内置 ``api_version=4.7``。若仍提示旧 JSON 路径不存在，检查 ``custom.py`` 或命令行是否设置了 ``custom_api_file``；它会覆盖内置 API 选择。Android 构建确认 ``ANDROID_HOME`` 指向 SDK，并在 ``custom.py`` 中固定本机已安装的 ``ndk_version``，参见 :doc:`../contributing/development`。
+
+.. _faq-testing-entry:
+
+如何运行测试
+~~~~~~~~~~~~~~~~~~~~
+
+构建时使用 ``copy_to_tests=yes`` 同步完整插件，随后在 Godot 中打开 ``tests/project.godot``，按 F5 进入试听场景或点击“运行数值回归（8 项）”。效果器、总线和翻译直接在编辑器中检查；无需运行已移除的 PowerShell、Shell 或 Python 测试脚本，完整流程见 :doc:`../contributing/testing`。
 
 接口与许可
 --------------

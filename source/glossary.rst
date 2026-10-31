@@ -2,7 +2,7 @@
 ======
 
 本页整理使用 Godot-FmodPlayer 时常见的 FMOD 与音频术语。内容参考
-`FMOD API Glossary <https://www.fmod.com/docs/2.02/api/glossary.html>`_，
+`FMOD API Glossary <https://www.fmod.com/docs/2.04/api/glossary.html>`_，
 并根据 Godot 引擎、FMOD Core API 与 Godot-FmodPlayer 的实际用法重新说明。
 
 .. important::
@@ -140,9 +140,7 @@ Listener
 
 Listener 即监听器，表示玩家“听见世界”的位置和朝向。3D 声音会根据监听器与声源之间的距离、方向和相对速度计算结果。
 
-在 Godot 场景中，监听器通常跟随玩家、主摄像机或当前激活的 ``AudioListener3D``。
-使用 :ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>` 时，需要确保 FMOD 系统能获得正确的监听器变换，
-否则 3D 声音可能听起来位置不对或距离衰减异常。
+当前插件在游戏中读取视口的 Camera3D 或 Camera2D 作为监听来源，3D 编辑器试听使用编辑器相机。原生 ``AudioListener3D`` 不会自动接管 FMOD 监听器。使用 :ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>` 时，检查活动相机、声源变换和距离设置。
 
 .. _glossary-sound:
 
@@ -183,9 +181,7 @@ Rolloff
 
 Rolloff 表示 3D 声音随距离变远而衰减的曲线。不同曲线会影响声音从近处到远处的听感变化。
 
-在 Godot-FmodPlayer 中，3D 播放节点和 :ref:`FmodChannelControl<class_FmodChannelControl>` 提供最小距离、最大距离、
-自定义衰减曲线等设置。制作空间音频时，建议先调好 ``min_distance`` 和 ``max_distance``，
-再根据项目需要调整更复杂的衰减行为。
+3D 播放节点通过 ``unit_size`` 缩放距离，``max_distance`` 是其倍数，并非通用的硬截止距离；衰减曲线由 ``attenuation_model`` 选择。低层 :ref:`FmodChannelControl<class_FmodChannelControl>` 则提供 ``set_3d_min_max_distance()`` 和自定义衰减曲线接口。先确认所用层级及其距离单位，再调整衰减行为。
 
 .. _glossary-doppler:
 

@@ -36,7 +36,7 @@ python -m venv .venv
 
 中文构建先在内存中的 XML 副本上应用 PO，再通过 Godot 生成器转换为 RST。Sphinx 扩展在读取类页面时提供中文内容，源文件仍为英文，页面路径和锚点保持一致。`make_rst --lang` 负责模板标题，描述的翻译由生成器适配层完成。
 
-更新 XML 后，在文档仓库运行以下 PowerShell 命令。示例假定插件与文档仓库并列，插件的测试项目已部署当前版本扩展：
+更新 XML 后，在文档仓库运行以下 PowerShell 命令。示例假定插件与文档仓库并列，插件的测试项目已部署当前版本扩展。这里的无头命令仅用于导出 API 元数据；日常插件测试仍从 Godot 项目的 F5 菜单进入：
 
 ```powershell
 $plugin = (Resolve-Path ../godot-fmodplayer).Path
@@ -60,7 +60,7 @@ python scripts/documentation_translations.py check --xml-dir "$plugin/doc_classe
 
 每条消息对应完整的 XML 描述，保留 `[param]`、`[method]` 等标记和换行。未翻译或带 `fuzzy` 的条目在编辑器中回退英文；网站的完整性检查要求全部译文已确认。只修改 PO 不需要重编译插件，重新同步快照后构建网站即可。`scripts/documentation_translations.py` 由文档仓库保留维护；同步旧插件版本时仍兼容其 `tools/` 中的工具副本。
 
-入门指南、用户指南和目录文字继续使用 `locales/` 中的 Sphinx PO。刷新模板使用 `python scripts/build_docs.py --gettext`，再运行 `sphinx-intl update -p build/gettext -l zh_CN -l en`。gettext 构建跳过逐类 API 页面，避免生成第二份 API 翻译目录。
+入门指南、用户指南和目录文字继续使用 `locales/` 中的 Sphinx PO。刷新模板使用 `python scripts/build_docs.py --gettext`，再运行 `sphinx-intl update -p build/gettext -l en`。gettext 构建跳过逐类 API 页面，避免生成第二份 API 翻译目录。
 
 类、方法、属性、信号和常量使用 Godot 的 `class_*` 锚点，枚举使用 `enum_*` 锚点。手册和翻译直接引用这些标签；分类页仅提供导航。
 

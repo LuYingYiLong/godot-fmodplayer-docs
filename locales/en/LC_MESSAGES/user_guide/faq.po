@@ -1,92 +1,106 @@
-# English translations for Godot FmodPlayer.
+# English translations for Godot-FmodPlayer documentation.
 # Copyright (C) 2026, LuYingYiLong
-# This file is distributed under the same license as the Godot FmodPlayer package.
-#
+# Distributed under the same license as the documentation.
 msgid ""
 msgstr ""
-"Project-Id-Version: Godot FmodPlayeReport-Msgid-Bugs-ToPOT-Creation-Date: 2026-04-26 23:57+080PO-"
-"Revision-Date: 2026-04-27 00:00+080Last-Translator: Codex <codex@example.invalidLanguage: "
-"eLanguage-Team: en <LL@li.orgPlural-Forms: nplurals=2; plural=(n != 1)MIME-Version: 1.Content-"
-"Type: text/plain; charset=utf-Content-Transfer-Encoding: 8bi\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-10-31 01:24+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: Godot FmodPlayer \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-01 02:56+0800\n"
+"PO-Revision-Date: 2026-11-01 03:00+0800\n"
+"Last-Translator: Godot-FmodPlayer contributors\n"
+"Language: en\n"
+"Language-Team: English\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: ../../source/user_guide/faq.rst:4 0f199d72ae864ae09a8a396575ba0bac
+#: ../../source/user_guide/faq.rst:4 a8c4429e86474187bae4fb88219ced37
 msgid "常见问题"
 msgstr "Frequently asked questions"
 
-#: ../../source/user_guide/faq.rst:7 200018d1c52a4556be3280eac41f26c9
+#: ../../source/user_guide/faq.rst:7 39b0cadb8e9b48f5a11da9ee6f017030
 msgid "安装与运行库"
 msgstr "Installation and runtime libraries"
 
-#: ../../source/user_guide/faq.rst:12 d198e9bb81cf483cbdb2a60818d67bdb
+#: ../../source/user_guide/faq.rst:12 881b5d77633a4f0dbc51d843e1dfb249
+msgid "版本要求与构建目标"
+msgstr "Version requirements and build target"
+
+#: ../../source/user_guide/faq.rst:14 e14071348c83423d82a5196cdbb17ed3
+msgid ""
+"当前插件要求 Godot 4.7.2 或更新版本及匹配的 FMOD Core SDK 2.04。``api_version=4.7`` 选择用于生成绑定的 Godot "
+"API；``fmod_player.gdextension`` 中的 ``compatibility_minimum=4.7.2`` 声明最低运行版本，两者用途不同。构建配置见 "
+":doc:`../contributing/development`。"
+msgstr ""
+"The current plugin requires Godot 4.7.2 or later and matching FMOD Core SDK 2.04 libraries. "
+"``api_version=4.7`` selects the Godot API used to generate bindings; "
+"``compatibility_minimum=4.7.2`` in ``fmod_player.gdextension`` declares the minimum runtime "
+"version. These settings serve different purposes. See :doc:`../contributing/development` for "
+"build configuration."
+
+#: ../../source/user_guide/faq.rst:19 c5d9b463d92a4a7c9b4e3cf326a59305
 msgid "加载时提示找不到模块"
 msgstr "A module cannot be found during loading"
 
-#: ../../source/user_guide/faq.rst:14 d0c3aeadb2c64e83b81112114ad4c8b3
+#: ../../source/user_guide/faq.rst:21 70f3dcc6cd75477f87079ce197a62d03
 msgid "查看输出面板中第一条动态库加载错误，检查："
 msgstr "Read the first dynamic-library loading error in Output and check:"
 
-#: ../../source/user_guide/faq.rst:16 ad65564c8f25412b909f07903b69c793
+#: ../../source/user_guide/faq.rst:23 46f585d033764e6db518d2317153e389
 msgid "完整插件位于 ``res://addons/fmod_player/``。"
 msgstr "The complete addon is in ``res://addons/fmod_player/``."
 
-#: ../../source/user_guide/faq.rst:17 f3b31b2dad0b482587df9214b2b7877a
+#: ../../source/user_guide/faq.rst:24 59f8b8cb2e204bae8f82318f0bf98963
 msgid "``fmod_player.gdextension`` 指定的扩展和 FMOD 依赖均存在于 bin 目录。"
 msgstr "The extension and FMOD dependencies named by ``fmod_player.gdextension`` are present in bin."
 
-#: ../../source/user_guide/faq.rst:18 f8d9f0ea1a5a4640941c56bdfbb82759
+#: ../../source/user_guide/faq.rst:25 e314333490c244168f28b2ba4b19cc8e
 msgid "架构、Debug/Release 类型和 FMOD 版本匹配。"
 msgstr "Architecture, Debug/Release type, and FMOD versions match."
 
-#: ../../source/user_guide/faq.rst:19 8350b525545a4047a5e3b2315114fb5d
+#: ../../source/user_guide/faq.rst:26 c5cd6086347e44f19fc634ced77df45b
 msgid "复制运行库后已重新启动编辑器。"
 msgstr "The editor was restarted after adding runtime libraries."
 
-#: ../../source/user_guide/faq.rst:21 ea50c58720d2465796a4a84dce411b65
+#: ../../source/user_guide/faq.rst:28 9663893386a84516a8ac86f65197c7e8
 msgid "各平台文件名见 :doc:`../getting_started/installation`，导出配置见 :doc:`../export`。"
 msgstr ""
 "See :doc:`../getting_started/installation` for platform filenames and :doc:`../export` for export"
 " setup."
 
-#: ../../source/user_guide/faq.rst:24 3e5e3c48d6d94c50a644da633e74ecc9
+#: ../../source/user_guide/faq.rst:31 d82eb77cd06f4517b222725da214ac21
 msgid "播放与资源"
 msgstr "Playback and resources"
 
-#: ../../source/user_guide/faq.rst:29 609bacfba57c4881a5270bf05668cd2d
+#: ../../source/user_guide/faq.rst:36 458452cac6a544cf957ca2af5df17388
 msgid "播放时没有声音"
 msgstr "Playback is silent"
 
-#: ../../source/user_guide/faq.rst:31 6dec3718570d469886dd1e516341b82f
+#: ../../source/user_guide/faq.rst:38 0b734f83490e4b13aca53121338036f7
 msgid "确认音频重新导入为 FMOD Audio，且播放器的 Stream 有效。"
 msgstr "Confirm that the audio was reimported as FMOD Audio and the player Stream is valid."
 
-#: ../../source/user_guide/faq.rst:32 61003fb739864d22bec8140894bed48b
+#: ../../source/user_guide/faq.rst:39 62750db7a89c43dc8eb84a68252b2556
 msgid "检查 ``stream_paused``、``volume_db`` 和总线 Mute/Solo 状态。分贝音量 ``0.0`` 表示单位增益。"
 msgstr ""
 "Check ``stream_paused``, ``volume_db``, and bus Mute/Solo state. A decibel volume of ``0.0`` is "
 "unity gain."
 
-#: ../../source/user_guide/faq.rst:33 1c1bfa3b035b4d62968653c649d7e4d4
+#: ../../source/user_guide/faq.rst:40 97bb45fce76d4fc4900af654ee369276
 msgid "空间音频检查当前相机、声源距离和衰减设置。"
 msgstr "For spatial audio, check the current camera, emitter distance, and attenuation settings."
 
-#: ../../source/user_guide/faq.rst:34 3e9d5ecc69da4fc6942d2bf5770fa418
+#: ../../source/user_guide/faq.rst:41 513782e9a0324fb7a573c804c774d67c
 msgid "查看输出面板中的文件、解码和 FMOD 错误。"
 msgstr "Check Output for file, decoding, and FMOD errors."
 
-#: ../../source/user_guide/faq.rst:39 f6fc2ac450384c7182e29c1169c979d7
+#: ../../source/user_guide/faq.rst:46 aed798af0a874226a86845151c5f27c4
 msgid "首次播放延迟或音乐内存占用高"
 msgstr "First-play latency or high music memory usage"
 
-#: ../../source/user_guide/faq.rst:41 e955d88e0eb34c4abeccfed31ec18cae
+#: ../../source/user_guide/faq.rst:48 4c2a9e38a4664422a3d9e0a17cd45a23
 msgid ""
 "短音效使用 Sample 并提前 ``preload()``；长音频可使用 Stream 减少完整解码样本的开销。FmodAudioStream 仍保留文件字节，两种模式的内存区别见 "
 ":doc:`audio_resources`。"
@@ -95,11 +109,11 @@ msgstr ""
 "for long audio. FmodAudioStream still retains file bytes; see :doc:`audio_resources` for the "
 "memory differences."
 
-#: ../../source/user_guide/faq.rst:46 69d321e4329349049dde7bfa72da0675
+#: ../../source/user_guide/faq.rst:53 130813ddfcf0420d9806e2a759821f83
 msgid "何时释放资源和临时播放器"
 msgstr "When to release resources and temporary players"
 
-#: ../../source/user_guide/faq.rst:48 58043532875449ad9959b39c8d5aaaf2
+#: ../../source/user_guide/faq.rst:55 64886d8642d947b7828f01ff49872bd3
 msgid ""
 "自然播放结束可通过 ``finished`` 回收临时节点，手动停止需自行回收。播放期间保留音频资源和 Sound "
 "的所有者引用，停止所有使用者后再清理。服务器创建的总线和槽位实例由服务器管理，详见 :doc:`playback` 与 :doc:`mixer`。"
@@ -109,15 +123,15 @@ msgstr ""
 " users stop. The server manages its buses and slot instances; see :doc:`playback` and "
 ":doc:`mixer`."
 
-#: ../../source/user_guide/faq.rst:51 b9db04168cc841d49b8d3e37580156bc
+#: ../../source/user_guide/faq.rst:58 79710164baa241e3abf07ae2bc4cf344
 msgid "总线与效果器"
 msgstr "Buses and effects"
 
-#: ../../source/user_guide/faq.rst:56 329858b503144cc2b367171b61aeada9
+#: ../../source/user_guide/faq.rst:63 445717d461484fd2b2eb0449e05d1287
 msgid "FMOD Audio 只显示同步提示"
 msgstr "FMOD Audio only displays a synchronization hint"
 
-#: ../../source/user_guide/faq.rst:58 7a27bdf3baa84452ba018211337c1407
+#: ../../source/user_guide/faq.rst:65 80ad0eb94ee44e7b9b15b1eb42921c63
 msgid ""
 "``audio/fmod/sync_godot_audio_buses`` 默认为 true，此模式在原生 Audio 面板编辑。需要独立 FMOD 布局时关闭该设置并重新加载项目，再打开 "
 "FMOD Audio。"
@@ -125,22 +139,22 @@ msgstr ""
 "``audio/fmod/sync_godot_audio_buses`` defaults to true; edit buses in the native Audio panel in "
 "this mode. For an independent FMOD layout, disable it, reload the project, and open FMOD Audio."
 
-#: ../../source/user_guide/faq.rst:63 284f2adfa8074be3af13fe50327c7a3f
+#: ../../source/user_guide/faq.rst:70 7289a6bbfe8c4eb78de4db12153be239
 msgid "运行游戏后看不到 FMOD 电平"
 msgstr "FMOD meters do not show a running game"
 
-#: ../../source/user_guide/faq.rst:65 4e56380089ce42d28d1186f565a6da12
+#: ../../source/user_guide/faq.rst:72 13e1148e6a8948758e04aef4806985fc
 msgid "FMOD Audio 当前显示编辑器内试听电平。F5/F6 启动的独立游戏进程尚未接入远程电平。独立模式下，可展开 Stream 子检查器试听并在 FMOD Audio 中查看 Master。"
 msgstr ""
 "FMOD Audio currently shows editor audition meters. A separate game process launched with F5/F6 is"
 " not connected to remote metering yet. In independent mode, audition from the Stream sub-"
 "inspector and inspect Master in FMOD Audio."
 
-#: ../../source/user_guide/faq.rst:70 2f87fb69b0174165a7e19d471e3becf9
+#: ../../source/user_guide/faq.rst:77 8628fb8925ba4b539d6dd994c4a481ad
 msgid "效果或实时数据没有变化"
 msgstr "Effects or live data do not change"
 
-#: ../../source/user_guide/faq.rst:72 3dea8339628e4dd5a97cbf3686007317
+#: ../../source/user_guide/faq.rst:79 07a4325140964b128c611616b32cea31
 msgid ""
 "检查声音经过的总线、槽位启用状态、总线旁路和效果顺序。通过布局添加 Capture、SpectrumAnalyzer 或 Record 后，从 "
 "``FmodServer.get_bus_effect_instance()`` 获取运行实例；读取配置资源得不到槽位的实时数据。示例见 :doc:`dsp_effects`。"
@@ -150,47 +164,47 @@ msgstr ""
 "``FmodServer.get_bus_effect_instance()``. The configuration resource does not contain slot live "
 "data. See :doc:`dsp_effects`."
 
-#: ../../source/user_guide/faq.rst:77 3af411fa58fb4d9b9c9b447f910ece4d
+#: ../../source/user_guide/faq.rst:84 f38ed10b6e534f9db0700555aa4e0b9e
 msgid "能否与原生 AudioStreamPlayer 混用"
 msgstr "Can native AudioStreamPlayer be used alongside FMOD?"
 
-#: ../../source/user_guide/faq.rst:79 2a13451544854866a442ce4ee76a1ed9
+#: ../../source/user_guide/faq.rst:86 ab987d9bde2f4cfc9e05cc0e21e5fb7c
 msgid "可以，两套系统分别管理播放、音量和 DSP。总线同步转换配置，不会将原生音频信号送入 FMOD，或将 FMOD 信号送入 Godot 总线。"
 msgstr ""
 "Yes. The two systems manage playback, volume, and DSP separately. Bus synchronization converts "
 "configuration; it does not route native audio signals into FMOD or FMOD signals into Godot buses."
 
-#: ../../source/user_guide/faq.rst:82 016fe59390fd419d83d3904f52f5ade0
+#: ../../source/user_guide/faq.rst:89 74897f65851b4f9c900bedb04b3c623d
 msgid "导出与性能"
 msgstr "Export and performance"
 
-#: ../../source/user_guide/faq.rst:87 29a9e79cb51d41f1bb43abca021b9caa
+#: ../../source/user_guide/faq.rst:94 029e0ea0720448948781a72f594e0fbe
 msgid "编辑器可播放，导出后失败"
 msgstr "Audio works in the editor but fails after export"
 
-#: ../../source/user_guide/faq.rst:89 93ec9d1b5fab486a8b67d9bb8c08de72
+#: ../../source/user_guide/faq.rst:96 53c460b099924625bc31ec6484d25832
 msgid "检查目标架构和 Release 运行库、资源导出过滤以及动态读取的原始文件。项目内已导入资源使用资源引用，独立总线默认布局由导出插件包含；完整步骤见 :doc:`../export`。"
 msgstr ""
 "Check the target architecture, Release runtimes, export filters, and raw files read dynamically. "
 "Use resource references for imported project assets. The export plugin includes the default "
 "independent bus layout; see :doc:`../export` for full setup."
 
-#: ../../source/user_guide/faq.rst:94 730051e923aa46debd678b14dd64ae2e
+#: ../../source/user_guide/faq.rst:101 d89cd918daa146769c8dbc0cbfea66b8
 msgid "移动设备上卡顿或延迟较高"
 msgstr "Stuttering or high latency on mobile devices"
 
-#: ../../source/user_guide/faq.rst:96 5d159a9d081141c686acc17858a3b905
+#: ../../source/user_guide/faq.rst:103 7a0f5249aea34deebbdedeecc1222ea9
 msgid "预加载高频短音效，限制同时播放数量，检查 DSP CPU 和流式解码开销。在目标设备上使用同一段音频和相同通道数比较；模拟器和编辑器的结果用于辅助排查。"
 msgstr ""
 "Preload frequent short effects, limit concurrent playback, and inspect DSP CPU and stream-"
 "decoding cost. Compare on target hardware using the same audio and channel count. Emulator and "
 "editor results help with diagnosis."
 
-#: ../../source/user_guide/faq.rst:101 1e93f369a14e4c59bb5ce16ab1dd8cb5
+#: ../../source/user_guide/faq.rst:108 f9cbbe7cd7394ffe96ecfe832b427738
 msgid "如何报告错误或崩溃"
 msgstr "How to report an error or crash"
 
-#: ../../source/user_guide/faq.rst:103 0761bce86f7745fa904d660d580e7f80
+#: ../../source/user_guide/faq.rst:110 fbd77a8e2ca84ea4bc90253ad72e7427
 msgid ""
 "保留完整日志、Godot/FMOD/插件版本、平台架构及最小复现场景，说明是否仅在导出版本出现。可在 `GitHub Issues "
 "<https://github.com/LuYingYiLong/Godot-FmodPlayer/issues>`_ 提交；日志中附上首次错误及复现步骤。"
@@ -200,25 +214,60 @@ msgstr ""
 "<https://github.com/LuYingYiLong/Godot-FmodPlayer/issues>`_ with the first error and reproduction"
 " steps."
 
-#: ../../source/user_guide/faq.rst:106 22ab0805de2647699af3f897a53b2c74
+#: ../../source/user_guide/faq.rst:113 6d96d3f2e82b47ce89c95e90eb4ab9ac
+msgid "源码构建与测试"
+msgstr "Source builds and testing"
+
+#: ../../source/user_guide/faq.rst:118 f3ef30976bea4099bad1db593f11fe1d
+msgid "找不到旧 API 文件或 NDK"
+msgstr "Old API file or NDK not found"
+
+#: ../../source/user_guide/faq.rst:120 eca5c210f5554458b64cc4741c95db9f
+msgid ""
+"普通构建使用内置 ``api_version=4.7``。若仍提示旧 JSON 路径不存在，检查 ``custom.py`` 或命令行是否设置了 "
+"``custom_api_file``；它会覆盖内置 API 选择。Android 构建确认 ``ANDROID_HOME`` 指向 SDK，并在 ``custom.py`` 中固定本机已安装的"
+" ``ndk_version``，参见 :doc:`../contributing/development`。"
+msgstr ""
+"Ordinary builds use the included ``api_version=4.7`` configuration. If an old JSON path is "
+"missing, check for ``custom_api_file`` in ``custom.py`` or command-line arguments; it overrides "
+"the included API selection. For Android, point ``ANDROID_HOME`` at the SDK and pin a locally "
+"installed ``ndk_version`` in ``custom.py``. See :doc:`../contributing/development`."
+
+#: ../../source/user_guide/faq.rst:125 341a2c99c953479fb03bd48856974e00
+msgid "如何运行测试"
+msgstr "How to run tests"
+
+#: ../../source/user_guide/faq.rst:127 6a98a4ab50ac426b97f89cd9047da07e
+msgid ""
+"构建时使用 ``copy_to_tests=yes`` 同步完整插件，随后在 Godot 中打开 ``tests/project.godot``，按 F5 进入试听场景或点击“运行数值回归（8 "
+"项）”。效果器、总线和翻译直接在编辑器中检查；无需运行已移除的 PowerShell、Shell 或 Python 测试脚本，完整流程见 "
+":doc:`../contributing/testing`。"
+msgstr ""
+"Use ``copy_to_tests=yes`` when building to stage the complete addon. Then open "
+"``tests/project.godot`` in Godot and press F5 to enter listening scenes or click Run numerical "
+"regression (8 checks). Check effects, buses, and translations directly in the editor. The removed"
+" PowerShell, shell, and Python test runners are not required. See :doc:`../contributing/testing` "
+"for the complete workflow."
+
+#: ../../source/user_guide/faq.rst:130 51ba1ed1c9f945a990dad5402676c50a
 msgid "接口与许可"
 msgstr "API scope and licensing"
 
-#: ../../source/user_guide/faq.rst:111 98a01fa932444ad1a8e520a1bf9237a4
+#: ../../source/user_guide/faq.rst:135 368c0226c57d4bfc867498c428b74ecd
 msgid "是否支持 Studio Event 和 Bank"
 msgstr "Are Studio Events and Banks supported?"
 
-#: ../../source/user_guide/faq.rst:113 be92798481c04fb0a32f1456acf39ac8
+#: ../../source/user_guide/faq.rst:137 d2438912497f45bea115145764c1df7d
 msgid "插件封装 FMOD Core API，提供音频文件播放、通道、DSP、总线和空间音频。当前接口没有提供 FMOD Studio Event 和 Bank 工作流。"
 msgstr ""
 "The addon wraps FMOD Core API for audio-file playback, channels, DSP, buses, and spatial audio. "
 "The current API does not provide FMOD Studio Event and Bank workflows."
 
-#: ../../source/user_guide/faq.rst:118 3cec43baf0b2496792736c411ff1d6d2
+#: ../../source/user_guide/faq.rst:142 cfffaa2878514908a08658f9a5927180
 msgid "插件和 FMOD 分别使用什么许可"
 msgstr "Which licenses apply to the addon and FMOD?"
 
-#: ../../source/user_guide/faq.rst:120 6b61417fe9dd41eabdb2d3cbd0ad5d2f
+#: ../../source/user_guide/faq.rst:144 1403441ec2cd42b6a6a37594d9ef11e7
 msgid ""
 "插件使用 `MIT 许可证 <https://opensource.org/license/MIT>`_。FMOD Engine 的许可与项目注册信息请查阅 `FMOD Licensing "
 "<https://www.fmod.com/licensing>`_ 和 `FMOD Legal Information <https://www.fmod.com/legal>`_。"

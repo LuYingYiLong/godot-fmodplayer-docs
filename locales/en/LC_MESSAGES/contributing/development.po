@@ -1,12 +1,12 @@
-# English translations for Godot-FmodPlayer contributor documentation.
+# English translations for Godot-FmodPlayer documentation.
 # Copyright (C) 2026, LuYingYiLong
 # Distributed under the same license as the documentation.
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot FmodPlayer \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-01 01:59+0800\n"
-"PO-Revision-Date: 2026-11-01 02:01+0800\n"
+"POT-Creation-Date: 2026-11-01 02:56+0800\n"
+"PO-Revision-Date: 2026-11-01 03:00+0800\n"
 "Last-Translator: Godot-FmodPlayer contributors\n"
 "Language: en\n"
 "Language-Team: English\n"
@@ -45,7 +45,13 @@ msgstr ""
 "FMOD Core SDK 2.04 for the target platform. Use headers, link libraries, and runtime libraries "
 "from the same SDK release."
 
-#: ../../source/contributing/development.rst:15 8a5a2efb07e3447fbcaa17bd4e62db1f
+#: ../../source/contributing/development.rst:15 8d4c985107ff4f359b6b554aa3578e39
+msgid "只修改网站内容时，使用文档仓库的 Python 3.12 或更新版本环境即可，无需插件编译器和 FMOD SDK。"
+msgstr ""
+"For website-only changes, use the documentation repository's Python 3.12-or-later environment; "
+"the plugin compiler and FMOD SDK are not needed."
+
+#: ../../source/contributing/development.rst:17 8a5a2efb07e3447fbcaa17bd4e62db1f
 msgid ""
 "git clone --recurse-submodules https://github.com/LuYingYiLong/Godot-FmodPlayer.git\n"
 "cd Godot-FmodPlayer\n"
@@ -55,16 +61,19 @@ msgstr ""
 "cd Godot-FmodPlayer\n"
 "python -m pip install scons"
 
-#: ../../source/contributing/development.rst:21 cf65aea523d24775b4bf3ac28314c5a7
+#: ../../source/contributing/development.rst:23 93bdf42e0da9412790ffc1ce794a9776
 msgid ""
-"已有工作副本可运行 ``git submodule update --init --recursive``，恢复项目固定的 godot-cpp 提交。项目的 ``SConstruct`` "
-"默认使用 ``api_version=4.7``，通常无需自行导出 API JSON。"
+"已有工作副本可运行 ``git submodule update --init --recursive``，恢复项目固定的 godot-cpp 提交。godot-cpp 10.x 的版本号与 "
+"Godot 独立；项目 ``SConstruct`` 默认使用 ``api_version=4.7``，扩展配置的最低 Godot 运行版本仍为 4.7.2。通常无需自行导出 API "
+"JSON，也不再依赖旧的 ``api/godot_4_7_2.json``。"
 msgstr ""
 "In an existing checkout, run ``git submodule update --init --recursive`` to use the project's "
-"pinned godot-cpp commit. The project ``SConstruct`` defaults to ``api_version=4.7``; a separately"
-" exported API JSON is normally unnecessary."
+"pinned godot-cpp commit. godot-cpp 10.x is versioned independently from Godot. The project "
+"``SConstruct`` defaults to ``api_version=4.7``, while the extension configuration still requires "
+"Godot 4.7.2 or later at runtime. A separately exported API JSON is normally unnecessary, and the "
+"old ``api/godot_4_7_2.json`` is no longer required."
 
-#: ../../source/contributing/development.rst:23 8b69590e81b24484b91f0eb2f0221f94
+#: ../../source/contributing/development.rst:25 8b69590e81b24484b91f0eb2f0221f94
 msgid ""
 "Windows 可使用 Visual Studio 的“使用 C++ 的桌面开发”工作负载，并安装 Windows SDK。可打开仓库中的 ``Godot-"
 "FmodPlayer.slnx``，或使用其他编辑器后从命令行构建。"
@@ -72,15 +81,15 @@ msgstr ""
 "On Windows, install the Visual Studio Desktop development with C++ workload and a Windows SDK. "
 "Open ``Godot-FmodPlayer.slnx`` or use another editor and build from the command line."
 
-#: ../../source/contributing/development.rst:25 40d85f965c874193a1413cc4f76a1001
+#: ../../source/contributing/development.rst:27 40d85f965c874193a1413cc4f76a1001
 msgid "Visual Studio C++ workload"
 msgstr "Visual Studio C++ workload"
 
-#: ../../source/contributing/development.rst:30 92c213abc6c34e37b3f4ddaaa9e6ef39
+#: ../../source/contributing/development.rst:32 92c213abc6c34e37b3f4ddaaa9e6ef39
 msgid "Windows"
 msgstr "Windows"
 
-#: ../../source/contributing/development.rst:32 6af76260cfa443769685232d675aad9d
+#: ../../source/contributing/development.rst:34 6af76260cfa443769685232d675aad9d
 msgid ""
 "将 Windows SDK 的 ``api/core/inc`` 复制到 ``src/thirdparty/fmod/inc``，将 ``api/core/lib/x64`` 中的文件复制到 "
 "``src/thirdparty/fmod/lib/x64``。把其中的 ``fmod.dll`` 放入 ``addons/fmod_player/bin``。"
@@ -89,7 +98,7 @@ msgstr ""
 "``api/core/lib/x64`` to ``src/thirdparty/fmod/lib/x64``. Place ``fmod.dll`` in "
 "``addons/fmod_player/bin``."
 
-#: ../../source/contributing/development.rst:34 8b8353e0511640b993eb4794873cf674
+#: ../../source/contributing/development.rst:36 8b8353e0511640b993eb4794873cf674
 msgid ""
 "scons platform=windows target=template_debug arch=x86_64 copy_to_tests=yes\n"
 "scons platform=windows target=template_release arch=x86_64"
@@ -97,7 +106,7 @@ msgstr ""
 "scons platform=windows target=template_debug arch=x86_64 copy_to_tests=yes\n"
 "scons platform=windows target=template_release arch=x86_64"
 
-#: ../../source/contributing/development.rst:39 f5c3731da9eb464dace0a706da485a7f
+#: ../../source/contributing/development.rst:41 f5c3731da9eb464dace0a706da485a7f
 msgid ""
 "``template_debug`` 用于编辑器和调试运行，``template_release`` 用于发布导出。输出文件位于 "
 "``addons/fmod_player/bin``；对应文件名与架构必须匹配 ``fmod_player.gdextension``。"
@@ -106,21 +115,21 @@ msgstr ""
 "exports. Outputs are written to ``addons/fmod_player/bin``; their names and architectures must "
 "match ``fmod_player.gdextension``."
 
-#: ../../source/contributing/development.rst:42 835ac222db2b4bcba7d2a976aa601dcf
+#: ../../source/contributing/development.rst:44 835ac222db2b4bcba7d2a976aa601dcf
 msgid "Linux"
 msgstr "Linux"
 
-#: ../../source/contributing/development.rst:44 691cee055d034a8fae761cac0ea5393b
+#: ../../source/contributing/development.rst:46 691cee055d034a8fae761cac0ea5393b
 msgid "使用 FMOD Linux Core SDK。在 Git 忽略的根目录 ``custom.py`` 中指定 SDK 根目录或其 ``api/core`` 目录："
 msgstr ""
 "Use the FMOD Linux Core SDK. In the Git-ignored root ``custom.py``, specify the SDK root or its "
 "``api/core`` directory:"
 
-#: ../../source/contributing/development.rst:46 b05dd5e92f0d43dab0df96df9ab3958c
+#: ../../source/contributing/development.rst:48 b05dd5e92f0d43dab0df96df9ab3958c
 msgid "fmod_linux_sdk = \"/path/to/fmodstudioapi20400linux\""
 msgstr "fmod_linux_sdk = \"/path/to/fmodstudioapi20400linux\""
 
-#: ../../source/contributing/development.rst:50 041dfc1a93674822b43a0059c4edd9fb
+#: ../../source/contributing/development.rst:52 041dfc1a93674822b43a0059c4edd9fb
 msgid ""
 "scons platform=linux target=template_debug arch=x86_64 copy_to_tests=yes\n"
 "scons platform=linux target=template_release arch=x86_64"
@@ -128,7 +137,7 @@ msgstr ""
 "scons platform=linux target=template_debug arch=x86_64 copy_to_tests=yes\n"
 "scons platform=linux target=template_release arch=x86_64"
 
-#: ../../source/contributing/development.rst:55 ae275c7073394c319af89a265cc9d9ba
+#: ../../source/contributing/development.rst:57 ae275c7073394c319af89a265cc9d9ba
 msgid ""
 "也可通过 ``FMOD_LINUX_SDK`` 环境变量配置路径。Debug 运行需要 ``libfmodL.so.15``，Release 需要 "
 "``libfmod.so.15``；放在扩展库旁，保留正确的文件名或符号链接。构建时 ``copy_to_tests=yes`` 会从本地 SDK 复制对应运行库。"
@@ -138,11 +147,11 @@ msgstr ""
 "symbolic links. With ``copy_to_tests=yes``, the build copies the matching runtime from the local "
 "SDK."
 
-#: ../../source/contributing/development.rst:58 3f4f2fe78a3a421b81fe50c581ce8370
+#: ../../source/contributing/development.rst:60 3f4f2fe78a3a421b81fe50c581ce8370
 msgid "Android"
 msgstr "Android"
 
-#: ../../source/contributing/development.rst:60 2d5e3d1929b5427ebd758621d0a6554e
+#: ../../source/contributing/development.rst:62 2d5e3d1929b5427ebd758621d0a6554e
 msgid ""
 "安装 Android SDK、NDK 和 FMOD Android Core SDK。``ANDROID_HOME`` 指向 SDK 根目录；NDK 位于其 ``ndk/<版本号>`` "
 "子目录。已设置正确的 ``ANDROID_HOME`` 时，通常只需在项目的 ``custom.py`` 中固定已安装的 ``ndk_version``。"
@@ -151,11 +160,11 @@ msgstr ""
 "SDK root, with NDKs under ``ndk/<version>``. If ``ANDROID_HOME`` is already correct, pinning an "
 "installed ``ndk_version`` in the project's ``custom.py`` is usually sufficient."
 
-#: ../../source/contributing/development.rst:62 3df29677b765474bb70b495e2ac2fadf
+#: ../../source/contributing/development.rst:64 3df29677b765474bb70b495e2ac2fadf
 msgid "下面的路径和版本号仅为示例，请替换为本机实际值："
 msgstr "The paths and version below are examples; replace them with your local values:"
 
-#: ../../source/contributing/development.rst:64 6d01b8fd72b2446d8fc156d0aaa3016b
+#: ../../source/contributing/development.rst:66 6d01b8fd72b2446d8fc156d0aaa3016b
 msgid ""
 "ANDROID_HOME = r\"C:\\Android\\Sdk\"\n"
 "ndk_version = \"30.0.16248370\"\n"
@@ -165,7 +174,7 @@ msgstr ""
 "ndk_version = \"30.0.16248370\"\n"
 "fmod_android_sdk = r\"C:\\SDKs\\FMOD-Android\""
 
-#: ../../source/contributing/development.rst:70 693f720ab21046559b272c4073c8b275
+#: ../../source/contributing/development.rst:72 693f720ab21046559b272c4073c8b275
 msgid ""
 "``fmod_android_sdk`` 接受 SDK 根目录或 ``api/core``，也可通过 ``FMOD_ANDROID_SDK`` 环境变量提供默认路径。固定并保留已验证的 "
 "NDK，可避免 godot-cpp 默认 NDK 版本变化影响本项目。"
@@ -174,7 +183,7 @@ msgstr ""
 "default path instead. Pin and retain a validated NDK so changes to godot-cpp's default NDK "
 "version do not affect this project."
 
-#: ../../source/contributing/development.rst:72 114767d779324f89ace37f8ab085bbac
+#: ../../source/contributing/development.rst:74 114767d779324f89ace37f8ab085bbac
 msgid ""
 "scons platform=android target=template_debug arch=arm64\n"
 "scons platform=android target=template_release arch=arm64"
@@ -182,18 +191,18 @@ msgstr ""
 "scons platform=android target=template_debug arch=arm64\n"
 "scons platform=android target=template_release arch=arm64"
 
-#: ../../source/contributing/development.rst:77 dda0853f8207410e9b905c04e129edc6
+#: ../../source/contributing/development.rst:79 dda0853f8207410e9b905c04e129edc6
 msgid "构建产物和 FMOD 运行库必须使用相同 ABI。其他架构使用 ``arch`` 选择，并检查扩展配置中的库条目。Java 与原生运行库的导出配置见 :doc:`../export`。"
 msgstr ""
 "The extension and FMOD runtime must use the same ABI. Select other architectures with ``arch`` "
 "and check the library entries in the extension configuration. See :doc:`../export` for Java and "
 "native runtime export setup."
 
-#: ../../source/contributing/development.rst:80 f78cfe1cac6742ca852d593914cc5cbb
+#: ../../source/contributing/development.rst:82 f78cfe1cac6742ca852d593914cc5cbb
 msgid "同步到测试项目"
 msgstr "Stage the test project"
 
-#: ../../source/contributing/development.rst:82 f701580255cd4200ad6bb61064dbf16a
+#: ../../source/contributing/development.rst:84 f701580255cd4200ad6bb61064dbf16a
 msgid ""
 "``copy_to_tests=yes`` 在构建成功后同步完整插件到 "
 "``tests/addons/fmod_player``，即使二进制无需重编译，也会复制修改过的脚本、翻译和资源。Windows 和 Linux 同时复制本地 SDK 运行库；可用 "
@@ -204,73 +213,73 @@ msgstr ""
 "the binary is already up to date. Windows and Linux builds copy the local SDK runtime; "
 "``fmod_runtime=/path/to/runtime`` overrides its source."
 
-#: ../../source/contributing/development.rst:84 ab4479bd133d4862b2fe8742be5a92d4
+#: ../../source/contributing/development.rst:86 ab4479bd133d4862b2fe8742be5a92d4
 msgid "替换原生库前先关闭测试项目，完成构建后重新打开 ``tests/project.godot`` 并按 F5。无需另行运行外部测试脚本，菜单和编辑器检查步骤见 :doc:`testing`。"
 msgstr ""
 "Close the test project before replacing a native library. Reopen ``tests/project.godot`` after "
 "the build and press F5. No separate external test runner is needed; see :doc:`testing` for menu "
 "and editor checks."
 
-#: ../../source/contributing/development.rst:87 2126b9a7785641c193853d5f263ee762
+#: ../../source/contributing/development.rst:89 2126b9a7785641c193853d5f263ee762
 msgid "代码风格与接口变更"
 msgstr "Code style and API changes"
 
-#: ../../source/contributing/development.rst:89 b5d36200e73b4f2696554bccfec8f445
+#: ../../source/contributing/development.rst:91 b5d36200e73b4f2696554bccfec8f445
 msgid "C++ 沿用当前文件的命名、缩进和指针引用写法，避免无关格式化。新增或修改 API 时，同时更新注册、XML、翻译和受影响示例。"
 msgstr ""
 "Follow the current C++ file's naming, indentation, and pointer/reference style. Avoid unrelated "
 "formatting. When changing APIs, update registration, XML, translations, and affected examples "
 "together."
 
-#: ../../source/contributing/development.rst:90 1360ff4aaf5c4bcbb9687227aeadd6e1
+#: ../../source/contributing/development.rst:92 1360ff4aaf5c4bcbb9687227aeadd6e1
 msgid "GDScript 使用 UTF-8、LF、Tab 缩进和完整类型提示；函数与类定义前后留两个空行。"
 msgstr ""
 "Use UTF-8, LF, tabs, and explicit type hints in GDScript. Separate function and class definitions"
 " with two blank lines."
 
-#: ../../source/contributing/development.rst:91 08c103a5a0c94252ade016275d33cd2b
+#: ../../source/contributing/development.rst:93 08c103a5a0c94252ade016275d33cd2b
 msgid "多行数组、字典和枚举保留末尾逗号；信号使用英文过去时名称；硬编码资源路径优先使用 UID。"
 msgstr ""
 "Keep trailing commas in multiline arrays, dictionaries, and enums. Name signals in the English "
 "past tense and prefer UIDs for hardcoded resource paths."
 
-#: ../../source/contributing/development.rst:92 b487222971994a39900e0f77c66a4526
+#: ../../source/contributing/development.rst:94 b487222971994a39900e0f77c66a4526
 msgid "浮点数保留前导和后缀零，例如 ``0.0``；变量不重复声明默认值；中文注释末尾不加句号。"
 msgstr ""
 "Keep leading and trailing zeros in floats, such as ``0.0``. Omit redundant default initializers "
 "and final Chinese full stops in comments."
 
-#: ../../source/contributing/development.rst:93 7a9bebe015d246a8bf69b38257ac8349
+#: ../../source/contributing/development.rst:95 7a9bebe015d246a8bf69b38257ac8349
 msgid "先声明信号和属性，再写方法；公共成员在前，私有成员在后；先初始化与虚函数回调，再写类接口。"
 msgstr ""
 "Declare signals and properties before methods, public members before private members, and "
 "initialization and virtual callbacks before the class interface."
 
-#: ../../source/contributing/development.rst:94 62f5da3d96c347ce82adcde4eef863b0
+#: ../../source/contributing/development.rst:96 62f5da3d96c347ce82adcde4eef863b0
 msgid "DSP 改动说明线程归属和缓冲区单位，区分字节、采样和完整音频帧；音频回调中减少分配与锁竞争，遵守 Godot 对象和脚本回调的线程约束。"
 msgstr ""
 "For DSP changes, document thread ownership and buffer units, distinguishing bytes, samples, and "
 "complete audio frames. Minimize allocations and lock contention in audio callbacks, and respect "
 "thread constraints for Godot objects and script callbacks."
 
-#: ../../source/contributing/development.rst:97 9b2036ec69e041f784ff0ca8d9d4bdb4
+#: ../../source/contributing/development.rst:99 9b2036ec69e041f784ff0ca8d9d4bdb4
 msgid "构建与加载排查"
 msgstr "Troubleshoot builds and loading"
 
-#: ../../source/contributing/development.rst:99 eb0f2d28f3224aa8950c7f2daab8578b
+#: ../../source/contributing/development.rst:101 eb0f2d28f3224aa8950c7f2daab8578b
 msgid "找不到 NDK：确认 ``ANDROID_HOME`` 是 SDK 根目录，且 ``ndk_version`` 与本机安装目录一致。"
 msgstr ""
 "NDK not found: confirm that ``ANDROID_HOME`` is the SDK root and ``ndk_version`` matches an "
 "installed directory."
 
-#: ../../source/contributing/development.rst:100 e709c5b4a573497982d8c244f90595f6
+#: ../../source/contributing/development.rst:102 e709c5b4a573497982d8c244f90595f6
 msgid "提示旧 API JSON 文件不存在：检查本地配置是否仍设置 ``custom_api_file``。显式设置会覆盖 ``api_version``，普通构建可使用项目内置的 API 配置。"
 msgstr ""
 "Missing old API JSON: check whether local settings still specify ``custom_api_file``. An explicit"
 " file overrides ``api_version``; ordinary builds can use the project's included API "
 "configuration."
 
-#: ../../source/contributing/development.rst:101 d619df6c02794abf8e13c84f02ba377d
+#: ../../source/contributing/development.rst:103 d619df6c02794abf8e13c84f02ba377d
 msgid "动态库加载失败：检查平台、架构、Debug/Release 条目和 FMOD 运行库，查看 Godot 输出面板，参见 :ref:`faq-module-no-found`。"
 msgstr ""
 "Library loading failure: check the platform, architecture, Debug/Release entries, and FMOD "

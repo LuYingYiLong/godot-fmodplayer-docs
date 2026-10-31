@@ -1,7 +1,7 @@
 {
   "schema": 3,
   "repository": "https://github.com/LuYingYiLong/Godot-FmodPlayer",
-  "plugin_revision": "b01cc1957bacf03a87fa0ac71442c0c3958da451",
+  "plugin_revision": "127d80c8956e57c95961e41fa0343ff041bfb9ef",
   "classes": [
     "AudioImporterFmod",
     "FmodAudioBus",
@@ -170,7 +170,7 @@
     "FmodSound.get_music_channel_volume.0": "channel"
   },
   "translation_sha256": {
-    "zh_CN.po": "0edb78e8daf2ebb2a33473ac0a83e2ce9bd83ac04fde5fbee0ffc22a67d52d5a"
+    "zh_CN.po": "ee2761c9abacac3f822378d31c9e4f2d91090b5075033bd408b8f76736b91167"
   },
   "localization_tool_sha256": "88af53f9059a06c07f0a174e39307f8d71b045460cf171a0831d803aeaf51aa2"
 }

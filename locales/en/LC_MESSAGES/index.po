@@ -1,220 +1,208 @@
-# English translations for Godot FmodPlayer.
+# English translations for Godot-FmodPlayer documentation.
 # Copyright (C) 2026, LuYingYiLong
-# This file is distributed under the same license as the Godot FmodPlayer
-# package.
-#
+# Distributed under the same license as the documentation.
 msgid ""
 msgstr ""
-"Project-Id-Version: Godot FmodPlayer\n"
+"Project-Id-Version: Godot FmodPlayer \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-12 00:48+0800\n"
-"PO-Revision-Date: 2026-04-27 00:00+0800\n"
-"Last-Translator: Codex <codex@example.invalid>\n"
+"POT-Creation-Date: 2026-11-01 02:56+0800\n"
+"PO-Revision-Date: 2026-11-01 03:00+0800\n"
+"Last-Translator: Godot-FmodPlayer contributors\n"
 "Language: en\n"
-"Language-Team: en <LL@li.org>\n"
+"Language-Team: English\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: ../../source/index.rst:68
+#: ../../source/index.rst:70
 msgid "入门指南"
 msgstr "Getting Started"
 
-#: ../../source/index.rst:75
+#: ../../source/index.rst:77
 msgid "用户指南"
 msgstr "User Guide"
 
-#: ../../source/index.rst:85
+#: ../../source/index.rst:87
 msgid "API 参考"
 msgstr "API Reference"
 
-#: ../../source/index.rst:97
+#: ../../source/index.rst:93
 msgid "贡献"
 msgstr "Contributing"
 
-#: ../../source/index.rst:105
+#: ../../source/index.rst:102
 msgid "其他"
 msgstr "Other"
 
-#: ../../source/index.rst:2 b82cf15c0c6f4d62a5a56e4bc0efef70
+#: ../../source/index.rst:2 d9257c43a6d348cdb48001e19d33972d
 msgid "Godot-FmodPlayer 文档"
 msgstr "Godot-FmodPlayer Documentation"
 
-#: ../../source/index.rst:4 f94c3f0b60ef41c69d3f7ca766edde1b
+#: ../../source/index.rst:4 3ee0cd77f1fe45f99d947805e8ad96de
 msgid "Godot-FmodPlayer Banner"
 msgstr "Godot-FmodPlayer Banner"
 
-#: ../../source/index.rst:9 e99b1e52d6094e3cb0519ff05bc40621
-msgid ""
-"Godot-FmodPlayer 是一个 Godot 4 GDExtension 插件，基于 FMOD Core API 提供音频播放、 "
-"混音、DSP 效果、3D 音频和性能监控功能。"
+#: ../../source/index.rst:9 724b53de9de34b3097749a4f1f988852
+msgid "Godot-FmodPlayer 面向 Godot 4.7.2 或更新版本，基于 FMOD Core API 2.04 提供音频播放、混音、DSP 效果、3D 音频和性能监控功能。"
 msgstr ""
-"Godot-FmodPlayer is a Godot 4 GDExtension plugin based on the FMOD Core "
-"API. It provides audio playback, mixing, DSP effects, 3D audio, and "
-"performance monitoring."
+"Godot-FmodPlayer targets Godot 4.7.2 or later and uses FMOD Core API 2.04 for audio playback, "
+"mixing, DSP effects, 3D audio, and performance monitoring."
 
-#: ../../source/index.rst:12 bb2601f9c14e4985a7e2f20ddbcb8d6f
+#: ../../source/index.rst:11 54df9d6cd15e4e9493e2de7f3e2969f8
 msgid "适合用于需要比 Godot 原生音频系统更细致控制的项目，例如动态混音、实时音效处理、 长音频流式播放、空间音频和 FMOD 底层 API 集成。"
 msgstr ""
-"It is suitable for projects that need finer control than Godot's built-in"
-" audio system, such as dynamic mixing, real-time audio processing, long "
-"streaming audio, spatial audio, and lower-level FMOD API integration."
+"It is suitable for projects that need finer control than Godot's built-in audio system, such as "
+"dynamic mixing, real-time audio processing, long streaming audio, spatial audio, and lower-level "
+"FMOD API integration."
 
-#: ../../source/index.rst:16 1a409c6a043349c9962016a4a2b968ed
+#: ../../source/index.rst:15 3e068dc218594cccb9addaf2369df2e3
 msgid "主要功能"
 msgstr "Key Features"
 
-#: ../../source/index.rst:18 984823167bd14da890f73569063878ab
+#: ../../source/index.rst:17 84ed98f728a14562aa9938257687c995
 msgid "支持 MP3、WAV、OGG、FLAC、MOD、XM、S3M、IT、MIDI 等音频格式"
-msgstr ""
-"Supports audio formats such as MP3, WAV, OGG, FLAC, MOD, XM, S3M, IT, and"
-" MIDI."
+msgstr "Supports audio formats such as MP3, WAV, OGG, FLAC, MOD, XM, S3M, IT, and MIDI."
 
-#: ../../source/index.rst:19 601f7c0cd25d4e27a7ba135bfba29210
+#: ../../source/index.rst:18 2e55173df83e4cce8f1c6854af1b8161
 msgid "支持流式加载、样本加载、内存加载和 Godot PCK 资源加载"
-msgstr ""
-"Supports streaming, sample loading, memory loading, and loading resources"
-" from Godot PCK files."
+msgstr "Supports streaming, sample loading, memory loading, and loading resources from Godot PCK files."
 
-#: ../../source/index.rst:20 62abfbf24b5443d58e10ff32db39585a
-msgid ""
-"提供 ``FmodAudioStreamPlayer``、``FmodAudioStreamPlayer2D`` 和 "
-"``FmodAudioStreamPlayer3D`` 播放节点"
+#: ../../source/index.rst:19 74c7ebbac0aa44129545cd2a17878a01
+msgid "提供 ``FmodAudioStreamPlayer``、``FmodAudioStreamPlayer2D`` 和 ``FmodAudioStreamPlayer3D`` 播放节点"
 msgstr ""
-"Provides ``FmodAudioStreamPlayer``, ``FmodAudioStreamPlayer2D``, and "
-"``FmodAudioStreamPlayer3D`` playback nodes."
+"Provides ``FmodAudioStreamPlayer``, ``FmodAudioStreamPlayer2D``, and ``FmodAudioStreamPlayer3D`` "
+"playback nodes."
 
-#: ../../source/index.rst:21 a2ac4118517a4b3994288454ab31ad42
+#: ../../source/index.rst:20 b9611bc1f6a74071a19683a7097396ee
 msgid "支持通道、通道组、音频总线和实时混音控制"
-msgstr ""
-"Supports channels, channel groups, audio buses, and real-time mixing "
-"control."
+msgstr "Supports channels, channel groups, audio buses, and real-time mixing control."
 
-#: ../../source/index.rst:22 208e1507e5b94dd29f8744942a674a3c
+#: ../../source/index.rst:21 417de0e3db40476c815bb00cffd31e9e
 msgid "提供混响、EQ、滤波、延迟、失真、压缩、频谱分析等 DSP 效果"
 msgstr ""
-"Provides DSP effects such as reverb, EQ, filtering, delay, distortion, "
-"compression, and spectrum analysis."
+"Provides DSP effects such as reverb, EQ, filtering, delay, distortion, compression, and spectrum "
+"analysis."
 
-#: ../../source/index.rst:23 549b4ac0306c4556adbbb686c6af54d7
+#: ../../source/index.rst:22 045a914e68a14e6e9fe495790b4d339e
 msgid "支持 FMOD CPU 与文件读取性能监控"
 msgstr "Supports FMOD CPU and file I/O performance monitoring."
 
-#: ../../source/index.rst:24 d1b94c5f82f34c4ea8f8205d7160df9d
+#: ../../source/index.rst:23 c7ed0203343143daacbb4ad6554f6ae5
 msgid "提供编辑器导入器、音频预览和自定义资源类型"
 msgstr "Provides an editor importer, audio preview, and custom resource types."
 
-#: ../../source/index.rst:27 ecc222ee6bef486497e32220ce8e2879
+#: ../../source/index.rst:28 13316d457c7e4221a53340554271bcd1
 msgid "平台支持"
 msgstr "Platform Support"
 
-#: ../../source/index.rst:32 b9d09cc08b6748b4b3417526b4dde015
+#: ../../source/index.rst:33 9a822757b4474bcaad89f2191c80c96d
 msgid "平台"
 msgstr "Platform"
 
-#: ../../source/index.rst:33 18b3cf137f804f8bb6bc4c8edba41023
-msgid "架构"
-msgstr "Architecture"
-
-#: ../../source/index.rst:34 4509ca5016824c46a3870c66ff483f67
+#: ../../source/index.rst:34 adc2c9400337446993557f665830a879
 msgid "状态"
 msgstr "Status"
 
-#: ../../source/index.rst:35 797ed8802259470f86525c3e298937c0
-msgid "Windows"
-msgstr "Windows"
+#: ../../source/index.rst:35 2e29ca21940a48a5a4205a66fae1c9cf
+msgid "Windows x86_64"
+msgstr "Windows x86_64"
 
-#: ../../source/index.rst:36 da4c8286cf9a4bd8ac105b58c1badebc
-msgid "x86_64"
-msgstr "x86_64"
-
-#: ../../source/index.rst:37 ../../source/index.rst:40
-#: 4358c736f1c4419b811854adc88a94d6 e09ffdc70e144aec99e1d356badd6c11
+#: ../../source/index.rst:36 852c7eb1fe054174b8e533ac551a367b
 msgid "支持"
 msgstr "Supported"
 
-#: ../../source/index.rst:38 ad468c6efc654d0c8d5f04343c5ab31a
+#: ../../source/index.rst:37 30e4f943dc3a42a5a5dd9274d35cbbba
+msgid "Linux x86_64"
+msgstr "Linux x86_64"
+
+#: ../../source/index.rst:38 47767a6480594f65abc97fbad5fb7baf
+msgid "已在 Ubuntu 26.04 测试"
+msgstr "Tested on Ubuntu 26.04"
+
+#: ../../source/index.rst:39 d3eeafc61c7f4705b0e848c7aac202f0
 msgid "Android"
 msgstr "Android"
 
-#: ../../source/index.rst:39 3bc5b19ab89343578b65bbe204066ada
-msgid "arm64"
-msgstr "arm64"
+#: ../../source/index.rst:40 91a27d5d58744515b080bd840ea9c6fd
+msgid "提供 arm64 构建；其他 ABI 可通过 SCons ``arch`` 构建"
+msgstr "arm64 builds; other ABIs available through SCons ``arch``"
 
-#: ../../source/index.rst:43 01d7eb75e8f84a34afbc7346ef052c64
+#: ../../source/index.rst:41 c0fe9f2cf7784d1e869dff94950a6723
+msgid "macOS / iOS"
+msgstr "macOS / iOS"
+
+#: ../../source/index.rst:42 73fd03897edf411c922312f5d6e2cf44
+msgid "实验性支持；需要自行配置 SDK 和链接项"
+msgstr "Experimental; requires local SDK and linking setup"
+
+#: ../../source/index.rst:45 387a338b4b6a4ca1a5d0ecf4fa37c5cf
 msgid "开始使用"
 msgstr "Getting Started"
 
-#: ../../source/index.rst:45 6be15ff8040a4c2eb121a120a550ccc3
+#: ../../source/index.rst:47 e15f86288f474b509a48af86139e1925
 msgid "如果你是第一次使用，建议按下面顺序阅读："
-msgstr ""
-"If this is your first time using the plugin, read the following sections "
-"in order:"
+msgstr "If this is your first time using the plugin, read the following sections in order:"
 
-#: ../../source/index.rst:47 49935e7e28074ff7aac2f3cfd2363fed
+#: ../../source/index.rst:49 8fc03940a5d647c3984314d3c5d79d83
 msgid ":doc:`getting_started/installation`"
 msgstr ":doc:`getting_started/installation`"
 
-#: ../../source/index.rst:48 764b6841807c45659ab69046bb433e9e
+#: ../../source/index.rst:50 5d3e0f1cb68e42aa8beee7cc98951cd9
 msgid ":doc:`getting_started/quick_start`"
 msgstr ":doc:`getting_started/quick_start`"
 
-#: ../../source/index.rst:49 64afa4c5d6d04f0daf0d3d7b7ed8fbab
+#: ../../source/index.rst:51 cbefd310b298417995a10ee8199b35ec
 msgid ":doc:`user_guide/audio_resources`"
 msgstr ":doc:`user_guide/audio_resources`"
 
-#: ../../source/index.rst:50 99711a5a08c940079dd602e678efa49a
+#: ../../source/index.rst:52 02a007668ca04d80b2a18c70006f1f6d
 msgid ":doc:`user_guide/playback`"
 msgstr ":doc:`user_guide/playback`"
 
-#: ../../source/index.rst:51 a8ec1e3e99aa4a18bdd2bb4193d172a5
+#: ../../source/index.rst:53 b5994aaa9e894d0ca35e364f25575273
 msgid ":doc:`user_guide/faq`"
 msgstr ":doc:`user_guide/faq`"
 
-#: ../../source/index.rst:55 ed1788f311e8477789a1f383c555569f
+#: ../../source/index.rst:57 a9460b318ef14103b7f354ca7a01066f
 msgid ""
-"本插件使用 **FMOD Core API**，不是 FMOD Studio API。 如果你的项目依赖 FMOD Studio "
-"Event、Bank 或 Studio 工作流， 可以参考 `fmod-gdextension <https://github.com"
-"/utopia-rise/fmod-gdextension>`_。"
+"本插件使用 **FMOD Core API**，不是 FMOD Studio API。 如果你的项目依赖 FMOD Studio Event、Bank 或 Studio 工作流， 可以参考 "
+"`fmod-gdextension <https://github.com/utopia-rise/fmod-gdextension>`_。"
 msgstr ""
-"This plugin uses the **FMOD Core API**, not the FMOD Studio API. If your "
-"project depends on FMOD Studio Events, Banks, or the Studio workflow, see"
-" `fmod-gdextension <https://github.com/utopia-rise/fmod-gdextension>`_."
+"This plugin uses the **FMOD Core API**, not the FMOD Studio API. If your project depends on FMOD "
+"Studio Events, Banks, or the Studio workflow, see `fmod-gdextension <https://github.com/utopia-"
+"rise/fmod-gdextension>`_."
 
-#: ../../source/index.rst:61 3d83ce7018cb42a398be46fdfc66321f
+#: ../../source/index.rst:63 b7708f4ef29c445799f3da50352ba9b5
 msgid ""
-"Godot-FmodPlayer 插件本身使用 MIT 许可证。 FMOD Engine 是 Firelight Technologies Pty"
-" Ltd 的专有音频引擎。 商业项目请阅读 `FMOD Licensing <https://www.fmod.com/licensing>`_。"
+"Godot-FmodPlayer 插件本身使用 MIT 许可证。 FMOD Engine 是 Firelight Technologies Pty Ltd 的专有音频引擎。 商业项目请阅读 "
+"`FMOD Licensing <https://www.fmod.com/licensing>`_。"
 msgstr ""
-"The Godot-FmodPlayer plugin itself uses the MIT license. FMOD Engine is a"
-" proprietary audio engine by Firelight Technologies Pty Ltd. For "
-"commercial projects, read `FMOD Licensing "
+"The Godot-FmodPlayer plugin itself uses the MIT license. FMOD Engine is a proprietary audio "
+"engine by Firelight Technologies Pty Ltd. For commercial projects, read `FMOD Licensing "
 "<https://www.fmod.com/licensing>`_."
 
-#: ../../source/index.rst:66 40f300a571da4033ac1dffc09342084c
+#: ../../source/index.rst:68 f35fb4ef129947f4aa833b354592e186
 msgid "文档导航"
 msgstr "Documentation Navigation"
 
-#: ../../source/index.rst:113 6bc71a3448be4d44b8568f29384f3cd5
+#: ../../source/index.rst:110 8647b688c0aa4a23b41fad1f80c370bc
 msgid "相关链接"
 msgstr "Related Links"
 
-#: ../../source/index.rst:115 a461a5663b484560a235729100170952
+#: ../../source/index.rst:112 bea0a9999f16450ea0cc56358a7eafe4
 msgid "`GitHub 仓库 <https://github.com/LuYingYiLong/Godot-FmodPlayer>`_"
 msgstr "`GitHub Repository <https://github.com/LuYingYiLong/Godot-FmodPlayer>`_"
 
-#: ../../source/index.rst:116 e85b8babba66426faf489cf6c903b910
-msgid "`FMOD Core API 文档 <https://www.fmod.com/docs/2.03/api/core-api.html>`_"
-msgstr ""
-"`FMOD Core API Documentation <https://www.fmod.com/docs/2.03/api/core-"
-"api.html>`_"
+#: ../../source/index.rst:113 3f734382440146a7a366d07f049eddd7
+msgid "`FMOD Core API 文档 <https://www.fmod.com/docs/2.04/api/core-api.html>`_"
+msgstr "`FMOD Core API Documentation <https://www.fmod.com/docs/2.04/api/core-api.html>`_"
 
-#: ../../source/index.rst:117 483d7df1408847ccb52a130676870c24
+#: ../../source/index.rst:114 d698a9d4ca9541d8b81dbf18d0829406
 msgid ":ref:`genindex`"
 msgstr ":ref:`genindex`"
 
-#: ../../source/index.rst:118 4c3f704858e547b9b4524144b5210799
+#: ../../source/index.rst:115 f563b673101045bfbf12f59e1e0beca1
 msgid ":ref:`search`"
 msgstr ":ref:`search`"

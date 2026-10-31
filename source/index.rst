@@ -6,8 +6,7 @@ Godot-FmodPlayer 文档
    :align: center
    :width: 100%
 
-Godot-FmodPlayer 是一个 Godot 4 GDExtension 插件，基于 FMOD Core API 提供音频播放、
-混音、DSP 效果、3D 音频和性能监控功能。
+Godot-FmodPlayer 面向 Godot 4.7.2 或更新版本，基于 FMOD Core API 2.04 提供音频播放、混音、DSP 效果、3D 音频和性能监控功能。
 
 适合用于需要比 Godot 原生音频系统更细致控制的项目，例如动态混音、实时音效处理、
 长音频流式播放、空间音频和 FMOD 底层 API 集成。
@@ -23,6 +22,8 @@ Godot-FmodPlayer 是一个 Godot 4 GDExtension 插件，基于 FMOD Core API 提
 - 支持 FMOD CPU 与文件读取性能监控
 - 提供编辑器导入器、音频预览和自定义资源类型
 
+.. _platform-support:
+
 平台支持
 --------
 
@@ -30,14 +31,15 @@ Godot-FmodPlayer 是一个 Godot 4 GDExtension 插件，基于 FMOD Core API 提
    :header-rows: 1
 
    * - 平台
-     - 架构
      - 状态
-   * - Windows
-     - x86_64
+   * - Windows x86_64
      - 支持
+   * - Linux x86_64
+     - 已在 Ubuntu 26.04 测试
    * - Android
-     - arm64
-     - 支持
+     - 提供 arm64 构建；其他 ABI 可通过 SCons ``arch`` 构建
+   * - macOS / iOS
+     - 实验性支持；需要自行配置 SDK 和链接项
 
 开始使用
 --------
@@ -108,6 +110,6 @@ Godot-FmodPlayer 是一个 Godot 4 GDExtension 插件，基于 FMOD Core API 提
 --------
 
 - `GitHub 仓库 <https://github.com/LuYingYiLong/Godot-FmodPlayer>`_
-- `FMOD Core API 文档 <https://www.fmod.com/docs/2.03/api/core-api.html>`_
+- `FMOD Core API 文档 <https://www.fmod.com/docs/2.04/api/core-api.html>`_
 - :ref:`genindex`
 - :ref:`search`
