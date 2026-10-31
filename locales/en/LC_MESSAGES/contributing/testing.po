@@ -1,0 +1,264 @@
+# English translations for Godot-FmodPlayer contributor documentation.
+# Copyright (C) 2026, LuYingYiLong
+# Distributed under the same license as the documentation.
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot FmodPlayer \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-01 01:59+0800\n"
+"PO-Revision-Date: 2026-11-01 02:01+0800\n"
+"Last-Translator: Godot-FmodPlayer contributors\n"
+"Language: en\n"
+"Language-Team: English\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/contributing/testing.rst:4 adf02fd2b0144ed5b22e49b3524c515b
+msgid "在 Godot 中测试"
+msgstr "Test in Godot"
+
+#: ../../source/contributing/testing.rst:6 b8157ddf8ae8413eb8baeb581e957318
+msgid ""
+"日常测试从 Godot 编辑器和测试菜单进入。先通过 :doc:`development` 构建并同步完整插件，再打开插件仓库中的 "
+"``tests/project.godot``，等待资源导入后按 **F5**。"
+msgstr ""
+"Start everyday testing in the Godot editor and test menu. Follow :doc:`development` to build and "
+"stage the complete addon, then open ``tests/project.godot`` from the plugin repository, wait for "
+"imports, and press **F5**."
+
+#: ../../source/contributing/testing.rst:8 8bd4326fcaf94f39a8c8065ec4d486e2
+msgid "更新原生库前先关闭测试项目。只更新了脚本、翻译或资源时，也要同步插件副本，确保测试的内容与当前源码一致。"
+msgstr ""
+"Close the test project before replacing a native library. Stage script, translation, and resource"
+" changes too, so the test project matches the source you are validating."
+
+#: ../../source/contributing/testing.rst:13 a1c2ad3cae124805a51b95c9f0e0bcda
+msgid "试听与场景交互"
+msgstr "Listen and interact"
+
+#: ../../source/contributing/testing.rst:18 dc178c49189a410297e0045658950752
+msgid "菜单入口"
+msgstr "Menu entry"
+
+#: ../../source/contributing/testing.rst:19 6c13867023bb4bceb1e633912e167fe1
+msgid "操作与观察"
+msgstr "What to do and observe"
+
+#: ../../source/contributing/testing.rst:20 a0fdda7fd7fe4fd0989240370bbc2c2d
+msgid "空间音频、混响与几何遮挡"
+msgstr "Spatial audio, reverb, and geometry occlusion"
+
+#: ../../source/contributing/testing.rst:21 2e23be545a9043d2ae5e61745f4b0808
+msgid "音源自动播放；WASD 移动，左键捕获鼠标，Esc 显示鼠标。改变距离、绕过遮挡物、进入混响区域，试听音量、空间位置和混响变化。"
+msgstr ""
+"The source plays automatically. Move with WASD, click to capture the mouse, and press Esc to "
+"release it. Change distance, move around occluders, and enter reverb zones to listen for changes "
+"in volume, spatial position, and reverb."
+
+#: ../../source/contributing/testing.rst:22 61e191f869c64413940035e88d796605
+msgid "FMOD / Godot 2D 播放对比"
+msgstr "FMOD / Godot 2D playback comparison"
+
+#: ../../source/contributing/testing.rst:23 7b146a5ed16d4da38c1f57eb013b1169
+msgid "两份 WAV 内容相同，分别通过 FMOD 和 Godot 导入。用按钮单独播放、同时播放或停止，确认播放切换和停止行为。"
+msgstr ""
+"Two copies of the same WAV use FMOD and Godot imports. Use the buttons to play either source, "
+"play both, or stop them, and check switching and stopping behavior."
+
+#: ../../source/contributing/testing.rst:25 b5336f591c11464bac9c8489f4f16ff1
+msgid ""
+"两个场景都有“返回测试菜单”按钮。也可以在编辑器中打开 ``manual/reverb_test.tscn`` 或 ``manual/playback_compare.tscn``，按 "
+"**F6** 单独运行。"
+msgstr ""
+"Both scenes provide a Return to test menu button. You can also open ``manual/reverb_test.tscn`` "
+"or ``manual/playback_compare.tscn`` in the editor and press **F6** to run that scene."
+
+#: ../../source/contributing/testing.rst:30 9b3102083663402685352340bf18e92d
+msgid "一键数值回归"
+msgstr "Run numerical checks"
+
+#: ../../source/contributing/testing.rst:32 b2cab6ce204e46cf94c2815df0ccc0e1
+msgid "在主菜单点击 **运行数值回归（8 项）**。检查静默运行，完成后显示逐项结果；返回菜单后，本次项目运行期间的最近结果仍会保留。"
+msgstr ""
+"Click **运行数值回归（8 项）** (Run numerical regression, 8 checks) in the main menu. The checks run "
+"silently and display individual results when finished. The most recent result is retained when "
+"you return to the menu during the same project run."
+
+#: ../../source/contributing/testing.rst:37 9982d6f1052d44e1aa7ca0613eb83081
+msgid "检查项"
+msgstr "Check"
+
+#: ../../source/contributing/testing.rst:38 ded6054d605a4d9da44e4583614c5c31
+msgid "覆盖内容"
+msgstr "Coverage"
+
+#: ../../source/contributing/testing.rst:39 811ae24239194236b59205698ebe6c40
+msgid "3D 空间音频"
+msgstr "3D spatial audio"
+
+#: ../../source/contributing/testing.rst:40 391255edf760484baa84b0a0c59458cc
+msgid "距离衰减、距离滤波、发射角度和场景保存重载。"
+msgstr "Distance attenuation, distance filtering, emission angles, and scene save/load."
+
+#: ../../source/contributing/testing.rst:41 123f945b21f54ca9b6c443f7d9ca7fd4
+msgid "混音矩阵"
+msgstr "Mix matrix"
+
+#: ../../source/contributing/testing.rst:42 eb4e4c0a99cb4a9a880ebb06d785ac26
+msgid "矩阵步长、声道布局及无效参数处理。"
+msgstr "Matrix stride, channel layout, and invalid parameter handling."
+
+#: ../../source/contributing/testing.rst:43 66a6c776375a46978e69a6ca5d937241
+msgid "总线与效果器"
+msgstr "Buses and effects"
+
+#: ../../source/contributing/testing.rst:44 d3a3fe52f8e44d9c84f2c8682d6590cc
+msgid "布局保存重载、路由、Solo、效果器实例和参数更新。"
+msgstr "Layout save/load, routing, solo, effect instances, and parameter updates."
+
+#: ../../source/contributing/testing.rst:45 cec2f1c3b68b46adb658a3def78bbe8b
+msgid "频谱快照"
+msgstr "Spectrum snapshots"
+
+#: ../../source/contributing/testing.rst:46 d81ff7dc1e6e480ca0e6ae2f71487bb8
+msgid "频谱数据读取和快照复用。"
+msgstr "Spectrum reads and snapshot reuse."
+
+#: ../../source/contributing/testing.rst:47 cb28164f5aed43239b118ee54f9f82ea
+msgid "SoundGroup"
+msgstr "SoundGroup"
+
+#: ../../source/contributing/testing.rst:48 68c5b18744744ee88dc22ead4f4a9267
+msgid "播放数量限制、取消限制和无效参数。"
+msgstr "Playback limits, removing limits, and invalid parameters."
+
+#: ../../source/contributing/testing.rst:49 50f0515b124c4e74b673a8f8fb562aa7
+msgid "FMOD API 与资源"
+msgstr "FMOD API and resources"
+
+#: ../../source/contributing/testing.rst:50 56a8adf17bf643b9aea29572cb1d0279
+msgid "FMOD 2.04 绑定、效果器、脚本 DSP 回调和音频加载入口。"
+msgstr "FMOD 2.04 bindings, effects, script DSP callbacks, and audio loading entry points."
+
+#: ../../source/contributing/testing.rst:51 30d9c640666741e48faf9c8a5bf641c5
+msgid "Capture"
+msgstr "Capture"
+
+#: ../../source/contributing/testing.rst:52 c853c4af00104d0792b8e76d70987754
+msgid "缓冲区读写、溢出计数、声道顺序和重新挂载。"
+msgstr "Buffer reads and writes, overflow counters, channel order, and reattachment."
+
+#: ../../source/contributing/testing.rst:53 da840aa1600f4963abfe6cac1a52fdf8
+msgid "混响"
+msgstr "Reverb"
+
+#: ../../source/contributing/testing.rst:54 f3cd38e1e8d84faba99b43b5732fd9bc
+msgid "默认、高通、动态参数和尾音的离线输出。"
+msgstr "Offline output for default, high-pass, dynamic-parameter, and tail cases."
+
+#: ../../source/contributing/testing.rst:56 3d37a4f5df384ad98fe81565be3c52ec
+msgid "数值检查使用独立的离线音频进程，开发者无需手动启动无头模式或填写套件参数。它验证可计算的正确性，试听和编辑器交互仍按本页步骤人工检查。"
+msgstr ""
+"The numerical checks use an isolated offline audio process. You do not need to launch headless "
+"mode or enter suite parameters yourself. These checks validate measurable correctness; use the "
+"manual steps on this page for listening and editor interaction."
+
+#: ../../source/contributing/testing.rst:58 2945ef30f6754ee2b2fc9bda4a559a6c
+msgid "检查失败会停止后续项目，菜单显示已完成结果。点击 **查看回归报告** 可打开最近一次运行目录；没有生成结果或发生超时时，先查看其中的 ``godot.log``。"
+msgstr ""
+"A failed check stops later checks, and the menu shows the completed results. Click **查看回归报告** "
+"(View regression report) to open the latest run directory. If no result is produced or a run "
+"times out, inspect its ``godot.log`` first."
+
+#: ../../source/contributing/testing.rst:63 53b1e85a165840e19b7f338b5dd5be87
+msgid "在编辑器中检查"
+msgstr "Check the editor"
+
+#: ../../source/contributing/testing.rst:68 ac049e18c1e6424aa28a51102ab78e75
+msgid "改动范围"
+msgstr "Area changed"
+
+#: ../../source/contributing/testing.rst:69 11d3edb65d9642f9a684102518834462
+msgid "检查方式"
+msgstr "How to check"
+
+#: ../../source/contributing/testing.rst:70 90bd986a3e514a00bc97038d1d311e71
+msgid "音频资源与播放器"
+msgstr "Audio resources and players"
+
+#: ../../source/contributing/testing.rst:71 7f8e30632cac47ca8c4903386aa4dfc3
+msgid "选择播放器的 ``stream``，检查波形、展开试听、资源菜单和拖放；运行场景检查播放与停止。"
+msgstr ""
+"Select a player's ``stream`` and check its waveform, expanded preview, resource menu, and drag "
+"and drop. Run the scene to check playback and stopping."
+
+#: ../../source/contributing/testing.rst:72 ff2cfb38f5c746ebbad5a82fafd49891
+msgid "混音总线"
+msgstr "Mixing buses"
+
+#: ../../source/contributing/testing.rst:73 705a3b3372894271908e5150fc98264f
+msgid "在 FMOD Audio Dock 检查总线和效果器拖放、发送路由、旁路、撤销重做，以及保存后重新打开的布局。"
+msgstr ""
+"In the FMOD Audio Dock, check bus and effect drag and drop, send routing, bypass, undo/redo, and "
+"reopening a saved layout."
+
+#: ../../source/contributing/testing.rst:74 f2cca72aa75f4fb9bfd3695d1093708c
+msgid "DSP 预览"
+msgstr "DSP previews"
+
+#: ../../source/contributing/testing.rst:75 8663e2b96a85481cafd9d6f809551ecd
+msgid "选择 ``tests/manual/*_preview.tres``，操作图形控件及原生参数，确认二者同步、边界值和撤销重做。"
+msgstr ""
+"Select ``tests/manual/*_preview.tres`` and use the graphical controls and native parameters. "
+"Check synchronization, boundary values, and undo/redo."
+
+#: ../../source/contributing/testing.rst:76 3f1acf7d73ce4036ad6dd7165bdd0a6b
+msgid "空间声学节点"
+msgstr "Spatial audio nodes"
+
+#: ../../source/contributing/testing.rst:77 f93fc9e734694caead0c8deae0adaea9
+msgid "在 3D 场景中检查声源、混响区域和遮挡几何的 Gizmo，并运行场景试听对应变化。"
+msgstr ""
+"Check the source, reverb-zone, and occlusion-geometry gizmos in the 3D scene, then run it to "
+"listen for the corresponding changes."
+
+#: ../../source/contributing/testing.rst:78 2836360158884f9e8d911520acb0ad48
+msgid "界面翻译与帮助"
+msgstr "Interface translations and help"
+
+#: ../../source/contributing/testing.rst:79 7cfc0264344441e595bbaefe99c93a51
+msgid "切换编辑器语言，检查属性、FMOD 菜单和内置类帮助；具体维护方式见 :doc:`translation`。"
+msgstr ""
+"Switch the editor language and check properties, FMOD menus, and built-in class help. See "
+":doc:`translation` for maintenance details."
+
+#: ../../source/contributing/testing.rst:81 418f8106f06a4f19a22e2e40090961dc
+msgid "Capture 和 SpectrumAnalyzer 预览读取编辑器进程中的实例。需要观察实时数据时，将对应效果器挂到编辑器内正在试听的总线上；F5 游戏进程的音频数据不会直接显示在编辑器预览里。"
+msgstr ""
+"Capture and SpectrumAnalyzer previews read instances in the editor process. To inspect live data,"
+" attach the effect to a bus used by editor playback. Audio data from the separate F5 game process"
+" is not shown directly in the editor preview."
+
+#: ../../source/contributing/testing.rst:84 afcb0e0548e047c3ac263d3e0bda150d
+msgid "记录验证结果"
+msgstr "Record validation results"
+
+#: ../../source/contributing/testing.rst:86 f75b9c4addbb4009b4fb52603c3a2398
+msgid "在 PR 中写明测试平台、Godot 与 FMOD 版本、执行过的场景或编辑器操作，以及数值回归结果。播放与空间声学改动说明听到的变化；界面改动可附截图；性能改动保留相同配置下的前后测量。"
+msgstr ""
+"In the PR, record the platform, Godot and FMOD versions, scenes or editor interactions checked, "
+"and numerical results. Describe audible changes for playback and spatial audio work, add "
+"screenshots for interface changes when useful, and retain comparable before-and-after "
+"measurements for performance changes."
+
+#: ../../source/contributing/testing.rst:88 6f1de1f29b1e4c818f275b2888ed4661
+msgid ""
+"每次回归的汇总与分项报告位于 ``tests/logs/runs/``，项目日志位于 ``tests/logs/editor.log``。日志、插件副本和历史诊断资料由 Git "
+"忽略；提交相关日志节选即可。"
+msgstr ""
+"Summaries and individual reports are saved under ``tests/logs/runs/``; the project log is "
+"``tests/logs/editor.log``. Logs, addon copies, and historical diagnostics are ignored by Git. "
+"Include relevant log excerpts in your report."

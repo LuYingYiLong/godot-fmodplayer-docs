@@ -24,6 +24,10 @@ python -m venv .venv
 
 仅构建一种语言：`python scripts/build_docs.py --language en`。原有 `make html`、`make.bat html` 和 Read the Docs 构建也会自动生成类页面。
 
+## 贡献指南
+
+贡献文档按工作流程分为[开始之前](source/contributing/before_you_start.rst)、[开发插件](source/contributing/development.rst)、[在 Godot 中测试](source/contributing/testing.rst)和[翻译与文档维护](source/contributing/translation.rst)。修改指南只需文档环境；插件验证从 `tests/project.godot` 的 F5 菜单和编辑器检查进入。
+
 ## 类参考
 
 全部 47 个已注册类按 XML 生成独立页面，包括运行时 API 和编辑器集成类。英文说明和签名维护在插件仓库的 `doc_classes/*.xml`；API 中文统一维护在插件的 `addons/fmod_player/translations/documentation/zh_CN.po`，编辑器离线帮助和网站共用。生成的类页面和分类目录不手改。
@@ -36,7 +40,7 @@ python -m venv .venv
 
 ```powershell
 $plugin = (Resolve-Path ../godot-fmodplayer).Path
-$godot = 'C:/Users/Administrator/Documents/Godot/Godot_v4.7.2-stable_win64_console.exe'
+$godot = 'C:/path/to/Godot_v4.7.2-stable_win64_console.exe'
 New-Item -ItemType Directory -Force "$plugin/tests/logs" | Out-Null
 & $godot --headless --editor --path "$plugin/tests" --script "$PWD/scripts/export_classref_api.gd" --log-file "$plugin/tests/logs/classref_export.log" -- "$plugin/tests/logs/classref_api.json"
 python scripts/sync_classref.py --plugin-root "$plugin" --api "$plugin/tests/logs/classref_api.json"
@@ -45,17 +49,16 @@ python scripts/build_docs.py
 
 同步脚本会记录插件提交和 XML 校验值。若接口改动，需要先构建并部署测试扩展，再导出 ClassDB；只修改说明时仍可使用同一构建的接口导出。
 
-在插件仓库更新 API 中文：
+在文档仓库更新插件的 API 中文，示例假设两个仓库并列。先更新消息，翻译新增条目并复核 fuzzy 标记，再执行严格检查：
 
-```sh
-python -m pip install -r tools/requirements-docs.txt
-python tools/documentation_translations.py extract
-python tools/documentation_translations.py update
+```powershell
+$plugin = (Resolve-Path ../godot-fmodplayer).Path
+python scripts/documentation_translations.py update --xml-dir "$plugin/doc_classes" --po "$plugin/addons/fmod_player/translations/documentation/zh_CN.po"
 # 翻译新增条目，复核并移除已确认条目的 fuzzy 标记
-python tools/documentation_translations.py check --strict
+python scripts/documentation_translations.py check --xml-dir "$plugin/doc_classes" --po "$plugin/addons/fmod_player/translations/documentation/zh_CN.po" --strict
 ```
 
-每条消息对应完整的 XML 描述，保留 `[param]`、`[method]` 等标记和换行。未翻译或带 `fuzzy` 的条目在编辑器中回退英文；网站的完整性检查要求全部译文已确认。只修改 PO 不需要重编译插件，重新同步快照后构建网站即可。`scripts/documentation_translations.py` 是插件工具的校验副本，随快照同步。
+每条消息对应完整的 XML 描述，保留 `[param]`、`[method]` 等标记和换行。未翻译或带 `fuzzy` 的条目在编辑器中回退英文；网站的完整性检查要求全部译文已确认。只修改 PO 不需要重编译插件，重新同步快照后构建网站即可。`scripts/documentation_translations.py` 由文档仓库保留维护；同步旧插件版本时仍兼容其 `tools/` 中的工具副本。
 
 入门指南、用户指南和目录文字继续使用 `locales/` 中的 Sphinx PO。刷新模板使用 `python scripts/build_docs.py --gettext`，再运行 `sphinx-intl update -p build/gettext -l zh_CN -l en`。gettext 构建跳过逐类 API 页面，避免生成第二份 API 翻译目录。
 

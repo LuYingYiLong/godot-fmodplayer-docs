@@ -1,150 +1,101 @@
 .. _contributing-development:
 
 开发 Godot-FmodPlayer
-=====================
+==============================================
 
-本页面面向希望修改插件源码的贡献者。这里假设你已经了解 Godot 4 的 `C++ / GDExtension <https://docs.godotengine.org/zh-cn/4.x/tutorials/scripting/cpp/index.html>`_ 开发方式，并准备从 `Godot-FmodPlayer 仓库 <https://github.com/LuYingYiLong/Godot-FmodPlayer>`_ 开始工作。
+从插件仓库构建扩展，再把完整插件部署到测试项目。以下命令默认在插件仓库根目录执行，日常验证流程见 :doc:`testing`。
 
 准备环境
---------
-
-开发前建议准备：
-
-- Godot 4.x。
-- Git。
-- Python 3 与 SCons。
-- 支持 C++17 的编译环境。
-- FMOD Engine。
-- Windows 开发建议使用 Visual Studio。
-
-克隆仓库时请保留子模块：
-
-.. code-block:: bash
-
-    git clone --recursive https://github.com/LuYingYiLong/Godot-FmodPlayer.git
-    cd Godot-FmodPlayer
-
-如果已经克隆但忘记拉取子模块，可以执行：
-
-.. code-block:: bash
-
-    git submodule update --init --recursive
-
-选择编辑器
-----------
-
-你可以使用任何文本编辑器开发 Godot-FmodPlayer，然后在命令行中调用 ``scons`` 构建。
-
-如果你希望使用完整 IDE，Windows 上推荐 `Visual Studio <https://visualstudio.microsoft.com/>`_。它提供调试器、内存视图、性能分析、源码控制和解决方案管理，对调试 GDExtension 比较方便。
-
-配置 Visual Studio
-~~~~~~~~~~~~~~~~~~
-
-`Visual Studio Community <https://visualstudio.microsoft.com>`_ 是 Microsoft 提供的 Windows IDE。个人开发者、开源项目和符合许可条件的组织可以免费使用。
-
-安装 Visual Studio 时，请确保勾选 C++ 相关工作负载。通常需要安装 **使用 C++ 的桌面开发**：
-
-.. image:: ../_static/contributing/vs_install_cpp_package.png
-    :align: center
-
-导入项目
-^^^^^^^^
-
-可以通过下面任一方式打开项目：
-
-- 双击仓库根目录下的 ``Godot-FmodPlayer.slnx``。
-- 在 Visual Studio 中选择 **打开项目或解决方案**，然后选择 ``Godot-FmodPlayer.slnx``。
-
-打开后，如果 IDE 没有正确识别 C++ 项目，先确认 C++ 工作负载和 Windows SDK 是否安装完整。
-
-补齐 FMOD 运行库
 ----------------
 
-由于 FMOD 许可证限制，Godot-FmodPlayer 仓库不会包含 FMOD Engine 的头文件和库文件。你需要前往 `FMOD 下载页面 <https://www.fmod.com/download>`_ 下载 FMOD Engine，并从本机安装目录复制 Core API 相关文件。
+- Godot 4.7.2 或更新版本、Git、Python 3 和 SCons。
+- 支持 C++17 的编译器：Windows 使用 MSVC，Linux 使用 GCC 或 Clang；Android 使用 NDK 工具链。
+- 目标平台的 FMOD Core SDK 2.04；头文件、链接库和运行库使用同一 SDK 发布版本。
 
-以 Windows 默认安装路径为例：
+.. code-block:: sh
 
-1. 找到 FMOD Core API 头文件目录：
+    git clone --recurse-submodules https://github.com/LuYingYiLong/Godot-FmodPlayer.git
+    cd Godot-FmodPlayer
+    python -m pip install scons
 
-   ``C:\Program Files (x86)\FMOD SoundSystem\FMOD Studio API Windows\api\core\inc``
+已有工作副本可运行 ``git submodule update --init --recursive``，恢复项目固定的 godot-cpp 提交。项目的 ``SConstruct`` 默认使用 ``api_version=4.7``，通常无需自行导出 API JSON。
 
-2. 找到 FMOD Core API 库文件目录：
+Windows 可使用 Visual Studio 的“使用 C++ 的桌面开发”工作负载，并安装 Windows SDK。可打开仓库中的 ``Godot-FmodPlayer.slnx``，或使用其他编辑器后从命令行构建。
 
-   ``C:\Program Files (x86)\FMOD SoundSystem\FMOD Studio API Windows\api\core\lib``
+.. image:: ../_static/contributing/vs_install_cpp_package.png
+   :align: center
+   :alt: Visual Studio C++ workload
 
-3. 将 ``inc`` 和 ``lib`` 复制到插件仓库的：
+Windows
+----------------------
 
-   ``src/thirdparty/fmod/``
+将 Windows SDK 的 ``api/core/inc`` 复制到 ``src/thirdparty/fmod/inc``，将 ``api/core/lib/x64`` 中的文件复制到 ``src/thirdparty/fmod/lib/x64``。把其中的 ``fmod.dll`` 放入 ``addons/fmod_player/bin``。
 
-整理完成后，目录结构应类似：
+.. code-block:: sh
 
-.. code-block:: text
-
-    src/
-    └── thirdparty/
-        └── fmod/
-            ├── inc/
-            │   ├── fmod.h
-            │   ├── fmod.hpp
-            │   ├── fmod_common.h
-            │   ├── fmod_codec.h
-            │   ├── fmod_dsp.h
-            │   ├── fmod_dsp_effects.h
-            │   ├── fmod_errors.h
-            │   └── fmod_output.h
-            └── lib/
-                ├── arm64/
-                ├── x64/
-                └── x86/
-
-.. warning::
-
-    不要把 FMOD 的 ``inc``、``lib`` 或运行库文件提交到仓库。它们只应该存在于你的本地开发环境中。
-
-附加库目录
-~~~~~~~~~~
-
-.. image:: ../_static/contributing/vs_include_lib.png
-
-构建插件
---------
-
-Windows x86_64 调试构建示例：
-
-.. code-block:: bash
-
-    scons platform=windows target=template_debug arch=x86_64
-
-Windows x86_64 发布构建示例：
-
-.. code-block:: bash
-
+    scons platform=windows target=template_debug arch=x86_64 copy_to_tests=yes
     scons platform=windows target=template_release arch=x86_64
 
-构建完成后，请确认生成的 GDExtension 二进制文件与 ``addons/fmod_player/bin/`` 中的 ``fmod_player.gdextension`` 配置匹配。
+``template_debug`` 用于编辑器和调试运行，``template_release`` 用于发布导出。输出文件位于 ``addons/fmod_player/bin``；对应文件名与架构必须匹配 ``fmod_player.gdextension``。
 
-如果你修改了导出平台、架构或输出文件名，也要同步检查 ``fmod_player.gdextension`` 中的库路径。
+Linux
+------------------
 
-代码风格
---------
+使用 FMOD Linux Core SDK。在 Git 忽略的根目录 ``custom.py`` 中指定 SDK 根目录或其 ``api/core`` 目录：
 
-代码风格以现有源码为准。提交前建议注意：
+.. code-block:: python
 
-- 使用项目已有的命名方式和目录组织。
-- C++ 代码保持 K&R 风格，左花括号跟随语句末尾。
-- 指针和引用写法跟随当前文件，不为风格偏好单独重排代码。
-- 避免无关格式化，尤其不要在功能 PR 中格式化整份文件。
-- 新增绑定时，同步检查 GDScript 可见 API、文档和示例。
+    fmod_linux_sdk = "/path/to/fmodstudioapi20400linux"
 
-调试建议
---------
+.. code-block:: sh
 
-如果插件无法加载，优先检查：
+    scons platform=linux target=template_debug arch=x86_64 copy_to_tests=yes
+    scons platform=linux target=template_release arch=x86_64
 
-- FMOD 运行库是否放在正确位置。
-- ``fmod_player.gdextension`` 中的二进制路径是否匹配当前平台和架构。
-- Godot 输出面板是否有 GDExtension 加载错误。
-- Visual Studio 运行库和 Windows SDK 是否安装完整。
-- Debug / Release 构建产物是否与当前 Godot 模板目标一致。
+也可通过 ``FMOD_LINUX_SDK`` 环境变量配置路径。Debug 运行需要 ``libfmodL.so.15``，Release 需要 ``libfmod.so.15``；放在扩展库旁，保留正确的文件名或符号链接。构建时 ``copy_to_tests=yes`` 会从本地 SDK 复制对应运行库。
 
-修改完成后，建议至少在 Godot 编辑器中创建一个最小场景，验证音频可以加载、播放和停止。如果改动涉及总线、DSP、3D 音频或导出流程，请补充对应的手动验证步骤。
+Android
+----------------------
+
+安装 Android SDK、NDK 和 FMOD Android Core SDK。``ANDROID_HOME`` 指向 SDK 根目录；NDK 位于其 ``ndk/<版本号>`` 子目录。已设置正确的 ``ANDROID_HOME`` 时，通常只需在项目的 ``custom.py`` 中固定已安装的 ``ndk_version``。
+
+下面的路径和版本号仅为示例，请替换为本机实际值：
+
+.. code-block:: python
+
+    ANDROID_HOME = r"C:\Android\Sdk"
+    ndk_version = "30.0.16248370"
+    fmod_android_sdk = r"C:\SDKs\FMOD-Android"
+
+``fmod_android_sdk`` 接受 SDK 根目录或 ``api/core``，也可通过 ``FMOD_ANDROID_SDK`` 环境变量提供默认路径。固定并保留已验证的 NDK，可避免 godot-cpp 默认 NDK 版本变化影响本项目。
+
+.. code-block:: sh
+
+    scons platform=android target=template_debug arch=arm64
+    scons platform=android target=template_release arch=arm64
+
+构建产物和 FMOD 运行库必须使用相同 ABI。其他架构使用 ``arch`` 选择，并检查扩展配置中的库条目。Java 与原生运行库的导出配置见 :doc:`../export`。
+
+同步到测试项目
+----------------------
+
+``copy_to_tests=yes`` 在构建成功后同步完整插件到 ``tests/addons/fmod_player``，即使二进制无需重编译，也会复制修改过的脚本、翻译和资源。Windows 和 Linux 同时复制本地 SDK 运行库；可用 ``fmod_runtime=/path/to/runtime`` 覆盖其来源。
+
+替换原生库前先关闭测试项目，完成构建后重新打开 ``tests/project.godot`` 并按 F5。无需另行运行外部测试脚本，菜单和编辑器检查步骤见 :doc:`testing`。
+
+代码风格与接口变更
+--------------------------
+
+- C++ 沿用当前文件的命名、缩进和指针引用写法，避免无关格式化。新增或修改 API 时，同时更新注册、XML、翻译和受影响示例。
+- GDScript 使用 UTF-8、LF、Tab 缩进和完整类型提示；函数与类定义前后留两个空行。
+- 多行数组、字典和枚举保留末尾逗号；信号使用英文过去时名称；硬编码资源路径优先使用 UID。
+- 浮点数保留前导和后缀零，例如 ``0.0``；变量不重复声明默认值；中文注释末尾不加句号。
+- 先声明信号和属性，再写方法；公共成员在前，私有成员在后；先初始化与虚函数回调，再写类接口。
+- DSP 改动说明线程归属和缓冲区单位，区分字节、采样和完整音频帧；音频回调中减少分配与锁竞争，遵守 Godot 对象和脚本回调的线程约束。
+
+构建与加载排查
+----------------------
+
+- 找不到 NDK：确认 ``ANDROID_HOME`` 是 SDK 根目录，且 ``ndk_version`` 与本机安装目录一致。
+- 提示旧 API JSON 文件不存在：检查本地配置是否仍设置 ``custom_api_file``。显式设置会覆盖 ``api_version``，普通构建可使用项目内置的 API 配置。
+- 动态库加载失败：检查平台、架构、Debug/Release 条目和 FMOD 运行库，查看 Godot 输出面板，参见 :ref:`faq-module-no-found`。

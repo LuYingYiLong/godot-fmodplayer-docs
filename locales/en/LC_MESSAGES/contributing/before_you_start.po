@@ -1,135 +1,154 @@
-# English translations for Godot FmodPlayer.
+# English translations for Godot-FmodPlayer contributor documentation.
 # Copyright (C) 2026, LuYingYiLong
-# This file is distributed under the same license as the Godot FmodPlayer
-# package.
+# Distributed under the same license as the documentation.
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot FmodPlayer \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-12 00:48+0800\n"
-"PO-Revision-Date: 2026-05-12 00:00+0800\n"
-"Last-Translator: Codex <codex@example.invalid>\n"
+"POT-Creation-Date: 2026-11-01 01:59+0800\n"
+"PO-Revision-Date: 2026-11-01 02:01+0800\n"
+"Last-Translator: Godot-FmodPlayer contributors\n"
 "Language: en\n"
-"Language-Team: en <LL@li.org>\n"
+"Language-Team: English\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: ../../source/contributing/before_you_start.rst:4
-#: b8f9509d7ff1447c98fdf89f662a74f8
+#: ../../source/contributing/before_you_start.rst:4 51ea33af8851471c85e6f472fd8e5ec4
 msgid "开始之前"
-msgstr "Before You Start"
+msgstr "Before you contribute"
 
-#: ../../source/contributing/before_you_start.rst:6
-#: 9a4122c000684d7eac36c84625fefdd4
-msgid ""
-"感谢你愿意为 Godot-FmodPlayer 贡献内容。无论是修文档、补示例、提交 Bug "
-"复现，还是改进插件源码，都建议先花一点时间确认变更范围。"
+#: ../../source/contributing/before_you_start.rst:6 8d2bcec75f68483ea3ffe214bcfb59a6
+msgid "可以从问题复现、文档、翻译、示例或源码改进开始。先确定改动属于哪个仓库，再准备对应的环境。"
 msgstr ""
-"Thank you for contributing to Godot-FmodPlayer. Whether you are fixing "
-"documentation, adding examples, submitting a bug reproduction, or improving "
-"the plugin source code, please take a moment to confirm the scope of the "
-"change first."
+"You can contribute reproductions, documentation, translations, examples, or code improvements. "
+"Start by identifying the repository that owns the change, then prepare the environment you need."
 
-#: ../../source/contributing/before_you_start.rst:9
-#: 03b3b1ddaa9d44ff9a8b94ec08f79f1d
-msgid "提交前建议"
-msgstr "Before Submitting"
+#: ../../source/contributing/before_you_start.rst:9 7af0dc6ee08c4625ba2df349ff06976b
+msgid "选择贡献位置"
+msgstr "Choose the right repository"
 
-#: ../../source/contributing/before_you_start.rst:11
-#: ce31912afc1e4283978e60a46d298ecc
-msgid "先检查现有 Issue、讨论和 Pull Request，避免重复工作。"
-msgstr "Check existing Issues, discussions, and Pull Requests first to avoid duplicate work."
+#: ../../source/contributing/before_you_start.rst:14 67afcbe8a7614d87bcf0de632317ef9c
+msgid "内容"
+msgstr "Content"
 
-#: ../../source/contributing/before_you_start.rst:12
-#: 58caf5b080f24581bf4ef5ae9c1b9195
-msgid "尽量让一个 Pull Request 只解决一个问题。"
-msgstr "Try to keep each Pull Request focused on one problem."
+#: ../../source/contributing/before_you_start.rst:15 59b3c75c1d204a4d92695e273307ae3d
+msgid "维护位置"
+msgstr "Where to contribute"
 
-#: ../../source/contributing/before_you_start.rst:13
-#: 4d40aed79d4e44fb93dcd2135dd1a3be
-msgid "优先提交小而清晰的改动，避免把功能、重构、格式化和文档修改混在一起。"
-msgstr "Prefer small, clear changes, and avoid mixing features, refactors, formatting, and documentation edits in one submission."
+#: ../../source/contributing/before_you_start.rst:16 0d8a080edbd84b2e99a9ed274dd29bb2
+msgid "插件行为、编辑器集成与测试场景"
+msgstr "Plugin behavior, editor integration, and test scenes"
 
-#: ../../source/contributing/before_you_start.rst:14
-#: af05d0cb0ae4402ebb5b5b42f0966582
-msgid "如果修改会影响用户行为，请补充说明、示例或测试方式。"
-msgstr "If the change affects user-facing behavior, add notes, examples, or verification steps."
-
-#: ../../source/contributing/before_you_start.rst:15
-#: 3cb14a12689f4b75b28832e01659aea6
-msgid "如果不确定实现方向，可以先提交草稿 PR，或在 Issue 中说明你的思路。"
-msgstr "If you are unsure about the implementation direction, you can open a draft PR or describe your idea in an Issue first."
-
-#: ../../source/contributing/before_you_start.rst:18
-#: 6dc8c45252ce4c3e81c6f1911654d8e5
-msgid "适合贡献的内容"
-msgstr "Good Contributions"
-
-#: ../../source/contributing/before_you_start.rst:20
-#: 8fdcee2c7f164eaaa4d7a25477f06f82
-msgid "修正文档中的错别字、失效链接和不清楚的说明。"
-msgstr "Fix typos, broken links, and unclear explanations in the documentation."
-
-#: ../../source/contributing/before_you_start.rst:21
-#: d7d5d7858d8e4ad088648f06cf2ae62e
-msgid "补充 GDScript 示例、常见用法和故障排查。"
-msgstr "Add GDScript examples, common usage notes, and troubleshooting guidance."
-
-#: ../../source/contributing/before_you_start.rst:22
-#: ad7eb57584d8452abda61f84ef574ab7
-msgid "修复插件在特定平台、导出流程或音频格式上的问题。"
-msgstr "Fix plugin issues on specific platforms, export flows, or audio formats."
-
-#: ../../source/contributing/before_you_start.rst:23
-#: 064592aa640f49cab54bc49ac45f002f
-msgid "改进 API 绑定、编辑器体验、导入器和总线同步逻辑。"
-msgstr "Improve API bindings, editor experience, importers, and audio bus synchronization logic."
-
-#: ../../source/contributing/before_you_start.rst:24
-#: 941536b4b2c54b77bd88503feed5c5ed
-msgid "帮助维护英文翻译和术语一致性。"
-msgstr "Help maintain English translations and terminology consistency."
-
-#: ../../source/contributing/before_you_start.rst:27
-#: a69540ad8d654301b1c342df32130cbb
-msgid "不建议一次性提交的内容"
-msgstr "Avoid Submitting These Together"
-
-#: ../../source/contributing/before_you_start.rst:29
-#: 78b47d9a87e34606b3c1d568afe4fe53
-msgid "大规模格式化整个仓库。"
-msgstr "Large-scale formatting across the entire repository."
-
-#: ../../source/contributing/before_you_start.rst:30
-#: 5cbc9d697b584d77a1f8e8487eb5e5b9
-msgid "同时修改多个无关模块。"
-msgstr "Changes to multiple unrelated modules at the same time."
-
-#: ../../source/contributing/before_you_start.rst:31
-#: 718f4cbf96a64a4b89afae910b046dfd
-msgid "没有说明原因的接口改名或行为变化。"
-msgstr "API renames or behavior changes without an explanation."
-
-#: ../../source/contributing/before_you_start.rst:32
-#: daac022849f94ef1a9e67f887a371a04
-msgid "直接提交 FMOD 运行库文件。"
-msgstr "Committing FMOD runtime files directly."
-
-#: ../../source/contributing/before_you_start.rst:34
-#: 472b491541334f2d93687f117ab6d0f2
-msgid ""
-"FMOD Engine 受 Firelight Technologies Pty Ltd 的许可约束。插件仓库不会包含 FMOD "
-"运行库，贡献时也不要把 ``fmod.dll``、``libfmod.so``、``fmod.jar`` 等文件提交到仓库。"
+#: ../../source/contributing/before_you_start.rst:17 78874593eb5443239a0d7b7e1d08bc54
+msgid "`Godot-FmodPlayer <https://github.com/LuYingYiLong/Godot-FmodPlayer>`_ 的源码和 ``tests/``"
 msgstr ""
-"FMOD Engine is governed by the Firelight Technologies Pty Ltd license. The "
-"plugin repository does not include FMOD runtime libraries, and contributions "
-"should not commit files such as ``fmod.dll``, ``libfmod.so``, or "
-"``fmod.jar``."
+"Source code and ``tests/`` in `Godot-FmodPlayer <https://github.com/LuYingYiLong/Godot-"
+"FmodPlayer>`_"
 
-#: ../../source/contributing/before_you_start.rst:36
-#: 7c88b44ba6204ff7800b681e1a87758a
-msgid "如果你只是想先试一试，可以从文档的小修小补开始。这类改动最容易审查，也最容易帮助后来的使用者。"
-msgstr "If you only want to try contributing first, start with small documentation fixes. These changes are easy to review and often very helpful for future users."
+#: ../../source/contributing/before_you_start.rst:18 13819bf206544e9ea00ab5132899fba9
+msgid "入门指南、使用说明与英文手册"
+msgstr "Getting-started guides, user guides, and the English manual"
+
+#: ../../source/contributing/before_you_start.rst:19 949d438d11e5413da6a8cd585dc9d1b4
+msgid ""
+"`文档仓库 <https://github.com/LuYingYiLong/godot-fmodplayer-docs>`_ 的 ``source/`` 和 "
+"``locales/en/LC_MESSAGES/``"
+msgstr ""
+"``source/`` and ``locales/en/LC_MESSAGES/`` in the `documentation repository "
+"<https://github.com/LuYingYiLong/godot-fmodplayer-docs>`_"
+
+#: ../../source/contributing/before_you_start.rst:20 d0c0bfab5add46cb92ef60d59ae41f11
+msgid "API 英文描述与中文类帮助"
+msgstr "English API descriptions and Chinese class help"
+
+#: ../../source/contributing/before_you_start.rst:21 ef8404bbf11140e8bc132b0e944f933a
+msgid "插件仓库的 ``doc_classes/*.xml`` 和 ``addons/fmod_player/translations/documentation/zh_CN.po``"
+msgstr ""
+"``doc_classes/*.xml`` and ``addons/fmod_player/translations/documentation/zh_CN.po`` in the "
+"plugin repository"
+
+#: ../../source/contributing/before_you_start.rst:23 53637d6461664c6093d3868097e1b82d
+msgid ""
+"修改指南或手册翻译只需要文档环境，不必先编译插件。修改插件源码参见 :doc:`development`；验证改动参见 :doc:`testing`；翻译与类参考维护参见 "
+":doc:`translation`。"
+msgstr ""
+"Guide and manual translation changes only require the documentation environment; you do not need "
+"to build the plugin first. See :doc:`development` for plugin development, :doc:`testing` for "
+"validation, and :doc:`translation` for translations and class-reference maintenance."
+
+#: ../../source/contributing/before_you_start.rst:26 a891e6da4b1f4424adc1e2cf149a0266
+msgid "报告问题"
+msgstr "Report a problem"
+
+#: ../../source/contributing/before_you_start.rst:28 5435bc8e2c5949e3ae2f1a85bbb76614
+msgid "提交 Issue 前先搜索现有讨论。播放、导入、空间音频或导出问题，尽量附上可直接打开的最小 Godot 项目，并写清以下信息："
+msgstr ""
+"Search existing discussions before opening an issue. For playback, import, spatial audio, or "
+"export problems, provide a minimal Godot project when possible and include:"
+
+#: ../../source/contributing/before_you_start.rst:30 4d54542b71c740ad887a1c20d22cb6e7
+msgid "Godot 与 FMOD 版本、插件版本或提交号，以及操作系统和架构。"
+msgstr "The Godot and FMOD versions, plugin version or commit, operating system, and architecture."
+
+#: ../../source/contributing/before_you_start.rst:31 0c16a2e3bfcd462b95cef2e0b42601fa
+msgid "可以重复执行的操作步骤、预期结果和实际结果。"
+msgstr "Repeatable steps, the expected result, and the actual result."
+
+#: ../../source/contributing/before_you_start.rst:32 2b646f0b8db8440ba8a8e8dbfbb5e2c0
+msgid "相关输出日志；界面问题附截图，音频问题说明音频格式、加载方式及总线和效果器配置。"
+msgstr ""
+"Relevant logs; screenshots for interface problems, and the audio format, loading mode, bus setup,"
+" and effects for audio problems."
+
+#: ../../source/contributing/before_you_start.rst:35 3af2a89d2d8c4c638609027200c1c460
+msgid "准备 Pull Request"
+msgstr "Prepare a pull request"
+
+#: ../../source/contributing/before_you_start.rst:37 47d9396973244f16b2e9d6e64d5407f9
+msgid "较大的功能或接口调整先在 Issue 中说明使用场景和实现方向。"
+msgstr "Discuss the use case and approach in an issue before making a large feature or API change."
+
+#: ../../source/contributing/before_you_start.rst:38 cfb2632d03264704be77631afc4282fc
+msgid "每个 PR 聚焦一个问题，保留有助于审查的相关文档和测试改动。"
+msgstr ""
+"Keep each PR focused on one problem and include related documentation and tests that help review "
+"it."
+
+#: ../../source/contributing/before_you_start.rst:39 aee3d0ae12e24a9d9201578a77243f75
+msgid "描述触发条件、改动后的行为和验证方式，列出实际测试的平台及尚未验证的部分。"
+msgstr ""
+"Describe the trigger, resulting behavior, and validation. List the platforms actually tested and "
+"any remaining gaps."
+
+#: ../../source/contributing/before_you_start.rst:40 40d577472e0749569c6c57c94bc34563
+msgid "API 变更同步更新绑定、XML 描述、翻译及相关示例；跨仓库修改互相链接对应 PR。"
+msgstr ""
+"For API changes, update bindings, XML descriptions, translations, and affected examples. Link "
+"companion PRs when a change spans repositories."
+
+#: ../../source/contributing/before_you_start.rst:41 17679578e8904afe9007bfffa625a166
+msgid "性能改动提供相同配置和工作负载下的前后测量，并确认音频正确性。"
+msgstr ""
+"For performance changes, provide before-and-after measurements with the same configuration and "
+"workload, and verify audio correctness."
+
+#: ../../source/contributing/before_you_start.rst:44 7f5d01ee8ea54fb5a5a2ed5e07e2e3e1
+msgid "保持提交清晰"
+msgstr "Keep patches focused"
+
+#: ../../source/contributing/before_you_start.rst:46 da334bec2b3044f1b7f6a4b1ff2e7620
+msgid "沿用现有代码风格，避免把无关重构或整库格式化混入功能修复。不要提交本机的 ``custom.py``、SDK 文件、FMOD 运行库、``tests/addons/``、日志、缓存和临时生成结果。"
+msgstr ""
+"Follow the existing code style and keep unrelated refactoring or repository-wide formatting out "
+"of a feature or fix. Exclude local ``custom.py`` files, SDK files, FMOD runtimes, "
+"``tests/addons/``, logs, caches, and temporary outputs."
+
+#: ../../source/contributing/before_you_start.rst:48 ae0618c6a68549e9b3ad8b2619279f9e
+msgid "插件使用 MIT 许可证，FMOD 单独授权。贡献内容需遵守项目许可，SDK 头文件、库文件和运行库由使用者自行取得。许可入口见 :ref:`faq-plugin-license`。"
+msgstr ""
+"The plugin uses the MIT license; FMOD is licensed separately. Contributions must follow the "
+"project license, and users obtain SDK headers, libraries, and runtimes themselves. See :ref:`faq-"
+"plugin-license` for licensing links."

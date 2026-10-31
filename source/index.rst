@@ -94,6 +94,7 @@ Godot-FmodPlayer 是一个 Godot 4 GDExtension 插件，基于 FMOD Core API 提
 
    contributing/before_you_start
    contributing/development
+   contributing/testing
    contributing/translation
 
 .. toctree::

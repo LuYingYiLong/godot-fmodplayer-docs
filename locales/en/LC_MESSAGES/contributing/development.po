@@ -1,399 +1,277 @@
-# English translations for Godot FmodPlayer.
+# English translations for Godot-FmodPlayer contributor documentation.
 # Copyright (C) 2026, LuYingYiLong
-# This file is distributed under the same license as the Godot FmodPlayer
-# package.
+# Distributed under the same license as the documentation.
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot FmodPlayer \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-12 00:48+0800\n"
-"PO-Revision-Date: 2026-05-12 00:00+0800\n"
-"Last-Translator: Codex <codex@example.invalid>\n"
+"POT-Creation-Date: 2026-11-01 01:59+0800\n"
+"PO-Revision-Date: 2026-11-01 02:01+0800\n"
+"Last-Translator: Godot-FmodPlayer contributors\n"
 "Language: en\n"
-"Language-Team: en <LL@li.org>\n"
+"Language-Team: English\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: ../../source/contributing/development.rst:4 c365e655d9ec444f8eef268ba85fa83f
+#: ../../source/contributing/development.rst:4 2feb947bb3e24df39b48d1328f8737db
 msgid "开发 Godot-FmodPlayer"
-msgstr "Developing Godot-FmodPlayer"
+msgstr "Develop Godot-FmodPlayer"
 
-#: ../../source/contributing/development.rst:6 9eab769e13ac445cb06aacac77ce3f6d
-msgid ""
-"本页面面向希望修改插件源码的贡献者。这里假设你已经了解 Godot 4 的 `C++ / GDExtension "
-"<https://docs.godotengine.org/zh-"
-"cn/4.x/tutorials/scripting/cpp/index.html>`_ 开发方式，并准备从 `Godot-FmodPlayer "
-"仓库 <https://github.com/LuYingYiLong/Godot-FmodPlayer>`_ 开始工作。"
+#: ../../source/contributing/development.rst:6 428e1eac7b4a46268cf3b616234d7e72
+msgid "从插件仓库构建扩展，再把完整插件部署到测试项目。以下命令默认在插件仓库根目录执行，日常验证流程见 :doc:`testing`。"
 msgstr ""
-"This page is for contributors who want to modify the plugin source code. It "
-"assumes you already understand Godot 4 `C++ / GDExtension "
-"<https://docs.godotengine.org/en/4.x/tutorials/scripting/cpp/index.html>`_ "
-"development and are ready to start from the `Godot-FmodPlayer repository "
-"<https://github.com/LuYingYiLong/Godot-FmodPlayer>`_."
+"Build the extension from the plugin repository, then stage the complete addon in the test "
+"project. Unless noted otherwise, run these commands from the plugin repository root. See "
+":doc:`testing` for the everyday validation workflow."
 
-#: ../../source/contributing/development.rst:9 7484b01a8ea94c508673267adc7f09f9
+#: ../../source/contributing/development.rst:9 aed9aba8ea8d4b859ddfc594613b0771
 msgid "准备环境"
-msgstr "Prepare the Environment"
+msgstr "Prepare the environment"
 
-#: ../../source/contributing/development.rst:11
-#: c5bc24ca1598470b90ff0ea36a83e43a
-msgid "开发前建议准备："
-msgstr "Before development, prepare:"
+#: ../../source/contributing/development.rst:11 e3ebffe30dde4e26a517f46ff95603b8
+msgid "Godot 4.7.2 或更新版本、Git、Python 3 和 SCons。"
+msgstr "Godot 4.7.2 or later, Git, Python 3, and SCons."
 
-#: ../../source/contributing/development.rst:13
-#: bfaa04b225b64a558cc83fab9446af35
-msgid "Godot 4.x。"
-msgstr "Godot 4.x."
+#: ../../source/contributing/development.rst:12 ca1ce2440fc7468c8cdabf6507ce4ac6
+msgid "支持 C++17 的编译器：Windows 使用 MSVC，Linux 使用 GCC 或 Clang；Android 使用 NDK 工具链。"
+msgstr "A C++17 compiler: MSVC on Windows, GCC or Clang on Linux, or the NDK toolchain for Android."
 
-#: ../../source/contributing/development.rst:14
-#: 5f3d027d999f42ea944b170dd2219f33
-msgid "Git。"
-msgstr "Git."
-
-#: ../../source/contributing/development.rst:15
-#: 8193a2d5285a495e8e098d88dd55d3e9
-msgid "Python 3 与 SCons。"
-msgstr "Python 3 and SCons."
-
-#: ../../source/contributing/development.rst:16
-#: ad3ab5f3ccf140648dcbb51806f85815
-msgid "支持 C++17 的编译环境。"
-msgstr "A build environment with C++17 support."
-
-#: ../../source/contributing/development.rst:17
-#: ded496ae0c974c1fbbe87a59a9098dbf
-msgid "FMOD Engine。"
-msgstr "FMOD Engine."
-
-#: ../../source/contributing/development.rst:18
-#: 456cc8805a664203bb3c82612184cfce
-msgid "Windows 开发建议使用 Visual Studio。"
-msgstr "Visual Studio is recommended for Windows development."
-
-#: ../../source/contributing/development.rst:20
-#: 4eb05c82178a4659855c2c8b9caf991a
-msgid "克隆仓库时请保留子模块："
-msgstr "Keep submodules when cloning the repository:"
-
-#: ../../source/contributing/development.rst:22
-#: 2c03199244bd452dba410e1104172ecc
-msgid ""
-"git clone --recursive https://github.com/LuYingYiLong/Godot-"
-"FmodPlayer.git\n"
-"cd Godot-FmodPlayer"
+#: ../../source/contributing/development.rst:13 4f13c3dfc4a24c04a53a4f02bdfedf17
+msgid "目标平台的 FMOD Core SDK 2.04；头文件、链接库和运行库使用同一 SDK 发布版本。"
 msgstr ""
-"git clone --recursive https://github.com/LuYingYiLong/Godot-"
-"FmodPlayer.git\n"
-"cd Godot-FmodPlayer"
+"FMOD Core SDK 2.04 for the target platform. Use headers, link libraries, and runtime libraries "
+"from the same SDK release."
 
-#: ../../source/contributing/development.rst:27
-#: 4ab47853d19e4ae39f1fee90bf734d36
-msgid "如果已经克隆但忘记拉取子模块，可以执行："
-msgstr "If you already cloned the repository but forgot to fetch submodules, run:"
-
-#: ../../source/contributing/development.rst:29
-#: e6fcae2b82124170af15d1b58a216a8a
-msgid "git submodule update --init --recursive"
-msgstr "git submodule update --init --recursive"
-
-#: ../../source/contributing/development.rst:34
-#: cfc365cba187436daad697dd48addad0
-msgid "选择编辑器"
-msgstr "Choose an Editor"
-
-#: ../../source/contributing/development.rst:36
-#: ae62acbef2774376808718cd714b1500
-msgid "你可以使用任何文本编辑器开发 Godot-FmodPlayer，然后在命令行中调用 ``scons`` 构建。"
-msgstr "You can develop Godot-FmodPlayer with any text editor, then run ``scons`` from the command line to build it."
-
-#: ../../source/contributing/development.rst:38
-#: 44ab0a01a4024b1ea90df99ba03ac152
+#: ../../source/contributing/development.rst:15 8a5a2efb07e3447fbcaa17bd4e62db1f
 msgid ""
-"如果你希望使用完整 IDE，Windows 上推荐 `Visual Studio "
-"<https://visualstudio.microsoft.com/>`_。它提供调试器、内存视图、性能分析、源码控制和解决方案管理，对调试 "
-"GDExtension 比较方便。"
+"git clone --recurse-submodules https://github.com/LuYingYiLong/Godot-FmodPlayer.git\n"
+"cd Godot-FmodPlayer\n"
+"python -m pip install scons"
 msgstr ""
-"If you prefer a full IDE, `Visual Studio "
-"<https://visualstudio.microsoft.com/>`_ is recommended on Windows. It "
-"provides a debugger, memory view, profiling tools, source control, and "
-"solution management, which are useful when debugging GDExtension code."
+"git clone --recurse-submodules https://github.com/LuYingYiLong/Godot-FmodPlayer.git\n"
+"cd Godot-FmodPlayer\n"
+"python -m pip install scons"
 
-#: ../../source/contributing/development.rst:41
-#: 89b311ee201e4fffb5356ce34aeb5f44
-msgid "配置 Visual Studio"
-msgstr "Configure Visual Studio"
-
-#: ../../source/contributing/development.rst:43
-#: 53130dad24824da3bec06911380d3562
+#: ../../source/contributing/development.rst:21 cf65aea523d24775b4bf3ac28314c5a7
 msgid ""
-"`Visual Studio Community <https://visualstudio.microsoft.com>`_ 是 "
-"Microsoft 提供的 Windows IDE。个人开发者、开源项目和符合许可条件的组织可以免费使用。"
+"已有工作副本可运行 ``git submodule update --init --recursive``，恢复项目固定的 godot-cpp 提交。项目的 ``SConstruct`` "
+"默认使用 ``api_version=4.7``，通常无需自行导出 API JSON。"
 msgstr ""
-"`Visual Studio Community <https://visualstudio.microsoft.com>`_ is a Windows "
-"IDE provided by Microsoft. It is free for individual developers, open-source "
-"projects, and organizations that meet the license terms."
+"In an existing checkout, run ``git submodule update --init --recursive`` to use the project's "
+"pinned godot-cpp commit. The project ``SConstruct`` defaults to ``api_version=4.7``; a separately"
+" exported API JSON is normally unnecessary."
 
-#: ../../source/contributing/development.rst:45
-#: e5b5c31a512f4072b8e2fd123848d415
-msgid "安装 Visual Studio 时，请确保勾选 C++ 相关工作负载。通常需要安装 **使用 C++ 的桌面开发**："
-msgstr "When installing Visual Studio, make sure the C++ workloads are selected. In most cases, install **Desktop development with C++**:"
-
-#: ../../source/contributing/development.rst:51
-#: d0b06fb930d7419d8062b5a80eec049b
-msgid "导入项目"
-msgstr "Open the Project"
-
-#: ../../source/contributing/development.rst:53
-#: 43086b3510bb4f0e8c30a2be538797d0
-msgid "可以通过下面任一方式打开项目："
-msgstr "You can open the project in either of these ways:"
-
-#: ../../source/contributing/development.rst:55
-#: 6bfa66166476433e958b8b8e98cde3db
-msgid "双击仓库根目录下的 ``Godot-FmodPlayer.slnx``。"
-msgstr "Double-click ``Godot-FmodPlayer.slnx`` in the repository root."
-
-#: ../../source/contributing/development.rst:56
-#: 0c4f8387a23740a69f594d233d316650
-msgid "在 Visual Studio 中选择 **打开项目或解决方案**，然后选择 ``Godot-FmodPlayer.slnx``。"
-msgstr "In Visual Studio, choose **Open a project or solution**, then select ``Godot-FmodPlayer.slnx``."
-
-#: ../../source/contributing/development.rst:58
-#: 6848edaad0af44d3ab4343a2103b3c57
-msgid "打开后，如果 IDE 没有正确识别 C++ 项目，先确认 C++ 工作负载和 Windows SDK 是否安装完整。"
-msgstr "After opening it, if the IDE does not recognize the C++ project correctly, first check that the C++ workload and Windows SDK are fully installed."
-
-#: ../../source/contributing/development.rst:61
-#: c3ca3c1bb3294c9c979623ff3c3804d7
-msgid "补齐 FMOD 运行库"
-msgstr "Add the FMOD Runtime Files"
-
-#: ../../source/contributing/development.rst:63
-#: 46539eb1ace340cdb0986fe9af97cd32
+#: ../../source/contributing/development.rst:23 8b69590e81b24484b91f0eb2f0221f94
 msgid ""
-"由于 FMOD 许可证限制，Godot-FmodPlayer 仓库不会包含 FMOD Engine 的头文件和库文件。你需要前往 `FMOD "
-"下载页面 <https://www.fmod.com/download>`_ 下载 FMOD Engine，并从本机安装目录复制 Core API"
-" 相关文件。"
+"Windows 可使用 Visual Studio 的“使用 C++ 的桌面开发”工作负载，并安装 Windows SDK。可打开仓库中的 ``Godot-"
+"FmodPlayer.slnx``，或使用其他编辑器后从命令行构建。"
 msgstr ""
-"Because of FMOD licensing restrictions, the Godot-FmodPlayer repository does "
-"not include FMOD Engine headers or library files. Go to the `FMOD download "
-"page <https://www.fmod.com/download>`_ to download FMOD Engine, then copy the "
-"Core API files from your local installation directory."
+"On Windows, install the Visual Studio Desktop development with C++ workload and a Windows SDK. "
+"Open ``Godot-FmodPlayer.slnx`` or use another editor and build from the command line."
 
-#: ../../source/contributing/development.rst:65
-#: 412ab76d98a14fb38404497d6caae105
-msgid "以 Windows 默认安装路径为例："
-msgstr "Using the default Windows installation path as an example:"
+#: ../../source/contributing/development.rst:25 40d85f965c874193a1413cc4f76a1001
+msgid "Visual Studio C++ workload"
+msgstr "Visual Studio C++ workload"
 
-#: ../../source/contributing/development.rst:67
-#: 13a114c7b25a40c6a5a2d7319bbdf832
-msgid "找到 FMOD Core API 头文件目录："
-msgstr "Find the FMOD Core API header directory:"
+#: ../../source/contributing/development.rst:30 92c213abc6c34e37b3f4ddaaa9e6ef39
+msgid "Windows"
+msgstr "Windows"
 
-#: ../../source/contributing/development.rst:69
-#: a9bc4357e4454b7b8b53eb6efab771db
+#: ../../source/contributing/development.rst:32 6af76260cfa443769685232d675aad9d
 msgid ""
-"``C:\\Program Files (x86)\\FMOD SoundSystem\\FMOD Studio API "
-"Windows\\api\\core\\inc``"
+"将 Windows SDK 的 ``api/core/inc`` 复制到 ``src/thirdparty/fmod/inc``，将 ``api/core/lib/x64`` 中的文件复制到 "
+"``src/thirdparty/fmod/lib/x64``。把其中的 ``fmod.dll`` 放入 ``addons/fmod_player/bin``。"
 msgstr ""
-"``C:\\Program Files (x86)\\FMOD SoundSystem\\FMOD Studio API "
-"Windows\\api\\core\\inc``"
+"Copy ``api/core/inc`` from the Windows SDK to ``src/thirdparty/fmod/inc``, and the files in "
+"``api/core/lib/x64`` to ``src/thirdparty/fmod/lib/x64``. Place ``fmod.dll`` in "
+"``addons/fmod_player/bin``."
 
-#: ../../source/contributing/development.rst:71
-#: a42984b316b64ff7b90b9a50e92ca379
-msgid "找到 FMOD Core API 库文件目录："
-msgstr "Find the FMOD Core API library directory:"
-
-#: ../../source/contributing/development.rst:73
-#: d490a780e7974d78af4e96195b109f54
+#: ../../source/contributing/development.rst:34 8b8353e0511640b993eb4794873cf674
 msgid ""
-"``C:\\Program Files (x86)\\FMOD SoundSystem\\FMOD Studio API "
-"Windows\\api\\core\\lib``"
+"scons platform=windows target=template_debug arch=x86_64 copy_to_tests=yes\n"
+"scons platform=windows target=template_release arch=x86_64"
 msgstr ""
-"``C:\\Program Files (x86)\\FMOD SoundSystem\\FMOD Studio API "
-"Windows\\api\\core\\lib``"
+"scons platform=windows target=template_debug arch=x86_64 copy_to_tests=yes\n"
+"scons platform=windows target=template_release arch=x86_64"
 
-#: ../../source/contributing/development.rst:75
-#: 8b8abd6b6f1545ba84bb280ab73b178f
-msgid "将 ``inc`` 和 ``lib`` 复制到插件仓库的："
-msgstr "Copy ``inc`` and ``lib`` into the plugin repository at:"
-
-#: ../../source/contributing/development.rst:77
-#: 3475c884e5304faf8afba51ccc5dc93f
-msgid "``src/thirdparty/fmod/``"
-msgstr "``src/thirdparty/fmod/``"
-
-#: ../../source/contributing/development.rst:79
-#: dfc62ee082934953b3638cdd8658ea50
-msgid "整理完成后，目录结构应类似："
-msgstr "After arranging the files, the directory structure should look like this:"
-
-#: ../../source/contributing/development.rst:81
-#: a9cb038f443549768bed664d8b7d9bac
+#: ../../source/contributing/development.rst:39 f5c3731da9eb464dace0a706da485a7f
 msgid ""
-"src/\n"
-"└── thirdparty/\n"
-"    └── fmod/\n"
-"        ├── inc/\n"
-"        │   ├── fmod.h\n"
-"        │   ├── fmod.hpp\n"
-"        │   ├── fmod_common.h\n"
-"        │   ├── fmod_codec.h\n"
-"        │   ├── fmod_dsp.h\n"
-"        │   ├── fmod_dsp_effects.h\n"
-"        │   ├── fmod_errors.h\n"
-"        │   └── fmod_output.h\n"
-"        └── lib/\n"
-"            ├── arm64/\n"
-"            ├── x64/\n"
-"            └── x86/"
+"``template_debug`` 用于编辑器和调试运行，``template_release`` 用于发布导出。输出文件位于 "
+"``addons/fmod_player/bin``；对应文件名与架构必须匹配 ``fmod_player.gdextension``。"
 msgstr ""
-"src/\n"
-"└── thirdparty/\n"
-"    └── fmod/\n"
-"        ├── inc/\n"
-"        │   ├── fmod.h\n"
-"        │   ├── fmod.hpp\n"
-"        │   ├── fmod_common.h\n"
-"        │   ├── fmod_codec.h\n"
-"        │   ├── fmod_dsp.h\n"
-"        │   ├── fmod_dsp_effects.h\n"
-"        │   ├── fmod_errors.h\n"
-"        │   └── fmod_output.h\n"
-"        └── lib/\n"
-"            ├── arm64/\n"
-"            ├── x64/\n"
-"            └── x86/"
+"Use ``template_debug`` for the editor and debug runs, and ``template_release`` for release "
+"exports. Outputs are written to ``addons/fmod_player/bin``; their names and architectures must "
+"match ``fmod_player.gdextension``."
 
-#: ../../source/contributing/development.rst:102
-#: a8f1ce27a18b474fb85fbe1033321cbc
-msgid "不要把 FMOD 的 ``inc``、``lib`` 或运行库文件提交到仓库。它们只应该存在于你的本地开发环境中。"
-msgstr "Do not commit FMOD's ``inc``, ``lib``, or runtime files to the repository. They should only exist in your local development environment."
+#: ../../source/contributing/development.rst:42 835ac222db2b4bcba7d2a976aa601dcf
+msgid "Linux"
+msgstr "Linux"
 
-#: ../../source/contributing/development.rst:105
-#: b706b5ff0e7c47ca98c85455f8b33faf
-msgid "附加库目录"
-msgstr "Additional Library Directories"
+#: ../../source/contributing/development.rst:44 691cee055d034a8fae761cac0ea5393b
+msgid "使用 FMOD Linux Core SDK。在 Git 忽略的根目录 ``custom.py`` 中指定 SDK 根目录或其 ``api/core`` 目录："
+msgstr ""
+"Use the FMOD Linux Core SDK. In the Git-ignored root ``custom.py``, specify the SDK root or its "
+"``api/core`` directory:"
 
-#: ../../source/contributing/development.rst:110
-#: 96df0af5deeb40e8866700a5d371912c
-msgid "构建插件"
-msgstr "Build the Plugin"
+#: ../../source/contributing/development.rst:46 b05dd5e92f0d43dab0df96df9ab3958c
+msgid "fmod_linux_sdk = \"/path/to/fmodstudioapi20400linux\""
+msgstr "fmod_linux_sdk = \"/path/to/fmodstudioapi20400linux\""
 
-#: ../../source/contributing/development.rst:112
-#: 81d5d6ca1ee8477bb11c7dc61dec8a81
-msgid "Windows x86_64 调试构建示例："
-msgstr "Windows x86_64 debug build example:"
-
-#: ../../source/contributing/development.rst:114
-#: aa6c9d730f544f7897efef7702bf91c8
-msgid "scons platform=windows target=template_debug arch=x86_64"
-msgstr "scons platform=windows target=template_debug arch=x86_64"
-
-#: ../../source/contributing/development.rst:118
-#: 7f81b4ba50164cbaaf325ba2b92d6e11
-msgid "Windows x86_64 发布构建示例："
-msgstr "Windows x86_64 release build example:"
-
-#: ../../source/contributing/development.rst:120
-#: 0e1ed3fbdcd34af18436f38681ec04f6
-msgid "scons platform=windows target=template_release arch=x86_64"
-msgstr "scons platform=windows target=template_release arch=x86_64"
-
-#: ../../source/contributing/development.rst:124
-#: d82e6911ddbc4300909fa602599376f6
+#: ../../source/contributing/development.rst:50 041dfc1a93674822b43a0059c4edd9fb
 msgid ""
-"构建完成后，请确认生成的 GDExtension 二进制文件与 ``addons/fmod_player/bin/`` 中的 "
-"``fmod_player.gdextension`` 配置匹配。"
+"scons platform=linux target=template_debug arch=x86_64 copy_to_tests=yes\n"
+"scons platform=linux target=template_release arch=x86_64"
 msgstr ""
-"After building, confirm that the generated GDExtension binary matches the "
-"``fmod_player.gdextension`` configuration in ``addons/fmod_player/bin/``."
+"scons platform=linux target=template_debug arch=x86_64 copy_to_tests=yes\n"
+"scons platform=linux target=template_release arch=x86_64"
 
-#: ../../source/contributing/development.rst:126
-#: ef0b27aa9c0749e69484a639c2adcf8f
-msgid "如果你修改了导出平台、架构或输出文件名，也要同步检查 ``fmod_player.gdextension`` 中的库路径。"
-msgstr "If you changed the export platform, architecture, or output file name, also check the library paths in ``fmod_player.gdextension``."
-
-#: ../../source/contributing/development.rst:129
-#: 74b4d41b52994c67a45c042a91701275
-msgid "代码风格"
-msgstr "Code Style"
-
-#: ../../source/contributing/development.rst:131
-#: 8f2fccee303a44db877d31e8cb38a918
-msgid "代码风格以现有源码为准。提交前建议注意："
-msgstr "Follow the style of the existing source code. Before submitting, pay attention to:"
-
-#: ../../source/contributing/development.rst:133
-#: 45fe664d5e4b49508f4da014fcc49a22
-msgid "使用项目已有的命名方式和目录组织。"
-msgstr "Use the project's existing naming conventions and directory organization."
-
-#: ../../source/contributing/development.rst:134
-#: cdc3fdd1c8704a819f746d6b9f7b6468
-msgid "C++ 代码保持 K&R 风格，左花括号跟随语句末尾。"
-msgstr "Keep C++ code in K&R style, with the opening brace following the end of the statement."
-
-#: ../../source/contributing/development.rst:135
-#: 4332f1b146bd474bbf692f6a119cc9cd
-msgid "指针和引用写法跟随当前文件，不为风格偏好单独重排代码。"
-msgstr "Follow the current file's pointer and reference style, and do not reformat code only for style preference."
-
-#: ../../source/contributing/development.rst:136
-#: 663c9d9ad8e54fc4ac6ed7eb715315a5
-msgid "避免无关格式化，尤其不要在功能 PR 中格式化整份文件。"
-msgstr "Avoid unrelated formatting, especially formatting an entire file inside a feature PR."
-
-#: ../../source/contributing/development.rst:137
-#: df4960eae560447ebcfadcad39be6fe7
-msgid "新增绑定时，同步检查 GDScript 可见 API、文档和示例。"
-msgstr "When adding bindings, also check the GDScript-visible API, documentation, and examples."
-
-#: ../../source/contributing/development.rst:140
-#: c9152e1a859b46528b30fc71689e6943
-msgid "调试建议"
-msgstr "Debugging Tips"
-
-#: ../../source/contributing/development.rst:142
-#: f7339ac5edef4e04b90424343cc32d2b
-msgid "如果插件无法加载，优先检查："
-msgstr "If the plugin cannot load, check these first:"
-
-#: ../../source/contributing/development.rst:144
-#: 076f2e27ca6341ec86f997153c1e86d5
-msgid "FMOD 运行库是否放在正确位置。"
-msgstr "Whether the FMOD runtime libraries are in the correct location."
-
-#: ../../source/contributing/development.rst:145
-#: 85529ae66f6c47829bcd9ae1f7805804
-msgid "``fmod_player.gdextension`` 中的二进制路径是否匹配当前平台和架构。"
-msgstr "Whether the binary paths in ``fmod_player.gdextension`` match the current platform and architecture."
-
-#: ../../source/contributing/development.rst:146
-#: 2dec39cecc09449f8a810f718da1a249
-msgid "Godot 输出面板是否有 GDExtension 加载错误。"
-msgstr "Whether the Godot output panel reports any GDExtension loading errors."
-
-#: ../../source/contributing/development.rst:147
-#: 0a9b1a88c69841409e4127be04982e23
-msgid "Visual Studio 运行库和 Windows SDK 是否安装完整。"
-msgstr "Whether the Visual Studio runtime and Windows SDK are fully installed."
-
-#: ../../source/contributing/development.rst:148
-#: e177a5f8a99042d0947ea2d5a08cd23f
-msgid "Debug / Release 构建产物是否与当前 Godot 模板目标一致。"
-msgstr "Whether the Debug / Release build output matches the current Godot template target."
-
-#: ../../source/contributing/development.rst:150
-#: 49b341c1a23a4347b5bd5cb1f2dc4c56
+#: ../../source/contributing/development.rst:55 ae275c7073394c319af89a265cc9d9ba
 msgid ""
-"修改完成后，建议至少在 Godot 编辑器中创建一个最小场景，验证音频可以加载、播放和停止。如果改动涉及总线、DSP、3D "
-"音频或导出流程，请补充对应的手动验证步骤。"
+"也可通过 ``FMOD_LINUX_SDK`` 环境变量配置路径。Debug 运行需要 ``libfmodL.so.15``，Release 需要 "
+"``libfmod.so.15``；放在扩展库旁，保留正确的文件名或符号链接。构建时 ``copy_to_tests=yes`` 会从本地 SDK 复制对应运行库。"
 msgstr ""
-"After making changes, create at least one minimal scene in the Godot editor "
-"to verify that audio can be loaded, played, and stopped. If the change "
-"involves buses, DSP, 3D audio, or the export flow, add the corresponding "
-"manual verification steps."
+"You can also set the path with ``FMOD_LINUX_SDK``. Debug runs require ``libfmodL.so.15`` and "
+"release runs require ``libfmod.so.15`` beside the extension. Preserve the correct filenames or "
+"symbolic links. With ``copy_to_tests=yes``, the build copies the matching runtime from the local "
+"SDK."
+
+#: ../../source/contributing/development.rst:58 3f4f2fe78a3a421b81fe50c581ce8370
+msgid "Android"
+msgstr "Android"
+
+#: ../../source/contributing/development.rst:60 2d5e3d1929b5427ebd758621d0a6554e
+msgid ""
+"安装 Android SDK、NDK 和 FMOD Android Core SDK。``ANDROID_HOME`` 指向 SDK 根目录；NDK 位于其 ``ndk/<版本号>`` "
+"子目录。已设置正确的 ``ANDROID_HOME`` 时，通常只需在项目的 ``custom.py`` 中固定已安装的 ``ndk_version``。"
+msgstr ""
+"Install the Android SDK, an NDK, and the FMOD Android Core SDK. ``ANDROID_HOME`` points to the "
+"SDK root, with NDKs under ``ndk/<version>``. If ``ANDROID_HOME`` is already correct, pinning an "
+"installed ``ndk_version`` in the project's ``custom.py`` is usually sufficient."
+
+#: ../../source/contributing/development.rst:62 3df29677b765474bb70b495e2ac2fadf
+msgid "下面的路径和版本号仅为示例，请替换为本机实际值："
+msgstr "The paths and version below are examples; replace them with your local values:"
+
+#: ../../source/contributing/development.rst:64 6d01b8fd72b2446d8fc156d0aaa3016b
+msgid ""
+"ANDROID_HOME = r\"C:\\Android\\Sdk\"\n"
+"ndk_version = \"30.0.16248370\"\n"
+"fmod_android_sdk = r\"C:\\SDKs\\FMOD-Android\""
+msgstr ""
+"ANDROID_HOME = r\"C:\\Android\\Sdk\"\n"
+"ndk_version = \"30.0.16248370\"\n"
+"fmod_android_sdk = r\"C:\\SDKs\\FMOD-Android\""
+
+#: ../../source/contributing/development.rst:70 693f720ab21046559b272c4073c8b275
+msgid ""
+"``fmod_android_sdk`` 接受 SDK 根目录或 ``api/core``，也可通过 ``FMOD_ANDROID_SDK`` 环境变量提供默认路径。固定并保留已验证的 "
+"NDK，可避免 godot-cpp 默认 NDK 版本变化影响本项目。"
+msgstr ""
+"``fmod_android_sdk`` accepts the SDK root or ``api/core``; ``FMOD_ANDROID_SDK`` can provide the "
+"default path instead. Pin and retain a validated NDK so changes to godot-cpp's default NDK "
+"version do not affect this project."
+
+#: ../../source/contributing/development.rst:72 114767d779324f89ace37f8ab085bbac
+msgid ""
+"scons platform=android target=template_debug arch=arm64\n"
+"scons platform=android target=template_release arch=arm64"
+msgstr ""
+"scons platform=android target=template_debug arch=arm64\n"
+"scons platform=android target=template_release arch=arm64"
+
+#: ../../source/contributing/development.rst:77 dda0853f8207410e9b905c04e129edc6
+msgid "构建产物和 FMOD 运行库必须使用相同 ABI。其他架构使用 ``arch`` 选择，并检查扩展配置中的库条目。Java 与原生运行库的导出配置见 :doc:`../export`。"
+msgstr ""
+"The extension and FMOD runtime must use the same ABI. Select other architectures with ``arch`` "
+"and check the library entries in the extension configuration. See :doc:`../export` for Java and "
+"native runtime export setup."
+
+#: ../../source/contributing/development.rst:80 f78cfe1cac6742ca852d593914cc5cbb
+msgid "同步到测试项目"
+msgstr "Stage the test project"
+
+#: ../../source/contributing/development.rst:82 f701580255cd4200ad6bb61064dbf16a
+msgid ""
+"``copy_to_tests=yes`` 在构建成功后同步完整插件到 "
+"``tests/addons/fmod_player``，即使二进制无需重编译，也会复制修改过的脚本、翻译和资源。Windows 和 Linux 同时复制本地 SDK 运行库；可用 "
+"``fmod_runtime=/path/to/runtime`` 覆盖其来源。"
+msgstr ""
+"After a successful build, ``copy_to_tests=yes`` stages the complete addon in "
+"``tests/addons/fmod_player``. It also copies changed scripts, translations, and resources when "
+"the binary is already up to date. Windows and Linux builds copy the local SDK runtime; "
+"``fmod_runtime=/path/to/runtime`` overrides its source."
+
+#: ../../source/contributing/development.rst:84 ab4479bd133d4862b2fe8742be5a92d4
+msgid "替换原生库前先关闭测试项目，完成构建后重新打开 ``tests/project.godot`` 并按 F5。无需另行运行外部测试脚本，菜单和编辑器检查步骤见 :doc:`testing`。"
+msgstr ""
+"Close the test project before replacing a native library. Reopen ``tests/project.godot`` after "
+"the build and press F5. No separate external test runner is needed; see :doc:`testing` for menu "
+"and editor checks."
+
+#: ../../source/contributing/development.rst:87 2126b9a7785641c193853d5f263ee762
+msgid "代码风格与接口变更"
+msgstr "Code style and API changes"
+
+#: ../../source/contributing/development.rst:89 b5d36200e73b4f2696554bccfec8f445
+msgid "C++ 沿用当前文件的命名、缩进和指针引用写法，避免无关格式化。新增或修改 API 时，同时更新注册、XML、翻译和受影响示例。"
+msgstr ""
+"Follow the current C++ file's naming, indentation, and pointer/reference style. Avoid unrelated "
+"formatting. When changing APIs, update registration, XML, translations, and affected examples "
+"together."
+
+#: ../../source/contributing/development.rst:90 1360ff4aaf5c4bcbb9687227aeadd6e1
+msgid "GDScript 使用 UTF-8、LF、Tab 缩进和完整类型提示；函数与类定义前后留两个空行。"
+msgstr ""
+"Use UTF-8, LF, tabs, and explicit type hints in GDScript. Separate function and class definitions"
+" with two blank lines."
+
+#: ../../source/contributing/development.rst:91 08c103a5a0c94252ade016275d33cd2b
+msgid "多行数组、字典和枚举保留末尾逗号；信号使用英文过去时名称；硬编码资源路径优先使用 UID。"
+msgstr ""
+"Keep trailing commas in multiline arrays, dictionaries, and enums. Name signals in the English "
+"past tense and prefer UIDs for hardcoded resource paths."
+
+#: ../../source/contributing/development.rst:92 b487222971994a39900e0f77c66a4526
+msgid "浮点数保留前导和后缀零，例如 ``0.0``；变量不重复声明默认值；中文注释末尾不加句号。"
+msgstr ""
+"Keep leading and trailing zeros in floats, such as ``0.0``. Omit redundant default initializers "
+"and final Chinese full stops in comments."
+
+#: ../../source/contributing/development.rst:93 7a9bebe015d246a8bf69b38257ac8349
+msgid "先声明信号和属性，再写方法；公共成员在前，私有成员在后；先初始化与虚函数回调，再写类接口。"
+msgstr ""
+"Declare signals and properties before methods, public members before private members, and "
+"initialization and virtual callbacks before the class interface."
+
+#: ../../source/contributing/development.rst:94 62f5da3d96c347ce82adcde4eef863b0
+msgid "DSP 改动说明线程归属和缓冲区单位，区分字节、采样和完整音频帧；音频回调中减少分配与锁竞争，遵守 Godot 对象和脚本回调的线程约束。"
+msgstr ""
+"For DSP changes, document thread ownership and buffer units, distinguishing bytes, samples, and "
+"complete audio frames. Minimize allocations and lock contention in audio callbacks, and respect "
+"thread constraints for Godot objects and script callbacks."
+
+#: ../../source/contributing/development.rst:97 9b2036ec69e041f784ff0ca8d9d4bdb4
+msgid "构建与加载排查"
+msgstr "Troubleshoot builds and loading"
+
+#: ../../source/contributing/development.rst:99 eb0f2d28f3224aa8950c7f2daab8578b
+msgid "找不到 NDK：确认 ``ANDROID_HOME`` 是 SDK 根目录，且 ``ndk_version`` 与本机安装目录一致。"
+msgstr ""
+"NDK not found: confirm that ``ANDROID_HOME`` is the SDK root and ``ndk_version`` matches an "
+"installed directory."
+
+#: ../../source/contributing/development.rst:100 e709c5b4a573497982d8c244f90595f6
+msgid "提示旧 API JSON 文件不存在：检查本地配置是否仍设置 ``custom_api_file``。显式设置会覆盖 ``api_version``，普通构建可使用项目内置的 API 配置。"
+msgstr ""
+"Missing old API JSON: check whether local settings still specify ``custom_api_file``. An explicit"
+" file overrides ``api_version``; ordinary builds can use the project's included API "
+"configuration."
+
+#: ../../source/contributing/development.rst:101 d619df6c02794abf8e13c84f02ba377d
+msgid "动态库加载失败：检查平台、架构、Debug/Release 条目和 FMOD 运行库，查看 Godot 输出面板，参见 :ref:`faq-module-no-found`。"
+msgstr ""
+"Library loading failure: check the platform, architecture, Debug/Release entries, and FMOD "
+"runtime, then inspect Godot's Output panel. See :ref:`faq-module-no-found`."

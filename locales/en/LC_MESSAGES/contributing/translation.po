@@ -1,210 +1,264 @@
-# English translations for Godot FmodPlayer.
+# English translations for Godot-FmodPlayer contributor documentation.
 # Copyright (C) 2026, LuYingYiLong
-# This file is distributed under the same license as the Godot FmodPlayer
-# package.
+# Distributed under the same license as the documentation.
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot FmodPlayer \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-12 00:48+0800\n"
-"PO-Revision-Date: 2026-05-12 00:00+0800\n"
-"Last-Translator: Codex <codex@example.invalid>\n"
+"POT-Creation-Date: 2026-11-01 01:59+0800\n"
+"PO-Revision-Date: 2026-11-01 02:01+0800\n"
+"Last-Translator: Godot-FmodPlayer contributors\n"
 "Language: en\n"
-"Language-Team: en <LL@li.org>\n"
+"Language-Team: English\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: ../../source/contributing/translation.rst:4 e81e470007ab4ccf948a85af060a37aa
-msgid "翻译 Godot-FmodPlayer"
-msgstr "Translating Godot-FmodPlayer"
+#: ../../source/contributing/translation.rst:4 5560be28120c46048bdae29c2f6d46af
+msgid "翻译与文档维护"
+msgstr "Translations and documentation"
 
-#: ../../source/contributing/translation.rst:6 04bb005aac7447d88e5b3bb020b8200d
-msgid ""
-"Godot-FmodPlayer 的文档和插件界面都需要稳定的翻译维护。翻译贡献不只是把中文逐句替换成英文，更重要的是保持术语、API "
-"名称、示例代码和页面结构一致。"
+#: ../../source/contributing/translation.rst:6 44e1b3b64c464cabaffb1bc199d97e4b
+msgid "手册、API 描述和编辑器界面使用不同的源文件。先确认内容归属，避免重复维护同一份翻译。"
 msgstr ""
-"Both the Godot-FmodPlayer documentation and plugin interface need stable "
-"translation maintenance. Translation contributions are not just about "
-"replacing Chinese sentences with English; more importantly, they keep "
-"terminology, API names, example code, and page structure consistent."
+"The manual, API descriptions, and editor interface use different source files. Identify the owner"
+" of a text before editing so each translation has one maintained source."
 
-#: ../../source/contributing/translation.rst:9 e9e6915b8faa432a8c4b79e5eb498371
-msgid "在线文档翻译"
-msgstr "Online Documentation Translation"
+#: ../../source/contributing/translation.rst:9 2beff5f5bce1480ea20283f919f2ad4f
+msgid "源文件与生成结果"
+msgstr "Sources and generated outputs"
 
-#: ../../source/contributing/translation.rst:11
-#: 8c8cc2b6a1594e3bb340c094bd76fb97
-msgid ""
-"在线文档使用 `Sphinx <https://www.sphinx-doc.org/en/master/>`_ 构建，源文件位于 "
-"``source/``，格式为 reStructuredText。"
+#: ../../source/contributing/translation.rst:14 b158755c3297444487c32e5174c88fdc
+msgid "内容"
+msgstr "Content"
+
+#: ../../source/contributing/translation.rst:15 544119ae35cd410caa3f08317d6c4041
+msgid "维护源文件"
+msgstr "Maintained source"
+
+#: ../../source/contributing/translation.rst:16 1f35c78edd10464cb8db9db625c5e0b0
+msgid "中文手册"
+msgstr "Chinese manual"
+
+#: ../../source/contributing/translation.rst:17 b9c5d32b2729462e911fadeb215f5d2f
+msgid "文档仓库的 ``source/*.rst`` 及其子目录，使用 reStructuredText。"
+msgstr "``source/*.rst`` and its subdirectories in the documentation repository, using reStructuredText."
+
+#: ../../source/contributing/translation.rst:18 34484a5129154e88b64c8858ae185c82
+msgid "英文手册"
+msgstr "English manual"
+
+#: ../../source/contributing/translation.rst:19 1e3d3ec118764c31857da90b34eb0e9c
+msgid "文档仓库的 ``locales/en/LC_MESSAGES/**/*.po``，由中文手册提取消息。"
 msgstr ""
-"The online documentation is built with `Sphinx <https://www.sphinx-"
-"doc.org/en/master/>`_. The source files are in ``source/`` and use the "
-"reStructuredText format."
+"``locales/en/LC_MESSAGES/**/*.po`` in the documentation repository, with messages extracted from "
+"the Chinese manual."
 
-#: ../../source/contributing/translation.rst:13
-#: 07219a5614684fafb594a1d188d21b58
-msgid "英文文档通过 gettext / PO 文件维护。请不要直接复制一份英文 ``.rst`` 来翻译，否则后续中文源文档更新时很难同步。"
-msgstr "The English documentation is maintained through gettext / PO files. Do not copy the ``.rst`` files into a separate English version, because that makes future updates from the Chinese source documentation difficult to synchronize."
+#: ../../source/contributing/translation.rst:20 b378b10af1ce4be8ba5913bc29a03606
+msgid "API 英文说明"
+msgstr "English API descriptions"
 
-#: ../../source/contributing/translation.rst:15
-#: 091561ba8b2b4e838078fe6e227117f3
-msgid "常用流程如下："
-msgstr "The common workflow is:"
+#: ../../source/contributing/translation.rst:21 4cb71f54312d43d383b262f4ea58ff0e
+msgid "插件仓库的 ``doc_classes/*.xml``。"
+msgstr "``doc_classes/*.xml`` in the plugin repository."
 
-#: ../../source/contributing/translation.rst:17
-#: f97aec19204747ec942fb16f19f665c7
+#: ../../source/contributing/translation.rst:22 b378b10af1ce4be8ba5913bc29a03606
+msgid "API 中文说明"
+msgstr "Chinese API descriptions"
+
+#: ../../source/contributing/translation.rst:23 45cb81862efd41eda0a55edca88a8020
+msgid "插件仓库的 ``addons/fmod_player/translations/documentation/zh_CN.po``，供内置帮助和网站共用。"
+msgstr ""
+"``addons/fmod_player/translations/documentation/zh_CN.po`` in the plugin repository, shared by "
+"built-in help and the website."
+
+#: ../../source/contributing/translation.rst:24 d601388e958b4a2e8987d4ad759b0d42
+msgid "编辑器属性与界面"
+msgstr "Editor properties and interface"
+
+#: ../../source/contributing/translation.rst:25 a8f58d1ba3b4490c8c0c70964a20bd74
+msgid "插件中的属性与界面 CSV，使用 FMOD Translations 面板维护。"
+msgstr "The plugin's property and interface CSV catalogs, maintained with the FMOD Translations panel."
+
+#: ../../source/contributing/translation.rst:27 d90f9eff6bd440d2bfc44d70f7617706
 msgid ""
-"sphinx-build -b gettext source build/gettext\n"
+"``classref/xml/``、``classref/translations/``、``classref/api.json`` "
+"是文档发布快照；``source/classes/class_*.rst`` 是生成结果。API 内容先在插件仓库修改，再同步快照和生成页面。"
+msgstr ""
+"``classref/xml/``, ``classref/translations/``, and ``classref/api.json`` are documentation "
+"release snapshots; ``source/classes/class_*.rst`` is generated output. Make API changes in the "
+"plugin repository first, then synchronize snapshots and generate pages."
+
+#: ../../source/contributing/translation.rst:30 69246c2009aa47b898a9d2f150159a10
+msgid "修改手册与英文翻译"
+msgstr "Edit the manual and English translation"
+
+#: ../../source/contributing/translation.rst:32 d6ca6daef06e4f0681710d322c81a2a1
+msgid "以下命令在文档仓库根目录执行。普通手册改动不需要安装 Godot 或 FMOD SDK："
+msgstr ""
+"Run the following commands from the documentation repository root. Ordinary manual changes do not"
+" require Godot or the FMOD SDK:"
+
+#: ../../source/contributing/translation.rst:34 0a4e155b57564cb59ed24014311b3636
+msgid ""
+"python -m pip install -r requirements.txt\n"
+"python scripts/build_docs.py --gettext\n"
 "sphinx-intl update -p build/gettext -l en"
 msgstr ""
-"sphinx-build -b gettext source build/gettext\n"
+"python -m pip install -r requirements.txt\n"
+"python scripts/build_docs.py --gettext\n"
 "sphinx-intl update -p build/gettext -l en"
 
-#: ../../source/contributing/translation.rst:22
-#: 921df8d8a4344d27aa0edb8c2c804b34
-msgid "翻译文件位于："
-msgstr "Translation files are located at:"
-
-#: ../../source/contributing/translation.rst:24
-#: c5a2c27bdea94e43994d400492aca7c7
-msgid "locales/en/LC_MESSAGES/"
-msgstr "locales/en/LC_MESSAGES/"
-
-#: ../../source/contributing/translation.rst:28
-#: 5ccfa54ebb63475ca4bef776b08130dd
-msgid "修改 ``.po`` 后，编译并构建英文 HTML："
-msgstr "After editing ``.po`` files, compile them and build the English HTML:"
-
-#: ../../source/contributing/translation.rst:30
-#: d80da96d01d644d89fdc41dcb2f8fd39
-msgid ""
-"sphinx-intl build -l en\n"
-"sphinx-build -b html -D language=en source build/html_en"
+#: ../../source/contributing/translation.rst:40 3a04e60321f34eccbab781c216a0a021
+msgid "在对应 ``.po`` 文件中翻译新增或变更的消息，复核模糊匹配后移除 ``fuzzy`` 标记，再构建两种语言："
 msgstr ""
-"sphinx-intl build -l en\n"
-"sphinx-build -b html -D language=en source build/html_en"
+"Translate new or changed messages in the matching ``.po`` files, review fuzzy matches and remove "
+"their ``fuzzy`` flags, then build both languages:"
 
-#: ../../source/contributing/translation.rst:35
-#: 4bbe4706e9c649128ce3d70c25d253d6
-msgid "翻译时请注意："
-msgstr "When translating, keep these points in mind:"
+#: ../../source/contributing/translation.rst:42 fd94934e8bad430e8b210a2bc7257470
+msgid "python scripts/build_docs.py"
+msgstr "python scripts/build_docs.py"
 
-#: ../../source/contributing/translation.rst:37
-#: c966348b15204e779054d91342088a28
-msgid "``msgid`` 保持不变，只修改 ``msgstr``。"
-msgstr "Keep ``msgid`` unchanged and edit only ``msgstr``."
-
-#: ../../source/contributing/translation.rst:38
-#: bcfcba1d316d421fb5180a4bd3c3ca48
-msgid "API 类名、方法名、属性名和枚举名不要翻译。"
-msgstr "Do not translate API class names, method names, property names, or enum names."
-
-#: ../../source/contributing/translation.rst:39
-#: cdefe037638e465888a95a2ea444c744
-msgid "``:ref:``、``:doc:``、```code```、链接和 GDScript 示例要保持可构建。"
-msgstr "Keep ``:ref:``, ``:doc:``, ```code```, links, and GDScript examples buildable."
-
-#: ../../source/contributing/translation.rst:40
-#: 66c98afe6cb44dadab5119ce85894f19
-msgid "中文术语请优先参考 :doc:`../glossary`。"
-msgstr "For Chinese terminology, refer to :doc:`../glossary` first."
-
-#: ../../source/contributing/translation.rst:41
-#: d46178f871f24d1f8c8ce63daf577998
-msgid "如果源文档改了标题或标记，记得重新生成 gettext 模板并更新 PO。"
-msgstr "If titles or markup change in the source documentation, regenerate the gettext templates and update the PO files."
-
-#: ../../source/contributing/translation.rst:44
-#: 0756ec8aecbb40b68b38788cc4b9c40f
-msgid "离线文档翻译"
-msgstr "Offline Documentation Translation"
-
-#: ../../source/contributing/translation.rst:46
-#: a6751abe67ea474d8b9e82dc77c5e94b
-msgid "离线类参考文档使用 XML 风格的类描述。它更接近 Godot 官方类参考格式，适合编辑器内提示、类说明和属性描述。"
-msgstr "The offline class reference uses XML-style class descriptions. It is closer to Godot's official class reference format and is suitable for editor hints, class descriptions, and property descriptions."
-
-#: ../../source/contributing/translation.rst:50
-#: d71db2420ae34f3daea005063429a1f2
+#: ../../source/contributing/translation.rst:46 c49c74b9c06c47b391892606edfe4e84
 msgid ""
-"`Godot class reference primer "
-"<https://docs.godotengine.org/en/4.x/engine_details/class_reference/index.html"
-"#doc-class-reference-primer>`_"
+"中文输出位于 ``build/html/zh_CN/``，英文位于 ``build/html/en/``；日志位于 ``build/logs/``。构建会把 Sphinx "
+"警告视为失败，并检查类参考、锚点和本地链接。"
 msgstr ""
-"`Godot class reference primer "
-"<https://docs.godotengine.org/en/4.x/engine_details/class_reference/index.html"
-"#doc-class-reference-primer>`_"
+"Chinese output is written to ``build/html/zh_CN/`` and English output to ``build/html/en/``, with"
+" logs under ``build/logs/``. The build treats Sphinx warnings as errors and checks class "
+"references, anchors, and local links."
 
-#: ../../source/contributing/translation.rst:52
-#: a4e8a7558b274970807b632d2d606cfd
-msgid "维护离线文档时，请保持 API 名称与 GDExtension 绑定一致。新增类、属性、方法或枚举后，应同步检查在线文档与离线文档是否都已更新。"
-msgstr "When maintaining offline documentation, keep API names consistent with the GDExtension bindings. After adding classes, properties, methods, or enums, check that both the online and offline documentation have been updated."
+#: ../../source/contributing/translation.rst:48 5ae275baca3e4706a70ac53e43faa001
+msgid "手册 PO 保留 ``msgid``，只修改 ``msgstr``。源文档变化后重新提取消息，不另外复制一套英文 RST。"
+msgstr ""
+"Keep ``msgid`` unchanged in manual PO files and edit ``msgstr``. Extract messages again when the "
+"source changes rather than maintaining a separate English RST tree."
 
-#: ../../source/contributing/translation.rst:55
-#: b8c862892bb04a9e8c329584801f59cf
-msgid "属性本地化"
-msgstr "Property Localization"
+#: ../../source/contributing/translation.rst:49 5985a63ec9b347b6afcba1da50306fe4
+msgid "保留 API 名称、代码示例、``:ref:``、``:doc:`` 和链接目标，使用 :doc:`../glossary` 中一致的术语。"
+msgstr ""
+"Preserve API names, code examples, ``:ref:``, ``:doc:``, and link targets. Follow the terminology"
+" in :doc:`../glossary`."
 
-#: ../../source/contributing/translation.rst:57
-#: f9efe9337aa0400caaec054fcd650c82
-msgid "插件属性本地化用于编辑器检查器中的显示名称、分组和提示文本。它与在线文档翻译不是同一套文件。"
-msgstr "Plugin property localization is used for display names, groups, and tooltip text in the editor Inspector. It does not use the same files as the online documentation translation."
+#: ../../source/contributing/translation.rst:50 19ce6be67554425db1d45560c0d4553e
+msgid "API 类页面不进入手册 gettext 目录，它们直接使用插件 XML 和共享 API PO。"
+msgstr ""
+"API class pages are excluded from the manual gettext catalogs; they use the plugin XML and shared"
+" API PO directly."
 
-#: ../../source/contributing/translation.rst:59
-#: 3117aa6925de46fe8beac722c31f2c32
-msgid "如果你修改了导出的属性名、分类或提示文本，请同时检查："
-msgstr "If you change exported property names, categories, or tooltip text, also check:"
+#: ../../source/contributing/translation.rst:53 0132315b87b84071b2d7271ddf00cf77
+msgid "维护 API 描述与中文类帮助"
+msgstr "Maintain API descriptions and Chinese help"
 
-#: ../../source/contributing/translation.rst:61
-#: 89fceca4e3b740d7bd575c02d76d0a9e
-msgid "GDExtension 绑定中的属性名称。"
-msgstr "Property names in the GDExtension bindings."
+#: ../../source/contributing/translation.rst:55 4d8afbff5d7742e8a897ccb6807c88bf
+msgid "英文 XML 的签名、默认值、单位、返回值和线程说明应与绑定一致。中文 PO 的每条消息对应完整 XML 描述，保留 ``[param]``、``[method]`` 等标记和格式占位符。"
+msgstr ""
+"Keep signatures, defaults, units, return values, and threading notes in English XML aligned with "
+"the bindings. Each Chinese PO message corresponds to a complete XML description; preserve tags "
+"such as ``[param]`` and ``[method]`` and all format placeholders."
 
-#: ../../source/contributing/translation.rst:62
-#: 40a44d50d9394e3a9f3648ffb229d7f5
-msgid "编辑器中实际显示的本地化文本。"
-msgstr "The localized text that is actually displayed in the editor."
+#: ../../source/contributing/translation.rst:57 2354bc9a216441d0be9d3df311c0114f
+msgid "文档仓库保留了 API 翻译维护工具。下面示例在文档仓库运行，假设插件仓库与之并列："
+msgstr ""
+"The documentation repository retains the API translation maintenance tool. Run this example from "
+"the documentation repository, assuming the plugin checkout is a sibling directory:"
 
-#: ../../source/contributing/translation.rst:63
-#: 6f703dd694a24e14a74235ecab53644c
-msgid "在线 API 文档中的属性说明。"
-msgstr "Property descriptions in the online API documentation."
+#: ../../source/contributing/translation.rst:59 2b79573fcad542809add15df42f0ca1a
+msgid ""
+"$plugin = (Resolve-Path ../godot-fmodplayer).Path\n"
+"python scripts/documentation_translations.py update --xml-dir \"$plugin/doc_classes\" --po "
+"\"$plugin/addons/fmod_player/translations/documentation/zh_CN.po\"\n"
+"# Translate new messages and review fuzzy entries before checking.\n"
+"python scripts/documentation_translations.py check --xml-dir \"$plugin/doc_classes\" --po "
+"\"$plugin/addons/fmod_player/translations/documentation/zh_CN.po\" --strict"
+msgstr ""
+"$plugin = (Resolve-Path ../godot-fmodplayer).Path\n"
+"python scripts/documentation_translations.py update --xml-dir \"$plugin/doc_classes\" --po "
+"\"$plugin/addons/fmod_player/translations/documentation/zh_CN.po\"\n"
+"# Translate new messages and review fuzzy entries before checking.\n"
+"python scripts/documentation_translations.py check --xml-dir \"$plugin/doc_classes\" --po "
+"\"$plugin/addons/fmod_player/translations/documentation/zh_CN.po\" --strict"
 
-#: ../../source/contributing/translation.rst:66
-#: f84fba7f9638466ab1523cf381bfdf07
-msgid "翻译检查"
-msgstr "Translation Checks"
+#: ../../source/contributing/translation.rst:66 04c3f446e8df48bd8b2e93e309eac36f
+msgid "更新后的 PO 提交到插件仓库。未翻译或带 ``fuzzy`` 的条目在编辑器中回退英文；网站发布前的严格检查要求译文完整且已确认。"
+msgstr ""
+"Commit the updated PO in the plugin repository. Untranslated or fuzzy entries fall back to "
+"English in the editor; the website's strict publication checks require complete, reviewed "
+"translations."
 
-#: ../../source/contributing/translation.rst:68
-#: 632f4deba6b44eac9f662560d13f9474
-msgid "提交翻译前建议至少检查："
-msgstr "Before submitting translations, check at least:"
+#: ../../source/contributing/translation.rst:68 dcd9c07f9bf644c9babc2db47274e21c
+#, python-format
+msgid ""
+"API 接口变更时先构建并同步测试插件，再用文档仓库的 ``scripts/export_classref_api.gd`` 导出 ClassDB，运行 "
+"``scripts/sync_classref.py`` 同步 XML、API 和 PO 快照。完整导出命令见 `文档仓库 README 的类参考说明 "
+"<https://github.com/LuYingYiLong/godot-fmodplayer-docs#%E7%B1%BB%E5%8F%82%E8%80%83>`_。"
+msgstr ""
+"For API changes, build and stage the test addon, export ClassDB with "
+"``scripts/export_classref_api.gd`` from the documentation repository, and use "
+"``scripts/sync_classref.py`` to synchronize the XML, API, and PO snapshots. See the `class-"
+"reference section of the documentation repository README <https://github.com/LuYingYiLong/godot-"
+"fmodplayer-docs#%E7%B1%BB%E5%8F%82%E8%80%83>`_ for the complete export commands."
 
-#: ../../source/contributing/translation.rst:70
-#: e2ec20b1b4f540a38fb83a6aaacfe213
-msgid "英文 HTML 能否成功构建。"
-msgstr "Whether the English HTML builds successfully."
+#: ../../source/contributing/translation.rst:70 a598b7e1de454426a8cd2d65201cc99b
+msgid ""
+"只修改说明或 PO 时无需重编译插件，可使用同一接口构建的 ClassDB 导出。同步后运行 ``python scripts/build_docs.py``，通过 :ref:`class_* "
+"<class_FmodServer>` 和 ``enum_*`` 标签引用类与枚举，不手改生成页面。"
+msgstr ""
+"Description-only or PO-only changes do not require rebuilding the plugin; reuse a ClassDB export "
+"from the same API build. After synchronization, run ``python scripts/build_docs.py``. Reference "
+"classes and enums with canonical :ref:`class_* <class_FmodServer>` and ``enum_*`` labels rather "
+"than editing generated pages."
 
-#: ../../source/contributing/translation.rst:71
-#: c3027355577342e08ebaec7569eda9af
-msgid "页面中是否残留明显中文。"
-msgstr "Whether any obvious Chinese remains on the page."
+#: ../../source/contributing/translation.rst:73 c5a52a8ddc8f46cda8d322db35eae9dc
+msgid "编辑器属性与界面翻译"
+msgstr "Editor properties and interface translations"
 
-#: ../../source/contributing/translation.rst:72
-#: 32be11025805424fb8f844ca38b51533
-msgid "是否存在 ``msgstr \".\"``、``#, fuzzy`` 或明显机器翻译残留。"
-msgstr "Whether there are any ``msgstr \".\"`` entries, ``#, fuzzy`` markers, or obvious machine translation leftovers."
+#: ../../source/contributing/translation.rst:75 142fdfbf38ab48f0979826239305fcd1
+msgid ""
+"打开 **项目 > 工具 > FMOD Translations**，选择属性、编辑器界面或 API 文档目录。修改现有条目后保存，并切换编辑器语言检查实际显示。PO 编辑需要 Python 与"
+" Babel，可使用文档环境中的 Python。"
+msgstr ""
+"Open **Project > Tools > FMOD Translations** and select the property, editor-interface, or API-"
+"documentation catalog. Save existing-entry edits and switch the editor language to inspect the "
+"result. PO editing requires Python and Babel; the documentation environment's Python can be used."
 
-#: ../../source/contributing/translation.rst:73
-#: 6a86eb79f8f34d298b0c2257d17c35dd
-msgid "代码块、内部引用和表格是否渲染正常。"
-msgstr "Whether code blocks, internal references, and tables render correctly."
+#: ../../source/contributing/translation.rst:77 3eba3e7c1d164191aee7eee66e2fe926
+msgid ""
+"属性与界面翻译分别使用 ``godot.properties`` 和 ``godot.editor`` 域；类帮助使用 "
+"``godot.documentation``。修改显示文本时保留运行时标识符、资源路径和枚举值，保持简体中文、繁体中文、日文和俄文界面目录一致。"
+msgstr ""
+"Property and interface translations use the ``godot.properties`` and ``godot.editor`` domains; "
+"class help uses ``godot.documentation``. Preserve runtime identifiers, resource paths, and enum "
+"values when changing display text, and keep the Simplified Chinese, Traditional Chinese, "
+"Japanese, and Russian interface catalogs consistent."
 
-#: ../../source/contributing/translation.rst:75
-#: ee5f656ff6254c57872a10bd43668f07
-msgid "如果不确定某个术语怎么翻译，可以先保留 API 原名，并在 PR 中说明疑问。术语一致性比单句看起来华丽更重要。"
-msgstr "If you are unsure how to translate a term, keep the API name first and explain the question in the PR. Terminology consistency matters more than making a single sentence sound polished."
+#: ../../source/contributing/translation.rst:79 990cd1d309e9449da9553a430ee7792c
+msgid "从 XML 刷新 API 消息使用上面的文档仓库工具；插件界面的源码提取依赖相应的源码工具，缺少工具时可先维护已有条目，不必恢复已移除的外部测试脚本。"
+msgstr ""
+"Use the documentation-repository tool above to refresh API messages from XML. Source extraction "
+"in the plugin interface requires the corresponding source tools. If they are unavailable, "
+"existing entries can still be edited; restoring removed external test runners is unnecessary."
+
+#: ../../source/contributing/translation.rst:82 8e462b2c2a194715b293d627d81fb094
+msgid "提交前检查"
+msgstr "Before submitting"
+
+#: ../../source/contributing/translation.rst:84 74fc1618d686441d9fb10f5b1e0d263c
+msgid "中英文页面均可构建，变更页面无未翻译或未经确认的条目。"
+msgstr "Both language editions build, and changed pages have no untranslated or unreviewed entries."
+
+#: ../../source/contributing/translation.rst:85 f41d119c0ec342279a17d2ace16e21f4
+msgid "表格、代码块、目录、内部引用和英文页面的段落均正常显示。"
+msgstr "Tables, code blocks, navigation, internal references, and English paragraphs render correctly."
+
+#: ../../source/contributing/translation.rst:86 e6883996df1c40faa871ce5d6e7869f8
+msgid "在 Godot 中检查变更涉及的属性、菜单或类帮助；步骤见 :doc:`testing`。"
+msgstr "Check the affected properties, menus, or class help in Godot; see :doc:`testing`."
+
+#: ../../source/contributing/translation.rst:87 bb79373df27747c3b2f7b2c6cbbe6ae3
+msgid "说明修改的是手册、插件翻译还是 API 源文件；需要跨仓库同步时链接对应 PR。"
+msgstr ""
+"State whether the change affects the manual, plugin translations, or API sources. Link companion "
+"PRs when cross-repository synchronization is needed."
