@@ -9,6 +9,8 @@ import re
 import tempfile
 import xml.etree.ElementTree as ET
 
+from documentation_translations import load_catalog, source_messages, translated_tree, translations, validate
+
 ROOT = Path(__file__).resolve().parents[1]
 VENDOR = ROOT / 'scripts/vendor/godot'
 MANIFEST = ROOT / 'classref/manifest.json'
@@ -106,17 +108,32 @@ def catalog_element(info: dict) -> ET.Element:
     return element
 
 
-def generate(check: bool = False) -> list[Path]:
+def check_translations(manifest: dict, strict: bool = False) -> dict:
+    helper = ROOT / 'scripts/documentation_translations.py'
+    if hashlib.sha256(helper.read_bytes()).hexdigest() != manifest['localization_tool_sha256']:
+        raise ValueError('Localization helper changed. Run sync_classref.py.')
+    reports = {}
+    for filename, digest in manifest['translation_sha256'].items():
+        path = ROOT / 'classref/translations' / filename
+        if hashlib.sha256(path.read_bytes()).hexdigest() != digest:
+            raise ValueError('Translation snapshot changed. Run sync_classref.py.')
+        reports[filename] = validate(source_messages(ROOT / 'classref/xml'), load_catalog(path), strict)
+    return reports
+
+
+def render_classes(language: str = 'en') -> dict[str, str]:
     manifest = json.loads(MANIFEST.read_text(encoding='utf-8'))
     trees = check_inputs(manifest)
+    check_translations(manifest)
+    mapping = translations(ROOT / 'classref/translations' / (language + '.po')) if language != 'en' else {}
     upstream = load_generator()
+    upstream.strings_l10n.update(mapping)
     state = upstream.State()
     for info in json.loads((VENDOR / 'types.json').read_text(encoding='utf-8')):
         state.parse_class(catalog_element(info), 'godot-catalog/' + info['name'] + '.xml')
     for name, element in trees.items():
-        state.parse_class(element, str(ROOT / 'classref/xml' / (name + '.xml')))
+        state.parse_class(translated_tree(element, mapping), str(ROOT / 'classref/xml' / (name + '.xml')))
     state.sort_classes()
-    generated: dict[Path, str] = {}
     contents: dict[str, str] = {}
     temporary_root = ROOT / 'build/.classref-tmp'
     temporary_root.mkdir(parents=True, exist_ok=True)
@@ -133,6 +150,13 @@ def generate(check: bool = False) -> list[Path]:
             contents[name] = content
     if state.num_errors or state.num_warnings:
         raise ValueError(f'Godot XML generator: {state.num_errors} errors, {state.num_warnings} warnings')
+    return contents
+
+
+def generate(check: bool = False) -> list[Path]:
+    manifest = json.loads(MANIFEST.read_text(encoding='utf-8'))
+    contents = render_classes()
+    generated: dict[Path, str] = {}
     for name, content in contents.items():
         generated[ROOT / 'source/classes' / f'class_{name.lower()}.rst'] = content
     for category, title in CATEGORY_TITLES.items():

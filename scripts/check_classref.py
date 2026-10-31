@@ -10,6 +10,7 @@ import sys
 from babel.messages.pofile import read_po
 from docutils.nodes import make_id
 from generate_classref import ROOT, VENDOR, generate
+from classref_generator import check_translations
 
 
 class Page(HTMLParser):
@@ -40,14 +41,9 @@ def check(languages: list[str]) -> None:
     provenance = json.loads((VENDOR / 'PROVENANCE.json').read_text(encoding='utf-8'))
     for file, digest in provenance['files'].items():
         assert hashlib.sha256((VENDOR / file).read_bytes()).hexdigest() == digest, file
-    for name in [*manifest['classes'], 'index']:
-        filename = 'index.po' if name == 'index' else f'class_{name.lower()}.po'
-        file = ROOT / 'locales/zh_CN/LC_MESSAGES/classes' / filename
-        assert file.is_file(), f'Missing Chinese class catalog: {file}'
-        with file.open(encoding='utf-8') as stream:
-            catalog = read_po(stream)
-        missing = [message.id for message in catalog if message.id and (not message.string or message.fuzzy)]
-        assert not missing, f'Untranslated messages in {file}: {missing}'
+    check_translations(manifest, strict=True)
+    legacy = list((ROOT / 'locales/zh_CN/LC_MESSAGES/classes').glob('class_*.po'))
+    assert not legacy, 'Retired API catalogs must not be maintained alongside the shared XML PO'
     for language in languages:
         directory = ROOT / 'build/html' / language
         pages: dict[Path, Page] = {}

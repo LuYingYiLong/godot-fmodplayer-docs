@@ -168,5 +168,9 @@
   "unnamed_arguments": {
     "FmodChannel.get_loop_points.0": "timeunit",
     "FmodSound.get_music_channel_volume.0": "channel"
-  }
+  },
+  "translation_sha256": {
+    "zh_CN.po": "0edb78e8daf2ebb2a33473ac0a83e2ce9bd83ac04fde5fbee0ffc22a67d52d5a"
+  },
+  "localization_tool_sha256": "88af53f9059a06c07f0a174e39307f8d71b045460cf171a0831d803aeaf51aa2"
 }

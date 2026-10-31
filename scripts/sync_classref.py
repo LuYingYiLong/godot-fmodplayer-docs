@@ -6,6 +6,7 @@ import hashlib
 import json
 from pathlib import Path
 import subprocess
+import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -34,6 +35,23 @@ def sync(plugin: Path, api_path: Path) -> None:
     (ROOT / "classref/api.json").write_text(json.dumps(api, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     manifest["plugin_revision"] = revision
     manifest["xml_sha256"] = checksums
+    translations = plugin / 'addons/fmod_player/translations/documentation'
+    translation_checksums = {}
+    output = ROOT / 'classref/translations'
+    output.mkdir(parents=True, exist_ok=True)
+    for source in sorted(translations.glob('*.po')):
+        data = source.read_bytes().replace(b'\r\n', b'\n')
+        (output / source.name).write_bytes(data)
+        translation_checksums[source.name] = hashlib.sha256(data).hexdigest()
+    if not translation_checksums:
+        raise ValueError('Plugin documentation PO files are missing')
+    for stale in output.glob('*.po'):
+        if stale.name not in translation_checksums:
+            stale.unlink()
+    helper = plugin / 'tools/documentation_translations.py'
+    shutil.copy2(helper, ROOT / 'scripts/documentation_translations.py')
+    manifest['translation_sha256'] = translation_checksums
+    manifest['localization_tool_sha256'] = hashlib.sha256(helper.read_bytes()).hexdigest()
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
 
 
