@@ -68,14 +68,6 @@ msgstr ""
 "Two copies of the same WAV use FMOD and Godot imports. Use the buttons to play either source, "
 "play both, or stop them, and check switching and stopping behavior."
 
-#: ../../source/contributing/testing.rst:25 b5336f591c11464bac9c8489f4f16ff1
-msgid ""
-"两个场景都有“返回测试菜单”按钮。也可以在编辑器中打开 ``manual/reverb_test.tscn`` 或 ``manual/playback_compare.tscn``，按 "
-"**F6** 单独运行。"
-msgstr ""
-"Both scenes provide a Return to test menu button. You can also open ``manual/reverb_test.tscn`` "
-"or ``manual/playback_compare.tscn`` in the editor and press **F6** to run that scene."
-
 #: ../../source/contributing/testing.rst:30 9b3102083663402685352340bf18e92d
 msgid "一键数值回归"
 msgstr "Run numerical checks"
@@ -264,3 +256,22 @@ msgid "AudioListener3D 的位置与朝向同步、当前监听器切换与移除
 msgstr ""
 "AudioListener3D position and orientation synchronization, current-listener switching and removal,"
 " camera fallback, distance attenuation and filtering, emission angles, and scene save/reload."
+
+#: ../../source/contributing/testing.rst:25 b5336f591c11464bac9c8489f4f16ff1
+msgid ""
+"试听场景都有“返回测试菜单”按钮。也可以在编辑器中打开 ``manual/reverb_test.tscn``、``manual/playback_compare.tscn`` 或 "
+"``manual/doppler_test.tscn``，按 **F6** 单独运行。多普勒场景使用物理帧追踪声源速度，监听器保持固定。"
+msgstr ""
+"Each listening scene has a return-to-menu button. You can also open ``manual/reverb_test.tscn``, "
+"``manual/playback_compare.tscn``, or ``manual/doppler_test.tscn`` in the editor and press **F6**."
+" The Doppler scene tracks source velocity in physics frames while the listener stays fixed."
+
+msgid "3D 多普勒试听"
+msgstr "3D Doppler listening test"
+
+msgid "点击“开始 / 重来”，试听 440 Hz 循环音源经过固定监听器。调整速度、切换多普勒开关，比较接近时音高升高、远离时音高降低，以及关闭后音高不变。距离衰减关闭；切换开关会从起点重放。"
+msgstr ""
+"Click Start / Restart to hear a looping 440 Hz source pass a fixed listener. Adjust speed and "
+"toggle Doppler: pitch should rise during approach and fall during departure, remaining constant "
+"when disabled. Distance attenuation is disabled; toggling Doppler restarts the pass from its "
+"starting point."

@@ -21,8 +21,10 @@
      - 音源自动播放；WASD 移动，左键捕获鼠标，Esc 显示鼠标。改变距离、绕过遮挡物、进入混响区域，试听音量、空间位置和混响变化。
    * - FMOD / Godot 2D 播放对比
      - 两份 WAV 内容相同，分别通过 FMOD 和 Godot 导入。用按钮单独播放、同时播放或停止，确认播放切换和停止行为。
+   * - 3D 多普勒试听
+     - 点击“开始 / 重来”，试听 440 Hz 循环音源经过固定监听器。调整速度、切换多普勒开关，比较接近时音高升高、远离时音高降低，以及关闭后音高不变。距离衰减关闭；切换开关会从起点重放。
 
-两个场景都有“返回测试菜单”按钮。也可以在编辑器中打开 ``manual/reverb_test.tscn`` 或 ``manual/playback_compare.tscn``，按 **F6** 单独运行。
+试听场景都有“返回测试菜单”按钮。也可以在编辑器中打开 ``manual/reverb_test.tscn``、``manual/playback_compare.tscn`` 或 ``manual/doppler_test.tscn``，按 **F6** 单独运行。多普勒场景使用物理帧追踪声源速度，监听器保持固定。
 
 .. _testing-numerical:
 
