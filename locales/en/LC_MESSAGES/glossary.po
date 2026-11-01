@@ -290,16 +290,6 @@ msgstr ""
 "3D sounds are calculated from the distance, direction, and relative velocity between the listener"
 " and the source."
 
-#: ../../source/glossary.rst:143 a9e2851306bb49e08e1849bc821ba00e
-msgid ""
-"当前插件在游戏中读取视口的 Camera3D 或 Camera2D 作为监听来源，3D 编辑器试听使用编辑器相机。原生 ``AudioListener3D`` 不会自动接管 FMOD "
-"监听器。使用 :ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>` 时，检查活动相机、声源变换和距离设置。"
-msgstr ""
-"The current plugin uses the viewport's Camera3D or Camera2D as the game listener source, and the "
-"editor camera for 3D editor previews. A native ``AudioListener3D`` does not automatically take "
-"over the FMOD listener. When using :ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>`,"
-" check the active camera, source transform, and distance settings."
-
 #: ../../source/glossary.rst:148 ddd1980139d84a61af97b28565faf625
 msgid "Sound"
 msgstr "Sound"
@@ -803,3 +793,21 @@ msgstr ""
 " for your target platform and place them in the project as described in :doc:`export` or "
 ":doc:`getting_started/installation`. When publishing a game, you must also follow FMOD licensing "
 "and attribution requirements."
+
+#: ../../source/glossary.rst:143 a9e2851306bb49e08e1849bc821ba00e
+msgid ""
+"运行时，插件每帧将根视口当前 ``AudioListener3D`` 的位置和朝向同步到 FMOD 第 0 个监听器；没有当前监听器时回退到 Camera3D，并包含相机偏移。设置 "
+"``current`` 或调用 ``make_current()`` 后，下一次更新会自动跟随选中的监听器；没有相机时也可使用 AudioListener3D。2D 仍使用 "
+"Camera2D，3D 编辑器试听仍使用编辑器相机。"
+msgstr ""
+"At runtime, the plugin synchronizes the root viewport's current ``AudioListener3D`` position and "
+"orientation to FMOD listener 0 each frame. Without a current listener, it falls back to Camera3D,"
+" including camera offsets. Setting ``current`` or calling ``make_current()`` takes effect on the "
+"next update; AudioListener3D also works without a camera. 2D continues to use Camera2D, and 3D "
+"editor previews use the editor camera."
+
+msgid "监听器速度目前保持为零，``AudioListener3D.doppler_tracking`` 不会自动同步到 FMOD；多 SubViewport 也尚未自动映射到多个 FMOD 监听器。"
+msgstr ""
+"Listener velocity remains zero; ``AudioListener3D.doppler_tracking`` is not automatically "
+"synchronized to FMOD. Multiple SubViewports are not automatically mapped to multiple FMOD "
+"listeners."

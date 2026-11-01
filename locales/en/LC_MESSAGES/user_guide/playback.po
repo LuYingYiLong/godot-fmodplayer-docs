@@ -183,22 +183,6 @@ msgstr ""
 msgid "2D 与 3D 位置音频"
 msgstr "Positional audio in 2D and 3D"
 
-#: ../../source/user_guide/playback.rst:82 38b268adfc45404594ff7296e2dd5e7a
-msgid "将空间播放器放在声源节点下，使其随角色、车辆或环境物件移动。服务器在游戏中读取当前视口相机作为监听器；编辑器试听使用编辑器相机。"
-msgstr ""
-"Parent a spatial player to its emitter so it follows a character, vehicle, or environment object."
-" The server uses the current viewport camera as the game listener and the editor camera during "
-"editor audition."
-
-#: ../../source/user_guide/playback.rst:84 75fa083d30a548578b26460f1676bbe5
-msgid ""
-"2D 调整 ``max_distance``、``attenuation`` 和 ``panning_strength``；3D 调整距离与衰减模型，并确认当前 Camera3D "
-"已激活。检查声源和监听器的世界坐标及方向。"
-msgstr ""
-"In 2D, adjust ``max_distance``, ``attenuation``, and ``panning_strength``. In 3D, configure "
-"distance and attenuation, and activate the intended Camera3D. Check emitter and listener world "
-"positions and orientation."
-
 #: ../../source/user_guide/playback.rst:87 5625a5d9acae45989d5a85944eef82ef
 msgid "低层通道播放"
 msgstr "Low-level channel playback"
@@ -254,3 +238,35 @@ msgid "运行时总线和效果配置见 :doc:`mixer`、:doc:`dsp_effects`。无
 msgstr ""
 "See :doc:`mixer` and :doc:`dsp_effects` for bus and effect configuration. For silent playback, "
 "first-play latency, and resource cleanup, see :doc:`faq`."
+
+#: ../../source/user_guide/playback.rst:82 38b268adfc45404594ff7296e2dd5e7a
+msgid ""
+"将空间播放器放在声源节点下，使其随角色、车辆或环境物件移动。运行时，服务器优先跟随根视口当前的 ``AudioListener3D``，没有时使用当前 Camera3D；2D 使用 "
+"Camera2D，编辑器试听使用编辑器相机。"
+msgstr ""
+"Place spatial players under sound-source nodes so they follow characters, vehicles, or "
+"environmental objects. At runtime, the server follows the root viewport's current "
+"``AudioListener3D``, falling back to the current Camera3D. 2D uses Camera2D, and editor previews "
+"use the editor camera."
+
+msgid ""
+"需要把听觉位置与相机分开时，添加 ``AudioListener3D`` 并启用 ``current``，或调用 ``make_current()``。移动、旋转或切换当前监听器后，FMOD "
+"会在下一次更新同步位置和朝向；清除或移除当前监听器后，使用 Godot 为该视口选中的其他监听器，没有时回退到相机。"
+msgstr ""
+"To separate the listening position from the camera, add an ``AudioListener3D`` and enable "
+"``current`` or call ``make_current()``. Movement, rotation, and listener switches synchronize to "
+"FMOD on the next update. When the current listener is cleared or removed, FMOD follows the "
+"replacement selected by Godot for that viewport, or falls back to the camera if no listener is "
+"selected."
+
+#: ../../source/user_guide/playback.rst:84 75fa083d30a548578b26460f1676bbe5
+msgid ""
+"2D 调整 ``max_distance``、``attenuation`` 和 ``panning_strength``；3D "
+"调整距离与衰减模型，并检查当前监听器或相机、声源的世界坐标及方向。此自动同步目前作用于根视口和 FMOD 第 0 "
+"个监听器，速度保持为零；``AudioListener3D.doppler_tracking`` 不会自动启用 FMOD 监听器的多普勒效果。"
+msgstr ""
+"For 2D, adjust ``max_distance``, ``attenuation``, and ``panning_strength``. For 3D, adjust the "
+"distance and attenuation model, and check the world-space positions and orientations of the "
+"current listener or camera and sound sources. Automatic synchronization currently applies to the "
+"root viewport and FMOD listener 0, with zero velocity; ``AudioListener3D.doppler_tracking`` does "
+"not automatically enable Doppler effects for the FMOD listener."

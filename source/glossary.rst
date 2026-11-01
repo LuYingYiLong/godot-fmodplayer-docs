@@ -140,7 +140,9 @@ Listener
 
 Listener 即监听器，表示玩家“听见世界”的位置和朝向。3D 声音会根据监听器与声源之间的距离、方向和相对速度计算结果。
 
-当前插件在游戏中读取视口的 Camera3D 或 Camera2D 作为监听来源，3D 编辑器试听使用编辑器相机。原生 ``AudioListener3D`` 不会自动接管 FMOD 监听器。使用 :ref:`FmodAudioStreamPlayer3D<class_FmodAudioStreamPlayer3D>` 时，检查活动相机、声源变换和距离设置。
+运行时，插件每帧将根视口当前 ``AudioListener3D`` 的位置和朝向同步到 FMOD 第 0 个监听器；没有当前监听器时回退到 Camera3D，并包含相机偏移。设置 ``current`` 或调用 ``make_current()`` 后，下一次更新会自动跟随选中的监听器；没有相机时也可使用 AudioListener3D。2D 仍使用 Camera2D，3D 编辑器试听仍使用编辑器相机。
+
+监听器速度目前保持为零，``AudioListener3D.doppler_tracking`` 不会自动同步到 FMOD；多 SubViewport 也尚未自动映射到多个 FMOD 监听器。
 
 .. _glossary-sound:
 

@@ -83,7 +83,7 @@ Android 需要匹配 ABI 的插件库、FMOD 原生运行库和 ``fmod.jar``。�
 
 - 打开 **项目 > 工具 > Configure FMOD Android Export**，选择 FMOD Android SDK 目录，或下载的 ``.tar.gz`` / ``.tgz`` 包。
 - 点击 **Review Changes**，核对运行库复制位置及 ``gradle.properties``、``build.gradle`` 和 ``GodotApp.java`` 的修改。
-- 点击 **Apply Changes** 应用修改。工具会加入 ``fmod.jar`` 依赖，并让 Debug/dev 加载 ``fmodL``、Release 加载 ``fmod``，在 Godot 启动前完成加载。
+- 点击 **Apply Changes** 应用修改。工具会加入 ``fmod.jar`` 依赖，并让 Debug/dev 加载 ``fmodL``、Release 加载 ``fmod``，在 Godot 启动前完成加载及 ``org.fmod.FMOD.init(this)`` 初始化。
 
 工具仅复制已有的 arm64 插件二进制，不会编译缺失的扩展库。查看完成报告中的跳过或失败项目；更换二进制后需重新同步到构建模板。已有自定义 Gradle 或 Java 修改时，也应先复核变更内容。
 
@@ -112,7 +112,7 @@ Android 需要匹配 ABI 的插件库、FMOD 原生运行库和 ``fmod.jar``。�
 
     implementation files("libs/fmod.jar")
 
-在 ``GodotApp.java`` 的 ``onCreate`` 中、``super.onCreate`` 之前按构建类型加载对应运行库，与配置工具的行为一致：
+在 ``GodotApp.java`` 的 ``onCreate`` 中、``super.onCreate`` 之前按构建类型加载对应运行库，再初始化 FMOD Java 组件，与配置工具的行为一致。保留模板中已有的 SplashScreen 和 EdgeToEdge 代码：
 
 .. code-block:: java
 
@@ -123,6 +123,7 @@ Android 需要匹配 ABI 的插件库、FMOD 原生运行库和 ``fmod.jar``。�
         } else {
             System.loadLibrary("fmod");
         }
+        org.fmod.FMOD.init(this);
         super.onCreate(savedInstanceState);
     }
 

@@ -99,10 +99,6 @@ msgstr "Coverage"
 msgid "3D 空间音频"
 msgstr "3D spatial audio"
 
-#: ../../source/contributing/testing.rst:40 391255edf760484baa84b0a0c59458cc
-msgid "距离衰减、距离滤波、发射角度和场景保存重载。"
-msgstr "Distance attenuation, distance filtering, emission angles, and scene save/load."
-
 #: ../../source/contributing/testing.rst:41 123f945b21f54ca9b6c443f7d9ca7fd4
 msgid "混音矩阵"
 msgstr "Mix matrix"
@@ -262,3 +258,9 @@ msgstr ""
 "Summaries and individual reports are saved under ``tests/logs/runs/``; the project log is "
 "``tests/logs/editor.log``. Logs, addon copies, and historical diagnostics are ignored by Git. "
 "Include relevant log excerpts in your report."
+
+#: ../../source/contributing/testing.rst:40 391255edf760484baa84b0a0c59458cc
+msgid "AudioListener3D 的位置与朝向同步、当前监听器切换与移除、相机回退、距离衰减、距离滤波、发射角度和场景保存重载。"
+msgstr ""
+"AudioListener3D position and orientation synchronization, current-listener switching and removal,"
+" camera fallback, distance attenuation and filtering, emission angles, and scene save/reload."
